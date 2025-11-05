@@ -1,4 +1,5 @@
 \section{Class Field Theory In the language of Adeles and Ideles}
+\textcolor{red}{Can we already say we are only considering function fields here?}
 The modern formulation of Global Class Field Theory is given in terms of the adele and idele groups of a global field. In this chapter we will define these objects and state the main theorems of Class Field Theory in this language.
 \subsection{Adeles and Ideles}
 Let $K$ be a global field. For each place $v$ of $K$, we denote:
@@ -11,7 +12,7 @@ Let $K$ be a global field. For each place $v$ of $K$, we denote:
  We define the \textbf{adele ring} of $K$ as the restricted direct product
 \[\A_K = \prod_v' K_v
 \]
-where the restriction is taken with respect to the rings of integers $\Oo_v$ of $K_v$ for all non-archimedean places $v$. In other words, an adele is a tuple $(x_v)_v$ with $x_v \in K_v$ such that $x_v \in \Oo_v$ for all but finitely many non-archimedean places $v$.
+where the restriction is taken with respect to the rings of integers $\Oo_v$ of $K_v$ for all \textcolor{red}{non-archimedean (IS IT NECESSEARY TO STATE HERE? WE WORK OVER P ANYWAY)}  places $v$. In other words, an adele is a tuple $(x_v)_v$ with $x_v \in K_v$ such that $x_v \in \Oo_v$ for all but finitely many non-archimedean places $v$.
 The \textbf{idele group} of $K$ is defined as the group of units of the adele ring:
 \[\I_K = \A_K^\times = \prod_v' K_v^\times
 \]
@@ -19,6 +20,40 @@ where the restriction is taken with respect to the unit groups $\Oo_v^\times$ of
 
 The field $K$ embeds diagonally into $\mathbb{A}_K$, and thus $K^\times$ embeds diagonally into $\mathbb{I}_K$ as the subgroup of principal ideles. The \textbf{idele class group} $C_K$ is the quotient:
 \[C_K = \I_K / K^\times\]
+
+\subsubsection{Topology on Adeles and Ideles}
+We state quickly the topology on the adele ring and the idele group. More can be found in \cite{milneCFT}.
+Recall that, for all $v$, $K_v$ is locally compact more over, $\Oo_v$ is a compact neighborhood of 0. Similarly 
+$K_v^\times$ is locally compact, in fact:
+\[
+1 + \hat{\pp}_v \supset 1 + \hat{\pp}_v^2 \supset 1 + \hat{\pp}_v^3\ldots
+\]
+is a fundamental system of neighborhoods of 1 consisting of compact open subgroups of $K_v^\times$.
+
+For every finite set $S$ of places of $K$, define:
+\[
+\I_S = \prod_{v \in S} K_v^\times \times \prod_{v \notin S} \Oo_v^\times
+\]
+with the product topology. $\I_S$ is locally compact and as sets we have:
+\[\I_K = \bigcup_{S} \I_S
+\]
+where the union is taken over all finite sets of places of $K$.
+We define a topology on $I_K$ by giving a basis for the open sets $\prod_v V_v$ with 
+$V_v \subseteq K_v^\times$ open for all $v$ and and $V_v = \Oo_v^\times$ for all but finitely many $v$.
+This makes $\I_K$ a locally compact topological group, such that each $\I_S$ is open in $\I_K$, and inherits 
+the product topology. The following sets form a fundamental system of neighborhoods of 1: for each 
+finite set of primes $S$ and $n > 0$, define 
+\[
+U_{S,n} = \left\{ (x_v)_v \in \I_K \mid v(x_v - 1) > n \text{ for all } v \in S, x_v \in \Oo_v^\times \text{ for } v \notin S \right\}    
+\]
+
+Note that the embedding $K^\times \to \I_K$ is discrete and thus the idele class group $C_K = \I_K/K^\times$ is a locally compact topological group as well.
+Moreover the canonical injective homomorphism 
+\begin{align}
+    &K_v^\times \to \I_K \\
+    & x \mapsto (1,\ldots,1,x,1,\ldots, 1) \qquad \text{($x$ in the $v$-th position)}
+\end{align}
+is a topological embedding for each place $v$ of $K$.
 
 \subsection{The Main Theorems}
 The theory establishes a fundamental connection between the idele class group $C_K$ and the Galois group of the maximal abelian extension of $K$, denoted $K^{ab}$.
@@ -58,20 +93,60 @@ The theory establishes a fundamental connection between the idele class group $C
 
 
 \subsection{The connection between the idealic and adelic formulations}
-We begin with a few notations, let $\mdls=\sum n_v \pp_v$ be a modulus of $K$, i.e. an effective divisor on the curve corresponding to $K$, $\Supp(\mdls)$ is the 
-set of valuations that occur with nonzero coefficient in $\mdls$, and $\bO_{\mdls}^\times = \prod_v W_{\mdls}(v)$ where
+In this section we explain briefly how the idealic formulation of class field theory from the previous section is connected to the adelic formulation given here.
+We explain the natural isomorphism between certain quotients of the idele group and the ideal group of $K$, which ultimately follows by understanding
+ideles as thickening of ideals:
+There is a canonical surjective homomophism $\id$:
+
+\begin{align*}
+    &\id: \I_K \to I_K \\
+    &(x_v)_v \mapsto \prod_v \pp_v^{v(x_v)}
+\end{align*}
+
+Thus, composing with $I_K \to C$ gives a surjective homomorphism $\I_K \to C$, noting that $K^\times \to \I_K \to C$ is 0,
+we realize $C=I_K/i(K^\times)$ as a quotient of $C_K=\I_K/K^\times$.
+
+The same thing is true for $C_\mdls$:
+Let $\mdls=\sum n_v \pp_v$ be a modulus of $K$, set: 
+
+
 \[W_{\mdls}(v) = \begin{cases}
 \Oo_v^\times & v \notin \Supp(\mdls)  \\
 1 + \hat{\pp_v}^{n_v} & v \in \Supp(\mdls)
 \end{cases}
 \]
 
-Define 
+And define 
 \[
 \I_{\mdls} = \left(\prod_{v \notin \Supp(\mdls)}^{}K_v^\times \times \prod_{v \in \Supp(\mdls)}^{}
  W_{\mdls}(v)  \right) \bigcap \I_K
 \]
 
-Milne \textcolor{red}{shows} 
+And \[
+\bO_{\mdls}^\times = \prod_v W_{\mdls}(v)
+\]
+ 
+Note that:
+\[
+K_{\mdls,1} = K^\times \cap \prod_{v \in \mdls}^{} W_{\mdls}(v) \qquad \text{Intersection inside } \prod_{v \in \mdls}^{} K_v^\times
+\]
 
-To see the connection 
+and that 
+\[
+K_{\mdls,1} = K^\times \cap \I_{\mdls} \qquad \text{Intersection inside } \I_K
+\]
+
+Milne \textcolor{red}{shows} the following proposition:
+\begin{prop} Let $\mdls$ be a modulus of $K$.
+\begin{enumerate}
+    \item The map $\id: \I_\mdls \to I^{S(\mdls)}_K$ defines an isomorphism
+    \[ \I_\mdls / K_{\mdls,1} \bO_\mdls^\times \isomto I^{S(\mdls)}_K / i(K_{\mdls,1}) = C_\mdls \]
+    \item The inclusion $\I_\mdls \hookrightarrow \I_K$ defines an isomorphism
+    \[ \I_\mdls / K_{\mdls,1} \isomto \I_K / K^\times \]
+\end{enumerate}
+\end{prop}
+
+\textcolor{red}{maybe add something about characters of idele class group
+AND/OR about norms of adeles/ideles}
+
+\textbf{\textcolor{blue}{Show that acutal connection in this subsubsection.}}

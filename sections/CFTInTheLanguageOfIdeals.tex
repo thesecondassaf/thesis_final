@@ -3,7 +3,7 @@ In this section we describe the main results of classical class field theory for
 \cite{milneCFT}.
 We copy most of the content here from Milne. 
 
-\subsection{Definitions}
+\subsection{Ideals, Moduli and Ray Class Groups}
 Let $K$ be a global field of $\ch (K) = p$. A modulus $\mdls$ is a formal sum of places of $K$ with non-negative integer 
 coefficients. 
 Let $S(K, \mdls) = S(\mdls) = \{ v \in \mdls \}$ be the set of places appearing in $\mdls$ with non-zero coefficient.
@@ -33,19 +33,15 @@ Milne states and prove a known theorem:
     And $C$ is the usual class group of $K$.
 \end{theorem}
 
-\subsection{Main Statements of Class Field Theory In the language of Ideals}
-
-
-
-
+\subsection{The Main Theorems}
 \begin{theorem}[Artin Reciprocity Law] \label{theorem:ArtinReciprocity}
     Let $L$ be a finite abelian extension of a global field $K$. and let $S$ be the set of primes of $K$
     ramifying in $L$. Then the Artin map \textcolor{red}{add here reference of the definition to milne} .
-    $\psi: I^S \to Gal(L/K)$ admits a modulus $\mdls$ with $\S(\mdls) = S$ and it defines an isomorphism:
+    $\psi: I^S \to Gal(L/K)$ admits a modulus $\mdls$ with $S(\mdls) = S$ and it defines an isomorphism:
     \[I^S / \left(i(K_{\mdls, 1}) \cdot N_{L/K}(I_L^{S(\mdls)}) \right) \to Gal(L/K)\]
 \end{theorem}
 
-A $\mdls$ as in the statement of the theorem is called a definning modulus for $L$. 
+A modulus $\mdls$ as in the statement of the theorem is called a definning modulus for $L$. 
 Next, we write $I_K^{\mdls}$ for the group of $S(\mdls)$-ideals in $K$, and $I_L^{\mdls}$ for the group of $S(\mdls)'$-ideals in $L$ 
 where $S(\mdls)'$ is the set of primes of $L$ lying above primes in $S(\mdls)$.
 Call a subgroup $H$ of $I_K^{\mdls}$ a \textbf{congruence subgroup} modulo $\mdls$ if it contains $i(K_{\mdls, 1})$.
@@ -53,14 +49,15 @@ Call a subgroup $H$ of $I_K^{\mdls}$ a \textbf{congruence subgroup} modulo $\mdl
 
 \begin{theorem}\label{theorem:ExistenceTheorem}
 [Existence Theorem of Class Field Theory]
-For every congurence subgroup $H$ modulo $\mdls$ there exists a unique finite abelian extension $L/K$, unramified at all primes not in $\S(\mdls)$, such that the Artin map induces an isomorphism:
+For every congurence subgroup $H$ modulo $\mdls$ there exists a unique finite abelian extension $L/K$, unramified at all primes not in $S(\mdls)$, such that the Artin map induces an isomorphism:
 \[I^{S(\mdls)} / H \to Gal(L/K)\].
 \end{theorem}
 
 More of the idealic class field theory in Milne. 
 
-Theorems \ref{theorem:ArtinReciprocity} and \ref{theorem:ExistenceTheorem} show that there is a canonical isomorphism:
-\[ \lim_{\longleftarrow m} C_m \to \operatorname{Gal}(K^{\mathrm{ab}} / K). \]
+Theorems \ref{theorem:ArtinReciprocity} and \ref{theorem:ExistenceTheorem} show that there is a canonical group isomorphism:
+\[ \lim_{\longleftarrow \mdls} C_\mdls \to \operatorname{Gal}(K^{\mathrm{ab}} / K). \]
 
 Rather than studying $ \limn{\longleftarrow m}{C_m}$ directly, it turns out to be more natural to introduce another group that has it as a quotient - this is the idele class group.
 \textcolor{red}{replace very where idele with ide'le}
+

@@ -1,10 +1,11 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Class Field Theory In the language of Ideals}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Definitions}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Main Statements of Class Field Theory In the language of Ideals}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.1}Ideals, Moduli and Ray Class Groups}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}The Main Theorems}{2}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Class Field Theory In the language of Adeles and Ideles}{3}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Adeles and Ideles}{3}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}The Main Theorems}{3}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}The connection between the idealic and adelic formulations}{4}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Class Field Theory In the language of Characters}{5}{section.4}%
+\contentsline {subsubsection}{\numberline {3.1.1}Topology on Adeles and Ideles}{4}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}The Main Theorems}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}The connection between the idealic and adelic formulations}{5}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Class Field Theory In the language of Characters}{6}{section.4}%
