@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}\geometry{margin=1in}
+\usepackage[T1]{fontenc}
+% if using luatex to compile, the following is unnecessary 
+%\usepackage[latin9]{inputenc}
+\usepackage{ifthen}
+
+%%%% this is incharge of spacing between paragraphs.... fix later
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.5em}
+
+\input{includes}
+\input{MacrosAndFigures}
+
+\usepackage{csquotes}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\bibliography{Bib}  % or use \addbibresource{mybibfile.bib} with biblatex
+\addbibresource{Bib.bib}
+
+\newboolean{ThesisIntro}
+\setboolean{ThesisIntro}{false}
+
+\begin{document}
+
+\title{Geometric Class Field Theory}
+\author{Assaf Marzan}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+Throughout this work we will be working over fields with characteristic $\neq 0$ unless otherwise stated.
+
+\input{sections/CFTInTheLanguageOfIdeals.tex}
+
+
+\input{sections/CFTInTheLanguageOfAdeles.tex}
+
+\input{sections/CFTInTheLanguageOfCharacters.tex}
+
+\input{sections/IntroductionToGeometricCFT.tex}
+
+\input{sections/ConnectionBetweenCharacterCFTsAndGeometricCFT.tex}
+
+\input{sections/GeometricCFT.tex}
+Proof of geometric CFT
+
+
+
+
+
+
+\medskip
+
+\printbibliography
+
+%\bibliography{Bib}
+%\bibliographystyle{plainnat}
+%https://ivanfesenko.org/wp-content/uploads/2021/10/rapg.pdf
+
+
+\end{document}
+
+

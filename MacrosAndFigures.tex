@@ -1,0 +1,330 @@
+% -------------------- TikZ Patterns --------------------
+\usetikzlibrary{patterns}
+\tikzset{
+  hatch distance/.store in=\hatchdistance,
+  hatch distance=10pt,
+  hatch thickness/.store in=\hatchthickness,
+  hatch thickness=1pt
+}
+\makeatletter
+\pgfdeclarepatternformonly[\hatchthickness]{my horizontal lines}
+  {\pgfpointorigin}{\pgfqpoint{100pt}{1pt}}{\pgfqpoint{100pt}{3pt}}{
+    \pgfsetcolor{\tikz@pattern@color}
+    \pgfsetlinewidth{\hatchthickness}
+    \pgfpatheoremoveto{\pgfqpoint{0pt}{0.5pt}}
+    \pgfpathlineto{\pgfqpoint{100pt}{0.5pt}}
+    \pgfusepath{stroke}
+}
+\pgfdeclarepatternformonly[\hatchthickness]{my vertical lines}
+  {\pgfpointorigin}{\pgfqpoint{1pt}{100pt}}{\pgfqpoint{3pt}{100pt}}{
+    \pgfsetcolor{\tikz@pattern@color}
+    \pgfsetlinewidth{\hatchthickness}
+    \pgfpatheoremoveto{\pgfqpoint{0.5pt}{0pt}}
+    \pgfpathlineto{\pgfqpoint{0.5pt}{100pt}}
+    \pgfusepath{stroke}
+}
+\pgfdeclarepatternformonly[\hatchthickness]{my north east lines}
+  {\pgfqpoint{-1pt}{-1pt}}{\pgfqpoint{4pt}{4pt}}{\pgfqpoint{3pt}{3pt}}{
+    \pgfsetcolor{\tikz@pattern@color}
+    \pgfsetlinewidth{1pt}
+    \pgfpatheoremoveto{\pgfqpoint{0pt}{0pt}}
+    \pgfpathlineto{\pgfqpoint{3.1pt}{3.1pt}}
+    \pgfusepath{stroke}
+}
+\pgfdeclarepatternformonly[\hatchthickness]{my north west lines}
+  {\pgfqpoint{-1pt}{-1pt}}{\pgfqpoint{4pt}{4pt}}{\pgfqpoint{3pt}{3pt}}{
+    \pgfsetcolor{\tikz@pattern@color}
+    \pgfsetlinewidth{1.2pt}
+    \pgfpatheoremoveto{\pgfqpoint{0pt}{3pt}}
+    \pgfpathlineto{\pgfqpoint{3.1pt}{-0.1pt}}
+    \pgfusepath{stroke}
+}
+\makeatother
+
+% -------------------- Color --------------------
+\colorlet{grayX}{black!26!white}
+\colorlet{darkgrayX}{black!47!white}
+
+% -------------------- Cross-reference shortcuts --------------------
+\makeatletter
+\AtBeginDocument{\providecommand\corref[1]{\ref{cor:#1}}}
+\AtBeginDocument{\providecommand\theoremref[1]{\ref{theorem:#1}}}
+\AtBeginDocument{\providecommand\lemref[1]{\ref{lem:#1}}}
+\AtBeginDocument{\providecommand\figref[1]{\ref{fig:#1}}}
+\makeatother
+\providecommand{\tabularnewline}{\\}
+
+% -------------------- Theorem Environments --------------------
+
+% Base counter:
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+
+% --- Definition ---
+\newaliascnt{definition}{theorem}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
+\crefname{definition}{definition}{definitions}
+\Crefname{definition}{Definition}{Definitions}
+
+% --- Corollary ---
+\newaliascnt{cor}{theorem}
+\newtheorem{cor}[cor]{Corollary}
+\aliascntresetthe{cor}
+\crefname{cor}{corollary}{corollaries}
+\Crefname{cor}{Corollary}{Corollaries}
+
+% --- Lemma ---
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\crefname{lemma}{lemma}{lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+
+% --- Proposition ---
+\newaliascnt{prop}{theorem}
+\newtheorem{prop}[prop]{Proposition}
+\aliascntresetthe{prop}
+\crefname{prop}{proposition}{propositions}
+\Crefname{prop}{Proposition}{Propositions}
+
+% --- Proposition* (unnumbered) ---
+\newtheorem*{prop*}{Proposition}
+
+% --- Observation ---
+\newaliascnt{obs}{theorem}
+\newtheorem{obs}[obs]{Observation}
+\aliascntresetthe{obs}
+\crefname{obs}{observation}{observations}
+\Crefname{obs}{Observation}{Observations}
+
+% --- Claim ---
+\newaliascnt{claim}{theorem}
+\newtheorem{claim}[claim]{Claim}
+\aliascntresetthe{claim}
+\crefname{claim}{claim}{claims}
+\Crefname{claim}{Claim}{Claims}
+
+% --- Problem (independent counter, not sharing with theorem) ---
+\newtheorem{problem}{Problem}
+\crefname{problem}{problem}{problems}
+\Crefname{problem}{Problem}{Problems}
+
+% --- Remark-style (unnumbered) ---
+\theoremstyle{remark}
+\newtheorem*{note*}{Note}
+\newtheorem*{rem*}{Remark}
+\newtheorem*{notation*}{Notation}
+\newtheorem*{context*}{Context}
+
+% -------------------- Example Environment --------------------
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{\protect\examplename}
+\providecommand{\examplename}{Example}
+
+% -------------------- Cleveref labels --------------------
+\crefname{equation}{}{}
+\crefname{diagram}{Diagram}{Diagrams}
+
+% -------------------- Main and Front Matter --------------------
+\makeatletter
+\newif\if@mainmatter \@mainmattertrue
+\newcommand\frontmatter{%
+    \cleardoublepage
+  \@mainmatterfalse
+  \pagenumbering{Roman}}
+\newcommand\mainmatter{%
+    \cleardoublepage
+  \@mainmattertrue
+  \pagenumbering{arabic}}
+\makeatother
+
+% -------------------- Fonts and symbols --------------------
+\def\wasyfamily{\fontencoding{U}\fontfamily{wasy}\selectfont}
+\DeclareTextFontCommand{\textwasy}{\wasyfamily}
+\DeclareSymbolFont{wasy}{U}{wasy}{m}{n}
+\SetSymbolFont{wasy}{bold}{U}{wasy}{b}{n}
+%\def\hexagon    {\mbox{\wasyfamily\char55}}
+
+% -------------------- Standard Math Shortcuts --------------------
+\newcommand{\FF}{\mathsf{F}}
+\newcommand{\ff}{\mathsf{f}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\bO}{\mathbb{O}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Pro}{\mathbb{P}}
+
+\newcommand{\Qp}{\mathbb{Q}_{p}}
+\newcommand{\Fqt}{\mathbb{F}_q(t)}
+\newcommand{\Fpt}{\mathbb{F}_p(t)}
+
+\newcommand{\Ff}[2][F]{#1({#2})}    
+\newcommand{\Ffl}[2][F]{#1(({#2}))}    
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
+% -------------------- Mathcal and Mathfrak --------------------
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\Sh}{\mathcal{\mathop{\mathit{Sh}}}}
+
+\newcommand{\vp}{\varphi}
+
+% -------------------- Math Operators --------------------
+\DeclareMathOperator{\lip}{Lip}
+\DeclareMathOperator{\pic}{Pic}
+\DeclareMathOperator{\Spl}{Spl}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\ram}{ram}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\ch}{char}
+
+
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Hom}{\operatorname{Hom}}
+
+\newcommand{\Bl}{\operatorname{Bl}}
+
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Tors}{\operatorname{Tors}}
+
+
+% -------------------- Ideals and Valuation Notation --------------------
+\newcommand{\ind}{\mathbbm{1}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
+
+\newcommand{\hypa}[1]{\textbf{A}$(#1)$}
+\newcommand{\hyp}[1]{\textbf{B}$(#1)$}
+
+\newcommand{\D}{\Delta}
+\renewcommand{\arraystretch}{1.3}
+
+\newcommand{\OK}{\mathcal{O}_K}
+\newcommand{\OL}{\mathcal{O}_L}
+\newcommand{\Oo}{\mathcal{O}}
+\newcommand{\Onu}{\mathcal{O}_\nu}
+
+\newcommand{\mnu}{\mathfrak{m}_\nu}
+\newcommand{\mdls}{\mathfrak{m}}
+\newcommand{\ndls}{\mathfrak{n}}
+\newcommand{\cdls}{\mathfrak{c}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\fdls}{\mathfrak{f}}
+
+\newcommand{\pp}{\mathfrak{p}}
+\newcommand{\Pp}{\mathfrak{P}}
+\newcommand{\qq}{\mathfrak{q}}
+\newcommand{\Qq}{\mathfrak{Q}}
+
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\Ak}{\mathbb{A}_K}
+\newcommand{\Il}{\mathbb{I}_L}
+\newcommand{\Idl}{\mathbb{I}_L}
+% -------------------- TikZ: arrow labels --------------------
+\tikzset{
+  symbol/.style={
+    draw=none,
+    every to/.append style={
+      edge node={node [sloped, allow upside down, auto=false]{$#1$}}}
+  }
+}
+
+% -------------------- Function arrows --------------------
+\newcommand{\function}[5]{%
+  \begin{tikzcd}[
+    column sep=2em,
+    row sep=1ex,
+    ampersand replacement=\&
+  ]
+  #1\colon \&[-3em]
+  #2\vphantom{#3} \arrow[r] \&
+  #3\vphantom{#2} \\
+  \&
+  #4\vphantom{#5}  \arrow[r,mapsto] \&
+  #5\vphantom{#4}
+  \end{tikzcd}%
+}
+
+\newcommand{\isomto}{\stackrel{\sim}{\smash{\longrightarrow}\rule{0pt}{0.4ex}}}
+\newcommand{\isoto}{\overset{\sim}{\to}}
+
+% -------------------- Restrictions --------------------
+\newcommand\restr[2]{%
+  \left.\kern-\nulldelimiterspace #1 \littletaller \right|_{#2}%
+}
+\newcommand{\littletaller}{\mathchoice{\vphantom{\big|}}{}{}{}}
+
+% -------------------- Equation & Diagram Numbering --------------------
+\newcounter{diagram}
+\renewcommand{\thediagram}{\arabic{diagram}}
+\newenvironment{diagram}
+  {\refstepcounter{diagram}\begin{equation}\tag*{\textnormal{(\thediagram})}}
+  {\end{equation}}
+\newcommand{\diagramref}[1]{\textnormal{Diagram~\ref{#1}}}
+
+% -------------------- Stacks Tag Shortcut --------------------
+\newcommand{\stackstag}[1]{%
+  \cite[\href{https://stacks.math.columbia.edu/tag/#1}{Tag~#1}]{stacks-project}%
+}
+\newcommand{\nlabpage}[2]{%
+  \cite[\href{https://ncatlab.org/nlab/revision/#1/#2}{#1, Rev.~#2}]{nlab}%
+}
+
+
+% -------------------- Provide missing names --------------------
+\providecommand{\claimname}{Claim}
+\providecommand{\corollaryname}{Corollary}
+\providecommand{\definitionname}{Definition}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\probname}{Problem}
+\providecommand{\notationname}{Notation}
+\providecommand{\notename}{Note}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\remarkname}{Remark}
+\providecommand{\theoremname}{Theorem}
+\providecommand{\observationname}{Observation}
+\providecommand{\contextnname}{Context}
+
+% Other Shortcuts
+\newcommand{\SheavesSetsEquiv}{
+\[
+\left\{
+    \begin{matrix}
+        \text{sheaves of sets on } \Spec(L)_{\acute{e}tale} 
+    \end{matrix}
+\right\}
+\overset{\sim}{\longrightarrow}
+\left\{
+    \begin{matrix}
+        \text{sets with left continuous action of } G_L
+    \end{matrix}
+\right\}
+\]
+}
+
+\newcommand{\FiniteLocConstSheavesEquiv}{
+\[\left\{ 
+  \begin{matrix} 
+    \text{finite locally constant} \\ 
+    \text{sheaves of sets on } \Spec(L)_{\acute{e}tale} 
+  \end{matrix}
+\right\}
+\overset{\sim}{\longrightarrow}
+\textit{Finite-}G_L\textit{-Sets} \]
+}
+
+\newcommand{\limn}[2]{\lim\limits_{#1} #2}
