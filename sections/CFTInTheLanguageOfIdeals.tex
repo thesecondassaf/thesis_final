@@ -17,7 +17,11 @@ There is a natural map $i: K_{\mdls, 1} \to I_K^{S(\mdls)}$ sending $x \mapsto (
 The qoutient \[C_\mdls = I_K^{S(\mdls)} / i(K_{\mdls, 1})\]
 is called the \textbf{(ray) class group} of $K$ modulo $\mdls$.
 
-
+Let $S$ be a finite set of primes of $K$. And $G$ a finite abelian group.
+We shall say that a homomorphism $\psi: I^S \to G$ \textbf{admits a modulus} if there exists a modulus $\mathfrak{m}$ with $S(\mathfrak{m}) \supset S$ 
+such that $\psi(i(K_{\mathfrak{m}, 1})) = 0$. 
+Thus $\psi$ admits a modulus if and only if it factors through $C_\mathfrak{m}$ for some $\mathfrak{m}$ with 
+$S(\mathfrak{m}) \supset S$.
 
 \textcolor{red}{maybe we don't need this}
 Milne states and prove a known theorem: 
@@ -56,7 +60,10 @@ For every congurence subgroup $H$ modulo $\mdls$ there exists a unique finite ab
 More of the idealic class field theory in Milne. 
 
 Theorems \ref{theorem:ArtinReciprocity} and \ref{theorem:ExistenceTheorem} show that there is a canonical group isomorphism:
-\[ \lim_{\longleftarrow \mdls} C_\mdls \to \operatorname{Gal}(K^{\mathrm{ab}} / K). \]
+\begin{equation}\label{eq:idealClassFieldTheory}
+ \lim_{\longleftarrow \mdls} C_\mdls \to \operatorname{Gal}(K^{\mathrm{ab}} / K).    
+\end{equation}
+ 
 
 Rather than studying $ \limn{\longleftarrow m}{C_m}$ directly, it turns out to be more natural to introduce another group that has it as a quotient - this is the idele class group.
 \textcolor{red}{replace very where idele with ide'le}

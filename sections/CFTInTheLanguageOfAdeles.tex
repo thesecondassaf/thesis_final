@@ -18,83 +18,10 @@ The \textbf{idele group} of $K$ is defined as the group of units of the adele ri
 \]
 where the restriction is taken with respect to the unit groups $\Oo_v^\times$ of the rings of integers $\Oo_v$ for all non-archimedean places $v$. An idele is thus a tuple $(x_v)_v$ with $x_v \in K_v^\times$ such that $x_v \in \Oo_v^\times$ for all but finitely many non-archimedean places $v$.  
 
-The field $K$ embeds diagonally into $\mathbb{A}_K$, and thus $K^\times$ embeds diagonally into $\mathbb{I}_K$ as the subgroup of principal ideles. The \textbf{idele class group} $C_K$ is the quotient:
-\[C_K = \I_K / K^\times\]
+The field $K$ embeds diagonally into $\mathbb{A}_K$, and thus $K^\times$ embeds diagonally into $\mathbb{I}_K$ as the subgroup of principal ideles. The \textbf{idele class group} $\fC_K$ is the quotient:
+\[\fC_K = \I_K / K^\times\]
 
-\subsubsection{Topology on Adeles and Ideles}
-We state quickly the topology on the adele ring and the idele group. More can be found in \cite{milneCFT}.
-Recall that, for all $v$, $K_v$ is locally compact more over, $\Oo_v$ is a compact neighborhood of 0. Similarly 
-$K_v^\times$ is locally compact, in fact:
-\[
-1 + \hat{\pp}_v \supset 1 + \hat{\pp}_v^2 \supset 1 + \hat{\pp}_v^3\ldots
-\]
-is a fundamental system of neighborhoods of 1 consisting of compact open subgroups of $K_v^\times$.
-
-For every finite set $S$ of places of $K$, define:
-\[
-\I_S = \prod_{v \in S} K_v^\times \times \prod_{v \notin S} \Oo_v^\times
-\]
-with the product topology. $\I_S$ is locally compact and as sets we have:
-\[\I_K = \bigcup_{S} \I_S
-\]
-where the union is taken over all finite sets of places of $K$.
-We define a topology on $I_K$ by giving a basis for the open sets $\prod_v V_v$ with 
-$V_v \subseteq K_v^\times$ open for all $v$ and and $V_v = \Oo_v^\times$ for all but finitely many $v$.
-This makes $\I_K$ a locally compact topological group, such that each $\I_S$ is open in $\I_K$, and inherits 
-the product topology. The following sets form a fundamental system of neighborhoods of 1: for each 
-finite set of primes $S$ and $n > 0$, define 
-\[
-U_{S,n} = \left\{ (x_v)_v \in \I_K \mid v(x_v - 1) > n \text{ for all } v \in S, x_v \in \Oo_v^\times \text{ for } v \notin S \right\}    
-\]
-
-Note that the embedding $K^\times \to \I_K$ is discrete and thus the idele class group $C_K = \I_K/K^\times$ is a locally compact topological group as well.
-Moreover the canonical injective homomorphism 
-\begin{align}
-    &K_v^\times \to \I_K \\
-    & x \mapsto (1,\ldots,1,x,1,\ldots, 1) \qquad \text{($x$ in the $v$-th position)}
-\end{align}
-is a topological embedding for each place $v$ of $K$.
-
-\subsection{The Main Theorems}
-The theory establishes a fundamental connection between the idele class group $C_K$ and the Galois group of the maximal abelian extension of $K$, denoted $K^{ab}$.
-
-\begin{enumerate}
-    \item \textbf{The Global Reciprocity Map}: There exists a canonical continuous homomorphism, the \textbf{Artin map}, from the idele class group to the absolute abelian Galois group:
-    $$\theta_K: C_K \to \text{Gal}(K^{ab}/K)$$
-    \textcolor{red}{In the case of function fields this map is injective with dense image.}
-    \item \textbf{Reciprocity Law}: For any finite abelian extension $L/K$, the Artin map induces a canonical isomorphism:
-    $$C_K / N_{L/K}(C_L) \xrightarrow{\sim} \text{Gal}(L/K)$$
-    where $N_{L/K}: C_L \to C_K$ is the norm map on the idele class groups. The subgroup $N_{L/K}(C_L)$ is an open subgroup of finite index in $C_K$.
-    \textcolor{red}{The norm map on the idele class group is somewhat differet}
-    \item \textbf{Existence Theorem}: There is a one-to-one, inclusion-reversing correspondence between the set of finite abelian extensions of $K$ and the set of open subgroups of finite index in the idele class group $C_K$.
-    $$
-    \begin{Bmatrix}
-    \text{Finite abelian} \\
-    \text{extensions } L/K
-    \end{Bmatrix}
-    \quad \longleftrightarrow \quad
-    \begin{Bmatrix}
-    \text{Open subgroups } H \subseteq C_K \\
-    \text{of finite index}
-    \end{Bmatrix}
-    $$
-    Under this correspondence, an extension $L$ corresponds to the subgroup $H = N_{L/K}(C_L)$.
-\end{enumerate}
-
-\textcolor{red}{
-    \begin{enumerate}
-        \item Above is finite adelic formulation of CFT, state somethign about the infinite extension CFT theorem
-        \item State something about the topology on the idele class group, Say how the fintie implies the infinte by taking inverse limits. 
-        \item Find sources for the above. for exampel milne? maybe other?
-        \item The restriction is for the non-archimedean, are you sure?
-        \item What is the topology of the "continious" homomorphism?
-    \end{enumerate}
-    }
-
-
-\subsection{The connection between the idealic and adelic formulations}
-In this section we explain briefly how the idealic formulation of class field theory from the previous section is connected to the adelic formulation given here.
-We explain the natural isomorphism between certain quotients of the idele group and the ideal group of $K$, which ultimately follows by understanding
+There is a natural isomorphism between certain quotients of the idele group and the ideal group of $K$, which ultimately follows by understanding
 ideles as thickening of ideals:
 There is a canonical surjective homomophism $\id$:
 
@@ -104,7 +31,7 @@ There is a canonical surjective homomophism $\id$:
 \end{align*}
 
 Thus, composing with $I_K \to C$ gives a surjective homomorphism $\I_K \to C$, noting that $K^\times \to \I_K \to C$ is 0,
-we realize $C=I_K/i(K^\times)$ as a quotient of $C_K=\I_K/K^\times$.
+we realize $C=I_K/i(K^\times)$ as a quotient of $\fC_K=\I_K/K^\times$.
 
 The same thing is true for $C_\mdls$:
 Let $\mdls=\sum n_v \pp_v$ be a modulus of $K$, set: 
@@ -146,7 +73,130 @@ Milne \textcolor{red}{shows} the following proposition:
 \end{enumerate}
 \end{prop}
 
-\textcolor{red}{maybe add something about characters of idele class group
-AND/OR about norms of adeles/ideles}
+\textcolor{red}{Taking the qoutient into character form?}
 
-\textbf{\textcolor{blue}{Show that acutal connection in this subsubsection.}}
+
+\subsubsection{Topology on Adeles and Ideles}
+We state quickly the topology on the adele ring and the idele group. More can be found in \textcolor{red}{add reference}%\cite{milneCFT}.
+Recall that, for all $v$, $K_v$ is locally compact more over, $\Oo_v$ is a compact neighborhood of 0. Similarly 
+$K_v^\times$ is locally compact, in fact:
+\[
+1 + \hat{\pp}_v \supset 1 + \hat{\pp}_v^2 \supset 1 + \hat{\pp}_v^3\ldots
+\]
+is a fundamental system of neighborhoods of 1 consisting of compact open subgroups of $K_v^\times$.
+
+For every finite set $S$ of places of $K$, define:
+\[
+\I_S = \prod_{v \in S} K_v^\times \times \prod_{v \notin S} \Oo_v^\times
+\]
+with the product topology. $\I_S$ is locally compact and as sets we have:
+\[\I_K = \bigcup_{S} \I_S
+\]
+where the union is taken over all finite sets of places of $K$.
+We define a topology on $I_K$ by giving a basis for the open sets $\prod_v V_v$ with 
+$V_v \subseteq K_v^\times$ open for all $v$ and and $V_v = \Oo_v^\times$ for all but finitely many $v$.
+This makes $\I_K$ a locally compact topological group, such that each $\I_S$ is open in $\I_K$, and inherits 
+the product topology. The following sets form a fundamental system of neighborhoods of 1: for each 
+finite set of primes $S$ and $n > 0$, define 
+\[
+U_{S,n} = \left\{ (x_v)_v \in \I_K \mid v(x_v - 1) > n \text{ for all } v \in S, x_v \in \Oo_v^\times \text{ for } v \notin S \right\}    
+\]
+
+Note that the embedding $K^\times \to \I_K$ is discrete and thus the idele class group $\fC_K = \I_K/K^\times$ is a locally compact topological group as well.
+Moreover the canonical injective homomorphism 
+\begin{align}
+    &K_v^\times \to \I_K \\
+    & x \mapsto (1,\ldots,1,x,1,\ldots, 1) \qquad \text{($x$ in the $v$-th position)}
+\end{align}
+is a topological embedding for each place $v$ of $K$.
+
+\subsubsection{Characters of ideals and of ideles}
+in \cite{milneCFT}, Milne proves:
+\begin{prop}\label{prop:local-global-characters}
+    Let $G$ be a finite abelian group.
+    If $\psi: I^S \to G$ admits a modulus, then there exists a unique homomorphism $\phi: \mathbb{I} \to G$ such that
+    \begin{enumerate}
+        \item $\phi$ is continuous ($G$ with the discrete topology)
+        \item $\phi(K^\times) = 1$;
+        \item $\phi(\mathbf{a}) = \psi(\text{id}(\mathbf{a}))$, all $\mathbf{a} \in \mathbb{I}^S \stackrel{\text{def}}{=} \{\mathbf{a} \mid a_v = 1 \text{ all } v \in S\}$.
+    \end{enumerate}
+    Moreover, every continuous homomorphism $\phi: \mathbb{I} \to G$ satisfying (2) arises from a $\psi$.
+    More over, $\phi$ and $\psi$ fit in the following chain:
+\begin{equation}\label{eq:local-global-characters-diagram}
+\begin{tikzcd}
+& I^\mathfrak{m} \arrow[r] & C_\mathfrak{m} \arrow[r, "\psi"] & G \\
+& \mathbb{I}_\mathfrak{m} / K_{\mathfrak{m},1} \arrow[r] \arrow[d, "\cong"] & \mathbb{I}_\mathfrak{m} / K_{\mathfrak{m},1} \bO^\times_\mdls \arrow[u, "\cong"] & \\
+\mathbb{I} \arrow[r] \arrow[uurrr, bend right=50, "\phi"] & \mathbb{I}_K / K^\times & &
+\end{tikzcd}
+\end{equation}
+
+\end{prop}
+
+\subsubsection{Norms of ideles}
+Let $L$ be a finite extension of the number field $K$.
+
+For an idèle $\mathbf{a} = (a_w) \in \mathbb{I}_L$, define $\text{Nm}_{L/K}(\mathbf{a})$ to be the idèle $\mathbf{b} \in \mathbb{I}_K$ with $b_v = \prod_{w|v} \text{Nm}_{L_w/K_v} a_w$. 
+Then, one can show that the following diagram commutes:
+\[
+\begin{tikzcd}
+L^\times \arrow[r] \arrow[d, "\text{Nm}_{L/K}"] & \mathbb{I}_L \arrow[r, "\text{id}"] \arrow[d, "\text{Nm}_{L/K}"] & I_L \arrow[d, "\text{Nm}_{L/K}"] \\
+K^\times \arrow[r] & \mathbb{I}_K \arrow[r, "\text{id}"] & I_K.
+\end{tikzcd}
+\]
+Thus getting a commutative diagram:
+\[
+\begin{tikzcd}
+\mathbf{C}_L \arrow[r] \arrow[d, "\text{Nm}_{L/K}"] & C_L \arrow[d, "\text{Nm}_{L/K}"] \\
+\mathbf{C}_K \arrow[r] & C_K
+\end{tikzcd}
+\]
+(where $C_L, C_K$ are the ideal class groups of $L$ and $K$ respectively).
+
+\subsection{The main theorems}
+The theory establishes a fundamental connection between the idele class group $\fC_K$ and the Galois group of the maximal abelian extension of $K$, denoted $K^{ab}$.
+\begin{theorem}[Reciprocity Law]\label{theorem:idele-reciprocity-law}
+    There exists a unique continious homomorphism $\phi_K: \I_K \to \text{Gal}(K^{ab}/K)$ called the \textbf{Artin map} with the following properties:
+    \begin{enumerate}
+        \item $\phi_K(K^\times) = 1$;
+        \item For every finite abelian extension $L/K$, $\phi_K$ defines an isomorphism:
+        \[ 
+        \phi_{L/K}: \I_K/(K^\times \cdot \text{Nm}_{L/K}(\I_L)) \isomto \text{Gal}(L/K)
+        \]
+        or, equivalently, an isomorphism:
+        \[
+        \fC_K / \text{Nm}_{L/K}(\fC_L) \isomto \text{Gal}(L/K)
+        \]
+        \item $\phi_{L/K} $ arises from the global $\I_K \to \Gal(L/K)$ coming from the ideal-theoetic global artin map, as in \cref{prop:local-global-characters}. 
+    \end{enumerate}    
+\end{theorem}
+
+\begin{theorem}[The Existence Theorem]\label{theorem:idele-existence-theorem}
+    There is a one-to-one, inclusion-reversing correspondence between the set of finite abelian extensions of $K$ and the set of open subgroups of finite index in the idele class group $\fC_K$.
+    $$
+    \begin{Bmatrix}
+    \text{Finite abelian} \\
+    \text{extensions } L/K
+    \end{Bmatrix}
+    \quad \longleftrightarrow \quad
+    \begin{Bmatrix}
+    \text{Open subgroups } H \subseteq \fC_K \\
+    \text{of finite index}
+    \end{Bmatrix}
+    $$
+    Under this correspondence, an extension $L$ corresponds to the subgroup $H = N_{L/K}(\fC_L)$.
+    
+\end{theorem}
+
+\begin{theorem}
+    Ideal-Theoetic and Idele-Theoetic formulations of CFT are equivilant through \cref{prop:local-global-characters}. 
+\end{theorem}
+
+\textcolor{red}{
+    \begin{enumerate}
+        \item Above is finite adelic formulation of CFT, state somethign about the infinite extension CFT theorem
+        \item State something about the topology on the idele class group, Say how the fintie implies the infinte by taking inverse limits. 
+        \item Find sources for the above. for exampel milne? maybe other?
+        \item The restriction is for the non-archimedean, are you sure?
+        \item What is the topology of the "continious" homomorphism?
+    \end{enumerate}
+    }
