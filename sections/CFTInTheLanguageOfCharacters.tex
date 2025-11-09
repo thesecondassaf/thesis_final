@@ -1,35 +1,87 @@
 \section{Class Field Theory In the language of Characters}
 The character formulation of Class Field Theory provides a correspondence between characters of the idele class group and characters of the Galois group of the maximal abelian extension of a global field. 
 
-From \cref{prop:local-global-characters} 
+%From \cref{prop:local-global-characters} 
 
-\subsubsection*{The Main Theorems}
+\subsection{About Characters}
+We need to make precise what we mean by characters on both sides of the correspondence.
 
-\begin{theorem}[Character Formulation of Unramified Global Class Field Theory]
+\begin{definition}
+    Let $G$ be an abelian group. 
+    \begin{enumerate}
+        \item A character $\rho: G_K \to G$ is unramified at a place $v$ if it is trivial on the 
+        inertia group $I_v \subseteq G_K$. $\rho$ is called unramified if it is unramified at all places $v$ of $K$.
+        \item A character $\rho: G_K \to G$ has ramification bounded by a modulus $\mdls = \sum_v n_v v$ 
+        if for each place $v \in \mdls$, the restriction of $\rho$ to the higher ramification group $G_v^{n_v}$ is trivial.
+    \end{enumerate}
+
+    Note that since $G$ is abelian, the value of $\rho$ on the Frobenius element $\text{Fr}_v$ is well-defined for unramified places $v$.
+\end{definition}
+
+A useful theorem about characters is as follows:
+
+\begin{theorem}\label{thm:duality-finite-abelian-groups}
+ Let $G$ be an abelian group such that for every $n \in \N$,
+    the $n$-torsion subgroup $G[n] = \{g \in G | ng = 0\}$ is cyclic of order $n$.
+    Then for every finite abelian group $A$ denote by $\hat{A} = \Hom(A, G)$ the group of characters from $A$ to $G$. 
+
+    Then the functor $A \mapsto \hat{A}$ is a contravariant equivalence of categories between the category of finite abelian groups and itself.
+    Moreover the natural map $A \to \hat{\hat{A}}$ is an isomorphism.  
 \end{theorem}
+
+\subsection{The Main Theorems}
+One formulation of Global Class Field Theory in terms of characters is as follows:
+\begin{theorem}[Character Formulation of Unramified Global Class Field Theory]
+\label{theorem:character-formulation-of-unramified-global-class-field-theory}
 \begin{enumerate}
     \item For each character $\xi : K^\times \backslash \mathbb{A}_K^\times / \bO_K^\times \to \bar{\mathbb{Q}}_\ell^\times$ there exists a unique continuous unramified character $\rho : G_K \to \bar{\mathbb{Q}}_\ell^\times$ such that $\rho(\text{Fr}_v) = \xi(\pi_v)$ for all $v$.
     \item For each continuous unramified character $\rho : G_K \to \bar{\mathbb{Q}}_\ell^\times$ there exists a unique character $\xi : K^\times \backslash \mathbb{A}_K^\times / \bO_K^\times \to \bar{\mathbb{Q}}_\ell^\times$ such that $\rho(\text{Fr}_v) = \xi(\pi_v)$ for all $v$.
 \end{enumerate}
 
 Where $\bO_K^\times = \bO_{0}$
+\end{theorem}
 
 
-\begin{theorem}[Character Formulation of Ramified class field theory]
+\begin{theorem}[Character Formulation of Ramified class field theory] \label{theorem:character-formulation-of-ramified-class-field-theory}
 In the above notations:
 \begin{enumerate}
-    \item For each character $\xi : K^\times \backslash \mathbb{A}_K^\times / \mathcal{O}_{\mdls}^\times \to \mathbb{Q}_\ell^\times$ there exists a unique continuous character $\rho : G_K \to \mathbb{Q}_\ell^\times$ with $\ram(\rho) \subseteq \mdls$ and $\rho(Fr_v) = \xi(\pi_v)$ for all primes $v \notin \Supp(\mdls)$.
+    \item For each character $\xi : K^\times \backslash \mathbb{A}_K^\times / \mathcal{O}_{\mdls}^\times \to \bar{\mathbb{Q}}_\ell^\times$ there exists a unique continuous character $\rho : G_K \to \bar{\mathbb{Q}}_\ell^\times$ with $\ram(\rho) \subseteq \mdls$ and $\rho(Fr_v) = \xi(\pi_v)$ for all primes $v \notin \Supp(\mdls)$.
 
-    \item For each continuous character $\rho : G_K \to \mathbb{Q}_\ell^\times$ with $\ram(\rho) \subseteq \mdls$ there exists a unique character $\xi : K^\times \backslash \mathbb{A}_K^\times / \mathcal{O}_{\mdls}^\times \to \mathbb{Q}_\ell^\times$ such that $\rho(Fr_v) = \xi(\pi_v)$ for all primes $v \notin \Supp(\mdls)$.
+    \item For each continuous character $\rho : G_K \to \bar{\mathbb{Q}}_\ell^\times$ with $\ram(\rho) \subseteq \mdls$ there exists a unique character $\xi : K^\times \backslash \mathbb{A}_K^\times / \mathcal{O}_{\mdls}^\times \to \bar{\mathbb{Q}}_\ell^\times$ such that $\rho(Fr_v) = \xi(\pi_v)$ for all primes $v \notin \Supp(\mdls)$.
 \end{enumerate}
 \end{theorem}
-Where
-The term unramified character, resp. character with ramification bounded by $\mdls$, means that the character is trivial on the correspoding inertia group or higher ramification group of $G_K$ corresponding to the relevant primes. 
 
 
-\textcolor{red}{See milne, amichai, for more details.}
 
-We want to show how this formulation is equivalent to the adeles formulation given in the previous section.
+In fact, for the above theorems, we can replace $\bar{\mathbb{Q}}_\ell^\times$ by any finite abelian group $G$ with the discrete topology, and the theorems would still hold.
+
+\begin{theorem}\label{theorem:characters-theorem-finite-abelian-groups}
+    Assume \ref{theorem:character-formulation-of-unramified-global-class-field-theory}, \ref{theorem:character-formulation-of-ramified-class-field-theory} 
+    are true for all finite abelian groups $G$ with the discrete topology (as values of the characters).
+    Then \ref{theorem:character-formulation-of-unramified-global-class-field-theory}, \ref{theorem:character-formulation-of-ramified-class-field-theory}
+    are true as stated. 
+    \begin{proof}
+    Indeed, assume such theorem would be true for such cases, then by varying $G$ over $(\Z / l^n \Z)^\times$ (for all $n \in \N$), we will get a compatible system of characters and a corresponding isomorphism of character groups 
+    with values in $\Z_l^\times$. And since $Tors(\Z_l^\times) \cong Tors({\mathbb{Q}}_\ell^\times)$, this is equivilant to the theorems for characters with values in ${\mathbb{Q}}_\ell^\times$. 
+    Similiarly, every finite extension $\Q_l \subset F$ comes as inverse limit of its finite subgroups of units, so the same argument applies to characters with values in $F^\times$. 
+    We have compatability between those characters (from uniqueness) for all finite ${\mathbb{Q}_l} \subset F$ and by going to the colimit (and since all groups involved are fintely generated, hence in \textbf{Ab} $Hom(A, -) $ preserve colimtis) we get the result for characters with values in $\bar{\mathbb{Q}}_\ell^\times$ as well.
+        
+    \end{proof}
+\end{theorem}
+
+
+
+\begin{theorem}\label{theorem:equivalence-of-character-and-ideal-formulations}
+    Let $\mdls$ be a modulus of $K$. Assume \ref{theorem:character-formulation-of-unramified-global-class-field-theory} and \ref{theorem:character-formulation-of-ramified-class-field-theory} are true. Then the Artin map induces isomorphisms:
+\begin{align*}
+& Hom_{cont}(C_\mdls, \bar{\mathbb{Q}}_\ell^\times) \cong Hom_{cont}(K^\times \backslash \mathbb{A}_K^\times / \bO_{\mdls}^\times, \bar{\mathbb{Q}}_\ell^\times) \\
+&\cong Hom_{cont,ram\leq \mdls}(G_K, \bar{\mathbb{Q}}_\ell^\times) \cong Hom_{(cont,ram \leq m)}(G_K^{ab}, \bar{\mathbb{Q}}_\ell^\times) \\
+& \cong Hom_{cont}(Gal(L_\mdls/K), \bar{\mathbb{Q}}_\ell^\times)
+\end{align*}
+Where $L_\mdls$ is the maximal abelian extension of $K$ with ramification bounded by $\mdls$.
+Hence by \cref{thm:duality-finite-abelian-groups} we get that the artin map induces isomorphism $C_\mdls \cong Gal(L_\mdls/K)$, which implies the statement of \cref{theorem:ArtinReciprocity} and \cref{theorem:ExistenceTheorem}.
+(Details omitted, like how to go from $C_\mdls$ to every congurgence subgroups, etc.)
+\end{theorem}
 
 
 \textcolor{red}{
@@ -39,5 +91,9 @@ We want to show how this formulation is equivalent to the adeles formulation giv
         \item Over what field are we working? what is $l$, what is $p$?
         \item Fix the qoutient of adeles no match the subgroup 
         \item $\mdls$ vs $\mdls$ notation for divisors
+        \item maybe make \cref{theorem:characters-theorem-finite-abelian-groups} more precise
+        \item maybe make \cref{theorem:equivalence-of-character-and-ideal-formulations} more precise
+        \item replace $l$ by $\ell$ everywhere
     \end{enumerate}
 }
+\textcolor{red}{See milne, amichai, for more details.}

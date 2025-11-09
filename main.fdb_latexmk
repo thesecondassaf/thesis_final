@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1762435630.9501 "main.bcf" "main.bbl" "main" 1762439004.80704 0
+["biber main"] 1762683394.96431 "main.bcf" "main.bbl" "main" 1762683885.25852 0
   "Bib.bib" 1762332590.24788 2460 8f1d1df10e8bc1c14328d527ff89b60d ""
-  "main.bcf" 1762439004.57095 108607 d75f3945e641ee0e52a375b491f51409 "pdflatex"
+  "main.bcf" 1762683885.0113 108607 d75f3945e641ee0e52a375b491f51409 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1762439002.17911 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1762439004.80753 0
+["pdflatex"] 1762683882.6103 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1762683885.25898 0
   "/Users/assaf/Desktop/Thesis/thesis final/main.tex" 1762333215.83334 1365 db935afe314b448fb9dded34aa82864a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -307,17 +307,17 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "MacrosAndFigures.tex" 1762434170.88705 9862 6f91d566fe93cd7e75b0ff40a797c550 ""
   "includes.tex" 1761554125.44252 1218 999626d514422730e8803e5d90700afe ""
-  "main.aux" 1762439004.5611 3150 20dc2ca4d6f673b23e5a24b8d885933e "pdflatex"
-  "main.bbl" 1762435633.29586 1693 53c94e2c5051fe71a5d15ff8cda6a19d "biber main"
-  "main.out" 1762439004.56667 2353 f542c7d9ef6eb358726f184e3fe46347 "pdflatex"
-  "main.run.xml" 1762439004.57203 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.aux" 1762683885.00127 4500 c77a97b24b43431695470d9a6b802be6 "pdflatex"
+  "main.bbl" 1762683402.79048 1693 53c94e2c5051fe71a5d15ff8cda6a19d "biber main"
+  "main.out" 1762683885.00704 2643 435b426a239b57de1769a176b84e11d0 "pdflatex"
+  "main.run.xml" 1762683885.01238 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
   "main.tex" 1762333215.83334 1365 db935afe314b448fb9dded34aa82864a ""
-  "main.toc" 1762439004.57212 1069 a63f15aae0e1bc2aeb2c3f65aac265c7 "pdflatex"
-  "sections/CFTInTheLanguageOfAdeles.tex" 1762439001.92925 9818 798fe11dfe8235df340344af84fd5a31 ""
-  "sections/CFTInTheLanguageOfCharacters.tex" 1762437562.90045 2663 e852f5bccc8d133b564c14e67550708d ""
+  "main.toc" 1762683885.01248 1234 4ddb0dc69a7c5169ddf1d7852e0d241c "pdflatex"
+  "sections/CFTInTheLanguageOfAdeles.tex" 1762439070.74462 9818 798fe11dfe8235df340344af84fd5a31 ""
+  "sections/CFTInTheLanguageOfCharacters.tex" 1762683882.36671 7058 316ad1004afc84ef3840b6e8df26eab6 ""
   "sections/CFTInTheLanguageOfIdeals.tex" 1762437561.55338 3736 cdd485b7d5961dffad5f4d98d46c1f7a ""
   "sections/ConnectionBetweenCharacterCFTsAndGeometricCFT.tex" 1762168287.2755 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "sections/GeometricCFT.tex" 1762168697.16578 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "sections/GeometricCFT.tex" 1762683854.83934 78 8f7295e8ab577abcc8e6c2b8cd6f8264 ""
   "sections/IntroductionToGeometricCFT.tex" 1762168266.80644 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "main.aux"

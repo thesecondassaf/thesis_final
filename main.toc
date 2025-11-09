@@ -10,3 +10,5 @@
 \contentsline {subsubsection}{\numberline {3.1.3}Norms of ideles}{6}{subsubsection.3.1.3}%
 \contentsline {subsection}{\numberline {3.2}The main theorems}{6}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Class Field Theory In the language of Characters}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}About Characters}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Main Theorems}{8}{subsection.4.2}%
