@@ -501,6 +501,8 @@ OUTPUT main.toc
 INPUT ./sections/CFTInTheLanguageOfIdeals.tex
 INPUT ./sections/CFTInTheLanguageOfIdeals.tex
 INPUT sections/CFTInTheLanguageOfIdeals.tex
+INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
@@ -508,8 +510,6 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
-INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti1095.tfm
@@ -535,9 +535,6 @@ INPUT sections/CFTInTheLanguageOfCharacters.tex
 INPUT ./sections/IntroductionToGeometricCFT.tex
 INPUT ./sections/IntroductionToGeometricCFT.tex
 INPUT sections/IntroductionToGeometricCFT.tex
-INPUT ./sections/ConnectionBetweenCharacterCFTsAndGeometricCFT.tex
-INPUT ./sections/ConnectionBetweenCharacterCFTsAndGeometricCFT.tex
-INPUT sections/ConnectionBetweenCharacterCFTsAndGeometricCFT.tex
 INPUT ./sections/GeometricCFT.tex
 INPUT ./sections/GeometricCFT.tex
 INPUT sections/GeometricCFT.tex
