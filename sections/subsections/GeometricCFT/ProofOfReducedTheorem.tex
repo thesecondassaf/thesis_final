@@ -1,0 +1,42 @@
+Let $\mdls$ be an effective Cartier divisor on $C$, and let $d$ be a positive integer satisfying $d \geq max \{2g-1 + \deg \mdls, \deg \mdls\}$ where $g$ is the genus of $C$. 
+We denote by $C^{(d)}$ the $d$-th symmetric power of $C$ over $k$.
+By \textcolor{red}{add reference}, the fibers of the map \textcolor{red}{for d large enough? under what conditions?}
+$$ \Phi_d : U^{(d)} \to \PicCm[d] $$ over any point are isomorphic to
+$$
+\begin{cases}
+\mathbb{A}_k^{d - \deg \mdls - g + 1} & \text{if } m > 0 \\
+\mathbb{P}_k^{d - g} & \text{if } m = 0
+\end{cases}
+$$
+
+
+%More accurately, for a $k$-point of $\PicCm[d]$ corresponding to a pair $(\cL, \alpha)$ where $\cL$ is an invertible $\cO_C$-module of degree $d$ and $\alpha$ is a rigidification of $\cL$ along $\mdls$, the fiber of $\Phi_d$ over this point is isomorphic to the projective space of global sections of $\cL$ which restrict to $\alpha$ along $\mdls$:
+%$$ \mathbb{P}(\Gamma_\mdls(C, \cL)) = \mathbb{P}(\{ s \in \Gamma(C, \cL) \mid s|_\mdls = \alpha \}) $$
+
+One can show this makes $\Phi_d$ into a fibration in affine spaces or projective spaces, depending on whether $\mdls$ is non-zero or zero. 
+
+Using a fundamental theorem about etale fundamental groups:
+\begin{theorem}[Homotopy Exact Sequence \stackstag{0C0J}]
+Let $f : X \to S$ be a flat proper morphism of finite presentation whose geometric fibres are connected and reduced. Assume $S$ is connected and let $\overline{s}$ be a geometric point of $S$. Then there is an exact sequence
+
+\[ \pi _1(X_{\overline{s}}) \to \pi _1(X) \to \pi _1(S) \to 1 \]
+of fundamental groups.
+\end{theorem}
+
+We get, in the case when $\mdls = 0$ (Hence $\Phi_d$ is smooth and proper) that there is an isomorphism of fundamental groups:
+$$ \pi_1^{et}(C^{(d)}) \cong \pi_1^{et}(\PicC[d]) $$
+Implying \cref{thm:GCFT_reduced} \textcolor{red}{explain exactly how, becuase here it is fundamental groups and there it is etale sheafves of $\Lambda$-modules}.
+
+In the case when $\mdls > 0$, $\Phi_d$ is not proper anymore, so we cannot apply the homotopy exact sequence directly.
+In \cite{takeuchi2019blow} Takeuchi constructs a compactifiaction of $U^{(d)}$ by adding a boundary hyperplane, over which $\cF^{(d)}$ is tamely ramified.
+More over, this compactification, denoted by $\tilde{C}^{(d)}_\mdls$ is fibered over $\PicCm[d]$ with fibers isomorphic to projective spaces. Thus we get
+$$ \pi_1(\tilde{C}^{(d)}_\mdls) \cong \pi_1(\PicCm[d])$$
+
+From here, one can go in two routes, 
+\textbf{Route 1} - Showing $ \ker \{\pi^{ab}_1(U^{(d)}) \to \pi^{ab}_1(\PicCm[d]) \} $ is pro-$p$ group. 
+
+\textbf{Route 2} - Showing $$\pi^{t, ab}_1(U^{(d)}) \to \pi^{t,ab}_1(\PicCm[d])$$ is isomorphism to its image.  \textcolor{red}{here one needs to be precise.}
+
+In both cases, one would then get \cref{thm:GCFT_reduced}.
+
+We start by defintions and basic proposition of everything we need. 

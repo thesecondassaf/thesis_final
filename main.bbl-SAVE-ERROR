@@ -19,6 +19,47 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global/global}
+    \entry{takeuchi2019blow}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ca1ca5408035ebcb32c22da88c0cc886}{%
+           family={Takeuchi},
+           familyi={T\bibinitperiod},
+           given={Daichi},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mathematical Sciences Publishers}%
+      }
+      \strng{namehash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{fullhash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{fullhashraw}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{bibnamehash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{authorbibnamehash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{authornamehash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{authorfullhash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{authorfullhashraw}{ca1ca5408035ebcb32c22da88c0cc886}
+      \field{labelalpha}{Tak19}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Algebraic Number Theory}
+      \field{number}{6}
+      \field{title}{Blow-ups and the class field theory for curves}
+      \field{volume}{13}
+      \field{year}{2019}
+      \field{pages}{1327\bibrangedash 1351}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.2140/ant.2019.13.1327
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2140/ant.2019.13.1327
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2140/ant.2019.13.1327
+      \endverb
+    \endentry
     \entry{milneCFT}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=1c48e53e44d3122db018aff3b6321bd6}{%
