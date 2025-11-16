@@ -13,11 +13,10 @@
 \contentsline {subsection}{\numberline {4.1}About Characters}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}The Main Theorems}{8}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Geometric Class Field Theory}{9}{section.5}%
-\contentsline {section}{\numberline {6}Geometric Class Field Theory}{9}{section.6}%
-\contentsline {section}{\numberline {7}Proof of \cref {thm:GCFT_reduced}}{11}{section.7}%
-\contentsline {section}{\numberline {8}Generalized Picard Scheme, Abel Jacobi Map, And The Blowup}{12}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Generalized Picard Scheme}{12}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Abel-Jacobi Map}{13}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Generalized Effective Cartier Divisors}{14}{subsubsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.3}The Blowup}{14}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Other}{14}{subsection.8.4}%
+\contentsline {section}{\numberline {6}Proof of \cref {thm:GCFT_reduced}}{10}{section.6}%
+\contentsline {section}{\numberline {7}Generalized Picard Scheme, Abel Jacobi Map, And The Blowup}{11}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Generalized Picard Scheme}{11}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Abel-Jacobi Map}{13}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Generalized Effective Cartier Divisors}{14}{subsubsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.3}The Blowup}{14}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Other}{15}{subsection.7.4}%

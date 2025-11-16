@@ -77,24 +77,83 @@ is defined for a scheme $T$ over $\text{Spec}(k)$ and for a relative effective C
 \]
 where $[\mathcal{O}(D)]$ is the class of the invertible sheaf $\mathcal{O}(D)$ on $(C \times_{\text{Spec}(k)} T)/T$. Equivalently if $D$ is represented by the pair $(\mathcal{G}, s)$ (1.2.6), then the Abel-Jacobi map is given by
 \[
-\Phi_d{A}_d(T)((\mathcal{G}, s)) := [\mathcal{G}].
+\Phi_d(T)((\mathcal{G}, s)) := [\mathcal{G}].
 \]
 A theorem in milne \cite{milneAV} shows that over a field $k$, for any $d\geq 1$ we have that 
 the functor $\text{Div}_C^d$ is representable by the $d$-th symmetric power $C^{(d)}$. 
 
 \subsubsection{Generalized Effective Cartier Divisors}
 We copy from \cite{Guignard2018}
-Let $f : X \to S$ be as in 4.1, 
+Let $f : X \to S$ be a smooth morphism of schemes of relative dimension 1, with connected
+geometric fibers of genus $g$, which is Zariski-locally projective over $S$.
+
 and let $i : Y \to X$ be a closed subscheme of $X$, which is finite locally free over $S$ of degree $N \ge 1$, 
-and let $U = X \setminus Y$ be its complement. A \textbf{Y-trivial effective Cartier divisor of degree d on X} is a pair $(\mathcal{L}, \sigma)$ such that $\mathcal{L}$ is a locally free $\mathcal{O}_X$-module of rank 1 and $\sigma : \mathcal{O}_X \to \mathcal{L}$ is an injective homomorphism such that $i^*\sigma$ is an isomorphism and such that the closed subscheme $V(\sigma)$ of $X$ defined by the vanishing of the ideal $\sigma\mathcal{L}^{-1}$ of $\mathcal{O}_X$ is finite locally free of rank $d$ over $S$. Two $Y$-trivial effective divisors $(\mathcal{L}, \sigma)$ and $(\mathcal{L}', \sigma')$ are \textbf{equivalent} if there is an isomorphism $\beta : \mathcal{L} \to \mathcal{L}'$ of $\mathcal{O}_X$-modules such that $\beta\sigma = \sigma'$. As in 4.7, if such an isomorphism exists then it is unique.
+and let $U = X \setminus Y$ be its complement. A \textbf{Y-trivial effective Cartier divisor of degree d on X} is a pair $(\mathcal{L}, \sigma)$ such that $\mathcal{L}$ is a locally free $\mathcal{O}_X$-module of rank 1 and $\sigma : \mathcal{O}_X \to \mathcal{L}$ is an injective homomorphism such that $i^*\sigma$ is an isomorphism and such that the closed subscheme $V(\sigma)$ of $X$ defined by the vanishing of the ideal $\sigma\mathcal{L}^{-1}$ of $\mathcal{O}_X$ is finite locally free of rank $d$ over $S$. Two $Y$-trivial effective divisors $(\mathcal{L}, \sigma)$ and $(\mathcal{L}', \sigma')$ are \textbf{equivalent} if there is an isomorphism $\beta : \mathcal{L} \to \mathcal{L}'$ of $\mathcal{O}_X$-modules such that $\beta\sigma = \sigma'$. 
+As in \textcolor{red}{4.7 - This is not "trivial" show/or skip but say somethinig about it}, if such an isomorphism exists then it is unique.
+\cite{Guignard2018} shows: 
+\begin{prop}[4.11 In Guignard]
+    The map $(\mathcal{L}, \sigma) \mapsto (V(\sigma) \hookrightarrow X)$ is a bijection from the set of equivalence classes of $Y$-trivial effective Cartiers divisor of degree $d$ on $X$ onto the set of closed subschemes of $U$ which are finite locally free of degree $d$ over $S$.
+\end{prop}
+\begin{prop}[4.12 In Guignard]
+    Let $d$ be an integer and let $\text{Div}_{S}^{d, +}(X, Y)$ be the functor which to an $S$-scheme $T$ associates the set of equivalence classes of $Y_T$-trivial effective Cartier divisors of degree $d$ on $X_T$. Then $\text{Div}_{S}^{d, +}(X, Y)$ is representable by the $S$-scheme $\text{Sym}_S^d(U)$, the $d$-th symmetric power of $U = X \setminus Y$ over $S$. In particular $\text{Div}_{S}^{d, +}(X, Y)$ is smooth of relative dimension $d$ over $S$.
+\end{prop}
 
+\begin{prop}[4.14 In Guignard]
+Let $d \geq N + 2g - 1$ be an integer, and let $\text{Pic}_{S}^d(X, Y)$ be the inverse image of $\text{Pic}_S^d(X)$ by the natural morphism $\text{Pic}_S(X, Y) \to \text{Pic}_S(X)$. Then the Abel-Jacobi morphism
+$$ \Phi_d : \text{Div}_S^{d, +}(X, Y) \to \text{Pic}_{S}^d(X, Y) $$
+$$ (\mathcal{L}, \sigma) \mapsto (\mathcal{L}, i^* \sigma) $$
+is surjective smooth of relative dimension $d - N - g + 1$ and it has geometrically connected fibers.
+\textcolor{red}{$N$ is the degree of $Y$ so $\deg \mdls$ - replace it}
+\end{prop}
 
+\textcolor{red}{
 \begin{enumerate}
     \item The notation here from giroud of $f$ is as $pr$ in takeuchi, so we need to make it precise in coheret
     \item Some places they work over a family of curves, and some places over $k$. - make this uniform as well. 
-    \item Here gioured use the term $Y$, we need to formulate it like $\mdls$
+    \item Here gioured use the term $Y$, we need to formulate it like $\mdls$ and $N$ by $N=\deg \mdls$
+    \item Maybe add somewhere the definition of $Sym_U$ like 2.22 in Guingard. ?
 \end{enumerate}
+}
 \subsection{The Blowup}
+In this section we define the blowup of $C^{(d)}$ by $Z_0$ and give its basic properties. As outlined in \cite{takeuchi2019blow}
+Let $C^(d)$ be the $d$'th symmetric product of $C$, which parametrizes effective Cartier
+divisor of $deg = d$ on $C$. Let $Z_0$ be the closed subscheme of $C^{(d)}$ defined by the map $C^{(d- \deg \mdls)} \to C^{(d)}$ adding $\mdls$.
+And let $X_{\mdls}$ be the blowup of $C^{(d)}$ along $Z_0$.
+In \cite{takeuchi2019blow}[Section 3] Takeuchi proves:
+\begin{theorem}
+    There exists a commutative diagram:
+    \begin{equation}
+\begin{tikzcd}
+    % Row 1
+    & 
+    & U^{(d)} \arrow[d, hook, blue, dashed]  \arrow[dd, hook, blue, dashed, bend right=25] \arrow[ddd, hook, blue, dashed, bend right=40] \arrow[dr, "\Phi_d"]
+    & 
+    \\
+    % Row 2
+    & Z_0 \times_{C^{(d)}} \tilde{C}_{\mdls}^{(d)}  \arrow[r] \arrow[d]
+    & \tilde{C}_{\mdls}^{(d)} \arrow[r, red] \arrow[d,  hook, red] \arrow[dr, phantom, "\square"]
+    & \PicCm[d] \arrow[d, hook, red] \\
+    % Row 3
+    & Z_0 \times_{C^{(d)}} X_\mdls  \arrow[r] \arrow[d]
+    & X_{\mdls} \arrow[r, red] \arrow[d, red]    
+    & P_{\mdls}^{d} \arrow[d, red] \\
+    % Row 4
+    & Z_0 \arrow[r]
+    & C^{(d)}
+    & \PicC[d]
+\end{tikzcd}
+\end{equation}
+Where
+\begin{enumerate}
+    \item \cite{takeuchi2019blow}[Lemma 3.1.] $P_\mdls^{d}$ is a sheaf in $Sch/\PicC[d]$ defined by:
+    \textcolor{blue}{Add sheaf definition and continue this theorem}
+    isomorphic to the projectivization $\bP(pr_* \cL_\mdls^{'})$.
+     represented by a proper smooth $S$-algebraic space. Assume that $C \to S$ has a section. Let $\mathcal{L}'$ be a representative invertible sheaf of the universal class. Then, as sheaves on $\text{Sch}/\text{Pic}_C^{d_m}$, $\mathcal{P}_m^{d_m}$ is isomorphic to the projectivization $\mathbb{P}(\text{pr}_{\star}\mathcal{L}'_m)$ of $\text{pr}_{\star}\mathcal{L}'_m$.
+\end{enumerate}
+
+Where for a scheme $X$ and a locally free sheaf of finite rank $\mathcal{F}$ on $X$. We use a contra-Grothendieck notation for a projective space. 
+Thus the $X$-scheme $\mathbb{P}(\mathcal{F})$ parametrizes invertible subsheaves of $\mathcal{F}$.
+\end{theorem}
 
 
 \subsection{Other}
