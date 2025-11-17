@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1763292208.00548 "main.bcf" "main.bbl" "main" 1763292650.37447 0
+["biber main"] 1763379618.51995 "main.bcf" "main.bbl" "main" 1763381713.34192 0
   "Bib.bib" 1763029851.23071 3280 5fa9a5f6598c6daf1fee770c30727a6d ""
-  "main.bcf" 1763292650.10648 109429 3fe7bd0afeb373a7d5d1c7f7aab20f53 "pdflatex"
+  "main.bcf" 1763381712.76828 109717 f54d62b31e672decfa6e0da185da8698 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1763292647.24157 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1763292650.37493 0
+["pdflatex"] 1763381709.95851 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1763381713.34245 0
   "/Users/assaf/Desktop/Thesis/thesis final/main.tex" 1763023515.86418 1587 dc5cf6e40fb60ea6f7c3a516ee089f1e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -246,6 +246,7 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg" 1429144587 7068 06f8d141725d114847527a66439066b6 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def" 1712263026 22135 0975a49eeaed232aa861e9425ffb2e7c ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty" 1712263026 62767 e79d6d7a989e7da62dcf3d0a65c1faee ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty" 1738874546 52272 63d293bc0d496619edb57585740861a2 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1739306980 46850 d87daedc2abdc653769a6f1067849fe0 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
@@ -314,20 +315,20 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1751287751 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1751287697 3345733 c2dcab6b4eb5ba942e93b730ad63bb36 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "MacrosAndFigures.tex" 1763292519.33312 10066 4769ff26cb5573bab90920a5302e4e6f ""
-  "includes.tex" 1761554125.44252 1218 999626d514422730e8803e5d90700afe ""
-  "main.aux" 1763292650.09563 7184 1b44604521dfc86a75e7d16c9ef9d378 "pdflatex"
-  "main.bbl" 1763292210.36598 8554 2bc2cdf9c1086d134903077bfe1bc217 "biber main"
-  "main.out" 1763292650.10214 4150 dbbebd1ded6228008b4237c9ae2fcfb7 "pdflatex"
-  "main.run.xml" 1763292650.10753 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "MacrosAndFigures.tex" 1763380203.24893 10116 29aa3dd39c4f85248859bc159e97d660 ""
+  "includes.tex" 1763380568.18911 1240 3643aac79b20f05a43784848b0dbbf19 ""
+  "main.aux" 1763381712.7556 7624 1810d99b98d5ddf9432754c37c408c5c "pdflatex"
+  "main.bbl" 1763379620.78852 8554 2bc2cdf9c1086d134903077bfe1bc217 "biber main"
+  "main.out" 1763381712.76296 4221 950ea77a465e9b37564ac48491cc9c34 "pdflatex"
+  "main.run.xml" 1763381712.76962 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
   "main.tex" 1763023515.86418 1587 dc5cf6e40fb60ea6f7c3a516ee089f1e ""
-  "main.toc" 1763292650.10765 1961 70d25787c2704ae1d743c1df1c86fdc2 "pdflatex"
+  "main.toc" 1763381712.76977 1974 d97fb5e3647463055d69d44427b20df0 "pdflatex"
   "sections/CFTInTheLanguageOfAdeles.tex" 1762439070.74462 9818 798fe11dfe8235df340344af84fd5a31 ""
   "sections/CFTInTheLanguageOfCharacters.tex" 1762683921.9107 7058 316ad1004afc84ef3840b6e8df26eab6 ""
   "sections/CFTInTheLanguageOfIdeals.tex" 1762437561.55338 3736 cdd485b7d5961dffad5f4d98d46c1f7a ""
   "sections/GeometricCFT.tex" 1763287402.32388 2986 25933bb58f14103bb12326a4253eae32 ""
   "sections/IntroductionToGeometricCFT.tex" 1762168266.80644 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "sections/subsections/GeometricCFT/PicardAbelJacobiBlowUp.tex" 1763292646.95819 14191 a4be9364b8133aeb64aa8a5ddf002551 ""
+  "sections/subsections/GeometricCFT/PicardAbelJacobiBlowUp.tex" 1763381706.66992 15358 3d260358c6ed685f341e6e9f72eee6f9 ""
   "sections/subsections/GeometricCFT/ProofOfReducedTheorem.tex" 1763287529.21661 2918 b1417d863099b35d4b0cb9ecad241a6f ""
   (generated)
   "main.aux"

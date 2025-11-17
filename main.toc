@@ -19,4 +19,4 @@
 \contentsline {subsection}{\numberline {7.2}Abel-Jacobi Map}{13}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}Generalized Effective Cartier Divisors}{14}{subsubsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.3}The Blowup}{14}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Other}{15}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.4}Other Completions }{16}{subsection.7.4}%

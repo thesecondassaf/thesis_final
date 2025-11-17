@@ -83,6 +83,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/comment/comment.sty
