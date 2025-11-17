@@ -28,7 +28,16 @@ $$ \pi_1^{et}(C^{(d)}) \cong \pi_1^{et}(\PicC[d]) $$
 Implying \cref{thm:GCFT_reduced} \textcolor{red}{explain exactly how, becuase here it is fundamental groups and there it is etale sheafves of $\Lambda$-modules}. Also, we need it to be \textbf{multiplicative}!
 
 In the case when $\mdls > 0$, $\Phi_d$ is not proper anymore, so we cannot apply the homotopy exact sequence directly.
-In \cite{takeuchi2019blow} Takeuchi constructs a compactifiaction of $U^{(d)}$ by adding a boundary hyperplane, over which $\cF^{(d)}$ is tamely ramified.
+In \cite{takeuchi2019blow} Takeuchi constructs a compactifiaction of $U^{(d)}$ by adding a boundary hyperplane, $H$, over which $\cF^{(d)}$ is tamely ramified.
+This compactification is denoted by $\Cmod{d}$, it has $U^{(d)}$ as an open subscheme with complement $H$. 
+
+\textbf{This is a theorem we are going to prove in a different way:}
+\begin{theorem}\label{theorem:SymmetricPowerOfSheafIsTamelyRamified}
+     Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
+    Then, for sufficiently large integer $d$, $\cF^{(d)}$ is tamely ramified on $H$.
+\end{theorem}
+\textcolor{red}{Note that the above terminology of tamely ramified on $H$ is defined exactly when H is the complement of $U^{(d)}$, so I want to say something about it, or make it clear, or somehow define it someplace else and refer to it }
+
 More over, this compactification, denoted by $\tilde{C}^{(d)}_\mdls$ is fibered over $\PicCm[d]$ with fibers isomorphic to projective spaces. Thus we get
 $$ \pi_1(\tilde{C}^{(d)}_\mdls) \cong \pi_1(\PicCm[d])$$
 
