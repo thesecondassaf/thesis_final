@@ -36,6 +36,30 @@ If $ram P^{[d_1n_1]}_{\eta^1} \leq k_1 $ and $ram P^{[d_2n_2]}_{\eta^2} \leq k_2
 Then $ram P^{[d_1n_1 + d_2n_2]}_{\eta} \leq max(k_1, k_2)$ where $\eta$ is the generic point of the exceptional divisor $E$ of the blowup of $C^{(d_1 n_1 + d_2n_2)}$ by $\mdls= n_1 P_1 + n_2P_2$
 \end{prop}
 
+We will work this out along an example:
+Let $X=G_m=\spec R[t, t^{-1}]$ and Let $P=G_m \xrightarrow[]{(\cdot)^{n}} G_m$ be the $n$'th power map. 
+It is a $G=\Z/n\Z$ torsor.  
+The ring map is $R[t, t^{-1}] \xrightarrow[]{t \mapsto t^n} R[t, t^{-1}]$
+which corresponds to ring extension: $R[t, t^{-1}] \to R[t^{\frac{1}{n}}, t^{-\frac{1}{n}}]$.
+The field of fractions of $G_m$ is $K(t)$ and the corresponding map between fields of $P \to X$
+is $K(t) \xrightarrow[]{t \to t^n} K(t)$. which corresponds to the field extension:
+$K(t) \hookrightarrow K(t^{\frac{1}{n}}) = K(t)[X]/(X^n -t)$.
+Where $K = Frac R$
+
+The points $0, \infty \in \bP^1$ corresponds to the local rings:
+$\mathcal{O}_{0} = K[t]_{(t)}$ and $\mathcal{O}_{\infty} = K[\frac{1}{t}]_{(\frac{1}{t})}$ of $K(t)$
+Which are DVRs. The corresponding valuations of $K(t)$ are given by:
+$v_0(\frac{f}{g}) =\text{maximal exponent $n$ s.t. $t^{n} \mid \frac{f}{g}$} $ and $v_\infty(\frac{f}{g}) =\deg g - \deg f$ 
+
+In the general case of a $G$ torsor $P \to C$ we have similarly:
+$K(C) \cong K(t)$ the function ring of $C$ for some variable $t$ and a finite field extension $K/\F_p(t')$. 
+If the basefield $K$ contains $n$'th roots of unity, then the torsor is the same... and continue here:
+$\Oo_{P_1}$
+the same..
+and continue.
+
+
+
 This follows by the following:
 Start talking about local rings, and take everything locally and prove it locally.
 \begin{prop}
