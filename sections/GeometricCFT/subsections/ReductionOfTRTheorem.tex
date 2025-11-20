@@ -9,9 +9,9 @@ Let $C$ be a projective smooth geometrically connected curve over a perfect fiel
 Zariski-locally projective over $S$.
 
 The reduction is followed by 3 lemmas:
-\begin{lemma}
+\begin{prop}
 The morphism $\pi : C^{(n_1 d_1)} \times_k \dots \times_k C^{(n_r d_r)} \times_k C^{(d - \deg \mathfrak{m})} \to C^{(d)}$, taking the sum, is étale at the generic point of the closed subvariety $\{n_1 P_1\} \times \dots \times \{n_r P_r\} \times C^{(d - \deg \mathfrak{m})}$ of $C^{(n_1 d_1)} \times_k \dots \times_k C^{(n_r d_r)} \times_k C^{(d - \deg \mathfrak{m})}$.
-\end{lemma}
+\end{prop}
 
 \begin{proof}
 We may assume that $k$ is algebraically closed (hence $d_i = 1$ for all $i$). Since the map $\pi : C^{(n_1)} \times_k \dots \times_k C^{(n_r)} \times_k C^{(d - \deg \mathfrak{m})} \to C^{(d)}$ is finite flat, it is enough to show that there exists a closed point $Q$ of $n_1 P_1 + \dots n_r P_r + C^{(d - \deg \mathfrak{m})}$ over which there are $\deg \pi$ points on $C^{(n_1)} \times_k \dots \times_k C^{(n_r)} \times_k C^{(d - \deg \mathfrak{m})}$. Choose $Q$ as a point corresponding to a divisor
@@ -19,16 +19,16 @@ $n_1 P_1 + \dots n_r P_r + P_{r+1} + \dots + P_{r+d - \deg \mathfrak{m}}$, where
 \end{proof}
 
 
-\begin{lemma} Denote $\mdls_1=n_1P_1$ and $\mdls_2=n_2P_2 + ... + n_rP_r$. Let $X_{\mdls_1}, X_{\mdls_2}$ be the blowups of $C^{(\deg \mdls_1)}, C^{(\deg \mdls_2)}$ by $\mdls_1$, $\mdls_2$ respectively.  
+\begin{prop}\label{prop:preservationOfTameness} Denote $\mdls_1=n_1P_1$ and $\mdls_2=n_2P_2 + ... + n_rP_r$. Let $X_{\mdls_1}, X_{\mdls_2}$ be the blowups of $C^{(\deg \mdls_1)}, C^{(\deg \mdls_2)}$ by $\mdls_1$, $\mdls_2$ respectively.  
 Let $E_1, E_2$ be the respective exceptional divisors (\textcolor{red}{which are irreducibele of codim 1}), and let $\eta_1$, $\eta_2$ be their generic points respectively.
 Assume $\cF^{(\deg \mdls_1)}$, $\cF^{(\deg \mdls_2)}$ are tamely ramified (\textcolor{red}{is bounded ramification here good enough?}) on $\eta_1, \eta_2$  respectively.
 Then $\cF^{(\deg \mdls)}$ is tamely ramified (\textcolor{red}{or any bounded ramification?}) at $\eta$ - the generic point of the exceiptional divisor of the blowup $X_\mdls$ of $C^{(\deg \mdls)}$ by $\mdls$
-\end{lemma}
+\end{prop}
 
-\begin{lemma}
-    In the notations of the previous lemma, suppose $\cF^{(\deg \mdls)}$ is tamely ramified at $\eta$.
+\begin{prop}
+    In the notations of the previous proposition, suppose $\cF^{(\deg \mdls)}$ is tamely ramified at $\eta$.
     Then  $\Fbox{\deg \mdls}{n - \deg \mdls}$ is tamely ramified at the generic point $\theta$ of $E \times_k C^{(n-\deg \mdls)}$
-\end{lemma}
+\end{prop}
 
 Combining the above we get:
 \begin{prop}
@@ -38,10 +38,13 @@ Combining the above we get:
 
 \textcolor{red}{
 \begin{enumerate}
-    \item The first lemma copied from takeuchi, should we explain its proof? give another proof? exclude its proof and refer?
+    \item The first proposition copied from takeuchi, should we explain its proof? give another proof? exclude its proof and refer?
     \item Which of the above definition of $C$ are we going to use? (over $k$ or $s$)
-    \item In the second lemmas, add/explain why are the exceptioanl divisors are irreudcible of codmin 1
+    \item In the second proposition, add/explain why are the exceptioanl divisors are irreudcible of codmin 1
     \item Say what is E - the exceiptional divisor of the blowup.
 \end{enumerate}
 }
 
+
+\subsubsection{\texorpdfstring{Proof of \cref{prop:preservationOfTameness}}{Proof of Proposition 25}}
+1. 

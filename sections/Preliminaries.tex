@@ -1,0 +1,43 @@
+\section{Preliminaries}
+In this section we understand some prelimenaries. 
+Unless otherwise stated, we work within an arbitrary topos $\mathcal{E}$. 
+The following proposition establishes the fundamental dictionary between the geometric theory 
+of principal homogeneous spaces and the algebraic theory of invertible modules.
+ This equivalence allows us to transport the monoidal structure from the category of modules 
+ (the tensor product) to the category of torsors (the contracted product), 
+ strictly within the categorical framework.
+
+
+\begin{prop}
+Let $\mathcal{E}$ be a topos and let $\Lambda$ be a ring object in $\mathcal{E}$. Let $G = \Lambda^\times$ denote the internal group object of units of $\Lambda$.
+
+There is a canonical equivalence of monoidal categories between the category of $G$-torsors in $\mathcal{E}$ and the category of locally free $\Lambda$-modules of rank 1 in $\mathcal{E}$:
+\[
+\Phi: \mathbf{Tors}(\mathcal{E}, \Lambda^\times) \xrightarrow{\sim} \mathbf{Pic}(\mathcal{E}, \Lambda)
+\]
+The equivalence is defined by the associated module functor:
+\[
+P \longmapsto P \times^{\Lambda^\times} \Lambda := \Lambda^\times \backslash (\Lambda \times P)
+\]
+where the quotient is taken with respect to the diagonal action of $\Lambda^\times$ on $\Lambda \times P$. The inverse functor associates to an invertible module $L$ its sheaf of basis frames $\underline{\mathrm{Isom}}_\Lambda(\Lambda, L)$.
+\end{prop}
+
+In light of this canonical equivalence, we will pass freely between the language of $G$-torsors and that of locally free $\Lambda$-modules throughout the text.
+
+
+
+For $P \to U$ a $G$-torsor. We denote by $P^{[d]} \to U^{(d)}$ the corresponding $G$-torsor over $U^{(d)}$.
+Let $\eta^i$ be the generic point of the exceptional divisor $E^i$ of the blowup of $C^{(d_i n_i)}$ by $n_i P_i$
+(Where $deg P_i = d_i$).
+Where $P_i \in C \setminus U$
+We want to prove:
+\begin{prop}
+If $ram P^{[d_1n_1]}_{\eta^1} \leq k_1 $ and $ram P^{[d_2n_2]}_{\eta^2} \leq k_2 $
+Then $ram P^{[d_1n_1 + d_2n_2]}_{\eta} \leq max(k_1, k_2)$ where $\eta$ is the generic point of the exceptional divisor $E$ of the blowup of $C^{(d_1 n_1 + d_2n_2)}$ by $\mdls= n_1 P_1 + n_2P_2$
+\end{prop}
+
+This follows by the following:
+Start talking about local rings, and take everything locally and prove it locally.
+\begin{prop}
+    Let 
+\end{prop}
