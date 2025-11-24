@@ -1,30 +1,37 @@
 \section{Preliminaries}
-In this section we understand some prelimenaries. 
-Unless otherwise stated, we work within an arbitrary topos $\mathcal{E}$. 
-The following proposition establishes the fundamental dictionary between the geometric theory 
+In this section we understand some prelimenaries.
+Unless otherwise stated, we work within an arbitrary topos $\mathcal{E}$.
+
+\subsection{Kummer Theory}
+\input{sections/subsections/KummerTheory.tex}
+
+\subsection{\texorpdfstring{The equivalence between $G$-torsors and locally free $\Lambda$-modules}{The equivalence between G-torsors and locally free Lambda-modules}}
+
+The following proposition establishes the fundamental dictionary between the geometric theory
 of principal homogeneous spaces and the algebraic theory of invertible modules.
- This equivalence allows us to transport the monoidal structure from the category of modules 
- (the tensor product) to the category of torsors (the contracted product), 
- strictly within the categorical framework.
+This equivalence allows us to transport the monoidal structure from the category of modules
+(the tensor product) to the category of torsors (the contracted product),
+strictly within the categorical framework.
 
 
 \begin{prop}
-Let $\mathcal{E}$ be a topos and let $\Lambda$ be a ring object in $\mathcal{E}$. Let $G = \Lambda^\times$ denote the internal group object of units of $\Lambda$.
+    Let $\mathcal{E}$ be a topos and let $\Lambda$ be a ring object in $\mathcal{E}$. Let $G = \Lambda^\times$ denote the internal group object of units of $\Lambda$.
 
-There is a canonical equivalence of monoidal categories between the category of $G$-torsors in $\mathcal{E}$ and the category of locally free $\Lambda$-modules of rank 1 in $\mathcal{E}$:
-\[
-\Phi: \mathbf{Tors}(\mathcal{E}, \Lambda^\times) \xrightarrow{\sim} \mathbf{Pic}(\mathcal{E}, \Lambda)
-\]
-The equivalence is defined by the associated module functor:
-\[
-P \longmapsto P \times^{\Lambda^\times} \Lambda := \Lambda^\times \backslash (\Lambda \times P)
-\]
-where the quotient is taken with respect to the diagonal action of $\Lambda^\times$ on $\Lambda \times P$. The inverse functor associates to an invertible module $L$ its sheaf of basis frames $\underline{\mathrm{Isom}}_\Lambda(\Lambda, L)$.
+    There is a canonical equivalence of monoidal categories between the category of $G$-torsors in $\mathcal{E}$ and the category of locally free $\Lambda$-modules of rank 1 in $\mathcal{E}$:
+    \[
+        \Phi: \mathbf{Tors}(\mathcal{E}, \Lambda^\times) \xrightarrow{\sim} \mathbf{Pic}(\mathcal{E}, \Lambda)
+    \]
+    The equivalence is defined by the associated module functor:
+    \[
+        P \longmapsto P \times^{\Lambda^\times} \Lambda := \Lambda^\times \backslash (\Lambda \times P)
+    \]
+    where the quotient is taken with respect to the diagonal action of $\Lambda^\times$ on $\Lambda \times P$. The inverse functor associates to an invertible module $L$ its sheaf of basis frames $\underline{\mathrm{Isom}}_\Lambda(\Lambda, L)$.
 \end{prop}
 
 In light of this canonical equivalence, we will pass freely between the language of $G$-torsors and that of locally free $\Lambda$-modules throughout the text.
 
 
+\subsection{Ramification after Blowup}
 
 For $P \to U$ a $G$-torsor. We denote by $P^{[d]} \to U^{(d)}$ the corresponding $G$-torsor over $U^{(d)}$.
 Let $\eta^i$ be the generic point of the exceptional divisor $E^i$ of the blowup of $C^{(d_i n_i)}$ by $n_i P_i$
@@ -32,27 +39,45 @@ Let $\eta^i$ be the generic point of the exceptional divisor $E^i$ of the blowup
 Where $P_i \in C \setminus U$
 We want to prove:
 \begin{prop}
-If $ram P^{[d_1n_1]}_{\eta^1} \leq k_1 $ and $ram P^{[d_2n_2]}_{\eta^2} \leq k_2 $
-Then $ram P^{[d_1n_1 + d_2n_2]}_{\eta} \leq max(k_1, k_2)$ where $\eta$ is the generic point of the exceptional divisor $E$ of the blowup of $C^{(d_1 n_1 + d_2n_2)}$ by $\mdls= n_1 P_1 + n_2P_2$
+    If $ram P^{[d_1n_1]}_{\eta^1} \leq k_1 $ and $ram P^{[d_2n_2]}_{\eta^2} \leq k_2 $
+    Then $ram P^{[d_1n_1 + d_2n_2]}_{\eta} \leq max(k_1, k_2)$ where $\eta$ is the generic point of the exceptional divisor $E$ of the blowup of $C^{(d_1 n_1 + d_2n_2)}$ by $\mdls= n_1 P_1 + n_2P_2$
 \end{prop}
 
 We will work this out along an example:
-Let $X=G_m=\spec R[t, t^{-1}]$ and Let $P=G_m \xrightarrow[]{(\cdot)^{n}} G_m$ be the $n$'th power map. 
-It is a $G=\Z/n\Z$ torsor.  
+Let $X=\bG_m=\spec R[t, t^{-1}]$ and Let $\cP=\bG_m \xrightarrow[]{(\cdot)^{n}} G_m$ be the $n$'th power map.
+It is a $G=\Z/n\Z$ torsor.
 The ring map is $R[t, t^{-1}] \xrightarrow[]{t \mapsto t^n} R[t, t^{-1}]$
 which corresponds to ring extension: $R[t, t^{-1}] \to R[t^{\frac{1}{n}}, t^{-\frac{1}{n}}]$.
-The field of fractions of $G_m$ is $K(t)$ and the corresponding map between fields of $P \to X$
+The field of fractions of $\bG_m$ is $K(t)$ and the corresponding map between fields of $\cP \to X$
 is $K(t) \xrightarrow[]{t \to t^n} K(t)$. which corresponds to the field extension:
 $K(t) \hookrightarrow K(t^{\frac{1}{n}}) = K(t)[X]/(X^n -t)$.
 Where $K = Frac R$
 
-The points $0, \infty \in \bP^1$ corresponds to the local rings:
-$\mathcal{O}_{0} = K[t]_{(t)}$ and $\mathcal{O}_{\infty} = K[\frac{1}{t}]_{(\frac{1}{t})}$ of $K(t)$
-Which are DVRs. The corresponding valuations of $K(t)$ are given by:
-$v_0(\frac{f}{g}) =\text{maximal exponent $n$ s.t. $t^{n} \mid \frac{f}{g}$} $ and $v_\infty(\frac{f}{g}) =\deg g - \deg f$ 
+The points $0, \infty \in \bP^1$ correspond to the local rings
+$\Oo_{0} = K[t]_{(t)}$ and $\Oo_{\infty} = K[\frac{1}{t}]_{(\frac{1}{t})}$ of $K(t)$,
+which are DVRs. The corresponding valuations of $K(t)$ are given by:
+\[
+    v_0\left(\frac{f}{g}\right) = \text{maximal exponent } n \text{ s.t. } t^{n} \mid \frac{f}{g}, \quad v_\infty\left(\frac{f}{g}\right) = \deg g - \deg f
+\]
+
+So the diagram of the G-torsor $\cP=\bG_m$ over $\bG_m$ is:
+\begin{equation}
+    \begin{tikzcd}
+        & \cP=\mathbb{G}_m \ar[d, "(\cdot)^n"] \\
+        \bP^1 & \arrow[l] \bG_m
+    \end{tikzcd}
+\end{equation}
+
+The bounded ramification condition is given by:
+\begin{equation}
+    \text{ram } P_{\eta} \leq k
+\end{equation}
+
+We wish to understand
+
 
 In the general case of a $G$ torsor $P \to C$ we have similarly:
-$K(C) \cong K(t)$ the function ring of $C$ for some variable $t$ and a finite field extension $K/\F_p(t')$. 
+$K(C) \cong K(t)$ the function ring of $C$ for some variable $t$ and a finite field extension $K/\F_p(t')$.
 If the basefield $K$ contains $n$'th roots of unity, then the torsor is the same... and continue here:
 $\Oo_{P_1}$
 the same..
@@ -63,5 +88,5 @@ and continue.
 This follows by the following:
 Start talking about local rings, and take everything locally and prove it locally.
 \begin{prop}
-    Let 
-\end{prop}
+    Let
+\end{prop}sss

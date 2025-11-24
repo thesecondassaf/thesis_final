@@ -8,36 +8,36 @@
 }
 \makeatletter
 \pgfdeclarepatternformonly[\hatchthickness]{my horizontal lines}
-  {\pgfpointorigin}{\pgfqpoint{100pt}{1pt}}{\pgfqpoint{100pt}{3pt}}{
-    \pgfsetcolor{\tikz@pattern@color}
-    \pgfsetlinewidth{\hatchthickness}
-    \pgfpatheoremoveto{\pgfqpoint{0pt}{0.5pt}}
-    \pgfpathlineto{\pgfqpoint{100pt}{0.5pt}}
-    \pgfusepath{stroke}
+{\pgfpointorigin}{\pgfqpoint{100pt}{1pt}}{\pgfqpoint{100pt}{3pt}}{
+  \pgfsetcolor{\tikz@pattern@color}
+  \pgfsetlinewidth{\hatchthickness}
+  \pgfpatheoremoveto{\pgfqpoint{0pt}{0.5pt}}
+  \pgfpathlineto{\pgfqpoint{100pt}{0.5pt}}
+  \pgfusepath{stroke}
 }
 \pgfdeclarepatternformonly[\hatchthickness]{my vertical lines}
-  {\pgfpointorigin}{\pgfqpoint{1pt}{100pt}}{\pgfqpoint{3pt}{100pt}}{
-    \pgfsetcolor{\tikz@pattern@color}
-    \pgfsetlinewidth{\hatchthickness}
-    \pgfpatheoremoveto{\pgfqpoint{0.5pt}{0pt}}
-    \pgfpathlineto{\pgfqpoint{0.5pt}{100pt}}
-    \pgfusepath{stroke}
+{\pgfpointorigin}{\pgfqpoint{1pt}{100pt}}{\pgfqpoint{3pt}{100pt}}{
+  \pgfsetcolor{\tikz@pattern@color}
+  \pgfsetlinewidth{\hatchthickness}
+  \pgfpatheoremoveto{\pgfqpoint{0.5pt}{0pt}}
+  \pgfpathlineto{\pgfqpoint{0.5pt}{100pt}}
+  \pgfusepath{stroke}
 }
 \pgfdeclarepatternformonly[\hatchthickness]{my north east lines}
-  {\pgfqpoint{-1pt}{-1pt}}{\pgfqpoint{4pt}{4pt}}{\pgfqpoint{3pt}{3pt}}{
-    \pgfsetcolor{\tikz@pattern@color}
-    \pgfsetlinewidth{1pt}
-    \pgfpatheoremoveto{\pgfqpoint{0pt}{0pt}}
-    \pgfpathlineto{\pgfqpoint{3.1pt}{3.1pt}}
-    \pgfusepath{stroke}
+{\pgfqpoint{-1pt}{-1pt}}{\pgfqpoint{4pt}{4pt}}{\pgfqpoint{3pt}{3pt}}{
+  \pgfsetcolor{\tikz@pattern@color}
+  \pgfsetlinewidth{1pt}
+  \pgfpatheoremoveto{\pgfqpoint{0pt}{0pt}}
+  \pgfpathlineto{\pgfqpoint{3.1pt}{3.1pt}}
+  \pgfusepath{stroke}
 }
 \pgfdeclarepatternformonly[\hatchthickness]{my north west lines}
-  {\pgfqpoint{-1pt}{-1pt}}{\pgfqpoint{4pt}{4pt}}{\pgfqpoint{3pt}{3pt}}{
-    \pgfsetcolor{\tikz@pattern@color}
-    \pgfsetlinewidth{1.2pt}
-    \pgfpatheoremoveto{\pgfqpoint{0pt}{3pt}}
-    \pgfpathlineto{\pgfqpoint{3.1pt}{-0.1pt}}
-    \pgfusepath{stroke}
+{\pgfqpoint{-1pt}{-1pt}}{\pgfqpoint{4pt}{4pt}}{\pgfqpoint{3pt}{3pt}}{
+  \pgfsetcolor{\tikz@pattern@color}
+  \pgfsetlinewidth{1.2pt}
+  \pgfpatheoremoveto{\pgfqpoint{0pt}{3pt}}
+  \pgfpathlineto{\pgfqpoint{3.1pt}{-0.1pt}}
+  \pgfusepath{stroke}
 }
 \makeatother
 
@@ -130,11 +130,11 @@
 \makeatletter
 \newif\if@mainmatter \@mainmattertrue
 \newcommand\frontmatter{%
-    \cleardoublepage
+  \cleardoublepage
   \@mainmatterfalse
   \pagenumbering{Roman}}
 \newcommand\mainmatter{%
-    \cleardoublepage
+  \cleardoublepage
   \@mainmattertrue
   \pagenumbering{arabic}}
 \makeatother
@@ -151,6 +151,8 @@
 \newcommand{\ff}{\mathsf{f}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\bP}{\mathbb{P}}
+\newcommand{\bG}{\mathbb{G}}
+
 
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\F}{\mathbb{F}}
@@ -166,8 +168,8 @@
 \newcommand{\Fqt}{\mathbb{F}_q(t)}
 \newcommand{\Fpt}{\mathbb{F}_p(t)}
 
-\newcommand{\Ff}[2][F]{#1({#2})}    
-\newcommand{\Ffl}[2][F]{#1(({#2}))}    
+\newcommand{\Ff}[2][F]{#1({#2})}
+\newcommand{\Ffl}[2][F]{#1(({#2}))}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 
 % -------------------- Mathcal and Mathfrak --------------------
@@ -177,6 +179,7 @@
 \newcommand{\cL}{\mathcal{L}}
 \newcommand{\cX}{\mathcal{X}}
 \newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
 
 \newcommand{\cY}{\mathcal{Y}}
 \newcommand{\cZ}{\mathcal{Z}}
@@ -250,25 +253,25 @@
 % -------------------- TikZ: arrow labels --------------------
 \tikzset{
   symbol/.style={
-    draw=none,
-    every to/.append style={
-      edge node={node [sloped, allow upside down, auto=false]{$#1$}}}
-  }
+      draw=none,
+      every to/.append style={
+          edge node={node [sloped, allow upside down, auto=false]{$#1$}}}
+    }
 }
 
 % -------------------- Function arrows --------------------
 \newcommand{\function}[5]{%
   \begin{tikzcd}[
-    column sep=2em,
-    row sep=1ex,
-    ampersand replacement=\&
-  ]
-  #1\colon \&[-3em]
-  #2\vphantom{#3} \arrow[r] \&
-  #3\vphantom{#2} \\
-  \&
-  #4\vphantom{#5}  \arrow[r,mapsto] \&
-  #5\vphantom{#4}
+      column sep=2em,
+      row sep=1ex,
+      ampersand replacement=\&
+    ]
+    #1\colon \&[-3em]
+    #2\vphantom{#3} \arrow[r] \&
+    #3\vphantom{#2} \\
+    \&
+    #4\vphantom{#5}  \arrow[r,mapsto] \&
+    #5\vphantom{#4}
   \end{tikzcd}%
 }
 
@@ -277,7 +280,7 @@
 
 % -------------------- Restrictions --------------------
 \newcommand\restr[2]{%
-  \left.\kern-\nulldelimiterspace #1 \littletaller \right|_{#2}%
+\left.\kern-\nulldelimiterspace #1 \littletaller \right|_{#2}%
 }
 \newcommand{\littletaller}{\mathchoice{\vphantom{\big|}}{}{}{}}
 
@@ -285,8 +288,8 @@
 \newcounter{diagram}
 \renewcommand{\thediagram}{\arabic{diagram}}
 \newenvironment{diagram}
-  {\refstepcounter{diagram}\begin{equation}\tag*{\textnormal{(\thediagram})}}
-  {\end{equation}}
+{\refstepcounter{diagram}\begin{equation}\tag*{\textnormal{(\thediagram})}}
+    {\end{equation}}
 \newcommand{\diagramref}[1]{\textnormal{Diagram~\ref{#1}}}
 
 % -------------------- Stacks Tag Shortcut --------------------
@@ -314,30 +317,30 @@
 
 % Other Shortcuts
 \newcommand{\SheavesSetsEquiv}{
-\[
-\left\{
+  \[
+    \left\{
     \begin{matrix}
-        \text{sheaves of sets on } \Spec(L)_{\acute{e}tale} 
+      \text{sheaves of sets on } \Spec(L)_{\acute{e}tale}
     \end{matrix}
-\right\}
-\overset{\sim}{\longrightarrow}
-\left\{
+    \right\}
+    \overset{\sim}{\longrightarrow}
+    \left\{
     \begin{matrix}
-        \text{sets with left continuous action of } G_L
+      \text{sets with left continuous action of } G_L
     \end{matrix}
-\right\}
-\]
+    \right\}
+  \]
 }
 
 \newcommand{\FiniteLocConstSheavesEquiv}{
-\[\left\{ 
-  \begin{matrix} 
-    \text{finite locally constant} \\ 
-    \text{sheaves of sets on } \Spec(L)_{\acute{e}tale} 
-  \end{matrix}
-\right\}
-\overset{\sim}{\longrightarrow}
-\textit{Finite-}G_L\textit{-Sets} \]
+  \[\left\{
+    \begin{matrix}
+      \text{finite locally constant} \\
+      \text{sheaves of sets on } \Spec(L)_{\acute{e}tale}
+    \end{matrix}
+    \right\}
+    \overset{\sim}{\longrightarrow}
+    \textit{Finite-}G_L\textit{-Sets} \]
 }
 
 \newcommand{\limn}[2]{\lim\limits_{#1} #2}

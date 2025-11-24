@@ -1,0 +1,87 @@
+A kummer extension is a field extension $L/K$ where for some given $n \in \N$ we have:
+\begin{enumerate}
+    \item $K$ contains all $n$'th roots of unity
+    \item $L/K$ has abelian galois group of exponent $n$.
+\end{enumerate}
+
+A group $G$ has exponent $n$ if $g^n = 1$ for all $g \in G$.
+
+\begin{example}
+    Quadratic extensions are kummer extensions. Multi quadratic Extensions, etc...
+\end{example}
+
+\begin{example}
+    When $K$ contains n distinct $n$'th roots of unity (hence $char(K) \nmid n$) then the extension $L=K(a^\frac{1}{n})$ is a Kummer extension of degree $m \mid n$, for any element $a \in K$.
+    The galois group $G$ is cyclic of order $m$, and acts as multiplication by root of unity of order $m$.% on $a^\frac{1}{n}$.
+\end{example}
+
+Kummer theory gives us the converse of the above example:
+Let $K$ be a field containing $n$ distinct $n$'th roots of unity, then we have a bijection:
+\begin{equation*}
+    \{ \text{Kummer extensions } L/K \text{ of exponent dividing } n \} \quad \longleftrightarrow \quad \{ \text{Subgroups } H \text{ of } K^\times/(K^\times)^n \}
+\end{equation*}
+This bijection is given by the maps:
+\begin{align*}
+    L              & \longmapsto (K^\times \cap (L^\times)^n) / (K^\times)^n \\
+    K(\sqrt[n]{H}) & \longmapsfrom H
+\end{align*}
+
+Where $(K^\times)^n$ is the group of $n$'th powers in $K^\times$.
+And, $K(\sqrt[n]{H}) := \{ \sqrt[n]{a} \mid a \in K^\times,  a \cdot (K^\times)^n \in H \}$
+
+In the latter case we have:
+\begin{align*}
+    H & \cong \text{Hom}_c(\text{Gal}(L/K), \mu_n)                                                                                                            \\
+    a & \longmapsto \left(\sigma \mapsto \frac{\sigma(\alpha)}{\alpha}\right) \quad \text{where } \alpha \text{ is any } n\text{'th root of } a \text{ in } L
+\end{align*}.
+
+Also note that if $K$ contains all roots of unity then every finite abelian extension of $K$ is a kummer extension.
+In this paper we will mainly be intersested in kummer extensions of degree $l^m - 1$ with galois group $G=(\Z/l^m \Z)^\times$ where $l$ is a prime number and $char K \neq l$.
+
+\subsubsection{Ramification In Kummer extensions}
+Next, we turn to a brief discussion of ramification in kummer extensions.
+
+We begin by the following useful lemma proved in \cite{lang2005algebra}[9.1]
+\textcolor{red}{Check if the lang bib entry is correct(i generated it using ai)}
+
+\begin{lemma}
+    Let $K$ be a field, and let $2 \leq n \in \N$ be a natural number. Let $0 \neq a \in K$ be a element of $K$.
+    Assume that for every prime $p$ dividing $n$ we have $a \notin K^p$, and that if $4 \mid n$ then $a \not in -4K^4$.
+    Then $X^n - a$ is irreducible in $K[X]$.
+\end{lemma}
+
+Using this lemma we can show the following proposition:
+\textcolor{red}{Something about the proof here doesn't work, complete it}
+\begin{prop}
+    Let $n \in \N$ be a natural number and let $K$ be a field such that $gcd(n, char K) = 1$.
+    For $b \in K^\times$, $X^n - b$ is irreducible in $K[X]$ if and only if $ord(\bar{b}) = n$ in $K^\times/(K^\times)^n$.
+\end{prop}
+\begin{proof}
+    In one direction, note that $ord(\bar{b}) = n$, if and only if $b^k \notin (K^\times)^n$ for every $k \mid n, k < n$, if and only if, $b^{p^r} \notin (K^\times)^n$ for every prime $p \mid n$ (\textcolor{red}{What to do in the case $n = p$?}) and every $r \leq ord_p(n)$.
+    Hence we can use the lemma above:
+    \begin{enumerate}
+        \item For every $p \mid n$, $b^p \notin K^n$ (otherwise $b^{\frac{n}{p}} \in (K^\times)^n$).
+        \item If $4 \mid n$ then $i \in K$ ($i^2 = -1$), hence $b \notin -4K^4$ (because $-4 = (2i)^2$).
+    \end{enumerate}
+    Hence $X^n - b$ is irreducible in $K[X]$.
+    In the other direction, assume $X^n - b$ is irreducible in $K[X]$. Then if $p \mid n$  we can not have $b \in K^p$ (By factoring $X^n - b$)
+
+\end{proof}
+
+From now on we will focus on cyclic Kummer extensions.
+Those are of the form $L=K(\sqrt[n]{a})$ where $a \in K$ and $n \in \N$ is a natural number.
+Their galois group is cyclic of order $n$, and acts as multiplication by root of unity of order $n$ on $a^{\frac{1}{n}}$.
+\begin{equation*}
+    \text{Gal}(L/K) \cong \Z/n\Z
+    \quad
+    \sigma \mapsto \sigma(a^{\frac{1}{n}}) = \zeta_n \sigma(a^{\frac{1}{n}})
+\end{equation*}
+
+
+
+
+\textcolor{red}{
+    \begin{enumerate}
+        \item Switch $a^{\frac{1}{n}}$ to $\sqrt[n]{a}$ or $\alpha$ in the galois group description
+    \end{enumerate}
+}

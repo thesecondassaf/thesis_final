@@ -1,8 +1,11 @@
 {
+  "latex-workshop.formatting.latex": "latexindent",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk (biber)",
-      "tools": ["latexmk"]
+      "tools": [
+        "latexmk"
+      ]
     }
   ],
   "latex-workshop.latex.tools": [

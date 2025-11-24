@@ -35,7 +35,6 @@
       \strng{authornamehash}{638058cd23e53094700e44c2a4f389f5}
       \strng{authorfullhash}{638058cd23e53094700e44c2a4f389f5}
       \strng{authorfullhashraw}{638058cd23e53094700e44c2a4f389f5}
-      \field{extraname}{1}
       \field{labelalpha}{Mil08}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -186,34 +185,6 @@
       \verb{url}
       \verb https://doi.org/10.2140/ant.2019.13.1327
       \endverb
-    \endentry
-    \entry{milneCFT}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=1c48e53e44d3122db018aff3b6321bd6}{%
-           family={Milne},
-           familyi={M\bibinitperiod},
-           given={J.S.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{1c48e53e44d3122db018aff3b6321bd6}
-      \strng{fullhash}{1c48e53e44d3122db018aff3b6321bd6}
-      \strng{fullhashraw}{1c48e53e44d3122db018aff3b6321bd6}
-      \strng{bibnamehash}{1c48e53e44d3122db018aff3b6321bd6}
-      \strng{authorbibnamehash}{1c48e53e44d3122db018aff3b6321bd6}
-      \strng{authornamehash}{1c48e53e44d3122db018aff3b6321bd6}
-      \strng{authorfullhash}{1c48e53e44d3122db018aff3b6321bd6}
-      \strng{authorfullhashraw}{1c48e53e44d3122db018aff3b6321bd6}
-      \field{extraname}{2}
-      \field{labelalpha}{Mil20}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Available at www.jmilne.org/math/}
-      \field{title}{Class Field Theory (v4.03)}
-      \field{year}{2020}
-      \field{pages}{287+viii}
-      \range{pages}{-1}
     \endentry
   \enddatalist
 \endrefsection
