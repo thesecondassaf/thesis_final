@@ -73,7 +73,7 @@ The fundamental properties of this functor are as follows:
     \item For any $d$, $\text{Pic}_{C, \mdls}^{d}$ is a $\text{Pic}_{C, \mdls}^{0}$-torsor.
 \end{enumerate}
 In the case where $\mdls = 0$, we recover the standard Jacobian variety, denoted simply as $\text{Pic}_C^d$.
-\subsubsection*{Functoriality and Relation to the Standard Jacobian}
+\subsubsection*{Relation to the Standard Jacobian}
 We now examine the behavior of the generalized Picard scheme under the variation of the modulus. By viewing the structure along the modulus as an additional rigidification, we obtain natural transition maps corresponding to the inclusion of moduli.
 
 Let $\mdls_1$ and $\mdls_2$ be moduli such that $\mdls_1 \subset \mdls_2$. There exists a natural map 
@@ -87,26 +87,26 @@ In particular, for any modulus $\mdls$, there is a natural surjective morphism o
 \]
 
 
-\subsubsection*{Cohomological Properties at High Degree}
-From this point forward, we fix a modulus $\mathfrak{m}$ which is everywhere strictly positive. Let $g$ denote the genus of $C$, which is a locally constant function on $S$. We restrict our attention to degrees $d$ satisfying the condition:
+\subsubsection*{Local Freeness and Base Change}
+From this point forward, we fix a modulus $\mdls$ which is everywhere strictly positive. Let $g$ denote the genus of $C$, which is a locally constant function on $S$. We restrict our attention to degrees $d$ satisfying the condition:
 \begin{equation} \label{equation:degree-condition}
-    d \geq \max\{2g - 1 + \deg \mathfrak{m}, \deg \mathfrak{m}\}.
+    d \geq \max\{2g - 1 + \deg \mdls, \deg \mdls\}.
 \end{equation}
 Assuming $S$ is quasi-compact, such a $d$ always exists.
 
-Fix an integer $d$ satisfying the condition above. Let $T$ be an $S$-scheme and let $\mathcal{L}$ be an invertible sheaf of degree $d$ on $C_T$. One can show that the pushforwards $\mathrm{pr}_* \mathcal{L}$ and $\mathrm{pr}_* \mathcal{L}(-\tilde{\mathfrak{m}})$ are locally free sheaves and their formations commute with any base change. Explicitly, for any morphism of $S$-schemes $f : T' \to T$, the base change morphisms are isomorphisms:
+Fix an integer $d$ satisfying the condition above. Let $T$ be an $S$-scheme and let $\cL$ be an invertible sheaf of degree $d$ on $C_T$. One can show that the pushforwards $\mathrm{pr}_* \cL$ and $\mathrm{pr}_* \cL(-\tilde{\mdls})$ are locally free sheaves and their formations commute with any base change. Explicitly, for any morphism of $S$-schemes $f : T' \to T$, the base change morphisms are isomorphisms:
 \[
-    f^* \mathrm{pr}_* \mathcal{L} \xrightarrow{\sim} \mathrm{pr}_* f^* \mathcal{L}
+    f^* \mathrm{pr}_* \cL \xrightarrow{\sim} \mathrm{pr}_* f^* \cL
 \]
 and
 \[
-    f^* \mathrm{pr}_* (\mathcal{L}(-\tilde{\mathfrak{m}})) \xrightarrow{\sim} \mathrm{pr}_* f^* (\mathcal{L}(-\tilde{\mathfrak{m}})).
+    f^* \mathrm{pr}_* (\cL(-\tilde{\mdls})) \xrightarrow{\sim} \mathrm{pr}_* f^* (\cL(-\tilde{\mdls})).
 \]
-In particular, following \cite{Guignard2018}, if $\cL$ is invertible $\cO_C$-module with degree $d$ on each fiber of $f$ then, $\mathrm{pr}_* \mathcal{L}$ is a locally free $\mathcal{O}_S$-module of rank $d-g+1$.
+In particular, following \cite{Guignard2018}, if $\cL$ is invertible $\cO_C$-module with degree $d$ on each fiber of $f$ then, $\mathrm{pr}_* \cL$ is a locally free $\mathcal{O}_S$-module of rank $d-g+1$.
 
 For further background and verification of these constructions, we refer the reader to Milne's notes on Abelian Varieties (\cite{milneAV}).
 
-
+\subsection{Abel Jacobi Morphism}
 
 \subsection{G-torsors}
 \input{sections/Preliminaries/Gtorsors.tex}
