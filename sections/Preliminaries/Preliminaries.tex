@@ -1,4 +1,5 @@
 \section{Preliminaries}
+\subsection{Generalities}
 In this section we recall the necessariy work, including work from \cite{Guignard2018}, \cite{tendler2015geometricclassfieldtheory} and \cite{takeuchi2019blow}.
 Unless otherwise stated, we work within an arbitrary topos $\mathcal{E}$.
 
@@ -30,31 +31,10 @@ between $({G\cE})_{/X}$ and $G(\cE_{/X})$, given by endowing $X$ with the trivia
 We denote by $\mathbf{Tors}(X, G)$ the category of $G$-torsors over $X$ in $G \cE_{/X}$.
 Similarly, for a ring object $\Lambda$ in $\cE$, we denote by $\mathbf{Pic}(X, \Lambda)$ the category of locally free $\Lambda$-modules of rank 1 over $X$ in $\cE_{/X}$.
 The above equivilance of categories becomes 
-    \[
-        \Phi_X: \mathbf{Tors}(X, \Lambda^\times) \xrightarrow{\sim} \mathbf{Pic}(X, \Lambda)
-    \]
+\[
+    \Phi_X: \mathbf{Tors}(X, \Lambda^\times) \xrightarrow{\sim} \mathbf{Pic}(X, \Lambda)
+\].
 
-
-    \textcolor{purple}{
-\cite{Guignard2018} introduces the notion of multiplicative locally free $\Lambda$-modules of rank 1 over a commutative 
-semigroup object in $\cE$.
-\begin{definition}[2.5 in \cite{Guignard2018}]
-    Let $G$ be an abelian group of $\cE$ and let $Q$ be a commutative semigroup of $\cE$ (with or without identity). 
-    Let $m : Q \times Q \to Q$ be the multiplication morphism of $Q$. 
-    A \textbf{multiplicative $G$-torsor} over $Q$ is a $G$-torsor $P \to Q$, together with an isomorphism 
-    $\theta : p_1^{-1} P \otimes p_2^{-1} P \to m^{-1} P$ of $G$-torsors over $Q \times Q$ where $p_1$ and $p_2$ are 
-    the canonical projections, which satisfifing the cocycle conditions correspoding to symmetricity and associativity.    
-\end{definition}
-The category of multiplicative $G$-torsors is fibered in groupoids over the category of commutative semigroups of $\cE$. 
-We denote by $\mathrm{Tors}^\otimes(Q, G)$ the groupoid of multiplicative $G$-torsors over a commutative semigroup $Q$
- of $\cE$.
-}
-
-\textcolor{purple}{
- If $G = \Lambda^\times$ for some ring $\Lambda$ in $\cE$, we use the term \textbf{multiplicative locally free $\Lambda$-module of rank $1$}
-  as a synonym for \textbf{multiplicative $G$-torsor}, when we want to emphasize the locally free $\Lambda$-module of rank $1$ corresponding
-   to a given $G$-torsor, rather than the $G$-torsor itself (cf. 2.3).
-}
 
 There are several important theorems that repeat themselves throughout deligne approach to class field theory,
 one of them, is that the symmetric power of $C$ over $k$, denoted by $C^{(d)}$, is a scheme over $k$,
@@ -63,6 +43,70 @@ Guigard proves this in the most general setting so we qoute his result here:
     If $X$ is Zariski locally quasi-projective over a scheme $S$, the the right action of $S_d$ on $X^{\times_S d}$ 
     is admissible, and the quotient $X^{(d)} = X^{\times_S d}/S_d$ exists as a scheme over $S$.
 \end{prop}
+
+\subsection{Generalized Picard Scheme}
+In this section, we recall the notion of generalized Jacobian varieties and study their fundamental properties. The material presented here is primarily adapted from \cite{Guignard2018} and \cite{takeuchi2019blow}. For further background on the general theory of abelian varieties and Jacobians, the reader may also consult \cite{milneAV}.
+Let $S$ be a scheme and let $C$ be a projective smooth $S$-scheme whose geometric fibers are connected and of dimension 1. Let $\mdls$ be a modulus on $C$, defined as an effective Cartier divisor of $C/S$ 
+(i.e., a closed subscheme of $C$ which is finite flat of finite presentation over $S$).
+We denote the projection $C \times_S T \to T$ by $\text{pr}$ for any $S$-scheme $T$.
+
+\subsubsection*{The Functor of Points}
+Let $d$ be an integer. For an $S$-scheme $T$, we consider the set of data $(\cL, \psi)$ where:
+\begin{itemize}
+    \item $\cL$ is an invertible sheaf of degree $d$ on $C_T$.
+    \item $\psi: \Oo_{\mdls_T} \xrightarrow{\sim} \cL|_{\mdls_T}$ is a trivialization of $\cL$ along the modulus.
+\end{itemize}
+Two such pairs $(\cL, \psi)$ and $(\cL', \psi')$ are said to be isomorphic if there exists an isomorphism of invertible sheaves $f : \cL \to \cL'$ such that the following diagram commutes:
+\[
+\begin{tikzcd}
+& \Oo_{\mdls_T} \arrow[dl, "\psi'"'] \arrow[dr, "\psi"] & \\
+\cL'|_{\mdls_T} \arrow[rr, "f|_{\mdls_T}"] & & \cL|_{\mdls_T}
+\end{tikzcd}
+\]
+We define the presheaf $\text{Pic}_{C, \mdls}^{d, \text{pre}}$ on $\text{Sch}/S$ by assigning to $T$ the set of isomorphism classes of such pairs. Let $\PicCm[d]$ denote the \'etale sheafification of this presheaf.
+
+\subsubsection*{Representability and Structure}
+The fundamental properties of this functor are as follows:
+\begin{enumerate}
+    \item $\text{Pic}_{C, \mdls}^{d}$ is represented by an $S$-scheme. (Note: If $\mdls$ is faithfully flat over $S$, the presheaf is already an \'etale sheaf).
+    \item $\text{Pic}_{C, \mdls}^{0}$ is a smooth commutative group $S$-scheme with geometrically connected fibers, referred to as the \textit{generalized Jacobian variety} of $C$ with modulus $\mdls$.
+    \item For any $d$, $\text{Pic}_{C, \mdls}^{d}$ is a $\text{Pic}_{C, \mdls}^{0}$-torsor.
+\end{enumerate}
+In the case where $\mdls = 0$, we recover the standard Jacobian variety, denoted simply as $\text{Pic}_C^d$.
+\subsubsection*{Functoriality and Relation to the Standard Jacobian}
+We now examine the behavior of the generalized Picard scheme under the variation of the modulus. By viewing the structure along the modulus as an additional rigidification, we obtain natural transition maps corresponding to the inclusion of moduli.
+
+Let $\mdls_1$ and $\mdls_2$ be moduli such that $\mdls_1 \subset \mdls_2$. There exists a natural map 
+\[
+\text{Pic}_{C, \mdls_2}^d \to \text{Pic}_{C, \mdls_1}^d
+\]
+obtained by restricting the isomorphism $\psi$. Since $\mdls_2$ is a finite $S$-scheme, this map is a surjection as a morphism of \'etale sheaves.
+In particular, for any modulus $\mdls$, there is a natural surjective morphism of \'etale sheaves:
+\[
+\text{Pic}_{C, \mdls}^d \to \text{Pic}_C^d.
+\]
+
+
+\subsubsection*{Cohomological Properties at High Degree}
+From this point forward, we fix a modulus $\mathfrak{m}$ which is everywhere strictly positive. Let $g$ denote the genus of $C$, which is a locally constant function on $S$. We restrict our attention to degrees $d$ satisfying the condition:
+\begin{equation} \label{equation:degree-condition}
+    d \geq \max\{2g - 1 + \deg \mathfrak{m}, \deg \mathfrak{m}\}.
+\end{equation}
+Assuming $S$ is quasi-compact, such a $d$ always exists.
+
+Fix an integer $d$ satisfying the condition above. Let $T$ be an $S$-scheme and let $\mathcal{L}$ be an invertible sheaf of degree $d$ on $C_T$. One can show that the pushforwards $\mathrm{pr}_* \mathcal{L}$ and $\mathrm{pr}_* \mathcal{L}(-\tilde{\mathfrak{m}})$ are locally free sheaves and their formations commute with any base change. Explicitly, for any morphism of $S$-schemes $f : T' \to T$, the base change morphisms are isomorphisms:
+\[
+    f^* \mathrm{pr}_* \mathcal{L} \xrightarrow{\sim} \mathrm{pr}_* f^* \mathcal{L}
+\]
+and
+\[
+    f^* \mathrm{pr}_* (\mathcal{L}(-\tilde{\mathfrak{m}})) \xrightarrow{\sim} \mathrm{pr}_* f^* (\mathcal{L}(-\tilde{\mathfrak{m}})).
+\]
+In particular, following \cite{Guignard2018}, if $\cL$ is invertible $\cO_C$-module with degree $d$ on each fiber of $f$ then, $\mathrm{pr}_* \mathcal{L}$ is a locally free $\mathcal{O}_S$-module of rank $d-g+1$.
+
+For further background and verification of these constructions, we refer the reader to Milne's notes on Abelian Varieties (\cite{milneAV}).
+
+
 
 \subsection{G-torsors}
 \input{sections/Preliminaries/Gtorsors.tex}

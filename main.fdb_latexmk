@@ -1,17 +1,16 @@
 # Fdb version 4
-["biber main"] 1765119307.40588 "main.bcf" "main.bbl" "main" 1765119520.43996 0
+["biber main"] 1765123405.28006 "main.bcf" "main.bbl" "main" 1765123411.02186 0
   "Bib.bib" 1765104394.89577 4029 0ae22ef046993c8a8736edab2f7de400 ""
-  "main.bcf" 1765119520.17642 111468 f273865ff17f9d9a14b9e8aaf6a9b395 "pdflatex"
+  "main.bcf" 1765123410.77277 111458 541273626d3c89129c66cfb535ce7bba "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1765119517.26937 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1765119520.44045 0
+["pdflatex"] 1765123407.91929 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1765123411.02232 0
   "/Users/assaf/Desktop/Thesis/thesis final/main.tex" 1765099726.34276 1762 c1c96f2c93c1a78ef68f0e036c3a826e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm" 1136768653 3072 19a65fbc725cfc66f5a5fc183b9d418b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1136768653 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -80,9 +79,9 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1336858727 21098 d4aee7c0aac232caac5688b586b9363c ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb" 1336858727 21251 56705123063d7b34002d6b6e7142345e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb" 1215737283 204454 7ec65ee6c9ea9e0534d110e799642bb0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb" 1215737283 154600 ea54091d31de803b613ba9e80ca51709 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb" 1215737283 140176 d4962f948b4cc0adf4d3dde77a128c95 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb" 1215737283 135942 859a90cad7494a1e79c94baf546d7de5 ""
@@ -314,14 +313,14 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "MacrosAndFigures.tex" 1765115823.04183 10602 215460b45afeb7dd1ae35c02d3dbdee8 ""
   "includes.tex" 1765097643.27196 1240 3643aac79b20f05a43784848b0dbbf19 ""
-  "main.aux" 1765119520.16514 8633 49c9006b7a9be4abeaddf007cc95d175 "pdflatex"
-  "main.bbl" 1765119309.78942 9834 a60f680bfb5c3e6cafeea790be0bb48b "biber main"
-  "main.out" 1765119520.17215 3575 b612e0a4c3f61ba2d02d2491e12d89b5 "pdflatex"
-  "main.run.xml" 1765119520.17746 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.aux" 1765123410.76142 8620 08cd37a0ebadc6727c81bb706a2fe37d "pdflatex"
+  "main.bbl" 1765123407.89068 9834 a60f680bfb5c3e6cafeea790be0bb48b "biber main"
+  "main.out" 1765123410.76846 3693 e66c60b53b171dd1a60746745aa52f74 "pdflatex"
+  "main.run.xml" 1765123410.77384 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
   "main.tex" 1765099726.34276 1762 c1c96f2c93c1a78ef68f0e036c3a826e ""
-  "main.toc" 1765119520.17756 1897 8dc835612168458d15f803888b4f8ff7 "pdflatex"
-  "sections/GeometricCFT.tex" 1765102390.79759 2989 28e45bd04f383d18b632aff37c7ac73e ""
-  "sections/GeometricCFT/PicardAbelJacobiBlowUp.tex" 1763381706.66992 15358 3d260358c6ed685f341e6e9f72eee6f9 ""
+  "main.toc" 1765123410.77404 1975 fbba5a5dcf4f90b675148c4014102d28 "pdflatex"
+  "sections/GeometricCFT.tex" 1765120715.33409 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "sections/GeometricCFT/PicardAbelJacobiBlowUp.tex" 1765120767.94089 8688 c2c280c1e27659b774226673d9916333 ""
   "sections/GeometricCFT/ProofOfReducedTheorem.tex" 1765115804.65836 3707 cb7b109444d910b526e73d2f579fd99d ""
   "sections/GeometricCFT/SymmetricPowerOfSheafIsTamelyRamified.tex" 1763549132.67288 565 0c3a44dea1080400ec92ca73d6a41116 ""
   "sections/GeometricCFT/subsections/ReductionOfTRTheorem.tex" 1765096700.45631 3708 dde1fa261d9c13dd949b118e5e90eb6e ""
@@ -329,7 +328,7 @@
   "sections/Preliminaries/Blowup.tex" 1765100245.98744 5827 b0e9111239098a24602e6b7c9d03fa50 ""
   "sections/Preliminaries/Gtorsors.tex" 1765105118.15446 0 d41d8cd98f00b204e9800998ecf8427e ""
   "sections/Preliminaries/KummerTheory.tex" 1763983472.66697 4443 0cd5662fb6ade8bf7ed9d23bdf75282b ""
-  "sections/Preliminaries/Preliminaries.tex" 1765112173.1116 4867 25be74f1d82a5ebbd6970136abd9206d ""
+  "sections/Preliminaries/Preliminaries.tex" 1765123401.84739 8147 3fcdab5e2880280528400c48781019cd ""
   "sections/Preliminaries/SymmetricPowers.tex" 1765104927.98123 0 d41d8cd98f00b204e9800998ecf8427e ""
   "sections/Preliminaries/TorsorsAndLocalSystems.tex" 1765105272.13851 1526 4c7e47aa1ad75479089724e78a5b9c16 ""
   (generated)
