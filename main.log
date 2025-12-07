@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  24 NOV 2025 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  7 DEC 2025 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1174,65 +1174,100 @@ Package biblatex Info: ... file 'main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
  (./main.toc
-LaTeX Font Info:    Trying to load font information for U+euf on input line 17.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 19.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ))
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
- (./sections/Preliminaries.tex
+ (./sections/Introduction.tex
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./sections/subsections/KummerTheory.tex
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 
-[2])
+[2]
 
-[3]
+[3]) (./sections/Preliminaries/Preliminaries.tex
 
-[4]) (./sections/IntroductionToGeometricCFT.tex) (./sections/GeometricCFT.tex
+[4] (./sections/Preliminaries/Gtorsors.tex) (./sections/Preliminaries/SymmetricPowers.tex) (./sections/Preliminaries/KummerTheory.tex
 
-[5]) (./sections/GeometricCFT/ProofOfReducedTheorem.tex
+[5]) (./sections/Preliminaries/TorsorsAndLocalSystems.tex
 
-[6]) (./sections/GeometricCFT/PicardAbelJacobiBlowUp.tex
+[6]) (./sections/Preliminaries/Blowup.tex
 
-[7{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[7]
 
 [8]
+Overfull \hbox (8.84113pt too wide) in paragraph at lines 115--117
+[]\T1/cmr/bx/n/10.95 Proposition 18. []\T1/cmr/m/it/10.95 If $\OML/cmm/m/it/10.95 ramP[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 k[]$ \T1/cmr/m/it/10.95 and $\OML/cmm/m/it/10.95 ramP[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 k[]$ \T1/cmr/m/it/10.95 Then $\OML/cmm/m/it/10.95 ramP[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 max\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k[]; k[]\OT1/cmr/m/n/10.95 )$
+ []
 
-[9]
+)) (./sections/GeometricCFT.tex
 
-[10]
+[9]) (./sections/GeometricCFT/ProofOfReducedTheorem.tex
 
-[11]) (./sections/GeometricCFT/SymmetricPowerOfSheafIsTamelyRamified.tex (./sections/GeometricCFT/subsections/ReductionOfTRTheorem.tex
+[10]) (./sections/GeometricCFT/PicardAbelJacobiBlowUp.tex
 
-[12]))
+[11]
 
-[13] (./main.aux)
+[12{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \begin{equation}
+                     \label{equation:degree-condition}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \begin{equation}
+                     \label{equation:degree-condition}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \begin{equation}
+                     \label{equation:degree-condition}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \begin{equation}
+                     \label{equation:degree-condition}
+
+[13]
+
+[14]
+
+[15]) (./sections/GeometricCFT/SymmetricPowerOfSheafIsTamelyRamified.tex (./sections/GeometricCFT/subsections/ReductionOfTRTheorem.tex
+
+[16]))
+
+[17]
+
+[18] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2DA995CB31924849F303F1133F380918;3331.
+(rerunfilecheck)             Checksum: B612E0A4C3F61BA2D02D2491E12D89B5;3575.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43207 strings out of 473190
- 809743 string characters out of 5715800
- 1667095 words of memory out of 5000000
- 65655 multiletter control sequences out of 15000+600000
- 580677 words of font info for 100 fonts, out of 8000000 for 9000
+ 43362 strings out of 473190
+ 813343 string characters out of 5715800
+ 1671776 words of memory out of 5000000
+ 65766 multiletter control sequences out of 15000+600000
+ 581378 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,15n,110p,3275b,1968s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (13 pages, 445411 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
+Output written on main.pdf (18 pages, 497426 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
- 345 compressed objects within 4 object streams
- 91 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 521 PDF objects out of 1000 (max. 8388607)
+ 439 compressed objects within 5 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

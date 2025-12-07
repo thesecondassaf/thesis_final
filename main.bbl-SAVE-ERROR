@@ -19,6 +19,34 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global/global}
+    \entry{lang2005algebra}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=88c92ddced8d93c4ed4df52ee477b0c6}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Serge},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{fullhash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{fullhashraw}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{bibnamehash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{authorbibnamehash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{authornamehash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{authorfullhash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{authorfullhashraw}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \field{labelalpha}{Lan05}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Algebra}
+      \field{year}{2005}
+    \endentry
     \entry{milneAV}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=638058cd23e53094700e44c2a4f389f5}{%
@@ -79,6 +107,41 @@
       \endverb
       \verb{url}
       \verb https://math.bu.edu/people/rmagner/Seminar/GCFTthesis.pdf
+      \endverb
+    \endentry
+    \entry{tendler2015geometricclassfieldtheory}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=eaa8d94f3e4daa8a9ae0ea55036908d6}{%
+           family={Tendler},
+           familyi={T\bibinitperiod},
+           given={Avichai},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{fullhash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{fullhashraw}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{bibnamehash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{authorbibnamehash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{authornamehash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{authorfullhash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{authorfullhashraw}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \field{labelalpha}{Ten15}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Geometric Class Field Theory}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1507.00104
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1507.00104
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1507.00104
       \endverb
     \endentry
     \entry{stacks-project}{misc}{}{}

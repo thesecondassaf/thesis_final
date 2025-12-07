@@ -174,12 +174,15 @@
 
 % -------------------- Mathcal and Mathfrak --------------------
 \newcommand{\cF}{\mathcal{F}}
+\newcommand{\cE}{\mathcal{E}}
 \newcommand{\cG}{\mathcal{G}}
 \newcommand{\cC}{\mathcal{C}}
 \newcommand{\cL}{\mathcal{L}}
 \newcommand{\cX}{\mathcal{X}}
 \newcommand{\cO}{\mathcal{O}}
 \newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+
 
 \newcommand{\cY}{\mathcal{Y}}
 \newcommand{\cZ}{\mathcal{Z}}
@@ -193,12 +196,17 @@
 % -------------------- Math Operators --------------------
 \DeclareMathOperator{\lip}{Lip}
 \DeclareMathOperator{\pic}{Pic}
+\DeclareMathOperator{\Pic}{Pic}
+
 \DeclareMathOperator{\Spl}{Spl}
+
 \DeclareMathOperator{\Frob}{Frob}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\ram}{ram}
 \DeclareMathOperator{\Supp}{Supp}
 \DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\codim}{codim}
+
 \DeclareMathOperator{\id}{id}
 
 \newcommand{\PicCm}[1][]{\operatorname{Pic}^{#1}_{C, \mdls}}
@@ -248,6 +256,14 @@
 \newcommand{\Idl}{\mathbb{I}_L}
 
 \newcommand{\Fbox}[2]{\mathcal{\cF}^{(#1)} \boxtimes \mathcal{\cF}^{(#2)}}
+\newcommand{\boxP}[2]{{#1} \boxtimes #2}
+
+\NewDocumentCommand{\boxPp}{m m o}{%
+  \IfValueTF{#3}%
+    {#1 \boxtimes_{#3} #2}% If the 3rd argument exists
+    {#1 \boxtimes #2}%      If the 3rd argument is missing
+}
+
 \newcommand{\Cmod}[1]{\tilde{C}_{\mdls}^{(#1)}}
 
 % -------------------- TikZ: arrow labels --------------------

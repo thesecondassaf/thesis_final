@@ -1,19 +1,21 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
-\contentsline {section}{\numberline {2}Preliminaries}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Kummer Theory}{2}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Ramification In Kummer extensions}{3}{subsubsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.2}The equivalence between $G$-torsors and locally free $\Lambda $-modules}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Ramification after Blowup}{4}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Geometric Class Field Theory}{5}{section.3}%
-\contentsline {section}{\numberline {4}Proof of \cref {thm:GCFT_reduced}}{6}{section.4}%
-\contentsline {section}{\numberline {5}Generalized Picard Scheme, Abel Jacobi Map, And The Blowup}{7}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Generalized Picard Scheme}{7}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Abel-Jacobi Map}{9}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Generalized Effective Cartier Divisors}{9}{subsubsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.3}The Blowup}{10}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Other Completions }{11}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Proof of \cref {theorem:SymmetricPowerOfSheafIsTamelyRamified}}{12}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Assuming $\mathfrak {m}=dP$}{12}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}The general case}{12}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Proof of \cref {prop:preservationOfTameness}}{13}{subsubsection.6.2.1}%
+\contentsline {section}{\numberline {2}Preliminaries}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}G-torsors}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Symmetric Powers}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Kummer Theory}{5}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Ramification In Kummer extensions}{6}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}The equivalence between $G$-torsors and locally free $\Lambda $-modules}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Ramification after Blowup}{7}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Geometric Class Field Theory}{9}{section.3}%
+\contentsline {section}{\numberline {4}Proof of \cref {thm:GCFT_reduced}}{10}{section.4}%
+\contentsline {section}{\numberline {5}Generalized Picard Scheme, Abel Jacobi Map, And The Blowup}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Generalized Picard Scheme}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Abel-Jacobi Map}{13}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Generalized Effective Cartier Divisors}{14}{subsubsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.3}The Blowup}{14}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Other Completions }{16}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Proof of \cref {theorem:SymmetricPowerOfSheafIsTamelyRamified}}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Assuming $\mathfrak {m}=dP$}{16}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}The general case}{16}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Proof of \cref {prop:preservationOfTameness}}{17}{subsubsection.6.2.1}%

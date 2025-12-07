@@ -1,0 +1,80 @@
+\section{Preliminaries}
+In this section we recall the necessariy work, including work from \cite{Guignard2018}, \cite{tendler2015geometricclassfieldtheory} and \cite{takeuchi2019blow}.
+Unless otherwise stated, we work within an arbitrary topos $\mathcal{E}$.
+
+The following proposition establishes the fundamental dictionary between the geometric theory
+of principal homogeneous spaces and the algebraic theory of invertible modules.
+This equivalence allows us to transport the monoidal structure from the category of modules
+(the tensor product) to the category of torsors (the contracted product),
+strictly within the categorical framework.
+
+\begin{prop}\label{prop:torsor_module_equivalence}
+    Let $\mathcal{E}$ be a topos and let $\Lambda$ be a ring object in $\mathcal{E}$. Let $G = \Lambda^\times$ denote the internal group object of units of $\Lambda$.
+
+    There is a canonical equivalence of monoidal categories between the category of $G$-torsors in $\mathcal{E}$ and the category of locally free $\Lambda$-modules of rank 1 in $\mathcal{E}$:
+    \[
+        \Phi: \mathbf{Tors}(\mathcal{E}, \Lambda^\times) \xrightarrow{\sim} \mathbf{Pic}(\mathcal{E}, \Lambda)
+    \]
+    The equivalence is defined by the associated module functor:
+    \[
+        P \longmapsto P \times^{\Lambda^\times} \Lambda := \Lambda^\times \backslash (\Lambda \times P)
+    \]
+    where the quotient is taken with respect to the diagonal action of $\Lambda^\times$ on $\Lambda \times P$. The inverse functor associates to an invertible module $L$ its sheaf of basis frames $\underline{\mathrm{Isom}}_\Lambda(\Lambda, L)$.
+\end{prop}
+
+In light of this canonical equivalence, we will pass freely between the language of $G$-torsors and that of locally free $\Lambda$-modules throughout the text.
+
+For a topos $\cE$, a group object $G$ in $\cE$ and an object $X$ in $\cE$, there is a canonical identification
+between $({G\cE})_{/X}$ and $G(\cE_{/X})$, given by endowing $X$ with the trivial $G$-action.
+
+We denote by $\mathbf{Tors}(X, G)$ the category of $G$-torsors over $X$ in $G \cE_{/X}$.
+Similarly, for a ring object $\Lambda$ in $\cE$, we denote by $\mathbf{Pic}(X, \Lambda)$ the category of locally free $\Lambda$-modules of rank 1 over $X$ in $\cE_{/X}$.
+The above equivilance of categories becomes 
+    \[
+        \Phi_X: \mathbf{Tors}(X, \Lambda^\times) \xrightarrow{\sim} \mathbf{Pic}(X, \Lambda)
+    \]
+
+
+    \textcolor{purple}{
+\cite{Guignard2018} introduces the notion of multiplicative locally free $\Lambda$-modules of rank 1 over a commutative 
+semigroup object in $\cE$.
+\begin{definition}[2.5 in \cite{Guignard2018}]
+    Let $G$ be an abelian group of $\cE$ and let $Q$ be a commutative semigroup of $\cE$ (with or without identity). 
+    Let $m : Q \times Q \to Q$ be the multiplication morphism of $Q$. 
+    A \textbf{multiplicative $G$-torsor} over $Q$ is a $G$-torsor $P \to Q$, together with an isomorphism 
+    $\theta : p_1^{-1} P \otimes p_2^{-1} P \to m^{-1} P$ of $G$-torsors over $Q \times Q$ where $p_1$ and $p_2$ are 
+    the canonical projections, which satisfifing the cocycle conditions correspoding to symmetricity and associativity.    
+\end{definition}
+The category of multiplicative $G$-torsors is fibered in groupoids over the category of commutative semigroups of $\cE$. 
+We denote by $\mathrm{Tors}^\otimes(Q, G)$ the groupoid of multiplicative $G$-torsors over a commutative semigroup $Q$
+ of $\cE$.
+}
+
+\textcolor{purple}{
+ If $G = \Lambda^\times$ for some ring $\Lambda$ in $\cE$, we use the term \textbf{multiplicative locally free $\Lambda$-module of rank $1$}
+  as a synonym for \textbf{multiplicative $G$-torsor}, when we want to emphasize the locally free $\Lambda$-module of rank $1$ corresponding
+   to a given $G$-torsor, rather than the $G$-torsor itself (cf. 2.3).
+}
+
+There are several important theorems that repeat themselves throughout deligne approach to class field theory,
+one of them, is that the symmetric power of $C$ over $k$, denoted by $C^{(d)}$, is a scheme over $k$,
+Guigard proves this in the most general setting so we qoute his result here:
+\begin{prop}
+    If $X$ is Zariski locally quasi-projective over a scheme $S$, the the right action of $S_d$ on $X^{\times_S d}$ 
+    is admissible, and the quotient $X^{(d)} = X^{\times_S d}/S_d$ exists as a scheme over $S$.
+\end{prop}
+
+\subsection{G-torsors}
+\input{sections/Preliminaries/Gtorsors.tex}
+
+\subsection{Symmetric Powers}
+\input{sections/Preliminaries/SymmetricPowers.tex}
+
+\subsection{Kummer Theory}
+\input{sections/Preliminaries/KummerTheory.tex}
+
+\subsection{\texorpdfstring{The equivalence between $G$-torsors and locally free $\Lambda$-modules}{The equivalence between G-torsors and locally free Lambda-modules}}
+\input{sections/Preliminaries/TorsorsAndLocalSystems.tex}
+
+\subsection{Ramification after Blowup}
+\input{sections/Preliminaries/Blowup.tex}

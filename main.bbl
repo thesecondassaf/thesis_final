@@ -109,6 +109,41 @@
       \verb https://math.bu.edu/people/rmagner/Seminar/GCFTthesis.pdf
       \endverb
     \endentry
+    \entry{tendler2015geometricclassfieldtheory}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=eaa8d94f3e4daa8a9ae0ea55036908d6}{%
+           family={Tendler},
+           familyi={T\bibinitperiod},
+           given={Avichai},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{fullhash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{fullhashraw}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{bibnamehash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{authorbibnamehash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{authornamehash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{authorfullhash}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \strng{authorfullhashraw}{eaa8d94f3e4daa8a9ae0ea55036908d6}
+      \field{labelalpha}{Ten15}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Geometric Class Field Theory}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1507.00104
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1507.00104
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1507.00104
+      \endverb
+    \endentry
     \entry{stacks-project}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=6b3a4953111be4867f48aef887bd0220}{%

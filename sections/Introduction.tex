@@ -1,0 +1,99 @@
+In this thesis, we give an elementary proof of a certain imporant geometric theorem occuring in Deligne's approach to geometric class field theory.
+One of the main geometric ingredients in the approach, is showing why a local system $\cF$ with ramification bounded by a modulus $\mdls$ on $U = C \setminus \mdls$ descends via the Abel-Jacobi $\Phi: U \to \PicCm[]$ to $\PicCm[]$. 
+The approach, innovated by Deligne, relies on analyzing the symmetric powers $\cF^{(d)}$ of $\cF$ on the symmetric powers $U^{(d)}$ of $U$,
+and showing that for sufficiently large $d$, $\cF^{(d)}$ descends to $\PicCm[d]$ via the degree $d$ Abel-Jacobi map $\Phi_d : U^{(d)} \to \PicCm[d]$.
+The fibers of $\Phi_d$ (for $d \geq 2g - 1$) over any point are isomorphic to 
+$$
+\begin{cases}
+\mathbb{A}_k^{d - \deg \mdls - g + 1} & \text{if } \mdls > 0 \\
+\mathbb{P}_k^{d - g} & \text{if } \mdls = 0
+\end{cases}
+$$
+Where $g$ is the genus of the curve $C$.
+The unramified case ($\mdls = 0$) is relatively simple, as the Abel-Jacobi map is proper and smooth, which follows from the fact that it is a fibration in projective spaces.
+Thus, by using the homotopy exact sequence for the etale fundamental group, one gets an isomorphism between the etale fundamental group of $U^{(d)} (=C^{(d)})$ and that of $\PicCm[d] (=\PicC[d])$.
+
+The ramified case ($\mdls > 0$) is more subtle, as the Abel-Jacobi map is not proper anymore, and one needs to analyze the ramification of $\cF^{(d)}$ "along the boundary" of $U^{(d)}$ in $C^{(d)}$.
+
+Previous work has generalized Deligne's approach to the ramified case, 
+most notably by Guignard \cite{Guignard2018} and Takeuchi \cite{takeuchi2019blow}. 
+Their approaches differ. 
+To descend, Guignard proves that the restriction of $\cF^{(d)}$ to any line in the fiber of the degree $d$ Abel-Jacobi map is a constant 
+étale sheaf. He achieves this by demonstrating that the restriction is at most tamely ramified and invoking the triviality of the tame fundamental group 
+of $\mathbb{A}^1_k$. His analysis relies on local geometric class field theory. 
+It is also worth noting that Guignard's method generalizes to relative curves over arbitrary base schemes.
+Takeuchi, on the other hand, constructs a compactification of $U^{(d)}$ by blowing up $C^{(d)}$ along certain well-chosen centers.
+This compactification, denoted by $\tilde{C}^{(d)}_\mdls$, has $U^{(d)}$ as an open subscheme with a codimension 1 closed subscheme $H$ as complement. 
+He then shows that the Abel-Jacobi map extends to a proper morphism from $\tilde{C}^{(d)}_\mdls$ to $\PicCm[d]$,
+which is a fibration in projective spaces. Thus, by the homotopy exact sequence for the etale fundamental group, one gets an isomorphism between the etale fundamental group of
+$\tilde{C}^{(d)}_\mdls$ and that of $\PicCm[d]$. 
+To conclude the descent, Takeuchi analyzes the ramification of $\cF^{(d)}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$,
+showing that it is tamely ramified there, which suffices. His methods relies on the theory of Witt vectors and refined Swan conductors.
+
+For an account of these approaches, see \cite{Guignard2018} and \cite{takeuchi2019blow}.
+For a full approach following Deligne's method in the unramified case, and the tamely ramified case see \cite{tendler2015geometricclassfieldtheory}, and \cite{Toth2011}.
+
+In this thesis, we combine techniques and ideas from the approaches, and from \cite{tendler2015geometricclassfieldtheory}, to give an elementary proof of the ramified case of Deligne's approach to geometric class field theory.
+We follow Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ of $U^{(d)}$ by blowing up $C^{(d)}$ and calculate the ramification of $\cF^{(d)}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$ directly, avoiding 
+the use of Swan conductors. 
+
+In the rest of the introduction, we state the main theorem of geometric class field theory \cref{thm:GCFT}, and its reduction to \cref{thm:GCFT_reduced}, which we prove in this thesis.
+
+Let $k$ be a perfect field, and let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$. 
+Geometric class field theory gives a geometric description of abelian coverings of $C$ by relating it to isogenies of the generalized picard schemes.
+
+Fix a modulus $\mdls$, i.e.\ an effective Cartier divisor of $C$ and let $U$ be its complement in $C$. 
+The pairs $(\cL, \alpha)$, where $\cL$ is an invertible $\cO_C$-module and $\alpha$ is a rigidification of $\cL$ along $\mdls$, are parametrized by a $k$-group scheme $\PicCm$, called the rigidified Picard scheme.
+The Abel-Jacobi morphism $$ \Phi : U \to \PicCm $$
+is the morphism which sends a section $x$ of $U$ to the pair $(\cO(x), 1)$ . 
+We prove the following version of geometric class field theory: 
+\begin{theorem}[Geometric Class Field Theory]\label{thm:GCFT}
+    Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
+    Then, there exists a unique (up to isomorphism) \textcolor{purple}{\underline{\textit{multiplicative}}} \'etale sheaf of $\Lambda$-modules $\cG$ on $\PicCm$, locally free of rank 1, such that the pullback of $\cG$ by $\Phi$ is isomorphic to $\cF$.
+\end{theorem}
+
+\textcolor{purple}{The notion of a multiplicative locally free $\Lambda$-module of rank 1 is due to \cite{Guignard2018} 
+and corresponds to isogenies $G \to \PicCm$ with constant kernel $\Lambda^\times$. 
+This concept corresponds to multiplicative characters of $H^1(\PicCm[], \Q/\Z)$ in the formulation of \cite{takeuchi2019blow}, 
+and generalizes Hecke eigensheaves in the context of \cite{tendler2015geometricclassfieldtheory}.}
+
+Let $d$ be a positive integer. 
+We denote by $U^{(d)}$ the $d$-th symmetric power of $U$ over $k$. 
+For an \'etale sheaf $\cF$ on $U$, we denote by $\cF^{(d)}$ the $d$-th symmetric power of $\cF$ on $U^{(d)}$.
+The degree $d$ Abel-Jacobi morphism is defined as the map
+$$ \Phi_d : U^{(d)} \to \PicCm[d] $$
+which sends a section $x_1 + \cdots + x_d$ of $U^{(d)}$ to the pair $(\cO(x_1 + \cdots + x_d), 1)$ .
+
+The method of descent shows that to prove \cref{thm:GCFT}, 
+it suffices to prove the following reduced version (see the last page of \cite{Guignard2018}, 
+Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2019blow} for details on this reduction):
+
+\begin{theorem}\label{thm:GCFT_reduced}
+    Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
+    Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) \'etale sheaf of $\Lambda$-modules $\cG_d$ on $\PicCm[d]$, locally free of rank 1, such that the pullback of $\cG_d$ by $\Phi_d$ is isomorphic to $\cF^{(d)}$.
+\end{theorem}
+
+Using the equivilance between $G$-torsors and locally free $\Lambda$-modules of rank 1 ($G=\Lambda^\times$, 
+see \cref{prop:torsor_module_equivalence}), Theorem \ref{thm:GCFT_reduced} can be reformulated in terms of $G$-torsors as follows:
+\begin{theorem}\label{thm:GCFT_torsors}
+    Let $G=\Lambda^\times$ be a finite abelian group ($\Lambda$ as before), and let $\cP$ be a $G$-torsor on $U$, with ramification bounded by $\mdls$. 
+    Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) $G$-torsor $\cQ_d$ on $\PicCm[d]$, such that the pullback of $\cQ_d$ by $\Phi_d$ is isomorphic to $\cP^{(d)}$.
+\end{theorem}
+
+To prove Theorem \ref{thm:GCFT_torsors} we follow the work of \cite{takeuchi2019blow}, there he analyzed 
+the ramification of $\cP^{(d)}$ after blowing up $C^{(d)}$, we analyze this ramification using elementary methods, drawing techniques and ideas
+from the works of \cite{Guignard2018} and \cite{takeuchi2019blow}, and \cite{tendler2015geometricclassfieldtheory}.
+
+
+\textbf{Notation and conventions}. 
+
+
+\textcolor{red}{
+ \begin{enumerate}
+    \item A word about the decompositon of the Picard scheme into connected components indexed by degree.
+    \item Definition of the abel jacobi-map, and its properties, its fibers, see how amichai does it. 
+    \item Definition of multiplicative sheaves?? and maybe its not needed here, or we are not exactly right here...
+    \item Say something about the ramification condition.
+ \end{enumerate}
+}
+
