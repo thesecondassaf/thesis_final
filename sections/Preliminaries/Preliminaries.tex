@@ -1,8 +1,9 @@
 \section{Preliminaries}
-\subsection{Generalities}
 In this section we recall the necessariy work, including work from \cite{Guignard2018}, \cite{tendler2015geometricclassfieldtheory} and \cite{takeuchi2019blow}.
-Unless otherwise stated, we work within an arbitrary topos $\mathcal{E}$.
 
+\subsection{Generalities}
+
+\subsubsection{Equivalence between Torsors and Invertible Modules}
 The following proposition establishes the fundamental dictionary between the geometric theory
 of principal homogeneous spaces and the algebraic theory of invertible modules.
 This equivalence allows us to transport the monoidal structure from the category of modules
@@ -36,6 +37,9 @@ The above equivilance of categories becomes
 \].
 
 
+
+\subsubsection{Symmetric Powers of Schemes and Sheaves}
+
 There are several important theorems that repeat themselves throughout deligne approach to class field theory,
 one of them, is that the symmetric power of $C$ over $k$, denoted by $C^{(d)}$, is a scheme over $k$,
 Guigard proves this in the most general setting so we qoute his result here:
@@ -43,6 +47,9 @@ Guigard proves this in the most general setting so we qoute his result here:
     If $X$ is Zariski locally quasi-projective over a scheme $S$, the the right action of $S_d$ on $X^{\times_S d}$ 
     is admissible, and the quotient $X^{(d)} = X^{\times_S d}/S_d$ exists as a scheme over $S$.
 \end{prop}
+
+\subsubsection{Etale Fundamental Groups}
+fff
 
 \subsection{Generalized Picard Scheme}
 In this section, we recall the notion of generalized Jacobian varieties and study their fundamental properties. The material presented here is primarily adapted from \cite{Guignard2018} and \cite{takeuchi2019blow}. For further background on the general theory of abelian varieties and Jacobians, the reader may also consult \cite{milneAV}.
@@ -106,10 +113,41 @@ In particular, following \cite{Guignard2018}, if $\cL$ is invertible $\cO_C$-mod
 
 For further background and verification of these constructions, we refer the reader to Milne's notes on Abelian Varieties (\cite{milneAV}).
 
-\subsection{Abel Jacobi Morphism}
+\subsection{The Abel-Jacobi Morphism and its Fibers}
 
-\subsection{G-torsors}
-\input{sections/Preliminaries/Gtorsors.tex}
+
+Let $U = C \setminus \mdls$ be the complement of the modulus in $C$.
+The effective cartier divisors of degree $d$ which are prime to $\mdls$ are parameterized by the symmetric power $\Sym_S^d (U) = U^{(d)}$ over $S$ (See \cite{Guignard2018} Proposition 4.12, \cite{milneAV} Theorem 3.13).
+For any such divisor $D \in U^{(d)}$, the associated line bundle $\Oo_C(D)$ admits a canonical trivialization along $\mdls$. 
+Specifically, the canonical section $1_D$ is regular and non-vanishing on $\mdls$ because $\operatorname{supp}(D) \cap \operatorname{supp}(\mdls) = \emptyset$. 
+This section restricts to a nowhere-vanishing section on the subscheme $\mathfrak{m}$, thereby determining a trivialization $\psi_D^{-1}: \Oo_C(D)|_{\mdls} \xrightarrow{\sim} \Oo_{\mdls}$.
+This is done functorially in families, yielding a morphism from the symmetric power to the generalized Picard scheme (over $S$):
+\begin{equation}
+    \Phi_{d}: U^{(d)} \to \Pic^d_{C, \mathfrak{m}}, \quad D \mapsto [(\mathcal{O}_C(D), \psi_D)],
+\end{equation}
+
+When $\mdls = 0$, and $C$ admits a section over $S$, $C^{(d)}$ is a projective space bundle over $\PicC[d]$ 
+when $d \geq max \{2g - 1, 0\}$, Guignard (\cite{Guignard2018} Theorem 4.14) proves that for $\mdls > 0$ and $d$ satisfying \cref{equation:degree-condition}, the Abel-Jacobi morphism $\Phi_d$ is 
+surjective smooth of relative dimension $d - \deg \mdls - g + 1$, with geometrically connected fibers. 
+
+When $S=\spec (k^{sep})$, the fibers of $\Phi_d$ are well understood:
+\begin{theorem}
+    Assuming $S=\spec (k^{sep})$, $d \geq max \{2g - 1 + \deg \mdls, \deg \mdls\}$. Then, the fibers of the Abel-Jacobi morphism $$ \Phi_d : U^{(d)} \to \PicCm[d] $$ over any point are isomorphic to
+$$
+\begin{cases}
+\mathbb{A}_k^{d - \deg \mdls - g + 1} & \text{if } m > 0 \\
+\mathbb{P}_k^{d - g} & \text{if } m = 0
+\end{cases}
+$$
+In both cases $\Phi_d$ is a fibration in affine spaces or projective spaces, depending on whether $\mdls$ is non-zero or zero.
+\end{theorem}
+\begin{proof}
+see \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, \cite{Toth2011} Prop 2.1.4:    
+
+
+\end{proof}
+
+
 
 \subsection{Symmetric Powers}
 \input{sections/Preliminaries/SymmetricPowers.tex}

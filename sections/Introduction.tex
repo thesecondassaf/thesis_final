@@ -2,7 +2,7 @@ In this thesis, we give an elementary proof of a certain imporant geometric theo
 One of the main geometric ingredients in the approach, is showing why a local system $\cF$ with ramification bounded by a modulus $\mdls$ on $U = C \setminus \mdls$ descends via the Abel-Jacobi $\Phi: U \to \PicCm[]$ to $\PicCm[]$. 
 The approach, innovated by Deligne, relies on analyzing the symmetric powers $\cF^{(d)}$ of $\cF$ on the symmetric powers $U^{(d)}$ of $U$,
 and showing that for sufficiently large $d$, $\cF^{(d)}$ descends to $\PicCm[d]$ via the degree $d$ Abel-Jacobi map $\Phi_d : U^{(d)} \to \PicCm[d]$.
-The fibers of $\Phi_d$ (for $d \geq 2g - 1$) over any point are isomorphic to 
+The fibers of $\Phi_d$ (for $d \geq \deg \mdls +  2g - 1$) over any point are isomorphic to 
 $$
 \begin{cases}
 \mathbb{A}_k^{d - \deg \mdls - g + 1} & \text{if } \mdls > 0 \\
@@ -11,7 +11,10 @@ $$
 $$
 Where $g$ is the genus of the curve $C$.
 The unramified case ($\mdls = 0$) is relatively simple, as the Abel-Jacobi map is proper and smooth, which follows from the fact that it is a fibration in projective spaces.
-Thus, by using the homotopy exact sequence for the etale fundamental group, one gets an isomorphism between the etale fundamental group of $U^{(d)} (=C^{(d)})$ and that of $\PicCm[d] (=\PicC[d])$.
+Thus, by using the homotopy exact sequence for the etale fundamental group,
+\textcolor{red}{fix this because in affine space, its not isomorphism, but a map, it is isomorphism of tame fundamental groups?
+}
+one gets an isomorphism between the etale fundamental group of $U^{(d)} (=C^{(d)})$ and that of $\PicCm[d] (=\PicC[d])$.
 
 The ramified case ($\mdls > 0$) is more subtle, as the Abel-Jacobi map is not proper anymore, and one needs to analyze the ramification of $\cF^{(d)}$ "along the boundary" of $U^{(d)}$ in $C^{(d)}$.
 
@@ -46,7 +49,7 @@ Fix a modulus $\mdls$, i.e.\ an effective Cartier divisor of $C$ and let $U$ be 
 The pairs $(\cL, \alpha)$, where $\cL$ is an invertible $\cO_C$-module and $\alpha$ is a rigidification of $\cL$ along $\mdls$, are parametrized by a $k$-group scheme $\PicCm$, called the rigidified Picard scheme.
 The Abel-Jacobi morphism $$ \Phi : U \to \PicCm $$
 is the morphism which sends a section $x$ of $U$ to the pair $(\cO(x), 1)$ . 
-We prove the following version of geometric class field theory: 
+The fundamental result of geometric class field theory can be formulated as:
 \begin{theorem}[Geometric Class Field Theory]\label{thm:GCFT}
     Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
     Then, there exists a unique (up to isomorphism) \textcolor{purple}{\underline{\textit{multiplicative}}} \'etale sheaf of $\Lambda$-modules $\cG$ on $\PicCm$, locally free of rank 1, such that the pullback of $\cG$ by $\Phi$ is isomorphic to $\cF$.
@@ -86,13 +89,17 @@ from the works of \cite{Guignard2018} and \cite{takeuchi2019blow}, and \cite{ten
 
 
 \textbf{Notation and conventions}. 
+\begin{itemize}
+    \item $S$ is a base scheme.    
+    \item $C \to S$ is a relative curve. i.e. smooth morphism of schemes of relative dimension 1, with connected geometric fibers of genus $g$, which is Zariski-locally projective over $S$. 
+    Note that the genus $g$ is a locally cosntant function on $S$. 
+    \item Most of the time we will assume that $S=\Spec k$, where $k$ is a perfect field.
+    \item A modulus $\mdls$ on $C \to S$, is defined as an effective Cartier divisor of $C$ over $S$ (i.e., a closed subscheme of $C$ which is finite flat of finite presentation (hence locally free) over $S$).
+\end{itemize}
 
 
 \textcolor{red}{
  \begin{enumerate}
-    \item A word about the decompositon of the Picard scheme into connected components indexed by degree.
-    \item Definition of the abel jacobi-map, and its properties, its fibers, see how amichai does it. 
-    \item Definition of multiplicative sheaves?? and maybe its not needed here, or we are not exactly right here...
     \item Say something about the ramification condition.
  \end{enumerate}
 }
