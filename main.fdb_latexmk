@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1765480265.24158 "main.bcf" "main.bbl" "main" 1765480308.26688 0
+["biber main"] 1765480265.24158 "main.bcf" "main.bbl" "main" 1765480590.48862 0
   "Bib.bib" 1765104394.89577 4029 0ae22ef046993c8a8736edab2f7de400 ""
-  "main.bcf" 1765480307.98156 111967 adbe5027a63a130e140303d4d8c26524 "pdflatex"
+  "main.bcf" 1765480590.23361 111967 adbe5027a63a130e140303d4d8c26524 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1765480304.86484 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1765480308.26736 0
+["pdflatex"] 1765480587.29766 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1765480590.48911 0
   "/Users/assaf/Desktop/Thesis/thesis final/main.tex" 1765478033.77947 1554 2d1051fd67c5ad8063375e2b21c488ac ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -322,14 +322,14 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "MacrosAndFigures.tex" 1765465014.83161 10943 e61f1576a9dcd300c0931ac464264b96 ""
   "includes.tex" 1765464538.58316 1289 1d2a91d93c16c77d6d088251225b0069 ""
-  "main.aux" 1765480307.97178 15353 8d4bbaf63123ed7332d6820566d7b800 "pdflatex"
+  "main.aux" 1765480590.2242 15353 3ad5ebe0a06c59b3ae594f7f1a0191b5 "pdflatex"
   "main.bbl" 1765480267.65866 9834 a60f680bfb5c3e6cafeea790be0bb48b "biber main"
-  "main.out" 1765480307.97707 4633 e0e664ee33168ee662c82e763ca14b66 "pdflatex"
-  "main.run.xml" 1765480307.98269 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.out" 1765480590.22917 4633 e0e664ee33168ee662c82e763ca14b66 "pdflatex"
+  "main.run.xml" 1765480590.23467 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
   "main.tex" 1765478033.77947 1554 2d1051fd67c5ad8063375e2b21c488ac ""
-  "main.toc" 1765480307.98296 2335 5718c2d81fac07711397fd2a66022931 "pdflatex"
+  "main.toc" 1765480590.23478 2335 ef81073ec2ddf5b01bb406fe3888a122 "pdflatex"
   "sections/GeometricCFT/PicardAbelJacobiBlowUp.tex" 1765464292.11979 8688 42471f5066cf9c9616018bf889dee187 ""
-  "sections/GeometricCFT/ProofOfReducedTheorem.tex" 1765480304.57112 2268 1366326633db831deb4661972491e845 ""
+  "sections/GeometricCFT/ProofOfReducedTheorem.tex" 1765480587.03801 2626 fed64ea5def96eece66d58f05073811e ""
   "sections/GeometricCFT/SymmetricPowerOfSheafIsTamelyRamified.tex" 1765464292.11427 565 8f38e8efd7c37190e87feae7f422ce11 ""
   "sections/GeometricCFT/subsections/ReductionOfTRTheorem.tex" 1765465369.18338 3709 e966013170f5266a7dc3e1ff5d9056d6 ""
   "sections/Introduction.tex" 1765468037.95347 8961 2d569e4377c42558ecf936b6a84d1c81 ""
@@ -337,7 +337,7 @@
   "sections/Preliminaries/KummerTheory.tex" 1763983472.66697 4443 0cd5662fb6ade8bf7ed9d23bdf75282b ""
   "sections/Preliminaries/Preliminaries.tex" 1765476312.89516 11159 3376db25d32b835058405acc2b925f66 ""
   "sections/Preliminaries/SymmetricPowers.tex" 1765104927.98123 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "sections/RamificationAfterBlowup.tex" 1765480019.81917 1295 417adc50478d4d8324084bc4733fe7d6 ""
+  "sections/RamificationAfterBlowup.tex" 1765480388.57972 648 092eb408cf71992394c250ab330117ec ""
   (generated)
   "main.aux"
   "main.bcf"
