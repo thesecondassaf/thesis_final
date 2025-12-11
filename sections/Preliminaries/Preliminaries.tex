@@ -38,7 +38,8 @@ The above equivilance of categories becomes
 
 
 
-\subsubsection{Symmetric Powers of Schemes and Sheaves}
+\subsubsection{Symmetric Powers of Schemes and Torsors}
+%We recall the notion of symmetric powers of schemes and torsors, following \cite{Guignard2018} and \cite{SGA1}.
 
 There are several important theorems that repeat themselves throughout deligne approach to class field theory,
 one of them, is that the symmetric power of $C$ over $k$, denoted by $C^{(d)}$, is a scheme over $k$,
@@ -48,8 +49,8 @@ Guigard proves this in the most general setting so we qoute his result here:
     is admissible, and the quotient $X^{(d)} = X^{\times_S d}/S_d$ exists as a scheme over $S$.
 \end{prop}
 
-\subsubsection{Etale Fundamental Groups}
-fff
+\subsubsection{Etale Fundamental Groups and Tame Fundamental Groups}
+
 
 \subsection{Generalized Picard Scheme}
 In this section, we recall the notion of generalized Jacobian varieties and study their fundamental properties. The material presented here is primarily adapted from \cite{Guignard2018} and \cite{takeuchi2019blow}. For further background on the general theory of abelian varieties and Jacobians, the reader may also consult \cite{milneAV}.
@@ -126,8 +127,8 @@ This is done functorially in families, yielding a morphism from the symmetric po
     \Phi_{d}: U^{(d)} \to \Pic^d_{C, \mathfrak{m}}, \quad D \mapsto [(\mathcal{O}_C(D), \psi_D)],
 \end{equation}
 
-When $\mdls = 0$, and $C$ admits a section over $S$, $C^{(d)}$ is a projective space bundle over $\PicC[d]$ 
-when $d \geq max \{2g - 1, 0\}$, Guignard (\cite{Guignard2018} Theorem 4.14) proves that for $\mdls > 0$ and $d$ satisfying \cref{equation:degree-condition}, the Abel-Jacobi morphism $\Phi_d$ is 
+When $\mdls = 0$, $d \geq max \{2g - 1, 0\}$ and $C$ admits a section over $S$, $C^{(d)}$ is a projective space bundle over $\PicC[d]$, 
+Guignard (\cite{Guignard2018} Theorem 4.14) proves that for $\mdls > 0$ and $d$ satisfying \Cref{equation:degree-condition}, the Abel-Jacobi morphism $\Phi_d$ is 
 surjective smooth of relative dimension $d - \deg \mdls - g + 1$, with geometrically connected fibers. 
 
 When $S=\spec (k^{sep})$, the fibers of $\Phi_d$ are well understood:
@@ -142,7 +143,7 @@ $$
 In both cases $\Phi_d$ is a fibration in affine spaces or projective spaces, depending on whether $\mdls$ is non-zero or zero.
 \end{theorem}
 \begin{proof}
-see \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, \cite{Toth2011} Prop 2.1.4:    
+see \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, or \cite{Toth2011} Prop 2.1.4:    
 
 
 \end{proof}

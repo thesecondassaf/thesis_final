@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  10 DEC 2025 18:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  11 DEC 2025 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -807,28 +807,56 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
 \qcount@=\count346
 \qcount@@=\count347
 \matrixsize@=\count348
- loaded) (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xyarrow.tex  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded) (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xygraph.tex  Xy-pic option: Graph feature v.3.11 loaded) loaded) (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf.tex  Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-co.tex loaded) Xy-pic pdf driver: `curve' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-cu.tex loaded) Xy-pic pdf driver: `frame' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-fr.tex loaded) Xy-pic pdf driver: `line' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-li.tex loaded) Xy-pic pdf driver: `rotate' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-ro.tex loaded) loaded)) (/usr/local/texlive/2025/texmf-dist/tex/generic/mleftright/mleftright.sty
+ loaded) (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xyarrow.tex  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded) (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xygraph.tex  Xy-pic option: Graph feature v.3.11 loaded) loaded) (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf.tex  Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-co.tex loaded) Xy-pic pdf driver: `curve' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-cu.tex loaded) Xy-pic pdf driver: `frame' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-fr.tex loaded) Xy-pic pdf driver: `line' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-li.tex loaded) Xy-pic pdf driver: `rotate' extension support (/usr/local/texlive/2025/texmf-dist/tex/generic/xypic/xypdf-ro.tex loaded) loaded)) (/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/thmtools.sty
+Package: thmtools 2023/05/04 v0.76
+\thmt@toks=\toks59
+\c@thmt@dummyctr=\count349
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/thm-patch.sty
+Package: thm-patch 2023/05/04 v0.76
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/parseargs.sty
+Package: parseargs 2023/05/04 v0.76
+\@parsespec=\toks60
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/thm-kv.sty
+Package: thm-kv 2023/05/04 v0.76
+Package thm-kv Info: Theorem names will be uppercased on input line 42.
+Package thm-kv Info: kvsetkeys patch (v1.16 or later) on input line 158.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/thm-autoref.sty
+Package: thm-autoref 2023/05/04 v0.76
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/aliasctr.sty
+Package: aliasctr 2023/05/04 v0.76
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/thm-listof.sty
+Package: thm-listof 2023/05/04 v0.76
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/thm-restate.sty
+Package: thm-restate 2023/05/04 v0.76
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
+Package: thm-amsthm 2023/05/04 v0.76
+\thmt@style@headstyle=\toks61
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/mleftright/mleftright.sty
 Package: mleftright 2019/12/03 v1.2 Math left/right delim. as open/close (HO)
 )) (./MacrosAndFigures.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
 File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-\c@theorem=\count349
-\c@problem=\count350
+Package thmtools Info: Key `numbered' (with value `no')
+(thmtools)             is not a known style key.
+(thmtools)             Will pass this to every \declaretheorem
+(thmtools)             that uses `style=remarkstyle' on input line 93.
+\c@theorem=\count350
+\c@problem=\count351
 \symwasy=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
-(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 146.
-\c@diagram=\count351
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 154.
+\c@diagram=\count352
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count352
-\csq@gtype=\count353
-\csq@glevel=\count354
-\csq@qlevel=\count355
-\csq@maxlvl=\count356
-\csq@tshold=\count357
-\csq@ltx@everypar=\toks59
+\csq@reset=\count353
+\csq@gtype=\count354
+\csq@glevel=\count355
+\csq@qlevel=\count356
+\csq@maxlvl=\count357
+\csq@tshold=\count358
+\csq@ltx@everypar=\toks62
  (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
@@ -840,53 +868,53 @@ File: csquotes.cfg
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count358
+\lrq@indent=\count359
  (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count359
-\c@listtotal=\count360
-\c@listcount=\count361
-\c@liststart=\count362
-\c@liststop=\count363
-\c@citecount=\count364
-\c@citetotal=\count365
-\c@multicitecount=\count366
-\c@multicitetotal=\count367
-\c@instcount=\count368
-\c@maxnames=\count369
-\c@minnames=\count370
-\c@maxitems=\count371
-\c@minitems=\count372
-\c@citecounter=\count373
-\c@maxcitecounter=\count374
-\c@savedcitecounter=\count375
-\c@uniquelist=\count376
-\c@uniquename=\count377
-\c@refsection=\count378
-\c@refsegment=\count379
-\c@maxextratitle=\count380
-\c@maxextratitleyear=\count381
-\c@maxextraname=\count382
-\c@maxextradate=\count383
-\c@maxextraalpha=\count384
-\c@abbrvpenalty=\count385
-\c@highnamepenalty=\count386
-\c@lownamepenalty=\count387
-\c@maxparens=\count388
-\c@parenlevel=\count389
-\blx@tempcnta=\count390
-\blx@tempcntb=\count391
-\blx@tempcntc=\count392
-\c@blx@maxsection=\count393
-\blx@maxsegment@0=\count394
-\blx@notetype=\count395
-\blx@parenlevel@text=\count396
-\blx@parenlevel@foot=\count397
-\blx@sectionciteorder@0=\count398
-\blx@sectionciteorderinternal@0=\count399
-\blx@entrysetcounter=\count400
-\blx@biblioinstance=\count401
+\c@tabx@nest=\count360
+\c@listtotal=\count361
+\c@listcount=\count362
+\c@liststart=\count363
+\c@liststop=\count364
+\c@citecount=\count365
+\c@citetotal=\count366
+\c@multicitecount=\count367
+\c@multicitetotal=\count368
+\c@instcount=\count369
+\c@maxnames=\count370
+\c@minnames=\count371
+\c@maxitems=\count372
+\c@minitems=\count373
+\c@citecounter=\count374
+\c@maxcitecounter=\count375
+\c@savedcitecounter=\count376
+\c@uniquelist=\count377
+\c@uniquename=\count378
+\c@refsection=\count379
+\c@refsegment=\count380
+\c@maxextratitle=\count381
+\c@maxextratitleyear=\count382
+\c@maxextraname=\count383
+\c@maxextradate=\count384
+\c@maxextraalpha=\count385
+\c@abbrvpenalty=\count386
+\c@highnamepenalty=\count387
+\c@lownamepenalty=\count388
+\c@maxparens=\count389
+\c@parenlevel=\count390
+\blx@tempcnta=\count391
+\blx@tempcntb=\count392
+\blx@tempcntc=\count393
+\c@blx@maxsection=\count394
+\blx@maxsegment@0=\count395
+\blx@notetype=\count396
+\blx@parenlevel@text=\count397
+\blx@parenlevel@foot=\count398
+\blx@sectionciteorder@0=\count399
+\blx@sectionciteorderinternal@0=\count400
+\blx@entrysetcounter=\count401
+\blx@biblioinstance=\count402
 \labelnumberwidth=\skip70
 \labelalphawidth=\skip71
 \biblabelsep=\skip72
@@ -898,9 +926,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read6
 \blx@bcfout=\write6
 \blx@langwohyphens=\language91
-\c@mincomprange=\count402
-\c@maxcomprange=\count403
-\c@mincompwidth=\count404
+\c@mincomprange=\count403
+\c@maxcomprange=\count404
+\c@mincompwidth=\count405
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -910,74 +938,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count405
-\c@savedafterword=\count406
-\c@annotator=\count407
-\c@savedannotator=\count408
-\c@author=\count409
-\c@savedauthor=\count410
-\c@bookauthor=\count411
-\c@savedbookauthor=\count412
-\c@commentator=\count413
-\c@savedcommentator=\count414
-\c@editor=\count415
-\c@savededitor=\count416
-\c@editora=\count417
-\c@savededitora=\count418
-\c@editorb=\count419
-\c@savededitorb=\count420
-\c@editorc=\count421
-\c@savededitorc=\count422
-\c@foreword=\count423
-\c@savedforeword=\count424
-\c@holder=\count425
-\c@savedholder=\count426
-\c@introduction=\count427
-\c@savedintroduction=\count428
-\c@namea=\count429
-\c@savednamea=\count430
-\c@nameb=\count431
-\c@savednameb=\count432
-\c@namec=\count433
-\c@savednamec=\count434
-\c@translator=\count435
-\c@savedtranslator=\count436
-\c@shortauthor=\count437
-\c@savedshortauthor=\count438
-\c@shorteditor=\count439
-\c@savedshorteditor=\count440
-\c@labelname=\count441
-\c@savedlabelname=\count442
-\c@institution=\count443
-\c@savedinstitution=\count444
-\c@lista=\count445
-\c@savedlista=\count446
-\c@listb=\count447
-\c@savedlistb=\count448
-\c@listc=\count449
-\c@savedlistc=\count450
-\c@listd=\count451
-\c@savedlistd=\count452
-\c@liste=\count453
-\c@savedliste=\count454
-\c@listf=\count455
-\c@savedlistf=\count456
-\c@location=\count457
-\c@savedlocation=\count458
-\c@organization=\count459
-\c@savedorganization=\count460
-\c@origlocation=\count461
-\c@savedoriglocation=\count462
-\c@origpublisher=\count463
-\c@savedorigpublisher=\count464
-\c@publisher=\count465
-\c@savedpublisher=\count466
-\c@language=\count467
-\c@savedlanguage=\count468
-\c@origlanguage=\count469
-\c@savedoriglanguage=\count470
-\c@pageref=\count471
-\c@savedpageref=\count472
+\c@afterword=\count406
+\c@savedafterword=\count407
+\c@annotator=\count408
+\c@savedannotator=\count409
+\c@author=\count410
+\c@savedauthor=\count411
+\c@bookauthor=\count412
+\c@savedbookauthor=\count413
+\c@commentator=\count414
+\c@savedcommentator=\count415
+\c@editor=\count416
+\c@savededitor=\count417
+\c@editora=\count418
+\c@savededitora=\count419
+\c@editorb=\count420
+\c@savededitorb=\count421
+\c@editorc=\count422
+\c@savededitorc=\count423
+\c@foreword=\count424
+\c@savedforeword=\count425
+\c@holder=\count426
+\c@savedholder=\count427
+\c@introduction=\count428
+\c@savedintroduction=\count429
+\c@namea=\count430
+\c@savednamea=\count431
+\c@nameb=\count432
+\c@savednameb=\count433
+\c@namec=\count434
+\c@savednamec=\count435
+\c@translator=\count436
+\c@savedtranslator=\count437
+\c@shortauthor=\count438
+\c@savedshortauthor=\count439
+\c@shorteditor=\count440
+\c@savedshorteditor=\count441
+\c@labelname=\count442
+\c@savedlabelname=\count443
+\c@institution=\count444
+\c@savedinstitution=\count445
+\c@lista=\count446
+\c@savedlista=\count447
+\c@listb=\count448
+\c@savedlistb=\count449
+\c@listc=\count450
+\c@savedlistc=\count451
+\c@listd=\count452
+\c@savedlistd=\count453
+\c@liste=\count454
+\c@savedliste=\count455
+\c@listf=\count456
+\c@savedlistf=\count457
+\c@location=\count458
+\c@savedlocation=\count459
+\c@organization=\count460
+\c@savedorganization=\count461
+\c@origlocation=\count462
+\c@savedoriglocation=\count463
+\c@origpublisher=\count464
+\c@savedorigpublisher=\count465
+\c@publisher=\count466
+\c@savedpublisher=\count467
+\c@language=\count468
+\c@savedlanguage=\count469
+\c@origlanguage=\count470
+\c@savedoriglanguage=\count471
+\c@pageref=\count472
+\c@savedpageref=\count473
 \shorthandwidth=\skip78
 \shortjournalwidth=\skip79
 \shortserieswidth=\skip80
@@ -1001,19 +1029,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count473
-\c@textcitetotal=\count474
-\c@textcitemaxnames=\count475
-\c@biburlbigbreakpenalty=\count476
-\c@biburlbreakpenalty=\count477
-\c@biburlnumpenalty=\count478
-\c@biburlucpenalty=\count479
-\c@biburllcpenalty=\count480
+\c@textcitecount=\count474
+\c@textcitetotal=\count475
+\c@textcitemaxnames=\count476
+\c@biburlbigbreakpenalty=\count477
+\c@biburlbreakpenalty=\count478
+\c@biburlnumpenalty=\count479
+\c@biburlucpenalty=\count480
+\c@biburllcpenalty=\count481
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count481
+\c@smartand=\count482
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -1023,8 +1051,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count482
-\c@bbx:relatedtotal=\count483
+\c@bbx:relatedcount=\count483
+\c@bbx:relatedtotal=\count484
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -1117,17 +1145,17 @@ LaTeX Font Info:    ... okay on input line 27.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count484
+\scratchcounter=\count485
 \scratchdimen=\dimen333
 \scratchbox=\box77
-\nofMPsegments=\count485
-\nofMParguments=\count486
-\everyMPshowfont=\toks60
-\MPscratchCnt=\count487
+\nofMPsegments=\count486
+\nofMParguments=\count487
+\everyMPshowfont=\toks63
+\MPscratchCnt=\count488
 \MPscratchDim=\dimen334
-\MPnumerator=\count488
-\makeMPintoPDFobject=\count489
-\everyMPtoPDFconversion=\toks61
+\MPnumerator=\count489
+\makeMPintoPDFobject=\count490
+\everyMPtoPDFconversion=\toks64
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1174,45 +1202,55 @@ Package biblatex Info: ... file 'main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
  (./main.toc
-LaTeX Font Info:    Trying to load font information for U+euf on input line 23.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 22.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-
-[1
-
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}])
+))
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
- (./sections/Introduction.tex
+
+
+[1
+
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./sections/Introduction.tex
 
 [2]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 52.
+
 
 [3]) (./sections/Preliminaries/Preliminaries.tex
+Package hyperref Info: bookmark level for unknown prop defaults to 0 on input line 13.
+
 
 [4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [5]
 
 [6] (./sections/Preliminaries/SymmetricPowers.tex) (./sections/Preliminaries/KummerTheory.tex
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 10.
+
 
 [7]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 48.
+
 
 [8]) (./sections/Preliminaries/TorsorsAndLocalSystems.tex) (./sections/Preliminaries/Blowup.tex
 
 [9]
 
 [10]
-Overfull \hbox (8.84113pt too wide) in paragraph at lines 115--117
+Overfull \hbox (15.94623pt too wide) in paragraph at lines 115--117
 []\T1/cmr/bx/n/10.95 Proposition 18. []\T1/cmr/m/it/10.95 If $\OML/cmm/m/it/10.95 ramP[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 k[]$ \T1/cmr/m/it/10.95 and $\OML/cmm/m/it/10.95 ramP[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 k[]$ \T1/cmr/m/it/10.95 Then $\OML/cmm/m/it/10.95 ramP[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 max\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k[]; k[]\OT1/cmr/m/n/10.95 )$
  []
 
-)) (./sections/GeometricCFT.tex)
+)) (./sections/GeometricCFT/ProofOfReducedTheorem.tex
 
-[11] (./sections/GeometricCFT/ProofOfReducedTheorem.tex
+[11])
 
-[12]) (./sections/GeometricCFT/PicardAbelJacobiBlowUp.tex
+[12] (./sections/GeometricCFT/PicardAbelJacobiBlowUp.tex
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 5.
+
 
 [13]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) has been already used, duplicate ignored
@@ -1236,9 +1274,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) h
 l.64     \begin{equation}
                          \label{diag:main-blowup-diag}
 
-[14]
+[14]) (./sections/GeometricCFT/SymmetricPowerOfSheafIsTamelyRamified.tex
 
-[15]) (./sections/GeometricCFT/SymmetricPowerOfSheafIsTamelyRamified.tex (./sections/GeometricCFT/subsections/ReductionOfTRTheorem.tex
+[15] (./sections/GeometricCFT/subsections/ReductionOfTRTheorem.tex
 
 [16]))
 
@@ -1248,24 +1286,24 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F1B988BA31905C1818E63E13FDBF7AA4;4663.
+(rerunfilecheck)             Checksum: 0FDAEFD469C667C25E898FA8FFCB6153;4617.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43358 strings out of 473190
- 813199 string characters out of 5715800
- 1666741 words of memory out of 5000000
- 65766 multiletter control sequences out of 15000+600000
+ 43935 strings out of 473190
+ 825664 string characters out of 5715800
+ 1678454 words of memory out of 5000000
+ 66290 multiletter control sequences out of 15000+600000
  580677 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,15n,110p,3275b,2359s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,15n,110p,3275b,1912s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (17 pages, 473098 bytes).
+Output written on main.pdf (17 pages, 473415 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
- 458 compressed objects within 5 object streams
- 122 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 569 PDF objects out of 1000 (max. 8388607)
+ 488 compressed objects within 5 object streams
+ 150 named destinations out of 1000 (max. 500000)
+ 197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

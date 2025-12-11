@@ -10,10 +10,9 @@ $$
 \end{cases}
 $$
 Where $g$ is the genus of the curve $C$.
-The unramified case ($\mdls = 0$) is relatively simple, as the Abel-Jacobi map is proper and smooth, which follows from the fact that it is a fibration in projective spaces.
+The unramified case ($\mdls = 0$) is relatively simple, as the Abel-Jacobi map is proper, surjective with geometrically connected fibers, which follows from the fact that it is a fibration in projective spaces.
 Thus, by using the homotopy exact sequence for the etale fundamental group,
-\textcolor{red}{fix this because in affine space, its not isomorphism, but a map, it is isomorphism of tame fundamental groups?
-}
+
 one gets an isomorphism between the etale fundamental group of $U^{(d)} (=C^{(d)})$ and that of $\PicCm[d] (=\PicC[d])$.
 
 The ramified case ($\mdls > 0$) is more subtle, as the Abel-Jacobi map is not proper anymore, and one needs to analyze the ramification of $\cF^{(d)}$ "along the boundary" of $U^{(d)}$ in $C^{(d)}$.
@@ -40,7 +39,7 @@ In this thesis, we combine techniques and ideas from the approaches, and from \c
 We follow Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ of $U^{(d)}$ by blowing up $C^{(d)}$ and calculate the ramification of $\cF^{(d)}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$ directly, avoiding 
 the use of Swan conductors. 
 
-In the rest of the introduction, we state the main theorem of geometric class field theory \cref{thm:GCFT}, and its reduction to \cref{thm:GCFT_reduced}, which we prove in this thesis.
+In the rest of the introduction, we state the main theorem of geometric class field theory \Cref{thm:GCFT}, and its reduction to \Cref{thm:GCFT_reduced}, which we prove in this thesis.
 
 Let $k$ be a perfect field, and let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$. 
 Geometric class field theory gives a geometric description of abelian coverings of $C$ by relating it to isogenies of the generalized picard schemes.
@@ -67,7 +66,7 @@ The degree $d$ Abel-Jacobi morphism is defined as the map
 $$ \Phi_d : U^{(d)} \to \PicCm[d] $$
 which sends a section $x_1 + \cdots + x_d$ of $U^{(d)}$ to the pair $(\cO(x_1 + \cdots + x_d), 1)$ .
 
-The method of descent shows that to prove \cref{thm:GCFT}, 
+The method of descent shows that to prove \Cref{thm:GCFT}, 
 it suffices to prove the following reduced version (see the last page of \cite{Guignard2018}, 
 Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2019blow} for details on this reduction):
 
@@ -77,13 +76,13 @@ Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theo
 \end{theorem}
 
 Using the equivilance between $G$-torsors and locally free $\Lambda$-modules of rank 1 ($G=\Lambda^\times$, 
-see \cref{prop:torsor_module_equivalence}), Theorem \ref{thm:GCFT_reduced} can be reformulated in terms of $G$-torsors as follows:
+see \Cref{prop:torsor_module_equivalence}), Theorem \Cref{thm:GCFT_reduced} can be reformulated in terms of $G$-torsors as follows:
 \begin{theorem}\label{thm:GCFT_torsors}
     Let $G=\Lambda^\times$ be a finite abelian group ($\Lambda$ as before), and let $\cP$ be a $G$-torsor on $U$, with ramification bounded by $\mdls$. 
     Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) $G$-torsor $\cQ_d$ on $\PicCm[d]$, such that the pullback of $\cQ_d$ by $\Phi_d$ is isomorphic to $\cP^{(d)}$.
 \end{theorem}
 
-To prove Theorem \ref{thm:GCFT_torsors} we follow the work of \cite{takeuchi2019blow}, there he analyzed 
+To prove Theorem \Cref{thm:GCFT_torsors} we follow the work of \cite{takeuchi2019blow}, there he analyzed 
 the ramification of $\cP^{(d)}$ after blowing up $C^{(d)}$, we analyze this ramification using elementary methods, drawing techniques and ideas
 from the works of \cite{Guignard2018} and \cite{takeuchi2019blow}, and \cite{tendler2015geometricclassfieldtheory}.
 

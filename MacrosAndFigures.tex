@@ -1,3 +1,13 @@
+% ==========================================================
+%                  PACKAGES FOR MACROS
+% ==========================================================
+%\usepackage{amsthm}
+%\usepackage{thmtools}    % For flexible theorem definitions
+%\usepackage{thm-restate} % For copying theorems (restatable)
+% [capitalise] fixes "theorem 2" -> "Theorem 2" automatically
+% [noabbrev] ensures "Theorem" is not shortened to "Thm."
+%\usepackage[capitalise, noabbrev]{cleveref} 
+
 % -------------------- TikZ Patterns --------------------
 \usetikzlibrary{patterns}
 \tikzset{
@@ -46,85 +56,83 @@
 \colorlet{darkgrayX}{black!47!white}
 
 % -------------------- Cross-reference shortcuts --------------------
+% Note: With the new cleveref setup, you can just use \cref for all of these.
 \makeatletter
-\AtBeginDocument{\providecommand\corref[1]{\ref{cor:#1}}}
-\AtBeginDocument{\providecommand\theoremref[1]{\ref{theorem:#1}}}
-\AtBeginDocument{\providecommand\lemref[1]{\ref{lem:#1}}}
-\AtBeginDocument{\providecommand\figref[1]{\ref{fig:#1}}}
+\AtBeginDocument{\providecommand\corref[1]{\cref{cor:#1}}}
+\AtBeginDocument{\providecommand\theoremref[1]{\cref{theorem:#1}}}
+\AtBeginDocument{\providecommand\lemref[1]{\cref{lem:#1}}}
+\AtBeginDocument{\providecommand\figref[1]{\cref{fig:#1}}}
 \makeatother
 \providecommand{\tabularnewline}{\\}
 
-% -------------------- Theorem Environments --------------------
 
-% Base counter:
-\newtheorem{theorem}{Theorem}
-\newtheorem*{theorem*}{Theorem}
+% ==========================================================
+%               NEW THEOREM SETUP (thmtools)
+% ==========================================================
+% This section replaces your old \newtheorem and \newaliascnt blocks.
+% It resolves the conflicts and enables \begin{restatable}.
 
-% --- Definition ---
-\newaliascnt{definition}{theorem}
-\newtheorem{definition}[definition]{Definition}
-\aliascntresetthe{definition}
-\crefname{definition}{definition}{definitions}
-\Crefname{definition}{Definition}{Definitions}
+% 1. Define Styles
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    bodyfont=\itshape,
+    postheadspace=1em
+]{theoremstyle}
 
-% --- Corollary ---
-\newaliascnt{cor}{theorem}
-\newtheorem{cor}[cor]{Corollary}
-\aliascntresetthe{cor}
-\crefname{cor}{corollary}{corollaries}
-\Crefname{cor}{Corollary}{Corollaries}
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    bodyfont=\normalfont,
+    postheadspace=1em
+]{definitionstyle}
 
-% --- Lemma ---
-\newaliascnt{lemma}{theorem}
-\newtheorem{lemma}[lemma]{Lemma}
-\aliascntresetthe{lemma}
-\crefname{lemma}{lemma}{lemmas}
-\Crefname{lemma}{Lemma}{Lemmas}
+\declaretheoremstyle[
+    headfont=\itshape, 
+    bodyfont=\normalfont, 
+    numbered=no, 
+    postheadspace=1em
+]{remarkstyle}
 
-% --- Proposition ---
-\newaliascnt{prop}{theorem}
-\newtheorem{prop}[prop]{Proposition}
-\aliascntresetthe{prop}
-\crefname{prop}{proposition}{propositions}
-\Crefname{prop}{Proposition}{Propositions}
+% 2. Main Theorem (The Master Counter)
+% If you want numbering per section (Theorem 1.1), add [numberwithin=section] inside [].
+\declaretheorem[
+    name=Theorem,
+    style=theoremstyle
+]{theorem}
 
-% --- Proposition* (unnumbered) ---
-\newtheorem*{prop*}{Proposition}
+% Unnumbered theorem
+\declaretheorem[
+    name=Theorem,
+    style=theoremstyle,
+    numbered=no
+]{theorem*}
 
-% --- Observation ---
-\newaliascnt{obs}{theorem}
-\newtheorem{obs}[obs]{Observation}
-\aliascntresetthe{obs}
-\crefname{obs}{observation}{observations}
-\Crefname{obs}{Observation}{Observations}
+% 3. Siblings (Share counter with Theorem)
+\declaretheorem[name=Lemma,       sibling=theorem, style=theoremstyle]{lemma}
+\declaretheorem[name=Proposition, sibling=theorem, style=theoremstyle]{prop}
+\declaretheorem[name=Corollary,   sibling=theorem, style=theoremstyle]{cor}
+\declaretheorem[name=Observation, sibling=theorem, style=theoremstyle]{obs}
+\declaretheorem[name=Claim,       sibling=theorem, style=theoremstyle]{claim}
 
-% --- Claim ---
-\newaliascnt{claim}{theorem}
-\newtheorem{claim}[claim]{Claim}
-\aliascntresetthe{claim}
-\crefname{claim}{claim}{claims}
-\Crefname{claim}{Claim}{Claims}
+% 4. Definitions (Definition style, Share counter with Theorem)
+\declaretheorem[name=Definition,  sibling=theorem, style=definitionstyle]{definition}
+\declaretheorem[name=Example,     sibling=theorem, style=definitionstyle]{example}
 
-% --- Problem (independent counter, not sharing with theorem) ---
-\newtheorem{problem}{Problem}
-\crefname{problem}{problem}{problems}
-\Crefname{problem}{Problem}{Problems}
+% 5. Independent Counters
+\declaretheorem[name=Problem, style=definitionstyle]{problem}
 
-% --- Remark-style (unnumbered) ---
-\theoremstyle{remark}
-\newtheorem*{note*}{Note}
-\newtheorem*{rem*}{Remark}
-\newtheorem*{notation*}{Notation}
-\newtheorem*{context*}{Context}
+% 6. Unnumbered Remarks/Notes
+\declaretheorem[name=Remark,   style=remarkstyle]{rem*}
+\declaretheorem[name=Note,     style=remarkstyle]{note*}
+\declaretheorem[name=Notation, style=remarkstyle]{notation*}
+\declaretheorem[name=Context,  style=remarkstyle]{context*}
+\declaretheorem[name=Proposition, style=theoremstyle, numbered=no]{prop*}
 
-% -------------------- Example Environment --------------------
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{\protect\examplename}
-\providecommand{\examplename}{Example}
 
-% -------------------- Cleveref labels --------------------
-\crefname{equation}{}{}
+% -------------------- Cleveref Customizations --------------------
+% (Most are handled by 'capitalise' option, but these are custom)
+\crefname{equation}{}{} % Equations have no name "1" not "eq. 1"
 \crefname{diagram}{Diagram}{Diagrams}
+
 
 % -------------------- Main and Front Matter --------------------
 \makeatletter
@@ -144,7 +152,6 @@
 \DeclareTextFontCommand{\textwasy}{\wasyfamily}
 \DeclareSymbolFont{wasy}{U}{wasy}{m}{n}
 \SetSymbolFont{wasy}{bold}{U}{wasy}{b}{n}
-%\def\hexagon    {\mbox{\wasyfamily\char55}}
 
 % -------------------- Standard Math Shortcuts --------------------
 \newcommand{\FF}{\mathsf{F}}
@@ -308,7 +315,7 @@
 \newenvironment{diagram}
 {\refstepcounter{diagram}\begin{equation}\tag*{\textnormal{(\thediagram})}}
     {\end{equation}}
-\newcommand{\diagramref}[1]{\textnormal{Diagram~\ref{#1}}}
+\newcommand{\diagramref}[1]{\textnormal{Diagram~\Cref{#1}}}
 
 % -------------------- Stacks Tag Shortcut --------------------
 \newcommand{\stackstag}[1]{%
@@ -318,22 +325,7 @@
   \cite[\href{https://ncatlab.org/nlab/revision/#1/#2}{#1, Rev.~#2}]{nlab}%
 }
 
-
-% -------------------- Provide missing names --------------------
-\providecommand{\claimname}{Claim}
-\providecommand{\corollaryname}{Corollary}
-\providecommand{\definitionname}{Definition}
-\providecommand{\lemmaname}{Lemma}
-\providecommand{\probname}{Problem}
-\providecommand{\notationname}{Notation}
-\providecommand{\notename}{Note}
-\providecommand{\propositionname}{Proposition}
-\providecommand{\remarkname}{Remark}
-\providecommand{\theoremname}{Theorem}
-\providecommand{\observationname}{Observation}
-\providecommand{\contextnname}{Context}
-
-% Other Shortcuts
+% -------------------- Other Shortcuts --------------------
 \newcommand{\SheavesSetsEquiv}{
   \[
     \left\{
