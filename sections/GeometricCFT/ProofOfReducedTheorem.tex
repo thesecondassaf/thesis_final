@@ -1,51 +1,33 @@
-Let $\mdls$ be an effective Cartier divisor on $C$, and let $d$ be a positive integer satisfying $d \geq max \{2g-1 + \deg \mdls, \deg \mdls\}$ where $g$ is the genus of $C$. 
-We denote by $C^{(d)}$ the $d$-th symmetric power of $C$ over $k$.
-By \textcolor{red}{add reference}, the fibers of the map \textcolor{red}{for d large enough? under what conditions?}
-$$ \Phi_d : U^{(d)} \to \PicCm[d] $$ over any point are isomorphic to
-$$
-\begin{cases}
-\mathbb{A}_k^{d - \deg \mdls - g + 1} & \text{if } m > 0 \\
-\mathbb{P}_k^{d - g} & \text{if } m = 0
-\end{cases}
-$$
+We work over $S=\spec k$, for $k$ perfect.
 
+By \Cref{prop:torsor_module_equivalence}, its equivalent to prove: 
+\GCFTtorsors*
 
-%More accurately, for a $k$-point of $\PicCm[d]$ corresponding to a pair $(\cL, \alpha)$ where $\cL$ is an invertible $\cO_C$-module of degree $d$ and $\alpha$ is a rigidification of $\cL$ along $\mdls$, the fiber of $\Phi_d$ over this point is isomorphic to the projective space of global sections of $\cL$ which restrict to $\alpha$ along $\mdls$:
-%$$ \mathbb{P}(\Gamma_\mdls(C, \cL)) = \mathbb{P}(\{ s \in \Gamma(C, \cL) \mid s|_\mdls = \alpha \}) $$
+\begin{proof}
+We divide the proof into two cases, when $\mdls = 0$ and when $\mdls > 0$.
 
-One can show this makes $\Phi_d$ into a fibration in affine spaces or projective spaces, depending on whether $\mdls$ is non-zero or zero. 
-
-Using a fundamental theorem about etale fundamental groups:
-\begin{theorem}[Homotopy Exact Sequence \stackstag{0C0J}]
-Let $f : X \to S$ be a flat proper morphism of finite presentation whose geometric fibres are connected and reduced. Assume $S$ is connected and let $\overline{s}$ be a geometric point of $S$. Then there is an exact sequence
-
-\[ \pi _1(X_{\overline{s}}) \to \pi _1(X) \to \pi _1(S) \to 1 \]
-of fundamental groups.
-\end{theorem}
-
-We get, in the case when $\mdls = 0$ (Hence $\Phi_d$ is smooth and proper) that there is an isomorphism of fundamental groups:
+\textbf{Case 1:} $\mdls = 0$.
+By \Cref{section:AbelJacobi}, for $d$ large enough,
+the Abel-Jacobi morphism $\Phi_d : C^{(d)} \to \PicC[d]$ is proper surjective and smooth, with geometrically connected fibers,
+each isomorphic to $\bP_{k^{sep}}^{d-g}$, 
+Hence by \Cref{cor:etale_fundamental_group_smooth_proper} it induces an exact sequence of etale fundamental groups:
+\[ \pi_1^{et}(\bP_{k^{sep}}^{d-g}) \to \pi_1^{et}(C^{(d)}) \to \pi_1^{et}(\PicC[d]) \to 1 \]
+But $\bP_{k^{sep}}^{d-g}$  is simply connected (\cite{tendler2015geometricclassfieldtheory} Example 4.9, \cite{Toth2011} Example 1.4.12), 
+hence its etale fundamental group is trivial, and we get an isomorphism of etale fundamental groups:
 $$ \pi_1^{et}(C^{(d)}) \cong \pi_1^{et}(\PicC[d]) $$
-Implying \Cref{thm:GCFT_reduced} \textcolor{red}{explain exactly how, becuase here it is fundamental groups and there it is etale sheafves of $\Lambda$-modules}. Also, we need it to be \textbf{multiplicative}!
+Implying the theorem in this case.
 
-In the case when $\mdls > 0$, $\Phi_d$ is not proper anymore, so we cannot apply the homotopy exact sequence directly.
-In \cite{takeuchi2019blow} Takeuchi constructs a compactifiaction of $U^{(d)}$ by adding a boundary hyperplane, $H$, over which $\cF^{(d)}$ is tamely ramified.
-This compactification is denoted by $\Cmod{d}$, it has $U^{(d)}$ as an open subscheme with complement $H$. 
+\textbf{Case 2:} $\mdls > 0$.
+In this case by (\textcolor{red}{add reference later - that the abel jacobi map here extends. - this is Preliminaries}, for $d$ large enough, the Abel-Jacobi morphism $\Phi_d : U^{(d)} \to \PicCm[d]$ 
+extends to a proper surjective and smooth map, with geometrically connected fibers isomorphic to projective spaces, 
+$$ \tilde{\Phi}_d : \tilde{C}^{(d)}_\mdls \to \PicCm[d] $$ 
+Hence we get an isomorphism of etale fundamental groups:
+$$ \pi_1^{et}(\tilde{C}^{(d)}_\mdls) \cong \pi_1^{et}(\PicCm[d]) $$
 
-\textbf{This is a theorem we are going to prove in a different way:}
-\begin{theorem}\label{theorem:SymmetricPowerOfSheafIsTamelyRamified}
-     Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
-    Then, for sufficiently large integer $d$, $\cF^{(d)}$ is tamely ramified on $H$.
-\end{theorem}
-\textcolor{red}{Note that the above terminology of tamely ramified on $H$ is defined exactly when H is the complement of $U^{(d)}$, so I want to say something about it, or make it clear, or somehow define it someplace else and refer to it }
-
-More over, this compactification, denoted by $\tilde{C}^{(d)}_\mdls$ is fibered over $\PicCm[d]$ with fibers isomorphic to projective spaces. Thus we get
-$$ \pi_1(\tilde{C}^{(d)}_\mdls) \cong \pi_1(\PicCm[d])$$
-
-From here, one can go in two routes, 
-\textbf{Route 1} - Showing $ \ker \{\pi^{ab}_1(U^{(d)}) \to \pi^{ab}_1(\PicCm[d]) \} $ is pro-$p$ group. 
-
-\textbf{Route 2} - Showing $$\pi^{t, ab}_1(U^{(d)}) \to \pi^{t,ab}_1(\PicCm[d])$$ is isomorphism to its image.  \textcolor{red}{here one needs to be precise.}
-
-In both cases, one would then get \Cref{thm:GCFT_reduced}.
-
-We start by defintions and basic proposition of everything we need. 
+By \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}, $\cF^{(d)}$ is tamely ramified on the boundary divisor 
+$H = \tilde{C}^{(d)}_\mdls \setminus U^{(d)}$.
+Thus, by \textcolor{red}{Add reference to this lemma and state it well} \underline{$\cF^{(d)}$ extends to a sheaf $\tilde{\cF}^{(d)}$ on $\tilde{C}^{(d)}_\mdls$ which is unramified along $H$.}
+This implies that the representation of $\pi_1^{et}(U^{(d)})$ corresponding to $\cF^{(d)}$ factors through $\pi_1^{et}(\tilde{C}^{(d)}_\mdls)$.
+Combining this with the isomorphism above, we get that the representation of $\pi_1^{et}(U^{(d)})$ corresponding to $\cF^{(d)}$ factors through $\pi_1^{et}(\PicCm[d])$, 
+which implies the theorem in this case as well.
+\end{proof}

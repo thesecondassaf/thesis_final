@@ -1,12 +1,13 @@
 In this thesis, we give an elementary proof of a certain imporant geometric theorem occuring in Deligne's approach to geometric class field theory.
+We (usually) work over a perfect field $k$, $C$ is a projective smooth geometrically connected curve over $k$, with genus $g$.
 One of the main geometric ingredients in the approach, is showing why a local system $\cF$ with ramification bounded by a modulus $\mdls$ on $U = C \setminus \mdls$ descends via the Abel-Jacobi $\Phi: U \to \PicCm[]$ to $\PicCm[]$. 
 The approach, innovated by Deligne, relies on analyzing the symmetric powers $\cF^{(d)}$ of $\cF$ on the symmetric powers $U^{(d)}$ of $U$,
 and showing that for sufficiently large $d$, $\cF^{(d)}$ descends to $\PicCm[d]$ via the degree $d$ Abel-Jacobi map $\Phi_d : U^{(d)} \to \PicCm[d]$.
-The fibers of $\Phi_d$ (for $d \geq \deg \mdls +  2g - 1$) over any point are isomorphic to 
+The geometric-fibers of $\Phi_d$ (for $d \geq \deg \mdls +  2g - 1$) over any point are isomorphic to 
 $$
 \begin{cases}
-\mathbb{A}_k^{d - \deg \mdls - g + 1} & \text{if } \mdls > 0 \\
-\mathbb{P}_k^{d - g} & \text{if } \mdls = 0
+\mathbb{A}_{k^{sep}}^{d - \deg \mdls - g + 1} & \text{if } \mdls > 0 \\
+\mathbb{P}_{k^{sep}}^{d - g} & \text{if } \mdls = 0
 \end{cases}
 $$
 Where $g$ is the genus of the curve $C$.
@@ -76,13 +77,14 @@ Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theo
 \end{theorem}
 
 Using the equivilance between $G$-torsors and locally free $\Lambda$-modules of rank 1 ($G=\Lambda^\times$, 
-see \Cref{prop:torsor_module_equivalence}), Theorem \Cref{thm:GCFT_reduced} can be reformulated in terms of $G$-torsors as follows:
-\begin{theorem}\label{thm:GCFT_torsors}
+see \Cref{prop:torsor_module_equivalence}), \Cref{thm:GCFT_reduced} can be reformulated in terms of $G$-torsors as follows:
+
+\begin{restatable}{theorem}{GCFTtorsors} \label{thm:GCFT_torsors}
     Let $G=\Lambda^\times$ be a finite abelian group ($\Lambda$ as before), and let $\cP$ be a $G$-torsor on $U$, with ramification bounded by $\mdls$. 
     Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) $G$-torsor $\cQ_d$ on $\PicCm[d]$, such that the pullback of $\cQ_d$ by $\Phi_d$ is isomorphic to $\cP^{(d)}$.
-\end{theorem}
+\end{restatable}
 
-To prove Theorem \Cref{thm:GCFT_torsors} we follow the work of \cite{takeuchi2019blow}, there he analyzed 
+To prove \Cref{thm:GCFT_torsors} we follow the work of \cite{takeuchi2019blow}, there he analyzed 
 the ramification of $\cP^{(d)}$ after blowing up $C^{(d)}$, we analyze this ramification using elementary methods, drawing techniques and ideas
 from the works of \cite{Guignard2018} and \cite{takeuchi2019blow}, and \cite{tendler2015geometricclassfieldtheory}.
 

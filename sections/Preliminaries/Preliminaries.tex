@@ -114,7 +114,7 @@ In particular, following \cite{Guignard2018}, if $\cL$ is invertible $\cO_C$-mod
 
 For further background and verification of these constructions, we refer the reader to Milne's notes on Abelian Varieties (\cite{milneAV}).
 
-\subsection{The Abel-Jacobi Morphism and its Fibers}
+\subsection{The Abel-Jacobi Morphism and its Fibers}\label{section:AbelJacobi}
 
 
 Let $U = C \setminus \mdls$ be the complement of the modulus in $C$.
@@ -128,16 +128,18 @@ This is done functorially in families, yielding a morphism from the symmetric po
 \end{equation}
 
 When $\mdls = 0$, $d \geq max \{2g - 1, 0\}$ and $C$ admits a section over $S$, $C^{(d)}$ is a projective space bundle over $\PicC[d]$, 
+It is proper, surjective with geometrically connected fibers.
+
 Guignard (\cite{Guignard2018} Theorem 4.14) proves that for $\mdls > 0$ and $d$ satisfying \Cref{equation:degree-condition}, the Abel-Jacobi morphism $\Phi_d$ is 
 surjective smooth of relative dimension $d - \deg \mdls - g + 1$, with geometrically connected fibers. 
 
-When $S=\spec (k^{sep})$, the fibers of $\Phi_d$ are well understood:
+When $S=\spec (k)$, the geometric-fibers of $\Phi_d$ are well understood:
 \begin{theorem}
-    Assuming $S=\spec (k^{sep})$, $d \geq max \{2g - 1 + \deg \mdls, \deg \mdls\}$. Then, the fibers of the Abel-Jacobi morphism $$ \Phi_d : U^{(d)} \to \PicCm[d] $$ over any point are isomorphic to
+    Assuming $S=\spec (k)$ and $d \geq max \{2g - 1 + \deg \mdls, \deg \mdls\}$. Then, the geometric-fibers of the Abel-Jacobi morphism $$ \Phi_d : U^{(d)} \to \PicCm[d] $$ over any point are isomorphic to
 $$
 \begin{cases}
-\mathbb{A}_k^{d - \deg \mdls - g + 1} & \text{if } m > 0 \\
-\mathbb{P}_k^{d - g} & \text{if } m = 0
+\mathbb{A}_{k^{sep}}^{d - \deg \mdls - g + 1} & \text{if } m > 0 \\
+\mathbb{P}_{k^{sep}}^{d - g} & \text{if } m = 0
 \end{cases}
 $$
 In both cases $\Phi_d$ is a fibration in affine spaces or projective spaces, depending on whether $\mdls$ is non-zero or zero.
@@ -148,7 +150,23 @@ see \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, or \cite
 
 \end{proof}
 
+\subsection{Etale Fundamental Groups}
+We recall the definition and basic properties of the etale fundamental group, following stacks project 
+\stackstag{0BQ6}
+\begin{prop}[\stackstag{0C0J}]
+Let $f : X \to S$ be a flat proper morphism of finite presentation whose geometric fibres are connected and reduced. Assume $S$ is connected and let $\overline{s}$ be a geometric point of $S$. Then there is an exact sequence
 
+\[ \pi _1(X_{\overline{s}}) \to \pi _1(X) \to \pi _1(S) \to 1 \]
+of fundamental groups.
+    
+\end{prop}
+
+\begin{cor}\label{cor:etale_fundamental_group_smooth_proper}
+    Let $f : X \to S$ be a proper smooth morphism of finite presentation whose geometric fibres are connected. Assume $S$ is connected and let $\overline{s}$ be a geometric point of $S$. Then there is an exact sequence
+
+    \[ \pi _1(X_{\overline{s}}) \to \pi _1(X) \to \pi _1(S) \to 1 \]
+    of fundamental groups.
+\end{cor}
 
 \subsection{Symmetric Powers}
 \input{sections/Preliminaries/SymmetricPowers.tex}
@@ -156,8 +174,7 @@ see \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, or \cite
 \subsection{Kummer Theory}
 \input{sections/Preliminaries/KummerTheory.tex}
 
-\subsection{\texorpdfstring{The equivalence between $G$-torsors and locally free $\Lambda$-modules}{The equivalence between G-torsors and locally free Lambda-modules}}
-\input{sections/Preliminaries/TorsorsAndLocalSystems.tex}
+
 
 \subsection{Ramification after Blowup}
 \input{sections/Preliminaries/Blowup.tex}
