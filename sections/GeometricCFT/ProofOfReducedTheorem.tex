@@ -18,7 +18,7 @@ $$ \pi_1^{et}(C^{(d)}) \cong \pi_1^{et}(\PicC[d]) $$
 Implying the theorem in this case.
 
 \textbf{Case 2:} $\mdls > 0$.
-In this case by (\textcolor{red}{add reference later - that the abel jacobi map here extends. - this is Preliminaries}, for $d$ large enough, the Abel-Jacobi morphism $\Phi_d : U^{(d)} \to \PicCm[d]$ 
+In this case by (\textcolor{red}{add reference later - that the abel jacobi map here extends. - this is Preliminaries about blowup}, for $d$ large enough, the Abel-Jacobi morphism $\Phi_d : U^{(d)} \to \PicCm[d]$ 
 extends to a proper surjective and smooth map, with geometrically connected fibers isomorphic to projective spaces, 
 $$ \tilde{\Phi}_d : \tilde{C}^{(d)}_\mdls \to \PicCm[d] $$ 
 Hence we get an isomorphism of etale fundamental groups:
@@ -27,18 +27,25 @@ $$ \pi_1^{et}(\tilde{C}^{(d)}_\mdls) \cong \pi_1^{et}(\PicCm[d]) $$
 By \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}, 
 $\cF^{(d)}$ is tamely ramified on the boundary divisor $H = \tilde{C}^{(d)}_\mdls \setminus U^{(d)}$.
 
-Thus, by \textcolor{red}{Add reference to this lemma and state it well} 
-
-\underline{$\cF^{(d)}$ extends to a sheaf $\tilde{\cF}^{(d)}$ on $\tilde{C}^{(d)}_\mdls$ which is unramified along $H$.}
-This implies that the representation of $\pi_1^{et}(U^{(d)})$ corresponding to $\cF^{(d)}$ factors through $\pi_1^{et}(\tilde{C}^{(d)}_\mdls)$.
-Combining this with the isomorphism above, we get that the representation of $\pi_1^{et}(U^{(d)})$ corresponding to $\cF^{(d)}$ factors through $\pi_1^{et}(\PicCm[d])$, 
-which implies the theorem in this case as well.
+Thus, by \Cref{lemma:ExtensionOfTamelyRamifiedSheaf} below, we have:
+$\cF^{(d)}$ extends to a locally constant sheaf $\tilde{\cF}^{(d)}$ on $\tilde{C}^{(d)}_\mdls$, 
+which by the isomorphism of etale fundamental groups above, corresponds to a unique locally constant sheaf $\cG_d$ on $\PicCm[d]$,
+such that $\tilde{\Phi}_d^* \cG_d \cong \tilde{\cF}^{(d)}$.
+Restricting back to $U^{(d)}$, we get $\Phi_d^* \cG_d \cong \cF^{(d)}$,
+as required.
 \end{proof}
 
 
-\textcolor{red}{The lemma we are referencing above can be proved in two routes:
+\begin{lemma}\label{lemma:ExtensionOfTamelyRamifiedSheaf}
+    If $\cF^{(d)}$ is a locally constant sheaf on $U^{(d)}$ which is tamely ramified along the boundary divisor $H = \tilde{C}^{(d)}_\mdls \setminus U^{(d)}$, 
+    then $\cF^{(d)}$ extends to a locally constant sheaf $\tilde{\cF}^{(d)}$ on $\tilde{C}^{(d)}_\mdls$.
+\end{lemma}
+\begin{proof}
+    \textcolor{red}{The lemma we are referencing above can be proved in two routes:
 \\
 \textbf{Route 1} - Showing $ \ker \{\pi^{ab}_1(U^{(d)}) \to \pi^{ab}_1(\PicCm[d]) \} $ is pro-$p$ group. \\
 \textbf{Route 2} - Showing $$\pi^{t, ab}_1(U^{(d)}) \to \pi^{t,ab}_1(\PicCm[d])$$ is isomorphism to its image.  \textcolor{red}{here one needs to be precise.}
 }
+
+\end{proof}
 

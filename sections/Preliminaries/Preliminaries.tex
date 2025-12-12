@@ -37,6 +37,8 @@ The above equivilance of categories becomes
 \].
 
 
+\subsubsection{Ramification of Sheaves}
+\textcolor{red}{Define and discuss a bit}
 
 \subsubsection{Symmetric Powers of Schemes and Torsors}
 %We recall the notion of symmetric powers of schemes and torsors, following \cite{Guignard2018} and \cite{SGA1}.
@@ -48,8 +50,27 @@ Guigard proves this in the most general setting so we qoute his result here:
     If $X$ is Zariski locally quasi-projective over a scheme $S$, the the right action of $S_d$ on $X^{\times_S d}$ 
     is admissible, and the quotient $X^{(d)} = X^{\times_S d}/S_d$ exists as a scheme over $S$.
 \end{prop}
+\textcolor{red}{treat more carefully}
+
 
 \subsubsection{Etale Fundamental Groups and Tame Fundamental Groups}
+We recall the definition and basic properties of the etale fundamental group, following stacks project 
+\stackstag{0BQ6}
+\begin{prop}[\stackstag{0C0J}]
+Let $f : X \to S$ be a flat proper morphism of finite presentation whose geometric fibres are connected and reduced. Assume $S$ is connected and let $\overline{s}$ be a geometric point of $S$. Then there is an exact sequence
+
+\[ \pi _1(X_{\overline{s}}) \to \pi _1(X) \to \pi _1(S) \to 1 \]
+of fundamental groups.
+    
+\end{prop}
+
+\begin{cor}\label{cor:etale_fundamental_group_smooth_proper}
+    Let $f : X \to S$ be a proper smooth morphism of finite presentation whose geometric fibres are connected. Assume $S$ is connected and let $\overline{s}$ be a geometric point of $S$. Then there is an exact sequence
+
+    \[ \pi _1(X_{\overline{s}}) \to \pi _1(X) \to \pi _1(S) \to 1 \]
+    of fundamental groups.
+\end{cor}
+\textcolor{red}{add about tameness?}
 
 
 \subsection{Generalized Picard Scheme}
@@ -96,21 +117,23 @@ In particular, for any modulus $\mdls$, there is a natural surjective morphism o
 
 
 \subsubsection*{Local Freeness and Base Change}
-From this point forward, we fix a modulus $\mdls$ which is everywhere strictly positive. Let $g$ denote the genus of $C$, which is a locally constant function on $S$. We restrict our attention to degrees $d$ satisfying the condition:
+%\textcolor{red}{there is ${\mdls}$ here - should fix that}
+Let $\mdls$ be a modulus which is everywhere strictly positive. Let $g$ denote the genus of $C$, which is a locally constant function on $S$. We restrict our attention to degrees $d$ satisfying the condition:
 \begin{equation} \label{equation:degree-condition}
     d \geq \max\{2g - 1 + \deg \mdls, \deg \mdls\}.
 \end{equation}
+
 Assuming $S$ is quasi-compact, such a $d$ always exists.
 
-Fix an integer $d$ satisfying the condition above. Let $T$ be an $S$-scheme and let $\cL$ be an invertible sheaf of degree $d$ on $C_T$. One can show that the pushforwards $\mathrm{pr}_* \cL$ and $\mathrm{pr}_* \cL(-\tilde{\mdls})$ are locally free sheaves and their formations commute with any base change. Explicitly, for any morphism of $S$-schemes $f : T' \to T$, the base change morphisms are isomorphisms:
+Fix an integer $d$ satisfying the condition above. Let $T$ be an $S$-scheme and let $\cL$ be an invertible sheaf of degree $d$ on $C_T$. One can show that the pushforwards $\mathrm{pr}_* \cL$ and $\mathrm{pr}_* \cL(-{\mdls})$ are locally free sheaves and their formations commute with any base change. Explicitly, for any morphism of $S$-schemes $f : T' \to T$, the base change morphisms are isomorphisms:
 \[
     f^* \mathrm{pr}_* \cL \xrightarrow{\sim} \mathrm{pr}_* f^* \cL
 \]
 and
 \[
-    f^* \mathrm{pr}_* (\cL(-\tilde{\mdls})) \xrightarrow{\sim} \mathrm{pr}_* f^* (\cL(-\tilde{\mdls})).
+    f^* \mathrm{pr}_* (\cL(-{\mdls})) \xrightarrow{\sim} \mathrm{pr}_* f^* (\cL(-{\mdls})).
 \]
-In particular, following \cite{Guignard2018}, if $\cL$ is invertible $\cO_C$-module with degree $d$ on each fiber of $f$ then, $\mathrm{pr}_* \cL$ is a locally free $\mathcal{O}_S$-module of rank $d-g+1$.
+In particular, following \cite{Guignard2018}, if $\cL$ is invertible $\cO_C$-module with degree $d$ satisfying \ref{equation:degree-condition} on each fiber of $f$ then, $\mathrm{pr}_* \cL$ is a locally free $\mathcal{O}_S$-module of rank $d-g+1$.
 
 For further background and verification of these constructions, we refer the reader to Milne's notes on Abelian Varieties (\cite{milneAV}).
 
@@ -150,31 +173,91 @@ see \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, or \cite
 
 \end{proof}
 
-\subsection{Etale Fundamental Groups}
-We recall the definition and basic properties of the etale fundamental group, following stacks project 
-\stackstag{0BQ6}
-\begin{prop}[\stackstag{0C0J}]
-Let $f : X \to S$ be a flat proper morphism of finite presentation whose geometric fibres are connected and reduced. Assume $S$ is connected and let $\overline{s}$ be a geometric point of $S$. Then there is an exact sequence
 
-\[ \pi _1(X_{\overline{s}}) \to \pi _1(X) \to \pi _1(S) \to 1 \]
-of fundamental groups.
-    
-\end{prop}
 
-\begin{cor}\label{cor:etale_fundamental_group_smooth_proper}
-    Let $f : X \to S$ be a proper smooth morphism of finite presentation whose geometric fibres are connected. Assume $S$ is connected and let $\overline{s}$ be a geometric point of $S$. Then there is an exact sequence
-
-    \[ \pi _1(X_{\overline{s}}) \to \pi _1(X) \to \pi _1(S) \to 1 \]
-    of fundamental groups.
-\end{cor}
-
-\subsection{Symmetric Powers}
-\input{sections/Preliminaries/SymmetricPowers.tex}
-
-\subsection{Kummer Theory}
-\input{sections/Preliminaries/KummerTheory.tex}
-
+%\subsection{Kummer Theory}
+%\input{sections/Preliminaries/KummerTheory.tex}
 
 
 \subsection{Ramification after Blowup}
 \input{sections/Preliminaries/Blowup.tex}
+
+\subsection{Blowup of Symmetric Powers of Curves}\label{section:BlowupOfSymmetricPowerOfCurves}
+Let $\mdls = \sum_{i=1}^n k_P P$ with $\deg P = d_P$ be a modulus on $C$. Let $d$ satisfy \Cref{equation:degree-condition}.
+Takeuchi (\cite{takeuchi2019blow}) defines $Z_0=Z_0(\mdls, d)$ as the closed subscheme of $C^{(d)}$ defined by the map $C^{(d - \deg \mdls)} \to C^{(d)}$ adding $\mdls$.
+He also defines $X_{\mdls, d}$ as the blowup of $C^{(d)}$ along $Z_0$. 
+
+For any modulus $\ndls \subset \mdls$, we define $Z_\ndls$ as the closed subscheme of $C^{(\deg \ndls)}$ defined by $\ndls$ as a point
+of $C^{(\deg \ndls)}$ .
+
+We then define $X_\ndls$ as the blowup of $C^{(\deg \ndls)}$ at $Z_\ndls$,
+and we denote by $E_\ndls = Z_\ndls \times_{C^{(d)}} X_\ndls$ the exceptional divisor of this blowup, it is irreducible of codimension 1.
+We denote by $\eta_\ndls$ the generic point of $E_\ndls$. 
+Diagrammatically:
+\[\begin{tikzcd}
+\overline{\{\eta_\ndls \}} =  E_\ndls \arrow[r, hook] \arrow[d] & X_\ndls \arrow[d, "b_\ndls"] \\
+Z_\ndls \arrow[r, hook]           & C^{(\deg \ndls)}          
+\end{tikzcd}\] 
+
+Note that $Z_\ndls=Z_0(\ndls, \deg \ndls)$ and $X_\ndls = X_{\ndls, \deg \ndls}$.
+
+
+In this section we define the blowup of $C^{(d)}$ by $Z_0$ and give its basic properties. As outlined in \cite{takeuchi2019blow}
+Let $C^{(d)}$ be the $d$'th symmetric product of $C$, which parametrizes effective Cartier
+divisor of $deg = d$ on $C$. Let $Z_0$ be the closed subscheme of $C^{(d)}$ defined by the map 
+And let $X_{\mdls, d}$ be the blowup of $C^{(d)}$ along $Z_0$.
+In \cite{takeuchi2019blow}[Section 3] Takeuchi proves:
+\begin{theorem}
+    There exists a commutative diagram:
+    \begin{equation}\label{diag:main-blowup-diag}
+\begin{tikzcd}
+    % Row 1
+    & 
+    & U^{(d)} \arrow[d, hook, blue, dashed]  \arrow[dd, hook, blue, dashed, bend right=25] \arrow[ddd, hook, blue, dashed, bend right=40] \arrow[dr, "\Phi_d"]
+    & 
+    \\
+    % Row 2
+    & Z_0 \times_{C^{(d)}} \Cmod{d}  \arrow[r] \arrow[d]
+    & \Cmod{d} \arrow[r, red] \arrow[d,  hook, red] \arrow[dr, phantom, "\square"]
+    & \PicCm[d] \arrow[d, hook, red] \\
+    % Row 3
+    & Z_0 \times_{C^{(d)}} X_{\mdls, d}  \arrow[r] \arrow[d]
+    & X_{\mdls, d} \arrow[r, red] \arrow[d, red]    
+    & P_{\mdls}^{d} \arrow[d, red] \\
+    % Row 4
+    & Z_0 \arrow[r]
+    & C^{(d)}
+    & \PicC[d]
+\end{tikzcd}
+\end{equation}
+Where
+\begin{enumerate}
+    \item \cite{takeuchi2019blow}[Lemma 3.1.] $P_\mdls^{d}$ is an etale sheaf on $Sch/S$ defined by:
+    $$P_{\mdls}^{d}(T) = \left\{ (\cL, \phi) \;\middle|\; \cL \in \operatorname{Pic}^{d}(C_T), \; \phi: \mathcal{O}_T \hookrightarrow pr_*(\cL/\cL(-\mdls)) \text{ s.t. } \operatorname{coker}(\phi) \text{ is loc. free} \right\} \Big/ \!\cong$$
+    (Isomorphism between two $(\cL, \phi), (\cL', \phi')$ is an isomorphism $f: \cL \xrightarrow{\cong} \cL'$ such that $pr_*(f) \circ \phi = \phi'$)
+    Moreover, it is represented by a proper smooth $S$-algebraic space. Assuming $C \to S$ has a section (\textcolor{red}{This seems rather imporant, it is also used to show $Pic_C^d$ as explicit expression as a sheaf, how do I refer to it }),
+    And letting $\cL'$ be a representative invertible sheaf of the universal class, \cite{takeuchi2019blow} shows that as sheaves on $Sch/\PicCm[d]$, $P_\mdls^d$ is isomorphic to the projectivization $\bP(pr_*(\cL'/\cL'(-\mdls)))$.
+    \item $\PicCm[d] \rightarrow P_\mdls^{d}$ is defined by $(\cL, \psi) \mapsto (\cL, \phi)$.  Where $\phi$ is defined as the composition
+    $$\Oo_T \to pr_* \Oo_{\mdls_T} \xrightarrow[]{pr_* \psi} pr_* (\cL/\cL(-\mdls)) $$. \cite{takeuchi2019blow}[Lemma 3.5] Shows this map is an open immersion.
+    \item The map $P_\mdls^d \to \PicCm[d]$ is by forgetting $\phi$
+    \item The definition of $X_{\mdls, d} \to P_\mdls$ is more technically involved, so we refer the reader to \cite{takeuchi2019blow}. But an imporant feature it is that
+    $X_{\mdls, d}$ is a projective space bundle over $P_\mdls^d$ via that map. 
+    \item $\Cmod{d}$ is an $S$-scheme, defined as the fibered product
+    \begin{tikzcd}
+    \Cmod{d} \arrow[r] \arrow[d, hook] 
+    & \mathrm{Pic}_{C,\mathfrak{m}}^{d} \arrow[d, hook] \\
+    X_{\mathfrak{m}} \arrow[r] 
+    & P_{\mathfrak{m}}^{d},
+\end{tikzcd}
+Hence, The $S$-Scheme $\Cmod{d}$ is a projective space bundle on $\PicCm[d]$ and an open subscheme of $X_{\mdls, d}$.
+\end{enumerate}
+Where for a scheme $X$ and a locally free sheaf of finite rank $\mathcal{F}$ on $X$. We use a contra-Grothendieck notation for a projective space. 
+Thus the $X$-scheme $\mathbb{P}(\mathcal{F})$ parametrizes invertible subsheaves of $\mathcal{F}$.
+
+Now focusing on the left side of \Cref{diag:main-blowup-diag}, \cite{takeuchi2019blow} shows:
+
+\begin{enumerate}[start=6]
+    \item $U^{(d)} \to \Cmod{d}$ is an open immersion, and as an open subscheme, $U^{(d)}$ is the complement of $Z_0 \times_{C^{(d)}} \Cmod{d}$
+\end{enumerate}
+\end{theorem}.
+
