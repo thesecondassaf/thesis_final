@@ -1,3 +1,4 @@
+\textcolor{red}{do we assume here $S=k$?}
 The main theorem of this section is
 \begin{restatable}{theorem}{SymmetricPowerOfSheafIsTamelyRamified}\label{theorem:SymmetricPowerOfSheafIsTamelyRamified}
      Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
@@ -5,23 +6,131 @@ The main theorem of this section is
      for sufficiently large integer $d$, $\cF^{(d)}$ is tamely ramified on $H= \tilde{C}^{(d)}_\mdls \setminus U^{(d)}=Z_0 \times_{C^{(d)}} \tilde{C}^{(d)}_\mdls $.
 \end{restatable}
 
-Recall the defintions from \Cref{section:BlowupOfSymmetricPowerOfCurves},
-$\ndls \subset \mdls$ a submodulus, $Z_\ndls$ is the closed subscheme of 
-$C^{(\deg \ndls)}$ defined by $\ndls$ as a point.
-$X_\ndls$ as the blowup of $C^{(\deg \ndls)}$ at 
-$Z_\ndls$, and $E_\ndls = Z_\ndls \times_{C^{(d)}} X_\ndls$ is exceptional divisor of this blowup with 
-$\eta_\ndls$ its generic point.
+Following the notation of \Cref{section:BlowupOfSymmetricPowerOfCurves},
+For any modulus $\ndls \subset \mdls$, we define $Z_\ndls$ as the closed subscheme of $C^{(\deg \ndls)}$ 
+defined by $\ndls$ as a point of $C^{(\deg \ndls)}$ .
+
+We then define $X_\ndls$ as the blowup of $C^{(\deg \ndls)}$ at $Z_\ndls$,
+and we denote by $E_\ndls = Z_\ndls \times_{C^{(d)}} X_\ndls$ the exceptional divisor of this blowup, it is irreducible of codimension 1.
+We denote by $\eta_\ndls$ the generic point of $E_\ndls$. 
+Diagrammatically:
+\[\begin{tikzcd}
+\overline{\{\eta_\ndls \}} =  E_\ndls \arrow[r, hook] \arrow[d] & X_\ndls \arrow[d, "\pi_\ndls"] \\
+Z_\ndls \arrow[r, hook]           & C^{(\deg \ndls)}          
+\end{tikzcd}\] 
+
+
+% Recall the defintions from \Cref{section:BlowupOfSymmetricPowerOfCurves},
+% $\ndls \subset \mdls$ a submodulus, $Z_\ndls$ is the closed subscheme of 
+% $C^{(\deg \ndls)}$ defined by $\ndls$ as a point.
+% $X_\ndls$ as the blowup of $C^{(\deg \ndls)}$ at 
+% $Z_\ndls$, and $E_\ndls = Z_\ndls \times_{C^{(d)}} X_\ndls$ is exceptional divisor of this blowup with 
+% $\eta_\ndls$ its generic point.
 
 \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified} easily follows from: 
-\begin{theorem}
+\begin{theorem}\label{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}
      Let $\cF$ be a local system on $U$ with ramification at $P$ bounded by $\ndls = k_P P \subset \mdls$.
-     Then $\cF^{(\deg \ndls)}$ is tamely ramified on $E_\ndls$
+     Then $\cF^{(\deg \ndls)}$ is tamely ramified at $\eta_\ndls$ of $E_\ndls$
 \end{theorem}
 
-\begin{proof}[Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}]
-     Let $\cF$ be as in \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}, $\mdls = \sum_{i=1}^n k_P P$ with $\deg P = d_P$  
-     Then for every $\ndls \subset \mdls$ of the form $\ndls = k_P P$, $\cF^{(d)}$ has ramification 
+In the upcoming section, we perform the reduction and derive \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified} from 
+\Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}. 
+We then prove \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction} in the section that follows.
+
+\subsection{Reduction Lemmas}
+
+The first lemma is from \cite{takeuchi2019blow}, we include their proof for the convenience of the reader.
+\begin{lemma}[\cite{takeuchi2019blow}, Lemma 4.1]\label{lemma:takeuchi_lemma}
+     Let $C$ be a projective smooth geometrically connected curve over a perfect field $k$. 
+     Let $\mdls = \sum_{i=1}^{r} k_i P_i$ where $P_1, ..., P_r$ are disctinct closed points of $\mdls$. Let $U$ be the comlement of $\mdls$ in $C$.
+     And let $d_i= \deg Pi$. Take $d \geq \mdls$. Then:
+     The morphism $\pi : C^{(n_1 d_1)} \times_k \dots \times_k C^{(n_r d_r)} \times_k C^{(d - \deg \mathfrak{m})} \to C^{(d)}$, taking the sum, is étale at the generic point of the closed subvariety $\{n_1 P_1\} \times \dots \times \{n_r P_r\} \times C^{(d - \deg \mathfrak{m})}$ of $C^{(n_1 d_1)} \times_k \dots \times_k C^{(n_r d_r)} \times_k C^{(d - \deg \mathfrak{m})}$.
+\begin{proof}
+     We may assume that $k$ is algebraically closed (hence $d_i = 1$ for all $i$). Since the map $\pi : C^{(n_1)} \times_k \dots \times_k C^{(n_r)} \times_k C^{(d - \deg \mathfrak{m})} \to C^{(d)}$ is finite flat, it is enough to show that there exists a closed point $Q$ of $n_1 P_1 + \dots n_r P_r + C^{(d - \deg \mathfrak{m})}$ over which there are $\deg \pi$ points on $C^{(n_1)} \times_k \dots \times_k C^{(n_r)} \times_k C^{(d - \deg \mathfrak{m})}$. Choose $Q$ as a point corresponding to a divisor
+     $n_1 P_1 + \dots n_r P_r + P_{r+1} + \dots + P_{r+d - \deg \mathfrak{m}}$, where $P_1, \dots, P_{r+d - \deg \mathfrak{m}}$ are distinct points of $U(k)$.
+\end{proof}     
+\end{lemma}
+\textcolor{red}{
+\begin{cor}
+    Suppose $\cF^{(\deg \mdls)}$ is tamely ramified at $\eta$.
+    Then  $\Fbox{\deg \mdls}{d - \deg \mdls}$ is tamely ramified at the generic point $\theta$ of $E_{\mdls} \times_k C^{(d-\deg \mdls)}$
+\end{cor}
+\begin{proof}
+     \textcolor{red}{Compete and make precise.}
+\end{proof}
+}
+
+\begin{lemma}
+     Let $\ndls_1, \ndls_2 \subset \mdls$ be two moduli of the form $\ndls_1 = k_1 P_1$, $\ndls_2 = k_2 P_2$ where $P_1, P_2$ are distinct points.
+     Assume $\cF ^{(\deg \ndls_1)}$, $\cF ^{(\deg \ndls_2)}$ are at most tamely ramified at $\eta_{\ndls_1}$, $\eta_{\ndls_2}$ respectively.
+     Then $\cF^{(\deg \ndls_1 + \deg \ndls_2)}$ is at most tamely tamified at $\eta_{\ndls_1 + \ndls_2}$ .
+\end{lemma}
+\begin{proof}
+     \textcolor{red}{Complete}
 \end{proof}
 
-\input{sections/GeometricCFT/subsections/ReductionOfTRTheorem.tex}
+\begin{lemma}\label{lemma:moduli_reduction}
+     Let $\ndls, \ndls' \subset \mdls$ be coprime sub moduli of $\mdls$ where $\ndls' = k_P P$.
+     Assume $\cF ^{(\deg \ndls)}$, $\cF ^{(\deg \ndls')}$ are at most tamely ramified at $\eta_{\ndls}$, $\eta_{\ndls'}$ respectively.
+     Then $\cF^{(\deg \ndls + \deg \ndls')}$ is at most tamely tamified at $\eta_{\ndls + \ndls'}$ .
+\end{lemma}
+
+\begin{proof}
+     \textcolor{red}{Complete}
+\end{proof}
+
+
+\subsection{\texorpdfstring{Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}}{Proof of Theorem X}}
+\begin{proof}[Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}]
+     Let $\cF$ be as in \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}, $\mdls = \sum_{i=1}^n k_P P$ with $\deg P = d_P$  
+     Then by \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction} for every $\ndls \subset \mdls$ of the form $\ndls = k_P P$, $\cF^{(\deg \ndls)}$ is at most tamely ramified at $\eta_\ndls$.
+     By \Cref{lemma:moduli_reduction}, $\cF^{(\deg \mdls)}$ is then at most tamely ramified at $\eta_\mdls$. And thus by lemma \Cref{lemma:takeuchi_lemma} 
+     (\textcolor{red}{maybe do another step here directly, in addition to the lemma?})
+     $\cF^{(d)}$ is tamely ramified at the generic point of $H$.
+\end{proof}
+
+
+\subsection{\texorpdfstring{Proof of \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}}{Proof of Theorem Y}}
+In this section we prove \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}
+\textcolor{red}{complete - this is not finished}
+
+We will work this out along an example:
+Let $X=\bG_m=\spec R[t, t^{-1}]$ and Let $\cP=\bG_m \xrightarrow[]{(\cdot)^{n}} G_m$ be the $n$'th power map.
+It is a $G=\Z/n\Z$ torsor.
+The ring map is $R[t, t^{-1}] \xrightarrow[]{t \mapsto t^n} R[t, t^{-1}]$
+which corresponds to ring extension: $R[t, t^{-1}] \to R[t^{\frac{1}{n}}, t^{-\frac{1}{n}}]$.
+The field of fractions of $\bG_m$ is $K(t)$ and the corresponding map between fields of $\cP \to X$
+is $K(t) \xrightarrow[]{t \to t^n} K(t)$. which corresponds to the field extension:
+$K(t) \hookrightarrow K(t^{\frac{1}{n}}) = K(t)[X]/(X^n -t)$.
+Where $K = Frac R$
+
+The points $0, \infty \in \bP^1$ correspond to the local rings
+$\Oo_{0} = K[t]_{(t)}$ and $\Oo_{\infty} = K[\frac{1}{t}]_{(\frac{1}{t})}$ of $K(t)$,
+which are DVRs. The corresponding valuations of $K(t)$ are given by:
+\[
+    v_0\left(\frac{f}{g}\right) = \text{maximal exponent } n \text{ s.t. } t^{n} \mid \frac{f}{g}, \quad v_\infty\left(\frac{f}{g}\right) = \deg g - \deg f
+\]
+
+So the diagram of the G-torsor $\cP=\bG_m$ over $\bG_m$ is:
+\begin{equation}
+    \begin{tikzcd}
+        & \cP=\mathbb{G}_m \ar[d, "(\cdot)^n"] \\
+        \bP^1 & \arrow[l] \bG_m
+    \end{tikzcd}
+\end{equation}
+
+The bounded ramification condition is given by:
+\begin{equation}
+    \text{ram } P_{\eta} \leq k
+\end{equation}
+
+We wish to understand
+
+
+In the general case of a $G$ torsor $P \to C$ we have similarly:
+$K(C) \cong K(t)$ the function ring of $C$ for some variable $t$ and a finite field extension $K/\F_p(t')$.
+If the basefield $K$ contains $n$'th roots of unity, then the torsor is the same... and continue here:
+$\Oo_{P_1}$
+the same..
+and continue.
 
