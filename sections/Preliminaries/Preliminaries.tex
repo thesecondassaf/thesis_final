@@ -272,111 +272,169 @@ Then, $$p^* (\cP^{(n)}) \cong \boxPp {\cP^{[d]}}{\cP^{(n-d)}}[k]$$
 \end{lemma}
 
 \subsection{Compactification of Blowup of Symmetric Powers Curve}\label{section:BlowupOfSymmetricPowerOfCurves}
-This section follows the result of \cite{takeuchi2019blow}
+We recall that our objective is to descend the local system $\cF^{(d)}$ from $U^{(d)}$ to $\PicCm[d]$ along the 
+Abel-Jacobi map $\Phi_d$:
 
-Let $\mdls = \sum_{i=1}^n k_P P$ with $\deg P = d_P$ be a modulus on $C$. Let $d$ satisfy \Cref{equation:degree-condition}.
-Takeuchi (\cite{takeuchi2019blow}) defines $Z_0=Z_0(\mdls, d)$ as the closed subscheme of $C^{(d)}$ defined by the map $C^{(d - \deg \mdls)} \to C^{(d)}$ adding $\mdls$.
-He also defines $X_{\mdls, d}$ as the blowup of $C^{(d)}$ along $Z_0$. 
-Let $E_0 = E_{\mdls,d} = Z_0(\mdls, d) \times_{C^{(d)}} X_{\mdls, d}$ 
-be the exceptional divisor of the blowup.
+\[
+\begin{tikzcd}
+ \cF^{(d)} \arrow[d, purple]\\
+ U^{(d)} \arrow[r, "\Phi_d"] & \PicCm[d]      
+\end{tikzcd}
+\]
 
-For any modulus $\ndls \subset \mdls$, we define $Z_\ndls$ as the closed subscheme of $C^{(\deg \ndls)}$ 
-defined by $\ndls$ as a point of $C^{(\deg \ndls)}$ .
 
-We then define $X_\ndls$ as the blowup of $C^{(\deg \ndls)}$ at $Z_\ndls$,
-and we denote by $E_\ndls = Z_\ndls \times_{C^{(d)}} X_\ndls$ the exceptional divisor of this blowup, it is irreducible of codimension 1.
-We denote by $\eta_\ndls$ the generic point of $E_\ndls$. 
+(Here, the purple arrow emphasizes that the morphism is of sheaves on the étale site).
+
+However, we encounter an obstruction: in the case we are considering ($\mdls > 0$), 
+the fibers of $\Phi_d$ are affine spaces (of the same degree) rather than the better-behaved projective spaces. 
+This hint that a solution to this problem is to compactify the morphism to yield projective fibers. 
+ 
+This section describes the result of the compactification constructed by \cite{takeuchi2019blow} 
+via the method of blowup.
+
+Let $\mdls = \sum_{i=1}^n k_P P$ with $\deg P = d_P$ be a modulus on $C$, and let $d$ satisfy 
+\Cref{equation:degree-condition}. 
+Takeuchi (\cite{takeuchi2019blow}) defines $Z_0=Z_0(\mathfrak{m}, d)$ as the closed subscheme of 
+$C^{(d)}$ defined by the map $C^{(d - \deg \mathfrak{m})} \to C^{(d)}$ adding $\mathfrak{m}$. 
+He also defines $X_{\mathfrak{m}, d}$ as the blowup of $C^{(d)}$ along $Z_0$.
+Let $E_0 = E_{\mathfrak{m},d} = Z_0(\mathfrak{m}, d) \times_{C^{(d)}} X_{\mathfrak{m}, d}$ be the exceptional divisor of the blowup. It is irreducible of codimension 1, and we let $\eta_0=\eta_{\mathfrak{m}, d}$ be its generic point.
+
+%This section describes the compactification constructed by Takeuchi \cite{takeuchi2019blow} using the blowup method
+
+% Let $\mdls = \sum_{i=1}^n k_P P$ with $\deg P = d_P$ be a modulus on $C$. Let $d$ satisfy \Cref{equation:degree-condition}.
+% Takeuchi (\cite{takeuchi2019blow}) defines $Z_0=Z_0(\mdls, d)$ as the closed subscheme of $C^{(d)}$ defined by the map $C^{(d - \deg \mdls)} \to C^{(d)}$ adding $\mdls$.
+% He also defines $X_{\mdls, d}$ as the blowup of $C^{(d)}$ along $Z_0$. 
+% Let $E_0 = E_{\mdls,d} = Z_0(\mdls, d) \times_{C^{(d)}} X_{\mdls, d}$ 
+% be the exceptional divisor of the blowup, it is irreducible of codimension 1, let $\eta_0=\eta_{\mdls, d}$ be its generic point.
+
 Diagrammatically:
 \[\begin{tikzcd}
-\overline{\{\eta_\ndls \}} =  E_\ndls \arrow[r, hook] \arrow[d] & X_\ndls \arrow[d, "\pi_\ndls"] \\
-Z_\ndls \arrow[r, hook]           & C^{(\deg \ndls)}          
+\overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] & X_{\mdls, d} \arrow[d, "\pi"] \\
+Z_0 \arrow[r, "c.i"]           & C^{(d)}          
 \end{tikzcd}\] 
 
-Note that $Z_\ndls=Z_0(\ndls, \deg \ndls)$, $X_\ndls = X_{\ndls, \deg \ndls}$ and $E_{\ndls}=E_{\ndls, \deg \ndls}$.
-
-Under those settings we have the following diagram:
-\begin{equation}\label{diag:main-blowup-diag}
+Incoporating $U^{(d)}$, the local system $\cF^{(d)}$ and the Abel-Jacobi map, we have:
+\[
 \begin{tikzcd}
-    % Row 1
-    & 
-    & U^{(d)} \arrow[d, hook, blue, dashed]  
-    \arrow[dd, hook, blue, dashed, bend right=25]
-     \arrow[ddd, hook, blue, dashed, bend right=40]
-      \arrow[dr, "\Phi_d"]
-    & 
-    \\
-    % Row 2
-    &  
-    &  \arrow[r, red] \arrow[d,  hook, red] \arrow[dr, phantom, "\square"]
-    & \PicCm[d] \arrow[d, hook, red] \\
-    % Row 3
-    & Z_0 \times_{C^{(d)}} X_{\mdls, d}  \arrow[r] \arrow[d]
-    & X_{\mdls, d} \arrow[r, red] \arrow[d, red]    
-    & P_{\mdls}^{d} \arrow[d, red] \\
-    % Row 4
-    & Z_0 \arrow[r]
-    & C^{(d)}
-    & \PicC[d]
+    & & \cF^{(d)} \arrow[d, purple]\\
+\overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] & 
+X_{\mdls, d} \arrow[d, "\pi"]  & \arrow[l, hook'] \arrow[dl, hook'] U^{(d)} \arrow[r, "\Phi_d"] & \PicCm[d] \\
+Z_0 \arrow[r, "c.i"]           & C^{(d)}          
 \end{tikzcd}
-\end{equation}
+\] 
 
+In Section 3 of \cite{takeuchi2019blow} Takeuchi constructs, for large enough $d$ a compactification denoted by $\Cmod{d}$ and proves the following:
+\textcolor{red}{exactly determined the fate of that d}
 
-In this section we define the blowup of $C^{(d)}$ by $Z_0$ and give its basic properties. As outlined in \cite{takeuchi2019blow}
-Let $C^{(d)}$ be the $d$'th symmetric product of $C$, which parametrizes effective Cartier
-divisor of $deg = d$ on $C$. Let $Z_0$ be the closed subscheme of $C^{(d)}$ defined by the map 
-And let $X_{\mdls, d}$ be the blowup of $C^{(d)}$ along $Z_0$.
-In \cite{takeuchi2019blow}[Section 3] Takeuchi proves:
-\begin{theorem}
-    There exists a commutative diagram:
-    \begin{equation}\label{diag:main-blowup-diag}
+\begin{theorem}[Takeuchi]\label{theorem:takeuchi-compactification-theorem}
+    The scheme $\Cmod{d}$ is an open subscheme of $X_{\mdls,d}$ containing $U^{(d)}$. 
+    The morphism $\Phi_d: U^{(d)} \to \PicCm[d]$ extends to a morphism $\tilde{\Phi}_d: \Cmod{d} \to \PicCm[d]$ which makes 
+    $\Cmod{d}$ a projective space bundle over $\PicCm[d]$. 
+    Furthermore, the complement of $U^{(d)}$ in $\Cmod{d}$ is isomorphic to the fiber product 
+    $E_0 \times_{C^{(d)}} \Cmod{d}$.
+\end{theorem}
+
+\begin{proof}
+    \textcolor{red}{Add outline of construction and proofs}
+\end{proof}
+
+Diagrammatically we have:
+\[
 \begin{tikzcd}
-    % Row 1
-    & 
-    & U^{(d)} \arrow[d, hook, blue, dashed]  \arrow[dd, hook, blue, dashed, bend right=25] \arrow[ddd, hook, blue, dashed, bend right=40] \arrow[dr, "\Phi_d"]
-    & 
-    \\
-    % Row 2
-    & Z_0 \times_{C^{(d)}} \Cmod{d}  \arrow[r] \arrow[d]
-    & \Cmod{d} \arrow[r, red] \arrow[d,  hook, red] \arrow[dr, phantom, "\square"]
-    & \PicCm[d] \arrow[d, hook, red] \\
-    % Row 3
-    & Z_0 \times_{C^{(d)}} X_{\mdls, d}  \arrow[r] \arrow[d]
-    & X_{\mdls, d} \arrow[r, red] \arrow[d, red]    
-    & P_{\mdls}^{d} \arrow[d, red] \\
-    % Row 4
-    & Z_0 \arrow[r]
-    & C^{(d)}
-    & \PicC[d]
+    &  & \cF^{(d)} \arrow[d, purple]\\
+    E_0 \times_{C^{(d)}} \Cmod{d} \arrow[d] \arrow[r]  & \Cmod{d} \arrow[d, hook] \arrow[rd, "\tilde{\Phi}_d"]  & U^{(d)} \arrow[l, hook'] \arrow[d, "\Phi_d"] \\
+\overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] & 
+X_{\mdls, d} \arrow[d, "\pi"]  &  \PicCm[d] &  \\
+Z_0 \arrow[r, "c.i"]           & C^{(d)}          
 \end{tikzcd}
-\end{equation}
-Where
-\begin{enumerate}
-    \item \cite{takeuchi2019blow}[Lemma 3.1.] $P_\mdls^{d}$ is an etale sheaf on $Sch/S$ defined by:
-    $$P_{\mdls}^{d}(T) = \left\{ (\cL, \phi) \;\middle|\; \cL \in \operatorname{Pic}^{d}(C_T), \; \phi: \mathcal{O}_T \hookrightarrow pr_*(\cL/\cL(-\mdls)) \text{ s.t. } \operatorname{coker}(\phi) \text{ is loc. free} \right\} \Big/ \!\cong$$
-    (Isomorphism between two $(\cL, \phi), (\cL', \phi')$ is an isomorphism $f: \cL \xrightarrow{\cong} \cL'$ such that $pr_*(f) \circ \phi = \phi'$)
-    Moreover, it is represented by a proper smooth $S$-algebraic space. Assuming $C \to S$ has a section (\textcolor{red}{This seems rather imporant, it is also used to show $Pic_C^d$ as explicit expression as a sheaf, how do I refer to it }),
-    And letting $\cL'$ be a representative invertible sheaf of the universal class, \cite{takeuchi2019blow} shows that as sheaves on $Sch/\PicCm[d]$, $P_\mdls^d$ is isomorphic to the projectivization $\bP(pr_*(\cL'/\cL'(-\mdls)))$.
-    \item $\PicCm[d] \rightarrow P_\mdls^{d}$ is defined by $(\cL, \psi) \mapsto (\cL, \phi)$.  Where $\phi$ is defined as the composition
-    $$\Oo_T \to pr_* \Oo_{\mdls_T} \xrightarrow[]{pr_* \psi} pr_* (\cL/\cL(-\mdls)) $$. \cite{takeuchi2019blow}[Lemma 3.5] Shows this map is an open immersion.
-    \item The map $P_\mdls^d \to \PicCm[d]$ is by forgetting $\phi$
-    \item The definition of $X_{\mdls, d} \to P_\mdls$ is more technically involved, so we refer the reader to \cite{takeuchi2019blow}. But an imporant feature it is that
-    $X_{\mdls, d}$ is a projective space bundle over $P_\mdls^d$ via that map. 
-    \item $\Cmod{d}$ is an $S$-scheme, defined as the fibered product
-    \begin{tikzcd}
-    \Cmod{d} \arrow[r] \arrow[d, hook] 
-    & \mathrm{Pic}_{C,\mathfrak{m}}^{d} \arrow[d, hook] \\
-    X_{\mathfrak{m}} \arrow[r] 
-    & P_{\mathfrak{m}}^{d},
-\end{tikzcd}
-Hence, The $S$-Scheme $\Cmod{d}$ is a projective space bundle on $\PicCm[d]$ and an open subscheme of $X_{\mdls, d}$.
-\end{enumerate}
-Where for a scheme $X$ and a locally free sheaf of finite rank $\mathcal{F}$ on $X$. We use a contra-Grothendieck notation for a projective space. 
-Thus the $X$-scheme $\mathbb{P}(\mathcal{F})$ parametrizes invertible subsheaves of $\mathcal{F}$.
+\] 
 
-Now focusing on the left side of \Cref{diag:main-blowup-diag}, \cite{takeuchi2019blow} shows:
+Also note that $ E_0 \times_{C^{(d)}} \Cmod{d} = Z_0 \times_{C^{(d)}} \Cmod{d}$
 
-\begin{enumerate}[start=6]
-    \item $U^{(d)} \to \Cmod{d}$ is an open immersion, and as an open subscheme, $U^{(d)}$ is the complement of $Z_0 \times_{C^{(d)}} \Cmod{d}$
-\end{enumerate}
-\end{theorem}.
+
+% \begin{equation}
+% \begin{tikzcd}
+%     % Row 1
+%     & 
+%     & U^{(d)} \arrow[d, hook, blue, dashed]  
+%     \arrow[dd, hook, blue, dashed, bend right=25]
+%      \arrow[ddd, hook, blue, dashed, bend right=40]
+%       \arrow[dr, "\Phi_d"]
+%     & 
+%     \\
+%     % Row 2
+%     &  
+%     &  \arrow[r, red] \arrow[d,  hook, red] \arrow[dr, phantom, "\square"]
+%     & \PicCm[d] \arrow[d, hook, red] \\
+%     % Row 3
+%     & Z_0 \times_{C^{(d)}} X_{\mdls, d}  \arrow[r] \arrow[d]
+%     & X_{\mdls, d} \arrow[r, red] \arrow[d, red]    
+%     & P_{\mdls}^{d} \arrow[d, red] \\
+%     % Row 4
+%     & Z_0 \arrow[r]
+%     & C^{(d)}
+%     & \PicC[d]
+% \end{tikzcd}
+% \end{equation}
+
+% %We remind, following the introduction, is that our mission is to decsend $\cF^{(d)}$ to $\PicCm[d]$ via $\Phi_d$. For this we don't consider the blowup. 
+
+% In this section we define the blowup of $C^{(d)}$ by $Z_0$ and give its basic properties. As outlined in \cite{takeuchi2019blow}
+% Let $C^{(d)}$ be the $d$'th symmetric product of $C$, which parametrizes effective Cartier
+% divisor of $deg = d$ on $C$. Let $Z_0$ be the closed subscheme of $C^{(d)}$ defined by the map 
+% And let $X_{\mdls, d}$ be the blowup of $C^{(d)}$ along $Z_0$.
+% In \cite{takeuchi2019blow}[Section 3] Takeuchi proves:
+% \begin{theorem}
+%     There exists a commutative diagram:
+%     \begin{equation}\label{diag:main-blowup-diag}
+% \begin{tikzcd}
+%     % Row 1
+%     & 
+%     & U^{(d)} \arrow[d, hook, blue, dashed]  \arrow[dd, hook, blue, dashed, bend right=25] \arrow[ddd, hook, blue, dashed, bend right=40] \arrow[dr, "\Phi_d"]
+%     & 
+%     \\
+%     % Row 2
+%     & Z_0 \times_{C^{(d)}} \Cmod{d}  \arrow[r] \arrow[d]
+%     & \Cmod{d} \arrow[r, red] \arrow[d,  hook, red] \arrow[dr, phantom, "\square"]
+%     & \PicCm[d] \arrow[d, hook, red] \\
+%     % Row 3
+%     & Z_0 \times_{C^{(d)}} X_{\mdls, d}  \arrow[r] \arrow[d]
+%     & X_{\mdls, d} \arrow[r, red] \arrow[d, red]    
+%     & P_{\mdls}^{d} \arrow[d, red] \\
+%     % Row 4
+%     & Z_0 \arrow[r]
+%     & C^{(d)}
+%     & \PicC[d]
+% \end{tikzcd}
+% \end{equation}
+% Where
+% \begin{enumerate}
+%     \item \cite{takeuchi2019blow}[Lemma 3.1.] $P_\mdls^{d}$ is an etale sheaf on $Sch/S$ defined by:
+%     $$P_{\mdls}^{d}(T) = \left\{ (\cL, \phi) \;\middle|\; \cL \in \operatorname{Pic}^{d}(C_T), \; \phi: \mathcal{O}_T \hookrightarrow pr_*(\cL/\cL(-\mdls)) \text{ s.t. } \operatorname{coker}(\phi) \text{ is loc. free} \right\} \Big/ \!\cong$$
+%     (Isomorphism between two $(\cL, \phi), (\cL', \phi')$ is an isomorphism $f: \cL \xrightarrow{\cong} \cL'$ such that $pr_*(f) \circ \phi = \phi'$)
+%     Moreover, it is represented by a proper smooth $S$-algebraic space. Assuming $C \to S$ has a section (\textcolor{red}{This seems rather imporant, it is also used to show $Pic_C^d$ as explicit expression as a sheaf, how do I refer to it }),
+%     And letting $\cL'$ be a representative invertible sheaf of the universal class, \cite{takeuchi2019blow} shows that as sheaves on $Sch/\PicCm[d]$, $P_\mdls^d$ is isomorphic to the projectivization $\bP(pr_*(\cL'/\cL'(-\mdls)))$.
+%     \item $\PicCm[d] \rightarrow P_\mdls^{d}$ is defined by $(\cL, \psi) \mapsto (\cL, \phi)$.  Where $\phi$ is defined as the composition
+%     $$\Oo_T \to pr_* \Oo_{\mdls_T} \xrightarrow[]{pr_* \psi} pr_* (\cL/\cL(-\mdls)) $$. \cite{takeuchi2019blow}[Lemma 3.5] Shows this map is an open immersion.
+%     \item The map $P_\mdls^d \to \PicCm[d]$ is by forgetting $\phi$
+%     \item The definition of $X_{\mdls, d} \to P_\mdls$ is more technically involved, so we refer the reader to \cite{takeuchi2019blow}. But an imporant feature it is that
+%     $X_{\mdls, d}$ is a projective space bundle over $P_\mdls^d$ via that map. 
+%     \item $\Cmod{d}$ is an $S$-scheme, defined as the fibered product
+%     \begin{tikzcd}
+%     \Cmod{d} \arrow[r] \arrow[d, hook] 
+%     & \mathrm{Pic}_{C,\mathfrak{m}}^{d} \arrow[d, hook] \\
+%     X_{\mathfrak{m}} \arrow[r] 
+%     & P_{\mathfrak{m}}^{d},
+% \end{tikzcd}
+% Hence, The $S$-Scheme $\Cmod{d}$ is a projective space bundle on $\PicCm[d]$ and an open subscheme of $X_{\mdls, d}$.
+% \end{enumerate}
+% Where for a scheme $X$ and a locally free sheaf of finite rank $\mathcal{F}$ on $X$. We use a contra-Grothendieck notation for a projective space. 
+% Thus the $X$-scheme $\mathbb{P}(\mathcal{F})$ parametrizes invertible subsheaves of $\mathcal{F}$.
+
+% Now focusing on the left side of \Cref{diag:main-blowup-diag}, \cite{takeuchi2019blow} shows:
+
+% \begin{enumerate}[start=6]
+%     \item $U^{(d)} \to \Cmod{d}$ is an open immersion, and as an open subscheme, $U^{(d)}$ is the complement of $Z_0 \times_{C^{(d)}} \Cmod{d}$
+% \end{enumerate}
+% \end{theorem}.
 
