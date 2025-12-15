@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  15 DEC 2025 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  15 DEC 2025 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1232,23 +1232,16 @@ Package hyperref Info: bookmark level for unknown cor defaults to 0 on input lin
 [6]
 
 [7]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 206.
+
 
 [8]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 241.
 
-Overfull \hbox (15.94623pt too wide) in paragraph at lines 256--258
-[]\T1/cmr/bx/n/10.95 Proposition 15. []\T1/cmr/m/it/10.95 If $\OML/cmm/m/it/10.95 ramP[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 k[]$ \T1/cmr/m/it/10.95 and $\OML/cmm/m/it/10.95 ramP[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 k[]$ \T1/cmr/m/it/10.95 Then $\OML/cmm/m/it/10.95 ramP[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 max\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k[]; k[]\OT1/cmr/m/n/10.95 )$
- []
+[9]) (./sections/RamificationAfterBlowup.tex
 
-
-
-[9]
-
-[10]) (./sections/RamificationAfterBlowup.tex
+[10]
 
 [11]
-
-[12]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1270,32 +1263,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) h
 l.115 \begin{equation}
                       ) (./sections/GeometricCFT/ProofOfReducedTheorem.tex
 
-[13])
+[12])
 
-[14] (./main.aux)
+[13] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8888D54FC4003C074904ABD5F0C72E3B;3292.
+(rerunfilecheck)             Checksum: 928DBC71200F74ADB3C33E13A039B4B5;3313.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43961 strings out of 473190
- 826412 string characters out of 5715800
- 1681193 words of memory out of 5000000
- 66377 multiletter control sequences out of 15000+600000
+ 43944 strings out of 473190
+ 826165 string characters out of 5715800
+ 1685077 words of memory out of 5000000
+ 66373 multiletter control sequences out of 15000+600000
  580134 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,15n,110p,3275b,1912s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (14 pages, 427968 bytes).
+Output written on main.pdf (13 pages, 422072 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 405 compressed objects within 5 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 450 PDF objects out of 1000 (max. 8388607)
+ 380 compressed objects within 4 object streams
+ 96 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

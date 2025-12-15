@@ -176,45 +176,10 @@ see \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, or \cite
 %\input{sections/Preliminaries/KummerTheory.tex}
 
 
-\subsection{Blowup of Symmetric Curves}
-For $P \to U$ a $G$-torsor. We denote by $P^{[d]} \to U^{(d)}$ the corresponding $G$-torsor over $U^{(d)}$.
-Let $\eta^i$ be the generic point of the exceptional divisor $E^i$ of the blowup of $C^{(d_i n_i)}$ by $n_i P_i$
-(Where $deg P_i = d_i$).
-Where $P_i \in C \setminus U$
-We want to prove:
-\begin{prop}
-    If $ram P^{[d_1n_1]}_{\eta^1} \leq k_1 $ and $ram P^{[d_2n_2]}_{\eta^2} \leq k_2 $
-    Then $ram P^{[d_1n_1 + d_2n_2]}_{\eta} = max(k_1, k_2)$ where $\eta$ is the generic point of the exceptional divisor $E$ of the blowup of $C^{(d_1 n_1 + d_2n_2)}$ by $\mdls= n_1 P_1 + n_2P_2$
-\end{prop}
+\subsection{Blowup of Smooth Schemes}
+\textcolor{red}{complete this section}
+In this seciton we prove some auxliary lemmas and propositions about blowups and local systems. 
 
-
-
-
-
-This follows by the following:
-Start talking about local rings, and take everything locally and prove it locally.
-\begin{prop}
-    Let
-\end{prop}sss
-
-
-\textbf{Proposition 6 is proved in takeuchi's paper \cite{takeuchi2019blow}.}
-We show here a simpler proof for a simpler case that we would need.
-
-Let $\cP$ be a $G$-torsor over $U$.
-Let $\mdls = n_1 P_1 + n_2 P_2 = \mdls_1 + \mdls_2$ be a modulus on $C$.
-Let $X_{\mdls_1}, X_{\mdls_2}$ be the blowups of $C^{(\deg \mdls_1)}, C^{(\deg \mdls_2)}$ by $\mdls_1, \mdls_2$ respectively.  
-Let $E_1, E_2$ be the respective exceptional divisors, and let $\eta_1$, $\eta_2$ be their generic points respectively.
-
-\begin{prop}\label{prop:box-tame-ram}
-Assume $\cP^{(\deg \mdls_1)}$, $\cP^{(\deg \mdls_2)}$ are tamely ramified on $\eta_1, \eta_2$  respectively.
-Then, $\boxP{\cP^{(\deg \mdls_1)}}{\cP^{(\deg \mdls_2)}}$ is tamely ramified on $\eta_1 \times \eta_2 \in C^{(\deg \mdls_1)} \times C^{(\deg \mdls_2)}$
-\end{prop}
-\begin{proof}
-    \textcolor{red}{Write proof here}
-\end{proof}
-
-Next, we prove:
 \begin{prop}\label{prop:blowup-prop}
     Let $X,Y$ be smooth over $k$. $x\in X, y\in Y$ closed points. Let $\Bl_x(X), \Bl_y(Y), \allowbreak Bl_{(x,y)}(X\times_k Y) $ be the respective blowups. 
     Let $\eta_X, \eta_Y,\eta_{X\times Y}$ be the generic points of the exceptional divisor of the respective blowups. 
@@ -237,41 +202,25 @@ Next, we prove:
 
 Let $P^{[d]} \to U^{(d)}$ be the corresponding $G$-torsor over $U^{(d)}$.
 
-
+A conlusion maybe:
 \begin{lemma}\label{lemma:boxplus}
 Let $p: C^{(d)} \times_k C^{(n-d)} \xrightarrow[]{+} C^{(n)}$ be the plus map, restricting $p$ to $U^{(d)} \times_k U^{(n-d)}$ we get a map 
 $$p: U^{(d)} \times_k U^{(n-d)} \xrightarrow[]{p} U^{(n)}$$
 Then, $$p^* (\cP^{(n)}) \cong \boxPp {\cP^{[d]}}{\cP^{(n-d)}}[k]$$
 \end{lemma}
 
-\begin{prop}
-    Combinining \Cref{prop:box-tame-ram}, \Cref{prop:blowup-prop} and \Cref{lemma:boxplus} we get that if $P^{[d_1 n_1]}$, $P^{[d_2 n_2]}$ are tamely ramified on $\eta_1, \eta_2$ respectively, then $P^{[d_1 n_1 + d_2 n_2]}$ is tamely ramified on $\eta$ the generic point of the exceptional divisor of the blowup of $C^{(d_1 n_1 + d_2 n_2)}$ by $\mdls = n_1 P_1 + n_2 P_2$.
-\end{prop}
 
-\textbf{A few notes}
-\begin{enumerate}
-    \item takeuchi's paper \cite{takeuchi2019blow} proves a more general version of \Cref{prop:blowup-prop} for arbitrary ramificiation, not necessarily smooth over a field.
-    more generally, he proves:
-        \begin{prop}\label{prop:ram-blowup}
-        If $ram P^{[d_1n_1]}_{\eta^1} = k_1 $ and $ram P^{[d_2n_2]}_{\eta^2} = k_2 $
-        Then $ram P^{[d_1n_1 + d_2n_2]}_{\eta} = max(k_1, k_2)$ where $\eta$ is the generic point of the exceptional divisor $E$ of the blowup of $C^{(d_1 n_1 + d_2n_2)}$ by $\mdls= n_1 P_1 + n_2P_2$
-        \end{prop}
-
-    \item more generally, the above works for any finite number of points $P_i$ with multiplicities $n_i$. the generalizaiton is easy.
-    
-\end{enumerate}
-\textcolor{red}{ass somewhere the defintiion of box product}
+\textcolor{red}{define box product somewhere}
 
 
 \begin{lemma}
+    \textcolor{red}{rephrase this lemma}
      Let $\ndls_1, \ndls_2 \subset \mdls$ be two moduli of the form $\ndls_1 = k_1 P_1$, $\ndls_2 = k_2 P_2$ where $P_1, P_2$ are distinct points.
      Let $\cF_1, \cF_2$ be local systems on $U^{(\deg \ndls_1)}$, $U^{(\deg \ndls_2)}$, at most tamely ramified at $\eta_{\ndls_1}$, $\eta_{\ndls_2}$ respectively.
      Then the local system $\boxP{\cF_1}{\cF_2} := p_1^{-1}(\cF_1) \otimes p_2^{-1}(\cF_2)$ on is at most tamely ramified at the point $\eta_{\ndls_1} \times \eta_{\ndls_2}$ of 
-
-     Let $\cF$ be a local system on $U^{(d)}$
 \end{lemma}
 
-\subsection{Compactification of Blowup of Symmetric Powers Curve}\label{section:BlowupOfSymmetricPowerOfCurves}
+\subsection{Compactification of Blowup of Symmetric Powers of a Curve}\label{section:BlowupOfSymmetricPowerOfCurves}
 We recall that our objective is to descend the local system $\cF^{(d)}$ from $U^{(d)}$ to $\PicCm[d]$ along the 
 Abel-Jacobi map $\Phi_d$:
 
