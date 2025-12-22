@@ -41,15 +41,56 @@ The above equivilance of categories becomes
 \textcolor{red}{Define and discuss a bit}
 
 \subsubsection{Symmetric Powers of Schemes and Torsors}
-%We recall the notion of symmetric powers of schemes and torsors, following \cite{Guignard2018} and \cite{SGA1}.
+We review some fundamental results concerning group actions on schemes, the theory of torsors, 
+and their respective quotients. 
+In general, the categorical quotient of a scheme by a group action is an algebraic space or a stack and does not necessarily admit a scheme structure. 
+However, under specific conditions—such as those present in our current setting—the quotient exists as a scheme. 
+Given that this material is thoroughly organized in \cite{Guignard2018}, based on \cite{sga1} our exposition follows their exposition closely.
+We omit some details though.
 
-There are several important theorems that repeat themselves throughout deligne approach to class field theory,
-one of them, is that the symmetric power of $C$ over $k$, denoted by $C^{(d)}$, is a scheme over $k$,
-Guigard proves this in the most general setting so we qoute his result here:
+Let $S$ be a scheme.
+
+\begin{definition}[(\cite{sga1}, V.1.7).]
+    \noindent
+    \begin{itemize}
+        \item Let $T$ be an object of a category $\mathcal{C}$ endowed with a right action of a group $\Gamma$. We say that \textbf{the quotient $T/\Gamma$ exists} in $\mathcal{C}$ if the covariant functor
+    \[
+    \begin{aligned}
+    \mathcal{C} &\to \text{Sets} \\
+    U &\mapsto \text{Hom}_{\mathcal{C}}(T, U)^{\Gamma}
+    \end{aligned}
+    \]
+    is representable by an object of $\mathcal{C}$.
+    \item Let $T$ be an $S$-scheme. An action of a finite group $\Gamma$ on $T$ is \textbf{admissible} if there exists an affine $\Gamma$-invariant morphism $f : T \to T'$ such that the canonical morphism $\mathcal{O}_{T'} \to f_* \mathcal{O}_T$ induces an isomorphism from $\mathcal{O}_{T'}$ to $(f_* \mathcal{O}_T)^{\Gamma}$.
+\end{itemize}
+\end{definition}
+
 \begin{prop}
-    If $X$ is Zariski locally quasi-projective over a scheme $S$, the the right action of $S_d$ on $X^{\times_S d}$ 
-    is admissible, and the quotient $X^{(d)} = X^{\times_S d}/S_d$ exists as a scheme over $S$.
+    The following holds:
+    \begin{enumerate}
+        \item \textbf{(\cite{sga1} V.1.3)}. Let $T$ be an $S$-scheme endowed with an admissible right action of a finite group $\Gamma$. If $f : T \to T'$ is an affine $\Gamma$-invariant morphism such that the canonical morphism $\mathcal{O}_{T'} \to f_* \mathcal{O}_T$ induces an isomorphism from $\mathcal{O}_{T'}$ to $(f_* \mathcal{O}_T)^{\Gamma}$, then the quotient $T/\Gamma$ exists and is isomorphic to $T'$.
+        \item \textbf{(\cite{sga1}, V.1.8)}. Let $T$ be an $S$-scheme endowed with a right action of a finite group $\Gamma$. Then, the action of $\Gamma$ on $T$ is admissible if and only if $T$ is covered by $\Gamma$-invariant affine open subsets.
+        \item \textbf{(\cite{sga1}, V.1.9)}. Let $T$ be an $S$-scheme endowed with an admissible right action of a finite group $\Gamma$, and let $S'$ be a flat $S$-scheme. Then, the action of $\Gamma$ on the $S'$-scheme $T \times_S S'$ is admissible, and the canonical morphism
+            \[
+            (T \times_S S')/\Gamma \to (T/\Gamma) \times_S S'
+            \]
+            is an isomorphism.
+    \end{enumerate}
 \end{prop}
+
+
+Let $X$ be an $S$-scheme and let $d \geq 0$ be an integer. The group ${S}_d$ of permutations of $\llbracket 1, d \rrbracket$ acts on the right on the $S$-scheme $X^{\times_S d} = X \times_S \dots \times_S X$ by the formula
+\[
+(x_i)_{i \in \llbracket 1, d \rrbracket} \cdot \sigma = (x_{\sigma(i)})_{i \in \llbracket 1, d \rrbracket}.
+\]
+
+\begin{prop}[\cite{Guignard2018} Proposition 2.27]
+    If $X$ is a scheme, Zariski locally quasi-projective over $S$, then the right action of the symmetric group $S_d$ on the $d$-fold fiber product 
+    $X^{\times_S d}$ is admissibleq. 
+    Consequently, the quotient $\mathrm{Sym}_S^d(X) = X^{\times_S d}/S_d$ exists as a scheme over $S$. When the base $S$ is understood from context, this quotient is also denoted by $X^{(d)}$.
+\end{prop}
+
+
 \textcolor{red}{treat more carefully}
 
 
@@ -72,6 +113,10 @@ of fundamental groups.
 \end{cor}
 \textcolor{red}{add about tameness?}
 
+\subsection{Symmetric Powers of Local Systems on Curves}
+Let $X$ be Zariski locally quasi-projective over a scheme $S$.
+And let $G$ be a finite abelian group. 
+Let $\cP \to X$ be a $G$ a $G$-torsor
 
 \subsection{Generalized Picard Scheme}
 In this section, we recall the notion of generalized Jacobian varieties and study their fundamental properties. The material presented here is primarily adapted from \cite{Guignard2018} and \cite{takeuchi2019blow}. For further background on the general theory of abelian varieties and Jacobians, the reader may also consult \cite{milneAV}.

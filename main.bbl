@@ -19,6 +19,36 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global/global}
+    \entry{sga1}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=fb0e3184fdd2fcd28fa74ca67d7cdcc1}{%
+           family={Grothendieck},
+           familyi={G\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{fullhash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{fullhashraw}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{bibnamehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authorbibnamehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authornamehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authorfullhash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authorfullhashraw}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \field{labelalpha}{SGA1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Lecture notes in mathematics}
+      \field{shorthand}{SGA1}
+      \field{title}{Revêtements étales et groupe fondamental (SGA 1)}
+      \field{volume}{224}
+      \field{year}{1971}
+    \endentry
     \entry{milneAV}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=638058cd23e53094700e44c2a4f389f5}{%
