@@ -41,12 +41,13 @@ The above equivilance of categories becomes
 \textcolor{red}{Define and discuss a bit}
 
 \subsubsection{Symmetric Powers of Schemes and Torsors}
-We review some fundamental results concerning group actions on schemes, the theory of torsors, 
-and their respective quotients. 
-In general, the categorical quotient of a scheme by a group action is an algebraic space or a stack and does not necessarily admit a scheme structure. 
-However, under specific conditions—such as those present in our current setting—the quotient exists as a scheme. 
-Given that this material is thoroughly organized in \cite{Guignard2018}, based on \cite{sga1} our exposition follows their exposition closely.
-We omit some details though.
+This section reviews the construction of quotients for schemes and torsors under finite group actions, specifically focusing on symmetric powers. 
+To ensure these quotients exist as schemes, we utilize the framework of admissible actions from \cite{sga1}. 
+Our treatment here closely follows the exposition in \cite{Guignard2018}
+The definitions and results presented below are adapted from their work. 
+This foundation provides the necessary criteria for admissibility and base change required to define the symmetric powers of a scheme $X$
+ and a $G$-torsor $\mathcal{P}$.
+
 
 Let $S$ be a scheme.
 
@@ -78,7 +79,20 @@ Let $S$ be a scheme.
     \end{enumerate}
 \end{prop}
 
+\begin{prop}[{[SGA1]}, IX.5.8]
+Let $G$ be a finite abelian group, let $\cP$ be a $G$-torsor over an $S$-scheme $X$ in $S_{\text{Ét}}$. 
+Assume that $\cP$ and $X$ are endowed with right actions from a finite group $\Gamma$ 
+such that the morphism $\cP \to X$ is $\Gamma$-equivariant, and that the following properties hold:
+\begin{enumerate}
+    \item[(a)] The right $\Gamma$-action on $\cP$ commutes with the left $G$-action.
+    \item[(b)] The right $\Gamma$-action on $X$ is admissible, and the quotient morphism $X \to X/\Gamma$ is finite.
+    \item[(c)] For any geometric point $\bar{x}$ of $X$, the action of the stabilizer $\Gamma_{\bar{x}}$ of $\bar{x}$ in $\Gamma$ on the fiber $\cP_{\bar{x}}$ of $\cP$ at $\bar{x}$ is trivial.
+\end{enumerate}
+Then the action of $\Gamma$ on $\cP$ is admissible, and $\cP/\Gamma$ is a $G$-torsor over $X/\Gamma$ in $S_{\text{Ét}}$.
+\end{prop}
 
+
+\subsubsection*{Symmetric Powers of Schemes}
 Let $X$ be an $S$-scheme and let $d \geq 0$ be an integer. The group ${S}_d$ of permutations of $\llbracket 1, d \rrbracket$ acts on the right on the $S$-scheme $X^{\times_S d} = X \times_S \dots \times_S X$ by the formula
 \[
 (x_i)_{i \in \llbracket 1, d \rrbracket} \cdot \sigma = (x_{\sigma(i)})_{i \in \llbracket 1, d \rrbracket}.
@@ -87,11 +101,55 @@ Let $X$ be an $S$-scheme and let $d \geq 0$ be an integer. The group ${S}_d$ of 
 \begin{prop}[\cite{Guignard2018} Proposition 2.27]
     If $X$ is a scheme, Zariski locally quasi-projective over $S$, then the right action of the symmetric group $S_d$ on the $d$-fold fiber product 
     $X^{\times_S d}$ is admissibleq. 
-    Consequently, the quotient $\mathrm{Sym}_S^d(X) = X^{\times_S d}/S_d$ exists as a scheme over $S$. When the base $S$ is understood from context, this quotient is also denoted by $X^{(d)}$.
+    Consequently, the quotient $\mathrm{Sym}_S^d(X) = X^{\times_S d}/S_d$ exists as a scheme over $S$.
+\end{prop}
+\begin{rem*}
+    When the base $S$ is understood from context, this quotient is also denoted by $X^{(d)}$.
+\end{rem*}
+
+Guingard shows that when $X=\Spec(B)$ and $S=\Spec(A)$ then $\Sym_{S}^d(X)$ is representable by an affine $S$-scheme (See \cite{Guignard2018} Remark 2.28).
+
+\begin{prop}[\cite{Guignard2018} Proposition 2.28]
+If $X$ is flat and Zariski-locally quasi-projective over $S$, then $\text{Sym}_S^d(X)$ is flat over $S$. Moreover, for any $S$-scheme $S'$, the canonical morphism
+\[
+\text{Sym}_{S'}^d(X \times_S S') \to \text{Sym}_S^d(X) \times_S S'
+\]
+is an isomorphism.
 \end{prop}
 
+\subsubsection*{Symmetric Powers of Torsors}
+\textcolor{red}{change below the exposition to be more accurate... }
+Let $S$ be a scheme, let $X$ be an $S$-scheme and let $d \geq 1$ be an integer. 
+Let $G$ be a finite abelian group, and let $\cP \to X$ be a $G$-torsor over $X$ in $S_{\text{Ét}}$. 
+It is easy to show that the sheaf $\cP$ is representable by a finite étale $X$-scheme. (For example \cite{Guignard2018} Proposition 2.12)
 
-\textcolor{red}{treat more carefully}
+For each $i \in \llbracket 1, d \rrbracket$ let $p_i : X^{\times_S d} \to X$ be the projection on $i$-th factor, and let us consider the $G$-torsor
+\[
+p_1^{-1}P \otimes \cdots \otimes p_d^{-1}P = G_d \backslash \cP^{\times_S d}
+\]
+over $X^{\times_S d}$, where $G_d \subseteq G^d$ is the kernel of the multiplication morphism $G^d \to G$. 
+The object $G_d \backslash \cP^{\times_S d}$ of $S_{\text{Ét}}$ is too representable by an $S$-scheme which is finite étale over $X^{\times_S d}$. 
+The group ${S}_d$ acts on the right on $G_d \backslash \cP^{\times_S d}$ by the formula
+\[
+(p_i)_{i \in \llbracket 1, d \rrbracket} \cdot \sigma = (p_{\sigma(i)})_{i \in \llbracket 1, d \rrbracket}.
+\]
+This action of ${S}_d$ commutes with the left action of $G$ on $G_d \backslash \cP^{\times_S d}$.
+
+\medskip
+
+\begin{prop}[\cite{Guignard2018} Proposition 2.32.]
+If $X$ is Zariski-locally quasi-projective on $S$, then the right action of ${S}_d$ on $G_d \backslash \cP^{\times_S d}$ is admissible, 
+so that the quotient $\cP^{(d)}$ of $G_d \backslash \cP^{\times_S d}$ by ${S}_d$ exists in $\mathrm{Sch}_{/S}$. 
+Moreover, the canonical morphism $\cP^{(d)} \to \mathrm{Sym}_S^d(X)$ is a $G$-torsor, 
+and the morphism
+\[
+p_1^{-1}\cP \otimes \cdots \otimes p_d^{-1}\cP \to r^{-1}\cP^{[d]}
+\]
+where $r : X^{\times_S d} \to \mathrm{Sym}_S^d(X)$ is the canonical projection, is an isomorphism of $G$-torsors over $X^{\times_S d}$.
+\end{prop}
+\textcolor{red}{consider replacing $\cP$ with $P$ because it is a scheme}
+\textcolor{red}{Add proposition about how it is being a scheme}
+
 
 
 \subsubsection{Etale Fundamental Groups and Tame Fundamental Groups}
