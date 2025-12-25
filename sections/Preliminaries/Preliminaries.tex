@@ -1,18 +1,18 @@
 \section{Preliminaries}
+\textcolor{red}{where is the first tiem you introduce $\cP$ instead of $P$, mark it down, and explain}
 In this section we recall the necessariy work, including work from \cite{Guignard2018}, \cite{tendler2015geometricclassfieldtheory} and \cite{takeuchi2019blow}.
 
 \subsection{Generalities}
 
 \subsubsection{Equivalence between Torsors and Invertible Modules}
+Let $\mathcal{E}$ be a topos and let $\Lambda$ be a commutative ring object in $\mathcal{E}$. Let $G = \Lambda^\times$ denote the internal group object of units of $\Lambda$.
 The following proposition establishes the fundamental dictionary between the geometric theory
 of principal homogeneous spaces and the algebraic theory of invertible modules.
 This equivalence allows us to transport the monoidal structure from the category of modules
-(the tensor product) to the category of torsors (the contracted product),
+(with the tensor product over $\Lambda$) to the category of torsors (with the contracted product over $G$),
 strictly within the categorical framework.
 
 \begin{prop}\label{prop:torsor_module_equivalence}
-    Let $\mathcal{E}$ be a topos and let $\Lambda$ be a ring object in $\mathcal{E}$. Let $G = \Lambda^\times$ denote the internal group object of units of $\Lambda$.
-
     There is a canonical equivalence of monoidal categories between the category of $G$-torsors in $\mathcal{E}$ and the category of locally free $\Lambda$-modules of rank 1 in $\mathcal{E}$:
     \[
         \Phi: \mathbf{Tors}(\mathcal{E}, \Lambda^\times) \xrightarrow{\sim} \mathbf{Pic}(\mathcal{E}, \Lambda)
@@ -36,9 +36,147 @@ The above equivilance of categories becomes
     \Phi_X: \mathbf{Tors}(X, \Lambda^\times) \xrightarrow{\sim} \mathbf{Pic}(X, \Lambda)
 \].
 
+For a morphism $f: Y \to X$ in $\mathcal{E}$, the equivalence is functorial with respect to:
+\begin{itemize}
+    \item \textbf{Torsor Pullback:} $f^{-1}P = P \times_{X} Y$ (Fiber product).
+    \item \textbf{Module Pullback:} $f^*\mathcal{L} = \Lambda_Y \otimes_{f^{-1}\Lambda_X} f^{-1}\mathcal{L}$ (Extension of scalars).
+\end{itemize}
+
+The following diagram commutes up to natural isomorphism:
+
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+\mathbf{Tors}(X, G) \arrow[r, "\Phi_X", "\sim"'] \arrow[d, "f^{-1}"'] & \mathbf{Pic}(X, \Lambda) \arrow[d, "f^*"] \\
+\mathbf{Tors}(Y, G) \arrow[r, "\Phi_Y", "\sim"'] & \mathbf{Pic}(Y, \Lambda)
+\end{tikzcd}
+\]
+
+% A \textbf{$G$-torsor} in $\mathcal{E}$ is an object $P \in \text{obj}(\mathcal{E})$ equipped with an action $\alpha: P \times G \to P$ such that:
+% \begin{enumerate}
+%     \item The unique morphism $P \to 1$ is an epimorphism.
+%     \item The map $(\pi_1, \alpha): P \times G \xrightarrow{\cong} P \times P$ is an isomorphism.
+% \end{enumerate}
+% The category $\mathbf{Tors}(\mathcal{E}, \Lambda^\times)$ consists of $G$-torsors as objects and $G$-equivariant morphisms as arrows.
+
 
 \subsubsection{Ramification of Sheaves}
-\textcolor{red}{Define and discuss a bit}
+\textcolor{red}{EDIT AND REFINE THIS ENTIRE THING.}
+
+\begin{definition}[Version 1: Pure Openness]
+Let $C$ be a curve over a field $k$. Let $P \ in C$ be closed point. $U=C-P$ be the complement. Let $\cF$ be a local system on $U$. let $\eta \in P$ be the generic point of $P$ (it is irreducible of codim=1 in $C$)
+Then $\cF$ has ramification bounded by $d$ on $P$ if and only if
+$\restr{\cF}{\eta}$ is a field extension of ramification bounded by $d$. 
+\end{definition}
+
+We want to explain why $\restr{\cF}{\eta}$ is a finite field extension of $k(C)$. We are in the following situation:
+
+\begin{equation*}
+\begin{tikzcd}
+i^{*}\cF \arrow[d] & \cF \arrow[d] \\
+P \arrow[r, "i"] & C          
+\end{tikzcd}
+\end{equation*}
+
+So, we are asking, what are local system $\cG$ on $P$.
+$P=\spec(k(P))$
+
+Version 2: With etale coverings.
+
+
+\quad what is a local system on $X$, what is a local system on $P \rightarrow C$, what is a local system on $\spec \Oo_P \rightarrow C$
+
+
+locally constant sheaves are given by: \stackstag{09Y8}
+
+\textcolor{red}{EDIT AN REFINE THIS ENTIRE THING}
+The goal is to  1. define what ramificaiton of local system means in different settings
+2. explore basic properties and ways to calculate. 
+
+\begin{definition}
+    Let $G$ be a finite abelian group and let $d \geq 0$ be a rational number. A $G$-torsor over $\operatorname{Spec}(L)$ (in $\operatorname{Spec}(k)_{\text {Ét }}$ ), corresponding to a continuous homomorphism $\rho: G_L \rightarrow G$, is said to have ramification bounded by $d$ if $\rho\left(G_L^d\right)=\{1\}$. A $G$-torsor over $\operatorname{Spec}(L)$ with ramification bounded by 0 (resp. 1) is said to be unramified (resp. tamely ramified).
+\end{definition}
+
+\textbf{Explain why a $G$ torsor over $\Spec(L)$ in 
+$\operatorname{Spec}(k)_{\text {Ét }}$} correspond to a continuous homomorphism $\rho: G_{L} \rightarrow G$
+
+\textbf{Explanation:}
+Let $L^{sep}$ be a separable closure of $L$, and let $G_L$ be the Galois group of $L^{sep}$ over $L$ then
+\begin{enumerate}
+    \item the small étale topos of $\Spec(L)$ is isomorphic to the topos of sets with continuous left $G_L$-action.
+    \item  By 2.13, the category of $G$-torsors over $\Spec(L)$ in $\Spec(k)_{Et}$ is isomorphic to the category of $G$-torsors
+    in the small étale topos $\Spec(L)_{et}$.
+    \item  Correspondingly, for each finite abelian group $G$, the group
+    of isomorphism classes of the category $Tors(\Spec(L), G)$ is isomorphic to the group of continuous
+    homomorphisms from $G_L$ to $G$.
+\end{enumerate}
+We want to show 3 explicitly. 
+
+\textbf{What is an isomorphism class of "$G$-sets with continuous left $G_L$ action"}
+before, we understand 
+\textbf{What is an isomorphism class of "sets with continuous left $G_L$ action" is a continuous $G$ action}
+
+
+We want to show
+How, from a $G$-Torsor $P$ in the $\Spec(L)_{et}$ we get a set with ccontinious homomorphism from $G_L$
+\textbf{}
+
+
+
+
+\textbf{Example-Explain!!!}
+
+Remark 3.10. If $P \rightarrow \operatorname{Spec}(L)$ is a $G$-torsor in $\operatorname{Spec}(k)_{\text {Ét }}$, then we have a finite decomposition
+$$
+P=\coprod_{i \in I} \operatorname{Spec}\left(L_i\right)
+$$
+where each $L_i$ is a finite separable extension of $L$, and are pairwise isomorphic. The $G$-torsor $P$ has ramification bounded by $d$ if and only if for each $i$ (or, equivalently, for some $i$ ) the extension $L_i / L$ has ramification bounded by $d$, in the sense $G_L^d$ acts trivially on the finite set $\operatorname{Hom}_L\left(L_i, L^{\text {sep }}\right)$.
+
+\begin{definition}\label{definition:ulscodim1} let $X$ be good enough (irreducible, regular at codim=1? smooth?), $U$ open subscheme and $Z$ the complemenet which is irreducible closed subscheme of $codim=1$. let $\eta$ be the generic point of $Z$. and let $\cF$ be a local system on $U$ as in:
+\begin{equation}
+\begin{tikzcd}
+               &             & &  \cF \arrow[d]                   \\
+\eta \arrow[r] & Z \arrow[r] & X           & U \arrow[l, hook']
+\end{tikzcd}
+\end{equation}
+
+\textbf{Example-Explain!!!}
+
+Then we say $\cF$ is unramified on $Z$ if and only if $\restr{\cF}{\eta}$ is unramified.
+
+Note that
+\end{definition}
+
+\begin{theorem}
+let $X,U,Z,\cF$ be as in \cref{definition:ulscodim1}. If $\cF$ is unramified on $Z$, then $\cF$ is pulledback from a local system on $X$
+\end{theorem}
+
+Next we have a general proposition.
+
+\begin{prop}
+Let $X$ be a normal Noetherian scheme, and let $Z \subset X$ an irreducible closed subscheme of codimension 1 (a prime divisor)
+Let $U=X \setminus Z$ be the open complement, and $\eta$ the generic point of $Z$.
+Let $f: Y \to X$ be a finite surjective morphism, where $Y$ is also a normal Noetherian scheme.
+Suppose there exists an irreducible component $Z' \subset f^{-1}(Z)$ with generic point $\eta'$ such that
+$f$ is unramified at $\eta'$. 
+
+Then:
+
+\end{prop}
+
+\begin{proof}
+    For clarity, we draw the diagram: 
+
+\begin{diagram}
+\begin{tikzcd}[row sep=large, column sep=large]
+Z \times_X Y \arrow[r] \arrow[d] & Y \arrow[d, "f"] & U \times_X Y \arrow[l] \arrow[d] \\
+Z \arrow[r, "closed"] & X & U \arrow[l, "open"] \\
+\end{tikzcd}
+\end{diagram}
+
+We have that $\eta' \rightarrow \eta$ is unramified. hence $\cF$ unramified on $\eta$ if and only if $f^*\cF$ is unramified on $\eta$ (from proposition in the beginning)
+
+\end{proof}
+
 
 \subsubsection{Symmetric Powers of Schemes and Torsors}
 This section reviews the construction of quotients for schemes and torsors under finite group actions, specifically focusing on symmetric powers. 
@@ -46,7 +184,7 @@ To ensure these quotients exist as schemes, we utilize the framework of admissib
 Our treatment here closely follows the exposition in \cite{Guignard2018}
 The definitions and results presented below are adapted from their work. 
 This foundation provides the necessary criteria for admissibility and base change required to define the symmetric powers of a scheme $X$
- and a $G$-torsor $\mathcal{P}$.
+ and a $G$-torsor $\mathcal{P}$ over $X$.
 
 
 Let $S$ be a scheme.
@@ -100,7 +238,7 @@ Let $X$ be an $S$-scheme and let $d \geq 0$ be an integer. The group ${S}_d$ of 
 
 \begin{prop}[\cite{Guignard2018} Proposition 2.27]
     If $X$ is a scheme, Zariski locally quasi-projective over $S$, then the right action of the symmetric group $S_d$ on the $d$-fold fiber product 
-    $X^{\times_S d}$ is admissibleq. 
+    $X^{\times_S d}$ is admissible. 
     Consequently, the quotient $\mathrm{Sym}_S^d(X) = X^{\times_S d}/S_d$ exists as a scheme over $S$.
 \end{prop}
 \begin{rem*}
@@ -125,7 +263,7 @@ It is easy to show that the sheaf $\cP$ is representable by a finite étale $X$-
 
 For each $i \in \llbracket 1, d \rrbracket$ let $p_i : X^{\times_S d} \to X$ be the projection on $i$-th factor, and let us consider the $G$-torsor
 \[
-p_1^{-1}P \otimes \cdots \otimes p_d^{-1}P = G_d \backslash \cP^{\times_S d}
+p_1^{-1}\cP \otimes \cdots \otimes p_d^{-1}\cP = G_d \backslash \cP^{\times_S d}
 \]
 over $X^{\times_S d}$, where $G_d \subseteq G^d$ is the kernel of the multiplication morphism $G^d \to G$. 
 The object $G_d \backslash \cP^{\times_S d}$ of $S_{\text{Ét}}$ is too representable by an $S$-scheme which is finite étale over $X^{\times_S d}$. 
@@ -137,13 +275,13 @@ This action of ${S}_d$ commutes with the left action of $G$ on $G_d \backslash \
 
 \medskip
 
-\begin{prop}[\cite{Guignard2018} Proposition 2.32.]
+\begin{prop}[\cite{Guignard2018} Proposition 2.32.]\label{prop:symmetric_power_torsor}
 If $X$ is Zariski-locally quasi-projective on $S$, then the right action of ${S}_d$ on $G_d \backslash \cP^{\times_S d}$ is admissible, 
-so that the quotient $\cP^{(d)}$ of $G_d \backslash \cP^{\times_S d}$ by ${S}_d$ exists in $\mathrm{Sch}_{/S}$. 
+so that the quotient $\cP^{(d)}$ of $G_d \backslash \cP^{\times_S d}$ by ${S}_d$ exists as a scheme over $S$. 
 Moreover, the canonical morphism $\cP^{(d)} \to \mathrm{Sym}_S^d(X)$ is a $G$-torsor, 
 and the morphism
 \[
-p_1^{-1}\cP \otimes \cdots \otimes p_d^{-1}\cP \to r^{-1}\cP^{[d]}
+p_1^{-1}\cP \otimes \cdots \otimes p_d^{-1}\cP \to r^{-1}\cP^{(d)}
 \]
 where $r : X^{\times_S d} \to \mathrm{Sym}_S^d(X)$ is the canonical projection, is an isomorphism of $G$-torsors over $X^{\times_S d}$.
 \end{prop}
@@ -171,10 +309,69 @@ of fundamental groups.
 \end{cor}
 \textcolor{red}{add about tameness?}
 
-\subsection{Symmetric Powers of Local Systems on Curves}
-Let $X$ be Zariski locally quasi-projective over a scheme $S$.
-And let $G$ be a finite abelian group. 
-Let $\cP \to X$ be a $G$ a $G$-torsor
+
+%
+% SYMMETRIC POWERS OF LOCAL SYSTEMS ON CURVES
+%
+\subsection{Symmetric Powers of Local Systems on Curves}\label{section:symmetric_powers_on_curves}
+\textcolor{red}{don't need modulus in this section, etc.}
+Let $k$ be a perfect field. 
+Let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$.
+Let $\mdls$ be a modulus on $C$ and let $U = C \setminus \mdls$.
+Let $G$ be a finite abelian group and let $\cP$ be a $G$-torsor on $U$ with ramification bounded by
+$\mdls$. Let $d \geq \deg m$.
+
+We have the following diagram:
+\[
+\begin{tikzcd}
+U^{(d_1)} \times_k U^{(d_2)} \arrow[r, "p_1"] \arrow[d, "p_2"] & U^{(d_1)} \\
+U^{(d_2)} &  {}
+\end{tikzcd}
+\] 
+
+pullbacking $\cP^{(d_i)}$ along the projections we get a $G$-torsor
+
+\[\cP ^{(d_1)} \boxtimes \cP ^{(d_2)} = p_1^{-1} \cP^{(d_1)} \otimes p_2^{-1} \cP^{(d_2)}\]
+On $U^{(d_1)} \times_k U^{(d_2)}$
+
+Note that the plus map $C^{(d_1)} \times_k C^{(d_2)} \xrightarrow{+}{} C^{(d_1 + d_2)}$
+is induced from
+\[
+\begin{tikzcd}
+C^{d_1} \times_k C^{d_2} \arrow[r, "\cong"] \arrow[d, "r_1 \times r_2"] & C^{d_1 + d_2} \arrow[d, "r"] \\
+C^{(d_1)} \times_k C^{(d_2)} \arrow[r, "+"] & C^{(d_1+ d_2)} 
+\end{tikzcd}
+\]
+
+
+Hence, by \Cref{prop:symmetric_power_torsor} (and replacing $C$ with $U$ above) we get canonical identification:
+\[
+ (+^{-1})(\cP^{(d_1+d_2)}) \cong \cP ^{(d_1)} \boxtimes \cP ^{(d_2)}
+\]
+
+
+
+
+% \[
+% \begin{tikzcd}
+% C^{(d_1)} \times_k C^{(d_2)} \arrow[r] \arrow[d] & C^{(d_1)} \\
+% C^{(d_2)} &  {}
+% \end{tikzcd}
+% \] 
+
+
+
+% \[\begin{tikzcd}
+
+% C^{(d_1)} \times_k C^{(d_2)} \arrow[r, "+"]           & C^{(d_1 + d_2)}
+% \end{tikzcd}\] 
+
+\begin{cor}
+    Suppose $\cF^{(\deg \mdls)}$ is tamely ramified at $\eta$.
+    Then  $\Fbox{\deg \mdls}{d - \deg \mdls}$ is tamely ramified at the generic point $\theta$ of $E_{\mdls} \times_k C^{(d-\deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{d - \deg \mdls}$
+    and thus $\cF^{(d)}$ is taemly ramified at the generic point ? which one.
+\end{cor}
+
 
 \subsection{Generalized Picard Scheme}
 In this section, we recall the notion of generalized Jacobian varieties and study their fundamental properties. The material presented here is primarily adapted from \cite{Guignard2018} and \cite{takeuchi2019blow}. For further background on the general theory of abelian varieties and Jacobians, the reader may also consult \cite{milneAV}.
