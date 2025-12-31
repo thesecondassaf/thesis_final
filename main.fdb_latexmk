@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1766666565.94202 "main.bcf" "main.bbl" "main" 1766686803.12799 0
-  "Bib.bib" 1766409743.6709 4294 3d04e97a5685f99975abe8b0830c6d58 ""
-  "main.bcf" 1766686802.75345 112123 4bea71af061debef74529044e164e827 "pdflatex"
+["biber main"] 1767196833.83467 "main.bcf" "main.bbl" "main" 1767196840.18518 0
+  "Bib.bib" 1767195432.72608 4609 2dbe8e6f1bc1b191e84484e43711f63c ""
+  "main.bcf" 1767196839.89479 112469 253905007d8873d63c3f4f3ec63b3306 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1766686797.85622 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1766686803.1287 0
+["pdflatex"] 1767196836.454 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1767196840.18565 0
   "/Users/assaf/Desktop/Thesis/thesis final/main.tex" 1765806648.24072 1068 3cfe0b25567a6332f8bcc7b8831769dc ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -38,6 +38,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1136768653 1344 8a0be4fe4d376203000810ad4dc81558 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1136768653 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -70,6 +71,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -97,6 +99,8 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb" 1215737283 169670 48d12e69c9a3b23c81f6d703ccbd4554 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb" 1302307949 27430 0e29b053ae98d5f87d872ee72a12d5f5 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb" 1302307949 27873 b4f34b695539b5e0680e5ce4b917924a ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb" 1381187214 17164 ec38b53842f4384705514c6703fa9108 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb" 1381187214 16979 ad391dfddfd050862d933e5807ab1edc ""
   "/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/babel-english/english.ldf" 1496785618 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
@@ -326,16 +330,16 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "MacrosAndFigures.tex" 1766657494.24379 10943 e61f1576a9dcd300c0931ac464264b96 ""
   "includes.tex" 1765464538.58316 1289 1d2a91d93c16c77d6d088251225b0069 ""
-  "main.aux" 1766686802.74254 16312 f6e5016a55727c30f67d052372235732 "pdflatex"
-  "main.bbl" 1766666568.68758 9930 cde2378dd7c5602ce68744d0cb28f261 "biber main"
-  "main.out" 1766686802.7486 3604 9dd414ef38368684343b1fb45dc7d50e "pdflatex"
-  "main.run.xml" 1766686802.75542 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.aux" 1767196839.88527 17612 3e4afddfe83b526ba51b3df16703656c "pdflatex"
+  "main.bbl" 1767196836.4247 11509 11f652783d793d6f8319368cd3638eb8 "biber main"
+  "main.out" 1767196839.89054 3723 cae0b46d567d6a95c6cb616e3c6e30a6 "pdflatex"
+  "main.run.xml" 1767196839.89581 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
   "main.tex" 1765806648.24072 1068 3cfe0b25567a6332f8bcc7b8831769dc ""
-  "main.toc" 1766686802.75572 1770 8bb96de9af148857e51670d7f9ee5d62 "pdflatex"
+  "main.toc" 1767196839.89591 1787 9f1fb27bf8424135f8171f2544087f56 "pdflatex"
   "sections/GeometricCFT/ProofOfReducedTheorem.tex" 1765805776.17585 2823 4b5d9835c7cc7ce6de82819ee7a46bed ""
   "sections/Introduction.tex" 1766648159.13033 9014 66564fb9dc0049025df60221414ab355 ""
-  "sections/Preliminaries/Preliminaries.tex" 1766686797.35044 36764 4290e8fdde014488b0daad903477ce72 ""
-  "sections/RamificationAfterBlowup.tex" 1766654563.38168 8437 bb16854a22587b3d476ec844acc62018 ""
+  "sections/Preliminaries/Preliminaries.tex" 1767196829.52907 40153 bba02494cc17c1958f246bbc8587ced0 ""
+  "sections/RamificationAfterBlowup.tex" 1767176697.35478 10379 531b2261c22c534fbd989016b34eb383 ""
   (generated)
   "main.aux"
   "main.bcf"

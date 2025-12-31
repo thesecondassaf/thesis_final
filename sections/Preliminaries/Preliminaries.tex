@@ -58,125 +58,18 @@ The following diagram commutes up to natural isomorphism:
 % \end{enumerate}
 % The category $\mathbf{Tors}(\mathcal{E}, \Lambda^\times)$ consists of $G$-torsors as objects and $G$-equivariant morphisms as arrows.
 
+\subsubsection*{\texorpdfstring{More about $G$-torsors}{More about G-torsors}}
+\textcolor{red}{Say something about the toposes of Etale and etale, maybe add them up in the notation.}
+We recall some propositions about $G$-torsors that will be useful later.
 
-\subsubsection{Ramification of Sheaves}
-\textcolor{red}{EDIT AND REFINE THIS ENTIRE THING.}
-
-\begin{definition}[Version 1: Pure Openness]
-Let $C$ be a curve over a field $k$. Let $P \ in C$ be closed point. $U=C-P$ be the complement. Let $\cF$ be a local system on $U$. let $\eta \in P$ be the generic point of $P$ (it is irreducible of codim=1 in $C$)
-Then $\cF$ has ramification bounded by $d$ on $P$ if and only if
-$\restr{\cF}{\eta}$ is a field extension of ramification bounded by $d$. 
-\end{definition}
-
-We want to explain why $\restr{\cF}{\eta}$ is a finite field extension of $k(C)$. We are in the following situation:
-
-\begin{equation*}
-\begin{tikzcd}
-i^{*}\cF \arrow[d] & \cF \arrow[d] \\
-P \arrow[r, "i"] & C          
-\end{tikzcd}
-\end{equation*}
-
-So, we are asking, what are local system $\cG$ on $P$.
-$P=\spec(k(P))$
-
-Version 2: With etale coverings.
-
-
-\quad what is a local system on $X$, what is a local system on $P \rightarrow C$, what is a local system on $\spec \Oo_P \rightarrow C$
-
-
-locally constant sheaves are given by: \stackstag{09Y8}
-
-\textcolor{red}{EDIT AN REFINE THIS ENTIRE THING}
-The goal is to  1. define what ramificaiton of local system means in different settings
-2. explore basic properties and ways to calculate. 
-
-\begin{definition}
-    Let $G$ be a finite abelian group and let $d \geq 0$ be a rational number. A $G$-torsor over $\operatorname{Spec}(L)$ (in $\operatorname{Spec}(k)_{\text {Ét }}$ ), corresponding to a continuous homomorphism $\rho: G_L \rightarrow G$, is said to have ramification bounded by $d$ if $\rho\left(G_L^d\right)=\{1\}$. A $G$-torsor over $\operatorname{Spec}(L)$ with ramification bounded by 0 (resp. 1) is said to be unramified (resp. tamely ramified).
-\end{definition}
-
-\textbf{Explain why a $G$ torsor over $\Spec(L)$ in 
-$\operatorname{Spec}(k)_{\text {Ét }}$} correspond to a continuous homomorphism $\rho: G_{L} \rightarrow G$
-
-\textbf{Explanation:}
-Let $L^{sep}$ be a separable closure of $L$, and let $G_L$ be the Galois group of $L^{sep}$ over $L$ then
-\begin{enumerate}
-    \item the small étale topos of $\Spec(L)$ is isomorphic to the topos of sets with continuous left $G_L$-action.
-    \item  By 2.13, the category of $G$-torsors over $\Spec(L)$ in $\Spec(k)_{Et}$ is isomorphic to the category of $G$-torsors
-    in the small étale topos $\Spec(L)_{et}$.
-    \item  Correspondingly, for each finite abelian group $G$, the group
-    of isomorphism classes of the category $Tors(\Spec(L), G)$ is isomorphic to the group of continuous
-    homomorphisms from $G_L$ to $G$.
-\end{enumerate}
-We want to show 3 explicitly. 
-
-\textbf{What is an isomorphism class of "$G$-sets with continuous left $G_L$ action"}
-before, we understand 
-\textbf{What is an isomorphism class of "sets with continuous left $G_L$ action" is a continuous $G$ action}
-
-
-We want to show
-How, from a $G$-Torsor $P$ in the $\Spec(L)_{et}$ we get a set with ccontinious homomorphism from $G_L$
-\textbf{}
-
-
-
-
-\textbf{Example-Explain!!!}
-
-Remark 3.10. If $P \rightarrow \operatorname{Spec}(L)$ is a $G$-torsor in $\operatorname{Spec}(k)_{\text {Ét }}$, then we have a finite decomposition
-$$
-P=\coprod_{i \in I} \operatorname{Spec}\left(L_i\right)
-$$
-where each $L_i$ is a finite separable extension of $L$, and are pairwise isomorphic. The $G$-torsor $P$ has ramification bounded by $d$ if and only if for each $i$ (or, equivalently, for some $i$ ) the extension $L_i / L$ has ramification bounded by $d$, in the sense $G_L^d$ acts trivially on the finite set $\operatorname{Hom}_L\left(L_i, L^{\text {sep }}\right)$.
-
-\begin{definition}\label{definition:ulscodim1} let $X$ be good enough (irreducible, regular at codim=1? smooth?), $U$ open subscheme and $Z$ the complemenet which is irreducible closed subscheme of $codim=1$. let $\eta$ be the generic point of $Z$. and let $\cF$ be a local system on $U$ as in:
-\begin{equation}
-\begin{tikzcd}
-               &             & &  \cF \arrow[d]                   \\
-\eta \arrow[r] & Z \arrow[r] & X           & U \arrow[l, hook']
-\end{tikzcd}
-\end{equation}
-
-\textbf{Example-Explain!!!}
-
-Then we say $\cF$ is unramified on $Z$ if and only if $\restr{\cF}{\eta}$ is unramified.
-
-Note that
-\end{definition}
-
-\begin{theorem}
-let $X,U,Z,\cF$ be as in \cref{definition:ulscodim1}. If $\cF$ is unramified on $Z$, then $\cF$ is pulledback from a local system on $X$
-\end{theorem}
-
-Next we have a general proposition.
-
-\begin{prop}
-Let $X$ be a normal Noetherian scheme, and let $Z \subset X$ an irreducible closed subscheme of codimension 1 (a prime divisor)
-Let $U=X \setminus Z$ be the open complement, and $\eta$ the generic point of $Z$.
-Let $f: Y \to X$ be a finite surjective morphism, where $Y$ is also a normal Noetherian scheme.
-Suppose there exists an irreducible component $Z' \subset f^{-1}(Z)$ with generic point $\eta'$ such that
-$f$ is unramified at $\eta'$. 
-
-Then:
-
+\begin{prop}[\cite{Guignard2018}, Proposition 2.12]
+Let $G$ be a finite abelian group, let $S$ be a scheme, and let $\cP$ be a $G$-torsor over an $S$-scheme $X$ in $S_{\text{Et}}$.
+Then the etale sheaf $\cP$ is representable by a finite etale $X$-scheme.
 \end{prop}
-
-\begin{proof}
-    For clarity, we draw the diagram: 
-
-\begin{diagram}
-\begin{tikzcd}[row sep=large, column sep=large]
-Z \times_X Y \arrow[r] \arrow[d] & Y \arrow[d, "f"] & U \times_X Y \arrow[l] \arrow[d] \\
-Z \arrow[r, "closed"] & X & U \arrow[l, "open"] \\
-\end{tikzcd}
-\end{diagram}
-
-We have that $\eta' \rightarrow \eta$ is unramified. hence $\cF$ unramified on $\eta$ if and only if $f^*\cF$ is unramified on $\eta$ (from proposition in the beginning)
-
-\end{proof}
-
+\begin{cor}[\cite{Guignard2018}, Corollary 2.13]
+    Let $G$ be a finite abelian group, let $S$ be a scheme, and let $X$ be an $S$-scheme.
+    Then the category of $G$-torsors over $X$ in $S_{\text{Et}}$ is equivalent to the category of $G$-torsors over $X$ (the terminal object) in $X_{\text{ét}}$.
+\end{cor}
 
 \subsubsection{Symmetric Powers of Schemes and Torsors}
 This section reviews the construction of quotients for schemes and torsors under finite group actions, specifically focusing on symmetric powers. 
@@ -308,6 +201,170 @@ of fundamental groups.
     of fundamental groups.
 \end{cor}
 \textcolor{red}{add about tameness?}
+
+%
+% Tame Ramification
+%
+
+\subsection{\texorpdfstring{Tame Ramification and Ramification of $G$-Torsors}{Tame Ramification and Ramification of G-Torsors}}
+Regarding Tame Ramification we follow \stackstag{0BSE}. It is worth mentioning \cite{Kerz-Schmidt} for the different notions of tameness in higher dimensions, and to what
+extent they agree. 
+
+Assume we are given:
+\begin{enumerate}
+    \item a locally Noetherian scheme $X$,
+    \item a dense open $U \subset X$
+    \item a finite étale morphism $f : Y \to U$
+\end{enumerate}
+such that for every prime divisor $Z \subset X$ with $Z \cap U = \emptyset $ 
+the local ring $\mathcal{O}_{X, \xi }$ of $X$ at the generic point $\xi $ of $Z$ is a discrete valuation ring. 
+Setting $K_\xi $ equal to the fraction field of $\mathcal{O}_{X, \xi }$ we obtain a cartesian square
+\[ \xymatrix{ \mathop{\mathrm{Spec}}(K_\xi ) \ar[r] \ar[d] & U \ar[d] \\ \mathop{\mathrm{Spec}}(\mathcal{O}_{X, \xi }) \ar[r] & X } \]
+of schemes. 
+In particular, we see that $Y \times _ U \mathop{\mathrm{Spec}}(K_\xi )$ is the spectrum of a finite separable algebra $L_\xi /K_\xi $. Then we say $Y$ is unramified over $X$ in codimension $1$, resp. $Y$ is tamely ramified over $X$ in codimension $1$ if $L_\xi /K_\xi $ is unramified, resp. tamely ramified with respect to $\mathcal{O}_{X, \xi }$ for every $(Z, \xi )$ as above, see More on Algebra, Definition 15.112.7. More precisely, we decompose $L_\xi $ into a product of finite separable field extensions of $K_\xi $ and we require each of these to be unramified, resp. tamely ramified with respect to $\mathcal{O}_{X, \xi }$.
+
+
+
+
+
+Let $k$ be a perfect field and let $C$ be a projective smooth
+geometrically connected curve over $k$, with genus $g$. Let $\mathfrak{m} = \sum_{i} n_i P_i$ be a modulus (i.e. an effective Cartier divisor) on $C$ 
+and let $U = C \setminus \mathfrak{m}$.
+
+
+\begin{definition}
+A $G$-torsor $\cP$ on $U_{\text{ét}}$ has \textbf{ramification bounded by} $\mdls$ \textbf{over} $\Spec(k)$ if for every index $i$ and every geometric point 
+$\bar{x} \in C(\bar{k})$ lying over $P_i$, the restriction of $\cP$ to 
+\[
+\Spec(\widehat{\mathcal{O}_{C_{\bar{k}},\bar{x}}}) \times_{C_{\bar{k}}} U_{\bar{k}}
+\]
+has ramification bounded by the multiplicity $n_i$ (i.e., the multiplicity of $\mathfrak{m}$ at $P_i$).
+\end{definition}
+
+%This is equivilant to homomorphism defintion.%
+
+Let $k$ be a perfect field and let $X$ be a scheme over $k$.
+Let $G$ be a finite abelian group. Let $P \in X$ be a closed point and let $\cF$ be a local system on $U_P \subset X$.
+\begin{definition}
+    
+\end{definition}
+
+\textcolor{red}{EDIT AND REFINE THIS ENTIRE THING.}
+
+\begin{definition}[Version 1: Pure Openness]
+Let $C$ be a curve over a field $k$. Let $P \ in C$ be closed point. $U=C-P$ be the complement. Let $\cF$ be a local system on $U$. let $\eta \in P$ be the generic point of $P$ (it is irreducible of codim=1 in $C$)
+Then $\cF$ has ramification bounded by $d$ on $P$ if and only if
+$\restr{\cF}{\eta}$ is a field extension of ramification bounded by $d$. 
+\end{definition}
+
+We want to explain why $\restr{\cF}{\eta}$ is a finite field extension of $k(C)$. We are in the following situation:
+
+\begin{equation*}
+\begin{tikzcd}
+i^{*}\cF \arrow[d] & \cF \arrow[d] \\
+P \arrow[r, "i"] & C          
+\end{tikzcd}
+\end{equation*}
+
+So, we are asking, what are local system $\cG$ on $P$.
+$P=\spec(k(P))$
+
+Version 2: With etale coverings.
+
+
+\quad what is a local system on $X$, what is a local system on $P \rightarrow C$, what is a local system on $\spec \Oo_P \rightarrow C$
+
+
+locally constant sheaves are given by: \stackstag{09Y8}
+
+\textcolor{red}{EDIT AN REFINE THIS ENTIRE THING}
+The goal is to  1. define what ramificaiton of local system means in different settings
+2. explore basic properties and ways to calculate. 
+
+\begin{definition}
+    Let $G$ be a finite abelian group and let $d \geq 0$ be a rational number. A $G$-torsor over $\operatorname{Spec}(L)$ (in $\operatorname{Spec}(k)_{\text {Ét }}$ ), corresponding to a continuous homomorphism $\rho: G_L \rightarrow G$, is said to have ramification bounded by $d$ if $\rho\left(G_L^d\right)=\{1\}$. A $G$-torsor over $\operatorname{Spec}(L)$ with ramification bounded by 0 (resp. 1) is said to be unramified (resp. tamely ramified).
+\end{definition}
+
+\textbf{Explain why a $G$ torsor over $\Spec(L)$ in 
+$\operatorname{Spec}(k)_{\text {Ét }}$} correspond to a continuous homomorphism $\rho: G_{L} \rightarrow G$
+
+\textbf{Explanation:}
+Let $L^{sep}$ be a separable closure of $L$, and let $G_L$ be the Galois group of $L^{sep}$ over $L$ then
+\begin{enumerate}
+    \item the small étale topos of $\Spec(L)$ is isomorphic to the topos of sets with continuous left $G_L$-action.
+    \item  By 2.13, the category of $G$-torsors over $\Spec(L)$ in $\Spec(k)_{Et}$ is isomorphic to the category of $G$-torsors
+    in the small étale topos $\Spec(L)_{et}$.
+    \item  Correspondingly, for each finite abelian group $G$, the group
+    of isomorphism classes of the category $Tors(\Spec(L), G)$ is isomorphic to the group of continuous
+    homomorphisms from $G_L$ to $G$.
+\end{enumerate}
+We want to show 3 explicitly. 
+
+\textbf{What is an isomorphism class of "$G$-sets with continuous left $G_L$ action"}
+before, we understand 
+\textbf{What is an isomorphism class of "sets with continuous left $G_L$ action" is a continuous $G$ action}
+
+
+We want to show
+How, from a $G$-Torsor $P$ in the $\Spec(L)_{et}$ we get a set with ccontinious homomorphism from $G_L$
+\textbf{}
+
+
+
+
+\textbf{Example-Explain!!!}
+
+Remark 3.10. If $P \rightarrow \operatorname{Spec}(L)$ is a $G$-torsor in $\operatorname{Spec}(k)_{\text {Ét }}$, then we have a finite decomposition
+$$
+P=\coprod_{i \in I} \operatorname{Spec}\left(L_i\right)
+$$
+where each $L_i$ is a finite separable extension of $L$, and are pairwise isomorphic. The $G$-torsor $P$ has ramification bounded by $d$ if and only if for each $i$ (or, equivalently, for some $i$ ) the extension $L_i / L$ has ramification bounded by $d$, in the sense $G_L^d$ acts trivially on the finite set $\operatorname{Hom}_L\left(L_i, L^{\text {sep }}\right)$.
+
+\begin{definition}\label{definition:ulscodim1} let $X$ be good enough (irreducible, regular at codim=1? smooth?), $U$ open subscheme and $Z$ the complemenet which is irreducible closed subscheme of $codim=1$. let $\eta$ be the generic point of $Z$. and let $\cF$ be a local system on $U$ as in:
+\begin{equation}
+\begin{tikzcd}
+               &             & &  \cF \arrow[d]                   \\
+\eta \arrow[r] & Z \arrow[r] & X           & U \arrow[l, hook']
+\end{tikzcd}
+\end{equation}
+
+\textbf{Example-Explain!!!}
+
+Then we say $\cF$ is unramified on $Z$ if and only if $\restr{\cF}{\eta}$ is unramified.
+
+Note that
+\end{definition}
+
+\begin{theorem}
+let $X,U,Z,\cF$ be as in \cref{definition:ulscodim1}. If $\cF$ is unramified on $Z$, then $\cF$ is pulledback from a local system on $X$
+\end{theorem}
+
+Next we have a general proposition.
+
+\begin{prop}
+Let $X$ be a normal Noetherian scheme, and let $Z \subset X$ an irreducible closed subscheme of codimension 1 (a prime divisor)
+Let $U=X \setminus Z$ be the open complement, and $\eta$ the generic point of $Z$.
+Let $f: Y \to X$ be a finite surjective morphism, where $Y$ is also a normal Noetherian scheme.
+Suppose there exists an irreducible component $Z' \subset f^{-1}(Z)$ with generic point $\eta'$ such that
+$f$ is unramified at $\eta'$. 
+
+Then:
+
+\end{prop}
+
+\begin{proof}
+    For clarity, we draw the diagram: 
+
+\begin{diagram}
+\begin{tikzcd}[row sep=large, column sep=large]
+Z \times_X Y \arrow[r] \arrow[d] & Y \arrow[d, "f"] & U \times_X Y \arrow[l] \arrow[d] \\
+Z \arrow[r, "closed"] & X & U \arrow[l, "open"] \\
+\end{tikzcd}
+\end{diagram}
+
+We have that $\eta' \rightarrow \eta$ is unramified. hence $\cF$ unramified on $\eta$ if and only if $f^*\cF$ is unramified on $\eta$ (from proposition in the beginning)
+
+\end{proof}
 
 
 %

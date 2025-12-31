@@ -76,6 +76,46 @@
       \field{pages}{166+vi}
       \range{pages}{-1}
     \endentry
+    \entry{Kerz-Schmidt}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=fa8cc87e1d5583dd0dcd02f10413e8c3}{%
+           family={Kerz},
+           familyi={K\bibinitperiod},
+           given={Moritz},
+           giveni={M\bibinitperiod}}}%
+        {{hash=eae8e84585cf2e15f4e98904aa5aeb11}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{450b0f7d62d083e47806284d78c58a2b}
+      \strng{fullhash}{450b0f7d62d083e47806284d78c58a2b}
+      \strng{fullhashraw}{450b0f7d62d083e47806284d78c58a2b}
+      \strng{bibnamehash}{450b0f7d62d083e47806284d78c58a2b}
+      \strng{authorbibnamehash}{450b0f7d62d083e47806284d78c58a2b}
+      \strng{authornamehash}{450b0f7d62d083e47806284d78c58a2b}
+      \strng{authorfullhash}{450b0f7d62d083e47806284d78c58a2b}
+      \strng{authorfullhashraw}{450b0f7d62d083e47806284d78c58a2b}
+      \field{labelalpha}{KS10}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Math. Ann.}
+      \field{number}{3}
+      \field{title}{On different notions of tameness in arithmetic geometry}
+      \field{volume}{346}
+      \field{year}{2010}
+      \field{pages}{641\bibrangedash 668}
+      \range{pages}{28}
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1007/s00208-009-0409-6
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1007/s00208-009-0409-6
+      \endverb
+    \endentry
     \entry{Toth2011}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=f86fe1ca1919ddf36a115b7343a6e40a}{%

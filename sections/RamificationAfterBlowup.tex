@@ -40,7 +40,7 @@ We then prove \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction} in
 \subsection{Reduction Lemmas}
 
 The first lemma is from \cite{takeuchi2019blow}, we include their proof for the convenience of the reader.
-\begin{lemma}[\cite{takeuchi2019blow}, Lemma 4.1]\label{lemma:takeuchi_lemma}
+\begin{lemma}[\cite{takeuchi2019blow}, Lemma 4.1]
      Let $C$ be a projective smooth geometrically connected curve over a perfect field $k$. 
      Let $\mdls = \sum_{i=1}^{r} k_i P_i$ where $P_1, ..., P_r$ are disctinct closed points of $\mdls$. Let $U$ be the comlement of $\mdls$ in $C$.
      And let $d_i= \deg Pi$. Take $d \geq \mdls$. Then:
@@ -50,6 +50,36 @@ The first lemma is from \cite{takeuchi2019blow}, we include their proof for the 
      $n_1 P_1 + \dots n_r P_r + P_{r+1} + \dots + P_{r+d - \deg \mathfrak{m}}$, where $P_1, \dots, P_{r+d - \deg \mathfrak{m}}$ are distinct points of $U(k)$.
 \end{proof}     
 \end{lemma}
+
+The following lemma is adapted from \cite{takeuchi2019blow} (Lemma 4.1)
+\begin{lemma}\label{lemma:takeuchi_lemma}
+     Let $C$ be a projective, smooth, and geometrically connected curve over a perfect field $k$. 
+     Let $\mathfrak{m} = \sum_{i=1}^{r} k_i P_i$ be an effective divisor where $P_1, \dots, P_r$ are distinct closed points. 
+     Let $U = C \setminus \mathfrak{m}$ and let $d \geq \deg \mathfrak{m}$.
+
+     Suppose $\mathfrak{n}_1, \dots, \mathfrak{n}_l$ are pairwise coprime submoduli of $\mathfrak{m}$ such that $\mathfrak{m} = \sum_{j=1}^l \mathfrak{n}_j$. 
+     Consider the summation morphism:
+     \[
+     \pi : C^{(\deg \mathfrak{n}_1)} \times_k \dots \times_k C^{(\deg \mathfrak{n}_l)} \times_k C^{(d - \deg \mathfrak{m})} \longrightarrow C^{(d)}
+     \]
+     defined by $(D_1, \dots, D_l, D_{extra}) \mapsto \sum_{j=1}^l D_j + D_{extra}$.
+
+     Then $\pi$ is étale at the generic point of the closed subvariety 
+     \[
+     V = \{\mathfrak{n}_1\} \times_k \dots \times_k \{\mathfrak{n}_l\} \times_k C^{(d - \deg \mathfrak{m})}
+     \]
+     inside the domain $C^{(\deg \mathfrak{n}_1)} \times_k \dots \times_k C^{(\deg \mathfrak{n}_l)} \times_k C^{(d - \deg \mathfrak{m})}$.
+
+\begin{proof}
+     We may assume that $k$ is algebraically closed (hence $\deg P_i = 1$ for all $i$). By miracle flatness $\pi$ is finite flat. 
+     Thus, it is enough to show that there exists a closed point $Q$ of $\ndls_1 + \dots \ndls_l + C^{(d - \deg \mathfrak{m})} \subset C^{(d)}$ 
+     over which there are $\deg \pi$ points on $C^{(\ndls_1)} \times_k \dots \times_k C^{(\ndls_l)} \times_k C^{(d - \deg \mathfrak{m})}$. (Because it will be unramified 
+     at this point and thus also at the generic point of $V$.)
+     Choose $Q$ as a point corresponding to a divisor
+     $\ndls_1 + \dots + \ndls_l + P_{r+1} + \dots + P_{r+d - \deg \mathfrak{m}}$, where $P_1, \dots, P_{r+d - \deg \mathfrak{m}}$ are distinct points of $U(k)$.
+\end{proof}     
+\end{lemma}
+
 
 \textbf{Plan for Corollary}
 \begin{enumerate}
