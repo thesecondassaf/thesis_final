@@ -62,7 +62,7 @@ The following diagram commutes up to natural isomorphism:
 \textcolor{red}{Say something about the toposes of Etale and etale, maybe add them up in the notation.}
 We recall some propositions about $G$-torsors that will be useful later.
 
-\begin{prop}[\cite{Guignard2018}, Proposition 2.12]
+\begin{prop}[\cite{Guignard2018}, Proposition 2.12]\label{prop:torsor_representable}
 Let $G$ be a finite abelian group, let $S$ be a scheme, and let $\cP$ be a $G$-torsor over an $S$-scheme $X$ in $S_{\text{Et}}$.
 Then the etale sheaf $\cP$ is representable by a finite etale $X$-scheme.
 \end{prop}
@@ -206,10 +206,41 @@ of fundamental groups.
 % Tame Ramification
 %
 
+\subsection{Algebraic Preliminaries on Ramification}
+We recall some algebraic preliminaries on ramification theory of discrete valuation rings, following \stackstag{0EXQ}.
+
+Let $A$ be a discrete valuation ring with fraction field $K$. Let $L/K$ be a finite separable field extension. Let $B \subset L$ be the integral closure of $A$ in $L$. Picture:
+
+\[ \xymatrix{ B \ar[r] & L \\ A \ar[u] \ar[r] & K \ar[u] } \]
+By \stackstag{032L} the ring extension $A \subset B$ is finite, hence $B$ is Noetherian. 
+By \stackstag{00OK} the dimension of $B$ is $1$, hence $B$ is a Dedekind domain, see \stackstag{034X}. 
+Let $\mathfrak m_1, \ldots , \mathfrak m_ n$ be the maximal ideals of $B$ (i.e., the primes lying over $\mathfrak m_ A$). We obtain extensions of discrete valuation rings
+
+\[ A \subset B_{\mathfrak m_ i} \]
+and hence ramification indices $e_ i$ and residue degrees $f_ i$. We have
+
+\[ [L : K] = \sum \nolimits _{i = 1, \ldots , n} e_ i f_ i \]
+by \stackstag{02MJ} applied to a uniformizer in $A$. We observe that $n = 1$ if $A$ is henselian (by \stackstag{04GH} and the fact that $B$ is a domain), e.g. if $A$ is complete.
+
+\begin{definition}\label{definition:tamely_ramified_dvrs}
+Let $A$ be a discrete valuation ring with fraction field $K$. Let $L/K$ be a finite separable extension. With $B$ and $\mathfrak m_ i$, $i = 1, \ldots , n$ 
+as above, we say the extension $L/K$ is
+\begin{enumerate}
+    \item unramified with respect to $A$ if $e_ i = 1$ and the extension $\kappa (\mathfrak m_ i)/\kappa _ A$ is separable for all $i$,
+    \item tamely ramified with respect to $A$ if either the characteristic of $\kappa _ A$ is $0$ or the characteristic of $\kappa _ A$ is $p > 0$, the field extensions $\kappa (\mathfrak m_ i)/\kappa _ A$ are separable, and the ramification indices $e_ i$ are prime to $p$, and
+    \item totally ramified with respect to $A$ if $n = 1$ and the residue field extension $\kappa (\mathfrak m_1)/\kappa _ A$ is trivial.
+\end{enumerate}
+If the discrete valuation ring $A$ is clear from context, then we sometimes say $L/K$ is unramified, totally ramified, or tamely ramified for short.
+\end{definition}
+
+Note that in the case of global and local fields (taking $A$ to be the local ring at a prime of the ring of integers), this definition of tame ramification coincides with the usual one.
+
+
 \subsection{\texorpdfstring{Tame Ramification and Ramification of $G$-Torsors}{Tame Ramification and Ramification of G-Torsors}}
 Regarding Tame Ramification we follow \stackstag{0BSE}. It is worth mentioning \cite{Kerz-Schmidt} for the different notions of tameness in higher dimensions, and to what
 extent they agree. 
 
+\begin{definition}\label{definition:tamely_ramified_in_codim_1}
 Assume we are given:
 \begin{enumerate}
     \item a locally Noetherian scheme $X$,
@@ -221,16 +252,26 @@ the local ring $\mathcal{O}_{X, \xi }$ of $X$ at the generic point $\xi $ of $Z$
 Setting $K_\xi $ equal to the fraction field of $\mathcal{O}_{X, \xi }$ we obtain a cartesian square
 \[ \xymatrix{ \mathop{\mathrm{Spec}}(K_\xi ) \ar[r] \ar[d] & U \ar[d] \\ \mathop{\mathrm{Spec}}(\mathcal{O}_{X, \xi }) \ar[r] & X } \]
 of schemes. 
-In particular, we see that $Y \times _ U \mathop{\mathrm{Spec}}(K_\xi )$ is the spectrum of a finite separable algebra $L_\xi /K_\xi $. Then we say $Y$ is unramified over $X$ in codimension $1$, resp. $Y$ is tamely ramified over $X$ in codimension $1$ if $L_\xi /K_\xi $ is unramified, resp. tamely ramified with respect to $\mathcal{O}_{X, \xi }$ for every $(Z, \xi )$ as above, see More on Algebra, Definition 15.112.7. More precisely, we decompose $L_\xi $ into a product of finite separable field extensions of $K_\xi $ and we require each of these to be unramified, resp. tamely ramified with respect to $\mathcal{O}_{X, \xi }$.
+In particular, we see that $Y \times _ U \mathop{\mathrm{Spec}}(K_\xi )$ is the spectrum of a finite separable algebra $L_\xi /K_\xi $. 
+Then we say $Y$ is unramified over $X$ in codimension $1$, resp. $Y$ is tamely ramified over $X$ in codimension $1$ if $L_\xi /K_\xi $ is unramified, resp. tamely ramified 
+with respect to $\mathcal{O}_{X, \xi }$ for every $(Z, \xi )$ as above, (\Cref{definition:tamely_ramified_dvrs}). 
+More precisely, we decompose $L_\xi $ into a product of finite separable field extensions of $K_\xi $ and we require each of these to be unramified, resp. tamely ramified with 
+respect to $\mathcal{O}_{X, \xi }$.
+\end{definition}
 
 
-
-
-
+We now get specific. 
+Let $G$ be a finite abelian group.
 Let $k$ be a perfect field and let $C$ be a projective smooth
 geometrically connected curve over $k$, with genus $g$. Let $\mathfrak{m} = \sum_{i} n_i P_i$ be a modulus (i.e. an effective Cartier divisor) on $C$ 
 and let $U = C \setminus \mathfrak{m}$.
+Let $\cP$ be a $G$-torsor in $U_{\text{ét}}$.
+By \Cref{prop:torsor_representable}, $\cP$ is representable by a finite etale $U$-scheme. The conditions of \Cref{definition:tamely_ramified_in_codim_1} are satisfied.
+And thus we can speak about $\cP$ being tamely ramified (or unramified) over $C$.
 
+Moreover, %expand on the situation here, explain why the fields invloved are galois and we can define higher ramification groups.% 
+
+%The fields $L_\xi$ 
 
 \begin{definition}
 A $G$-torsor $\cP$ on $U_{\text{ét}}$ has \textbf{ramification bounded by} $\mdls$ \textbf{over} $\Spec(k)$ if for every index $i$ and every geometric point 
