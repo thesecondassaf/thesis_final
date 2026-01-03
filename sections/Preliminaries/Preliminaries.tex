@@ -207,8 +207,13 @@ of fundamental groups.
 %
 
 \subsection{Algebraic Preliminaries on Ramification}
-We recall some algebraic preliminaries on ramification theory of discrete valuation rings, following \stackstag{0EXQ}.
+\textcolor{red}{change?}
+We recall the basic definitions and properties of the ramification of discrete valuations. 
+We start with the general case of discrete valuation rings and their integral closures within finite separable field extensions. 
+Then, we move to the specific setting of complete discrete valuation rings within Galois extensions, where we describe the ramification filtration of the Galois group via both lower and upper numbering.
+We follow \stackstag{0EXQ}, and \cite{serreLF}.
 
+\subsubsection*{Ramification of Discrete Valuation Rings}
 Let $A$ be a discrete valuation ring with fraction field $K$. Let $L/K$ be a finite separable field extension. Let $B \subset L$ be the integral closure of $A$ in $L$. Picture:
 
 \[ \xymatrix{ B \ar[r] & L \\ A \ar[u] \ar[r] & K \ar[u] } \]
@@ -233,13 +238,44 @@ as above, we say the extension $L/K$ is
 If the discrete valuation ring $A$ is clear from context, then we sometimes say $L/K$ is unramified, totally ramified, or tamely ramified for short.
 \end{definition}
 
-Note that in the case of global and local fields (taking $A$ to be the local ring at a prime of the ring of integers), this definition of tame ramification coincides with the usual one.
+%We will need that broad definition of tame ramification in order to deal with higher dimensional schemes, 
+%however note that in the case of global and local fields (taking $A$ to be the local ring at a prime of the ring of integers), 
+%this definition of tame ramification coincides with the usual one.
+
+\subsubsection*{Classical Ramification Filtration in the Galois Case}
+We now recall the classical ramification filtration in the Galois case.
+Assume $A,B$ are complete DVRs. And that $L/K$ is Galois with Galois group $G$. 
+In that case there is uniformizer $\pi \in B$ such that $B=A[\pi ]$ 
+   
+We have the ramification filtration of $G$ by lower numbering $(G_i)_{i \geq -1}$, defined by
+\[ G_i = \{ \sigma \in G \mid v_B(\sigma (x) - x) \geq i + 1 \text{ for all } x \in B \} \]
+where $v_B$ is the valuation on $L$ associated to $B$. 
+In particular, $G_{-1} = G$ and $G_0$ is the inertia group of the extension $L/K$. 
+We have that $L/K$ is unramified if and only if $G_0$ is trivial, and $L/K$ is tamely ramified if and only if $G_1$ is trivial.
+It is easy exercise that in the definition of $G_i$ it is enough to check the condition for the uniformizer $\pi$ of $B$, if we define
+$i^L_K(\sigma ) = v_B(\sigma (\pi ) - \pi )$ for $\sigma \in G$, then we have $G_i = \{ \sigma \in G \mid i^L_K(\sigma ) \geq i + 1 \}$.
+The groups $G_i$ are normal in $G$ and are trivial for large enough $i$. In a tower of fields $K \subset E \subset L$, where $H=\Gal(L/E)$ we have
+\[ G_i \cap H = H_i \] for all $i \geq -1$, which corresponds to the fact that $i^L_E = i^L_K|_{\mathrm{Gal}(L/E)}$.
+Ramification groups also behave well with respect to quotients: $G_i H/H=(G/H)_j$.
+where \[ j=\frac{1}{e_{L/E}}\sum_{\tau \in H} \min(i^L_K(\tau), i+1)-1 \]
+i.e. the quotient of a ramification group is itself a ramification group, but with a different index.
+In the literature, one reindexes the ramification groups by defining the Herbrand function $\phi_{L/K} : [-1, \infty ) \to [-1, \infty )$:
+\[ \phi_{L/K}(i) = \frac{1}{e_{L/K}}\sum_{\sigma \in G} \min(i^L_K(\sigma), i+1)-1 = \int _0^i \frac{1}{[G_0 : G_t]} dt \]
+It is continuous, increasing, piecewise linear function, hence a bijection.
+It satisfies $\phi_{L/K}=\phi_{E/K} \circ \phi_{L/E}$ for $K \subset E \subset L$, and $G_iH/H=(G/H)_{\phi_{L/E}(i)}$.
+Thus, defining the ramification groups by upper numbering as $G^i = G_{\phi_{L/K}^{-1}(i)}$, we have:
+\[ G^i H/H = (G/H)^i \]
+for all $i \geq -1$.
+
+
+
 
 
 \subsection{\texorpdfstring{Tame Ramification and Ramification of $G$-Torsors}{Tame Ramification and Ramification of G-Torsors}}
 Regarding Tame Ramification we follow \stackstag{0BSE}. It is worth mentioning \cite{Kerz-Schmidt} for the different notions of tameness in higher dimensions, and to what
 extent they agree. 
 
+\subsubsection*{Tame Ramification of etale covering in Codimension 1}
 \begin{definition}\label{definition:tamely_ramified_in_codim_1}
 Assume we are given:
 \begin{enumerate}
@@ -259,36 +295,38 @@ More precisely, we decompose $L_\xi $ into a product of finite separable field e
 respect to $\mathcal{O}_{X, \xi }$.
 \end{definition}
 
-
-We now get specific. 
+\subsubsection*{Ramification of \texorpdfstring{$G$-Torsors}{G-Torsors} over Curves}
 Let $G$ be a finite abelian group.
 Let $k$ be a perfect field and let $C$ be a projective smooth
 geometrically connected curve over $k$, with genus $g$. Let $\mathfrak{m} = \sum_{i} n_i P_i$ be a modulus (i.e. an effective Cartier divisor) on $C$ 
 and let $U = C \setminus \mathfrak{m}$.
 Let $\cP$ be a $G$-torsor in $U_{\text{ét}}$.
-By \Cref{prop:torsor_representable}, $\cP$ is representable by a finite etale $U$-scheme. The conditions of \Cref{definition:tamely_ramified_in_codim_1} are satisfied.
-And thus we can speak about $\cP$ being tamely ramified (or unramified) over $C$.
+By \Cref{prop:torsor_representable}, $\cP$ is representable by a finite etale $U$-scheme. 
+%The conditions of \Cref{definition:tamely_ramified_in_codim_1} are satisfied. And thus we can speak about $\cP$ being tamely ramified (or unramified) over $C$.
 
-Moreover, %expand on the situation here, explain why the fields invloved are galois and we can define higher ramification groups.% 
+Let $P \in \mdls \subset C$ a closed point. Then $\Oo_{C,P}$ is a discrete valuation ring with fraction field $K_P$.
+Completing at the maximal ideal $\mathfrak{m}_P$ we obtain a complete discrete valuation ring $\widehat{\Oo_{C,P}}$ with fraction field $\widehat{K}_P$. 
 
-%The fields $L_\xi$ 
+%Pulling back $\cP$ to $\Spec
 
-\begin{definition}
-A $G$-torsor $\cP$ on $U_{\text{ét}}$ has \textbf{ramification bounded by} $\mdls$ \textbf{over} $\Spec(k)$ if for every index $i$ and every geometric point 
-$\bar{x} \in C(\bar{k})$ lying over $P_i$, the restriction of $\cP$ to 
-\[
-\Spec(\widehat{\mathcal{O}_{C_{\bar{k}},\bar{x}}}) \times_{C_{\bar{k}}} U_{\bar{k}}
-\]
-has ramification bounded by the multiplicity $n_i$ (i.e., the multiplicity of $\mathfrak{m}$ at $P_i$).
-\end{definition}
 
-%This is equivilant to homomorphism defintion.%
 
-Let $k$ be a perfect field and let $X$ be a scheme over $k$.
-Let $G$ be a finite abelian group. Let $P \in X$ be a closed point and let $\cF$ be a local system on $U_P \subset X$.
-\begin{definition}
+% \begin{definition}
+% A $G$-torsor $\cP$ on $U_{\text{ét}}$ has \textbf{ramification bounded by} $\mdls$ \textbf{over} $\Spec(k)$ if for every index $i$ and every geometric point 
+% $\bar{x} \in C(\bar{k})$ lying over $P_i$, the restriction of $\cP$ to 
+% \[
+% \Spec(\widehat{\mathcal{O}_{C_{\bar{k}},\bar{x}}}) \times_{C_{\bar{k}}} U_{\bar{k}}
+% \]
+% has ramification bounded by the multiplicity $n_i$ (i.e., the multiplicity of $\mathfrak{m}$ at $P_i$).
+% \end{definition}
+
+% %This is equivilant to homomorphism defintion.%
+
+% Let $k$ be a perfect field and let $X$ be a scheme over $k$.
+% Let $G$ be a finite abelian group. Let $P \in X$ be a closed point and let $\cF$ be a local system on $U_P \subset X$.
+% \begin{definition}
     
-\end{definition}
+% \end{definition}
 
 \textcolor{red}{EDIT AND REFINE THIS ENTIRE THING.}
 

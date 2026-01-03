@@ -1,19 +1,19 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'main.blg'
-[65] biber-darwin:340> INFO - === Thu Jan  1, 2026, 19:32:48
-[80] Biber.pm:420> INFO - Reading 'main.bcf'
-[158] Biber.pm:994> INFO - Found 8 citekeys in bib section 0
-[171] Biber.pm:4463> INFO - Processing section 0
-[180] Biber.pm:4654> INFO - Looking for bibtex file 'Bib.bib' for section 0
-[182] bibtex.pm:1713> INFO - LaTeX decoding ...
-[196] bibtex.pm:1519> INFO - Found BibTeX data source 'Bib.bib'
-[251] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[252] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[252] Biber.pm:4283> INFO - Sorting list 'ynt/global//global/global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[252] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[262] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[265] bbl.pm:779> INFO - Output to main.bbl
-[265] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/kg/c3fsd2p91nlg985f65trmhtw0000gn/T/biber_tmp_hDiz/98748cb99f551b2cbe7ee3b9c94c1e55_99146.utf8, line 74, warning: 17 characters of junk seen at toplevel
-[265] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/kg/c3fsd2p91nlg985f65trmhtw0000gn/T/biber_tmp_hDiz/98748cb99f551b2cbe7ee3b9c94c1e55_99146.utf8, line 93, warning: 17 characters of junk seen at toplevel
-[265] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/kg/c3fsd2p91nlg985f65trmhtw0000gn/T/biber_tmp_hDiz/98748cb99f551b2cbe7ee3b9c94c1e55_99146.utf8, line 126, warning: 72 characters of junk seen at toplevel
-[265] Biber.pm:133> INFO - WARNINGS: 3
+[68] biber-darwin:340> INFO - === Sat Jan  3, 2026, 17:04:28
+[83] Biber.pm:420> INFO - Reading 'main.bcf'
+[164] Biber.pm:994> INFO - Found 9 citekeys in bib section 0
+[177] Biber.pm:4463> INFO - Processing section 0
+[186] Biber.pm:4654> INFO - Looking for bibtex file 'Bib.bib' for section 0
+[188] bibtex.pm:1713> INFO - LaTeX decoding ...
+[203] bibtex.pm:1519> INFO - Found BibTeX data source 'Bib.bib'
+[262] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[262] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[262] Biber.pm:4283> INFO - Sorting list 'ynt/global//global/global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[262] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[274] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[277] bbl.pm:779> INFO - Output to main.bbl
+[277] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/kg/c3fsd2p91nlg985f65trmhtw0000gn/T/biber_tmp_qGeX/98748cb99f551b2cbe7ee3b9c94c1e55_56365.utf8, line 74, warning: 17 characters of junk seen at toplevel
+[277] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/kg/c3fsd2p91nlg985f65trmhtw0000gn/T/biber_tmp_qGeX/98748cb99f551b2cbe7ee3b9c94c1e55_56365.utf8, line 93, warning: 17 characters of junk seen at toplevel
+[277] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/kg/c3fsd2p91nlg985f65trmhtw0000gn/T/biber_tmp_qGeX/98748cb99f551b2cbe7ee3b9c94c1e55_56365.utf8, line 126, warning: 72 characters of junk seen at toplevel
+[277] Biber.pm:133> INFO - WARNINGS: 3

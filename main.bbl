@@ -49,6 +49,34 @@
       \field{volume}{224}
       \field{year}{1971}
     \endentry
+    \entry{serreLF}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=523a41970d92b80420ca6d5307619da7}{%
+           family={Serre},
+           familyi={S\bibinitperiod},
+           given={Jean-Pierre},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{523a41970d92b80420ca6d5307619da7}
+      \strng{fullhash}{523a41970d92b80420ca6d5307619da7}
+      \strng{fullhashraw}{523a41970d92b80420ca6d5307619da7}
+      \strng{bibnamehash}{523a41970d92b80420ca6d5307619da7}
+      \strng{authorbibnamehash}{523a41970d92b80420ca6d5307619da7}
+      \strng{authornamehash}{523a41970d92b80420ca6d5307619da7}
+      \strng{authorfullhash}{523a41970d92b80420ca6d5307619da7}
+      \strng{authorfullhashraw}{523a41970d92b80420ca6d5307619da7}
+      \field{labelalpha}{Ser79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Graduate texts in mathematics; 67}
+      \field{title}{Local Fields}
+      \field{year}{1979}
+    \endentry
     \entry{milneAV}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=638058cd23e53094700e44c2a4f389f5}{%
