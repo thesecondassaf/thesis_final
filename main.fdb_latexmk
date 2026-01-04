@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1767452666.29523 "main.bcf" "main.bbl" "main" 1767455840.1594 0
-  "Bib.bib" 1767195432.72608 4609 2dbe8e6f1bc1b191e84484e43711f63c ""
-  "main.bcf" 1767455839.86388 112952 ddcdaa426f222172ae7ab746bcc6264f "pdflatex"
+["biber main"] 1767521518.17433 "main.bcf" "main.bbl" "main" 1767529085.7448 0
+  "Bib.bib" 1767521040.86287 4146 f35f4cc069b0a85ac3e8a0b23b6bee3a ""
+  "main.bcf" 1767529085.46306 112952 ddcdaa426f222172ae7ab746bcc6264f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1767455836.20951 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1767455840.15987 0
-  "/Users/assaf/Desktop/Thesis/thesis final/main.tex" 1765806648.24072 1068 3cfe0b25567a6332f8bcc7b8831769dc ""
+["pdflatex"] 1767529081.90032 "/Users/assaf/Desktop/Thesis/thesis final/main.tex" "main.pdf" "main" 1767529085.74526 0
+  "/Users/assaf/Desktop/Thesis/thesis final/main.tex" 1767521575.66901 1069 66f48117391f33242a54f7077da58e78 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -80,6 +80,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1336858727 21098 d4aee7c0aac232caac5688b586b9363c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb" 1336858727 21251 56705123063d7b34002d6b6e7142345e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
@@ -330,15 +331,15 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "MacrosAndFigures.tex" 1766657494.24379 10943 e61f1576a9dcd300c0931ac464264b96 ""
   "includes.tex" 1765464538.58316 1289 1d2a91d93c16c77d6d088251225b0069 ""
-  "main.aux" 1767455839.85355 18804 a1aff9c549cd0cb15af0f29d4396034d "pdflatex"
-  "main.bbl" 1767452668.87476 12656 db644258b426c436542d9611123795df "biber main"
-  "main.out" 1767455839.85932 3985 2b713234ade5dc47bf6e59cd3e5cfc4e "pdflatex"
-  "main.run.xml" 1767455839.86499 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
-  "main.tex" 1765806648.24072 1068 3cfe0b25567a6332f8bcc7b8831769dc ""
-  "main.toc" 1767455839.86509 1892 9d9e5150c84ef460742a2bf3ebb458a8 "pdflatex"
+  "main.aux" 1767529085.45303 18960 df4a2e1bd565d24096c993bc9194c11d "pdflatex"
+  "main.bbl" 1767521543.69674 12520 82e69e7dc3e86b38b244e339a40896e9 "biber main"
+  "main.out" 1767529085.45865 3985 2b713234ade5dc47bf6e59cd3e5cfc4e "pdflatex"
+  "main.run.xml" 1767529085.4644 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.tex" 1767521575.66901 1069 66f48117391f33242a54f7077da58e78 ""
+  "main.toc" 1767529085.4645 1892 aa899dfc7d9cd1fb419618c85a5b104d "pdflatex"
   "sections/GeometricCFT/ProofOfReducedTheorem.tex" 1765805776.17585 2823 4b5d9835c7cc7ce6de82819ee7a46bed ""
-  "sections/Introduction.tex" 1766648159.13033 9014 66564fb9dc0049025df60221414ab355 ""
-  "sections/Preliminaries/Preliminaries.tex" 1767455835.91023 46123 dcabd1d2a8c057f34e9cb4147c7610b6 ""
+  "sections/Introduction.tex" 1767521197.9121 9014 66564fb9dc0049025df60221414ab355 ""
+  "sections/Preliminaries/Preliminaries.tex" 1767529077.20504 48777 26987cea24ba9972fff02aeb1072c781 ""
   "sections/RamificationAfterBlowup.tex" 1767176697.35478 10379 531b2261c22c534fbd989016b34eb383 ""
   (generated)
   "main.aux"

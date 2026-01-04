@@ -73,7 +73,6 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{subtitle}{Graduate texts in mathematics; 67}
       \field{title}{Local Fields}
       \field{year}{1979}
     \endentry
@@ -144,16 +143,13 @@
       \verb https://dx.doi.org/10.1007/s00208-009-0409-6
       \endverb
     \endentry
-    \entry{Toth2011}{thesis}{}{}
+    \entry{Toth2011}{article}{}{}
       \name{author}{1}{}{%
         {{hash=f86fe1ca1919ddf36a115b7343a6e40a}{%
            family={Tóth},
            familyi={T\bibinitperiod},
            given={Péter},
            giveni={P\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Universiteit Utrecht}%
       }
       \strng{namehash}{f86fe1ca1919ddf36a115b7343a6e40a}
       \strng{fullhash}{f86fe1ca1919ddf36a115b7343a6e40a}
@@ -169,8 +165,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
+      \field{note}{Master of Science thesis}
       \field{title}{Geometric Abelian Class Field Theory}
-      \field{type}{Master of Science thesis}
       \field{year}{2011}
       \verb{urlraw}
       \verb https://math.bu.edu/people/rmagner/Seminar/GCFTthesis.pdf
@@ -237,7 +233,7 @@
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://stacks.math.columbia.edu}}
       \field{shorthand}{Stacks}
-      \field{title}{\textit{Stacks Project}}
+      \field{title}{Stacks Project}
       \field{year}{2018}
     \endentry
     \entry{Guignard2018}{article}{}{}

@@ -305,7 +305,56 @@ By \Cref{prop:torsor_representable}, $\cP$ is representable by a finite etale $U
 %The conditions of \Cref{definition:tamely_ramified_in_codim_1} are satisfied. And thus we can speak about $\cP$ being tamely ramified (or unramified) over $C$.
 
 Let $P \in \mdls \subset C$ a closed point. Then $\Oo_{C,P}$ is a discrete valuation ring with fraction field $K_P$.
-Completing at the maximal ideal $\mathfrak{m}_P$ we obtain a complete discrete valuation ring $\widehat{\Oo_{C,P}}$ with fraction field $\widehat{K}_P$. 
+After completion at the maximal ideal $\mathfrak{m}_P$ we obtain a complete discrete valuation ring $\widehat{\Oo_{C,P}}$ with fraction field $\widehat{K}_P$. 
+Restricting the $G$-torsor $\cP$ to $\Spec(K_P),\Spec(\widehat{K}_P)$ we obtain $G$-torsors in $\Spec(\widehat{K}_P)_{\text{Ét}}$, $\Spec({K}_P)_{\text{Ét}}$ as in the diagram below:
+
+\[
+\begin{tikzcd}
+\cP|_{\Spec(\widehat{K}_P)} \arrow[d, color=purple] & \cP|_{\Spec(K_P)} \arrow[d, color=purple] & \cP \arrow[d, color=purple] \\
+\Spec(\widehat{K}_P) \arrow[r] \arrow[d] & \Spec(K_P) \arrow[r] \arrow[d] & U \arrow[d] \\
+\Spec(\widehat{\Oo_{C,P}}) \arrow[r] & \Spec(\Oo_{C,P}) \arrow[r] & C
+\end{tikzcd}
+\]
+
+
+The $G$-torsor $\cP|_{\Spec({K}_P)} \to \Spec({K}_P)$ is an 
+etale covering of $\Spec({K}_P)$.
+Hence decompose into a disjoint union of spectra of finite separable field extensions of ${K}_P$.
+\[ \cP|_{\Spec({K}_P)} = \bigsqcup_{i} \Spec(M_{i}) \]
+where each $M_{i}/{K}_P$ is a finite separable field extension.
+Pulling back  by $\Spec(\widehat{K_P})$ we get 
+\[ \cP|_{\Spec(\widehat{K}_P)} = \bigsqcup_{i} \Spec(M_{i} \otimes_{{K}_P} \widehat{K_P}) \] 
+Each product $M_{i} \otimes_{{K}_P} \widehat{K_P}$ decomposes into a finite product of finite separable field extensions of $\widehat{K_P}$.
+\[ M_{i} \otimes_{{K}_P} \widehat{K_P} = \prod_{Q} \widehat{M_{i}}_{,Q} \]
+Where $Q$ ranges over primes of $M_i$ above $P$, and each $\widehat{M_{i}}_{,Q}/\widehat{K_P}$ is a completion of $M_i$ at that prime. 
+
+To summarize, we have decomposition:
+\[ \cP|_{\Spec(\widehat{K}_P)} = \bigsqcup_{i} \Spec(F_{i}) \]
+Where each $F_{i}/\widehat{K_P}$ is a finite separable field extension.
+
+The fact that $\cP$ is a $G$-torsor implies that:
+\begin{enumerate}
+    \item The fields $F_{i}$ are pairwise isomorphic
+    \item The fields $F_{i}$ are Galois over $\widehat{K_P}$ with Galois group isomorphic to a subgroup of $H \subset G$.
+    \item The number of components $F_{i}$ is equal to the index $[G:H]$.
+\end{enumerate}
+
+We say the ramification of $F_i$ over $\widehat{K_P}$ is bounded by $r$ 
+if the ramification group $H^{r}$ (in upper numbering) is trivial.
+
+We say that the $G$-torsor $\cP|_{\Spec(\widehat{K}_P)}$ has ramification at $P$ bounded by $r$ if any of the $F_{i}/\widehat{K_P}$ has ramification bounded by $r$.
+
+We say that the $G$-torsor $\cP$ has ramification at $P$ bounded by $r$ if $\cP|_{\Spec(\widehat{K}_P)}$ has ramification at $P$ bounded by $r$.
+
+Finally,
+\begin{definition}
+We say that the $G$-torsor $\cP$ has ramification bounded by the modulus $\mathfrak{m} = \sum n_i P_i$ if for every $i$, the ramification of $\cP|_{\Spec(\widehat{K}_{P_i})}$ at $P_i$ is bounded by $n_i$.    
+\end{definition}
+
+\subsubsection*{Alternative Definition of Ramification of \texorpdfstring{$G$-Torsors}{G-Torsors} over Curves}
+
+
+
 
 %Pulling back $\cP$ to $\Spec
 
