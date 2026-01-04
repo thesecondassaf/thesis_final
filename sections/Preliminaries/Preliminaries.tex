@@ -1,5 +1,5 @@
 \section{Preliminaries}
-\textcolor{red}{where is the first tiem you introduce $\cP$ instead of $P$, mark it down, and explain}
+\textcolor{red}{Where is the first time you introduce $\cP$ instead of $P$, mark it down, and explain}
 In this section we recall the necessariy work, including work from \cite{Guignard2018}, \cite{tendler2015geometricclassfieldtheory} and \cite{takeuchi2019blow}.
 
 \subsection{Generalities}
@@ -238,6 +238,15 @@ as above, we say the extension $L/K$ is
 If the discrete valuation ring $A$ is clear from context, then we sometimes say $L/K$ is unramified, totally ramified, or tamely ramified for short.
 \end{definition}
 
+\subsubsection*{Structure Theorems and Some Lemmas}\label{subsubsection:structure_theorems_ramification}
+Let $A$ be a complete discrete valuation ring over with uniformizer $\pi$ and residue field $\kappa$, which we assume to be perfect.
+When $A$ and $\kappa$ are of the same characteristic $p > 0$, then $A$ contains a coefficient field $k \cong \kappa$ and a well known structure theorem holds: $A = k[[\pi ]] \cong k[[t]]$.
+Let $K$ be the fraction field of $A$, then $K=k((\pi))$.
+By \textcolor{red}{Kummer theory}, unramified extensions of $K$ correspond to separable extensions of $k$.
+The maximal unramified extension of $K$ is $\overline{k}((\pi))$ where $\overline{k}$ is a separable closure of $k$.
+ \textcolor{red}{Maybe add something about the above facts.}
+
+
 %We will need that broad definition of tame ramification in order to deal with higher dimensional schemes, 
 %however note that in the case of global and local fields (taking $A$ to be the local ring at a prime of the ring of integers), 
 %this definition of tame ramification coincides with the usual one.
@@ -272,6 +281,7 @@ for all $i \geq -1$.
 
 
 \subsection{\texorpdfstring{Tame Ramification and Ramification of $G$-Torsors}{Tame Ramification and Ramification of G-Torsors}}
+\textcolor{red}{Unramified scheme morphisms is not the same as unramified extensions of DVRs here, so be careful, and say something about that...}
 Regarding Tame Ramification we follow \stackstag{0BSE}. It is worth mentioning \cite{Kerz-Schmidt} for the different notions of tameness in higher dimensions, and to what
 extent they agree. 
 
@@ -348,26 +358,32 @@ We say that the $G$-torsor $\cP$ has ramification at $P$ bounded by $r$ if $\cP|
 
 Finally,
 \begin{definition}
-We say that the $G$-torsor $\cP$ has ramification bounded by the modulus $\mathfrak{m} = \sum n_i P_i$ if for every $i$, the ramification of $\cP|_{\Spec(\widehat{K}_{P_i})}$ at $P_i$ is bounded by $n_i$.    
+A $G$-torsor $\cP$ on $U_{\text{ét}}$ has \textbf{ramification bounded by} $\mdls=\sum n_i P_i$ \textbf{over} $\Spec(k)$
+if for every $i$, the ramification of $\cP|_{\Spec(\widehat{K}_{P_i})}$ at $P_i$ is bounded by $n_i$.    
 \end{definition}
 
 \subsubsection*{Alternative Definition of Ramification of \texorpdfstring{$G$-Torsors}{G-Torsors} over Curves}
+Choose a geometric point $\bar{s}=\Spec(\bar{k}) \to \Spec(k)$. corresponding to a separable closure $k^{sep}=\bar{k}$ of $k$.
+By \Cref{subsubsection:structure_theorems_ramification}, the higher ramification groups considered for $\cP|_{\Spec(\widehat{K}_P)}$
+and $\cP_{\bar{k}}|_{\Spec(\widehat{K_P \otimes \bar{k}})}$ are isomorphic.
+Thus, we define:
 
 
+\begin{definition}
+A $G$-torsor $\cP$ on $U_{\text{ét}}$ has \textbf{ramification bounded by} $\mdls$ \textbf{over} $\Spec(k)$ if for every geometric point 
+$\bar{x}$ of $\mdls$, with image $\bar{s}$ in $\Spec(k)$, the restriction of $\cP$ to 
+\[ \Spec(\widehat{\mathcal{O}_{C_{\bar{k}},\bar{x}}}) \times_{C_{\bar{k}}} U_{\bar{k}} \] 
+has ramification bounded by the multiplicity of $\mdls_{\bar{s}}$ at $\bar{x}$.
+\end{definition}
 
+\textbf{Explanation:} The two definitions are equivalent.
+This is immediate as $\Oo_{C_{\bar{k}},\bar{x}}$ is the strict henselization of $\Oo_{C_{\bar(k)},P}$
+So after completion it is $\widehat{\Oo_{C_{\bar{k}},\bar{x}}} \cong \widehat{\Oo_{C,P}} \otimes_{k} \bar{k}$.
+And taking the product with $Y_{\bar{k}}$ amounts to taking the fraction fields, i.e. we get
+$\Spec(\widehat{K_P \otimes \bar{k}})=\Spec(\widehat{K_P} \otimes_k \bar{k})$.
 
-%Pulling back $\cP$ to $\Spec
-
-
-
-% \begin{definition}
-% A $G$-torsor $\cP$ on $U_{\text{ét}}$ has \textbf{ramification bounded by} $\mdls$ \textbf{over} $\Spec(k)$ if for every index $i$ and every geometric point 
-% $\bar{x} \in C(\bar{k})$ lying over $P_i$, the restriction of $\cP$ to 
-% \[
-% \Spec(\widehat{\mathcal{O}_{C_{\bar{k}},\bar{x}}}) \times_{C_{\bar{k}}} U_{\bar{k}}
-% \]
-% has ramification bounded by the multiplicity $n_i$ (i.e., the multiplicity of $\mathfrak{m}$ at $P_i$).
-% \end{definition}
+\subsubsection*{The ramification in term of morphisms}
+maybe not needed. 
 
 % %This is equivilant to homomorphism defintion.%
 
