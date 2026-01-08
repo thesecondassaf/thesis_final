@@ -134,7 +134,7 @@ For the small sites we have:
     If $G$ is smooth affine $X$ group, then any $G$-torsor $\cP$ on $X_fl$ is locally trivial for the etale topology.
 \end{theorem}
 
-\begin{cor}
+\begin{cor}\label{cor:tors_etale_flat_eq}
     If $G$ is smooth affine $X$ group, then there is a canonical bijection of pointed sets (abelian groups if $G$ is abelian)
     $\Tors(X_{et}, G) \cong \Tors(X_{fl}, G)$
 \end{cor}
@@ -216,7 +216,7 @@ If $G$ is Abelian then $\mathrm{Inn}(G)$ is trivial, and we obtain:
     Let $G$ be a finite Abelian group, $X$ a connected scheme, and $\overline{x}$ a geometric point of $X$. Then, the map from \Cref{theorem:equivalence_fundamental_covers}
      induces an isomorphism of Abelian groups
     \begin{equation}
-        \mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, x), G) \xrightarrow{\cong} \Tors(X_{\mathrm{Fl}}, G)
+        \mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, \overline{x}), G) \xrightarrow{\cong} \Tors(X_{\mathrm{Fl}}, G)
     \end{equation}
 \end{cor}
 
@@ -614,25 +614,89 @@ $\Spec(\widehat{K_P \otimes \bar{k}})=\Spec(\widehat{K_P} \otimes_k \bar{k})$.
 
 Note that tame ramification and unramifiedness in terms of definition above coincide with the ones in \Cref{definition:tamely_ramified_in_codim_1}.
 
-\subsubsection*{Ramification of $G$-torsors in terms of Characters}
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
+%       Ramification of $G$-torsors in terms of Characters
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
+
+\subsubsection*{Ramification of $G$-torsors in terms of Characters}\label{section:ramification_characters}
+Since we are working over $X=\Spec(k)$, the group $G$ is $etale$ over $\Spec(k)$
+Hence by \Cref{cor:abelian_equivilance_fundamental_torsors} and \Cref{cor:tors_etale_flat_eq} we get an isomosphism of
+groups:
+$\mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, \overline{x}), G) \xrightarrow{\cong} \Tors(X_{\mathrm{et}}, G)$
+
+When $X=\Spec(L)$ for a complete valued field $L$, $\pi_1^{\text{ét}}(X, \overline{x})=G_L := Gal(L^{sep}/L)$
+Where $L^{sep}$ is a fixed seprable closure. 
+And we conclude that $\cP|_{\Spec(L)}$ correspond to a continious homomorphism $\rho: G_L \to G$
+and one can check that it has ramificaiton bounded by $r$ if and only if $\rho(G_L^r) = \{ 1\}$.
+
 
 
 \subsubsection*{Basic Properties of Ramification of \texorpdfstring{$G$-Torsors}{G-Torsors}}
 In this section we prove some basic properties of the ramification of $G$-torsors.
 
-\begin{lemma}
+\begin{lemma}\label{lemma:bounding_ramification_of_contracted_product}
     Let $G$ be a finite abelian group and $X$ be a locally Noetherian scheme over a field $k$. 
     Let $U \subset X$ be a dense open subset and let $Z$ be a prime divisor in the complement $X \setminus U$, and let $\xi$ denote its generic point.
 
-    Assume $\cP_1$ and $\cP_2$ are two $G$-torsors on $U_{\text{ét}}$, Such that $\cP_1$ is tamely ramified at $(Z, \xi)$, and $\cP_2$ is unramified at $(Z, \xi)$.
-    Then their contracted product $\cP_1 \wedge^G \cP_2$ is tamely ramified at $(Z, \xi)$.
+    Assume $\cP_1$ and $\cP_2$ are two $G$-torsors on $U_{\text{ét}}$, Such that $\cP_1$ has ramification bounded by $r_1$ at $(Z, \xi)$, and $\cP_2$ has ramification bounded by $r_2$ at $(Z, \xi)$.
+    Then their contracted product $\cP_1 \wedge^G \cP_2$ has ramification bounded by $max(r_1, r_2)$ at $(Z, \xi)$.
 \end{lemma}
 \begin{proof}
-    We can give two proofs.
-
+    Let $A=\widehat{\Oo_{X, \xi}}$ and let $K=Frac(A)$.
+    Let $\rho_1, \rho_2: G_K \to G$ be the associated continious homomorphisms corresponding to the $G$-torsors 
+    $\cP_1|_{\Spec(K)}$, $\cP_2|_{\Spec(K)}$.
+    Then the associated character to $(\cP_1 \wedge^G \cP_2)|_{\Spec(K)}$ is $\rho=\rho_1 + \rho_2$.
+    And the claim follows by \Cref{section:ramification_characters}
 \end{proof}
 
+The next lemma shows that ramification doesn't change under etale maps. 
+\begin{lemma}\label{lemma:descend_ramification_along_etale}
+    Let $X, U, f: Y \to U$ be as in \Cref{definition:tamely_ramified_in_codim_1}.
+    And let $(Z, \xi)$ be a prime divisor on $X$ with generic point $\xi$ such that $Z \cap U = \emptyset$.
+    Assume there is a morphism $g: X' \to X$, such that $U' = X' \times_X U$ is dense open subset, $(Z' = X' \times_X Z, \xi' = X' \times_X \xi)$
+    is a prime divisor with generic point $\xi'$.
+    \textbf{If $g$ is etale at $\xi'$}, then $f$ is unramified (resp. tamely ramified) at $(Z, \xi)$ if and only if 
+    $g': Y'=X' \times_X Y \to U'$ is unramified (resp. tamely ramified) at $(Z', \xi')$.
+\end{lemma}
+\begin{proof}
+Let $\mathcal{O}_{X,\xi}$ and $\mathcal{O}_{X',\xi'}$ be the discrete valuation rings (DVRs) associated with the generic points of $Z$ and $Z'$, and let $\mathfrak{m}_{\xi}$ and $\mathfrak{m}_{\xi'}$ be their respective maximal ideals. Let $\eta \in Y$ be a point such that $f(\eta) = \xi$, and let $\eta' \in Y'$ be the corresponding point in the fiber product $Y' = X' \times_X Y$ such that $g'(\eta') = \eta$ and $f'(\eta') = \xi'$.
 
+\medskip
+\noindent \textbf{1. Equality of Ramification Indices:} \\
+By definition, the ramification index $e(f, \eta)$ is the unique integer $e$ such that $\mathfrak{m}_{\xi} \mathcal{O}_{Y,\eta} = \mathfrak{m}_{\eta}^e$. Since $g: X' \to X$ is \textbf{étale} at $\xi'$, the map of local rings $\mathcal{O}_{X,\xi} \to \mathcal{O}_{X',\xi'}$ is an étale local homomorphism. This implies:
+\begin{itemize}
+    \item $g$ is unramified at $\xi'$, so $\mathfrak{m}_{\xi} \mathcal{O}_{X',\xi'} = \mathfrak{m}_{\xi'}$.
+    \item The morphism $f'$ is obtained by the base change $Y' = Y \times_X X'$. Localizing at $\eta'$, we have $\mathcal{O}_{Y',\eta'} \cong \mathcal{O}_{Y,\eta} \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'}$.
+\end{itemize}
+Now, calculate the ramification index $e(f', \eta')$:
+\[
+\mathfrak{m}_{\xi'} \mathcal{O}_{Y',\eta'} = (\mathfrak{m}_{\xi} \mathcal{O}_{X',\xi'}) \mathcal{O}_{Y',\eta'} = \mathfrak{m}_{\xi} (\mathcal{O}_{Y,\eta} \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'}) = (\mathfrak{m}_{\xi} \mathcal{O}_{Y,\eta}) \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'}
+\]
+Substituting $\mathfrak{m}_{\xi} \mathcal{O}_{Y,\eta} = \mathfrak{m}_{\eta}^e$, we get:
+\[
+\mathfrak{m}_{\xi'} \mathcal{O}_{Y',\eta'} = \mathfrak{m}_{\eta}^e \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'} = (\mathfrak{m}_{\eta} \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'})^e = \mathfrak{m}_{\eta'}^e
+\]
+Thus, $e(f', \eta') = e(f, \eta)$.
+
+\medskip
+\noindent \textbf{2. Residue Field Extensions:} \\
+Let $\kappa(\xi)$ and $\kappa(\eta)$ denote the residue fields. The property of being unramified or tamely ramified depends on the extension $\kappa(\eta) / \kappa(\xi)$. Under the étale base change $g$, the new residue field extension is:
+\[
+\kappa(\eta') = \kappa(\eta) \otimes_{\kappa(\xi)} \kappa(\xi')
+\]
+Because $\kappa(\xi') / \kappa(\xi)$ is a finite separable extension (as $g$ is étale), properties of the extension $\kappa(\eta) / \kappa(\xi)$ are preserved:
+\begin{itemize}
+    \item $\kappa(\eta) / \kappa(\xi)$ is separable $\iff$ $\kappa(\eta') / \kappa(\xi')$ is separable.
+    \item The characteristic $p$ of the residue field is preserved. Since $e = e'$, then $p \nmid e \iff p \nmid e'$.
+\end{itemize}
+
+\medskip
+\noindent \textbf{Conclusion:} \\
+Since $e = e'$ and the separability of the residue field extension is invariant under étale base change, $f$ is unramified (resp. tamely ramified) at $(Z, \xi)$ if and only if $f'$ is unramified (resp. tamely ramified) at $(Z', \xi')$.
+\end{proof}
+
+\begin{rem*}
+For a Galois cover $f: Y \to U$, the equivalence established in the lemma extends naturally to the study of higher ramification groups. Specifically, under the same assumptions for the morphism $g: X' \to X$, the lemma remains valid if the conditions of being unramified or tamely ramified are replaced by the property of having ramification bounded by $r$.\end{rem*}
 
 \subsubsection*{The ramification in term of morphisms}
 maybe not needed. 
@@ -771,7 +835,7 @@ We have that $\eta' \rightarrow \eta$ is unramified. hence $\cF$ unramified on $
 Let $k$ be a perfect field. 
 Let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$.
 Let $\mdls$ be a modulus on $C$ and let $U = C \setminus \mdls$.
-Let $G$ be a finite abelian group and let $\cP$ be a $G$-torsor on $U$ with ramification bounded by
+Let $G$ be a finite Abelian group and let $\cP$ be a $G$-torsor on $U$ with ramification bounded by
 $\mdls$. Let $d \geq \deg m$.
 
 We have the following diagram:
@@ -827,7 +891,7 @@ We define the presheaf $\text{Pic}_{C, \mdls}^{d, \text{pre}}$ on $\text{Sch}/S$
 \subsubsection*{Representability and Structure}
 The fundamental properties of this functor are as follows:
 \begin{enumerate}
-    \item $\text{Pic}_{C, \mdls}^{d}$ is represented by an $S$-scheme. (Note: If $\mdls$ is faithfully flat over $S$, the presheaf is already an \'etale sheaf).
+    \item $\text{Pic}_{C, \mdls}^{d}$ is represented by an $S$-scheme. (Note: If $\mdls$ is faithfully flat over $S$, the presheaf is already a \'etale sheaf).
     \item $\text{Pic}_{C, \mdls}^{0}$ is a smooth commutative group $S$-scheme with geometrically connected fibers, referred to as the \textit{generalized Jacobian variety} of $C$ with modulus $\mdls$.
     \item For any $d$, $\text{Pic}_{C, \mdls}^{d}$ is a $\text{Pic}_{C, \mdls}^{0}$-torsor.
 \end{enumerate}

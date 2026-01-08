@@ -63,7 +63,7 @@ The following lemma is adapted from \cite{takeuchi2019blow} (Lemma 4.1)
 
 \begin{proof}
      We may assume that $k$ is algebraically closed (hence $\deg P_i = 1$ for all $i$). By miracle flatness $\pi$ is finite flat. 
-     Thus, it is enough to show that there exists a closed point $Q$ of $\ndls_1 + \dots \ndls_l + C^{(d - \deg \mathfrak{m})} \subset C^{(d)}$ 
+     It is enough to show that there exists a closed point $Q$ of $\ndls_1 + \dots \ndls_l + C^{(d - \deg \mathfrak{m})} \subset C^{(d)}$ 
      over which there are $\deg \pi$ points on $C^{(\ndls_1)} \times_k \dots \times_k C^{(\ndls_l)} \times_k C^{(d - \deg \mathfrak{m})}$. (Because it will be unramified 
      at this point and thus also at the generic point of $V$.)
      Choose $Q$ as a point corresponding to a divisor
@@ -71,13 +71,14 @@ The following lemma is adapted from \cite{takeuchi2019blow} (Lemma 4.1)
 \end{proof}     
 \end{lemma}
 
-\begin{cor}
+\begin{cor}\label{cor:etale_at_generic_point}
      The morphism $C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)} \xrightarrow[]{\pi} C^{(d)}$
      is finite flat everywhere, and étale at the generic point of the closed subvariety
      $Z_\mdls \times_k C^{(d - \deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)}$.     
 \end{cor}
 
-Following from this, we look at the following diagram, coming from the flat base change 
+Following from this, we look at the following diagram, coming from the flat base change
+
 $C^{(d - \deg \mdls)} \to \Spec(k)$ (\Cref{prop:symmetric_power_flat_base_change}) of \Cref{equation:blowup_diagram_ndls}:
 (\textcolor{red}{Is this even smooth? })
 
@@ -92,7 +93,7 @@ Hence it is well defined question according to \Cref{definition:tamely_ramified_
 $\cF^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)}$ is tamely ramified at the generic point $\theta$ of
 $E_{\mdls} \times_k C^{(d-\deg \mdls)}$.
 
-\begin{lemma}
+\begin{lemma}\label{lemma:tame_ramification_persists}
      If $\cF^{(\deg \mdls)}$ is tamely ramified at $\eta_\mdls$, then
      $\cF^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)}$ is tamely ramified at the generic point $\theta$ of
      $E_{\mdls} \times_k C^{(d-\deg \mdls)}$.
@@ -123,35 +124,35 @@ Thus, by the following lemma, we conclude that $\boxP{\cP^{(\deg \mdls)}}{\cP^{(
      If $\cP_1$ is tamely ramified at $\xi$, and $\cP_2$ is unramified at $\xi$,
      then the contracted product $\cP_1 \wedge^G \cP_2$ is tamely ramified at $\xi$.
 \end{lemma}
-%%%%%%%%%%%%%%%%%%
-We thus claim that the contracted product,
+\begin{proof}
+     This follows from \Cref{lemma:bounding_ramification_of_contracted_product}.
+\end{proof}
 
-is tamely ramified at $\theta$ the generic point of
-$E_{\mdls} \times_k U^{(d-\deg \mdls)}$.
+Combining this with \Cref{cor:etale_at_generic_point} we get
 
 \begin{cor}
      Let $\mdls$ be a modulus as above, and let $\eta_\mdls$ be the generic point of $E_\mdls$.
      Let $\cP$ be a $G$-torsor on $U_{et}$ with ramification bounded by $\mdls$.
      Assume $\cP^{(\deg \mdls)}$ is tamely ramified at $\eta_\mdls$.
-     Then $\Fbox{\deg \mdls}{d - \deg \mdls}$ is tamely ramified at the generic point $\theta$ of 
-     $E_{\mdls} \times_k C^{(d-\deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)}$
-     And $\cP^{(d)}$ is tamely ramified at the generic point $\eta_0=\eta_{\mdls,d}$ of $E_0=E_{\mdls,d}$
+     Then $\boxP{\cP^{(\deg \mdls)}}{\cP^{(d - \deg \mdls)}}$ is tamely ramified at the generic point $\theta$ of 
+     $E_{\mdls} \times_k C^{(d-\deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)}$,
+     and $\cP^{(d)}$ is tamely ramified at the generic point $\eta_0=\eta_{\mdls,d}$ of $E_0=E_{\mdls,d}$
 \end{cor}
-\begin{proof}
-     We look at the diagram:
-     \[\begin{tikzcd}
-     E_{\mdls} \times_k C^{(d - \deg \mdls)} \arrow[r, hook] \arrow[d] & C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)} \arrow[d, "\pi
-     "] \\
-     Z_{\mdls} \arrow[r, hook]           & C^{(d)}          
-     \end{tikzcd}\] 
-     \textcolor{red}{Compete and make precise.}
+\begin{proof} The first part that $\boxP{\cP^{(\deg \mdls)}}{\cP^{(d - \deg \mdls)}}$ is tamely ramified at $\theta$ is our discussion above.
+The fact that $\cP^{(d)}$ is tamely ramified at $\eta_0$ will follow from \Cref{lemma:descend_ramification_along_etale}, once we 
+show the conditions there are met:
+
+
+
+% follows from \Cref{cor:etale_at_generic_point} and \Cref{section:symmetric_powers_on_curves}
+% (And the fact that an etale map restricts to unramified extension of the residue fields).
 \end{proof}
 
 
 \begin{lemma}
      Let $\ndls_1, \ndls_2 \subset \mdls$ be two moduli of the form $\ndls_1 = k_1 P_1$, $\ndls_2 = k_2 P_2$ where $P_1, P_2$ are distinct points.
      Assume $\cF ^{(\deg \ndls_1)}$, $\cF ^{(\deg \ndls_2)}$ are at most tamely ramified at $\eta_{\ndls_1}$, $\eta_{\ndls_2}$ respectively.
-     Then $\cF^{(\deg \ndls_1 + \deg \ndls_2)}$ is at most tamely tamified at $\eta_{\ndls_1 + \ndls_2}$ .
+     Then $\cF^{(\deg \ndls_1 + \deg \ndls_2)}$ is at most tamely tamified at $\eta_{\ndls_1 + \ndls_2}$.
 \end{lemma}
 \begin{proof}
      \textcolor{red}{Complete}
