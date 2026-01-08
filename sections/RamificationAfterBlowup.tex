@@ -14,10 +14,13 @@ We then define $X_\ndls$ as the blowup of $C^{(\deg \ndls)}$ at $Z_\ndls$,
 and we denote by $E_\ndls = Z_\ndls \times_{C^{(d)}} X_\ndls$ the exceptional divisor of this blowup, it is irreducible of codimension 1.
 We denote by $\eta_\ndls$ the generic point of $E_\ndls$. 
 Diagrammatically:
-\[\begin{tikzcd}
+\begin{equation}\label{equation:blowup_diagram_ndls}
+  \begin{tikzcd}
 \overline{\{\eta_\ndls \}} =  E_\ndls \arrow[r, hook] \arrow[d] & X_\ndls \arrow[d, "\pi_\ndls"] \\
 Z_\ndls \arrow[r, hook]           & C^{(\deg \ndls)}          
-\end{tikzcd}\] 
+\end{tikzcd}   
+\end{equation}
+
 
 
 % Recall the defintions from \Cref{section:BlowupOfSymmetricPowerOfCurves},
@@ -38,18 +41,6 @@ In the upcoming section, we perform the reduction and derive \Cref{theorem:Symme
 We then prove \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction} in the section that follows.
 
 \subsection{Reduction Lemmas}
-
-The first lemma is from \cite{takeuchi2019blow}, we include their proof for the convenience of the reader.
-\begin{lemma}[\cite{takeuchi2019blow}, Lemma 4.1]
-     Let $C$ be a projective smooth geometrically connected curve over a perfect field $k$. 
-     Let $\mdls = \sum_{i=1}^{r} k_i P_i$ where $P_1, ..., P_r$ are disctinct closed points of $\mdls$. Let $U$ be the comlement of $\mdls$ in $C$.
-     And let $d_i= \deg Pi$. Take $d \geq \mdls$. Then:
-     The morphism $\pi : C^{(n_1 d_1)} \times_k \dots \times_k C^{(n_r d_r)} \times_k C^{(d - \deg \mathfrak{m})} \to C^{(d)}$, taking the sum, is étale at the generic point of the closed subvariety $\{n_1 P_1\} \times \dots \times \{n_r P_r\} \times C^{(d - \deg \mathfrak{m})}$ of $C^{(n_1 d_1)} \times_k \dots \times_k C^{(n_r d_r)} \times_k C^{(d - \deg \mathfrak{m})}$.
-\begin{proof}
-     We may assume that $k$ is algebraically closed (hence $d_i = 1$ for all $i$). Since the map $\pi : C^{(n_1)} \times_k \dots \times_k C^{(n_r)} \times_k C^{(d - \deg \mathfrak{m})} \to C^{(d)}$ is finite flat, it is enough to show that there exists a closed point $Q$ of $n_1 P_1 + \dots n_r P_r + C^{(d - \deg \mathfrak{m})}$ over which there are $\deg \pi$ points on $C^{(n_1)} \times_k \dots \times_k C^{(n_r)} \times_k C^{(d - \deg \mathfrak{m})}$. Choose $Q$ as a point corresponding to a divisor
-     $n_1 P_1 + \dots n_r P_r + P_{r+1} + \dots + P_{r+d - \deg \mathfrak{m}}$, where $P_1, \dots, P_{r+d - \deg \mathfrak{m}}$ are distinct points of $U(k)$.
-\end{proof}     
-\end{lemma}
 
 The following lemma is adapted from \cite{takeuchi2019blow} (Lemma 4.1)
 \begin{lemma}\label{lemma:takeuchi_lemma}
@@ -80,25 +71,82 @@ The following lemma is adapted from \cite{takeuchi2019blow} (Lemma 4.1)
 \end{proof}     
 \end{lemma}
 
-
-\textbf{Plan for Corollary}
-\begin{enumerate}
-          \item State precisly. 
-          \item Make sure all the notions are well defined.
-          \item Prove.
-          \item State in maximum generality as in previous lemma. 
-\end{enumerate}
-
-\textcolor{red}{
 \begin{cor}
-    Suppose $\cF^{(\deg \mdls)}$ is tamely ramified at $\eta$.
-    Then  $\Fbox{\deg \mdls}{d - \deg \mdls}$ is tamely ramified at the generic point $\theta$ of $E_{\mdls} \times_k C^{(d-\deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{d - \deg \mdls}$
-    and thus $\cF^{(d)}$ is taemly ramified at the generic point ? which one.
+     The morphism $C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)} \xrightarrow[]{\pi} C^{(d)}$
+     is finite flat everywhere, and étale at the generic point of the closed subvariety
+     $Z_\mdls \times_k C^{(d - \deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)}$.     
+\end{cor}
+
+Following from this, we look at the following diagram, coming from the flat base change 
+$C^{(d - \deg \mdls)} \to \Spec(k)$ (\Cref{prop:symmetric_power_flat_base_change}) of \Cref{equation:blowup_diagram_ndls}:
+(\textcolor{red}{Is this even smooth? })
+
+\[\begin{tikzcd}
+E_{\mdls} \times_k C^{(d-\deg \mdls)} \arrow[r] \arrow[d] & X_{\mdls} \times_k C^{(d-\deg \mdls)} \arrow[d] & \cF^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)} \arrow[d, color=purple] \\
+Z_\mdls \times_k C^{(d-\deg \mdls)} \arrow[r] & C^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)} & U^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)} \arrow[lu]
+\end{tikzcd}\]
+
+Note that $U^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)}$ is dense open subscheme of $X_{\mdls} \times_k C^{(d-\deg \mdls)}$,
+And $E_{\mdls} \times_k C^{(d-\deg \mdls)}$ is a prime divisor of $X_{\mdls} \times_k C^{(d-\deg \mdls)}$.
+Hence it is well defined question according to \Cref{definition:tamely_ramified_in_codim_1} to ask whether
+$\cF^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)}$ is tamely ramified at the generic point $\theta$ of
+$E_{\mdls} \times_k C^{(d-\deg \mdls)}$.
+
+\begin{lemma}
+     If $\cF^{(\deg \mdls)}$ is tamely ramified at $\eta_\mdls$, then
+     $\cF^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)}$ is tamely ramified at the generic point $\theta$ of
+     $E_{\mdls} \times_k C^{(d-\deg \mdls)}$.
+\end{lemma}
+\begin{proof}
+    This follows from \stackstag{0EYD}
+    \textcolor{red}{make adjusments to definition and lemma, to only require that some prime divisors are with desired properties.}
+\end{proof}
+
+
+Replacing $C^{(d - \deg \mdls)}$ with the dense open subscheme $U^{(d - \deg \mdls)} \subset C^{(d - \deg \mdls)}$,
+we get that the $G$-torsor $p_1^{-1} \cP^{(\deg \mdls)}$ ($\cP$ correspodns to $\cF$ under \Cref{prop:torsor_module_equivalence})
+is tamely ramified at $\theta$ the generic point of
+$E_{\mdls} \times_k U^{(d-\deg \mdls)} \subset U^{(\deg \mdls)} \times_k U^{(d - \deg \mdls)}$,
+where $p_1: U^{(\deg \mdls)} \times_k U^{(d - \deg \mdls)} \to U^{(\deg \mdls)}$ is the projection to the first factor.
+
+Looking at the second projection $p_2:X_{\mdls} \times_k U^{(d - \deg \mdls)} \to U^{(d - \deg \mdls)}$, and the fact that 
+$\cP^{(d - \deg \mdls)}$ is \'etale on $U^{(d - \deg \mdls)}$ we get that 
+$p_2^{-1} \cP^{(d - \deg \mdls)}= X_{\mdls} \times_k \cP^{(d - \deg \mdls)}$ is \'etale on $X_{\mdls} \times_k U^{(d - \deg \mdls)}$.
+Hence, its restriction to $U^{(\deg \mdls)} \times_k U^{(d - \deg \mdls)}$ is unramified at $\theta$.
+
+Thus, by the following lemma, we conclude that $\boxP{\cP^{(\deg \mdls)}}{\cP^{(d - \deg \mdls)}} = p_1^{-1} \cP^{(\deg \mdls)} \wedge^G p_2^{-1} \cP^{(d - \deg \mdls)}$
+     is tamely ramified at $\theta$ the generic point of $E_{\mdls} \times_k U^{(d-\deg \mdls)}$.
+
+\begin{lemma}
+     Let $X \to \spec k$ be a scheme over a field $k$, and let $\cP_1, \cP_2$ be two $G$-torsors on $U_{et}$.
+     Let $\xi$ be the generic point of a prime divisor $D \subset X$.
+     If $\cP_1$ is tamely ramified at $\xi$, and $\cP_2$ is unramified at $\xi$,
+     then the contracted product $\cP_1 \wedge^G \cP_2$ is tamely ramified at $\xi$.
+\end{lemma}
+%%%%%%%%%%%%%%%%%%
+We thus claim that the contracted product,
+
+is tamely ramified at $\theta$ the generic point of
+$E_{\mdls} \times_k U^{(d-\deg \mdls)}$.
+
+\begin{cor}
+     Let $\mdls$ be a modulus as above, and let $\eta_\mdls$ be the generic point of $E_\mdls$.
+     Let $\cP$ be a $G$-torsor on $U_{et}$ with ramification bounded by $\mdls$.
+     Assume $\cP^{(\deg \mdls)}$ is tamely ramified at $\eta_\mdls$.
+     Then $\Fbox{\deg \mdls}{d - \deg \mdls}$ is tamely ramified at the generic point $\theta$ of 
+     $E_{\mdls} \times_k C^{(d-\deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)}$
+     And $\cP^{(d)}$ is tamely ramified at the generic point $\eta_0=\eta_{\mdls,d}$ of $E_0=E_{\mdls,d}$
 \end{cor}
 \begin{proof}
+     We look at the diagram:
+     \[\begin{tikzcd}
+     E_{\mdls} \times_k C^{(d - \deg \mdls)} \arrow[r, hook] \arrow[d] & C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)} \arrow[d, "\pi
+     "] \\
+     Z_{\mdls} \arrow[r, hook]           & C^{(d)}          
+     \end{tikzcd}\] 
      \textcolor{red}{Compete and make precise.}
 \end{proof}
-}
+
 
 \begin{lemma}
      Let $\ndls_1, \ndls_2 \subset \mdls$ be two moduli of the form $\ndls_1 = k_1 P_1$, $\ndls_2 = k_2 P_2$ where $P_1, P_2$ are distinct points.

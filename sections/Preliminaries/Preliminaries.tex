@@ -2,9 +2,234 @@
 \textcolor{red}{Where is the first time you introduce $\cP$ instead of $P$, mark it down, and explain}
 In this section we recall the necessariy work, including work from \cite{Guignard2018}, \cite{tendler2015geometricclassfieldtheory} and \cite{takeuchi2019blow}.
 
-\subsection{Generalities}
 
-\subsubsection{Equivalence between Torsors and Invertible Modules}
+\subsection{Torsors}
+
+Torsors represent a fundamental bridge between two perspectives: they are simultaneously geometric objects amenable to structural manipulation and algebraic entities 
+that allow for explicit computation. 
+Their characterization as realizations of first cohomology classes, their correspondence with invertible modules over ring objects, 
+and their deep-seated connection to Galois theory render them a remarkably flexible and potent tool in arithmetic geometry.
+
+In this section, we provide an overview of the theory of torsors within a topos $\mathcal{E}$, 
+with a particular focus on sheaves over the small and big étale sites. 
+Let $\mathcal{G}$ be a group object in $\mathcal{E}$. 
+We denote by $\mathcal{G}\mathcal{E}$ the category of objects in $\mathcal{E}$ endowed with a left $\mathcal{G}$-action. 
+For any object $X \in \mathcal{E}$, there is a canonical identification between the slice category 
+$(\mathcal{G}\mathcal{E})/X$ and the category of group objects $\mathcal{G}(\mathcal{E}/X)$, where $X$ is viewed as having the 
+trivial $\mathcal{G}$-action.
+
+ We follows notes by Alex Youcis \href{https://alex-youcis.github.io/torsors.pdf}{Notes}
+
+
+
+\subsubsection*{Definitions and Basic Properties}
+\begin{definition}
+    A \textbf{$\mathcal{G}$-torsor} in $\mathcal{E}$ is an object $\mathcal{P}$ of $\mathcal{G}\mathcal{E}$ satisfying the following conditions:
+    \begin{enumerate}
+        \item The structural morphism $\mathcal{P} \to 1$ is an epimorphism in $\mathcal{E}$ (i.e., $\mathcal{P}$ is locally non-empty).
+        \item The map $\mathcal{G} \times \mathcal{P} \to \mathcal{P} \times \mathcal{P}$ defined by $(g, p) \mapsto (g \cdot p, p)$ is an isomorphism in $\mathcal{E}$ (i.e., $\mathcal{G}$ acts simply transitively on $\mathcal{P}$).
+    \end{enumerate}
+\end{definition}
+
+When $\mathcal{E}$ is the topos of sheaves on a site $\sC$, the definition can be reformulated in terms of local sections. A $\mathcal{G}$-sheaf $\mathcal{P}$ is a $\mathcal{G}$-torsor if:
+\begin{enumerate}
+    \item For every object $X \in \mathcal{C}$, there exists a covering $\{ U_i \to X \}$ such that $\mathcal{P}(U_i) \neq \emptyset$ for all $i$.
+    \item For any $X \in \mathcal{C}$ where $\mathcal{P}(X)$ is non-empty, the action of $\mathcal{G}(X)$ on $\mathcal{P}(X)$ is simply transitively.
+\end{enumerate}
+
+A fundamental property of torsors is their local triviality: 
+a $\mathcal{G}$-sheaf $\mathcal{P}$ is a $\mathcal{G}$-torsor if and only if it is locally isomorphic to the trivial torsor. 
+Specifically, for every $X \in \mathcal{C}$, there must exist a cover $\{ U_i \to X \}$ such that the restriction $\mathcal{P}|_{U_i}$ is 
+isomorphic, as a $\mathcal{G}|_{U_i}$-sheaf, to $\mathcal{G}|_{U_i}$ acting on itself by left multiplication.
+
+\subsubsection*{The Category of Torsors}
+
+\begin{definition}
+    A \textbf{morphism of $\mathcal{G}$-torsors} $f: \mathcal{P}_1 \to \mathcal{P}_2$ is a morphism of sheaves that is equivariant with respect to the $\mathcal{G}$-action.
+\end{definition}
+
+It is a standard result that every morphism of $\mathcal{G}$-torsors is an isomorphism. 
+Consequently, the category of $\mathcal{G}$-torsors in $\mathcal{E}$ forms a groupoid.
+
+\begin{definition}
+    We denote the groupoid of $\mathcal{G}$-torsors in $\mathcal{E}$ by $\mathbf{Tors}(\mathcal{E}, \mathcal{G})$. The set of isomorphism classes of $\mathcal{G}$-torsors is denoted by $\mathrm{Tors}(\mathcal{E}, \mathcal{G})$,.
+    % often identified with the non-abelian cohomology set $H^1(\mathcal{E}, \mathcal{G})$.
+\end{definition}
+
+\subsubsection*{Functoriality and the Contracted Product}
+Torsors exhibit functoriality with respect to the group object. Let $\varphi: \mathcal{G}_1 \to \mathcal{G}_2$ be a morphism of group 
+sheaves on $\sC$, and let $\mathcal{P}$ be a $\mathcal{G}_1$-torsor. We define the \textbf{contracted product} $\mathcal{G}_2 \times^{\mathcal{G}_1} \mathcal{P}$ as the quotient sheaf $(\mathcal{G}_2 \times \mathcal{P}) / \mathcal{G}_1$, where $\mathcal{G}_1$ acts on the product by:
+\[ g_1 \cdot (g_2, p) = (g_2 \varphi(g_1)^{-1}, g_1 \cdot p) \]
+
+The contracted product inherits a natural left $\mathcal{G}_2$-action given on local sections by $h \cdot [g_2, p] = [h g_2, p]$, which endows it with the structure of a $\mathcal{G}_2$-torsor. This construction yields a functor:
+\[ \varphi_*: \mathbf{Tors}(\mathcal{G}_1) \to \mathbf{Tors}(\mathcal{G}_2), \quad \mathcal{P} \mapsto \mathcal{G}_2 \times^{\mathcal{G}_1} \mathcal{P} \]
+On the level of isomorphism classes, $\varphi_*$ induces a map of pointed sets $\mathrm{Tors}(\mathcal{G}_1) \to \mathrm{Tors}(\mathcal{G}_2)$, sending the class of the trivial $\mathcal{G}_1$-torsor to the class of the trivial $\mathcal{G}_2$-torsor.
+
+%%% %%% %%% %%% %%% %%% %%% %%%
+%       The Abelian Case 
+%%% %%% %%% %%% %%% %%% %%% %%%
+\subsubsection*{The Abelian Case}
+
+When $\mathcal{G}$ is a sheaf of abelian groups (an \textit{abelian sheaf}), the pointed set $\mathrm{Tors}(\mathcal{G})$ 
+inherits the structure of an abelian group. 
+
+Let $\mathcal{P}_1$ and $\mathcal{P}_2$ be objects of $\mathbf{Tors}(\mathcal{G})$. We define their sum $[\mathcal{P}_1] + [\mathcal{P}_2]$ to be the class $[\mathcal{P}_3]$, where $\mathcal{P}_3$ is the quotient sheaf $(\mathcal{P}_1 \times \mathcal{P}_2)/\mathcal{G}$. In this construction, $\mathcal{G}$ acts on the product $\mathcal{P}_1 \times \mathcal{P}_2$ on $T$-points by:
+\[ g \cdot (f_1, f_2) := (g f_1, g^{-1} f_2) \]
+
+The group object $\mathcal{G}$ then acts on the resulting quotient via its action on the presheaf quotient, which is given on classes by:
+\[ g \cdot [(f_1, f_2)] = [(g f_1, f_2)] = [(f_1, g f_2)] \]
+where the square brackets denote the class in the quotient set. This structure turns $\mathrm{Tors}(\mathcal{G})$ into an abelian group, where the identity is the class of the trivial torsor and the inverse is obtained by the opposite action.
+
+Equivantly, the sum is obtained as the contracted product of the $\cG \times \cG$-torsor $\cP_1 \times \cP_2$ along the multiplication map
+$m: \cG \times \cG \to \cG$. 
+
+
+%%% %%% %%% %%% %%% %%% %%% %%%
+%       Torsors as Spaces
+%%% %%% %%% %%% %%% %%% %%% %%%
+\subsubsection*{Torsors as Flat Spaces}
+\textcolor{red}{change Fl to be straight}
+We now fix a scheme $X$. We start by focusing on the big fppf site. $X_{Fl}$.
+Let $\cG$ be a group sheaf on $X_{Fl}$. A flat-torsor $\cG$-torsor on $X$ is just a $\cG$-torsor on the site $X_{Fl}$.
+
+To the end of this section assume \textbf{$G$ is a flat affine-algebraic $X$-group. } (\textcolor{red}{which by descent is associated also to a group sheaf})
+\begin{definition}
+Define a \textit{principal $G$-bundle} (or \textit{principal homogenous space} for $G$) to be 
+a flat finite presentation $X$-scheme $f : Y \to X$ with an action of $G$ satisfying the following equivalent properties:
+\begin{enumerate}
+    \item The morphism $Y \times_X G \to Y \times_X Y$ defined on $T$-points by sending $(y, g) \in Y(T) \times G(T)$ to $(y, gy)$ is an isomorphism of $X$-schemes.
+    \item There exists an open covering $\{U_i \to X\}$ in $X_{\text{fl}}$ such that $Y_{U_i}$ is isomorphic, as a $G_{U_i}$-space, to $G_{U_i}$ with its left multiplication action.
+\end{enumerate}
+\end{definition}
+
+Similarly to the case of $G$-torsors of a topos, we define a morphism of principal $G$-bundles to be a morphism of $X$-schemes commuting with the
+$G$-action. We now have:
+\begin{theorem} 
+    The morphism sending $Y \mapsto \mathrm{Hom}_X(-, Y)$ is an equivalence of categories from the category of principal $G$-bundles 
+    to the category of $G$-torsors on $X_{\mathrm{Fl}}$. 
+    Similarly, the morphism sending $Y$ to $\mathrm{Hom}_X(-, Y)$ to the category of $G$-torsors on $X_{\mathrm{fl}}$ is an equivalence.
+\end{theorem}
+
+\begin{cor}
+    There is a natural equivalence $\mathbf{Tors}(X_{\mathrm{fl}}, G) \cong \mathbf{Tors}(X_{\mathrm{Fl}}, G)$ inducing a bijection of pointed sets $\mathrm{Tors}(X_{\mathrm{fl}}, G) \xrightarrow{\cong} \mathrm{Tors}(X_{\mathrm{Fl}}, G)$ which is an isomorphism of abelian groups if $G$ is abelian.
+    And every $G$-torsor, in each of the above sites can be realized as a scheme, which is a prinicipal $G$-bundle.
+\end{cor}
+
+
+%%% %%% %%% %%% %%% %%% %%% %%%
+%       Torsors as Etale Spaces
+%%% %%% %%% %%% %%% %%% %%% %%%
+\subsubsection*{Torsors as Etale Spaces}
+Let $X$ be a scheme, and let $G$ be affine algebraic $X$-group. 
+For any topology $\mathcal{T}$ on $\text{Sch}/X$ coarser than the flat topology, we say that 
+a flat torsor $\mathcal{P}$ for $G$ is \textit{locally trivial for the $\mathcal{T}$ topology} 
+if, in fact, one can find a covering $\{U_i \to X\}$ in $\mathcal{T}$ such that $\mathcal{P}(U_i)$ 
+or, equivalently, $\mathcal{P}_{U_i}$ is isomorphic to the trivial torsor for all $i$.
+
+Then, it is immediate that $\Tors(X_{Et, G})$ is canonically isomorphic as pointed sets (abelian groups if $G$ is abelian)
+to the subset of $\Tors(X_{Fl}, G)$ consisting of that flat torsors locally trivial for the etale topology.
+
+For the small sites we have:
+\begin{theorem}
+    If $G$ is smooth affine $X$ group, then any $G$-torsor $\cP$ on $X_fl$ is locally trivial for the etale topology.
+\end{theorem}
+
+\begin{cor}
+    If $G$ is smooth affine $X$ group, then there is a canonical bijection of pointed sets (abelian groups if $G$ is abelian)
+    $\Tors(X_{et}, G) \cong \Tors(X_{fl}, G)$
+\end{cor}
+
+And we also have:
+\begin{theorem}
+    If $G$ is a smooth algebraic $X$-groupm there every flat $G$-torsor is locally trivial for the etale topology and every principal 
+    $G$-bundle $Y \to X$ is smooth. In other words the inclusion $\bTors(X_{Et}, G) \to \bTors(X_{Fl}, G)$ is actuall an isomorphism. ??(of what? of categories?)
+\end{theorem}
+
+\textcolor{red}{see which of the above theorems we leave intact, cuase it doesn't seem like we need all three}
+
+We now focus on the etale-topology which is coarser then the flat topology. 
+Two theorems summarize what happends over the big and small sites:
+
+
+%%% %%% %%% %%% %%% %%% %%% %%%
+%       Torsors and Cohomology
+%%% %%% %%% %%% %%% %%% %%% %%%
+
+\subsubsection*{Torsors and Cohomology}
+We qoute without proof:
+\begin{theorem}
+There is a natural bijection of pointed sets     
+$\text{Tors}(\mathcal{G|_T}) \to \check{H}^1(T, \mathcal{G})$. Moreover, if $\mathcal{G}$ is an abelian group sheaf, it's an isomorphism of abelian groups.
+\end{theorem}
+
+The idea is that for every $[\mathcal{P}] \in \text{Tors}(T, \mathcal{G})$ 
+We 
+\begin{enumerate}
+    \item Choose a covering $\{U_i \to T\}$ such that $\mathcal{P}(U_i) \neq \emptyset$ for all $i$
+    \item choose sections $\alpha_i \in \mathcal{F}(U_i)$
+\end{enumerate}
+
+Then we note that for all $(i,j)$ the elements $\alpha_i |_{U_i \times_X U_j}$ and $\alpha_j |_{U_i \times_X U_j}$ differ by a unique element of $\mathcal{G}(U_{ij})$
+there exists a unique $s_{ij} \in \mathcal{G}(U_{ij})$ such that $\alpha_i |_{U_i \times_X U_j} = s_{ij}(\alpha_j |_{U_i \times_X U_j})$. 
+One can then easily see that $(s_{ij})$ defines an element of  $\check{H}^1(T, \mathcal{G})$
+which is independent of the choice of repreantiative $\cP$, choice of covering $\{U_i \to T\}$ and choice of sections.
+
+%%% %%% %%% %%% %%% %%% %%% %%%
+%       Constant Finite Group Torsors
+%%% %%% %%% %%% %%% %%% %%% %%%
+
+\subsubsection*{Constant Finite Group Torsors}
+Let $G$ be a finite group. We denote by $\underline{G}$ the constant group scheme $\underline{G}$ over $X$. Sometimes denoted by $\underline{G}_X$
+and is given by $\coprod_{g \in G} X$ with the action shuffeling the $X$'s according to multiplication.
+
+By following the definitions, one sees that if $X$ be a connected scheme and $f : Y \to X$ is a finite Galois cover with Galois group $G$. 
+Then, $f : Y \to X$ is a principal $\underline{G}$-bundle.
+(Recall that a \textit{finite Galois cover} is a finite étale surjection $Y \to X$ with $Y$ connected and such that 
+$G = \text{Aut}(Y/X)$ acts transitively on the geometric points of $Y$ lying over any geometric point of $X$.)
+
+On the otherhand if $f: Y \to X$ is a principal $\underline{G}$-bundle with $Y$ connected, then $Y$ is a finite Galois cover with
+automorphism group $G$.
+
+However, not all $G$-torsors are connected. If $H\subset G$ is a proper subgroup then any connected finite etale cover $f: Y \to X$ with 
+Galois group $H$ gives rise to a non-connected $\underline{G}$-torsor by looking at the induced $G$-torsor $\varphi_*(Y)$ under the inclusion $\varphi: \underline{H} \to \underline{G}$.
+On the otherhand, if we fix a geometric point $\overline{x} \to X$, then to give an homomorphism
+$\rho \in \mathrm{Hom}_{\mathrm{cont}}(\pi_1^{\mathrm{et}}(X, x), G)$ is equivilant to give a connected pointed Galois cover
+$(Y, \overline{y}) \to (X, \overline{x})$ with Galois group $H=\rho(\pi_1^{\mathrm{et}}(X, x)) \subset G$. 
+Thus, pushing forward to $G$ we get a prinicipal $\underline{G}$-bundle. The choice of a different geometric point $\overline{x'} \to X$
+differ the homomorphism by an inner automorphism, thus we have:
+
+\begin{theorem}\label{theorem:equivalence_fundamental_covers}
+    Let $X$ be a connected scheme and $\overline{x}$ a geometric point of $X$. Suppose in addition that $G$ is a finite abstract group. 
+    Define a map
+    \begin{equation}
+        \mathrm{Hom}_{\mathrm{cont}}(\pi_1^{\mathrm{et}}(X, \overline{x}), G) / \mathrm{Inn}(G) \to \mathrm{Tors}(X_{\mathrm{Fl}}, G) 
+    \end{equation}
+by sending a homomorphism $\rho : \pi_1^{\mathrm{et}}(X, \overline{x}) \to G$ 
+to the principal $G$-bundle $\varphi_*(Y)$ where $Y$ is the principal $\underline{\rho(\pi_1^{\mathrm{et}}(X, \overline{x}))}$-bundle 
+obtained above and $\varphi$ is the inclusion $\rho(\pi_1^{\mathrm{et}}(X, \overline{x})) \hookrightarrow G$. Then, the map 
+ is a bijection of pointed sets where the trivial homomorphisms
+  (which is the only element of its $\mathrm{Inn}(G)$-orbit) is the distinguished element of the left hand side.
+\end{theorem}
+
+If $G$ is Abelian then $\mathrm{Inn}(G)$ is trivial, and we obtain:
+\begin{cor}\label{cor:abelian_equivilance_fundamental_torsors}
+    Let $G$ be a finite Abelian group, $X$ a connected scheme, and $\overline{x}$ a geometric point of $X$. Then, the map from \Cref{theorem:equivalence_fundamental_covers}
+     induces an isomorphism of Abelian groups
+    \begin{equation}
+        \mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, x), G) \xrightarrow{\cong} \Tors(X_{\mathrm{Fl}}, G)
+    \end{equation}
+\end{cor}
+
+\textcolor{red}{Let us give a final note that, evidently, $\mathrm{Aut}(G)$ acts on $\mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, x), G)$ on the right, and if we consider the quotient $\mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, x), G)/\mathrm{Aut}(G)$ we get the pointed set of all connected finite Galois covers of $X$ with Galois group isomorphism to a subgroup of $G$.}
+
+
+
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
+%       Equivalence between Torsors and Invertible Modules
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
+
+\subsubsection*{Equivalence between Torsors and Invertible Modules}
+\textcolor{red}{Edit this completly.}
 Let $\mathcal{E}$ be a topos and let $\Lambda$ be a commutative ring object in $\mathcal{E}$. Let $G = \Lambda^\times$ denote the internal group object of units of $\Lambda$.
 The following proposition establishes the fundamental dictionary between the geometric theory
 of principal homogeneous spaces and the algebraic theory of invertible modules.
@@ -19,9 +244,10 @@ strictly within the categorical framework.
     \]
     The equivalence is defined by the associated module functor:
     \[
-        P \longmapsto P \times^{\Lambda^\times} \Lambda := \Lambda^\times \backslash (\Lambda \times P)
+        \cP \longmapsto \cP \times^{\Lambda^\times} \Lambda := \Lambda^\times \backslash (\Lambda \times \cP)
     \]
-    where the quotient is taken with respect to the diagonal action of $\Lambda^\times$ on $\Lambda \times P$. The inverse functor associates to an invertible module $L$ its sheaf of basis frames $\underline{\mathrm{Isom}}_\Lambda(\Lambda, L)$.
+    where the quotient is taken with respect to the diagonal action of $\Lambda^\times$ on $\Lambda \times \cP$. 
+    The inverse functor associates to an invertible module $\cF$ its sheaf of basis frames $\underline{\mathrm{Isom}}_\Lambda(\Lambda, \cF)$.
 \end{prop}
 
 In light of this canonical equivalence, we will pass freely between the language of $G$-torsors and that of locally free $\Lambda$-modules throughout the text.
@@ -51,14 +277,11 @@ The following diagram commutes up to natural isomorphism:
 \end{tikzcd}
 \]
 
-% A \textbf{$G$-torsor} in $\mathcal{E}$ is an object $P \in \text{obj}(\mathcal{E})$ equipped with an action $\alpha: P \times G \to P$ such that:
-% \begin{enumerate}
-%     \item The unique morphism $P \to 1$ is an epimorphism.
-%     \item The map $(\pi_1, \alpha): P \times G \xrightarrow{\cong} P \times P$ is an isomorphism.
-% \end{enumerate}
-% The category $\mathbf{Tors}(\mathcal{E}, \Lambda^\times)$ consists of $G$-torsors as objects and $G$-equivariant morphisms as arrows.
 
 \subsubsection*{\texorpdfstring{More about $G$-torsors}{More about G-torsors}}
+We want to be more explicit about $G$-torsors, so let us recall the definition.
+
+\subsection*{Other Theorems}
 \textcolor{red}{Say something about the toposes of Etale and etale, maybe add them up in the notation.}
 We recall some propositions about $G$-torsors that will be useful later.
 
@@ -71,7 +294,10 @@ Then the etale sheaf $\cP$ is representable by a finite etale $X$-scheme.
     Then the category of $G$-torsors over $X$ in $S_{\text{Et}}$ is equivalent to the category of $G$-torsors over $X$ (the terminal object) in $X_{\text{ét}}$.
 \end{cor}
 
-\subsubsection{Symmetric Powers of Schemes and Torsors}
+Next, we recall the definition of the contracted product of torsors, which endows the category of $G$-torsors with a monoidal structure.
+
+
+\subsection{Symmetric Powers of Schemes and Torsors}
 This section reviews the construction of quotients for schemes and torsors under finite group actions, specifically focusing on symmetric powers. 
 To ensure these quotients exist as schemes, we utilize the framework of admissible actions from \cite{sga1}. 
 Our treatment here closely follows the exposition in \cite{Guignard2018}
@@ -140,7 +366,7 @@ Let $X$ be an $S$-scheme and let $d \geq 0$ be an integer. The group ${S}_d$ of 
 
 Guingard shows that when $X=\Spec(B)$ and $S=\Spec(A)$ then $\Sym_{S}^d(X)$ is representable by an affine $S$-scheme (See \cite{Guignard2018} Remark 2.28).
 
-\begin{prop}[\cite{Guignard2018} Proposition 2.28]
+\begin{prop}[\cite{Guignard2018} Proposition 2.28]\label{prop:symmetric_power_flat_base_change}
 If $X$ is flat and Zariski-locally quasi-projective over $S$, then $\text{Sym}_S^d(X)$ is flat over $S$. Moreover, for any $S$-scheme $S'$, the canonical morphism
 \[
 \text{Sym}_{S'}^d(X \times_S S') \to \text{Sym}_S^d(X) \times_S S'
@@ -149,6 +375,10 @@ is an isomorphism.
 \end{prop}
 
 \subsubsection*{Symmetric Powers of Torsors}
+\textcolor{red}{change torsor tensor product to contracted product,
+and the analogy with sheaves to tensor product (which it is) below the exposition to be more accurate... }
+
+
 \textcolor{red}{change below the exposition to be more accurate... }
 Let $S$ be a scheme, let $X$ be an $S$-scheme and let $d \geq 1$ be an integer. 
 Let $G$ be a finite abelian group, and let $\cP \to X$ be a $G$-torsor over $X$ in $S_{\text{Ét}}$. 
@@ -183,7 +413,7 @@ where $r : X^{\times_S d} \to \mathrm{Sym}_S^d(X)$ is the canonical projection, 
 
 
 
-\subsubsection{Etale Fundamental Groups and Tame Fundamental Groups}
+\subsection{Etale Fundamental Groups and Tame Fundamental Groups}
 We recall the definition and basic properties of the etale fundamental group, following stacks project 
 \stackstag{0BQ6}
 \begin{prop}[\stackstag{0C0J}]
@@ -382,6 +612,28 @@ So after completion it is $\widehat{\Oo_{C_{\bar{k}},\bar{x}}} \cong \widehat{\O
 And taking the product with $Y_{\bar{k}}$ amounts to taking the fraction fields, i.e. we get
 $\Spec(\widehat{K_P \otimes \bar{k}})=\Spec(\widehat{K_P} \otimes_k \bar{k})$.
 
+Note that tame ramification and unramifiedness in terms of definition above coincide with the ones in \Cref{definition:tamely_ramified_in_codim_1}.
+
+\subsubsection*{Ramification of $G$-torsors in terms of Characters}
+
+
+\subsubsection*{Basic Properties of Ramification of \texorpdfstring{$G$-Torsors}{G-Torsors}}
+In this section we prove some basic properties of the ramification of $G$-torsors.
+
+\begin{lemma}
+    Let $G$ be a finite abelian group and $X$ be a locally Noetherian scheme over a field $k$. 
+    Let $U \subset X$ be a dense open subset and let $Z$ be a prime divisor in the complement $X \setminus U$, and let $\xi$ denote its generic point.
+
+    Assume $\cP_1$ and $\cP_2$ are two $G$-torsors on $U_{\text{ét}}$, Such that $\cP_1$ is tamely ramified at $(Z, \xi)$, and $\cP_2$ is unramified at $(Z, \xi)$.
+    Then their contracted product $\cP_1 \wedge^G \cP_2$ is tamely ramified at $(Z, \xi)$.
+\end{lemma}
+\begin{proof}
+    We can give two proofs.
+
+\end{proof}
+
+
+
 \subsubsection*{The ramification in term of morphisms}
 maybe not needed. 
 
@@ -549,29 +801,6 @@ Hence, by \Cref{prop:symmetric_power_torsor} (and replacing $C$ with $U$ above) 
 \[
  (+^{-1})(\cP^{(d_1+d_2)}) \cong \cP ^{(d_1)} \boxtimes \cP ^{(d_2)}
 \]
-
-
-
-
-% \[
-% \begin{tikzcd}
-% C^{(d_1)} \times_k C^{(d_2)} \arrow[r] \arrow[d] & C^{(d_1)} \\
-% C^{(d_2)} &  {}
-% \end{tikzcd}
-% \] 
-
-
-
-% \[\begin{tikzcd}
-
-% C^{(d_1)} \times_k C^{(d_2)} \arrow[r, "+"]           & C^{(d_1 + d_2)}
-% \end{tikzcd}\] 
-
-\begin{cor}
-    Suppose $\cF^{(\deg \mdls)}$ is tamely ramified at $\eta$.
-    Then  $\Fbox{\deg \mdls}{d - \deg \mdls}$ is tamely ramified at the generic point $\theta$ of $E_{\mdls} \times_k C^{(d-\deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{d - \deg \mdls}$
-    and thus $\cF^{(d)}$ is taemly ramified at the generic point ? which one.
-\end{cor}
 
 
 \subsection{Generalized Picard Scheme}

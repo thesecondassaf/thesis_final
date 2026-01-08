@@ -1,0 +1,7 @@
+{"rule":"WHITESPACE_RULE","sentence":"^\\Q[]my horizontal lines    stroke []my vertical lines    stroke []my north east lines    stroke []my north west lines    stroke\\E$"}
+{"rule":"EN_COMPOUNDS","sentence":"^\\Q[]my horizontal lines    stroke []my vertical lines    stroke []my north east lines    stroke []my north west lines    stroke\\E$"}
+{"rule":"WHITESPACE_RULE","sentence":"^\\QUwasy  wasy U wasy m n wasy bold U wasy b n\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qdiagram diagram \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qm m o #3#1 _#3 #2#1 #2\\E$"}
+{"rule":"A_NNS","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be a topos and let \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be a commutative ring object in \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QThe above equivilance of categories becomes \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q .\\E$"}
