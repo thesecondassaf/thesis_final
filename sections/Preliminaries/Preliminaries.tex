@@ -3,6 +3,74 @@
 In this section we recall the necessariy work, including work from \cite{Guignard2018}, \cite{tendler2015geometricclassfieldtheory} and \cite{takeuchi2019blow}.
 
 
+\subsection{Algebraic Geometry}
+In this section we group together some general theorems in algebraic geometry that we will be employing throughtout the text. 
+All schemes are assumed to be locally of finite type. 
+\begin{theorem}
+    Let $f:X \to Y$ be a finite flat map between integral schemes, of finite type over a field $k$. if $Z \subset X$ is a prime divisor with generic point $\eta_Z$, then $f(Z) \subset X$
+    is a prime divisor with generic point $\eta_{f(Z)}$ satisfying $f(\eta_Z)= \eta_{f(Z)}$
+\end{theorem}
+\begin{proof}
+    $f$ is finite hence proper hence closed so $f(Z)$ is closed subset of $Y$, it is irreducible as the image of an irreducible.
+    Since $Z = \overline{\{ \eta_Z \}}$ we get: 
+    $$\{f(\eta_Z)\} \subset f(Z) = f(\overline{\{\eta_Z\}}) \subseteq \overline{f(\{\eta_Z\})} = \overline{\{f(\eta_Z)\}}$$
+    And since $f(Z)$ is closed we get $f(Z) = \overline{\{f(\eta_Z)\}}$.
+
+    For flat map of integral schemes we have for every $x \in X$, $y=f(x)$ the dimension formula:
+    $$\text{dim}(\mathcal{O}_{X,x}) = \text{dim}(\mathcal{O}_{Y,y}) + \text{dim}(\mathcal{O}_{X_y, x})$$
+    And since $\text{dim}(\mathcal{O}_{X_y, x}) = 0$ we get $\text{dim}(\mathcal{O}_{X,x}) = \text{dim}(\mathcal{O}_{Y,y})$
+    concluding that $f(Z)$ is a prime divisor as well. 
+\end{proof}
+
+A known theorem states that: 
+\begin{theorem}\label{theorem:int_geoint_implies_productint}
+    Let $X, Y$ be two integral schemes over a field $k$. If $X$ is geometrically integral then $X \times_k Y$ 
+    is integral.
+    If both $X,Y$ are geometrically integral, then $X \times_k Y$ is geometrically integral. 
+\end{theorem}
+
+\begin{theorem}
+    Let $C$ be smooth projective curve geometrically connected over a field $k$. Then:
+    \begin{enumerate}
+        \item $C^{(d)}$ is smooth
+        \item For every $d$, $C^{(d)}$ is integral.
+        \item For every $d$, $C^{(d)}$ is geometrically integral.
+        \item The product of every finite number of $C^{(d)}$ is geometrically integral. 
+    \end{enumerate}
+    \begin{proof}
+        \begin{enumerate}
+            \item Let $t_i$ be a local parameter for $C$ at $P_i$. The local ring of the product $C^d$ at the point $(P_1, \dots, P_d)$ is isomorphic $k[[t_1, t_2, \dots, t_d]]$
+            and the local ring of the qoutient at the divisor $D=\sum P_i$ is $k[[t_1, \dots, t_d]]^{S_d}$ which is 
+            isomorphic to $k[[t_1, \dots, t_d]]^{S_d} \cong k[[s_1, \dots, s_d]]$ where the $s_i$ are the 
+            symmetric polynomials, hence this ring is regular local ring. 
+            \item $C$ is irreducible hence $C^{d}$ is irreducible hence $C^{(d)}$ is irreducible. Since $C^{(d)}$ 
+            is smooth it is reduced.
+            \item By \stackstag{0366}, $C$ is geometrically integral, so it follows from the above. 
+            \item \Cref{theorem:int_geoint_implies_productint}
+        \end{enumerate}
+    \end{proof}
+\end{theorem}
+
+
+\subsubsection*{Blowups}
+
+\begin{theorem}[\stackstag{0805}]
+Let $X_1 \to X_2$ be a flat morphism of schemes. Let $Z_2 \subset X_2$ be a closed subscheme. Let $Z_1$ be the inverse image of $Z_2$ in $X_1$. Let $X'_ i$ be the blowup of $Z_ i$ in $X_ i$. Then there exists a cartesian diagram
+
+\[ \xymatrix{ X_1' \ar[r] \ar[d] & X_2' \ar[d] \\ X_1 \ar[r] & X_2 } \]
+of schemes.   
+\end{theorem}
+
+\begin{theorem}
+If $X$ is integral then $Bl_Z(X)$ is integral. %This can be checked locally
+\end{theorem}
+
+
+
+
+%%%% %%%% %%%% %%%% %%%% %%%% %%%% %%%%
+%               TORSORS
+%%%% %%%% %%%% %%%% %%%% %%%% %%%% %%%%
 \subsection{Torsors}
 
 Torsors represent a fundamental bridge between two perspectives: they are simultaneously geometric objects amenable to structural manipulation and algebraic entities 
@@ -649,54 +717,25 @@ In this section we prove some basic properties of the ramification of $G$-torsor
     And the claim follows by \Cref{section:ramification_characters}
 \end{proof}
 
-The next lemma shows that ramification doesn't change under etale maps. 
 \begin{lemma}\label{lemma:descend_ramification_along_etale}
-    Let $X, U, f: Y \to U$ be as in \Cref{definition:tamely_ramified_in_codim_1}.
-    And let $(Z, \xi)$ be a prime divisor on $X$ with generic point $\xi$ such that $Z \cap U = \emptyset$.
-    Assume there is a morphism $g: X' \to X$, such that $U' = X' \times_X U$ is dense open subset, $(Z' = X' \times_X Z, \xi' = X' \times_X \xi)$
-    is a prime divisor with generic point $\xi'$.
-    \textbf{If $g$ is etale at $\xi'$}, then $f$ is unramified (resp. tamely ramified) at $(Z, \xi)$ if and only if 
-    $g': Y'=X' \times_X Y \to U'$ is unramified (resp. tamely ramified) at $(Z', \xi')$.
+Let $f: X \to Y$ be a morphism of locally Noetherian schemes. Let $U_X \subset X$ and $U_Y \subset Y$ be dense open subschemes such that $f^{-1}(U_Y) \subset U_X$. 
+
+Let $Z_X$ and $Z_Y$ be prime divisors of $X$ and $Y$ with generic points $\eta_X$ and $\eta_Y$, respectively, such that $Z_X \cap U_X = \emptyset$ and $Z_Y \cap U_Y = \emptyset$. Suppose $f(\eta_X) = \eta_Y$ and that $f$ is étale at $\eta_X$.
+
+Let $\mathcal{P}$ be a $G$-torsor over $U_Y$, and let $f^{-1} \mathcal{P}$ be its pullback to $f^{-1}(U_Y) \subset U_X$. Then, the ramification of $f^{-1} \mathcal{P}$ is bounded by $r$ at $\eta_X$ if and only if the ramification of $\mathcal{P}$ is bounded by $r$ at $\eta_Y$.
 \end{lemma}
+
 \begin{proof}
-Let $\mathcal{O}_{X,\xi}$ and $\mathcal{O}_{X',\xi'}$ be the discrete valuation rings (DVRs) associated with the generic points of $Z$ and $Z'$, and let $\mathfrak{m}_{\xi}$ and $\mathfrak{m}_{\xi'}$ be their respective maximal ideals. Let $\eta \in Y$ be a point such that $f(\eta) = \xi$, and let $\eta' \in Y'$ be the corresponding point in the fiber product $Y' = X' \times_X Y$ such that $g'(\eta') = \eta$ and $f'(\eta') = \xi'$.
+The boundedness of ramification is determined by the behavior of the torsor over the completion of the local rings at the generic points. 
 
-\medskip
-\noindent \textbf{1. Equality of Ramification Indices:} \\
-By definition, the ramification index $e(f, \eta)$ is the unique integer $e$ such that $\mathfrak{m}_{\xi} \mathcal{O}_{Y,\eta} = \mathfrak{m}_{\eta}^e$. Since $g: X' \to X$ is \textbf{étale} at $\xi'$, the map of local rings $\mathcal{O}_{X,\xi} \to \mathcal{O}_{X',\xi'}$ is an étale local homomorphism. This implies:
-\begin{itemize}
-    \item $g$ is unramified at $\xi'$, so $\mathfrak{m}_{\xi} \mathcal{O}_{X',\xi'} = \mathfrak{m}_{\xi'}$.
-    \item The morphism $f'$ is obtained by the base change $Y' = Y \times_X X'$. Localizing at $\eta'$, we have $\mathcal{O}_{Y',\eta'} \cong \mathcal{O}_{Y,\eta} \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'}$.
-\end{itemize}
-Now, calculate the ramification index $e(f', \eta')$:
-\[
-\mathfrak{m}_{\xi'} \mathcal{O}_{Y',\eta'} = (\mathfrak{m}_{\xi} \mathcal{O}_{X',\xi'}) \mathcal{O}_{Y',\eta'} = \mathfrak{m}_{\xi} (\mathcal{O}_{Y,\eta} \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'}) = (\mathfrak{m}_{\xi} \mathcal{O}_{Y,\eta}) \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'}
-\]
-Substituting $\mathfrak{m}_{\xi} \mathcal{O}_{Y,\eta} = \mathfrak{m}_{\eta}^e$, we get:
-\[
-\mathfrak{m}_{\xi'} \mathcal{O}_{Y',\eta'} = \mathfrak{m}_{\eta}^e \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'} = (\mathfrak{m}_{\eta} \otimes_{\mathcal{O}_{X,\xi}} \mathcal{O}_{X',\xi'})^e = \mathfrak{m}_{\eta'}^e
-\]
-Thus, $e(f', \eta') = e(f, \eta)$.
+Let $A = \mathcal{O}_{Y, \eta_Y}$ and $B = \mathcal{O}_{X, \eta_X}$ be the discrete valuation rings at the generic points, with fraction fields $K$ and $L$ respectively. Since $f$ is étale at $\eta_X$, the map $A \to B$ is a flat, unramified local homomorphism. Consequently, the extension of completions $\widehat{L} / \widehat{K}$ is a finite unramified extension of complete discretely valued fields.
 
-\medskip
-\noindent \textbf{2. Residue Field Extensions:} \\
-Let $\kappa(\xi)$ and $\kappa(\eta)$ denote the residue fields. The property of being unramified or tamely ramified depends on the extension $\kappa(\eta) / \kappa(\xi)$. Under the étale base change $g$, the new residue field extension is:
-\[
-\kappa(\eta') = \kappa(\eta) \otimes_{\kappa(\xi)} \kappa(\xi')
-\]
-Because $\kappa(\xi') / \kappa(\xi)$ is a finite separable extension (as $g$ is étale), properties of the extension $\kappa(\eta) / \kappa(\xi)$ are preserved:
-\begin{itemize}
-    \item $\kappa(\eta) / \kappa(\xi)$ is separable $\iff$ $\kappa(\eta') / \kappa(\xi')$ is separable.
-    \item The characteristic $p$ of the residue field is preserved. Since $e = e'$, then $p \nmid e \iff p \nmid e'$.
-\end{itemize}
+The upper numbering filtration on the absolute Galois group is compatible with unramified base change. Specifically, let $G_K = \operatorname{Gal}(K^{sep}/K)$ and $G_L = \operatorname{Gal}(L^{sep}/L)$. For an unramified extension, the Herbrand function is the identity, which implies that for any $r \geq 0$:
+\[ G_L^r = G_K^r \cap G_L \]
+The ramification of the $G$-torsor $\mathcal{P}$ is bounded by $r$ if and only if the corresponding Galois representation $\rho: G_K \to G$ satisfies $\rho(G_K^r) = \{1\}$. 
 
-\medskip
-\noindent \textbf{Conclusion:} \\
-Since $e = e'$ and the separability of the residue field extension is invariant under étale base change, $f$ is unramified (resp. tamely ramified) at $(Z, \xi)$ if and only if $f'$ is unramified (resp. tamely ramified) at $(Z', \xi')$.
+By the filtration identity above, $\rho(G_L^r) = \{1\}$ if and only if $\rho(G_K^r) = \{1\}$. Thus, the pullback torsor $f^{-1}\mathcal{P}$ has ramification bounded by $r$ at $\eta_X$ if and only if $\mathcal{P}$ has ramification bounded by $r$ at $\eta_Y$.
 \end{proof}
-
-\begin{rem*}
-For a Galois cover $f: Y \to U$, the equivalence established in the lemma extends naturally to the study of higher ramification groups. Specifically, under the same assumptions for the morphism $g: X' \to X$, the lemma remains valid if the conditions of being unramified or tamely ramified are replaced by the property of having ramification bounded by $r$.\end{rem*}
 
 \subsubsection*{The ramification in term of morphisms}
 maybe not needed. 

@@ -62,7 +62,8 @@ The following lemma is adapted from \cite{takeuchi2019blow} (Lemma 4.1)
      inside the domain $C^{(\deg \mathfrak{n}_1)} \times_k \dots \times_k C^{(\deg \mathfrak{n}_l)} \times_k C^{(d - \deg \mathfrak{m})}$.
 
 \begin{proof}
-     We may assume that $k$ is algebraically closed (hence $\deg P_i = 1$ for all $i$). By miracle flatness $\pi$ is finite flat. 
+     We may assume that $k$ is algebraically closed (hence $\deg P_i = 1$ for all $i$). By miracle flatness $\pi$ is flat, it is quasi-finite and projective as a map between projecive spaces.
+     so we condlude $\pi$ is finite and flat. 
      It is enough to show that there exists a closed point $Q$ of $\ndls_1 + \dots \ndls_l + C^{(d - \deg \mathfrak{m})} \subset C^{(d)}$ 
      over which there are $\deg \pi$ points on $C^{(\ndls_1)} \times_k \dots \times_k C^{(\ndls_l)} \times_k C^{(d - \deg \mathfrak{m})}$. (Because it will be unramified 
      at this point and thus also at the generic point of $V$.)
@@ -138,16 +139,45 @@ Combining this with \Cref{cor:etale_at_generic_point} we get
      $E_{\mdls} \times_k C^{(d-\deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)}$,
      and $\cP^{(d)}$ is tamely ramified at the generic point $\eta_0=\eta_{\mdls,d}$ of $E_0=E_{\mdls,d}$
 \end{cor}
-\begin{proof} The first part that $\boxP{\cP^{(\deg \mdls)}}{\cP^{(d - \deg \mdls)}}$ is tamely ramified at $\theta$ is our discussion above.
-The fact that $\cP^{(d)}$ is tamely ramified at $\eta_0$ will follow from \Cref{lemma:descend_ramification_along_etale}, once we 
-show the conditions there are met:
+\begin{proof} 
+The first assertion, that $\mathcal{P}^{(\deg \mathfrak{m})} \boxtimes \mathcal{P}^{(d - \deg \mathfrak{m})}$ is tamely ramified at $\theta$, follows from the preceding discussion. Thus, it remains to show that $\mathcal{P}^{(d)}$ is tamely ramified at $\eta_0$.
 
+Consider the blowup diagram defining $X_{\mathfrak{m}, d}$:
+\[
+\begin{tikzcd}
+\overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] & X_{\mdls, d} \arrow[d, "\pi"] \\
+Z_0 \arrow[r, "c.i"]           & C^{(d)}          
+\end{tikzcd}
+\] 
+By performing a base change along the flat addition map $+: C^{(\deg \mathfrak{m})} \times_k U^{(d-\deg \mathfrak{m})} \to C^{(d)}$, we obtain the following commutative diagram:
 
+\[
+\begin{tikzcd}
+&  \left(C^{(\deg \mdls)} \times_k U^{(d-\deg \mdls)} \right) \times_{C^{(d)}} E_0 \arrow[r] \arrow[d] & \overline{\{\eta_0 \}} =  E_0 \arrow[d] \\
+& \left(C^{(\deg \mdls)} \times_k U^{(d-\deg \mdls)} \right) \times_{C^{(d)}} X_{\mdls, d} \arrow[d] \arrow[r] & X_{\mdls, d} \arrow[d, "\pi"] \\
+\mdls \times_k U^{(d-\deg \mdls)} \arrow[r, "c.i"] & C^{(\deg \mdls)} \times_k U^{(d-\deg \mdls)} \arrow[r, "+"]  & C^{(d)}          
+\end{tikzcd}
+\] 
+Since blowups commute with flat base change, and the inverse image of the center $Z_0$ under the map $+$ is $\mathfrak{m} \times_k U^{(d-\deg \mathfrak{m})}$, the scheme $\left(C^{(\deg \mathfrak{m})} \times_k U^{(d-\deg \mathfrak{m})} \right) \times_{C^{(d)}} X_{\mathfrak{m}, d}$ is the blowup of $C^{(\deg \mathfrak{m})} \times_k U^{(d-\deg \mathfrak{m})}$ along $\mathfrak{m} \times_k U^{(d-\deg \mathfrak{m})}$. 
+This, in turn, is isomorphic to the base change of the blowup $X_{\mathfrak{m}}$ (of $C^{(\deg \mathfrak{m})}$ along $\mathfrak{m}$) via the (flat) projection $C^{(\deg \mathfrak{m})} \times_k U^{(d - \deg \mathfrak{m})} \to C^{(\deg \mathfrak{m})}$.
 
-% follows from \Cref{cor:etale_at_generic_point} and \Cref{section:symmetric_powers_on_curves}
-% (And the fact that an etale map restricts to unramified extension of the residue fields).
+Assembling these facts, we obtain the following Cartesian square:
+\[
+\begin{tikzcd}
+&  E_{\mdls}\times U^{(d - \deg \mdls)}  \arrow[r, "\tilde{+}"] \arrow[d] & \overline{\{\eta_0 \}} =  E_0 \arrow[d] \\
+& X_{\mdls} \times_k U^{(d - \deg \mdls)} \arrow[d] \arrow[r, "\tilde{+}"] & X_{\mdls, d} \arrow[d, "\pi"] \\
+\mdls \times_k U^{(d-\deg \mdls)} \arrow[r, "c.i"] & C^{(\deg \mdls)} \times_k U^{(d-\deg \mdls)} \arrow[r, "+"]  & C^{(d)}          
+\end{tikzcd}
+\] 
+
+The point $\theta$ defined in the Corollary is the generic point of $E_{\mathfrak{m}} \times_k U^{(d-\deg \mathfrak{m})}$.
+ Let $\eta$ be the generic point of $\mathfrak{m} \times_k U^{(d-\deg \mathfrak{m})}$. 
+ By \Cref{cor:etale_at_generic_point}, the map $+$ is étale at $\eta$. 
+Consequently, the lifted map $\tilde{+}$ is étale at $\theta$. 
+Given the isomorphism $(+^{-1})(\cP^{(d)}) \cong \cP ^{(\deg \mdls)} \boxtimes \cP ^{(d - \deg \mdls)}$ from \Cref{section:symmetric_powers_on_curves},
+the tame ramification of the box product at $\theta$ descends to the tame ramification of $\mathcal{P}^{(d)}$ at $\eta_0$ by applying \Cref{lemma:descend_ramification_along_etale}.
+
 \end{proof}
-
 
 \begin{lemma}
      Let $\ndls_1, \ndls_2 \subset \mdls$ be two moduli of the form $\ndls_1 = k_1 P_1$, $\ndls_2 = k_2 P_2$ where $P_1, P_2$ are distinct points.
