@@ -179,24 +179,53 @@ the tame ramification of the box product at $\theta$ descends to the tame ramifi
 
 \end{proof}
 
-\begin{lemma}
-     Let $\ndls_1, \ndls_2 \subset \mdls$ be two moduli of the form $\ndls_1 = k_1 P_1$, $\ndls_2 = k_2 P_2$ where $P_1, P_2$ are distinct points.
-     Assume $\cF ^{(\deg \ndls_1)}$, $\cF ^{(\deg \ndls_2)}$ are at most tamely ramified at $\eta_{\ndls_1}$, $\eta_{\ndls_2}$ respectively.
-     Then $\cF^{(\deg \ndls_1 + \deg \ndls_2)}$ is at most tamely tamified at $\eta_{\ndls_1 + \ndls_2}$.
-\end{lemma}
-\begin{proof}
-     \textcolor{red}{Complete}
-\end{proof}
+% \begin{lemma}
+%      Let $\ndls_1, \ndls_2 \subset \mdls$ be two moduli of the form $\ndls_1 = k_1 P_1$, $\ndls_2 = k_2 P_2$ where $P_1, P_2$ are distinct points.
+%      Assume $\cF ^{(\deg \ndls_1)}$, $\cF ^{(\deg \ndls_2)}$ are at most tamely ramified at $\eta_{\ndls_1}$, $\eta_{\ndls_2}$ respectively.
+%      Then $\cF^{(\deg \ndls_1 + \deg \ndls_2)}$ is at most tamely tamified at $\eta_{\ndls_1 + \ndls_2}$.
+% \end{lemma}
+% \begin{proof}
+%      \textcolor{red}{Complete}
+% \end{proof}
 
 \begin{lemma}\label{lemma:moduli_reduction}
-     Let $\ndls, \ndls' \subset \mdls$ be coprime sub moduli of $\mdls$ where $\ndls' = k_P P$.
-     Assume $\cF ^{(\deg \ndls)}$, $\cF ^{(\deg \ndls')}$ are at most tamely ramified at $\eta_{\ndls}$, $\eta_{\ndls'}$ respectively.
-     Then $\cF^{(\deg \ndls + \deg \ndls')}$ is at most tamely tamified at $\eta_{\ndls + \ndls'}$ .
+     Let $\ndls_1, \ndls_2 \subset \mdls$ be two coprime sub moduli of $\mdls$.
+     Assume $\cP ^{(\deg \ndls_1)}$, $\cP ^{(\deg \ndls_2)}$ are at most tamely ramified at $\eta_{\ndls_1}$, $\eta_{\ndls_2}$ respectively.
+     Then $\cP^{(\deg \ndls_1 + \deg \ndls_2)}$ is at most tamely tamified at $\eta_{\ndls_1 + \ndls_2}$.
 \end{lemma}
 
 \begin{proof}
-     \textcolor{red}{Complete}
+     We focus our attention to $X_{\ndls_1} \times_k X_{\ndls_2}$ as total space.
+     Like before, the $G$ torsor $\cP_1^{(\deg \ndls_1)} \times_k X_{\ndls_2} \to U^{(\deg \ndls_1)} \times_k X_{\ndls_2}$ is at most tamely 
+     ramified at the generic point $\theta_1$ of $E_{\ndls_1} \times_k X_{\ndls_2}$
+     Let $\tilde{U}$ be the open subscheme from \Cref{prop:blowup-product-relation} with morphisim $f_1$ and $f_2$ as in:
+     \begin{equation*}
+          \begin{tikzcd}
+               & \tilde{U} \arrow[dl, "f_1"'] \arrow[dr, "f_2", hook] & \\
+               X_{\ndls_1} \times_k X_{\ndls_2} & & \text{Bl}_{(\ndls_1,\ndls_2)}(C^{(\deg \ndls_1)} \times_k C^{(\deg \ndls_2)})
+          \end{tikzcd}
+     \end{equation*}
+
+      satisfying:
+     \begin{enumerate}
+          \item $f_2$ is an open immersion.
+          \item $f_1$ is an open immersion.
+          \item The generic point $\eta'$ of the exceptional divisor of the blowup $\text{Bl}_{(\ndls_1,\ndls_2)}(C^{(\deg \ndls_1)} \times_k C^{(\deg \ndls_2)})$
+          is contained in the image of $f_2$ (identifying $\tilde{U}$ as an open subscheme of the blowup of the product).
+          \item The morphism $f_1$ maps the point corresponding to $\eta_{X \times Y}$ to the product of generic points $\eta_X \times \eta_Y$.
+     \end{enumerate}
+
+     Notice that $\text{Bl}_{(\ndls_1,\ndls_2)}(C^{(\deg \ndls_1)} \times_k C^{(\deg \ndls_2)})$
+
+     
+
+
+
+%Like before $\boxP{\cP^{(\deg \ndls_1)}}{\cP^{(\deg \ndls_2)}} = p_1^{-1} \cP^{(\deg \ndls_2)} \wedge^G p_2^{-1} \cP^{(\ndls_2)}$
+%\Cref{prop:blowup-product-relation}
+%Let $\ndls = \ndls_1 + \ndls_2$.
 \end{proof}
+
 
 
 \subsection{\texorpdfstring{Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}}{Proof of Theorem X}}
