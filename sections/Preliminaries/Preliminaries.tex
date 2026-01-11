@@ -1009,185 +1009,119 @@ see \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, or \cite
 %\input{sections/Preliminaries/KummerTheory.tex}
 
 
-\subsection{Blowups and Valuations}
-Let $X=\A_k^n$ be the affine $n$-space over a field $k$, let $0 \in X$ be the origin.
-Let $\tilde{X}=Bl_0(X)$ be the blowup of X with respect to the origin.
-Then $\Bl_0(X) \subset X \times_k \bP^{n-1}$ defined by the equations $x_i u_j = x_j u_i$ where 
-$[u_1: \ldots : u_n]$ are the homogeneous coordinates of $\bP^{n-1}_k$.
-Let $E \subset \tilde{X}$ be the exceptional divisor of the blowup $E = \{(0, [u_1: \dots :u_n]) \}$.
-It is of codimension 1 in $\tilde{X}$. 
-Let $\eta \in E$ be the generic point of $E$ and let $R=\Oo_{\tilde{X}, \eta}$ be the local ring. 
-It is a discrete valuation ring, with fraction field $K=K(X)=k(x_1, \dots, x_n)$.
-On the chart where $u_1 \neq 0$ we have $x_i=\frac{u_i}{u_1} x_1$ and $[u_1: \dots :u_n] = [1: \frac{u_2}{u_1}: \frac{u_3}{u_1} \dots \frac{u_n}{u_1}]$ 
+\subsection{Behavior of Ramification under Product of Blowups}
+Let $X$ and $Y$ be smooth schemes over a field $k$, and let $x \in X$ and $y \in Y$ be closed points. 
+We denote the blowups of these schemes at the given points by 
+$\pi_X: \Bl_x(X) \to X$ and $\pi_Y: \Bl_y(Y) \to Y$. Furthermore, let $\pi_{X \times Y}: \Bl_{(x,y)}(X \times_k Y) \to X \times_k Y$ 
+be the blowup of the product scheme at the point $(x,y)$.
+We denote by $E_X, E_Y$, and $E_{X \times Y}$ the respective exceptional divisors, and let $\eta_X, \eta_Y$, and $\eta_{X \times Y}$ be their generic points.
 
-The affine ring correspond to 
-$$\Oo_{\tilde{X}}(U_1) = k[x_1, x_2 \cdots, x_n, 1, \frac{u_2}{u_1}, \cdots \frac{u_n}{u_1}] = k[x_1, \frac{u_2}{u_1}, \cdots \frac{u_n}{u_1}] $$
-And the generic point $\eta$ correspond to the ideal $\pp_1 = (x_1)$.
-So the local ring is $R=k[x_1, \frac{u_2}{u_1}, \cdots \frac{u_n}{u_1}]_{\pp_1}$ and its completion with respect to the maximal ideal 
-is $$\hat{R} = k(\frac{u_2}{u_1}, \dots, \frac{u_n}{u_1})[[x_1]]$$
-Given any monomial $M=x_1^{a_1} x_2^{a_2} \dots x_n^{a_n} \in K$
-We have $M=x_1^{\sum a_i} v$ where $v= (\frac{u_2}{u_1})^{a_2} \cdots (\frac{u_n}{u_1})^{a_n}$. Since $v$ is a unit in $R$ we get:
-$\nu_E(M) = \sum a_i = \deg M$.
-So we see that for every polynomial $f= f_d + f_{d+1} + \cdots f_{l}$ where $f_i$ is the homogeneous part of $f$ we have $v_E(f)=d$.
+ In this section, we establish the following result concerning the stability of ramification bounds under the external product of torsors.
 
-Now, let $X=\A^n$, $Y=\A^m$ and $x=0, y=0$, then like before we have:
-Then $\Bl_0(X) \subset X \times_k \bP^{n-1}$ defined by the equations $x_i u_j = x_j u_i$ where 
-$[u_1: \ldots : u_n]$ are the homogeneous coordinates of $\bP^{n-1}_k$, and similrly $\Bl_0(Y) \subset Y \times_k \bP^{m-1}$  
-defined by $y_k v_l = y_l v_k$. The exceptional divisors are $E_X = \{(0, [u_1: \dots :u_n]) \}$ and $E_Y = \{(0, [v_1: \dots :v_m]) \}$
+\begin{prop}\label{prop:ramification-external-product}
+Let $G$ be a finite abelian group. Suppose $\cG_X$ and $\cG_Y$ are $G$-torsors defined on open subsets $U_X \subset \Bl_x(X)$ and $U_Y \subset \Bl_y(Y)$ that are disjoint 
+from the exceptional divisors. 
+If the ramification of $\cG_X$ at $\eta_X$ and $\cG_Y$ at $\eta_Y$ is bounded by $r$, then the external product torsors 
+\[
+\cG_{X \times Y} := \text{pr}_1^{-1} \cG_X \otimes \text{pr}_2^{-1} \cG_Y
+\]
+has ramification bounded by $r$ at the generic point $\eta_{X\times Y}$ of the exceptional divisor in the product blowup.
+\end{prop}
 
+The proposition is purely local in nature, it suffices to consider the case where $X$ and $Y$ are affine. 
+More precisely, by the smoothness of $X$ and $Y$, we may restrict our attention to open neighborhoods of $x$ and $y$ that are isomorphic to affine spaces. 
+The rest of this section treats that case.
 
-$X \times_k Y \cong \A_k^{n+m}$ and $(x,y)=(0,0)$ corresponds to 0. %locally by the ideal $\mdls_{(0,0)} = (x_1, \cdots, x_n, y_1 \cdots y_n)$
-The blowup $\Bl_{(0,0)(X \times_k Y)} \subset (X \times Y) \times \bP^{n+m-1}$ is defined by:
+\subsubsection*{The Affine Case}
+Let $X = \mathbb{A}_k^n$ be the affine $n$-space over a field $k$, and let $0 \in X$ be the origin. 
+Let $\tilde{X} = \text{Bl}_0(X)$ be the blowup of $X$ at the origin. 
+Recall that $\tilde{X} \subset X \times_k \mathbb{P}^{n-1}_k$ is defined by the equations $x_i u_j = x_j u_i$, where $[u_1 : \dots : u_n]$ are the homogeneous coordinates of 
+$\mathbb{P}^{n-1}_k$.
+The exceptional divisor $E \subset \tilde{X}$ is the fiber over the origin, $E = \{ (0, [u_1 : \dots : u_n]) \}$, which is of codimension 1 in $\tilde{X}$. 
+Let $\eta \in E$ be the generic point of $E$, and let $R = \mathcal{O}_{\tilde{X}, \eta}$ be the associated local ring. 
+This ring $R$ is a discrete valuation ring (DVR) with fraction field $K = K(X) = k(x_1, \dots, x_n)$.
+
+On the affine chart $U_1$ where $u_1 \neq 0$, we have $x_i = \frac{u_i}{u_1} x_1$. 
+The coordinate ring is:$$\mathcal{O}_{\tilde{X}}(U_1) = k\left[x_1, \frac{u_2}{u_1}, \dots, \frac{u_n}{u_1}\right]$$
+In this chart, the generic point $\eta$ corresponds to the prime ideal $\mathfrak{p}_1 = (x_1)$. Thus, the local ring is $R = k[x_1, \frac{u_2}{u_1}, \dots, \frac{u_n}{u_1}]_{(x_1)}$. 
+The residue field is $\kappa(\eta) = k(\frac{u_2}{u_1}, \dots, \frac{u_n}{u_1})$, and the completion of $R$ with respect to its maximal ideal is:
+$$\hat{R} = \kappa(\eta)[[x_1]]$$
+In this local ring, $x_1$ is a uniformizer. Note that any $x_i$ (for $i > 1$) can also serve as a uniformizer, 
+as $x_i = (\frac{u_i}{u_1}) x_1$ and $\frac{u_i}{u_1}$ is a unit in $R$.
+
+For any monomial $M = x_1^{a_1} \dots x_n^{a_n} \in K$, we can write:
+$$M = x_1^{\sum a_i} \left( \frac{u_2}{u_1} \right)^{a_2} \dots \left( \frac{u_n}{u_1} \right)^{a_n}$$
+Since the term in parentheses is a unit in $R$, the valuation $\nu_E$ associated with $E$ satisfies:
+$$\nu_E(M) = \sum a_i = \deg M$$
+Consequently, for any polynomial $f = f_d + f_{d+1} + \dots + f_l$, where $f_i$ is the homogeneous part of degree $i$, we have $\nu_E(f) = d$ (the order of vanishing at the origin).
+
+\subsubsection*{The Product Case}
+Now, let $X = \mathbb{A}^n$ and $Y = \mathbb{A}^m$ with origins $x=0$ and $y=0$. 
+As before, $\text{Bl}_0(X) \subset X \times \mathbb{P}^{n-1}$ and $\text{Bl}_0(Y) \subset Y \times \mathbb{P}^{m-1}$ have exceptional divisors $E_X$ and $E_Y$ respectively.
+Consider the product $X \times_k Y \cong \mathbb{A}_k^{n+m}$. 
+The blowup of the product at the origin $(0,0)$, denoted $\text{Bl}_{(0,0)}(X \times_k Y)$, is a subscheme of $(X \times Y) \times \mathbb{P}^{n+m-1}$ defined by:
 
 $$\begin{cases} 
-x_i w_j = x_j w_i & 1 \le i \le n, \,\, 1 \le j \le m \\
+x_i w_j = x_j w_i & 1 \le i, j \le n \\
 y_k w_{n+l} = y_l w_{n+k} & 1 \le k, l \le m \\
 x_i w_{n+j} = y_j w_i & 1 \le i \le n, \,\, 1 \le j \le m 
 \end{cases}$$
-where $[w_1 : \dots : w_{n+m}]$ are the homogeneous coordinates of $\mathbb{P}^{n+m-1}$
+where $[w_1 : \dots : w_{n+m}]$ are the homogeneous coordinates of $\mathbb{P}^{n+m-1}$. The exceptional divisor $E_{X \times Y}$ is isomorphic to $\mathbb{P}^{n+m-1}$.
 
-The exceptional divisor $E_{X \times Y} = \{\left( (0,0), [w_1: \dots :w_{n+m}]\right) \}$ is isomorphic to $\mathbb{P}^{n+m-1}$.
+\subsubsection*{Comparison of Blowups}
 
-Notice that both $\Bl_0(X) \times_k \Bl_0(Y)$ and $\Bl_{(0,0)}(X \times_k Y)$ are birational to $X \times_k Y$, and there is a common dense open.
-Concretly, if we let $$\tilde{U} = \{ ((x,y),[w_1: \dots w_n: w_{n+1} \dots :w_m])  \mid (w_1, \dots, w_n), (w_{n+1}, \dots, w_m) \neq 0 \}$$
-Then we have open immersions $f_1, f_2$:
-\[
-    \begin{tikzcd}
+Both $\text{Bl}_0(X) \times_k \text{Bl}_0(Y)$ and $\text{Bl}_{(0,0)}(X \times_k Y)$ are birational to $X \times_k Y$. 
+They share a common dense open set $\tilde{U}$ defined by the condition that neither the $X$-coordinates nor the $Y$-coordinates vanish simultaneously in the projective space:
+$$\tilde{U} = \{ ((x,y), [w_1: \dots : w_{n+m}]) \mid (w_1, \dots, w_n) \neq 0 \text{ and } (w_{n+1}, \dots, w_{n+m}) \neq 0 \}$$This yields a diagram of open immersions:
+$$ 
+   \begin{tikzcd}
         & \tilde{U} \arrow[dl, "f_1"'] \arrow[dr, "f_2", hook] & \\
         \text{Bl}_0(X) \times_k \text{Bl}_0(Y) & & \text{Bl}_{(0,0)}(X \times_k Y)
     \end{tikzcd}
-\]
-
-defined by: $f_2= id|_{\tilde{U}}$ and $f_1: ((x,y),[w_1: \dots w_n: w_{n+1} \dots :w_m]) \mapsto \left((x, [w_1: \dots : w_n]), (y, [w_{n+1}: \dots : w_m])\right)$
-
-Let $K=K(X \times_k Y) = k(x_1, \cdots x_n, y_1, \cdots y_m) \cong k(x_1, \cdots, x_n) \otimes_k k(y_1, \cdots, y_m)$.
-%Let $u_i = \frac{w_i}{w_1}$ for $i=1, \cdots n$ and $v_j = \frac{w_{n+j}}{w_{n+1}}$ for $j=2, \dots, m$
-Let $\eta$ be the generic point of $E_{X \times Y}$. And let $R$ be the local ring $R=\Oo_{\tilde{U}, \eta}$.
-On the sub-chart $\{ w_1 \neq 0, w_{n+1} \neq 0 \}$ we have 
-$x_1 = \frac{w_{n+1}}{w_1} y_1$ where $\frac{w_{n+1}}{w_1}$ is a unit so 
-$R=k[x_1, \frac{w_2}{w_1} \cdots \frac{w_n}{w_1}, \frac{w_{n+1}}{w_1} \cdots \frac{w_{n+m}}{w_1}]_{(x_1)} = 
-k[\frac{w_1}{w_{n+1}}, \frac{w_2}{w_{n+1}} \cdots \frac{w_n}{w_{n+1}}, y_1 \cdots \frac{w_{n+m}}{w_{n+1}}]_{(y_1)}$.
-If we let $\nu$ be the respective valuation then, as before we get $\nu(f) = d$ where $f = f_d + f_{d+1} + \cdots + f_{l}$ is decomposion of $f$ into homogeneous parts
-
-Now let $D_X=E_X \times_k Bl_0(Y) \subset Bl_0(X) \times Bl_0(Y)$
-So 
-$$ D_X =\{ ((0, [w_1: \cdots : w_n]), (y, [w_{n+1}: \cdots : w_{m}])) \}$$
-Over the affine $\{w_1 \neq 0, y_1 \neq 0\}$ we have $w_{n+1} \neq 0$ as well so:
-$$D_X = \{\left( (0, [1: \frac{w_2}{w_1} \cdots \frac{w_n}{w_1}]), (y, [1: \frac{w_{n+2}}{w_{n+1}}: \cdots : \frac{w_{n+m}}{w_{n+1}}]) \right) \mid y_1 \neq 0\}$$
-Notice that $\frac{y_l}{y_1} = \frac{w_{n+l}}{w_{n+1}}$
-So the corresponding local ring is:
-$$k[x_1, \frac{w_2}{w_1}, \cdots \frac{w_n}{w_1}, y_1, \frac{w_{n+2}}{w_{n+1}} \cdots \frac{w_{n+m}}{w_{n+1}}]_{(x_1)} $$
-notice that unlike the previous case here $y_l = \frac{w_{n+l}}{w_{n+1} y_1} \notin (x_1)$ hence they are invertible. 
-The completion is $$k(\frac{w_2}{w_1}, \cdots \frac{w_n}{w_1}, y_1, \frac{w_{n+2}}{w_{n+1}} \cdots \frac{w_{n+m}}{w_{n+1}})[[x_1]] $$
-And like before, one can show that for a monomial $M(x,y)= x^a y^b$ we have $v_{D_X}(M)= \deg M(x,1)$
-Doing the same for $D_Y= Bl_0(X) \times_k E_(Y) \subset Bl_0(X) \times Bl_0(Y)$ we get a similiar result and conclude that $v_{D_Y}(M)= \deg M(1,y)$
-Combining this with the above we get $$\nu(f) = \min_{(a,b) \in \text{supp}(f)} \left( |a| + |b| \right)$
-Where $\text{supp}(f)$ is all the non-zero
-
-
-
-
-
-
-
-
-Then $s$
-On the other hand if we let $\eta_1 = \eta_X$ be the generic point of $E_X \times_k Bl_0(Y)$ 
-And $R_1$ its respective local ring. 
-
-% %And its completion with respect to the maximal ideal 
-% is $$\hat{R} = k(\frac{u_2}{u_1}, \dots, \frac{u_n}{u_1})[[x_1]]$$
-% Putting on the coordiantes of $Bl_(0,0)(X \times_k Y)$ 
-
-
-
-Let $U_X = X \setminus \{ 0 \}$ and similarly $U_Y = Y \setminus \{ 0 \}$. Then $U_X, U_Y$ are also the complements of $E_X, E_Y$ in $\Bl_0(X), \Bl_0(Y)$
-respectively. 
-
-% Denote the inverse image of $E_X \times U_Y \subset \Bl_0(X) \times \Bl_0(Y)$ under $f_1$ by $F_X$, 
-% then: 
-% $$ F_X = \{ ((x,y), [w]) \in \tilde{U} \mid x=0, y\neq 0  \} $$
-% And similarly $F_Y$ the inverse image of  $U_X \times E_Y$ is given by: 
-% $$ F_Y = \{ ((x,y), [w]) \in \tilde{U} \mid x \neq 0, y = 0  \} $$
-% On the otherhand, if $F_{X \times Y}$ is the inverse image of $E_{X \times Y}$ under $f_2$ then 
-% $F_{X \times Y} = \{ (x, y, [w]) \mid x=0, y=0 \}$
-
-% Both $F_X$ and $F_Y$ are of codimension 1 in $
-
-
-
-Let $\eta = \eta_{X \times Y}$ be the generic point of $E_{X \times Y}$ then $\eta \in F_{X \times Y}$
-Let $R = \Oo_{X \times Y, \eta}$ be the local ring, it is a DVR, with valuation $\mu$. and let $K=\Frac R$ be its fraction field. 
-R
-On the otherhand let $\eta_{F_X}$, $\eta_{F_Y}$ be the generic points of $F_X, F_Y$ respectively. 
-
-
-
-Given two smooth schemes $X, Y$ over $\Spec(k)$, we want to understand the connection between
-$\text{Bl}_{(x,y)}(X \times_k Y)$ and $\text{Bl}_x(X) \times_k \text{Bl}_y(Y)$. More concretly, we want to understand the possible
-ramification at the generic points of the resepective exceptional divisors and relate them. 
-
-
-The product $\Bl_x(X) \times_k \Bl_y(Y)$ is birational to $X \times_k Y$ and contains the product of the exceptional divisors 
-
-\begin{prop}\label{prop:blowup-product-relation}
-Let $X$ and $Y$ be smooth schemes over a field $k$. Let $x \in X$ and $y \in Y$ be closed points. Consider the respective blowups:
-\[ \pi_X: \text{Bl}_x(X) \to X, \quad \pi_Y: \text{Bl}_y(Y) \to Y, \quad \text{and} \quad \pi_{X \times Y}: \text{Bl}_{(x,y)}(X \times_k Y) \to X \times_k Y \]
-Let $\eta_X$, $\eta_Y$, and $\eta_{X \times Y}$ denote the generic points of the exceptional divisors $E_X \subset \text{Bl}_x(X)$, $E_Y \subset \text{Bl}_y(Y)$, and $E_{X \times Y} \subset \text{Bl}_{(x,y)}(X \times_k Y)$, respectively.
-
-Then there exists a scheme $\tilde{U}$ and morphisms $f_1, f_2$ making the following diagram commute:
-\begin{equation*}
-    \begin{tikzcd}
-        & \tilde{U} \arrow[dl, "f_1"'] \arrow[dr, "f_2", hook] & \\
-        \text{Bl}_x(X) \times_k \text{Bl}_y(Y) & & \text{Bl}_{(x,y)}(X \times_k Y)
-    \end{tikzcd}
-\end{equation*}
-such that:
-\begin{enumerate}
-    \item $f_2$ is an open immersion.
-    \item $f_1$ is an open immersion.
-    \item The generic point $\eta_{X \times Y}$ is contained in the image of $f_2$ (identifying $\tilde{U}$ as an open subscheme of the blowup of the product).
-    \item The morphism $f_1$ maps the point corresponding to $\eta_{X \times Y}$ to the product of generic points $\eta_X \times \eta_Y$.
-\end{enumerate}
-\end{prop}
-
-
-\begin{proof}
-The statement is local, allowing us to replace $X$ and $Y$ with affine open neighborhoods 
-$U_X \subset X$ and $U_Y \subset Y$ containing $x$ and $y$, respectively. 
-By smoothness of $X$ and $Y$ over $k$ there are étale morphisms $f: U_X \to \mathbb{A}_k^n$ and $g: U_Y \to \mathbb{A}_k^m$ 
-that map $x$ and $y$ to their respective origins. By further shrinking these neighborhoods, we can ensure that $f$ and $g$ are such that 
-$f^{-1}(0) = \{x\}$ and $g^{-1}(0) = \{y\}$. 
-Because étale morphisms are flat and blowup commute with flat base change, its enough to prove the proposition in the elementary case of 
-$X = \mathbb{A}_k^n$, $Y = \mathbb{A}_k^m$ and both $x=0$ and $y=0$.
- 
-Recall the coordinate descriptions:
-\begin{itemize}
-    \item $\mathrm{Bl}_0(\mathbb{A}^n) \subset \mathbb{A}^n \times \mathbb{P}^{n-1}$ with coordinates $(\underline{x}, [u_1 : \dots : u_n])$.
-    \item $\mathrm{Bl}_0(\mathbb{A}^m) \subset \mathbb{A}^m \times \mathbb{P}^{m-1}$ with coordinates $(\underline{y}, [v_1 : \dots : v_m])$.
-    \item $\mathrm{Bl}_0(\mathbb{A}^{n+m}) \subset \mathbb{A}^{n+m} \times \mathbb{P}^{n+m-1}$ with coordinates $(\underline{x}, \underline{y}, [w_1 : \dots : w_{n+m}])$.
-\end{itemize}
-
-We define $\tilde{U} \subset \mathrm{Bl}_0(\mathbb{A}^{n+m})$ as the open subscheme where the first $n$ and last $m$ homogeneous coordinates do not vanish simultaneously:
-\[ \tilde{U} = \mathrm{Bl}_0(\mathbb{A}^{n+m}) \setminus \left( \{w_1 = \dots = w_n = 0\} \cup \{w_{n+1} = \dots = w_{n+m} = 0\} \right) \]
-The morphism $f_2: \tilde{U} \hookrightarrow \mathrm{Bl}_0(\mathbb{A}^{n+m})$ is the inclusion.
-
-We define $f_1: \tilde{U} \to \mathrm{Bl}_0(\mathbb{A}^n) \times \mathrm{Bl}_0(\mathbb{A}^m)$ by:
-\[ f_1\left( (\underline{x}, \underline{y}), [w_1 : \dots : w_{n+m}] \right) = \left( (\underline{x}, [w_1 : \dots : w_n]), (\underline{y}, [w_{n+1} : \dots : w_{n+m}]) \right) \]
-This is well-defined on $\tilde{U}$ because the ratios $[w_1 : \dots : u_n]$ and $[w_{n+1} : \dots : w_{n+m}]$ are always well-defined in their respective projective spaces. This map is an isomorphism onto the open subset of the product where $\underline{x}$ and $\underline{y}$ satisfy the compatibility condition $\frac{x_i}{y_j} = \frac{w_i}{w_{n+j}}$ (whenever defined).
-
-The generic point $\eta_{X \times Y}$ corresponds to the generic point of the exceptional divisor $E_{X \times Y} \cong \mathbb{P}^{n+m-1}$ at $(\underline{x}, \underline{y}) = (0,0)$. This generic point lies in $\tilde{U}$ since $w_{1 \dots n}$ and $w_{n+1 \dots n+m}$ are generically non-zero. Under $f_1$, this generic point is sent to the generic point of $E_X \times E_Y \cong \mathbb{P}^{n-1} \times \mathbb{P}^{m-1}$, which is exactly $\eta_X \times \eta_Y$.
-\[
-\begin{tikzcd} %[row sep=large, column sep=large]
-& U = \left\{ (\underline{x}, \underline{y}) \mid \begin{array}{l} (y_1, \dots, y_n) \ne 0 \\ (y_{n+1}, \dots, y_{n+m})  \ne 0 \end{array} \right\} 
-\arrow[dl] \arrow[dr] & \\
-\mathrm{Bl}_0(\mathbb{A}^n_k) \times \mathrm{Bl}_0(\mathbb{A}^m_k) \arrow[d] & & \mathrm{Bl}_0(\mathbb{A}^{n+m}_k) \arrow[d] \\
-\mathbb{A}^n_k \times \mathbb{A}^m_k & & \mathbb{A}^{n+m}_k
-\end{tikzcd}
-\]
-
+$$
     
-\end{proof}
+    where $f_1$ maps the coordinates to the respective projectivizations $[w_1: \dots : w_n]$ and $[w_{n+1}: \dots : w_{n+m}]$.
+    Also note that the generic point $\eta_{X \times Y}$  of $E_{X \times_k Y}$ is inside $\tilde{U}$
+
+\subsubsection*{Extensions of DVRs}
+Let $S$ be the local ring of the generic point $\eta_{X\times Y}$ of $E_{X \times Y}$ in $\tilde{U}$. 
+On the chart where $w_1 \neq 0$ and $w_{n+1} \neq 0$, we have 
+$x_1 = (\frac{w_1}{w_{n+1}}) y_1$. 
+Since $\frac{w_1}{w_{n+1}}$ is a unit in this chart, $x_1$ and $y_1$ are equivalent as uniformizers.
+We have:
+$$
+S=k\left[x_1, \frac{w_2}{w_1} \cdots, \frac{w_n}{w_1}, \frac{w_{n+1}}{w_1} \cdots \frac{w_{n+m}}{w_1}\right]_{(x_1)} = 
+k\left[\frac{w_1}{w_{n+1}}, \frac{w_2}{w_{n+1}} \cdots \frac{w_n}{w_{n+1}}, y_1 \cdots \frac{w_{n+m}}{w_{n+1}}\right]_{(y_1)}
+$$
+
+$$k(\eta_{X \times Y}) = k\left(\frac{w_2}{w_1} \cdots, \frac{w_n}{w_1}, \frac{w_{n+1}}{w_1} \cdots \frac{w_{n+m}}{w_1}\right)$$
+
+Let $R_X$ be the local ring of the exceptional divisor $E_X$ in $\text{Bl}_0(X)$. 
+The pullback of $E_X \times_k \text{Bl}_0(Y)$ along $f_1$ induces an extension of DVRs $R_X \hookrightarrow S$. Which is:
+\begin{enumerate}
+    \item Weakly Unramified: $x_1$ is a uniformizer in both $R_X$ and $S$, so the ramification index is $e=1$.
+    \item Residually Transcendental: The residue field extension $\kappa(\eta_X) \subset \kappa(\eta)$ is:
+    $$k\left(\frac{w_2}{w_1}, \dots, \frac{w_n}{w_1}\right) \subset k\left(\frac{w_2}{w_1}, \dots, \frac{w_n}{w_1}, \frac{w_{n+1}}{w_1}, \dots, \frac{w_{n+m}}{w_1}\right)$$
+    Hence separable.
+\end{enumerate}
+Since this extension is generated by transcendental elements, it is separable and formally smooth at the maximal ideal (\stackstag{09E7}).
+
+\subsubsection*{Ramification of $G$-Torsors}
+Let $G$ be a finite abelian group. 
+Let $\mathcal{Q}$ be a $G$-torsor on an open $U \subset \text{Bl}_0(X)$ disjoint from $E_X$. 
+%Suppose $\mathcal{Q}$ has ramification bounded by $r$ at the generic point $\eta_X$ of $E_X$.
+Let $V \subset \text{Bl}_0(Y)$ be an open subscheme, and let $\pi_X: \text{Bl}_0(X) \times_k V \to \text{Bl}_0(X)$ 
+be the projection onto the first factor. 
+By restricting this projection to $U \times_k V$, we obtain the pullback $G$-torsor:
+$$\pi_X^{-1}(\mathcal{Q}) \cong \mathcal{Q} \times_k V$$
+which is defined on the open subset $U \times_k V \subset \text{Bl}_0(X) \times_k \text{Bl}_0(Y)$.
+The extension of local rings $R_X \to S$ is weakly unramified (the ramification index $e=1$) and residually transcendental with seprable residue field exntesion. 
+Under these conditions the ramification filtration is preserved. 
+Therefore, the pullback $\pi_X^{-1}(\mathcal{Q})$ has ramification bounded by $r$ at the generic point $\eta_{X \times Y}$ of the exceptional divisor $E_{X \times Y}$ if and only if 
+the original torsor $\mathcal{Q}$ has ramification bounded by $r$ at the generic point $\eta_X$ of $E_X$
+
+And we finish by \Cref{lemma:bounding_ramification_of_contracted_product}.
+
 
 
 \subsection{Compactification of Blowup of Symmetric Powers of a Curve}\label{section:BlowupOfSymmetricPowerOfCurves}

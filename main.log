@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  10 JAN 2026 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  11 JAN 2026 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1090,8 +1090,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-
-No file main.aux.
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -1112,6 +1111,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1170,6 +1170,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 27.
+ (./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
@@ -1207,12 +1208,11 @@ Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
-
-No file main.toc.
+ (./main.toc)
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
-(./sections/Introduction.tex
+ (./sections/Introduction.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 3.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1222,36 +1222,13 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 
-LaTeX Warning: Reference `thm:GCFT' on page 1 undefined on input line 43.
-
-
-LaTeX Warning: Reference `thm:GCFT_reduced' on page 1 undefined on input line 43.
-
+[2]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 53.
 
-LaTeX Warning: Reference `thm:GCFT' on page 1 undefined on input line 70.
 
+[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) (./sections/Preliminaries/Preliminaries.tex
 
-
-[2]
-
-LaTeX Warning: Reference `prop:torsor_module_equivalence' on page 1 undefined on input line 80.
-
-
-LaTeX Warning: Reference `thm:GCFT_reduced' on page 1 undefined on input line 80.
-
-
-LaTeX Warning: Reference `thm:GCFT_torsors' on page 1 undefined on input line 87.
-
-) (./sections/Preliminaries/Preliminaries.tex
-
-[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
-LaTeX Warning: Reference `theorem:int_geoint_implies_productint' on page 1 undefined on input line 49.
-
-<xymatrix 2x2 154>
-
-[4]
+[4] <xymatrix 2x2 154>
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 95.
 
 
@@ -1263,10 +1240,6 @@ Package hyperref Info: bookmark level for unknown cor defaults to 0 on input lin
 
 [7]
 
-LaTeX Warning: Reference `theorem:equivalence_fundamental_covers' on page 1 undefined on input line 284.
-
-
-
 [8]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input line 308.
 
@@ -1274,10 +1247,10 @@ Package hyperref Info: bookmark level for unknown prop defaults to 0 on input li
 [9]
 
 [10]
-Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input line 432.
-
 
 [11]
+Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input line 432.
+
 
 [12] <xymatrix 2x2 154>
 
@@ -1285,48 +1258,17 @@ Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input li
 
 [14] <xymatrix 2x2 154>
 
-LaTeX Warning: Reference `definition:tamely_ramified_dvrs' on page 1 undefined on input line 601.
-
-
-LaTeX Warning: Reference `prop:torsor_representable' on page 1 undefined on input line 612.
-
-
-
 [15]
 
-LaTeX Warning: Reference `subsubsection:structure_theorems_ramification' on page 1 undefined on input line 665.
-
-
-LaTeX Warning: Reference `definition:tamely_ramified_in_codim_1' on page 1 undefined on input line 683.
-
-
-
 [16]
-
-LaTeX Warning: Reference `cor:abelian_equivilance_fundamental_torsors' on page 1 undefined on input line 691.
-
-
-LaTeX Warning: Reference `cor:tors_etale_flat_eq' on page 1 undefined on input line 691.
-
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 705.
-
-LaTeX Warning: Reference `section:ramification_characters' on page 1 undefined on input line 717.
-
 
 
 [17]
 
 [18]
 
-LaTeX Warning: Reference `definition:ulscodim1' on page 1 undefined on input line 838.
-
-
-
 [19]
-
-LaTeX Warning: Reference `prop:symmetric_power_torsor' on page 1 undefined on input line 903.
-
-
 
 [20]
 
@@ -1352,195 +1294,57 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) h
 l.955 \begin{equation}
                        \label{equation:degree-condition}
 
-LaTeX Warning: Reference `equation:degree-condition' on page 22 undefined on input line 969.
-
-
-LaTeX Warning: Reference `equation:degree-condition' on page 1 undefined on input line 989.
-
-
-
 [22]
 
 [23]
-Overfull \hbox (61.11919pt too wide) in paragraph at lines 1061--1062
-[]\T1/cmr/m/n/10.95 defined by: $\OML/cmm/m/it/10.95 f[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 id\OMS/cmsy/m/n/10.95 j[]$ \T1/cmr/m/n/10.95 and $\OML/cmm/m/it/10.95 f[] \OT1/cmr/m/n/10.95 : ((\OML/cmm/m/it/10.95 x; y\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w[] \OT1/cmr/m/n/10.95 : [] \OML/cmm/m/it/10.95 w[] \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 ]) \OMS/cmsy/m/n/10.95 7! [][]$ 
- []
-
-! Display math should end with $$.
-<to be read again> 
-                    
-l.1084 ...text{supp}(f)} \left( |a| + |b| \right)$
-                                                  
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-
 
 [24]
 
 [25]
 
-LaTeX Warning: Reference `equation:degree-condition' on page 1 undefined on input line 1215.
-
-
-
 [26]) (./sections/RamificationAfterBlowup.tex
 
 [27]
 
-LaTeX Warning: Reference `section:BlowupOfSymmetricPowerOfCurves' on page 1 undefined on input line 9.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheafIsTamelyRamified' on page 1 undefined on input line 33.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheafIsTamelyRamified' on page 1 undefined on input line 39.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction' on page 1 undefined on input line 40.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction' on page 1 undefined on input line 41.
-
-
-
 [28]
-
-LaTeX Warning: Reference `prop:symmetric_power_flat_base_change' on page 1 undefined on input line 83.
-
-
-LaTeX Warning: Reference `equation:blowup_diagram_ndls' on page 1 undefined on input line 83.
-
-
-LaTeX Warning: Reference `definition:tamely_ramified_in_codim_1' on page 1 undefined on input line 93.
-
-
-LaTeX Warning: Reference `prop:torsor_module_equivalence' on page 1 undefined on input line 109.
-
-
 Overfull \hbox (2.33908pt too wide) in paragraph at lines 119--121
 []\T1/cmr/m/n/10.95 Thus, by the fol-low-ing lemma, we con-clude that $[] \U/msa/m/n/10.95 ^^B \OMS/cmsy/m/n/10.95 P[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 p[]\OMS/cmsy/m/n/10.95 P[] ^[] \OML/cmm/m/it/10.95 p[]\OMS/cmsy/m/n/10.95 P[]$
  []
 
 
-LaTeX Warning: Reference `lemma:bounding_ramification_of_contracted_product' on page 1 undefined on input line 129.
-
-
-LaTeX Warning: Reference `cor:etale_at_generic_point' on page 1 undefined on input line 132.
-
-
 
 [29]
 
-LaTeX Warning: Reference `cor:etale_at_generic_point' on page 1 undefined on input line 175.
-
-
-LaTeX Warning: Reference `section:symmetric_powers_on_curves' on page 1 undefined on input line 177.
-
-
-LaTeX Warning: Reference `lemma:descend_ramification_along_etale' on page 1 undefined on input line 178.
-
-
-LaTeX Warning: Reference `prop:blowup-product-relation' on page 1 undefined on input line 201.
-
-
-
-[30]
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheafIsTamelyRamified' on page 1 undefined on input line 231.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheafIsTamelyRamified' on page 1 undefined on input line 232.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheafIsTamelyRamified' on page 1 undefined on input line 233.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction' on page 1 undefined on input line 234.
-
-
-LaTeX Warning: Reference `lemma:moduli_reduction' on page 1 undefined on input line 235.
-
-
-LaTeX Warning: Reference `lemma:takeuchi_lemma' on page 1 undefined on input line 235.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction' on page 1 undefined on input line 241.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction' on page 1 undefined on input line 242.
-
-
+[30]) (./sections/GeometricCFT/ProofOfReducedTheorem.tex
 
 [31])
 
-LaTeX Warning: Reference `thm:GCFT_reduced' on page 1 undefined on input line 44.
-
-(./sections/GeometricCFT/ProofOfReducedTheorem.tex
-
-LaTeX Warning: Reference `prop:torsor_module_equivalence' on page 1 undefined on input line 3.
-
-
-LaTeX Warning: Reference `section:AbelJacobi' on page 1 undefined on input line 10.
-
-
-LaTeX Warning: Reference `cor:etale_fundamental_group_smooth_proper' on page 1 undefined on input line 13.
-
-
-LaTeX Warning: Reference `theorem:takeuchi-compactification-theorem' on page 1 undefined on input line 21.
-
-
-LaTeX Warning: Reference `theorem:SymmetricPowerOfSheafIsTamelyRamified' on page 1 undefined on input line 27.
-
-
-LaTeX Warning: Reference `lemma:ExtensionOfTamelyRamifiedSheaf' on page 1 undefined on input line 30.
-
-
-
-[32])
+[32]
 
 [33] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  ACF60EA8A07B73682B8B75F3EF9BFEB5;3747.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 78F527F993C90447FD626FED4C4042F9;3894.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44924 strings out of 473190
- 849487 string characters out of 5715800
- 1687247 words of memory out of 5000000
- 67189 multiletter control sequences out of 15000+600000
+ 44824 strings out of 473190
+ 846702 string characters out of 5715800
+ 1689893 words of memory out of 5000000
+ 67082 multiletter control sequences out of 15000+600000
  583594 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,21n,110p,3296b,1886s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,17n,110p,3296b,1912s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on main.pdf (33 pages, 614099 bytes).
+Output written on main.pdf (33 pages, 609188 bytes).
 PDF statistics:
- 698 PDF objects out of 1000 (max. 8388607)
- 586 compressed objects within 6 object streams
- 255 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 830 PDF objects out of 1000 (max. 8388607)
+ 716 compressed objects within 8 object streams
+ 254 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

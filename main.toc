@@ -1,19 +1,19 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
-\contentsline {section}{\numberline {2}Preliminaries}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Algebraic Geometry}{3}{subsection.2.1}%
+\contentsline {section}{\numberline {2}Preliminaries}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Algebraic Geometry}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Torsors}{5}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Symmetric Powers of Schemes and Torsors}{10}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Etale Fundamental Groups and Tame Fundamental Groups}{12}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Algebraic Preliminaries on Ramification}{12}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Tame Ramification and Ramification of $G$-Torsors}{14}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.4}Etale Fundamental Groups and Tame Fundamental Groups}{13}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Algebraic Preliminaries on Ramification}{13}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Tame Ramification and Ramification of $G$-Torsors}{15}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Symmetric Powers of Local Systems on Curves}{20}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Generalized Picard Scheme}{20}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}The Abel-Jacobi Morphism and its Fibers}{22}{subsection.2.9}%
-\contentsline {subsection}{\numberline {2.10}Blowups and Valuations}{23}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.8}Generalized Picard Scheme}{21}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}The Abel-Jacobi Morphism and its Fibers}{23}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Behavior of Ramification under Product of Blowups}{23}{subsection.2.10}%
 \contentsline {subsection}{\numberline {2.11}Compactification of Blowup of Symmetric Powers of a Curve}{26}{subsection.2.11}%
 \contentsline {section}{\numberline {3}Ramification of Sheaves after Blowup}{28}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Reduction Lemmas}{28}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Proof of \Cref {theorem:SymmetricPowerOfSheafIsTamelyRamified}}{31}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Proof of \Cref {theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}}{31}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Proof of \Cref {thm:GCFT_reduced}}{32}{section.4}%
+\contentsline {section}{\numberline {4}Proof of \Cref {thm:GCFT_reduced}}{31}{section.4}%
