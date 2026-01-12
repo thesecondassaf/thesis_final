@@ -212,6 +212,7 @@ the tame ramification of the box product at $\theta$ descends to the tame ramifi
 Let $G$ be a finite abelian group. 
 Unless otherwise stated, assume that $C=\bP_k^1$, $\mdls = d \cdot 0$ and 
 $\bG_m = U \subset U' = C \setminus \mdls$. Then $\deg \mdls = d$
+We also assume $k$ is algebraicly closed. (We can etale base change, and this doesn't change ramification.)
 Our first result is:
 
 \begin{theorem}
@@ -293,9 +294,9 @@ Our first result is:
       by permuting the variables $\{x_i\}_{i=1}^d$.
      And since $Y=\sum_i^d X_i$ it leaves $Y$ invaraint. 
      The invaraint subring $(R^{\otimes_k d})^{S_d}$ is simply $k[e_1, e_2, \dots, e_d, e_d^{-1}]$
-     where $\{ e_i \}$  are the symmetric polynomials in $x_1, \dots, x_d$ e.g. $s_1 = x_1 + \dots + x_d$
+     where $\{ e_i \}$  are the symmetric polynomials in $x_1, \dots, x_d$ e.g. $e_1 = x_1 + \dots + x_d$
      \textcolor{red}{give general defintion here...}
-     and $s_d = x_1 x_2 \ldots x_d$.
+     and $e_d = x_1 x_2 \ldots x_d$.
      
      To find $\left(R^{\otimes_k d}[Y] / (Y^p - Y - \sum_{i=1}^d f(x_i))\right)^{S_d}$ its enough to express
      $\sum_{i=1}^d f(x_i)$ in $e_1, \dots, e_d$, this can be done with the newton polynomials, moreover, we claim the following:
@@ -324,51 +325,71 @@ Our first result is:
           $$e_k(y_1, \dots, y_d) = \frac{e_{d-k}(x_1, \dots, x_d)}{e_d(x_1, \dots, x_d)}$$
           which concludes the proof.
      \end{proof}
-\end{proof}
 
 Finally, restricting $\cP^{(d)}$ to $\spec {\hat{K}}$ we get by \Cref{eq:complete_field_at_generic_point}
 and \Cref{theorem:artin_schreier_ramification} the result. (that $\cP$ is unramified at the generic point of the exceptional divisor of the blowup).
 
 \textbf{Kummer Extensions:}
+Few things are different in that case,
+
+     Set $R=k[x, x^{-1}]$, and $S=R[X]/(X^n - f)$ where $f= f(x, 1/x) \in R$
+     In this case we have $char k = p$ and $gcd(p, n)=1$.
+
+     % Let $g$ be a generator of $G = \mathbb{Z}/n\mathbb{Z}$
+     % The action of $g$ on an element $s \in S$ is determined by its action on the generator $X$. 
+     % Since $X^n = f$ in $S$, any $R$-automorphism $\sigma$ must satisfy:
+     % $$\sigma(X)^n = \sigma(X^n) = \sigma(f) = f$$
+     % This implies that $\sigma(X)$ must also be a root of the polynomial $Z^n - f$. 
+     % Therefore, $\sigma(X) = \zeta^i X$ for some $i \in \{0, \dots, n-1\}$.
+     
+     % The standard action for the generator $g \in G$ is:
+     % $$\sigma_g(X) = \zeta X$$
+     % By linearity and the property of $R$-algebras, the action on any element 
+     % $s = \sum_{j=0}^{n-1} r_j X^j$ (where $r_j \in R$) is:
+     % $$\sigma_g \left( \sum_{j=0}^{n-1} r_j X^j \right) = \sum_{j=0}^{n-1} r_j (\zeta X)^j = \sum_{j=0}^{n-1} r_j \zeta^j X^j$$
 
 
-We will work this out along an example:
-Let $X=\bG_m=\spec R[t, t^{-1}]$ and Let $\cP=\bG_m \xrightarrow[]{(\cdot)^{n}} G_m$ be the $n$'th power map.
-It is a $G=\Z/n\Z$ torsor.
-The ring map is $R[t, t^{-1}] \xrightarrow[]{t \mapsto t^n} R[t, t^{-1}]$
-which corresponds to ring extension: $R[t, t^{-1}] \to R[t^{\frac{1}{n}}, t^{-\frac{1}{n}}]$.
-The field of fractions of $\bG_m$ is $K(t)$ and the corresponding map between fields of $\cP \to X$
-is $K(t) \xrightarrow[]{t \to t^n} K(t)$. which corresponds to the field extension:
-$K(t) \hookrightarrow K(t^{\frac{1}{n}}) = K(t)[X]/(X^n -t)$.
-Where $K = Frac R$
+     We have 
+     $$
+          \begin{aligned}
+          R^{\otimes_k d} &= k[x_1, x_1^{-1}, \dots, x_d, x_d^{-1}] \\
+          S^{\otimes_k d} &= k[x_1, x_1^{-1}, \dots, x_d, x_d^{-1}][X_1, \dots, X_d] / (X_1^n - f_1, \dots, X_d^n - f_d) \\
+          &= R^{\otimes_k d}[X_1, \dots, X_d] / (X_1^n - f_1, \dots, X_d^n - f_d)
+          \end{aligned}
+     $$
+     Where $f_i = f(x_i, x_i^{-1})$
 
-The points $0, \infty \in \bP^1$ correspond to the local rings
-$\Oo_{0} = K[t]_{(t)}$ and $\Oo_{\infty} = K[\frac{1}{t}]_{(\frac{1}{t})}$ of $K(t)$,
-which are DVRs. The corresponding valuations of $K(t)$ are given by:
-\[
-    v_0\left(\frac{f}{g}\right) = \text{maximal exponent } n \text{ s.t. } t^{n} \mid \frac{f}{g}, \quad v_\infty\left(\frac{f}{g}\right) = \deg g - \deg f
-\]
+     Next, we want to figure out 
+      $\left(S^{\otimes_k d}\right)^{G^{d-1}}$
+    
 
-So the diagram of the G-torsor $\cP=\bG_m$ over $\bG_m$ is:
-\begin{equation}
-    \begin{tikzcd}
-        & \cP=\mathbb{G}_m \ar[d, "(\cdot)^n"] \\
-        \bP^1 & \arrow[l] \bG_m
-    \end{tikzcd}
-\end{equation}
+     Recall that the action of $g \in G=\Z/n\Z$ on $X$ is $g(X) = \zeta^{g} X$ ($g$ correspond to a number $0 \leq g \leq n-1)$.
+     So, the action of $(g_1, \dots, g_{d-1})$ on the generators $(X_1, X_2, \dots, X_{d-1}, X_{d})$
+     Is $X_1 \mapsto \zeta^{g_1} X_1$, $X_i \mapsto \zeta^{g_i - g_{i-1}}X_i$ for $1<i<d$ and $X_d \mapsto \zeta^{-g_{d-1}} X_d$.
 
-The bounded ramification condition is given by:
-\begin{equation}
-    \text{ram } P_{\eta} \leq k
-\end{equation}
+     So we see that $Y=X_1 X_2 \dots X_d$ is invariant.
+     And $Y^n - \prod_{i=1}^d f_i$ is irreducible degree $n$ equation for $Y$,
+     So, like before, we conclude:
+     \[
+          \left(S^{\otimes_k d}\right)^{G^{d-1}} \cong R^{\otimes_k d}[Y] / (Y^n - \prod_{i=1}^d f_i)
+     \]  
+     
+     The group $S_d$ acts on $R^{\otimes_k d}[Y] / (Y^n - \prod_{i=1}^d f_i)$ by permuting the indices.
+     on the variables $x_i$, 
+     On $Y=\prod_1^d X_i$ it is invaraint. 
+     The invaraint subring $(R^{\otimes_k d})^{S_d}$ is simply $k[e_1, e_2, \dots, e_d, e_d^{-1}]$ like before.
+     
 
-We wish to understand
+     The polynomial $F=\prod_{i=1}^d f_i$ is symmetric in $\{x_i\}_1^d$ so it can be expressed as a polynomial
+     $\tilde{F}(e_1, \dots, e_d)$ in the elementary symmetric variables. 
+     Hence the qoutient ring is:
+     $$\left( \frac{k[x_1^{\pm 1}, \dots, t_d^{\pm 1}][Y]}{(Y^n - \prod_{i=1}^d f_i)} \right)^{S_d} \cong 
+     \frac{k[e_1, \dots, e_d, e_d^{-1}][Y]}{(Y^n - \tilde{F}(e_1, \dots, e_d))}$$
+     So we see again, that  restricting $\cP^{(d)}$ to $\spec {\hat{K}}$ we get by \Cref{eq:complete_field_at_generic_point} 
+     and \Cref{theorem:kummer_ramification}, that $\cP$ is tamely ramified at the generic point of the exceptional divisor of the blowup.
+
+     
+\end{proof}
 
 
-In the general case of a $G$ torsor $P \to C$ we have similarly:
-$K(C) \cong K(t)$ the function ring of $C$ for some variable $t$ and a finite field extension $K/\F_p(t')$.
-If the basefield $K$ contains $n$'th roots of unity, then the torsor is the same... and continue here:
-$\Oo_{P_1}$
-the same..
-and continue.
-
+Now we finish. 
