@@ -208,8 +208,129 @@ the tame ramification of the box product at $\theta$ descends to the tame ramifi
 
 
 \subsection{\texorpdfstring{Proof of \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}}{Proof of Theorem Y}}
-In this section we prove \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}
-\textcolor{red}{complete - this is not finished}
+
+Let $G$ be a finite abelian group. 
+Unless otherwise stated, assume that $C=\bP_k^1$, $\mdls = d \cdot 0$ and 
+$\bG_m = U \subset U' = C \setminus \mdls$. Then $\deg \mdls = d$
+Our first result is:
+
+\begin{theorem}
+     Let $\cP \to \bG_m \subset \bP_k^1$ be a $G$ torsor which is either
+     \begin{enumerate}
+          \item tamely ramified at $0$ 
+          \item wildly ramified at $0$ with $G=\Z/p\Z$ and ramificaiton bounded by $d$.
+     \end{enumerate}
+     Then the ramification of the $G$-torsor $\cP^{(d)} \to \bG_m^{(d)}$ at $\eta_\mdls$ the generic point of $E_\mdls \subset X_{\mdls}$ is  
+     \begin{enumerate}
+          \item tamely ramified if $\cP$ was tamely ramified
+          \item unramified if $\cP$ was wildly ramified with $G=\Z/p\Z$ and ramification bounded by $d$
+     \end{enumerate}
+\end{theorem}
+\begin{proof}
+     Recall that in \Cref{subsection:ram_prod_analysis}, we saw that the local ring at the generic point of the excptional divisor
+     of the blowup of the affine space at 0 point is
+     $R = k[x_d, \frac{u_1}{u_d}, \dots, \frac{u_{d-1}}{u_d}]_{(x_d)}$. 
+     Where for every  $i < d$, we have $x_i = \frac{u_i}{u_d} x_d$ are all uniformizers.
+     The residue field was $\kappa(\eta) = k(\frac{u_1}{u_d}, \dots, \frac{u_{d-1}}{u_d})$
+     and the completion of $R$ with respect to its maximal ideal is:
+     $$\hat{R} = \kappa(\eta)[[x_d]]$$
+     In our situation, when we take symmetric product of the affine space, the situation is similiar with different coordinates
+     if we let $e_1, \dots, e_d$ be the symmetric polynomials in $x_1, \dots x_d$ then:
+     The local ring is 
+     $R = k[e_d, \frac{u_2}{u_d}, \dots, \frac{u_{d-1}}{u_d}]_{(e_d)}$. 
+     $e_i = \frac{u_i}{u_d} e_d$ are all uniformizers.
+     The residue field being:
+     $\kappa(\eta) = k(\frac{u_1}{u_d}, \dots, \frac{u_{d-1}}{u_d})$
+     and the completion: $\hat{R} = \kappa(\eta)[[s_d]]$
+     Note that from  $e_i = \frac{u_i}{u_d} e_d$
+     We get  $\frac{e_i}{e_d} = \frac{u_i}{u_d}$ in the fracion field. hence
+
+     \begin{equation}\label{eq:complete_field_at_generic_point}
+          \hat{K}= k(\frac{e_1}{e_d}, \dots, \frac{e_{d-1}}{u_d})((e_d))
+     \end{equation}
+
+     We compute directly the extesntion of complete valued fields over the complete valued field at the generic point. 
+     Note that by  \Cref{theorem:kummer_ramification} and \Cref{theorem:artin_schreier_ramification} 
+     We can assume $\cP = \Spec k[x, x^{-1}][X]/(X^n - a)$ for $a \in k[x, x^{-1}]$ or $\cP = \Spec k[x, x^{-1}][X]/(X^p + X - f(x, x^{-1}))$
+     where $f(x,x^{-1}) = c x^{-m} + a_{-m + 1} x^{-m + 1} + \cdots a_{-1}x^{-1} + a_0 = c x^{-m} + f_{-m+1}(x^{-1})$ where $m < d$.
+     
+     We deal with each case separately. 
+     
+     \textbf{Artin-Schreier Extensions:}
+
+     Set $R=k[x, x^{-1}]$, and $S = \Spec k[x, x^{-1}][X]/(X^p + X - f(x^{-1}))$
+     we have 
+     $$
+          \begin{aligned}
+          R^{\otimes_k d} &= k[x_1, x_1^{-1}, \dots, x_d, x_d^{-1}] \\
+          S^{\otimes_k d} &= k[x_1, x_1^{-1}, \dots, x_d, x_d^{-1}][X_1, \dots, X_d] / (X_1^p - X_1 - f(x_1), \dots, X_d^p - X_d - f(x_d)) \\
+          &= R^{\otimes_k d}[X_1, \dots, X_d] / (X_1^p - X_1 - f(x_1), \dots, X_d^p - X_d - f(x_d))
+          \end{aligned}
+     $$
+
+     Next, we want to understand the ring corresponding to $p_1^{-1}(\cP) \otimes \dots \otimes p_d^{-1}(\cP)$ on $C^{d}$ - 
+     the $d$'th-contracted product of the $G=\Z/p\Z$-torsors  $p_1^{-1}(\cP), \dots, p_d^{-1}(\cP)$ on $U^{d}$. 
+     It correspond to qoutient:
+     $\left(p_1^{-1}(\cP) \times \dots \times p_d^{-1}(\cP)\right) / G^{d-1}$ where the action of $G^{d-1}$ on the product is:
+     $$(g_1, \dots, g_{d-1}) \cdot (p_1, p_2, \dots, p_{d-1}, p_{d}) = (g_1(p_1), g_1^{-1}g_2(p_2), \dots, 
+     g_{d-2}^{-1}g_{d-1}(p_{d-1}), g_{d-1}^{-1}(p_d))$$
+     
+     The affine ring corrsponding to the contracted product is $\left(S^{\otimes_k d}\right)^{G^{d-1}}$
+    
+     Recall that the action of $g \in G=\Z/p\Z$ on $X$ is $g(X) = X + g$ ($g$ correspond to a number $0 \leq g \leq p-1)$.
+     So, the action of $(g_1, \dots, g_{d-1})$ on the generators $(X_1, X_2, \dots, X_{d-1}, X_{d})$
+     Is $X_1 \mapsto X_1 + g_1$, $X_i \mapsto X_i - g_{i-1} + g_i$ for $1<i<d$ and $X_d \mapsto X_d - g_{d-1}$.
+     So we see that $Y=X_1 + \dots + X_d$ is invariant.
+     Moreover $Y^P - Y - \sum_{i=1}^d f(x_i)=0$ is irreducible degree $p$ equation for $Y$,
+     Since we are quotienting a rank $p^{d}$ extesntion by a group of order $p^{d-1}$ the resulting invaraint subring must
+     have rank $p$ over $R^{\otimes_k d}$, So we conclude:
+     \[
+          \left(S^{\otimes_k d}\right)^{G^{d-1}} \cong R^{\otimes_k d}[Y] / (Y^p - Y - \sum_{i=1}^d f(x_i))
+     \]  
+     
+     The group $S_d$ acts on 
+     $ R^{\otimes_k d} = k[x_1^{\pm 1}, x_2^{\pm 1}, \dots, x_d^{\pm 1}]$
+      by permuting the variables $\{x_i\}_{i=1}^d$.
+     And since $Y=\sum_i^d X_i$ it leaves $Y$ invaraint. 
+     The invaraint subring $(R^{\otimes_k d})^{S_d}$ is simply $k[e_1, e_2, \dots, e_d, e_d^{-1}]$
+     where $\{ e_i \}$  are the symmetric polynomials in $x_1, \dots, x_d$ e.g. $s_1 = x_1 + \dots + x_d$
+     \textcolor{red}{give general defintion here...}
+     and $s_d = x_1 x_2 \ldots x_d$.
+     
+     To find $\left(R^{\otimes_k d}[Y] / (Y^p - Y - \sum_{i=1}^d f(x_i))\right)^{S_d}$ its enough to express
+     $\sum_{i=1}^d f(x_i)$ in $e_1, \dots, e_d$, this can be done with the newton polynomials, moreover, we claim the following:
+
+     \begin{lemma}
+          Let $f(x) = c x^{-m} + a_{-m + 1} x^{-m + 1} + \cdots a_{-1}x^{-1} + a_0$, 
+          define  $\alpha(x_1, ..., x_d) = \sum_1^d f(x_i)$, and deonte by $e_1, ..., e_d$ the elementary symmetric polynomials 
+          in $x_1, ..., x_d$. If $m < d$ then $\alpha(x_1, ..., x_d) \in k(e_1/e_d, e_2/e_d, ..., e_{d-1}/e_d)$
+     \end{lemma}
+     \begin{proof}
+          Changing variables $y_i=x_i^{-1}$ for each $i \in \{1, \dots, d\}$
+          We get 
+          $$\alpha = \sum_{i=1}^d f(x_i) = \sum_{i=1}^d \left( c y_i^m + a_{-m+1} y_i^{m-1} + \dots + a_{-1} y_i + a_0 \right)$$
+          Rearranging the sums, we get
+          $$\alpha = c \sum_{i=1}^d y_i^m + a_{-m+1} \sum_{i=1}^d y_i^{m-1} + \dots + a_{-1} \sum_{i=1}^d y_i + d a_0$$
+          Let $p_k(y_1, \dots, y_d) = \sum_{i=1}^d y_i^k$ be the $k$-th power sum symmetric polynomial. 
+          The expression for $\alpha$ is a linear combination of these power sums:
+          $$\alpha = c p_m(y) + a_{-m+1} p_{m-1}(y) + \dots + a_{-1} p_1(y) + d a_0$$
+         
+          According to the \textit{Fundamental Theorem of Symmetric Polynomials}, any symmetric polynomial in $y_1, \dots, y_d$ 
+          can be expressed as a polynomial in the elementary symmetric polynomials $e_k(y_1, \dots, y_d)$. 
+          Since $m < d$, $\alpha$ is a polynomial in $e_1(y), e_2(y), \dots, e_m(y)$. ($y=(y_1, \dots, y_d)$)
+          The elementary symmetric polynomials in $y_i = 1/x_i$ are related to the elementary symmetric polynomials in $x_i$ as follows: 
+          $$e_k(y_1, \dots, y_d) = \sum_{1 \le i_1 < \dots < i_k \le d} \frac{1}{x_{i_1} \dots x_{i_k}} = \frac{\sum_{1 \le j_1 < \dots < j_{d-k} \le d} x_{j_1} \dots x_{j_{d-k}}}{x_1 x_2 \dots x_d}$$
+          Thus,
+          $$e_k(y_1, \dots, y_d) = \frac{e_{d-k}(x_1, \dots, x_d)}{e_d(x_1, \dots, x_d)}$$
+          which concludes the proof.
+     \end{proof}
+\end{proof}
+
+Finally, restricting $\cP^{(d)}$ to $\spec {\hat{K}}$ we get by \Cref{eq:complete_field_at_generic_point}
+and \Cref{theorem:artin_schreier_ramification} the result. (that $\cP$ is unramified at the generic point of the exceptional divisor of the blowup).
+
+\textbf{Kummer Extensions:}
+
 
 We will work this out along an example:
 Let $X=\bG_m=\spec R[t, t^{-1}]$ and Let $\cP=\bG_m \xrightarrow[]{(\cdot)^{n}} G_m$ be the $n$'th power map.

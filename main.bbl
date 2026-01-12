@@ -76,6 +76,80 @@
       \field{title}{Local Fields}
       \field{year}{1979}
     \endentry
+    \entry{koch1997algebraic}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7dc9d693c2843e9c4b5102c0496436c2}{%
+           family={Koch},
+           familyi={K\bibinitperiod},
+           given={Helmut},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{7dc9d693c2843e9c4b5102c0496436c2}
+      \strng{fullhash}{7dc9d693c2843e9c4b5102c0496436c2}
+      \strng{fullhashraw}{7dc9d693c2843e9c4b5102c0496436c2}
+      \strng{bibnamehash}{7dc9d693c2843e9c4b5102c0496436c2}
+      \strng{authorbibnamehash}{7dc9d693c2843e9c4b5102c0496436c2}
+      \strng{authornamehash}{7dc9d693c2843e9c4b5102c0496436c2}
+      \strng{authorfullhash}{7dc9d693c2843e9c4b5102c0496436c2}
+      \strng{authorfullhashraw}{7dc9d693c2843e9c4b5102c0496436c2}
+      \field{labelalpha}{Koc97}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-63003-6}
+      \field{series}{Encyclopaedia of Mathematical Sciences}
+      \field{title}{Algebraic Number Theory}
+      \field{volume}{62}
+      \field{year}{1997}
+    \endentry
+    \entry{Thomas2005}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=fd665ccb2b3cfe25f7b054a99e9827ff}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Lara},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Université Bordeaux 1}%
+      }
+      \strng{namehash}{fd665ccb2b3cfe25f7b054a99e9827ff}
+      \strng{fullhash}{fd665ccb2b3cfe25f7b054a99e9827ff}
+      \strng{fullhashraw}{fd665ccb2b3cfe25f7b054a99e9827ff}
+      \strng{bibnamehash}{fd665ccb2b3cfe25f7b054a99e9827ff}
+      \strng{authorbibnamehash}{fd665ccb2b3cfe25f7b054a99e9827ff}
+      \strng{authornamehash}{fd665ccb2b3cfe25f7b054a99e9827ff}
+      \strng{authorfullhash}{fd665ccb2b3cfe25f7b054a99e9827ff}
+      \strng{authorfullhashraw}{fd665ccb2b3cfe25f7b054a99e9827ff}
+      \field{labelalpha}{Tho05}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal de théorie des nombres de Bordeaux}
+      \field{number}{2}
+      \field{title}{Ramification groups in {Artin-Schreier-Witt} extensions}
+      \field{volume}{17}
+      \field{year}{2005}
+      \field{pages}{689\bibrangedash 720}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.5802/jtnb.514
+      \endverb
+      \verb{urlraw}
+      \verb https://jtnb.centre-mersenne.org/articles/10.5802/jtnb.514/
+      \endverb
+      \verb{url}
+      \verb https://jtnb.centre-mersenne.org/articles/10.5802/jtnb.514/
+      \endverb
+    \endentry
     \entry{milneAV}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=638058cd23e53094700e44c2a4f389f5}{%

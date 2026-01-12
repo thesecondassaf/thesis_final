@@ -776,95 +776,45 @@ Version 2: With etale coverings.
 
 locally constant sheaves are given by: \stackstag{09Y8}
 
-\textcolor{red}{EDIT AN REFINE THIS ENTIRE THING}
-The goal is to  1. define what ramificaiton of local system means in different settings
-2. explore basic properties and ways to calculate. 
+\subsection{Kummer and Artin-Schreier Theories}
+We recall the basic theorms from both theories regarding cyclic extesntions and ramifications. 
+Throughout this section let $K$ be a discrete valuation field with perfect residue field $\kappa$ of characteristic $p > 0$. 
 
-\begin{definition}
-    Let $G$ be a finite abelian group and let $d \geq 0$ be a rational number. A $G$-torsor over $\operatorname{Spec}(L)$ (in $\operatorname{Spec}(k)_{\text {Ét }}$ ), corresponding to a continuous homomorphism $\rho: G_L \rightarrow G$, is said to have ramification bounded by $d$ if $\rho\left(G_L^d\right)=\{1\}$. A $G$-torsor over $\operatorname{Spec}(L)$ with ramification bounded by 0 (resp. 1) is said to be unramified (resp. tamely ramified).
-\end{definition}
 
-\textbf{Explain why a $G$ torsor over $\Spec(L)$ in 
-$\operatorname{Spec}(k)_{\text {Ét }}$} correspond to a continuous homomorphism $\rho: G_{L} \rightarrow G$
+\begin{theorem}[Ramification in Kummer Extensions, \cite{koch1997algebraic}, Proposition 1.83]\label{theorem:kummer_ramification}
+%Let $K$ be a local field of characteristic $\text{char}(K) =p$  
+Assume $K$ contains the $n$-th roots of unity $\mu_n$. 
+Let $L/K$ be the extension given by the equation $X^n = a$ for some 
+$a \in K^\times$ and denote by $G$ its Galois group. Then we have:
 
-\textbf{Explanation:}
-Let $L^{sep}$ be a separable closure of $L$, and let $G_L$ be the Galois group of $L^{sep}$ over $L$ then
 \begin{enumerate}
-    \item the small étale topos of $\Spec(L)$ is isomorphic to the topos of sets with continuous left $G_L$-action.
-    \item  By 2.13, the category of $G$-torsors over $\Spec(L)$ in $\Spec(k)_{Et}$ is isomorphic to the category of $G$-torsors
-    in the small étale topos $\Spec(L)_{et}$.
-    \item  Correspondingly, for each finite abelian group $G$, the group
-    of isomorphism classes of the category $Tors(\Spec(L), G)$ is isomorphic to the group of continuous
-    homomorphisms from $G_L$ to $G$.
+    \item If $v_K(a) \in n\mathbb{Z}$ and the image of $a\pi^{-v_K(a)}$ in the residue field $\kappa$ is an $n$-th power, the extension $L/K$ is trivial.
+    \item If $v_K(a) \in n\mathbb{Z}$ and the image of $a\pi^{-v_K(a)}$ in the residue field $\kappa$ is not an $n$-th power, the extension $L/K$ is cyclic and unramified.
+    \item If $v_K(a) \notin n\mathbb{Z}$, the extension $L/K$ is cyclic and ramified. Specifically, if $\gcd(|v_K(a)|, n) = 1$, the extension is totally ramified of degree $n$.
+     Otherwise it has ramification index $\frac{n}{|gcd(v_K(a)|, n)}$
 \end{enumerate}
-We want to show 3 explicitly. 
-
-\textbf{What is an isomorphism class of "$G$-sets with continuous left $G_L$ action"}
-before, we understand 
-\textbf{What is an isomorphism class of "sets with continuous left $G_L$ action" is a continuous $G$ action}
-
-
-We want to show
-How, from a $G$-Torsor $P$ in the $\Spec(L)_{et}$ we get a set with ccontinious homomorphism from $G_L$
-\textbf{}
-
-
-
-
-\textbf{Example-Explain!!!}
-
-Remark 3.10. If $P \rightarrow \operatorname{Spec}(L)$ is a $G$-torsor in $\operatorname{Spec}(k)_{\text {Ét }}$, then we have a finite decomposition
-$$
-P=\coprod_{i \in I} \operatorname{Spec}\left(L_i\right)
-$$
-where each $L_i$ is a finite separable extension of $L$, and are pairwise isomorphic. The $G$-torsor $P$ has ramification bounded by $d$ if and only if for each $i$ (or, equivalently, for some $i$ ) the extension $L_i / L$ has ramification bounded by $d$, in the sense $G_L^d$ acts trivially on the finite set $\operatorname{Hom}_L\left(L_i, L^{\text {sep }}\right)$.
-
-\begin{definition}\label{definition:ulscodim1} let $X$ be good enough (irreducible, regular at codim=1? smooth?), $U$ open subscheme and $Z$ the complemenet which is irreducible closed subscheme of $codim=1$. let $\eta$ be the generic point of $Z$. and let $\cF$ be a local system on $U$ as in:
-\begin{equation}
-\begin{tikzcd}
-               &             & &  \cF \arrow[d]                   \\
-\eta \arrow[r] & Z \arrow[r] & X           & U \arrow[l, hook']
-\end{tikzcd}
-\end{equation}
-
-\textbf{Example-Explain!!!}
-
-Then we say $\cF$ is unramified on $Z$ if and only if $\restr{\cF}{\eta}$ is unramified.
-
-Note that
-\end{definition}
-
-\begin{theorem}
-let $X,U,Z,\cF$ be as in \cref{definition:ulscodim1}. If $\cF$ is unramified on $Z$, then $\cF$ is pulledback from a local system on $X$
+Conversly, Kummer theory ensures that every cyclic extension of degree $n$, prime to $p$ of a field that contains $n$-th roots of unity, is of the above form.
+Moreover, in the above we can always take $a \in \Oo_K$
 \end{theorem}
+Note that in the case of total ramification the extesntion is tamely ramified.
 
-Next we have a general proposition.
 
-\begin{prop}
-Let $X$ be a normal Noetherian scheme, and let $Z \subset X$ an irreducible closed subscheme of codimension 1 (a prime divisor)
-Let $U=X \setminus Z$ be the open complement, and $\eta$ the generic point of $Z$.
-Let $f: Y \to X$ be a finite surjective morphism, where $Y$ is also a normal Noetherian scheme.
-Suppose there exists an irreducible component $Z' \subset f^{-1}(Z)$ with generic point $\eta'$ such that
-$f$ is unramified at $\eta'$. 
-
-Then:
-
-\end{prop}
-
-\begin{proof}
-    For clarity, we draw the diagram: 
-
-\begin{diagram}
-\begin{tikzcd}[row sep=large, column sep=large]
-Z \times_X Y \arrow[r] \arrow[d] & Y \arrow[d, "f"] & U \times_X Y \arrow[l] \arrow[d] \\
-Z \arrow[r, "closed"] & X & U \arrow[l, "open"] \\
-\end{tikzcd}
-\end{diagram}
-
-We have that $\eta' \rightarrow \eta$ is unramified. hence $\cF$ unramified on $\eta$ if and only if $f^*\cF$ is unramified on $\eta$ (from proposition in the beginning)
-
-\end{proof}
-
+\begin{theorem}[Ramification in Artin-Schreier Extensions, \cite{Thomas2005}]\label{theorem:artin_schreier_ramification}
+Let $\wp(x) = x^p - x$ be the Artin-Schreier opeartor.
+Let $L/K$ be the extension given by the equation $X^p - X = a$ for some $a \in K$ and denote by $G$ its Galois group. 
+Then we have:
+\begin{enumerate}
+    \item If $v_K(a) > 0$ or if $v_K(a) = 0$ and $a \in \wp(K)$, the extension $L/K$ is trivial.
+    \item If $v_K(a) = 0$ and if $a \notin \wp(K)$, the extension $L/K$ is cyclic of degree $p$ and unramified.
+    \item If $v_K(a) = -m < 0$ with $m \in \mathbb{Z}_{>0}$ and if $m$ is prime to $p$, the extension $L/K$ is cyclic of degree $p$ again and totally ramified. Moreover,
+     its ramification groups are given by:
+     $$G = G^{(-1)} = \dots = G^{(m)} \quad \text{and} \quad G^{(m+1)} = 1.$$
+\end{enumerate}
+Conversely, Artin-Schreier theory ensures that every cyclic extension of degree $p$ takes this form.
+Moreover, in the above and under the isomorphism $K \cong k((t))$, one can always take $a$ of the form 
+$c t^{-m} + a_{-m + 1} t^{-m + 1} + \cdots a_{-1}t^{-1} + a_0$. If $k$ is algebraically closed then there is a 
+change of variables such that $a=u^{-m}$.
+\end{theorem}
 
 %
 % SYMMETRIC POWERS OF LOCAL SYSTEMS ON CURVES
@@ -1009,7 +959,7 @@ see \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, or \cite
 %\input{sections/Preliminaries/KummerTheory.tex}
 
 
-\subsection{Behavior of Ramification under Product of Blowups}
+\subsection{Behavior of Ramification under Product of Blowups}\label{subsection:ram_prod_analysis}
 Let $X$ and $Y$ be smooth schemes over a field $k$, and let $x \in X$ and $y \in Y$ be closed points. 
 We denote the blowups of these schemes at the given points by 
 $\pi_X: \Bl_x(X) \to X$ and $\pi_Y: \Bl_y(Y) \to Y$. Furthermore, let $\pi_{X \times Y}: \Bl_{(x,y)}(X \times_k Y) \to X \times_k Y$ 
