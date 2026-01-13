@@ -290,7 +290,39 @@ If $G$ is Abelian then $\mathrm{Inn}(G)$ is trivial, and we obtain:
 
 \textcolor{red}{Let us give a final note that, evidently, $\mathrm{Aut}(G)$ acts on $\mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, x), G)$ on the right, and if we consider the quotient $\mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, x), G)/\mathrm{Aut}(G)$ we get the pointed set of all connected finite Galois covers of $X$ with Galois group isomorphism to a subgroup of $G$.}
 
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
+%       Qoutient of G-torsors
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
 
+\subsubsection*{Qoutients of \texorpdfstring{$G$}{G}-Torsors}
+Let $G$ be a finite abelian group, and let $H \subseteq G$ be a subgroup. 
+ Consider the natural quotient homomorphism $\pi: G \to G/H$. Given a $G$-torsor $\mathcal{P} \to X$ (in the fppf or étale topology), we may associate to it a $G/H$-torsor, 
+ denoted by $\pi_*(\mathcal{P})$ or $\mathcal{P}^{G/H}$, via the extension of scalars.
+ The object $\mathcal{P}^{G/H}$ is defined as the contracted product:
+ $$\mathcal{P}^{G/H} = \mathcal{P} \times^G (G/H)$$
+ Recall that $\mathcal{P}^{G/H}$ is the quotient of the product $\mathcal{P} \times (G/H)$ by the $G$-action defined by 
+ $g \cdot (p, \bar{g}') = (g \cdot p, \pi(g^{-1})\bar{g}')$. 
+ Consequently, we have a canonical morphism of sheaves 
+ $\phi: \mathcal{P} \to \mathcal{P}^{G/H}$ which, on local sections, acts by 
+ $p \mapsto [p, \bar{e}]$, where $\bar{e}$ is the identity element in $G/H$. 
+ To see that $\mathcal{P}$ carries the structure of an $H$-torsor over $\mathcal{P}^{G/H}$, 
+ consider a local trivializing cover $\{U_i \to X\}$ for $\mathcal{P}$ as a $G$-torsor. 
+ Over each $U_i$, we have an isomorphism $\mathcal{P}|_{U_i} \cong G_{U_i}$. 
+ Under this isomorphism, the contracted product locally satisfies:
+ $$(\mathcal{P} \times^G G/H)|_{U_i} \cong (G \times^G G/H)_{U_i} \cong (G/H)_{U_i}$$
+ Explicitly, the local identification $(g, \bar{g}') \sim (e, \pi(g)\bar{g}')$ 
+ shows that every equivalence class in the fiber has a unique representative of the form 
+ $[e, \bar{g}]$. 
+ The map $\phi$ locally corresponds to the quotient map $G \to G/H$. 
+ Since the kernel of this map is $H$, and $G$ is a trivial $H$-torsor over $G/H$, 
+ it follows by descent that $\mathcal{P}$ is an $H$-torsor over $\mathcal{P}^{G/H}$.
+ We summarize this construction in the following proposition:
+ \begin{prop}\label{prop:quotient_torsors}
+    Let $G$ be an abelian group and $H \subset G$ a subgroup. 
+    Any $G$-torsor $\mathcal{P} \to X$ admits a natural factorization:
+    $$\mathcal{P} \xrightarrow{} \mathcal{P}^{G/H} \xrightarrow{} X$$
+    where $\mathcal{P}^{G/H} \to X$ is a $G/H$-torsor and $\mathcal{P} \to \mathcal{P}^{G/H}$ is an $H$-torsor.
+\end{prop}
 
 %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
 %       Equivalence between Torsors and Invertible Modules
