@@ -1,0 +1,278 @@
+\section{Ramification After Blowup Is Tame}\label{section:ramification_after_blowup_is_tame}
+
+\subsection{\texorpdfstring{Tame Ramification and Ramification of $G$-Torsors}{Tame Ramification and Ramification of G-Torsors}}
+\textcolor{red}{Unramified scheme morphisms is not the same as unramified extensions of DVRs here, so be careful, and say something about that...}
+Regarding Tame Ramification we follow \stackstag{0BSE}. It is worth mentioning \cite{Kerz-Schmidt} for the different notions of tameness in higher dimensions, and to what
+extent they agree. 
+
+\subsubsection*{Tame Ramification of etale covering in Codimension 1}
+\begin{definition}\label{definition:tamely_ramified_in_codim_1}
+Assume we are given:
+\begin{enumerate}
+    \item a locally Noetherian scheme $X$,
+    \item a dense open $U \subset X$
+    \item a finite étale morphism $f : Y \to U$
+\end{enumerate}
+such that for every prime divisor $Z \subset X$ with $Z \cap U = \emptyset $ 
+the local ring $\mathcal{O}_{X, \xi }$ of $X$ at the generic point $\xi $ of $Z$ is a discrete valuation ring. 
+Setting $K_\xi $ equal to the fraction field of $\mathcal{O}_{X, \xi }$ we obtain a cartesian square
+\[ \xymatrix{ \mathop{\mathrm{Spec}}(K_\xi ) \ar[r] \ar[d] & U \ar[d] \\ \mathop{\mathrm{Spec}}(\mathcal{O}_{X, \xi }) \ar[r] & X } \]
+of schemes. 
+In particular, we see that $Y \times _ U \mathop{\mathrm{Spec}}(K_\xi )$ is the spectrum of a finite separable algebra $L_\xi /K_\xi $. 
+Then we say $Y$ is unramified over $X$ in codimension $1$, resp. $Y$ is tamely ramified over $X$ in codimension $1$ if $L_\xi /K_\xi $ is unramified, resp. tamely ramified 
+with respect to $\mathcal{O}_{X, \xi }$ for every $(Z, \xi )$ as above, (\Cref{definition:tamely_ramified_dvrs}). 
+More precisely, we decompose $L_\xi $ into a product of finite separable field extensions of $K_\xi $ and we require each of these to be unramified, resp. tamely ramified with 
+respect to $\mathcal{O}_{X, \xi }$.
+\end{definition}
+
+\subsubsection*{Ramification of \texorpdfstring{$G$-Torsors}{G-Torsors} over Curves}
+Let $G$ be a finite abelian group.
+Let $k$ be a perfect field and let $C$ be a projective smooth
+geometrically connected curve over $k$, with genus $g$. Let $\mathfrak{m} = \sum_{i} n_i P_i$ be a modulus (i.e. an effective Cartier divisor) on $C$ 
+and let $U = C \setminus \mathfrak{m}$.
+Let $\cP$ be a $G$-torsor in $U_{\text{ét}}$.
+By \Cref{prop:torsor_representable}, $\cP$ is representable by a finite etale $U$-scheme. 
+%The conditions of \Cref{definition:tamely_ramified_in_codim_1} are satisfied. And thus we can speak about $\cP$ being tamely ramified (or unramified) over $C$.
+
+Let $P \in \mdls \subset C$ a closed point. Then $\Oo_{C,P}$ is a discrete valuation ring with fraction field $K_P$.
+After completion at the maximal ideal $\mathfrak{m}_P$ we obtain a complete discrete valuation ring $\widehat{\Oo_{C,P}}$ with fraction field $\widehat{K}_P$. 
+Restricting the $G$-torsor $\cP$ to $\Spec(K_P),\Spec(\widehat{K}_P)$ we obtain $G$-torsors in $\Spec(\widehat{K}_P)_{\text{Ét}}$, $\Spec({K}_P)_{\text{Ét}}$ as in the diagram below:
+
+\[
+\begin{tikzcd}
+\cP|_{\Spec(\widehat{K}_P)} \arrow[d, color=purple] & \cP|_{\Spec(K_P)} \arrow[d, color=purple] & \cP \arrow[d, color=purple] \\
+\Spec(\widehat{K}_P) \arrow[r] \arrow[d] & \Spec(K_P) \arrow[r] \arrow[d] & U \arrow[d] \\
+\Spec(\widehat{\Oo_{C,P}}) \arrow[r] & \Spec(\Oo_{C,P}) \arrow[r] & C
+\end{tikzcd}
+\]
+
+
+The $G$-torsor $\cP|_{\Spec({K}_P)} \to \Spec({K}_P)$ is an 
+etale covering of $\Spec({K}_P)$.
+Hence decompose into a disjoint union of spectra of finite separable field extensions of ${K}_P$.
+\[ \cP|_{\Spec({K}_P)} = \bigsqcup_{i} \Spec(M_{i}) \]
+where each $M_{i}/{K}_P$ is a finite separable field extension.
+Pulling back  by $\Spec(\widehat{K_P})$ we get 
+\[ \cP|_{\Spec(\widehat{K}_P)} = \bigsqcup_{i} \Spec(M_{i} \otimes_{{K}_P} \widehat{K_P}) \] 
+Each product $M_{i} \otimes_{{K}_P} \widehat{K_P}$ decomposes into a finite product of finite separable field extensions of $\widehat{K_P}$.
+\[ M_{i} \otimes_{{K}_P} \widehat{K_P} = \prod_{Q} \widehat{M_{i}}_{,Q} \]
+Where $Q$ ranges over primes of $M_i$ above $P$, and each $\widehat{M_{i}}_{,Q}/\widehat{K_P}$ is a completion of $M_i$ at that prime. 
+
+To summarize, we have decomposition:
+\[ \cP|_{\Spec(\widehat{K}_P)} = \bigsqcup_{i} \Spec(F_{i}) \]
+Where each $F_{i}/\widehat{K_P}$ is a finite separable field extension.
+
+The fact that $\cP$ is a $G$-torsor implies that:
+\begin{enumerate}
+    \item The fields $F_{i}$ are pairwise isomorphic
+    \item The fields $F_{i}$ are Galois over $\widehat{K_P}$ with Galois group isomorphic to a subgroup of $H \subset G$.
+    \item The number of components $F_{i}$ is equal to the index $[G:H]$.
+\end{enumerate}
+
+We say the ramification of $F_i$ over $\widehat{K_P}$ is bounded by $r$ 
+if the ramification group $H^{r}$ (in upper numbering) is trivial.
+
+We say that the $G$-torsor $\cP|_{\Spec(\widehat{K}_P)}$ has ramification at $P$ bounded by $r$ if any of the $F_{i}/\widehat{K_P}$ has ramification bounded by $r$.
+
+We say that the $G$-torsor $\cP$ has ramification at $P$ bounded by $r$ if $\cP|_{\Spec(\widehat{K}_P)}$ has ramification at $P$ bounded by $r$.
+
+Finally,
+\begin{definition}
+A $G$-torsor $\cP$ on $U_{\text{ét}}$ has \textbf{ramification bounded by} $\mdls=\sum n_i P_i$ \textbf{over} $\Spec(k)$
+if for every $i$, the ramification of $\cP|_{\Spec(\widehat{K}_{P_i})}$ at $P_i$ is bounded by $n_i$.    
+\end{definition}
+
+\subsubsection*{Alternative Definition of Ramification of \texorpdfstring{$G$-Torsors}{G-Torsors} over Curves}
+Choose a geometric point $\bar{s}=\Spec(\bar{k}) \to \Spec(k)$. corresponding to a separable closure $k^{sep}=\bar{k}$ of $k$.
+By \Cref{subsubsection:structure_theorems_ramification}, the higher ramification groups considered for $\cP|_{\Spec(\widehat{K}_P)}$
+and $\cP_{\bar{k}}|_{\Spec(\widehat{K_P \otimes \bar{k}})}$ are isomorphic.
+Thus, we define:
+
+
+\begin{definition}
+A $G$-torsor $\cP$ on $U_{\text{ét}}$ has \textbf{ramification bounded by} $\mdls$ \textbf{over} $\Spec(k)$ if for every geometric point 
+$\bar{x}$ of $\mdls$, with image $\bar{s}$ in $\Spec(k)$, the restriction of $\cP$ to 
+\[ \Spec(\widehat{\mathcal{O}_{C_{\bar{k}},\bar{x}}}) \times_{C_{\bar{k}}} U_{\bar{k}} \] 
+has ramification bounded by the multiplicity of $\mdls_{\bar{s}}$ at $\bar{x}$.
+\end{definition}
+
+\textbf{Explanation:} The two definitions are equivalent.
+This is immediate as $\Oo_{C_{\bar{k}},\bar{x}}$ is the strict henselization of $\Oo_{C_{\bar(k)},P}$
+So after completion it is $\widehat{\Oo_{C_{\bar{k}},\bar{x}}} \cong \widehat{\Oo_{C,P}} \otimes_{k} \bar{k}$.
+And taking the product with $Y_{\bar{k}}$ amounts to taking the fraction fields, i.e. we get
+$\Spec(\widehat{K_P \otimes \bar{k}})=\Spec(\widehat{K_P} \otimes_k \bar{k})$.
+
+Note that tame ramification and unramifiedness in terms of definition above coincide with the ones in \Cref{definition:tamely_ramified_in_codim_1}.
+
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
+%       Ramification of $G$-torsors in terms of Characters
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
+
+\subsubsection*{Ramification of $G$-torsors in terms of Characters}\label{section:ramification_characters}
+Since we are working over $X=\Spec(k)$, the group $G$ is $etale$ over $\Spec(k)$
+Hence by \Cref{cor:abelian_equivilance_fundamental_torsors} and \Cref{cor:tors_etale_flat_eq} we get an isomosphism of
+groups:
+$\mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, \overline{x}), G) \xrightarrow{\cong} \Tors(X_{\mathrm{et}}, G)$
+
+When $X=\Spec(L)$ for a complete valued field $L$, $\pi_1^{\text{ét}}(X, \overline{x})=G_L := Gal(L^{sep}/L)$
+Where $L^{sep}$ is a fixed seprable closure. 
+And we conclude that $\cP|_{\Spec(L)}$ correspond to a continious homomorphism $\rho: G_L \to G$
+and one can check that it has ramificaiton bounded by $r$ if and only if $\rho(G_L^r) = \{ 1\}$.
+
+
+
+\subsubsection*{Basic Properties of Ramification of \texorpdfstring{$G$-Torsors}{G-Torsors}}
+In this section we prove some basic properties of the ramification of $G$-torsors.
+
+\begin{lemma}\label{lemma:bounding_ramification_of_contracted_product}
+    Let $G$ be a finite abelian group and $X$ be a locally Noetherian scheme over a field $k$. 
+    Let $U \subset X$ be a dense open subset and let $Z$ be a prime divisor in the complement $X \setminus U$, and let $\xi$ denote its generic point.
+
+    Assume $\cP_1$ and $\cP_2$ are two $G$-torsors on $U_{\text{ét}}$, Such that $\cP_1$ has ramification bounded by $r_1$ at $(Z, \xi)$, and $\cP_2$ has ramification bounded by $r_2$ at $(Z, \xi)$.
+    Then their contracted product $\cP_1 \wedge^G \cP_2$ has ramification bounded by $max(r_1, r_2)$ at $(Z, \xi)$.
+\end{lemma}
+\begin{proof}
+    Let $A=\widehat{\Oo_{X, \xi}}$ and let $K=Frac(A)$.
+    Let $\rho_1, \rho_2: G_K \to G$ be the associated continious homomorphisms corresponding to the $G$-torsors 
+    $\cP_1|_{\Spec(K)}$, $\cP_2|_{\Spec(K)}$.
+    Then the associated character to $(\cP_1 \wedge^G \cP_2)|_{\Spec(K)}$ is $\rho=\rho_1 + \rho_2$.
+    And the claim follows by \Cref{section:ramification_characters}
+\end{proof}
+
+\begin{lemma}\label{lemma:descend_ramification_along_etale}
+Let $f: X \to Y$ be a morphism of locally Noetherian schemes. Let $U_X \subset X$ and $U_Y \subset Y$ be dense open subschemes such that $f^{-1}(U_Y) \subset U_X$. 
+
+Let $Z_X$ and $Z_Y$ be prime divisors of $X$ and $Y$ with generic points $\eta_X$ and $\eta_Y$, respectively, such that $Z_X \cap U_X = \emptyset$ and $Z_Y \cap U_Y = \emptyset$. Suppose $f(\eta_X) = \eta_Y$ and that $f$ is étale at $\eta_X$.
+
+Let $\mathcal{P}$ be a $G$-torsor over $U_Y$, and let $f^{-1} \mathcal{P}$ be its pullback to $f^{-1}(U_Y) \subset U_X$. Then, the ramification of $f^{-1} \mathcal{P}$ is bounded by $r$ at $\eta_X$ if and only if the ramification of $\mathcal{P}$ is bounded by $r$ at $\eta_Y$.
+\end{lemma}
+
+\begin{proof}
+The boundedness of ramification is determined by the behavior of the torsor over the completion of the local rings at the generic points. 
+
+Let $A = \mathcal{O}_{Y, \eta_Y}$ and $B = \mathcal{O}_{X, \eta_X}$ be the discrete valuation rings at the generic points, with fraction fields $K$ and $L$ respectively. Since $f$ is étale at $\eta_X$, the map $A \to B$ is a flat, unramified local homomorphism. Consequently, the extension of completions $\widehat{L} / \widehat{K}$ is a finite unramified extension of complete discretely valued fields.
+
+The upper numbering filtration on the absolute Galois group is compatible with unramified base change. Specifically, let $G_K = \operatorname{Gal}(K^{sep}/K)$ and $G_L = \operatorname{Gal}(L^{sep}/L)$. For an unramified extension, the Herbrand function is the identity, which implies that for any $r \geq 0$:
+\[ G_L^r = G_K^r \cap G_L \]
+The ramification of the $G$-torsor $\mathcal{P}$ is bounded by $r$ if and only if the corresponding Galois representation $\rho: G_K \to G$ satisfies $\rho(G_K^r) = \{1\}$. 
+
+By the filtration identity above, $\rho(G_L^r) = \{1\}$ if and only if $\rho(G_K^r) = \{1\}$. Thus, the pullback torsor $f^{-1}\mathcal{P}$ has ramification bounded by $r$ at $\eta_X$ if and only if $\mathcal{P}$ has ramification bounded by $r$ at $\eta_Y$.
+\end{proof}
+
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
+%       Behavior of Ramification under Product of Blowups
+%%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%% %%%
+\subsection{Behavior of Ramification under Product of Blowups}\label{subsection:ram_prod_analysis}
+Let $X$ and $Y$ be smooth schemes over a field $k$, and let $x \in X$ and $y \in Y$ be closed points. 
+We denote the blowups of these schemes at the given points by 
+$\pi_X: \Bl_x(X) \to X$ and $\pi_Y: \Bl_y(Y) \to Y$. Furthermore, let $\pi_{X \times Y}: \Bl_{(x,y)}(X \times_k Y) \to X \times_k Y$ 
+be the blowup of the product scheme at the point $(x,y)$.
+We denote by $E_X, E_Y$, and $E_{X \times Y}$ the respective exceptional divisors, and let $\eta_X, \eta_Y$, and $\eta_{X \times Y}$ be their generic points.
+
+ In this section, we establish the following result concerning the stability of ramification bounds under the external product of torsors.
+
+\begin{prop}\label{prop:ramification-external-product}
+Let $G$ be a finite abelian group. Suppose $\cG_X$ and $\cG_Y$ are $G$-torsors defined on open subsets $U_X \subset \Bl_x(X)$ and $U_Y \subset \Bl_y(Y)$ that are disjoint 
+from the exceptional divisors. 
+If the ramification of $\cG_X$ at $\eta_X$ and $\cG_Y$ at $\eta_Y$ is bounded by $r$, then the external product torsors 
+\[
+\cG_{X \times Y} := \text{pr}_1^{-1} \cG_X \otimes \text{pr}_2^{-1} \cG_Y
+\]
+has ramification bounded by $r$ at the generic point $\eta_{X\times Y}$ of the exceptional divisor in the product blowup.
+\end{prop}
+
+The proposition is purely local in nature, it suffices to consider the case where $X$ and $Y$ are affine. 
+More precisely, by the smoothness of $X$ and $Y$, we may restrict our attention to open neighborhoods of $x$ and $y$ that are isomorphic to affine spaces. 
+The rest of this section treats that case.
+
+\subsubsection*{The Affine Case}
+Let $X = \mathbb{A}_k^n$ be the affine $n$-space over a field $k$, and let $0 \in X$ be the origin. 
+Let $\tilde{X} = \text{Bl}_0(X)$ be the blowup of $X$ at the origin. 
+Recall that $\tilde{X} \subset X \times_k \mathbb{P}^{n-1}_k$ is defined by the equations $x_i u_j = x_j u_i$, where $[u_1 : \dots : u_n]$ are the homogeneous coordinates of 
+$\mathbb{P}^{n-1}_k$.
+The exceptional divisor $E \subset \tilde{X}$ is the fiber over the origin, $E = \{ (0, [u_1 : \dots : u_n]) \}$, which is of codimension 1 in $\tilde{X}$. 
+Let $\eta \in E$ be the generic point of $E$, and let $R = \mathcal{O}_{\tilde{X}, \eta}$ be the associated local ring. 
+This ring $R$ is a discrete valuation ring (DVR) with fraction field $K = K(X) = k(x_1, \dots, x_n)$.
+
+On the affine chart $U_1$ where $u_1 \neq 0$, we have $x_i = \frac{u_i}{u_1} x_1$. 
+The coordinate ring is:$$\mathcal{O}_{\tilde{X}}(U_1) = k\left[x_1, \frac{u_2}{u_1}, \dots, \frac{u_n}{u_1}\right]$$
+In this chart, the generic point $\eta$ corresponds to the prime ideal $\mathfrak{p}_1 = (x_1)$. Thus, the local ring is $R = k[x_1, \frac{u_2}{u_1}, \dots, \frac{u_n}{u_1}]_{(x_1)}$. 
+The residue field is $\kappa(\eta) = k(\frac{u_2}{u_1}, \dots, \frac{u_n}{u_1})$, and the completion of $R$ with respect to its maximal ideal is:
+$$\hat{R} = \kappa(\eta)[[x_1]]$$
+In this local ring, $x_1$ is a uniformizer. Note that any $x_i$ (for $i > 1$) can also serve as a uniformizer, 
+as $x_i = (\frac{u_i}{u_1}) x_1$ and $\frac{u_i}{u_1}$ is a unit in $R$.
+
+For any monomial $M = x_1^{a_1} \dots x_n^{a_n} \in K$, we can write:
+$$M = x_1^{\sum a_i} \left( \frac{u_2}{u_1} \right)^{a_2} \dots \left( \frac{u_n}{u_1} \right)^{a_n}$$
+Since the term in parentheses is a unit in $R$, the valuation $\nu_E$ associated with $E$ satisfies:
+$$\nu_E(M) = \sum a_i = \deg M$$
+Consequently, for any polynomial $f = f_d + f_{d+1} + \dots + f_l$, where $f_i$ is the homogeneous part of degree $i$, we have $\nu_E(f) = d$ (the order of vanishing at the origin).
+
+\subsubsection*{The Product Case}
+Now, let $X = \mathbb{A}^n$ and $Y = \mathbb{A}^m$ with origins $x=0$ and $y=0$. 
+As before, $\text{Bl}_0(X) \subset X \times \mathbb{P}^{n-1}$ and $\text{Bl}_0(Y) \subset Y \times \mathbb{P}^{m-1}$ have exceptional divisors $E_X$ and $E_Y$ respectively.
+Consider the product $X \times_k Y \cong \mathbb{A}_k^{n+m}$. 
+The blowup of the product at the origin $(0,0)$, denoted $\text{Bl}_{(0,0)}(X \times_k Y)$, is a subscheme of $(X \times Y) \times \mathbb{P}^{n+m-1}$ defined by:
+
+$$\begin{cases} 
+x_i w_j = x_j w_i & 1 \le i, j \le n \\
+y_k w_{n+l} = y_l w_{n+k} & 1 \le k, l \le m \\
+x_i w_{n+j} = y_j w_i & 1 \le i \le n, \,\, 1 \le j \le m 
+\end{cases}$$
+where $[w_1 : \dots : w_{n+m}]$ are the homogeneous coordinates of $\mathbb{P}^{n+m-1}$. The exceptional divisor $E_{X \times Y}$ is isomorphic to $\mathbb{P}^{n+m-1}$.
+
+\subsubsection*{Comparison of Blowups}
+
+Both $\text{Bl}_0(X) \times_k \text{Bl}_0(Y)$ and $\text{Bl}_{(0,0)}(X \times_k Y)$ are birational to $X \times_k Y$. 
+They share a common dense open set $\tilde{U}$ defined by the condition that neither the $X$-coordinates nor the $Y$-coordinates vanish simultaneously in the projective space:
+$$\tilde{U} = \{ ((x,y), [w_1: \dots : w_{n+m}]) \mid (w_1, \dots, w_n) \neq 0 \text{ and } (w_{n+1}, \dots, w_{n+m}) \neq 0 \}$$This yields a diagram of open immersions:
+$$ 
+   \begin{tikzcd}
+        & \tilde{U} \arrow[dl, "f_1"'] \arrow[dr, "f_2", hook] & \\
+        \text{Bl}_0(X) \times_k \text{Bl}_0(Y) & & \text{Bl}_{(0,0)}(X \times_k Y)
+    \end{tikzcd}
+$$
+    
+    where $f_1$ maps the coordinates to the respective projectivizations $[w_1: \dots : w_n]$ and $[w_{n+1}: \dots : w_{n+m}]$.
+    Also note that the generic point $\eta_{X \times Y}$  of $E_{X \times_k Y}$ is inside $\tilde{U}$
+
+\subsubsection*{Extensions of DVRs}
+Let $S$ be the local ring of the generic point $\eta_{X\times Y}$ of $E_{X \times Y}$ in $\tilde{U}$. 
+On the chart where $w_1 \neq 0$ and $w_{n+1} \neq 0$, we have 
+$x_1 = (\frac{w_1}{w_{n+1}}) y_1$. 
+Since $\frac{w_1}{w_{n+1}}$ is a unit in this chart, $x_1$ and $y_1$ are equivalent as uniformizers.
+We have:
+$$
+S=k\left[x_1, \frac{w_2}{w_1} \cdots, \frac{w_n}{w_1}, \frac{w_{n+1}}{w_1} \cdots \frac{w_{n+m}}{w_1}\right]_{(x_1)} = 
+k\left[\frac{w_1}{w_{n+1}}, \frac{w_2}{w_{n+1}} \cdots \frac{w_n}{w_{n+1}}, y_1 \cdots \frac{w_{n+m}}{w_{n+1}}\right]_{(y_1)}
+$$
+
+$$k(\eta_{X \times Y}) = k\left(\frac{w_2}{w_1} \cdots, \frac{w_n}{w_1}, \frac{w_{n+1}}{w_1} \cdots \frac{w_{n+m}}{w_1}\right)$$
+
+Let $R_X$ be the local ring of the exceptional divisor $E_X$ in $\text{Bl}_0(X)$. 
+The pullback of $E_X \times_k \text{Bl}_0(Y)$ along $f_1$ induces an extension of DVRs $R_X \hookrightarrow S$. Which is:
+\begin{enumerate}
+    \item Weakly Unramified: $x_1$ is a uniformizer in both $R_X$ and $S$, so the ramification index is $e=1$.
+    \item Residually Transcendental: The residue field extension $\kappa(\eta_X) \subset \kappa(\eta)$ is:
+    $$k\left(\frac{w_2}{w_1}, \dots, \frac{w_n}{w_1}\right) \subset k\left(\frac{w_2}{w_1}, \dots, \frac{w_n}{w_1}, \frac{w_{n+1}}{w_1}, \dots, \frac{w_{n+m}}{w_1}\right)$$
+    Hence separable.
+\end{enumerate}
+Since this extension is generated by transcendental elements, it is separable and formally smooth at the maximal ideal (\stackstag{09E7}).
+
+\subsubsection*{Ramification of $G$-Torsors}
+Let $G$ be a finite abelian group. 
+Let $\mathcal{Q}$ be a $G$-torsor on an open $U \subset \text{Bl}_0(X)$ disjoint from $E_X$. 
+%Suppose $\mathcal{Q}$ has ramification bounded by $r$ at the generic point $\eta_X$ of $E_X$.
+Let $V \subset \text{Bl}_0(Y)$ be an open subscheme, and let $\pi_X: \text{Bl}_0(X) \times_k V \to \text{Bl}_0(X)$ 
+be the projection onto the first factor. 
+By restricting this projection to $U \times_k V$, we obtain the pullback $G$-torsor:
+$$\pi_X^{-1}(\mathcal{Q}) \cong \mathcal{Q} \times_k V$$
+which is defined on the open subset $U \times_k V \subset \text{Bl}_0(X) \times_k \text{Bl}_0(Y)$.
+The extension of local rings $R_X \to S$ is weakly unramified (the ramification index $e=1$) and residually transcendental with seprable residue field exntesion. 
+Under these conditions the ramification filtration is preserved. 
+Therefore, the pullback $\pi_X^{-1}(\mathcal{Q})$ has ramification bounded by $r$ at the generic point $\eta_{X \times Y}$ of the exceptional divisor $E_{X \times Y}$ if and only if 
+the original torsor $\mathcal{Q}$ has ramification bounded by $r$ at the generic point $\eta_X$ of $E_X$
+
+And we finish by \Cref{lemma:bounding_ramification_of_contracted_product}.
+
+

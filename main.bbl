@@ -389,6 +389,37 @@
       \verb https://doi.org/10.2140/ant.2019.13.1327
       \endverb
     \endentry
+    \entry{YoucisTorsors}{unpublished}{}{}
+      \name{author}{1}{}{%
+        {{hash=9081e78fbef748a06eaabc3fa3d39755}{%
+           family={Youcis},
+           familyi={Y\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{fullhash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{fullhashraw}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{bibnamehash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{authorbibnamehash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{authornamehash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{authorfullhash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{authorfullhashraw}{9081e78fbef748a06eaabc3fa3d39755}
+      \field{labelalpha}{You20}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Available at \url{https://alex-youcis.github.io/torsors.pdf}}
+      \field{title}{Notes on Torsors}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://alex-youcis.github.io/torsors.pdf
+      \endverb
+      \verb{url}
+      \verb https://alex-youcis.github.io/torsors.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
