@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  14 JAN 2026 18:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  15 JAN 2026 00:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1228,113 +1228,120 @@ Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input
 
 
 [4]) (./sections/Preliminaries/Preliminaries.tex
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 24.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 21.
 
 
 [5]
+Package hyperref Info: bookmark level for unknown prop defaults to 0 on input line 86.
+
 
 [6]
-Package hyperref Info: bookmark level for unknown cor defaults to 0 on input line 106.
+Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input line 121.
+Package hyperref Info: bookmark level for unknown cor defaults to 0 on input line 137.
 
 
 [7]
 
 [8]
-Package hyperref Info: bookmark level for unknown prop defaults to 0 on input line 244.
 
+[9{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-[9]
-
-[10{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[10] <xymatrix 2x2 154>
 
 [11]
-Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input line 388.
 
-
-[12] <xymatrix 2x2 154>
+[12]
 
 [13]
 
-[14]
+[14] <xymatrix 2x2 154>) (./sections/RamificationAfterBlowupIsTame.tex
 
-[15]
+[15] <xymatrix 2x2 154>
 
-[16] <xymatrix 2x2 154>) (./sections/RamificationAfterBlowupIsTame.tex
+LaTeX Warning: Reference `prop:torsor_representable' on page 1 undefined on input line 34.
 
-[17] <xymatrix 2x2 154>
+
+
+[16]
+
+LaTeX Warning: Reference `cor:tors_etale_flat_eq' on page 1 undefined on input line 113.
+
+
+
+[17]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 127.
+
 
 [18]
 
 [19]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 127.
 
-
-[20]
+[20]) (./sections/GeometricClassFieldTheory.tex
 
 [21]
 
-[22]) (./sections/GeometricClassFieldTheory.tex
+[22]
 
 [23]
 
 [24]
 
-[25]
+[25]) (./sections/RamificationAfterBlowup.tex
 
 [26]
 
-[27]) (./sections/RamificationAfterBlowup.tex
+[27]
 
 [28]
 
 [29]
-
-[30]
-
-[31]
 Overfull \hbox (6.28197pt too wide) in paragraph at lines 256--260
-\T1/cmr/m/n/10.95 generic point. Note that by [][]The-o-rem 27[][] and [][]The-o-rem 28[][] We can as-sume $\OMS/cmsy/m/n/10.95 P \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 k\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 x; x[]\OT1/cmr/m/n/10.95 ][\OML/cmm/m/it/10.95 X\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 =\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[] \OMS/cmsy/m/n/10.95 ^^@
+\T1/cmr/m/n/10.95 generic point. Note that by [][]The-o-rem 21[][] and [][]The-o-rem 22[][] We can as-sume $\OMS/cmsy/m/n/10.95 P \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 k\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 x; x[]\OT1/cmr/m/n/10.95 ][\OML/cmm/m/it/10.95 X\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 =\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[] \OMS/cmsy/m/n/10.95 ^^@
  []
 
 
 
-[32]
+[30]
 Overfull \hbox (13.19939pt too wide) in paragraph at lines 308--311
 \T1/cmr/m/it/10.95 and de-onte by $\OML/cmm/m/it/10.95 e[]; :::; e[]$ \T1/cmr/m/it/10.95 the el-e-men-tary sym-met-ric poly-no-mi-als in $\OML/cmm/m/it/10.95 x[]; :::; x[]$\T1/cmr/m/it/10.95 . If $\OML/cmm/m/it/10.95 m < d$ \T1/cmr/m/it/10.95 then $\OML/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]; :::; x[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2
  []
 
 
 
-[33]) (./sections/GeometricCFT/ProofOfReducedTheorem.tex
+[31]) (./sections/GeometricCFT/ProofOfReducedTheorem.tex
 
-[34])
+[32])
 
-[35]
+[33]
 
-[36] (./main.aux)
+[34] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B5BBD98208EA3F9336967A3565E5A9EE;4543.
+(rerunfilecheck)             Checksum: CCA7CFEDBB0336CD4D0591B66C6F9510;4766.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44753 strings out of 473190
- 844672 string characters out of 5715800
- 1688182 words of memory out of 5000000
- 66979 multiletter control sequences out of 15000+600000
+ 44691 strings out of 473190
+ 843259 string characters out of 5715800
+ 1688084 words of memory out of 5000000
+ 66935 multiletter control sequences out of 15000+600000
  591499 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,17n,110p,3296b,1914s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on main.pdf (36 pages, 718301 bytes).
+Output written on main.pdf (34 pages, 709850 bytes).
 PDF statistics:
- 905 PDF objects out of 1000 (max. 8388607)
- 774 compressed objects within 8 object streams
- 263 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 877 PDF objects out of 1000 (max. 8388607)
+ 748 compressed objects within 8 object streams
+ 245 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

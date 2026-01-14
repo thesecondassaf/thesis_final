@@ -2,21 +2,22 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
 \contentsline {section}{\numberline {2}Preliminaries}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Torsors}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Symmetric Powers of Schemes and Torsors}{10}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Symmetric Powers of Local Systems on Curves}{13}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Algebraic Preliminaries on Ramification}{13}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Kummer and Artin-Schreier Theories}{15}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Algebraic Geometry}{16}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Ramification After Blowup Is Tame}{17}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Tame Ramification and Ramification of $G$-Torsors}{17}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Behavior of Ramification under Product of Blowups}{21}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Geometric Class Field Theory}{23}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Etale Fundamental Groups and Tame Fundamental Groups}{23}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Generalized Picard Scheme}{24}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}The Abel-Jacobi Morphism and its Fibers}{26}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Compactification of Blowup of Symmetric Powers of a Curve}{26}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Ramification of Sheaves after Blowup}{28}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Reduction Lemmas}{28}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Proof of \Cref {theorem:SymmetricPowerOfSheafIsTamelyRamified}}{31}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Proof of \Cref {theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}}{31}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Proof of \Cref {thm:GCFT_reduced}}{34}{section.6}%
+\contentsline {subsection}{\numberline {2.2}Torsors over the \'Etale's Sites}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Symmetric Powers of Schemes and Torsors}{9}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Symmetric Powers of Local Systems on Curves}{11}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Algebraic Preliminaries on Ramification}{11}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Kummer and Artin-Schreier Theories}{13}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Algebraic Geometry}{14}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Ramification After Blowup Is Tame}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tame Ramification and Ramification of $G$-Torsors}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Behavior of Ramification under Product of Blowups}{19}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Geometric Class Field Theory}{21}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Etale Fundamental Groups and Tame Fundamental Groups}{21}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Generalized Picard Scheme}{22}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The Abel-Jacobi Morphism and its Fibers}{24}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Compactification of Blowup of Symmetric Powers of a Curve}{24}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Ramification of Sheaves after Blowup}{26}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Reduction Lemmas}{26}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Proof of \Cref {theorem:SymmetricPowerOfSheafIsTamelyRamified}}{29}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Proof of \Cref {theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}}{29}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Proof of \Cref {thm:GCFT_reduced}}{32}{section.6}%
