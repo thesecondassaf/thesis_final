@@ -12,9 +12,8 @@ $$
 $$
 Where $g$ is the genus of the curve $C$.
 The unramified case ($\mdls = 0$) is relatively simple, as the Abel-Jacobi map is proper, surjective with geometrically connected fibers, which follows from the fact that it is a fibration in projective spaces.
-Thus, by using the homotopy exact sequence for the etale fundamental group,
-
-one gets an isomorphism between the etale fundamental group of $U^{(d)} (=C^{(d)})$ and that of $\PicCm[d] (=\PicC[d])$.
+Thus, by using the homotopy exact sequence for the \'etale fundamental group,
+one gets an isomorphism between the \'etale fundamental group of $U^{(d)} (=C^{(d)})$ and that of $\PicCm[d] (=\PicC[d])$.
 
 The ramified case ($\mdls > 0$) is more subtle, as the Abel-Jacobi map is not proper anymore, and one needs to analyze the ramification of $\cF^{(d)}$ "along the boundary" of $U^{(d)}$ in $C^{(d)}$.
 
@@ -28,81 +27,108 @@ It is also worth noting that Guignard's method generalizes to relative curves ov
 Takeuchi, on the other hand, constructs a compactification of $U^{(d)}$ by blowing up $C^{(d)}$ along certain well-chosen centers.
 This compactification, denoted by $\tilde{C}^{(d)}_\mdls$, has $U^{(d)}$ as an open subscheme with a codimension 1 closed subscheme $H$ as complement. 
 He then shows that the Abel-Jacobi map extends to a proper morphism from $\tilde{C}^{(d)}_\mdls$ to $\PicCm[d]$,
-which is a fibration in projective spaces. Thus, by the homotopy exact sequence for the etale fundamental group, one gets an isomorphism between the etale fundamental group of
-$\tilde{C}^{(d)}_\mdls$ and that of $\PicCm[d]$. 
-To conclude the descent, Takeuchi analyzes the ramification of $\cF^{(d)}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$,
+which is a fibration in projective spaces. Thus, by the homotopy exact sequence for the \'etale fundamental group, one gets an isomorphism between the \'etale fundamental group of
+$\tilde{C}^{(d)}_\mdls$ and that of $\PicCm[d]$. To conclude the descent, Takeuchi analyzes the ramification of $\cF^{(d)}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$,
 showing that it is tamely ramified there, which suffices. His methods relies on the theory of Witt vectors and refined Swan conductors.
 
 For an account of these approaches, see \cite{Guignard2018} and \cite{takeuchi2019blow}.
 For a full approach following Deligne's method in the unramified case, and the tamely ramified case see \cite{tendler2015geometricclassfieldtheory}, and \cite{Toth2011}.
 
-In this thesis, we combine techniques and ideas from the approaches, and from \cite{tendler2015geometricclassfieldtheory}, to give an elementary proof of the ramified case of Deligne's approach to geometric class field theory.
-We follow Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ of $U^{(d)}$ by blowing up $C^{(d)}$ and calculate the ramification of $\cF^{(d)}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$ directly, avoiding 
-the use of Swan conductors. 
+\textit{In this thesis}, we calculate the ramification of $\cF^{(d)}$ 
+directly to show that it is at most tame at the generic point of $H$, 
+avoiding the use of Swan conductors. 
+Toward the completion of Geometric Class Field Theory, 
+we utilize Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ 
+of $U^{(d)}$ via the blowing up of $C^{(d)}$.
 
-In the rest of the introduction, we state the main theorem of geometric class field theory \Cref{thm:GCFT}, and its reduction to \Cref{thm:GCFT_reduced}, which we prove in this thesis.
+% calculated the ramification of $\cF^{(d)}$ directly, in a more elementary way, enabling to show it is at most tame.
+% we combine techniques and ideas from the approaches, and from \cite{tendler2015geometricclassfieldtheory}, to give an elementary proof of the ramified case of Deligne's approach to geometric class field theory.
+% We follow Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ of $U^{(d)}$ by blowing up $C^{(d)}$ and calculate the ramification of $\cF^{(d)}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$ directly, avoiding 
+% the use of Swan conductors. 
+
+In the rest of the introduction, we state the main theorem of geometric class field theory \Cref{thm:GCFT}, and its reductions to \Cref{thm:GCFT_reduced} and \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}, which we prove in this thesis.
 
 Let $k$ be a perfect field, and let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$. 
-Geometric class field theory gives a geometric description of abelian coverings of $C$ by relating it to isogenies of the generalized picard schemes.
+Geometric class field theory gives a geometric description of Abelian coverings of $C$ by relating it to isogenies of the generalized Picard schemes.
 
 Fix a modulus $\mdls$, i.e.\ an effective Cartier divisor of $C$ and let $U$ be its complement in $C$. 
 The pairs $(\cL, \alpha)$, where $\cL$ is an invertible $\cO_C$-module and $\alpha$ is a rigidification of $\cL$ along $\mdls$, are parametrized by a $k$-group scheme $\PicCm$, called the rigidified Picard scheme.
 The Abel-Jacobi morphism $$ \Phi : U \to \PicCm $$
-is the morphism which sends a section $x$ of $U$ to the pair $(\cO(x), 1)$ . 
-The fundamental result of geometric class field theory can be formulated as:
+is the morphism which sends a section $x$ of $U$ to the pair $(\cO(x), 1)$. 
+The fundamental result of GCFT can be formulated as:
 \begin{theorem}[Geometric Class Field Theory]\label{thm:GCFT}
     Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
-    Then, there exists a unique (up to isomorphism) \textcolor{purple}{\underline{\textit{multiplicative}}} \'etale sheaf of $\Lambda$-modules $\cG$ on $\PicCm$, locally free of rank 1, such that the pullback of $\cG$ by $\Phi$ is isomorphic to $\cF$.
-\end{theorem}
-
-\textcolor{purple}{The notion of a multiplicative locally free $\Lambda$-module of rank 1 is due to \cite{Guignard2018} 
+    Then, there exists a unique (up to isomorphism) 
+    multiplicative\footnote{The notion of a multiplicative locally free $\Lambda$-module of rank 1 is due to \cite{Guignard2018} 
 and corresponds to isogenies $G \to \PicCm$ with constant kernel $\Lambda^\times$. 
 This concept corresponds to multiplicative characters of $H^1(\PicCm[], \Q/\Z)$ in the formulation of \cite{takeuchi2019blow}, 
-and generalizes Hecke eigensheaves in the context of \cite{tendler2015geometricclassfieldtheory}.}
+and generalizes Hecke eigensheaves in the context of \cite{tendler2015geometricclassfieldtheory}.} 
+\'etale sheaf of $\Lambda$-modules $\cG$ on $\PicCm$, locally free of rank 1, such that the pullback of $\cG$ by $\Phi$ is isomorphic to $\cF$.
+\end{theorem}
 
 Let $d$ be a positive integer. 
 We denote by $U^{(d)}$ the $d$-th symmetric power of $U$ over $k$. 
-For an \'etale sheaf $\cF$ on $U$, we denote by $\cF^{(d)}$ the $d$-th symmetric power of $\cF$ on $U^{(d)}$.
+For an \'etale sheaf $\cF$ on $U_{\text{\'et}}$, we denote by $\cF^{(d)}$ the $d$-th symmetric power of $\cF$ on $U^{(d)}$ 
 The degree $d$ Abel-Jacobi morphism is defined as the map
 $$ \Phi_d : U^{(d)} \to \PicCm[d] $$
 which sends a section $x_1 + \cdots + x_d$ of $U^{(d)}$ to the pair $(\cO(x_1 + \cdots + x_d), 1)$ .
 
 The method of descent shows that to prove \Cref{thm:GCFT}, 
-it suffices to prove the following reduced version (see the last page of \cite{Guignard2018}, 
-Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2019blow} for details on this reduction):
+it suffices to prove the following reduced version\footnote{See the last page of \cite{Guignard2018}, 
+Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2019blow} for details on this reduction.}:
 
-\begin{theorem}\label{thm:GCFT_reduced}
-    Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
+\begin{restatable}{theorem}{GCFT_reduced}\label{thm:GCFT_reduced}
+    Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls$. 
     Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) \'etale sheaf of $\Lambda$-modules $\cG_d$ on $\PicCm[d]$, locally free of rank 1, such that the pullback of $\cG_d$ by $\Phi_d$ is isomorphic to $\cF^{(d)}$.
-\end{theorem}
-
-Using the equivilance between $G$-torsors and locally free $\Lambda$-modules of rank 1 ($G=\Lambda^\times$, 
-see \Cref{prop:torsor_module_equivalence}), \Cref{thm:GCFT_reduced} can be reformulated in terms of $G$-torsors as follows:
-
-\begin{restatable}{theorem}{GCFTtorsors} \label{thm:GCFT_torsors}
-    Let $G=\Lambda^\times$ be a finite abelian group ($\Lambda$ as before), and let $\cP$ be a $G$-torsor on $U$, with ramification bounded by $\mdls$. 
-    Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) $G$-torsor $\cQ_d$ on $\PicCm[d]$, such that the pullback of $\cQ_d$ by $\Phi_d$ is isomorphic to $\cP^{(d)}$.
 \end{restatable}
 
-To prove \Cref{thm:GCFT_torsors} we follow the work of \cite{takeuchi2019blow}, there he analyzed 
-the ramification of $\cP^{(d)}$ after blowing up $C^{(d)}$, we analyze this ramification using elementary methods, drawing techniques and ideas
-from the works of \cite{Guignard2018} and \cite{takeuchi2019blow}, and \cite{tendler2015geometricclassfieldtheory}.
+
+% Using the equivilance between $G$-torsors and locally free $\Lambda$-modules of rank 1 ($G=\Lambda^\times$, 
+% see \Cref{prop:torsor_module_equivalence}), \Cref{thm:GCFT_reduced} can be reformulated in terms of $G$-torsors as follows:
+
+% \begin{restatable}{theorem}{GCFTtorsors} \label{thm:GCFT_torsors}
+%     Let $G=\Lambda^\times$ be a finite abelian group ($\Lambda$ as before), and let $\cP$ be a $G$-torsor on $U$, with ramification bounded by $\mdls$. 
+%     Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) $G$-torsor $\cQ_d$ on $\PicCm[d]$, such that the pullback of $\cQ_d$ by $\Phi_d$ is isomorphic to $\cP^{(d)}$.
+% \end{restatable}
+
+% To prove \Cref{thm:GCFT_torsors} we follow the work of \cite{takeuchi2019blow}, there he analyzed 
+% the ramification of $\cP^{(d)}$ after blowing up $C^{(d)}$, we analyze this ramification using elementary methods, drawing techniques and ideas
+% from the works of \cite{Guignard2018} and \cite{takeuchi2019blow}, and \cite{tendler2015geometricclassfieldtheory}.
+
+To prove \Cref{thm:GCFT_reduced} we follow the work of \cite{takeuchi2019blow} (and similiary done in \cite{Toth2011}),
+analyzing the ramification of $\cF^{(d)}$ after blowing up $C^{(d)}$. We analyze this ramification using elementary methods.
+We prove the following Theorem:
+
+\begin{restatable}{theorem}{SymmetricPowerOfSheavesIsTamelyRamifiedReduction}\label{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}
+     Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls$. 
+     Let $\ndls = k_P P \subset \mdls$ be a non trival sub modulus of $\mdls$ such that $\cF$ is bounded at $P$ by $k_P$.
+     Then $\cF^{(\deg \ndls)}$ is tamely ramified at the generic point $\eta_\ndls$ of the exceptional divisor $E_\ndls$ 
+     of the blowup $X_{\ndls}$ of $C^{(\deg \ndls)}$ at the closed point $\ndls$.
+\end{restatable}
 
 
-\textbf{Notation and conventions}. 
-\begin{itemize}
-    \item $S$ is a base scheme.    
-    \item $C \to S$ is a relative curve. i.e. smooth morphism of schemes of relative dimension 1, with connected geometric fibers of genus $g$, which is Zariski-locally projective over $S$. 
-    Note that the genus $g$ is a locally cosntant function on $S$. 
-    \item Most of the time we will assume that $S=\Spec k$, where $k$ is a perfect field.
-    \item A modulus $\mdls$ on $C \to S$, is defined as an effective Cartier divisor of $C$ over $S$ (i.e., a closed subscheme of $C$ which is finite flat of finite presentation (hence locally free) over $S$).
-\end{itemize}
+The thesis is organized as follows:
+
+\begin{description}
+    \item[Chapter 1 - Preliminaries] provides the necessary preliminaries and covers the foundational material upon which this work is based, generally without providing proofs.
+    \item[Chapter 2 - Ramification After Blowup Is Tame] is devoted to the proof of \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}, along with several corollaries that will be instrumental in the proof of \Cref{thm:GCFT_reduced}.
+    \item[Chapter 3 - Geometric Class Field Theory] presents the proof of \Cref{thm:GCFT_reduced}.
+\end{description}
+
+\noindent \textbf{Acknowledgemets}. First and foremost, I would like to express my sincere gratitude to Professor Yakov Varshavsky for introducing me to this subject, and for his mentoring, invaluable guidance, insightful meetings, and patience throughout this process.
+Secondly, I am also deeply grateful to my parents for their support throughout my studies, and to my friends who motivated me and stood by me until the completion of this work.
+Finally, I would like to express my gratitude to all the individuals without whom this work would not have been possible. This includes colleagues, researchers, as well as the broader global community of individuals whose passion and dedication drive us all forward.
 
 
-\textcolor{red}{
- \begin{enumerate}
-    \item Say something about the ramification condition.
-    \item Add acknowledgemets to yakov, family, etc.
- \end{enumerate}
-}
+
+% \textbf{Notation and conventions}. 
+
+
+% \begin{itemize}
+%     \item $S$ is a base scheme.    
+%     \item $C \to S$ is a relative curve. i.e. smooth morphism of schemes of relative dimension 1, with connected geometric fibers of genus $g$, which is Zariski-locally projective over $S$. 
+%     Note that the genus $g$ is a locally cosntant function on $S$. 
+%     \item Most of the time we will assume that $S=\Spec k$, where $k$ is a perfect field.
+%     \item A modulus $\mdls$ on $C \to S$, is defined as an effective Cartier divisor of $C$ over $S$ (i.e., a closed subscheme of $C$ which is finite flat of finite presentation (hence locally free) over $S$).
+% \end{itemize}
 

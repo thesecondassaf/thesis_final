@@ -1,7 +1,10 @@
 We work over $S=\spec k$, for $k$ perfect.
 
 By \Cref{prop:torsor_module_equivalence}, its equivalent to prove: 
-\GCFTtorsors*
+\begin{restatable}{theorem}{GCFTtorsors} \label{thm:GCFT_torsors}
+    Let $G=\Lambda^\times$ be a finite abelian group ($\Lambda$ as before), and let $\cP$ be a $G$-torsor on $U$, with ramification bounded by $\mdls$. 
+    Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) $G$-torsor $\cQ_d$ on $\PicCm[d]$, such that the pullback of $\cQ_d$ by $\Phi_d$ is isomorphic to $\cP^{(d)}$.
+\end{restatable}
 
 \begin{proof}
 We divide the proof into two cases, when $\mdls = 0$ and when $\mdls > 0$.
