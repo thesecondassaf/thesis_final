@@ -60,7 +60,9 @@ This construction yields a functor:
 On the level of isomorphism classes, $\varphi_*$ induces a map of pointed sets $\mathrm{Tors}(\cE, \mathcal{G}_1) \to \mathrm{Tors}(\cE, \mathcal{G}_2)$, sending the class of the trivial $\mathcal{G}_1$-torsor to the class of the trivial $\mathcal{G}_2$-torsor.
 
 When $\mathcal{G}$ is a \textbf{sheaf of abelian groups} (an \textit{abelian sheaf}), the pointed set $\mathrm{Tors}(\cE, \mathcal{G})$ 
-inherits the structure of an abelian group. Let $\mathcal{P}_1$ and $\mathcal{P}_2$ be objects of $\mathbf{Tors}(\cE, \mathcal{G})$. We define their sum $[\mathcal{P}_1] + [\mathcal{P}_2]$ to be the class $[\mathcal{P}_3]$, where $\mathcal{P}_3$ is the quotient sheaf $(\mathcal{P}_1 \times \mathcal{P}_2)/\mathcal{G}$. In this construction, $\mathcal{G}$ acts on the product $\mathcal{P}_1 \times \mathcal{P}_2$ on $T$-points by:
+inherits the structure of an abelian group. Let $\mathcal{P}_1$ and $\mathcal{P}_2$ be objects of $\mathbf{Tors}(\cE, \mathcal{G})$. We define their sum $[\mathcal{P}_1] + [\mathcal{P}_2]$ 
+to be the class $[\cP_1 \otimes \cP_2]$, where $\cP_1 \otimes \cP_2$ is defined as the quotient sheaf $(\mathcal{P}_1 \times \mathcal{P}_2)/\mathcal{G}$. 
+In this construction, $\mathcal{G}$ acts on the product $\mathcal{P}_1 \times \mathcal{P}_2$ on $T$-points by:
 \[ g \cdot (f_1, f_2) := (g f_1, g^{-1} f_2) \]
 
 The group object $\mathcal{G}$ then acts on the resulting quotient via its action on the presheaf quotient, which is given on classes by:
@@ -127,7 +129,7 @@ scheme $f : Y \to X$ equipped with a left $G$-action $\rho: G \times_X Y \to Y$ 
 Similarly to the case of $G$-torsors of a topos, we define a morphism of principal $G$-bundles to be a morphism of $X$-schemes commuting with the
 $G$-action. We now have:
 
-\begin{theorem} 
+\begin{theorem}\label{theorem:torsors_are_realized_as_spaces}
     The morphism sending $Y \mapsto \mathrm{Hom}_X(-, Y)$ is an equivalence of categories from the category of principal $G$-bundles 
     to the category of $G$-torsors on $X_{\text{\'Et}}$
     Similarly, the morphism sending $Y$ to $\mathrm{Hom}_X(-, Y)$ to the category of $G$-torsors on $X_{\text{ét}}$ is an equivalence.
@@ -183,7 +185,7 @@ $G = \text{Aut}(Y/X)$ acts transitively on the geometric points of $Y$ lying ove
 On the otherhand if $f: Y \to X$ is a principal $\underline{G}$-bundle with $Y$ connected, then $Y$ is a finite Galois cover with
 automorphism group $G$.
 
-However, not all $\underline{G}$-torsors are connected. If $H\subset G$ is a proper subgroup then any connected finite etale cover $f: Y \to X$ with 
+However, not all $\underline{G}$-torsors are connected. If $H\subset G$ is a proper subgroup then any connected finite \'etale cover $f: Y \to X$ with 
 Galois group $H$ gives rise to a non-connected $\underline{G}$-torsor by looking at the induced $\underline{G}$-torsor $\varphi_*(Y)$ under the inclusion $\varphi: \underline{H} \to \underline{G}$.
 On the otherhand, if we fix a geometric point $\overline{x} \to X$, then to give an homomorphism
 $\rho \in \mathrm{Hom}_{\mathrm{cont}}(\pi_1^{\mathrm{et}}(X, x), G)$ is equivilant to give a connected pointed Galois cover
@@ -311,21 +313,8 @@ Let $S$ be a scheme.
     \end{enumerate}
 \end{prop}
 
-\begin{prop}[{[SGA1]}, IX.5.8]
-Let $G$ be a finite abelian group, let $\cP$ be a $G$-torsor over an $S$-scheme $X$ in $S_{\text{Ét}}$. 
-Assume that $\cP$ and $X$ are endowed with right actions from a finite group $\Gamma$ 
-such that the morphism $\cP \to X$ is $\Gamma$-equivariant, and that the following properties hold:
-\begin{enumerate}
-    \item[(a)] The right $\Gamma$-action on $\cP$ commutes with the left $G$-action.
-    \item[(b)] The right $\Gamma$-action on $X$ is admissible, and the quotient morphism $X \to X/\Gamma$ is finite.
-    \item[(c)] For any geometric point $\bar{x}$ of $X$, the action of the stabilizer $\Gamma_{\bar{x}}$ of $\bar{x}$ in $\Gamma$ on the fiber $\cP_{\bar{x}}$ of $\cP$ at $\bar{x}$ is trivial.
-\end{enumerate}
-Then the action of $\Gamma$ on $\cP$ is admissible, and $\cP/\Gamma$ is a $G$-torsor over $X/\Gamma$ in $S_{\text{Ét}}$.
-\end{prop}
 
-
-\subsubsection*{Symmetric Powers of Schemes}
-Let $X$ be an $S$-scheme and let $d \geq 0$ be an integer. The group ${S}_d$ of permutations of $\llbracket 1, d \rrbracket$ acts on the right on the $S$-scheme $X^{\times_S d} = X \times_S \dots \times_S X$ by the formula
+Now let $X$ be an $S$-scheme and let $d \geq 0$ be an integer. The group ${S}_d$ of permutations of $\llbracket 1, d \rrbracket$ acts on the right on the $S$-scheme $X^{\times_S d} = X \times_S \dots \times_S X$ by the formula
 \[
 (x_i)_{i \in \llbracket 1, d \rrbracket} \cdot \sigma = (x_{\sigma(i)})_{i \in \llbracket 1, d \rrbracket}.
 \]
@@ -335,9 +324,14 @@ Let $X$ be an $S$-scheme and let $d \geq 0$ be an integer. The group ${S}_d$ of 
     $X^{\times_S d}$ is admissible. 
     Consequently, the quotient $\mathrm{Sym}_S^d(X) = X^{\times_S d}/S_d$ exists as a scheme over $S$.
 \end{prop}
-\begin{rem*}
-    When the base $S$ is understood from context, this quotient is also denoted by $X^{(d)}$.
-\end{rem*}
+
+\begin{definition}
+    Under the hypotheses of the proposition above, we define the \textbf{relative symmetric product} of $X$ over $S$ 
+    of degree $d$ as the quotient
+    $$\mathrm{Sym}_S^d(X) \coloneqq X^{\times_S d}/S_d.$$
+    When the base scheme $S$ is clear from the context, we shall denote this quotient by 
+    $X^{(d)}$.
+\end{definition}
 
 Guingard shows that when $X=\Spec(B)$ and $S=\Spec(A)$ then $\Sym_{S}^d(X)$ is representable by an affine $S$-scheme (See \cite{Guignard2018} Remark 2.28).
 
@@ -349,17 +343,23 @@ If $X$ is flat and Zariski-locally quasi-projective over $S$, then $\text{Sym}_S
 is an isomorphism.
 \end{prop}
 
-\subsubsection*{Symmetric Powers of Torsors}
-\textcolor{red}{change torsor tensor product to contracted product,
-and the analogy with sheaves to tensor product (which it is) below the exposition to be more accurate... }
 
+%\subsubsection*{Symmetric Powers of Torsors}
+Now, let $G$ be a finite abelian group, let $\cP$ be a $G$-torsor over an $S$-scheme $X$ in $S_{\text{Ét}}$. 
 
-\textcolor{red}{change below the exposition to be more accurate... }
-Let $S$ be a scheme, let $X$ be an $S$-scheme and let $d \geq 1$ be an integer. 
-Let $G$ be a finite abelian group, and let $\cP \to X$ be a $G$-torsor over $X$ in $S_{\text{Ét}}$. 
-It is easy to show that the sheaf $\cP$ is representable by a finite étale $X$-scheme. (For example \cite{Guignard2018} Proposition 2.12)
+\begin{prop}[{[\cite{sga1}]}, IX.5.8]
+Assume that $\cP$ and $X$ are endowed with right actions from a finite group $\Gamma$ 
+such that the morphism $\cP \to X$ is $\Gamma$-equivariant, and that the following properties hold:
+\begin{enumerate}
+    \item[(a)] The right $\Gamma$-action on $\cP$ commutes with the left $G$-action.
+    \item[(b)] The right $\Gamma$-action on $X$ is admissible, and the quotient morphism $X \to X/\Gamma$ is finite.
+    \item[(c)] For any geometric point $\bar{x}$ of $X$, the action of the stabilizer $\Gamma_{\bar{x}}$ of $\bar{x}$ in $\Gamma$ on the fiber $\cP_{\bar{x}}$ of $\cP$ at $\bar{x}$ is trivial.
+\end{enumerate}
+Then the action of $\Gamma$ on $\cP$ is admissible, and $\cP/\Gamma$ is a $G$-torsor over $X/\Gamma$ in $S_{\text{Ét}}$.
+\end{prop}
 
-For each $i \in \llbracket 1, d \rrbracket$ let $p_i : X^{\times_S d} \to X$ be the projection on $i$-th factor, and let us consider the $G$-torsor
+By \Cref{theorem:torsors_are_realized_as_spaces}, $\cP$ is representable by a finite étale $X$-scheme.
+For each $i \in  \llbracket 1, d \rrbracket$ let $p_i : X^{\times_S d} \to X$ be the projection on $i$-th factor, and let us consider the $G$-torsor
 \[
 p_1^{-1}\cP \otimes \cdots \otimes p_d^{-1}\cP = G_d \backslash \cP^{\times_S d}
 \]
@@ -383,49 +383,89 @@ p_1^{-1}\cP \otimes \cdots \otimes p_d^{-1}\cP \to r^{-1}\cP^{(d)}
 \]
 where $r : X^{\times_S d} \to \mathrm{Sym}_S^d(X)$ is the canonical projection, is an isomorphism of $G$-torsors over $X^{\times_S d}$.
 \end{prop}
-\textcolor{red}{consider replacing $\cP$ with $P$ because it is a scheme}
-\textcolor{red}{Add proposition about how it is being a scheme}
-
 
 
 %
 % SYMMETRIC POWERS OF LOCAL SYSTEMS ON CURVES
 %
-\subsection{Symmetric Powers of Local Systems on Curves}\label{section:symmetric_powers_on_curves}
-\textcolor{red}{don't need modulus in this section, etc.}
-Let $k$ be a perfect field. 
-Let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$.
-Let $\mdls$ be a modulus on $C$ and let $U = C \setminus \mdls$.
-Let $G$ be a finite abelian group and let $\cP$ be a $G$-torsor on $U$ with ramification bounded by
-$\mdls$. Let $d \geq \deg m$.
+The construction of symmetric powers is compatible with a natural addition law. 
+For any integers $d_1, d_2 \geq 0$, there exists a canonical \textbf{addition morphism}
+\[ +_{d_1, d_2}: X^{(d_1)} \times_S X^{(d_2)} \to X^{(d_1+d_2)} \]
+induced by the equivariant isomorphism $X^{\times_S d_1} \times_S X^{\times_S d_2} \cong X^{\times_S (d_1+d_2)}$ with respect to the inclusion of the product of symmetric groups $S_{d_1} \times S_{d_2} \subseteq S_{d_1+d_2}$.
 
-We have the following diagram:
+\begin{prop}\label{prop:symmetric_powers_on_curves}
+    Let $\cP$ be a $G$-torsor over $X$. There is a canonical isomorphism of $G$-torsors over $X^{(d_1)} \times_S X^{(d_2)}$:
+    \[
+    +_{d_1, d_2}^{-1} \left( \cP^{(d_1+d_2)} \right) \cong r_1^{-1} \cP^{(d_1)} \otimes r_2^{-1} \cP^{(d_2)}.
+    \]
+\end{prop}
+\begin{proof}
+Let $\pi = r_{d_1} \times r_{d_2}$. By the commutativity of the following diagram
 \[
 \begin{tikzcd}
-U^{(d_1)} \times_k U^{(d_2)} \arrow[r, "p_1"] \arrow[d, "p_2"] & U^{(d_1)} \\
-U^{(d_2)} &  {}
-\end{tikzcd}
-\] 
-
-pullbacking $\cP^{(d_i)}$ along the projections we get a $G$-torsor
-
-\[\cP ^{(d_1)} \boxtimes \cP ^{(d_2)} = p_1^{-1} \cP^{(d_1)} \otimes p_2^{-1} \cP^{(d_2)}\]
-On $U^{(d_1)} \times_k U^{(d_2)}$
-
-Note that the plus map $C^{(d_1)} \times_k C^{(d_2)} \xrightarrow{+}{} C^{(d_1 + d_2)}$
-is induced from
-\[
-\begin{tikzcd}
-C^{d_1} \times_k C^{d_2} \arrow[r, "\cong"] \arrow[d, "r_1 \times r_2"] & C^{d_1 + d_2} \arrow[d, "r"] \\
-C^{(d_1)} \times_k C^{(d_2)} \arrow[r, "+"] & C^{(d_1+ d_2)} 
+X^{\times_S d_1} \times_S X^{\times_S d_2} \arrow[r, "\sim"] \arrow[d, "\pi"'] & X^{\times_S (d_1+d_2)} \arrow[d, "r_{d_1+d_2}"] \\
+X^{(d_1)} \times_S X^{(d_2)} \arrow[r, "+_{d_1, d_2}"] & X^{(d_1+d_2)}
 \end{tikzcd}
 \]
-
-
-Hence, by \Cref{prop:symmetric_power_torsor} (and replacing $C$ with $U$ above) we get canonical identification:
+and applying \Cref{prop:symmetric_power_torsor}, we obtain canonical isomorphisms:
 \[
- (+^{-1})(\cP^{(d_1+d_2)}) \cong \cP ^{(d_1)} \boxtimes \cP ^{(d_2)}
+\pi^{-1} \left( +_{d_1, d_2}^{-1} \cP^{(d_1+d_2)} \right) \cong r_{d_1+d_2}^{-1} \cP^{(d_1+d_2)} \cong \bigotimes_{i=1}^{d_1+d_2} p_i^{-1} \cP
 \]
+and
+\[
+\pi^{-1} (r_1^{-1} \cP^{(d_1)} \otimes r_2^{-1} \cP^{(d_2)}) \cong \left( \bigotimes_{i=1}^{d_1} p_i^{-1} \cP \right) \otimes \left( \bigotimes_{j=d_1+1}^{d_1+d_2} p_j^{-1} \cP \right).
+\]
+Since both pullbacks identify with $\bigotimes_{k=1}^{d_1+d_2} p_k^{-1} \cP$ in an $S_{d_1} \times S_{d_2}$-equivariant manner, the isomorphism descends to the quotient $X^{(d_1)} \times_S X^{(d_2)}$ by \Cref{prop:symmetric_power_flat_base_change}.
+\end{proof}
+
+
+
+% \begin{proof}
+%     This proof follow
+%     The claim follows from the fact that the construction of $\cP^{(d)}$ 
+%     is compatible with base change (Proposition \ref{prop:symmetric_power_flat_base_change}) 
+%     and the identification of the group action on the fiber (\Cref{prop:symmetric_power_torsor}). 
+%     Specifically, the quotient of $G_{d_1+d_2} \backslash \cP^{d_1+d_2}$ by the subgroup $S_{d_1} \times S_{d_2}$ is isomorphic to the product of the individual symmetric torsors. The isomorphism is then induced by the universal property of the quotient $X^{(d_1+d_2)}$.
+% \end{proof}
+
+%
+% SYMMETRIC POWERS OF LOCAL SYSTEMS ON CURVES
+%
+% \subsection{Symmetric Powers of Local Systems on Curves}\label{section:symmetric_powers_on_curves}
+% Lastly, when $X=C$ is a 
+% Let $k$ be a perfect field. 
+% Let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$.
+% Let $\mdls$ be a modulus on $C$ and let $U = C \setminus \mdls$.
+% Let $G$ be a finite abelian group and let $\cP$ be a $G$-torsor on $U$ with ramification bounded by
+% $\mdls$. Let $d \geq \deg m$.
+
+% We have the following diagram:
+% \[
+% \begin{tikzcd}
+% U^{(d_1)} \times_k U^{(d_2)} \arrow[r, "p_1"] \arrow[d, "p_2"] & U^{(d_1)} \\
+% U^{(d_2)} &  {}
+% \end{tikzcd}
+% \] 
+
+% pullbacking $\cP^{(d_i)}$ along the projections we get a $G$-torsor
+
+% \[\cP ^{(d_1)} \boxtimes \cP ^{(d_2)} = p_1^{-1} \cP^{(d_1)} \otimes p_2^{-1} \cP^{(d_2)}\]
+% On $U^{(d_1)} \times_k U^{(d_2)}$
+
+% Note that the plus map $C^{(d_1)} \times_k C^{(d_2)} \xrightarrow{+}{} C^{(d_1 + d_2)}$
+% is induced from
+% \[
+% \begin{tikzcd}
+% C^{d_1} \times_k C^{d_2} \arrow[r, "\cong"] \arrow[d, "r_1 \times r_2"] & C^{d_1 + d_2} \arrow[d, "r"] \\
+% C^{(d_1)} \times_k C^{(d_2)} \arrow[r, "+"] & C^{(d_1+ d_2)} 
+% \end{tikzcd}
+% \]
+
+
+% Hence, by \Cref{prop:symmetric_power_torsor} (and replacing $C$ with $U$ above) we get canonical identification:
+% \[
+%  (+^{-1})(\cP^{(d_1+d_2)}) \cong \cP ^{(d_1)} \boxtimes \cP ^{(d_2)}
+% \]
 
 \subsection{Algebraic Preliminaries on Ramification}
 \textcolor{red}{change?}
@@ -604,3 +644,28 @@ of schemes.
 \begin{theorem}
 If $X$ is integral then $Bl_Z(X)$ is integral. %This can be checked locally
 \end{theorem}
+
+
+If $X$ is a smooth curve, we have the following result regarding its symmetric power:
+    \begin{prop}
+        Let $f: X \to S$ be a smooth morphism of relative dimension 1.
+        Suppose $f$ is flat and Zariski-locally quasi-projective.
+        Then the relative symmetric power $X_S^{(d)} = \text{Sym}^d_S(X)$ is smooth over $S$ of relative dimension $d$.
+    \end{prop}
+    
+    \begin{proof}Since $f: X \to S$ is smooth, the $d$-fold product $X_S^d$ is smooth over $S$. By \Cref{prop:symmetric_power_flat_base_change}, the quotient $X_S^{(d)}$ is flat over $S$. Smoothness is a fiberwise property for flat morphisms of finite presentation (cf. \stackstag{01V8}); thus, it suffices to verify the smoothness of the fibers. 
+        For every $s \in S$, the fiber of the symmetric power is given by:$$(\text{Sym}^d_S(X))_s \cong \text{Sym}^d_{\kappa(s)}(X_s)$$Consequently, we may reduce to the case where $S = \text{Spec}(k)$ for a field $k$. 
+        Since smoothness is preserved under  base change to the algebraic closure, we may further assume $k = \bar{k}$.
+        Let $z = \sum_{i=1}^{r} d_i \cdot x_i \in X^{(d)}$ be a point represented by an effective cycle of degree $d$, where the points $x_i \in X(k)$ are distinct and $\sum d_i = d$. Choose pairwise disjoint Zariski-open subsets $U_i \subset X$ such that $x_i \in U_i$. Let $W \subset X^{(d)}$ be the open subset consisting of cycles whose support is contained in $\bigcup U_i$ and which meet each $U_i$ with degree exactly $d_i$. There is a canonical isomorphism:
+$$W \cong \prod_{i=1}^r U_i^{(d_i)}$$
+Thus, it suffices to show that each $U_i^{(d_i)}$ is smooth of dimension $d_i$ at the point $d_i \cdot x_i$. 
+
+We may therefore restrict our attention to the "worst" case: the diagonal point $z = d \cdot x$. Let $R = \mathcal{O}_{X,x}$ be the local ring of the curve at $x$. Since $X$ is a smooth curve over $k$, $R$ is a regular local ring of dimension 1, i.e., a discrete valuation ring. Its completion is $\hat{R} \cong k[[t]]$. The completed local ring of the product $X^d$ at the point $(x, \dots, x)$ is:
+$$\hat{\mathcal{O}}_{X^d, (x, \dots, x)} \cong \hat{R} \hat{\otimes}_k \dots \hat{\otimes}_k \hat{R} \cong k[[t_1, \dots, t_d]]$$
+where $t_i$ is the uniformizer for the $i$-th copy of $X$. The symmetric group $S_d$ acts on this power series ring by permuting the variables 
+$t_i$. By the \textit{Fundamental Theorem of Symmetric Polynomials}, the ring of invariants is:
+$$\left( k[[t_1, \dots, t_d]] \right)^{S^d} = k[[e_1, \dots, e_d]]$$
+where $e_j$ is the $j$-th elementary symmetric power series in the variables $t_i$.
+
+The ring $k[[e_1, \dots, e_d]]$ is a formal power series ring in $d$ variables. A fundamental theorem in commutative algebra states that a local ring is regular if and only if its completion is a formal power series ring over a field. Since $\hat{\mathcal{O}}_{X^{(d)}, z} \cong k[[e_1, \dots, e_d]]$, the local ring $\mathcal{O}_{X^{(d)}, z}$ is a regular local ring of dimension $d$. This implies that $X^{(d)}$ is smooth over $k$ of dimension $d$, completing the proof.
+\end{proof}
