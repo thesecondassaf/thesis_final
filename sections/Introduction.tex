@@ -1,6 +1,6 @@
 In this thesis, we give an elementary proof of a certain imporant geometric theorem occuring in Deligne's approach to geometric class field theory.
 We (usually) work over a perfect field $k$, $C$ is a projective smooth geometrically connected curve over $k$, with genus $g$.
-One of the main geometric ingredients in the approach, is showing why a local system $\cF$ with ramification bounded by a modulus $\mdls$ on $U = C \setminus \mdls$ descends via the Abel-Jacobi $\Phi: U \to \PicCm[]$ to $\PicCm[]$. 
+One of the main geometric ingredients in the approach, is showing why a local system $\cF$ with ramification bounded by a modulus $\mdls = \sum n_i P_i$ on $U = C \setminus \mdls$ descends via the Abel-Jacobi $\Phi: U \to \PicCm[]$ to $\PicCm[]$. 
 The approach, innovated by Deligne, relies on analyzing the symmetric powers $\cF^{(d)}$ of $\cF$ on the symmetric powers $U^{(d)}$ of $U$,
 and showing that for sufficiently large $d$, $\cF^{(d)}$ descends to $\PicCm[d]$ via the degree $d$ Abel-Jacobi map $\Phi_d : U^{(d)} \to \PicCm[d]$.
 The geometric-fibers of $\Phi_d$ (for $d \geq \deg \mdls +  2g - 1$) over any point are isomorphic to 
@@ -100,8 +100,8 @@ analyzing the ramification of $\cF^{(d)}$ after blowing up $C^{(d)}$. We analyze
 We prove the following Theorem:
 
 \begin{restatable}{theorem}{SymmetricPowerOfSheavesIsTamelyRamifiedReduction}\label{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}
-     Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls$. 
-     Let $\ndls = k_P P \subset \mdls$ be a non trival sub modulus of $\mdls$ such that $\cF$ is bounded at $P$ by $k_P$.
+     Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls = \sum n_i P_i$. 
+     Let $\ndls = n_i P_i \subset \mdls$ be a sub modulus of $\mdls$.
      Then $\cF^{(\deg \ndls)}$ is tamely ramified at the generic point $\eta_\ndls$ of the exceptional divisor $E_\ndls$ 
      of the blowup $X_{\ndls}$ of $C^{(\deg \ndls)}$ at the closed point $\ndls$.
 \end{restatable}
