@@ -468,27 +468,36 @@ Since both pullbacks identify with $\bigotimes_{k=1}^{d_1+d_2} p_k^{-1} \cP$ in 
 % \]
 
 \subsection{Algebraic Preliminaries on Ramification}
-\textcolor{red}{change?}
-We recall the basic definitions and properties of the ramification of discrete valuations. 
-We start with the general case of discrete valuation rings and their integral closures within finite separable field extensions. 
-Then, we move to the specific setting of complete discrete valuation rings within Galois extensions, where we describe the ramification filtration of the Galois group via both lower and upper numbering.
-We follow \stackstag{0EXQ}, and \cite{serreLF}.
+This section reviews the ramification of discrete valuations, beginning with the general theory of \textit{discrete valuation rings} and their 
+integral closures in finite separable extensions. 
+We then specialize to complete rings in Galois extensions to describe the ramification filtration via lower and upper numbering, 
+following the treatments in \stackstag{0EXQ} and \cite{serreLF}.
 
-\subsubsection*{Ramification of Discrete Valuation Rings}
-Let $A$ be a discrete valuation ring with fraction field $K$. Let $L/K$ be a finite separable field extension. Let $B \subset L$ be the integral closure of $A$ in $L$. Picture:
+\begin{definition}[\stackstag{09E4}]
+    We say that $A \to B$ or $A \subset B$ is an extension of discrete valuation rings if $A$ and $B$ are discrete valuation rings and $A \to B$ is injective and local. In particular, if $\pi _ A$ and $\pi _ B$ are uniformizers of $A$ and $B$, then $\pi _ A = u \pi _ B^ e$ for some $e \geq 1$ and unit $u$ of $B$. The integer $e$ does not depend on the choice of the uniformizers as it is also the unique integer $\geq 1$ such that
+\[ \mathfrak m_ A B = \mathfrak m_ B^ e \]
+The integer $e$ is called the \textit{ramification index} of $B$ over $A$. We say that $B$ is \textit{weakly unramified} over $A$ if $e = 1$. 
+If the extension of residue fields $\kappa _ A = A/\mathfrak m_ A \subset \kappa _ B = B/\mathfrak m_ B$ is finite, 
+then we set $f = [\kappa _ B : \kappa _ A]$ and we call it the \textit{residual degree} or residue degree of the extension $A \subset B$.
 
-\[ \xymatrix{ B \ar[r] & L \\ A \ar[u] \ar[r] & K \ar[u] } \]
-By \stackstag{032L} the ring extension $A \subset B$ is finite, hence $B$ is Noetherian. 
-By \stackstag{00OK} the dimension of $B$ is $1$, hence $B$ is a Dedekind domain, see \stackstag{034X}. 
-Let $\mathfrak m_1, \ldots , \mathfrak m_ n$ be the maximal ideals of $B$ (i.e., the primes lying over $\mathfrak m_ A$). We obtain extensions of discrete valuation rings
+Note that we do not require the extension of fraction fields to be finite.
+\end{definition}
+
+Now let $A$ be a discrete valuation ring with fraction field $K$, let  $L/K$ be a finite separable field extension and 
+let $B \subset L$ be the integral closure of $A$ in $L$.
+% \[ \xymatrix{ B \ar[r] & L \\ A \ar[u] \ar[r] & K \ar[u] } \]
+Then the ring extension $A \subset B$ is finite, hence $B$ is Noetherian. 
+The dimension of $B$ is $1$, hence $B$ is a Dedekind domain.
+Let $\mathfrak m_1, \ldots , \mathfrak m_ n$ be the maximal ideals of $B$ (i.e., the primes lying over $\mathfrak m_ A$). 
+We obtain extensions of discrete valuation rings
 
 \[ A \subset B_{\mathfrak m_ i} \]
 and hence ramification indices $e_ i$ and residue degrees $f_ i$. We have
 
 \[ [L : K] = \sum \nolimits _{i = 1, \ldots , n} e_ i f_ i \]
-by \stackstag{02MJ} applied to a uniformizer in $A$. We observe that $n = 1$ if $A$ is henselian (by \stackstag{04GH} and the fact that $B$ is a domain), e.g. if $A$ is complete.
+Note that if $A$ is henselian (e.g. $A$ is complete) then $n=1$. 
 
-\begin{definition}\label{definition:tamely_ramified_dvrs}
+\begin{definition}[\stackstag{09E9}]\label{definition:tamely_ramified_dvrs}
 Let $A$ be a discrete valuation ring with fraction field $K$. Let $L/K$ be a finite separable extension. With $B$ and $\mathfrak m_ i$, $i = 1, \ldots , n$ 
 as above, we say the extension $L/K$ is
 \begin{enumerate}
@@ -499,49 +508,70 @@ as above, we say the extension $L/K$ is
 If the discrete valuation ring $A$ is clear from context, then we sometimes say $L/K$ is unramified, totally ramified, or tamely ramified for short.
 \end{definition}
 
-\subsubsection*{Structure Theorems and Some Lemmas}\label{subsubsection:structure_theorems_ramification}
-Let $A$ be a complete discrete valuation ring over with uniformizer $\pi$ and residue field $\kappa$, which we assume to be perfect.
-When $A$ and $\kappa$ are of the same characteristic $p > 0$, then $A$ contains a coefficient field $k \cong \kappa$ and a well known structure theorem holds: $A = k[[\pi ]] \cong k[[t]]$.
+% - %
+Now and for the rest of the section assume $A$ is a \textit{complete discrete valuation ring} with uniformizer $\pi$ 
+and residue field $\kappa$, which we assume to be perfect. When $A$ and $\kappa$ are of the same characteristic $p > 0$, 
+then $A$ contains a coefficient field $k \cong \kappa$ and a well known structure theorem holds: $A = k[[\pi ]] \cong k[[t]]$.
 Let $K$ be the fraction field of $A$, then $K=k((\pi))$.
-By \textcolor{red}{Kummer theory}, unramified extensions of $K$ correspond to separable extensions of $k$.
-The maximal unramified extension of $K$ is $\overline{k}((\pi))$ where $\overline{k}$ is a separable closure of $k$.
- \textcolor{red}{Maybe add something about the above facts.}
+
+For the remainder of this section, assume $A$ is a \textit{complete discrete valuation ring} with uniformizer $\pi$ and a perfect residue 
+field $\kappa$. In the equal characteristic case, where $\text{char}(A) = \text{char}(\kappa) = p > 0$, the 
+Cohen Structure Theorem implies that $A$ contains a coefficient field $k \cong \kappa$, such that $A \cong k[[\pi]] \cong k[[t]]$. 
+Consequently, the fraction field is given by $K = k((\pi))$.
+Let $L/K$ be a finite Galois extension with Galois group $G$. 
+The integral closure $B$ of $A$ in $L$ is itself a complete discrete valuation ring. 
+Since the residue field $\kappa$ is perfect, the extension of residue fields is separable, and there exists a uniformizer 
+$\Pi \in B$ such that $B = A[\Pi]$.
+
+The \textit{lower numbering ramification filtration} of $G$, denoted by $(G_i)_{i \geq -1}$, is defined as:
+\[ 
+G_i = \{ \sigma \in G \mid v_B(\sigma (x) - x) \geq i + 1 \text{ for all } x \in B \} 
+\]
+where $v_B$ is the valuation on $L$ associated with $B$. In this indexing, $G_{-1} = G$ and $G_0$ 
+corresponds to the \textit{inertia group} of the extension $L/K$. Note that $L/K$ is unramified if and only if 
+$G_0 = \{1\}$, and it is tamely ramified if and only if $G_1 = \{1\}$.
+
+A standard result in the theory of local fields(complete local fields with a discrete valuation and perfect residue field) 
+ensures that the condition in the definition of $G_i$ need only be checked for the uniformizer $\Pi$ of $B$. 
+Specifically, if we define the function
+\[ 
+i^L_K(\sigma) = v_B(\sigma(\Pi) - \Pi) 
+\]
+for $\sigma \in G$, then $G_i = \{ \sigma \in G \mid i^L_K(\sigma) \geq i + 1 \}$. 
+The subgroups $G_i$ are normal in $G$ and become trivial for sufficiently large $i$.
+
+Consider a tower of fields $K \subset E \subset L$, and let $H = \text{Gal}(L/E) \subset G$. The lower numbering is compatible with subgroups:
+\[ 
+G_i \cap H = H_i \quad \text{for all } i \geq -1 
+\]
+which follows from the identity $i^L_E = i^L_K|_{H}$. 
+However, the lower numbering does not behave as simply with respect to quotients. If $H$ is normal in $G$, the image of $G_i$ in $G/H$ is generally not $(G/H)_i$. 
+Instead, we have $G_i H / H = (G/H)_j$, where the index $j$ is given by the formula:
+\[ 
+j = \frac{1}{e_{L/E}} \sum_{\tau \in H} \min(i^L_K(\tau), i+1) - 1 
+\]
 
 
-%We will need that broad definition of tame ramification in order to deal with higher dimensional schemes, 
-%however note that in the case of global and local fields (taking $A$ to be the local ring at a prime of the ring of integers), 
-%this definition of tame ramification coincides with the usual one.
-
-\subsubsection*{Classical Ramification Filtration in the Galois Case}
-We now recall the classical ramification filtration in the Galois case.
-Assume $A,B$ are complete DVRs. And that $L/K$ is Galois with Galois group $G$. 
-In that case there is uniformizer $\pi \in B$ such that $B=A[\pi ]$ 
-   
-We have the ramification filtration of $G$ by lower numbering $(G_i)_{i \geq -1}$, defined by
-\[ G_i = \{ \sigma \in G \mid v_B(\sigma (x) - x) \geq i + 1 \text{ for all } x \in B \} \]
-where $v_B$ is the valuation on $L$ associated to $B$. 
-In particular, $G_{-1} = G$ and $G_0$ is the inertia group of the extension $L/K$. 
-We have that $L/K$ is unramified if and only if $G_0$ is trivial, and $L/K$ is tamely ramified if and only if $G_1$ is trivial.
-It is easy exercise that in the definition of $G_i$ it is enough to check the condition for the uniformizer $\pi$ of $B$, if we define
-$i^L_K(\sigma ) = v_B(\sigma (\pi ) - \pi )$ for $\sigma \in G$, then we have $G_i = \{ \sigma \in G \mid i^L_K(\sigma ) \geq i + 1 \}$.
-The groups $G_i$ are normal in $G$ and are trivial for large enough $i$. In a tower of fields $K \subset E \subset L$, where $H=\Gal(L/E)$ we have
-\[ G_i \cap H = H_i \] for all $i \geq -1$, which corresponds to the fact that $i^L_E = i^L_K|_{\mathrm{Gal}(L/E)}$.
-Ramification groups also behave well with respect to quotients: $G_i H/H=(G/H)_j$.
-where \[ j=\frac{1}{e_{L/E}}\sum_{\tau \in H} \min(i^L_K(\tau), i+1)-1 \]
-i.e. the quotient of a ramification group is itself a ramification group, but with a different index.
 In the literature, one reindexes the ramification groups by defining the Herbrand function $\phi_{L/K} : [-1, \infty ) \to [-1, \infty )$:
 \[ \phi_{L/K}(i) = \frac{1}{e_{L/K}}\sum_{\sigma \in G} \min(i^L_K(\sigma), i+1)-1 = \int _0^i \frac{1}{[G_0 : G_t]} dt \]
-It is continuous, increasing, piecewise linear function, hence a bijection.
-It satisfies $\phi_{L/K}=\phi_{E/K} \circ \phi_{L/E}$ for $K \subset E \subset L$, and $G_iH/H=(G/H)_{\phi_{L/E}(i)}$.
-Thus, defining the ramification groups by upper numbering as $G^i = G_{\phi_{L/K}^{-1}(i)}$, we have:
-\[ G^i H/H = (G/H)^i \]
+
+This function is continuous, strictly increasing, and piecewise linear, making it a bijection. 
+It satisfies the composition law $\phi_{L/K} = \phi_{E/K} \circ \phi_{L/E}$ for a tower of extensions $K \subset E \subset L$. 
+Using this function, we define the \textit{upper numbering ramification groups} as:
+\[ 
+G^i = G_{\phi_{L/K}^{-1}(i)} 
+\]
+The primary advantage of this reindexing is its compatibility with quotients: for any normal subgroup $H \subset G$, we have:
+\[ 
+G^i H / H = (G/H)^i 
+\]
 for all $i \geq -1$.
 
 
-\subsection{Kummer and Artin-Schreier Theories}
-We recall the basic theorms from both theories regarding cyclic extesntions and ramifications. 
-Throughout this section let $K$ be a discrete valuation field with perfect residue field $\kappa$ of characteristic $p > 0$. 
-
+\subsubsection*{Kummer and Artin-Schreier Theories}
+For cyclic extensions, Kummer and Artin-Schreier theories provide explicit ways to calculate ramification. 
+These results show how the valuation of a defining element $a \in K$ determines the ramification index and the jumps in the upper numbering filtration.
+Throughout this section, let $K$ be a discrete valuation field with a perfect residue field $\kappa$ of characteristic $p > 0$.
 
 \begin{theorem}[Ramification in Kummer Extensions, \cite{koch1997algebraic}, Proposition 1.83]\label{theorem:kummer_ramification}
 %Let $K$ be a local field of characteristic $\text{char}(K) =p$  
