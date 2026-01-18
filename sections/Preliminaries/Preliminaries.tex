@@ -579,36 +579,13 @@ for all $i \geq -1$.
     \textit{It is the semi-direct product of a cyclic group of order prime to $p$ with a normal subgroup whose order is a power of $p$.}
 \end{prop}
 
-We deduce the following lemma, that will be helpful later:
-\begin{lemma}
-Let $L/K$ be finite galois extesntion with galois group $G=\Z/p^r\Z$
-Assume there exists intermediate local field $K < M < L$ such that $M/K$ is unramified.
-Then $L/K$ is unramified.
-\end{lemma}
-\begin{proof}
-Let $G = \Gal(L/K) \cong \Z/p^r\Z$ and let $G_i$ be the ramification groups ($i \geq -1$).
+% We deduce the following lemma, that will be helpful later:
+% \begin{lemma}
+% Let $L/K$ be finite galois extesntion with galois group $G=\Z/p^r\Z$
+% Assume there exists intermediate local field $K < M < L$ such that $M/K$ is unramified.
+% Then $L/K$ is unramified.
+% \end{lemma}
 
-By the first quoted proposition (Serre, IV Cor. 3), all quotients $G_i/G_{i+1}$ ($i \geq 1$) are $p$-groups (in fact elementary abelian $p$-groups) and $G_1$ itself is a $p$-group.
-
-Since $G \cong \Z/p^r\Z$ is cyclic of order a power of $p$, we have
-$$
-G = G_0 \quad\text{(because the wild inertia $G_1$ is normal and $G/G_1$ is cyclic of order prime to $p$ or trivial)}.
-$$
-But $G_1$ is a $p$-group and $G$ is also a $p$-group, so the only possibility is $G_1 = G$ (i.e. $G/G_1$ is trivial).
-
-Thus $G_0 = G$ and $G_1 = G$, which means that the inertia group is the whole group $G$.
-
-Now let $M/K$ be unramified, i.e. $G_0(M/K) = 1$, or equivalently $\Gal(L/M) = G_0(L/K) = G$.
-
-This implies $M = L$, so the only unramified subextension is the trivial one $M = K$ (but then $M/K$ is trivial, hence unramified).
-
-However the more useful contrapositive reading is:
-If $L/K$ were ramified, then $G_0 = G \neq 1$, so every nontrivial subextension $M/K$ (i.e. $M \neq K$) satisfies $\Gal(L/M) \subset G_0 = G \neq 1$, hence $M/K$ is ramified.
-
-Therefore, if there exists a proper intermediate extension $M/K$ that is unramified, we reach a contradiction unless $L/K$ itself is unramified (i.e. $G_0 = 1$).
-
-Thus $L/K$ is unramified.
-\end{proof}
 
 
 
