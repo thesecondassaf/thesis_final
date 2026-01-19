@@ -1,4 +1,14 @@
 \section{Geometric Class Field Theory}\label{section:gcft}
+The main theorem of this section is
+\begin{restatable}{theorem}{SymmetricPowerOfSheafIsTamelyRamified}\label{theorem:SymmetricPowerOfSheafIsTamelyRamified}
+     Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
+     Considering $U^{(d)}$ as an open subscheme of the blowup $\tilde{C}^{(d)}_\mdls$ of $C^{(d)}$, we have that
+     for sufficiently large integer $d$, $\cF^{(d)}$ is tamely ramified on $H= \tilde{C}^{(d)}_\mdls \setminus U^{(d)}=E_0 \times_{C^{(d)}} \tilde{C}^{(d)}_\mdls $.
+\end{restatable}
+
+From which we will deduce \Cref{thm:GCFT_reduced}.
+
+We start by recalling the necessarily material, and then move to proving this theorem.
 
 \subsection{Etale Fundamental Groups and Tame Fundamental Groups}
 We recall the definition and basic properties of the etale fundamental group, following stacks project 
@@ -17,7 +27,7 @@ of fundamental groups.
     \[ \pi _1(X_{\overline{s}}) \to \pi _1(X) \to \pi _1(S) \to 1 \]
     of fundamental groups.
 \end{cor}
-\textcolor{red}{add about tameness?}
+%\textcolor{red}{add about tameness?}
 
 
 %
@@ -27,7 +37,7 @@ of fundamental groups.
 
 
 \subsection{Generalized Picard Scheme}
-In this section, we recall the notion of generalized Jacobian varieties and study their fundamental properties. The material presented here is primarily adapted from \cite{Guignard2018} and \cite{takeuchi2019blow}. For further background on the general theory of abelian varieties and Jacobians, the reader may also consult \cite{milneAV}.
+We recall the notion of generalized Jacobian varieties and study their fundamental properties. The material presented here is primarily adapted from \cite{Guignard2018} and \cite{takeuchi2019blow}. For further background on the general theory of abelian varieties and Jacobians, the reader may also consult \cite{milneAV}.
 Let $S$ be a scheme and let $C$ be a projective smooth $S$-scheme whose geometric fibers are connected and of dimension 1. Let $\mdls$ be a modulus on $C$, defined as an effective Cartier divisor of $C/S$ 
 (i.e., a closed subscheme of $C$ which is finite flat of finite presentation over $S$).
 We denote the projection $C \times_S T \to T$ by $\text{pr}$ for any $S$-scheme $T$.
@@ -178,8 +188,7 @@ Z_0 \arrow[r, "c.i"]           & C^{(d)}
 \end{tikzcd}
 \] 
 
-In Section 3 of \cite{takeuchi2019blow} Takeuchi constructs, for large enough $d$ a compactification denoted by $\Cmod{d}$ and proves the following:
-\textcolor{red}{exactly determined the fate of that d}
+In Section 3 of \cite{takeuchi2019blow} Takeuchi constructs, for $d$ satisfying \Cref{equation:degree-condition} a compactification denoted by $\Cmod{d}$ and proves the following:
 
 \begin{theorem}[Takeuchi]\label{theorem:takeuchi-compactification-theorem}
     The scheme $\Cmod{d}$ is an open subscheme of $X_{\mdls,d}$ containing $U^{(d)}$. 
@@ -189,9 +198,10 @@ In Section 3 of \cite{takeuchi2019blow} Takeuchi constructs, for large enough $d
     $E_0 \times_{C^{(d)}} \Cmod{d}$.
 \end{theorem}
 
-\begin{proof}
-    \textcolor{red}{Add outline of construction and proofs}
-\end{proof}
+%\begin{proof}
+     
+    %\textcolor{red}{Add outline of construction and proofs}
+%\end{proof}
 
 Diagrammatically we have:
 \[
@@ -206,3 +216,170 @@ Z_0 \arrow[r, "c.i"]           & C^{(d)}
 
 Also note that $ E_0 \times_{C^{(d)}} \Cmod{d} = Z_0 \times_{C^{(d)}} \Cmod{d}$
 
+\subsection{Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}}
+In what follows we reduce \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified} to \Cref{theorem:torsors_after_blowup_is_tame}
+\subsubsection{Reduction Lemmas}
+
+The following lemma is adapted from \cite{takeuchi2019blow} (Lemma 4.1)
+\begin{lemma}\label{lemma:takeuchi_lemma}
+     Let $C$ be a projective, smooth, and geometrically connected curve over a perfect field $k$. 
+     Let $\mathfrak{m} = \sum_{i=1}^{r} k_i P_i$ be an effective divisor where $P_1, \dots, P_r$ are distinct closed points. 
+     Let $U = C \setminus \mathfrak{m}$ and let $d \geq \deg \mathfrak{m}$.
+
+     Suppose $\mathfrak{n}_1, \dots, \mathfrak{n}_l$ are pairwise coprime submoduli of $\mathfrak{m}$ such that $\mathfrak{m} = \sum_{j=1}^l \mathfrak{n}_j$. 
+     Consider the summation morphism:
+     \[
+     \pi : C^{(\deg \mathfrak{n}_1)} \times_k \dots \times_k C^{(\deg \mathfrak{n}_l)} \times_k C^{(d - \deg \mathfrak{m})} \longrightarrow C^{(d)}
+     \]
+     defined by $(D_1, \dots, D_l, D_{extra}) \mapsto \sum_{j=1}^l D_j + D_{extra}$.
+
+     Then $\pi$ is étale at the generic point of the closed subvariety 
+     \[
+     V = \{\mathfrak{n}_1\} \times_k \dots \times_k \{\mathfrak{n}_l\} \times_k C^{(d - \deg \mathfrak{m})}
+     \]
+     inside the domain $C^{(\deg \mathfrak{n}_1)} \times_k \dots \times_k C^{(\deg \mathfrak{n}_l)} \times_k C^{(d - \deg \mathfrak{m})}$.
+
+\begin{proof}
+     We may assume that $k$ is algebraically closed (hence $\deg P_i = 1$ for all $i$). By miracle flatness $\pi$ is flat, it is quasi-finite and projective as a map between projecive spaces.
+     so we condlude $\pi$ is finite and flat. 
+     It is enough to show that there exists a closed point $Q$ of $\ndls_1 + \dots \ndls_l + C^{(d - \deg \mathfrak{m})} \subset C^{(d)}$ 
+     over which there are $\deg \pi$ points on $C^{(\ndls_1)} \times_k \dots \times_k C^{(\ndls_l)} \times_k C^{(d - \deg \mathfrak{m})}$. (Because it will be unramified 
+     at this point and thus also at the generic point of $V$.)
+     Choose $Q$ as a point corresponding to a divisor
+     $\ndls_1 + \dots + \ndls_l + P_{r+1} + \dots + P_{r+d - \deg \mathfrak{m}}$, where $P_1, \dots, P_{r+d - \deg \mathfrak{m}}$ are distinct points of $U(k)$.
+\end{proof}     
+\end{lemma}
+
+\begin{cor}\label{cor:etale_at_generic_point}
+     The morphism $C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)} \xrightarrow[]{\pi} C^{(d)}$
+     is finite flat everywhere, and étale at the generic point of the closed subvariety
+     $Z_\mdls \times_k C^{(d - \deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)}$.     
+\end{cor}
+
+Following from this, we look at the following diagram, coming from the flat base change
+
+$C^{(d - \deg \mdls)} \to \Spec(k)$ (\Cref{prop:symmetric_power_flat_base_change}) of \Cref{equation:blowup_diagram_ndls}:
+%(\textcolor{red}{Is this even smooth? })
+
+\[\begin{tikzcd}
+E_{\mdls} \times_k C^{(d-\deg \mdls)} \arrow[r] \arrow[d] & X_{\mdls} \times_k C^{(d-\deg \mdls)} \arrow[d] & \cF^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)} \arrow[d, color=purple] \\
+Z_\mdls \times_k C^{(d-\deg \mdls)} \arrow[r] & C^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)} & U^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)} \arrow[lu]
+\end{tikzcd}\]
+
+Note that $U^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)}$ is dense open subscheme of $X_{\mdls} \times_k C^{(d-\deg \mdls)}$,
+And $E_{\mdls} \times_k C^{(d-\deg \mdls)}$ is a prime divisor of $X_{\mdls} \times_k C^{(d-\deg \mdls)}$.
+Hence it is well defined question according to \Cref{definition:tamely_ramified_in_codim_1} to ask whether
+$\cF^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)}$ is tamely ramified at the generic point $\theta$ of
+$E_{\mdls} \times_k C^{(d-\deg \mdls)}$.
+
+\begin{lemma}\label{lemma:tame_ramification_persists}
+     If $\cF^{(\deg \mdls)}$ is tamely ramified at $\eta_\mdls$, then
+     $\cF^{(\deg \mdls)} \times_k C^{(d-\deg \mdls)}$ is tamely ramified at the generic point $\theta$ of
+     $E_{\mdls} \times_k C^{(d-\deg \mdls)}$.
+\end{lemma}
+\begin{proof}
+    This follows from \stackstag{0EYD}
+    %\textcolor{red}{make adjusments to definition and lemma, to only require that some prime divisors are with desired properties.}
+\end{proof}
+
+
+Replacing $C^{(d - \deg \mdls)}$ with the dense open subscheme $U^{(d - \deg \mdls)} \subset C^{(d - \deg \mdls)}$,
+we get that the $G$-torsor $p_1^{-1} \cP^{(\deg \mdls)}$ ($\cP$ correspodns to $\cF$ under \Cref{prop:torsor_module_equivalence})
+is tamely ramified at $\theta$ the generic point of
+$E_{\mdls} \times_k U^{(d-\deg \mdls)} \subset U^{(\deg \mdls)} \times_k U^{(d - \deg \mdls)}$,
+where $p_1: U^{(\deg \mdls)} \times_k U^{(d - \deg \mdls)} \to U^{(\deg \mdls)}$ is the projection to the first factor.
+
+Looking at the second projection $p_2:X_{\mdls} \times_k U^{(d - \deg \mdls)} \to U^{(d - \deg \mdls)}$, and the fact that 
+$\cP^{(d - \deg \mdls)}$ is \'etale on $U^{(d - \deg \mdls)}$ we get that 
+$p_2^{-1} \cP^{(d - \deg \mdls)}= X_{\mdls} \times_k \cP^{(d - \deg \mdls)}$ is \'etale on $X_{\mdls} \times_k U^{(d - \deg \mdls)}$.
+Hence, its restriction to $U^{(\deg \mdls)} \times_k U^{(d - \deg \mdls)}$ is unramified at $\theta$.
+
+Thus, by the following lemma, we conclude that $\boxP{\cP^{(\deg \mdls)}}{\cP^{(d - \deg \mdls)}} = p_1^{-1} \cP^{(\deg \mdls)} \wedge^G p_2^{-1} \cP^{(d - \deg \mdls)}$
+     is tamely ramified at $\theta$ the generic point of $E_{\mdls} \times_k U^{(d-\deg \mdls)}$.
+
+\begin{lemma}
+     Let $X \to \Spec k$ be a scheme over a field $k$, and let $\cP_1, \cP_2$ be two $G$-torsors on $U_{et}$.
+     Let $\xi$ be the generic point of a prime divisor $D \subset X$.
+     If $\cP_1$ is tamely ramified at $\xi$, and $\cP_2$ is unramified at $\xi$,
+     then the contracted product $\cP_1 \wedge^G \cP_2$ is tamely ramified at $\xi$.
+\end{lemma}
+\begin{proof}
+     This follows from \Cref{lemma:bounding_ramification_of_contracted_product}.
+\end{proof}
+
+Combining this with \Cref{cor:etale_at_generic_point} we get
+
+\begin{cor}\label{cor:tame-ramification-symmetric-product}
+     Let $\mdls$ be a modulus as above, and let $\eta_\mdls$ be the generic point of $E_\mdls$.
+     Let $\cP$ be a $G$-torsor on $U_{et}$ with ramification bounded by $\mdls$.
+     Assume $\cP^{(\deg \mdls)}$ is tamely ramified at $\eta_\mdls$.
+     Then $\boxP{\cP^{(\deg \mdls)}}{\cP^{(d - \deg \mdls)}}$ is tamely ramified at the generic point $\theta$ of 
+     $E_{\mdls} \times_k C^{(d-\deg \mdls)} \subset C^{(\deg \mdls)} \times_k C^{(d - \deg \mdls)}$,
+     and $\cP^{(d)}$ is tamely ramified at the generic point $\eta_0=\eta_{\mdls,d}$ of $E_0=E_{\mdls,d}$
+\end{cor}
+\begin{proof} 
+The first assertion, that $\mathcal{P}^{(\deg \mathfrak{m})} \boxtimes \mathcal{P}^{(d - \deg \mathfrak{m})}$ is tamely ramified at $\theta$, follows from the preceding discussion. Thus, it remains to show that $\mathcal{P}^{(d)}$ is tamely ramified at $\eta_0$.
+
+Consider the blowup diagram defining $X_{\mathfrak{m}, d}$:
+\[
+\begin{tikzcd}
+\overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] & X_{\mdls, d} \arrow[d, "\pi"] \\
+Z_0 \arrow[r, "c.i"]           & C^{(d)}          
+\end{tikzcd}
+\] 
+By performing a base change along the flat addition map $+: C^{(\deg \mathfrak{m})} \times_k U^{(d-\deg \mathfrak{m})} \to C^{(d)}$, we obtain the following commutative diagram:
+
+\[
+\begin{tikzcd}
+&  \left(C^{(\deg \mdls)} \times_k U^{(d-\deg \mdls)} \right) \times_{C^{(d)}} E_0 \arrow[r] \arrow[d] & \overline{\{\eta_0 \}} =  E_0 \arrow[d] \\
+& \left(C^{(\deg \mdls)} \times_k U^{(d-\deg \mdls)} \right) \times_{C^{(d)}} X_{\mdls, d} \arrow[d] \arrow[r] & X_{\mdls, d} \arrow[d, "\pi"] \\
+\mdls \times_k U^{(d-\deg \mdls)} \arrow[r, "c.i"] & C^{(\deg \mdls)} \times_k U^{(d-\deg \mdls)} \arrow[r, "+"]  & C^{(d)}          
+\end{tikzcd}
+\] 
+Since blowups commute with flat base change, and the inverse image of the center $Z_0$ under the map $+$ is $\mathfrak{m} \times_k U^{(d-\deg \mathfrak{m})}$, the scheme $\left(C^{(\deg \mathfrak{m})} \times_k U^{(d-\deg \mathfrak{m})} \right) \times_{C^{(d)}} X_{\mathfrak{m}, d}$ is the blowup of $C^{(\deg \mathfrak{m})} \times_k U^{(d-\deg \mathfrak{m})}$ along $\mathfrak{m} \times_k U^{(d-\deg \mathfrak{m})}$. 
+This, in turn, is isomorphic to the base change of the blowup $X_{\mathfrak{m}}$ (of $C^{(\deg \mathfrak{m})}$ along $\mathfrak{m}$) via the (flat) projection $C^{(\deg \mathfrak{m})} \times_k U^{(d - \deg \mathfrak{m})} \to C^{(\deg \mathfrak{m})}$.
+
+Assembling these facts, we obtain the following Cartesian square:
+\[
+\begin{tikzcd}
+&  E_{\mdls}\times U^{(d - \deg \mdls)}  \arrow[r, "\tilde{+}"] \arrow[d] & \overline{\{\eta_0 \}} =  E_0 \arrow[d] \\
+& X_{\mdls} \times_k U^{(d - \deg \mdls)} \arrow[d] \arrow[r, "\tilde{+}"] & X_{\mdls, d} \arrow[d, "\pi"] \\
+\mdls \times_k U^{(d-\deg \mdls)} \arrow[r, "c.i"] & C^{(\deg \mdls)} \times_k U^{(d-\deg \mdls)} \arrow[r, "+"]  & C^{(d)}          
+\end{tikzcd}
+\] 
+
+The point $\theta$ defined in the Corollary is the generic point of $E_{\mathfrak{m}} \times_k U^{(d-\deg \mathfrak{m})}$.
+ Let $\eta$ be the generic point of $\mathfrak{m} \times_k U^{(d-\deg \mathfrak{m})}$. 
+ By \Cref{cor:etale_at_generic_point}, the map $+$ is étale at $\eta$. 
+Consequently, the lifted map $\tilde{+}$ is étale at $\theta$. 
+Given the isomorphism $(+^{-1})(\cP^{(d)}) \cong \cP ^{(\deg \mdls)} \boxtimes \cP ^{(d - \deg \mdls)}$ from \Cref{prop:symmetric_powers_on_curves},
+the tame ramification of the box product at $\theta$ descends to the tame ramification of $\mathcal{P}^{(d)}$ at $\eta_0$ by applying \Cref{lemma:descend_ramification_along_etale}.
+
+\end{proof}
+
+% \begin{lemma}
+%      Let $\ndls_1, \ndls_2 \subset \mdls$ be two moduli of the form $\ndls_1 = k_1 P_1$, $\ndls_2 = k_2 P_2$ where $P_1, P_2$ are distinct points.
+%      Assume $\cF ^{(\deg \ndls_1)}$, $\cF ^{(\deg \ndls_2)}$ are at most tamely ramified at $\eta_{\ndls_1}$, $\eta_{\ndls_2}$ respectively.
+%      Then $\cF^{(\deg \ndls_1 + \deg \ndls_2)}$ is at most tamely tamified at $\eta_{\ndls_1 + \ndls_2}$.
+% \end{lemma}
+% \begin{proof}
+%      \textcolor{red}{Complete}
+% \end{proof}
+
+\begin{lemma}\label{lemma:moduli_reduction}
+     Let $\ndls_1, \ndls_2 \subset \mdls$ be two coprime sub moduli of $\mdls$.
+     Assume $\cP ^{(\deg \ndls_1)}$, $\cP ^{(\deg \ndls_2)}$ are at most tamely ramified at $\eta_{\ndls_1}$, $\eta_{\ndls_2}$ respectively.
+     Then $\cP^{(\deg \ndls_1 + \deg \ndls_2)}$ is at most tamely tamified at $\eta_{\ndls_1 + \ndls_2}$.
+\end{lemma}
+
+\begin{proof}
+     It follows from \Cref{prop:ramification-external-product} and \Cref{prop:symmetric_powers_on_curves}
+\end{proof}
+
+\subsection{\texorpdfstring{Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}}{Proof of Theorem X}}
+\begin{proof}[Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}]
+     Let $\cF$ be as in \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}, $\mdls = \sum_{i=1}^n k_P P$ with $\deg P = d_P$  
+     Then by \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction} for every $\ndls \subset \mdls$ of the form $\ndls = k_P P$, $\cF^{(\deg \ndls)}$ is at most tamely ramified at $\eta_\ndls$.
+     By \Cref{lemma:moduli_reduction}, $\cF^{(\deg \mdls)}$ is then at most tamely ramified at $\eta_\mdls$. And thus by \Cref{cor:tame-ramification-symmetric-product}
+     $\cF^{(d)}$ is tamely ramified at the generic point $\eta_0$  of $E_0$
+\end{proof}

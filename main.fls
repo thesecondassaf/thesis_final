@@ -593,15 +593,9 @@ INPUT ./sections/RamificationAfterBlowupIsTame.tex
 INPUT sections/RamificationAfterBlowupIsTame.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
-INPUT ./sections/Corrolaries.tex
-INPUT ./sections/Corrolaries.tex
-INPUT sections/Corrolaries.tex
 INPUT ./sections/GeometricClassFieldTheory.tex
 INPUT ./sections/GeometricClassFieldTheory.tex
 INPUT sections/GeometricClassFieldTheory.tex
-INPUT ./sections/RamificationAfterBlowup.tex
-INPUT ./sections/RamificationAfterBlowup.tex
-INPUT sections/RamificationAfterBlowup.tex
 INPUT ./sections/GeometricCFT/ProofOfReducedTheorem.tex
 INPUT ./sections/GeometricCFT/ProofOfReducedTheorem.tex
 INPUT sections/GeometricCFT/ProofOfReducedTheorem.tex
