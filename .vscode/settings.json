@@ -1,5 +1,10 @@
 {
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.ref.viewer": "tabOrBrowser",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.formatting.latex": "latexindent",
+  "latex-workshop.latex.recipe.default": "lastUsed",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk (biber)",
@@ -11,13 +16,30 @@
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
-      "command": "latexmk",
+      "command": "/usr/local/texlive/2026basic/bin/universal-darwin/latexmk",
+      "env": {
+        "PATH": "/usr/local/texlive/2026basic/bin/universal-darwin:${env:PATH}"
+      },
       "args": [
         "-pdf",
         "-interaction=nonstopmode",
+        "-file-line-error",
         "-synctex=1",
         "%DOC%"
       ]
     }
+  ],
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.bcf",
+    "*.blg",
+    "*.fdb_latexmk",
+    "*.fls",
+    "*.log",
+    "*.out",
+    "*.run.xml",
+    "*.synctex.gz",
+    "*.toc"
   ]
 }
