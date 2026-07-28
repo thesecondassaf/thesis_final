@@ -1,5 +1,5 @@
-In this thesis, we give an elementary proof of a certain imporant geometric theorem occuring in Deligne's approach to geometric class field theory.
-We (usually) work over a perfect field $k$, $C$ is a projective smooth geometrically connected curve over $k$, with genus $g$.
+In this thesis, we give a direct proof of a key geometric result in Deligne's approach to geometric class field theory.
+We work primarily over a perfect field $k$. Let $C$ be a smooth, projective, geometrically connected curve over $k$, of genus $g$.
 One of the main geometric ingredients in the approach, is showing why a local system $\cF$ with ramification bounded by a modulus $\mdls = \sum n_i P_i$ on $U = C \setminus \mdls$ descends via the Abel-Jacobi $\Phi: U \to \PicCm[]$ to $\PicCm[]$. 
 The approach, innovated by Deligne, relies on analyzing the symmetric powers $\cF^{[d]}$ of $\cF$ on the symmetric powers $U^{(d)}$ of $U$,
 and showing that for sufficiently large $d$, $\cF^{[d]}$ descends to $\PicCm[d]$ via the degree $d$ Abel-Jacobi map $\Phi_d : U^{(d)} \to \PicCm[d]$.
@@ -28,16 +28,17 @@ Takeuchi, on the other hand, constructs a compactification of $U^{(d)}$ by blowi
 This compactification, denoted by $\tilde{C}^{(d)}_\mdls$, has $U^{(d)}$ as an open subscheme with a codimension 1 closed subscheme $H$ as complement. 
 He then shows that the Abel-Jacobi map extends to a proper morphism from $\tilde{C}^{(d)}_\mdls$ to $\PicCm[d]$,
 which is a fibration in projective spaces. Thus, by the homotopy exact sequence for the \'etale fundamental group, one gets an isomorphism between the \'etale fundamental group of
-$\tilde{C}^{(d)}_\mdls$ and that of $\PicCm[d]$. To conclude the descent, Takeuchi analyzes the ramification of $\cF^{[d]}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$,
-showing that it is tamely ramified there, which suffices. His methods relies on the theory of refined Swan conductors.
+$\tilde{C}^{(d)}_\mdls$ and that of $\PicCm[d]$. To conclude the descent, Takeuchi analyzes the ramification of $\cF^{[d]}$ along the boundary
+$H=\tilde{C}^{(d)}_\mdls \setminus U^{(d)}$ of $U^{(d)}$ in $\tilde{C}^{(d)}_\mdls$,
+showing that it is tamely ramified there, which suffices. His method relies on the theory of refined Swan conductors.
 % \textcolor{red}{[incorporate \cite{Rabinoff2014Witt} here]}.
 
 For an account of these approaches, see \cite{Guignard2018} and \cite{takeuchi2019blow}.
 For a full approach following Deligne's method in the unramified case, and the tamely ramified case see \cite{tendler2015geometricclassfieldtheory}, and \cite{Toth2011}.
 
-\textit{In this thesis}, we calculate the ramification of $\cF^{[d]}$ 
-directly to show that it is at most tame at the generic point of $H$, 
-avoiding the use of Swan conductors. 
+\textit{In this thesis}, we take a more elementary approach and calculate the ramification of $\cF^{[d]}$ at the generic point of $H$ directly, using explicit ramification theory rather than refined Swan conductors.
+We first reduce the problem to cyclic torsors. We then treat cyclic groups of order prime to the characteristic using Kummer theory and, in characteristic $p>0$, cyclic groups of order $p$ and $p^r$, with $r\geq2$, using Artin--Schreier and Artin--Schreier--Witt theory, respectively.
+These descriptions provide explicit local equations, which allow us to analyze the relevant valuations after blowing up and prove that the ramification is at most tame.
 To prove geometric class field theory for curves, 
 we utilize Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ 
 of $U^{(d)}$ via the blowing up of $C^{(d)}$.
@@ -47,40 +48,42 @@ of $U^{(d)}$ via the blowing up of $C^{(d)}$.
 % We follow Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ of $U^{(d)}$ by blowing up $C^{(d)}$ and calculate the ramification of $\cF^{[d]}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$ directly, avoiding 
 % the use of Swan conductors. 
 
-In the rest of the introduction, we state the main theorem of geometric class field theory \Cref{thm:GCFT}, and its reductions to \Cref{thm:GCFT_reduced} and \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}, which we prove in this thesis.
+We now introduce the notation needed to state geometric class field theory, its standard degree-$d$ reduction, and the ramification theorem proved in this thesis.
 
 Let $k$ be a perfect field, and let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$. 
-Geometric class field theory gives a geometric description of abelian coverings of $C$ by relating it to isogenies of the generalized Picard schemes.
 
 Fix a modulus $\mdls$, i.e.\ an effective Cartier divisor of $C$ and let $U$ be its complement in $C$. 
-The pairs $(\cL, \alpha)$, where $\cL$ is an invertible $\cO_C$-module and $\alpha$ is a rigidification of $\cL$ along $\mdls$, are parametrized by a $k$-group scheme $\PicCm$, called the rigidified Picard scheme.
+The pairs $(\cL, \alpha)$, where $\cL$ is an invertible $\cO_C$-module and $\alpha:\cO_\mdls\xrightarrow{\sim}\cL|_\mdls$ is a rigidification of $\cL$ along $\mdls$, are parametrized by a $k$-group scheme $\PicCm$, called the rigidified Picard scheme.
+We write $\PicCm[d]$ for its degree-$d$ component.
 The Abel-Jacobi morphism $$ \Phi : U \to \PicCm $$
-is the morphism which sends a section $x$ of $U$ to the pair $(\cO(x), 1)$. 
+is the morphism which sends a section $x$ of $U$ to the pair $(\cO_C(x), 1)$. 
+
+Geometric class field theory asserts that rank-one local systems on $U$, with ramification bounded by $\mdls$, arise uniquely as pullbacks of multiplicative rank-one local systems on $\PicCm$.
+For a finite commutative coefficient ring $\Lambda$, the $\Lambda^\times$-torsor associated with such a multiplicative local system is an isogeny onto $\PicCm$ with finite constant kernel $\Lambda^\times$.
+The isogeny formulation will not play a direct role in our argument, which instead focuses on the degree-$d$ descent statement introduced below.
+
 The fundamental result of GCFT can be formulated as:
 \begin{theorem}[Geometric Class Field Theory]\label{thm:GCFT}
-    Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
+    Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
     Then, there exists a unique (up to isomorphism) 
-    multiplicative\footnote{The notion of a multiplicative locally free $\Lambda$-module of rank 1 is due to \cite{Guignard2018} 
-and corresponds to isogenies $G \to \PicCm$ with constant kernel $\Lambda^\times$. 
-This concept corresponds to multiplicative characters of $H^1(\PicCm[], \Q/\Z)$ in the formulation of \cite{takeuchi2019blow}, 
-and generalizes Hecke eigensheaves in the context of \cite{tendler2015geometricclassfieldtheory}.} 
+    multiplicative\footnote{Here multiplicative means that the local system is equipped with an isomorphism compatible with the group law on $\PicCm$, satisfying the usual associativity and unit conditions; see \cite{Guignard2018}.} 
 \'etale sheaf of $\Lambda$-modules $\cG$ on $\PicCm$, locally free of rank 1, such that the pullback of $\cG$ by $\Phi$ is isomorphic to $\cF$.
 \end{theorem}
 
 Let $d$ be a positive integer. 
 We denote by $U^{(d)}$ the $d$-th symmetric power of $U$ over $k$. 
-For an \'etale sheaf $\cF$ on $U_{\text{\'et}}$, we denote by $\cF^{[d]}$ the $d$-th symmetric power of $\cF$ on $U^{(d)}$ 
+For an \'etale sheaf $\cF$ on $U_{\text{\'et}}$, we denote by $\cF^{[d]}$ the $d$-th symmetric power of $\cF$ on $U^{(d)}$. 
 The degree $d$ Abel-Jacobi morphism is defined as the map
 $$ \Phi_d : U^{(d)} \to \PicCm[d] $$
 which sends a section $x_1 + \cdots + x_d$ of $U^{(d)}$ to the pair $(\cO(x_1 + \cdots + x_d), 1)$ .
 
-A method of descent shows that to prove \Cref{thm:GCFT}, 
-it suffices to prove the following reduced version\footnote{See the last page of \cite{Guignard2018}, 
+The standard symmetric-power descent argument shows that the unique degree-$d$ descents, for all sufficiently large $d$, are compatible with the addition of effective divisors and determine the multiplicative local system appearing in \Cref{thm:GCFT}.
+Consequently, it suffices to prove the following reduced version\footnote{See the last page of \cite{Guignard2018}, 
 Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2019blow} for details on this reduction.}:
 
 %% [REVIEW: restatable machinery unused -- no \GCFT_reduced*/\SymmetricPowerOfSheavesIsTamelyRamifiedReduction* restatement appears anywhere; either restate these in the chapters (avoiding the duplicated near-identical statements) or use plain theorem environments]
 \begin{restatable}{theorem}{GCFT_reduced}\label{thm:GCFT_reduced}
-    Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls$. 
+    Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls$. 
     Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) \'etale sheaf of $\Lambda$-modules $\cG_d$ on $\PicCm[d]$, locally free of rank 1, such that the pullback of $\cG_d$ by $\Phi_d$ is isomorphic to $\cF^{[d]}$.
 \end{restatable}
 
@@ -97,13 +100,14 @@ Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theo
 % the ramification of $\cP^{[d]}$ after blowing up $C^{(d)}$, we analyze this ramification using elementary methods, drawing techniques and ideas
 % from the works of \cite{Guignard2018} and \cite{takeuchi2019blow}, and \cite{tendler2015geometricclassfieldtheory}.
 
-To prove \Cref{thm:GCFT_reduced} we follow the work of \cite{takeuchi2019blow} (and similiary done in \cite{Toth2011}),
-analyzing the ramification of $\cF^{[d]}$ after blowing up $C^{(d)}$. We analyze this ramification using elementary methods.
-We prove the following Theorem:
+The main technical input in the proof of \Cref{thm:GCFT_reduced} is the following local ramification theorem.
+Takeuchi obtains the corresponding ramification estimate using refined Swan conductors.
+Our contribution is a different, more elementary proof: Chapter~2 treats a modulus supported at a single point through explicit calculations with cyclic torsors.
+Chapter~3 then follows Takeuchi's geometric descent strategy, reformulated in terms of local systems and torsors rather than characters: it combines these local results to establish tameness along the full boundary $H$, extends $\cF^{[d]}$ across that boundary, and then descends the resulting local system to $\PicCm[d]$.
 
 \begin{restatable}{theorem}{SymmetricPowerOfSheavesIsTamelyRamifiedReduction}\label{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}
-     Let $\Lambda$ be a finite ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls = \sum n_i P_i$. 
-     Let $\ndls = n_i P_i \subset \mdls$ be a sub modulus of $\mdls$.
+     Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls = \sum n_i P_i$. 
+     Let $\ndls = n_i P_i \subset \mdls$ be a single-point submodulus of $\mdls$.
      Then $\cF^{[\deg \ndls]}$ is tamely ramified at the generic point $\eta_\ndls$ of the exceptional divisor $E_\ndls$ 
      of the blowup $X_{\ndls}$ of $C^{(\deg \ndls)}$ at the closed point $\ndls$.
 \end{restatable}

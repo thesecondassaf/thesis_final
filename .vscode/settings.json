@@ -18,7 +18,7 @@
       "name": "latexmk",
       "command": "/usr/local/texlive/2026basic/bin/universal-darwin/latexmk",
       "env": {
-        "PATH": "/usr/local/texlive/2026basic/bin/universal-darwin:${env:PATH}"
+        "PATH": "/usr/local/texlive/2026basic/bin/universal-darwin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
       },
       "args": [
         "-pdf",
