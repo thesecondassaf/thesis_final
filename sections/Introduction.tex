@@ -43,11 +43,6 @@ To prove geometric class field theory for curves,
 we utilize Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ 
 of $U^{(d)}$ via the blowing up of $C^{(d)}$.
 
-% calculated the ramification of $\cF^{[d]}$ directly, in a more elementary way, enabling to show it is at most tame.
-% we combine techniques and ideas from the approaches, and from \cite{tendler2015geometricclassfieldtheory}, to give an elementary proof of the ramified case of Deligne's approach to geometric class field theory.
-% We follow Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ of $U^{(d)}$ by blowing up $C^{(d)}$ and calculate the ramification of $\cF^{[d]}$ along the boundary $H$ of $\tilde{C}^{(d)}_\mdls$ directly, avoiding 
-% the use of Swan conductors. 
-
 We now introduce the notation needed to state geometric class field theory, its standard degree-$d$ reduction, and the ramification theorem proved in this thesis.
 
 Let $k$ be a perfect field, and let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$. 
@@ -73,15 +68,19 @@ The fundamental result of GCFT can be formulated as:
 Let $d$ be a positive integer. 
 We denote by $U^{(d)}$ the $d$-th symmetric power of $U$ over $k$. 
 For an \'etale sheaf $\cF$ on $U_{\text{\'et}}$, we denote by $\cF^{[d]}$ the $d$-th symmetric power of $\cF$ on $U^{(d)}$. 
-The degree $d$ Abel-Jacobi morphism is defined as the map
-$$ \Phi_d : U^{(d)} \to \PicCm[d] $$
-which sends a section $x_1 + \cdots + x_d$ of $U^{(d)}$ to the pair $(\cO(x_1 + \cdots + x_d), 1)$ .
+The degree-$d$ Abel--Jacobi morphism is
+\[
+\Phi_d:U^{(d)}\longrightarrow\PicCm[d],
+\]
+and sends an effective divisor $D=x_1+\cdots+x_d$ on $U$ to the pair
+\[
+\bigl(\cO_C(D),1\bigr).
+\]
 
 The standard symmetric-power descent argument shows that the unique degree-$d$ descents, for all sufficiently large $d$, are compatible with the addition of effective divisors and determine the multiplicative local system appearing in \Cref{thm:GCFT}.
 Consequently, it suffices to prove the following reduced version\footnote{See the last page of \cite{Guignard2018}, 
 Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2019blow} for details on this reduction.}:
 
-%% [REVIEW: restatable machinery unused -- no \GCFT_reduced*/\SymmetricPowerOfSheavesIsTamelyRamifiedReduction* restatement appears anywhere; either restate these in the chapters (avoiding the duplicated near-identical statements) or use plain theorem environments]
 \begin{restatable}{theorem}{GCFT_reduced}\label{thm:GCFT_reduced}
     Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls$. 
     Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) \'etale sheaf of $\Lambda$-modules $\cG_d$ on $\PicCm[d]$, locally free of rank 1, such that the pullback of $\cG_d$ by $\Phi_d$ is isomorphic to $\cF^{[d]}$.
@@ -123,7 +122,7 @@ The thesis is organized as follows:
     \item[Appendix B] \emph{A Failure of an Artin--Schreier Induction Strategy} examines the tempting attempt to deduce the cyclic $p$-power calculation inductively from the degree-$p$ Artin--Schreier case, and explains how wild base change obstructs that argument.
 \end{description}
 
-\noindent \textbf{Acknowledgemets}. First and foremost, I would like to express my sincere gratitude to Professor Yakov Varshavsky for introducing me to this subject, and for his mentoring, invaluable guidance, insightful meetings, and patience throughout this process.
+\noindent \textbf{Acknowledgements}. First and foremost, I would like to express my sincere gratitude to Professor Yakov Varshavsky for introducing me to this subject, and for his mentoring, invaluable guidance, insightful meetings, and patience throughout this process.
 Secondly, I am also deeply grateful to my family for their support throughout my studies, and to my friends who motivated me to complete this work.
 Finally, I would like to express my gratitude to all the individuals without whom this work would not have been possible. This includes colleagues, researchers, as well as the broader global community of individuals whose passion and dedication drive us all forward.
 
