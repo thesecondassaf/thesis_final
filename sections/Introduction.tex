@@ -1,8 +1,15 @@
 In this thesis, we give a direct proof of a key geometric result in Deligne's approach to geometric class field theory.
 We work primarily over a perfect field $k$. Let $C$ be a smooth, projective, geometrically connected curve over $k$, of genus $g$.
-One of the main geometric ingredients in the approach, is showing why a local system $\cF$ with ramification bounded by a modulus $\mdls = \sum n_i P_i$ on $U = C \setminus \mdls$ descends via the Abel-Jacobi $\Phi: U \to \PicCm[]$ to $\PicCm[]$. 
-The approach, innovated by Deligne, relies on analyzing the symmetric powers $\cF^{[d]}$ of $\cF$ on the symmetric powers $U^{(d)}$ of $U$,
-and showing that for sufficiently large $d$, $\cF^{[d]}$ descends to $\PicCm[d]$ via the degree $d$ Abel-Jacobi map $\Phi_d : U^{(d)} \to \PicCm[d]$.
+In the local-system formulation, the central assertion of geometric class field theory is that a rank-one local system $\cF$ on $U=C\setminus\mdls$, whose ramification is bounded by $\mdls=\sum n_iP_i$, descends along the Abel--Jacobi morphism
+\[
+\Phi:U\longrightarrow\PicCm
+\]
+to a multiplicative rank-one local system on $\PicCm$.
+One of the main geometric ingredients in Deligne's approach to this assertion is the analysis of the symmetric powers $\cF^{[d]}$ on $U^{(d)}$, and in particular the proof that, for all sufficiently large $d$, they descend along
+the degree $d$ Abel-Jacobi morphism:
+\[
+\Phi_d:U^{(d)}\longrightarrow\PicCm[d].
+\]
 The geometric-fibers of $\Phi_d$ (for $d \geq \deg \mdls +  2g - 1$) over any point are isomorphic to 
 $$
 \begin{cases}
@@ -72,14 +79,16 @@ The degree-$d$ Abel--Jacobi morphism is
 \[
 \Phi_d:U^{(d)}\longrightarrow\PicCm[d],
 \]
-and sends an effective divisor $D=x_1+\cdots+x_d$ on $U$ to the pair
+sending an effective divisor $D=x_1+\cdots+x_d$ on $U$ to the pair
 \[
 \bigl(\cO_C(D),1\bigr).
 \]
 
-The standard symmetric-power descent argument shows that the unique degree-$d$ descents, for all sufficiently large $d$, are compatible with the addition of effective divisors and determine the multiplicative local system appearing in \Cref{thm:GCFT}.
-Consequently, it suffices to prove the following reduced version\footnote{See the last page of \cite{Guignard2018}, 
-Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2019blow} for details on this reduction.}:
+A standard symmetric-power argument\footnote{See the last page of \cite{Guignard2018}, Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2019blow} for details on this reduction.} reduces \Cref{thm:GCFT} to the following problem: for every sufficiently large $d$, construct a rank-one local system $\cG_d$ on $\PicCm[d]$ whose pullback along $\Phi_d$ is isomorphic to $\cF^{[d]}$.
+In our setting, pullback along $\Phi_d$ is fully faithful, so any such local system is automatically unique up to isomorphism.
+Moreover, the canonical compatibility of the symmetric powers $\cF^{[d]}$ under the addition of effective divisors descends uniquely to the family $\{\cG_d\}$.
+The resulting multiplicative family determines the multiplicative local system on $\PicCm$ appearing in \Cref{thm:GCFT}.
+Consequently, it suffices to prove the following reduced statement:
 
 \begin{restatable}{theorem}{GCFT_reduced}\label{thm:GCFT_reduced}
     Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls$. 
@@ -99,10 +108,7 @@ Section 8.3 of \cite{tendler2015geometricclassfieldtheory}, or the proof of Theo
 % the ramification of $\cP^{[d]}$ after blowing up $C^{(d)}$, we analyze this ramification using elementary methods, drawing techniques and ideas
 % from the works of \cite{Guignard2018} and \cite{takeuchi2019blow}, and \cite{tendler2015geometricclassfieldtheory}.
 
-The main technical input in the proof of \Cref{thm:GCFT_reduced} is the following local ramification theorem.
-Takeuchi obtains the corresponding ramification estimate using refined Swan conductors.
-Our contribution is a different, more elementary proof: Chapter~2 treats a modulus supported at a single point through explicit calculations with cyclic torsors.
-Chapter~3 then follows Takeuchi's geometric descent strategy, reformulated in terms of local systems and torsors rather than characters: it combines these local results to establish tameness along the full boundary $H$, extends $\cF^{[d]}$ across that boundary, and then descends the resulting local system to $\PicCm[d]$.
+The main technical input in the proof of \Cref{thm:GCFT_reduced} is the following local ramification theorem:
 
 \begin{restatable}{theorem}{SymmetricPowerOfSheavesIsTamelyRamifiedReduction}\label{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}
      Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls = \sum n_i P_i$. 
@@ -111,13 +117,16 @@ Chapter~3 then follows Takeuchi's geometric descent strategy, reformulated in te
      of the blowup $X_{\ndls}$ of $C^{(\deg \ndls)}$ at the closed point $\ndls$.
 \end{restatable}
 
+As a final methodological note, for convenience we carry out the ramification calculations in the language of $G$-torsors, with $G=\Lambda^\times$, rather than rank-one local systems.
+By \Cref{prop:torsor_module_equivalence}, the two formulations are equivalent, and the results translate directly between them.
+
 
 The thesis is organized as follows:
 
 \begin{description}
-    \item[Chapter 1 - General Preliminaries] introduces torsors, their relationship with rank-one local systems, the symmetric-power constructions used throughout the thesis, and the basic geometric facts about symmetric powers and blowups needed later. In particular, it explains why the main theorems are stated for local systems while their ramification calculations are carried out using torsors.
-    \item[Chapter 2 - Ramification After Blowup Is Tame] is devoted to the proof of \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}, along with several corollaries used in the proof of \Cref{thm:GCFT_reduced}. The local ramification theory required only for this calculation is recalled at the beginning of the chapter.
-    \item[Chapter 3 - Geometric Class Field Theory] presents the proof of \Cref{thm:GCFT_reduced}.
+    \item[Chapter 1 - General Preliminaries] establishes the equivalence between rank-one local systems and $G=\Lambda^\times$-torsors and develops the torsor operations, finite \'etale covers, and symmetric-power constructions used throughout the thesis. It also collects the basic geometric facts about symmetric powers and blowups needed in the subsequent ramification calculations.
+    \item[Chapter 2 - Ramification After Blowup Is Tame] proves \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}. After recalling the necessary ramification theory for discrete valuations and finite abelian torsors, it reduces the problem to cyclic torsors on $\mathbb P^1$ and treats the Kummer, Artin--Schreier, and Artin--Schreier--Witt cases through explicit calculations at the exceptional divisor.
+    \item[Chapter 3 - Geometric Class Field Theory] deduces \Cref{thm:GCFT_reduced} from the ramification theorem proved in Chapter~2. It recalls the generalized Picard scheme and the Abel--Jacobi morphism, introduces Takeuchi's compactification, and combines the single-point calculations to establish tameness along the full boundary $H$. It then extends $\cF^{[d]}$ across the boundary and descends the resulting local system to $\PicCm[d]$.
     \item[Appendix A] \emph{Cyclic Torsor Theories and Witt Vectors} collects the group-scheme constructions, classification results, normal forms, and proofs supporting the three cyclic ramification theories used in Chapter~2.
     \item[Appendix B] \emph{A Failure of an Artin--Schreier Induction Strategy} examines the tempting attempt to deduce the cyclic $p$-power calculation inductively from the degree-$p$ Artin--Schreier case, and explains how wild base change obstructs that argument.
 \end{description}
@@ -125,6 +134,8 @@ The thesis is organized as follows:
 \noindent \textbf{Acknowledgements}. First and foremost, I would like to express my sincere gratitude to Professor Yakov Varshavsky for introducing me to this subject, and for his mentoring, invaluable guidance, insightful meetings, and patience throughout this process.
 Secondly, I am also deeply grateful to my family for their support throughout my studies, and to my friends who motivated me to complete this work.
 Finally, I would like to express my gratitude to all the individuals without whom this work would not have been possible. This includes colleagues, researchers, as well as the broader global community of individuals whose passion and dedication drive us all forward.
+
+\noindent \textbf{Use of Artificial Intelligence}. In preparing this thesis, I used AI-assisted tools including Codex with GPT-5.6 Sol, Claude Code with Claude Opus 4.8 and Claude Fable, and Google Gemini with Gemini 3.1 Pro. These tools assisted with phrasing, editing, restructuring, drafting portions of the exposition, and formulating mathematical statements and arguments. They also assisted in developing and checking parts of proofs, particularly the Artin--Schreier--Witt calculation for cyclic groups of order $p^r$, as well as several particular cases in Kummer and Artin--Schreier theory that were independently verified by hand. More broadly, these tools supported the organization and completion of the thesis as a whole. Every AI-generated suggestion or draft incorporated into the thesis was fully reviewed and mathematically checked by the author, revised where necessary, and adapted to the notation, presentation, and style of the thesis. No AI-generated material was accepted without human verification, and the author assumes full responsibility for all mathematical and expository content.
 
 
 
