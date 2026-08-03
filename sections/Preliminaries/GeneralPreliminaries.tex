@@ -8,11 +8,9 @@ ramification accessible through extensions of local fields.
 If \(\Lambda\) is a finite commutative ring and \(G=\Lambda^\times\), the sheaf of
 frames of a rank-one \(\Lambda\)-local system is a \(G\)-torsor, and conversely a
 \(G\)-torsor determines an associated rank-one local system. 
-We establish this
-dictionary below and record its compatibility with pullback, tensor products,
-symmetric powers, and ramification. Thus, the main results will be stated in the
-language of local systems, while the constructions and ramification calculations
-will generally be carried out in the language of torsors.
+We record this equivalence once below. Thereafter, the main results are stated in
+the language of local systems, while the geometric and ramification calculations
+are carried out with the corresponding torsors.
 
 \section{Torsors and Rank-One Local Systems}
 % $X$ with etale site, but say things here work for toposes in general and flat sites in general.
@@ -90,7 +88,7 @@ We define the sum $[\mathcal{P}_1] + [\mathcal{P}_2]$ to be the class $[\cP_1 \o
 This structure turns $\mathrm{Tors}(\cE, \mathcal{G})$ into an abelian group, 
 where the identity is the class of the trivial torsor and the inverse is obtained by the opposite action.
 
-We now record the dictionary that explains the role of torsors in this thesis.
+We now record the equivalence used in the thesis.
 Let $\Lambda$ be a commutative ring object of $\mathcal{E}$ and let
 $G=\Lambda^\times$ be its group of units. We write
 $\mathbf{Pic}(\mathcal{E},\Lambda)$ for the groupoid of locally free
@@ -111,7 +109,7 @@ g\cdot(p,\lambda)=(gp,g^{-1}\lambda),
 \]
 where $G$ acts on $\Lambda$ by multiplication.
 
-\begin{prop}[The torsor--local-system dictionary]
+\begin{prop}
 \label{prop:torsor_module_equivalence}
 The functors
 \[
@@ -119,35 +117,46 @@ The functors
 \qquad
 \mathcal{L}\longmapsto\operatorname{Fr}(\mathcal{L})
 \]
-are mutually quasi-inverse symmetric monoidal equivalences
+are mutually quasi-inverse equivalences
 \[
-(\mathbf{Tors}(\mathcal{E},G),\otimes^G,G)
+\mathbf{Tors}(\mathcal{E},G)
 \xrightarrow{\ \sim\ }
-(\mathbf{Pic}(\mathcal{E},\Lambda),\otimes_\Lambda,\Lambda).
+\mathbf{Pic}(\mathcal{E},\Lambda).
 \]
-These equivalences commute with pullback.
 \end{prop}
 
 \begin{proof}
-Both assertions may be checked locally. On a cover on which $\mathcal{P}$ is
-the trivial torsor $G$, the associated module
-$\mathcal{P}\times^G\Lambda$ identifies with $\Lambda$. Conversely, on a
-cover on which $\mathcal{L}$ is free of rank one,
-$\operatorname{Fr}(\mathcal{L})$ identifies with $G$ acting on itself by
-translation. These local identifications are compatible with the descent
-data and give the two quasi-inverse equivalences. Applying the same argument
-to products of local trivializations identifies contracted products with
-tensor products. The construction is defined by fiber products and sheaf
-quotients, and therefore commutes with pullback.
+There are natural morphisms
+\[
+\mathcal{P}\longrightarrow
+\operatorname{Fr}(\mathcal{P}\times^G\Lambda),
+\qquad
+p\longmapsto\bigl(\lambda\longmapsto[p,\lambda]\bigr),
+\]
+and
+\[
+\operatorname{Fr}(\mathcal{L})\times^G\Lambda
+\longrightarrow\mathcal{L},
+\qquad
+[\varphi,\lambda]\longmapsto\varphi(\lambda).
+\]
+After passing to a cover on which $\mathcal{P}$ is the trivial torsor and
+$\mathcal{L}$ is free of rank one, both morphisms become the identity.
+Hence they are isomorphisms.
 \end{proof}
 
 When $\mathcal{E}=\operatorname{Sh}(X_{\text{\'et}})$ and $\Lambda$
 is a finite constant ring, the objects of
 $\mathbf{Pic}(\mathcal{E},\Lambda)$ are precisely the rank-one
-$\Lambda$-local systems on $X$. We retain local-system language in the
-statements of the main theorems and use the equivalent torsor language for
-the geometric constructions and ramification calculations. We will pass
-between the two languages using \Cref{prop:torsor_module_equivalence}.
+$\Lambda$-local systems on $X$. Henceforth, we identify such a local system
+with its $G=\Lambda^\times$-torsor of frames and pass between the two
+descriptions without further comment.\footnote{The equivalence is compatible
+with pullback and with tensor products, hence with the symmetric-power
+constructions used below. These compatibilities may be checked after a local
+trivialization. It also preserves ramification bounds: a rank-one local
+system and its frame torsor determine, on each connected component, the same character
+$\pi_1^{\mathrm{et}}(X,\bar{x})\to\Lambda^\times$, and therefore have the
+same restrictions to inertia and to the upper ramification groups.}
 
 Lastly, for any object $\cX \in \mathcal{E}$, there is a canonical identification between the slice category
 $(\mathcal{G}\mathcal{E})/\cX$ and the category of group objects $\mathcal{G}(\mathcal{E}/\cX)$, where $\cX$ is viewed as having the 
@@ -534,9 +543,12 @@ $\mathcal{P}=\operatorname{Fr}(\mathcal{F})$, we define
 \[
 \mathcal{F}^{[d]}:=\mathcal{P}^{[d]}\times^G\Lambda
 \]
-on $X^{(d)}$. Equivalently, $\mathcal{P}^{[d]}$ is the frame torsor of
-$\mathcal{F}^{[d]}$. By \Cref{prop:symmetric_power_torsor} and the monoidal
-compatibility in \Cref{prop:torsor_module_equivalence}, its pullback along
+on $X^{(d)}$. Thus there is a canonical identification
+\[
+\operatorname{Fr}\bigl(\mathcal{F}^{[d]}\bigr)
+\cong \mathcal{P}^{[d]}.
+\]
+By \Cref{prop:symmetric_power_torsor}, its pullback along
 $r:X^{\times_S d}\to X^{(d)}$ satisfies
 \[
 r^{-1}\mathcal{F}^{[d]}

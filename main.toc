@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {2.4.3}Artin--Schreier--Witt theory: order $p^r$}{31}{subsection.2.4.3}%
 \contentsline {paragraph}{Classes and equations.}{31}{section*.13}%
 \contentsline {subsection}{\numberline {2.4.4}The common realization conclusion}{31}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Three common inputs for the cyclic calculations}{33}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.5}Three common inputs for the cyclic calculations}{32}{subsection.2.4.5}%
 \contentsline {section}{\numberline {2.5}The Cyclic Exceptional--Divisor Calculation and Final Assembly}{34}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Geometric Class Field Theory}{39}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Generalized Picard Schemes and the Abel--Jacobi Map}{40}{section.3.1}%

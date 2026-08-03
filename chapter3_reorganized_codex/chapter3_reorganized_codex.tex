@@ -599,7 +599,8 @@ X_{\mdls}\times_k C^{(d-\deg\mdls)}\longrightarrow X_{\mdls}.
 
 
 By \Cref{lemma:tame_ramification_persists}, replacing $C^{(d - \deg \mdls)}$ with the dense open subscheme $U^{(d - \deg \mdls)} \subset C^{(d - \deg \mdls)}$,
-we get that the $G$-torsor $p_1^{-1} \cP^{[\deg \mdls]}$ ($\cP$ corresponds to $\cF$ under \Cref{prop:torsor_module_equivalence})
+we get that the $G$-torsor $p_1^{-1} \cP^{[\deg \mdls]}$, where
+$\cP=\operatorname{Fr}(\cF)$,
 is tamely ramified at $\theta$ the generic point of
 $E_{\mdls} \times_k U^{(d-\deg \mdls)}$, viewed as a prime divisor of
 $X_{\mdls}\times_k U^{(d-\deg\mdls)}$; the torsor itself is defined on the
@@ -692,8 +693,7 @@ of \Cref{lemma:moduli_reduction} shows that
 $\cP^{[\deg\mdls]}$ is tamely ramified at $\eta_\mdls$. Therefore
 \Cref{cor:tame-ramification-symmetric-product} implies that $\cP^{[d]}$ is
 tamely ramified at the generic point $\eta_0$ of $E_0$ for every
-sufficiently large $d$. By
-\Cref{prop:torsor_module_equivalence,definition:symmetric_power_local_system},
+sufficiently large $d$. The same inertia character governs $\cF^{[d]}$, so
 the same conclusion holds for $\cF^{[d]}$. Since $H$ is the nonempty open
 part of $E_0$ described in
 \Cref{lemma:geometric-generic-fiber-takeuchi}, its generic point is
@@ -869,9 +869,8 @@ The geometric fibers are projective spaces and therefore have trivial
 
 \subsection{The Descent Argument}
 
-We work over $S=\Spec k$, where $k$ is perfect. By
-\Cref{prop:torsor_module_equivalence}, it is equivalent first to prove the
-following torsor formulation.
+We work over $S=\Spec k$, where $k$ is perfect. It is convenient first to
+prove the following torsor formulation.
 
 \begin{theorem}[Torsor formulation]\label{thm:GCFT_torsors}
 Let $G=\Lambda^\times$, and let $\cP$ be a $G$-torsor on $U$ whose
@@ -907,8 +906,8 @@ $\PicC[d]$.
 
 \textbf{Case 2: $\mdls>0$.}
 Let $\cF=\cP\times^G\Lambda$ be the rank-one local system associated with
-$\cP$. By \Cref{definition:symmetric_power_local_system}, the frame torsor
-of $\cF^{[d]}$ is $\cP^{[d]}$. For $d$ sufficiently large,
+$\cP$; its symmetric power has frame torsor $\cP^{[d]}$. For $d$
+sufficiently large,
 \Cref{theorem:takeuchi-compactification-theorem} extends $\Phi_d$ to a
 projective space bundle
 \[
@@ -950,9 +949,10 @@ $\cQ_d$ on $\PicCm[d]$, and let
 \[
 \cG_d=\cQ_d\times^{\Lambda^\times}\Lambda.
 \]
-The equivalence of \Cref{prop:torsor_module_equivalence}, together with the
-compatibility of frame torsors and symmetric powers from
-\Cref{definition:symmetric_power_local_system}, gives
-$\Phi_d^*\cG_d\cong\cF^{[d]}$. The same equivalence carries uniqueness of
-$\cQ_d$ to uniqueness of $\cG_d$.
+The associated-module construction commutes with pullback and carries
+$\cP^{[d]}$ to $\cF^{[d]}$, so
+$\Phi_d^*\cG_d\cong\cF^{[d]}$. If $\cG'_d$ is another such local system,
+then $\operatorname{Fr}(\cG'_d)$ has the defining property of $\cQ_d$.
+The uniqueness of $\cQ_d$, followed by the associated-module construction,
+gives $\cG'_d\cong\cG_d$.
 \end{proof}
