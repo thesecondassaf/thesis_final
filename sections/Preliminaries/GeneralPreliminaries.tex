@@ -450,6 +450,26 @@ Let $X$ and $Y$ be integral schemes over a field $k$. If $X$ is geometrically
 integral, then $X \times_k Y$ is integral. If both $X$ and $Y$ are
 geometrically integral, then $X \times_k Y$ is geometrically integral.
 \end{theorem}
+\begin{proof}
+By \stackstag{038K}, a geometrically integral scheme is both geometrically
+irreducible and geometrically reduced. Since $X$ is geometrically irreducible,
+the projection
+\[
+X\times_k Y\longrightarrow Y
+\]
+induces a bijection on irreducible components by \stackstag{038F}.
+Because $Y$ is integral, it follows that $X\times_k Y$ is irreducible.
+Moreover, $X$ is geometrically reduced and $Y$ is reduced, so
+$X\times_k Y$ is reduced by \stackstag{035Z}. Hence it is integral.
+
+If both $X$ and $Y$ are geometrically integral, the same argument applies
+after every field extension $k'/k$. Thus
+\[
+(X\times_kY)_{k'}\cong X_{k'}\times_{k'}Y_{k'}
+\]
+is integral for every $k'/k$, and therefore $X\times_kY$ is geometrically
+integral.
+\end{proof}
 
 \begin{prop}\label{prop:relative_symmetric_power_smooth}
 Let $f:X\to S$ be a smooth, Zariski-locally quasi-projective morphism of
@@ -472,7 +492,13 @@ $t_i$. By the \textit{Fundamental Theorem of Symmetric Polynomials}, the ring of
 $$\left( k[[t_1, \dots, t_d]] \right)^{S^d} = k[[e_1, \dots, e_d]]$$
 where $e_j$ is the $j$-th elementary symmetric power series in the variables $t_i$.
 
-The ring $k[[e_1, \dots, e_d]]$ is a formal power series ring in $d$ variables. A fundamental theorem in commutative algebra states that a local ring is regular if and only if its completion is a formal power series ring over a field. Since $\hat{\mathcal{O}}_{X^{(d)}, z} \cong k[[e_1, \dots, e_d]]$, the local ring $\mathcal{O}_{X^{(d)}, z}$ is a regular local ring of dimension $d$. This implies that $X^{(d)}$ is smooth over $k$ of dimension $d$, completing the proof.
+The ring $k[[e_1,\ldots,e_d]]$ is a regular local ring of dimension $d$.
+Regularity of a Noetherian local ring is equivalent to regularity of its
+completion by \stackstag{07NY}. Hence
+$\mathcal{O}_{X^{(d)},z}$ is a regular local ring of dimension $d$.
+Since $k$ is algebraically closed and $X^{(d)}$ is locally of finite type
+over $k$, regularity at $z$ is equivalent to smoothness at $z$.
+This completes the proof.
 \end{proof}
 
 \begin{cor}\label{cor:symmetric_power_curve_geometry}
