@@ -64,6 +64,27 @@ The snake lemma applied to the two summation maps gives an exact sequence
 \longrightarrow0.
 \end{equation}
 
+\begin{construction}[The symmetric-power comparison morphism]
+\label{construction:symmetric_power_comparison}
+For the $G$-torsor $\cP\to X$ fixed above, put
+\[
+\Xi_G:=\KG\rtimes S_d.
+\]
+The inclusion $S_d\hookrightarrow\Xi_G$, given by
+$\sigma\mapsto((1,\ldots,1),\sigma)$, induces a canonical comparison
+morphism
+\[
+q_{\cP}:\cP^{(d)}
+=S_d\backslash\cP^{\times_S d}
+\longrightarrow
+\Xi_G\backslash\cP^{\times_S d}
+=\cP^{[d]}.
+\]
+Indeed, the quotient map from $\cP^{\times_S d}$ to its $\Xi_G$-quotient
+is $S_d$-invariant and therefore factors uniquely through the
+$S_d$-quotient.
+\end{construction}
+
 We use the following four quotient schemes:
 \begin{align*}
   \cP^{[d]_G}&:=(\KG\rtimes S_d)\backslash\cP^{\times_S d},\\
@@ -97,14 +118,17 @@ group. The upper square is Cartesian:
 \cP^{[d]_H}\cong
 \cP^{[d]_G}\times_{(\cP/H)^{[d]}}(\cP/H)^{(d)}.
 \]
-The vertical map $q$ is the canonical comparison morphism from the symmetric
-power of $\cP/H$ as a scheme to its symmetric power as a $G/H$-torsor.
+The vertical map $q=q_{\cP/H}$ is the comparison morphism of
+\Cref{construction:symmetric_power_comparison}, applied to the
+$G/H$-torsor $\cP/H\to X$.
 \end{prop}
 
 \begin{proof}
 Apply \Cref{prop:symmetric_power_torsor} to the $G$-torsor $\cP\to X$, the
 $H$-torsor $\cP\to\cP/H$, and the $G/H$-torsor $\cP/H\to X$. This gives the
-three labelled torsors and the comparison map $q$. The factorization
+three labelled torsors; the comparison map $q$ is supplied by
+\Cref{construction:symmetric_power_comparison}, applied to
+$\cP/H\to X$. The factorization
 \[
 \cP^{[d]_G}\longrightarrow(\cP/H)^{[d]}\longrightarrow X^{(d)}
 \]
