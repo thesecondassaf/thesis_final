@@ -640,10 +640,25 @@ arbitrary base change is \cite[Proposition~2.33]{Guignard2018}.
 % COMPATIBILITY WITH ADDITION
 %
 \subsection*{Additivity of Symmetric Powers}
-The construction of symmetric powers is compatible with a natural addition law.
-For any integers $d_1, d_2 \geq 0$, there exists a canonical \textbf{addition morphism}
-\[ +_{d_1, d_2}: X^{(d_1)} \times_S X^{(d_2)} \to X^{(d_1+d_2)} \]
-induced by the equivariant isomorphism $X^{\times_S d_1} \times_S X^{\times_S d_2} \cong X^{\times_S (d_1+d_2)}$ with respect to the inclusion of the product of symmetric groups $S_{d_1} \times S_{d_2} \subseteq S_{d_1+d_2}$.
+For $d\geq 0$, write
+\[
+X_S^d:=\underbrace{X\times_S\cdots\times_S X}_{d\text{ factors}},
+\qquad X_S^0:=S.
+\]
+The construction of symmetric powers is compatible with a natural addition
+law. For any integers $d_1,d_2\geq 0$, concatenating the factors gives a
+canonical isomorphism
+\[
+c_{d_1,d_2}:X_S^{d_1}\times_S X_S^{d_2}
+\xrightarrow{\sim}X_S^{d_1+d_2}.
+\]
+It is equivariant for the inclusion
+$S_{d_1}\times S_{d_2}\hookrightarrow S_{d_1+d_2}$ and therefore induces
+the canonical \textbf{addition morphism}
+\[
++_{d_1,d_2}:X^{(d_1)}\times_S X^{(d_2)}
+\longrightarrow X^{(d_1+d_2)}.
+\]
 
 \begin{prop}\label{prop:symmetric_powers_on_curves}
     Let $\cP$ be a $G$-torsor over $X$. There is a canonical isomorphism of $G$-torsors over $X^{(d_1)} \times_S X^{(d_2)}$:
@@ -655,7 +670,7 @@ induced by the equivariant isomorphism $X^{\times_S d_1} \times_S X^{\times_S d_
 Let $\pi = r_{d_1} \times r_{d_2}$. By the commutativity of the following diagram
 \[
 \begin{tikzcd}
-X^{\times_S d_1} \times_S X^{\times_S d_2} \arrow[r, "\sim"] \arrow[d, "\pi"'] & X^{\times_S (d_1+d_2)} \arrow[d, "r_{d_1+d_2}"] \\
+X_S^{d_1}\times_S X_S^{d_2} \arrow[r, "c_{d_1,d_2}", "\sim"'] \arrow[d, "\pi"'] & X_S^{d_1+d_2} \arrow[d, "r_{d_1+d_2}"] \\
 X^{(d_1)} \times_S X^{(d_2)} \arrow[r, "+_{d_1, d_2}"] & X^{(d_1+d_2)}
 \end{tikzcd}
 \]
