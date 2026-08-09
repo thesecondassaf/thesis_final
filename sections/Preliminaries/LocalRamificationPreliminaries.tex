@@ -32,16 +32,23 @@ Let $A$ be a discrete valuation ring with fraction field $K$. Let $L/K$ be a fin
 as above, we say the extension $L/K$ is
 \begin{enumerate}
     \item unramified with respect to $A$ if $e_ i = 1$ and the extension $\kappa (\mathfrak m_ i)/\kappa _ A$ is separable for all $i$,
-    \item tamely ramified with respect to $A$ if either the characteristic of $\kappa _ A$ is $0$ or the characteristic of $\kappa _ A$ is $p > 0$, the field extensions $\kappa (\mathfrak m_ i)/\kappa _ A$ are separable, and the ramification indices $e_ i$ are prime to $p$, and
+    \item tamely ramified with respect to $A$ if, for every $i$, the residue field extension
+    $\kappa(\mathfrak m_i)/\kappa_A$ is separable and the ramification index $e_i$ is prime to
+    the residue characteristic. Thus, when $\operatorname{char}(\kappa_A)=0$, the condition on
+    $e_i$ is vacuous (and the residue field extensions are automatically separable), whereas when
+    $\operatorname{char}(\kappa_A)=p>0$, each $e_i$ must be prime to $p$, and
     \item totally ramified with respect to $A$ if $n = 1$ and the residue field extension $\kappa (\mathfrak m_1)/\kappa _ A$ is trivial.
 \end{enumerate}
 If the discrete valuation ring $A$ is clear from context, then we sometimes say $L/K$ is unramified, totally ramified, or tamely ramified for short.
 \end{definition}
 
-For the remainder of this section, assume $A$ is a \textit{complete discrete valuation ring} with uniformizer $\pi$ and a perfect residue
-field $\kappa$. In the equal characteristic case, where $\text{char}(A) = \text{char}(\kappa) = p > 0$, the
-Cohen Structure Theorem implies that $A$ contains a coefficient field $k \cong \kappa$, such that $A \cong k[[\pi]] \cong k[[t]]$.
-Consequently, the fraction field is given by $K = k((\pi))$.
+For the remainder of this section, assume that $A$ is a discrete valuation ring of equal characteristic
+$p>0$, complete with respect to its maximal-ideal-adic topology (cf.\ \stackstag{00IE} and
+\stackstag{0324}), with uniformizer $\pi$ and perfect residue field $\kappa$. Thus,
+$\operatorname{char}(A)=\operatorname{char}(\kappa)=p$. The Cohen structure theorem
+(\stackstag{032A}; see also \stackstag{0C0S}) provides a coefficient field $k\subset A$ mapping
+isomorphically onto $\kappa$. Consequently, $A\cong k[[\pi]]\cong k[[t]]$, and its fraction field is
+$K\cong k((\pi))$.
 Let $L/K$ be a finite Galois extension with Galois group $G$.
 The integral closure $B$ of $A$ in $L$ is itself a complete discrete valuation ring.
 Since the residue field $\kappa$ is perfect, the extension of residue fields is separable, and there exists a uniformizer
