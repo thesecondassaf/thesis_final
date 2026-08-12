@@ -6,21 +6,21 @@ and the local ring $\Oo_{X, \xi}$ of $X$ at the generic point $\xi$ of $Z$ is a 
 Setting $K_\xi = \Frac(\Oo_{X, \xi})$ we obtain a cartesian square
 \[ \xymatrix{ \mathop{\mathrm{Spec}}(K_\xi ) \ar[r] \ar[d] & U \ar[d] \\ \mathop{\mathrm{Spec}}(\mathcal{O}_{X, \xi }) \ar[r] & X } \]
 of schemes.
-In particular, we see that $Y \times _ U \mathop{\mathrm{Spec}}(K_\xi )$ is the spectrum of a finite separable algebra $L_\xi /K_\xi $.
+In particular, $Y \times_U \Spec(K_\xi)$ is the spectrum of a finite \'etale
+$K_\xi$-algebra $L_\xi$. Write its canonical decomposition into fields as
+\[
+    L_\xi \cong \prod_{j=1}^r L_{\xi,j},
+\]
+where each $L_{\xi,j}/K_\xi$ is a finite separable field extension.
 \begin{definition}\label{definition:tamely_ramified_in_codim_1}
 We say:
 \begin{enumerate}
     \item $Y$ is \textit{unramified} over $X$ at $(Z, \xi)$ resp. $Y$ is \textit{tamely ramified} over $X$ at $(Z, \xi)$
-        if $L_\xi /K_\xi $ is unramified, resp. tamely ramified with respect to $\mathcal{O}_{X, \xi }$
+        if every field extension $L_{\xi,j}/K_\xi$ is unramified, resp. tamely ramified, with respect to $\mathcal{O}_{X, \xi}$
         (\Cref{definition:tamely_ramified_dvrs})
 
-    \item $Y$ is unramified over $X$ in codimension $1$, resp. $Y$ is tamely ramified over $X$ in codimension $1$ if $L_\xi /K_\xi $ is unramified, resp. tamely ramified
-    with respect to $\mathcal{O}_{X, \xi }$ for every $(Z, \xi )$ as above.
+    \item $Y$ is unramified over $X$ in codimension $1$, resp. $Y$ is tamely ramified over $X$ in codimension $1$, if the preceding condition holds for every $(Z, \xi)$ as above.
 \end{enumerate}
-
-More precisely, we decompose $L_\xi $ into a product of finite separable field extensions of $K_\xi $ and we require each of these to be unramified, resp. tamely ramified with
-respect to $\mathcal{O}_{X, \xi }$.
-
 \end{definition}
 
 Now back to our original assumptions, $C$ is a projective smooth geometrically connected curve
@@ -29,45 +29,132 @@ Assume $f: Y \to U$ is actually a $G$-torsor $\cP \to U$ in $U_{\text{\'Et}}$ fo
 
 By passing to the completion $\widehat{\Oo}_{C,P}$, we obtain the complete local field $\widehat{K}_P$.
 Restricting the torsor $\cP$ to the punctured formal neighborhood $\Spec(\widehat{K}_P)$
- allows us to study the ramification in a strictly local context.
- This restriction yields a $G$-torsor over a field, which necessarily decomposes into a disjoint union of spectra of finite separable field extensions
- $$ \cP|_{\Spec(\widehat{K}_P)} \cong \bigsqcup \Spec(F) $$
- such that:
- \begin{enumerate}
-    \item These extensions $F/\widehat{K}_P$ are all isomorphic and Galois.
-    \item The Galois group $H = \Gal(F/\widehat{K}_P)$ identifies with the stabilizer of any connected component of the pullback $\cP|_{\Spec(\widehat{K}_P)}$,
+allows us to study the ramification in a strictly local context.
+This restriction is a finite \'etale scheme over the field $\widehat{K}_P$ and therefore, by
+\stackstag{02GL}, decomposes into a finite disjoint union of spectra of finite separable field extensions:
+\[
+    \cP|_{\Spec(\widehat{K}_P)} \cong \bigsqcup_{i=1}^N \Spec(F_i).
+\]
+These extensions have the following properties:
+\begin{enumerate}
+    \item The extensions $F_i/\widehat{K}_P$ are mutually isomorphic and Galois. Since
+    $\widehat{K}_P$ is complete, every $F_i$ is complete for the unique extension of the discrete valuation on
+    $\widehat{K}_P$ \cite[Chapter~II, \S 2, Proposition~3]{serreLF}.
+    \item If $F$ denotes any one of the fields $F_i$, then the Galois group
+    $H = \Gal(F/\widehat{K}_P)$ identifies with the stabilizer of the corresponding connected component of the pullback $\cP|_{\Spec(\widehat{K}_P)}$,
      which is a subgroup of $G$.
-    \item  The number of such components is then given by the index $[G:H]$.
- \end{enumerate}
+    \item The number of components is $N=[G:H]$.
+\end{enumerate}
 
- \begin{definition}\label{definition:local_ramification_boundness}
+\begin{definition}\label{definition:local_ramification_boundness}
     We say that the extension $F/\widehat{K}_P$ \textit{has ramification bounded by $r$} if the ramification group $H^r$ is trivial.
+    Here $H^r$ denotes the upper-numbering ramification group of
+    $H=\Gal(F/\widehat{K}_P)$ associated with the extension $F/\widehat{K}_P$; it is not a filtration inherited from the ambient group $G$.
+    This condition is independent of the chosen connected component of
+    $\cP|_{\Spec(\widehat{K}_P)}$.
     We say \textit{$\cP$ has ramification bounded by $r$ at $P$} if the corresponding local field extensions $F/\widehat{K}_P$
     satisfy this condition.
- \end{definition}
+\end{definition}
 
 
-\begin{definition}
+\begin{definition}\label{definition:ramification_bounded_by_modulus_closed_points}
     Let $\mdls = \sum n_i P_i$ be a modulus on $C$. We say the $G$-torsor $\cP \to U$ has
     \textbf{ramification bounded by $\mdls$} if, for each point $P_i$, the local restriction
     $\cP|_{\Spec(\widehat{K}_{P_i})}$ has ramification bounded by the coefficient $n_i$.
 \end{definition}
 
-This local property remains invariant under base change to the separable closure.
-Let $\bar{s} = \Spec(\bar{k}) \to \Spec(k)$
-be a geometric point.
-The higher ramification groups for $\cP|_{\Spec(\widehat{K}_P)}$ are isomorphic to those of
-the geometric restriction $\cP_{\bar{k}}$ at any point $\bar{x}$ lying over $P$.
-Thus an equivalent definition:
-\begin{definition}
+Fix an algebraic closure $\bar{k}$ of $k$ and write
+$\bar{s}=\Spec(\bar{k})\to\Spec(k)$ for the corresponding geometric point.
+
+\begin{definition}[{\cite[Definition~5.2]{Guignard2018}}]\label{definition:ramification_bounded_by_modulus_geometric}
     Let $\mdls = \sum n_i P_i$ be a modulus on $C$.
     The $G$-torsor $\cP \to U$ has \textbf{ramification bounded by $\mdls$}
-    if for every geometric point $\bar{x}$ of $\mdls$ (with image $\bar{s}$ in $\Spec(k)$),
-    the restriction of $\cP$ to$$ \Spec(\widehat{\mathcal{O}}_{C_{\bar{k}},\bar{x}}) \times_{C_{\bar{k}}} U_{\bar{k}} $$
-    has ramification bounded by the multiplicity of $\mdls_{\bar{s}}$ at $\bar{x}$ in the sense of
+    if, for every geometric point $\bar{x}$ of $\mdls$ with image $\bar{s}$ in $\Spec(k)$, the
+    restriction of $\cP_{\bar{k}}$ to the punctured formal neighborhood
+    \[
+        \Spec\bigl(\widehat{\Oo}_{C_{\bar{k}},\bar{x}}\bigr)
+        \times_{C_{\bar{k}}} U_{\bar{k}}
+    \]
+    has ramification bounded by the multiplicity of $\mdls_{\bar{k}}$ at $\bar{x}$ in the sense of
     \Cref{definition:local_ramification_boundness}.
 \end{definition}
-These definitions are equivalent because $\widehat{\mathcal{O}}_{C_{\bar{k}},\bar{x}} \cong \widehat{\mathcal{O}}_{C,P} \otimes_k \bar{k}$. Furthermore, the notions of tame ramification and unramifiedness derived here coincide with the codimension-$1$ criteria in \Cref{definition:tamely_ramified_in_codim_1}.
+
+To compare the two definitions, fix a point $P=P_i$ in the support of $\mdls$, let $\bar{x}$ be a geometric
+point of $C_{\bar{k}}$ lying over $P$, and abbreviate
+$\widehat{K}_{\bar{x}} := \Frac\bigl(\widehat{\Oo}_{C_{\bar{k}},\bar{x}}\bigr)$. Since
+$\widehat{\Oo}_{C_{\bar{k}},\bar{x}}$ is a complete discrete valuation ring whose closed point lies over
+$\bar{x} \notin U_{\bar{k}}$ while its generic point lies over the generic point of $C_{\bar{k}}$, the punctured formal
+neighborhood of \Cref{definition:ramification_bounded_by_modulus_geometric} is
+$\Spec(\widehat{\Oo}_{C_{\bar{k}},\bar{x}}) \times_{C_{\bar{k}}} U_{\bar{k}} \cong \Spec(\widehat{K}_{\bar{x}})$.
+The local restriction of \Cref{definition:ramification_bounded_by_modulus_closed_points} (right-hand column)
+and that of \Cref{definition:ramification_bounded_by_modulus_geometric} (left-hand column) then fit into a
+single commutative diagram
+\[
+\begin{tikzcd}[column sep=2.9em, row sep=3.2em]
+\cP_{\bar{k}}\big|_{\Spec(\widehat{K}_{\bar{x}})}
+    \ar[r] \ar[d]
+    \ar[dr, phantom, "\lrcorner", very near start]
+& \cP_{\bar{k}}
+    \ar[r] \ar[d]
+    \ar[dr, phantom, "\lrcorner", very near start]
+& \cP \ar[d]
+& \cP\big|_{\Spec(\widehat{K}_{P})}
+    \ar[l] \ar[d]
+    \ar[dl, phantom, "\llcorner", very near start]
+\\
+\Spec\bigl(\widehat{K}_{\bar{x}}\bigr)
+    \ar[r]
+    \ar[rrr, bend right=15, "\text{unramified}"{below}]
+& U_{\bar{k}}
+    \ar[r]
+& U
+& \Spec\bigl(\widehat{K}_{P}\bigr)
+    \ar[l]
+\end{tikzcd}
+\]
+in which every square is cartesian. Since cartesian squares compose, the outer rectangle exhibits
+\begin{equation}\label{eq:geometric_restriction_is_base_change}
+    \cP_{\bar{k}}\big|_{\Spec(\widehat{K}_{\bar{x}})}
+    \cong
+    \cP\big|_{\Spec(\widehat{K}_{P})}
+    \times_{\Spec(\widehat{K}_{P})} \Spec\bigl(\widehat{K}_{\bar{x}}\bigr),
+\end{equation}
+i.e.\ the geometric restriction is the base change of the closed-point restriction along the bottom bent
+arrow, which is an unramified extension of complete discretely valued fields. This is the content of the
+following proposition.
+
+\begin{prop}\label{prop:equivalence_ramification_bounded_by_modulus}
+The closed-point formulation in
+\Cref{definition:ramification_bounded_by_modulus_closed_points} and the geometric formulation in
+\Cref{definition:ramification_bounded_by_modulus_geometric} are equivalent.
+\end{prop}
+
+\begin{proof}
+Let $P=P_i$, let $\bar{x}$ lie over $P$, and choose a uniformizer $t$ at $P$.
+Because $k$ is perfect, the base change $C_{\bar{k}}\to C$ is ind-\'etale, so the pullback of $t$
+is again a uniformizer at $\bar{x}$. Since $C_{\bar{k}}$ is a smooth curve over the algebraically
+closed field $\bar{k}$, it follows that
+$\widehat{\Oo}_{C_{\bar{k}},\bar{x}}\cong\bar{k}[[t]]$. Thus
+\[
+    \widehat{K}_P\cong\kappa(P)((t))
+    \longrightarrow
+    \widehat{K}_{\bar{x}}\cong\bar{k}((t))
+\]
+is unramified, as claimed in the diagram.
+
+By \Cref{eq:geometric_restriction_is_base_change}, the geometric restriction is obtained from the
+closed-point restriction by this unramified base change. Ramification bounds are unchanged under
+unramified extensions of complete discretely valued fields, so the two restrictions have the same
+ramification bound.
+
+Finally, as $\kappa(P)/k$ is separable the fiber of $P_i$ in $C_{\bar{k}}$ is reduced, so
+$\mdls_{\bar{k}}$ has multiplicity $n_i$ at every $\bar{x}$ above $P_i$. Thus the geometric
+condition at $\bar{x}$ is precisely the closed-point condition at $P_i$.
+\end{proof}
+
+Furthermore,
+the notions of tame ramification and unramifiedness derived here coincide with the codimension-$1$
+criteria in \Cref{definition:tamely_ramified_in_codim_1}.
 
 There is another equivalent formulation through the language of characters.
 The group $G$, being a finite abelian group over $k$, is \'etale.
