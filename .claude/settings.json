@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdfinfo main.pdf)",
+      "Bash(pdftotext -f 25 -l 30 main.pdf -)",
+      "Bash(rg -n 'Lemma 4[3-6]|^2[5-9]$')"
+    ]
+  }
+}
