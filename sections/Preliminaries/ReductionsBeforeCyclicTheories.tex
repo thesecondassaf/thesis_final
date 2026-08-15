@@ -104,11 +104,12 @@ Throughout this section we assume that $k$ is algebraically closed; in particula
         Since $E_\ndls \cong \bP^{\deg \ndls - 1}_k$ is geometrically irreducible, $(E_\ndls)_{\bar{k}}$ is irreducible
         and its generic point $\bar{\eta}$ lies over $\eta_\ndls$; moreover
         $\Oo_{X_\ndls, \eta_\ndls} \to \Oo_{(X_\ndls)_{\bar{k}}, \bar{\eta}}$ is a weakly unramified extension of discrete
-        valuation rings with separable residue field extension. The proof of \Cref{lemma:descend_ramification_along_etale}
-        uses only these two properties of the extension (there the extension was moreover finite étale), so it applies
-        verbatim: the ramification of $(\cP_{\bar{k}})^{[d]} = (\cP^{[d]})_{\bar{k}}$ at $\bar{\eta}$ is bounded by $r$ if
-        and only if the ramification of $\cP^{[d]}$ at $\eta_\ndls$ is. Hence unramifiedness and tameness at $\eta_\ndls$
-        may be checked after base change to $\bar{k}$.
+        valuation rings with separable residue field extension. Therefore, by
+        \Cref{lemma:weakly_unramified_base_change},
+        $(\cP_{\bar{k}})^{[d]}=(\cP^{[d]})_{\bar{k}}$ is unramified
+        (resp.\ tamely ramified) at $\bar{\eta}$ if and only if
+        $\cP^{[d]}$ is unramified (resp.\ tamely ramified) at $\eta_\ndls$.
+        Thus both properties may be checked after base change to $\bar{k}$.
         \item \textbf{(Rationality of $P$ --- a caveat.)} If $P$ is a closed point with $\kappa(P) \neq k$, then after base
         change to $\bar{k}$ the point $Z_{\ndls}$ corresponds to the divisor $\sum_{\bar{P} \mapsto P} n \bar{P}$ on
         $C_{\bar{k}}$, whose support consists of $[\kappa(P):k]$ distinct points, whereas the computation below treats a

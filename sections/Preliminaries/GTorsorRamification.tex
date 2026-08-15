@@ -177,78 +177,140 @@ We now prove some elementary lemmas regarding the ramification of $G$-torsors.
 \begin{lemma}\label{lemma:bounding_ramification_of_contracted_product}
     Let $G$ be a finite abelian group and $X$ be a locally Noetherian scheme over a field $k$.
     Let $U \subset X$ be a dense open subset and let $(Z, \xi)$ be a prime divisor in the complement $X \setminus U$.
-    Assume $\cP_1$ and $\cP_2$ are two $G$-torsors on $U_{\text{ét}}$, such that $\cP_1$ has ramification bounded by $r_1$ at $(Z, \xi)$, and $\cP_2$ has ramification bounded by $r_2$ at $(Z, \xi)$.
-    Then their product $\cP_1 \otimes^G \cP_2$ has ramification bounded by $\max(r_1, r_2)$ at $(Z, \xi)$.
+    If $\cP_1$ and $\cP_2$ are two $G$-torsors on $U_{\text{ét}}$ that are tamely ramified at $(Z, \xi)$, then their product
+    $\cP_1 \otimes^G \cP_2$ is tamely ramified at $(Z, \xi)$.
 \end{lemma}
 \begin{proof}
-    Let $A=\widehat{\Oo_{X, \xi}}$ and let $K=\Frac(A)$.
-    Let $\rho_1, \rho_2: G_K \to G$ be the associated continuous homomorphisms corresponding to the $G$-torsors
-    $\cP_1|_{\Spec(K)}$, $\cP_2|_{\Spec(K)}$.
-    We finish by noticing that the associated character of $(\cP_1 \otimes^G \cP_2)|_{\Spec(K)}$ is $\rho=\rho_1 + \rho_2$.
+    Let $A=\Oo_{X,\xi}$ and $K=\Frac(A)$. Tameness may be checked after
+    completing $A$, so we may assume that $K$ is complete. For $i=1,2$, let
+    $L_{i,j}/K$ be the field factors of
+    \[
+        \cP_i\times_U\Spec(K).
+    \]
+    These extensions are tame by assumption. Let $M/K$ be a finite Galois
+    extension containing the Galois closures of all the $L_{i,j}/K$. Finite
+    tame extensions of a complete discretely valued field are closed under
+    Galois closure and finite compositum, so $M/K$ is tame.
+
+    Both $\cP_1$ and $\cP_2$ become trivial over $M$. Hence their contracted
+    product also becomes trivial over $M$. Consequently, every field factor of
+    \[
+        (\cP_1\otimes^G\cP_2)\times_U\Spec(K)
+    \]
+    is isomorphic to an intermediate extension of $M/K$: indeed, after tensoring
+    such a factor with $M$, one obtains a product having $M$ as a factor, and
+    hence a $K$-embedding of that field factor into $M$. Since subextensions of
+    a finite tame extension are tame, every field factor is tame. The result
+    follows from \Cref{definition:tamely_ramified_in_codim_1}.
 \end{proof}
 
-\begin{lemma}\label{lemma:descend_ramification_along_etale}
-
-Let $f: X \to Y$ be a morphism of locally Noetherian schemes. Let $U_X \subset X$ and $U_Y \subset Y$ be dense open subschemes such that $f^{-1}(U_Y) \subset U_X$.
-
-Let $(Z_X, \xi_X)$ and $(Z_Y, \xi_Y)$ be prime divisors of $X$ and $Y$ such that $Z_X \cap U_X = \emptyset$ and $Z_Y \cap U_Y = \emptyset$.
-Suppose $f(\xi_X) = \xi_Y$ and that $f$ is étale at $\xi_X$.
-Let $\mathcal{P}$ be a $G$-torsor over $U_Y$, and let $f^{-1} \mathcal{P}$ be its pullback to $f^{-1}(U_Y) \subset U_X$.
-Then, the ramification of $f^{-1} \mathcal{P}$ at $\xi_X$ is bounded by $r$ if and only if the ramification of $\mathcal{P}$ at $\xi_Y$ is bounded by $r$.
+\begin{lemma}\label{lemma:weakly_unramified_base_change}%
+\label{lemma:descend_ramification_along_etale}
+Let $A\to B$ be a local extension of discrete valuation rings. Assume that
+$B/A$ is weakly unramified and that the residue-field extension
+$\kappa_B/\kappa_A$ is separable. Write $K=\Frac(A)$ and $L=\Frac(B)$.
+Let $\cP$ be a finite $G$-torsor over $\Spec(K)$, and put
+\[
+    \cP_L:=\cP\times_{\Spec(K)}\Spec(L).
+\]
+Then $\cP$ is unramified with respect to $A$ if and only if $\cP_L$ is
+unramified with respect to $B$. Likewise, $\cP$ is tamely ramified with
+respect to $A$ if and only if $\cP_L$ is tamely ramified with respect to $B$.
 \end{lemma}
 \begin{proof}
-The boundedness of ramification is determined by the behavior of the torsor over the completion of the local rings at the generic points.
-Let $A = \mathcal{O}_{Y, \xi}$ and $B = \mathcal{O}_{X, \xi_X}$ be the discrete valuation rings at the generic points, with fraction fields
-$K$ and $L$ respectively. Since $f$ is étale at $\xi_X$, the map $A \to B$ is a flat, unramified (hence weakly unramified) local homomorphism.
-Consequently, the extension of completions $\widehat{L} / \widehat{K}$ is a finite unramified extension of complete discretely valued fields.
-We finish by noticing that the upper numbering filtration on the absolute Galois group is compatible with unramified base change.\footnote{
- Specifically, let $G_K = \operatorname{Gal}(K^{sep}/K)$ and $G_L = \operatorname{Gal}(L^{sep}/L)$. For an unramified extension, the Herbrand function is the identity, which implies that for any $r \geq 0$:
-\[ G_L^r = G_K^r \cap G_L \]}
+Write the finite étale $K$-algebra underlying $\cP$ as
+\[
+    \prod_i E_i,
+\]
+where every $E_i/K$ is finite separable. For every $i$, write
+\[
+    E_i\otimes_K L\cong\prod_j F_{i,j}
+\]
+as a product of finite separable extensions of $L$. The standard base-change
+properties of extensions of discrete valuation rings give, for every $i$ and
+$j$,
+\[
+    e(F_{i,j}/L)=e(E_i/K),
+\]
+and show that $\kappa_{F_{i,j}}/\kappa_L$ is separable if and only if
+$\kappa_{E_i}/\kappa_K$ is separable.
+
+The two assertions now follow immediately from
+\Cref{definition:tamely_ramified_dvrs}: unramifiedness means residue
+separability and ramification index $1$, while tameness means residue
+separability and ramification index prime to the residue characteristic.
 \end{proof}
 
-% --- NEW (not in the current chapter): two further stability lemmas, needed
-%     for the assembly of the general abelian case in 2.5.4. Their proofs are
-%     character computations in the style of the two lemmas above. ---
+\begin{cor*}[Étale form of
+\Cref{lemma:weakly_unramified_base_change}]
+Let $f:X\to Y$ be a morphism of locally Noetherian schemes. Let
+$U_X\subset X$ and $U_Y\subset Y$ be dense open subschemes such that
+$f^{-1}(U_Y)\subset U_X$. Let $(Z_X,\xi_X)$ and $(Z_Y,\xi_Y)$ be prime
+divisors contained in $X\setminus U_X$ and $Y\setminus U_Y$, respectively,
+and suppose that $f(\xi_X)=\xi_Y$. Assume that
+$\Oo_{X,\xi_X}$ and $\Oo_{Y,\xi_Y}$ are discrete valuation rings and that
+$f$ is étale at $\xi_X$. If $\cP$ is a finite $G$-torsor over $U_Y$, then
+$f^{-1}\cP$ is unramified (resp.\ tamely ramified) at $\xi_X$ if and only if
+$\cP$ is unramified (resp.\ tamely ramified) at $\xi_Y$.
+\end{cor*}
+\begin{proof}
+Set $A=\Oo_{Y,\xi_Y}$ and $B=\Oo_{X,\xi_X}$. Since $f$ is étale at
+$\xi_X$, the induced local homomorphism $A\to B$ is étale. In particular,
+$\mathfrak m_A B=\mathfrak m_B$, so $B/A$ is weakly unramified, and the
+residue-field extension $\kappa(\xi_X)/\kappa(\xi_Y)$ is finite separable.
+The restriction of $f^{-1}\cP$ to $\Spec(\Frac(B))$ is the base change of
+the restriction of $\cP$ to $\Spec(\Frac(A))$. The two equivalences now
+follow from \Cref{lemma:weakly_unramified_base_change}.
+\end{proof}
 
 \begin{lemma}\label{lemma:ramification_of_fiber_product}
-    Let $G_1, G_2$ be finite abelian groups and let $X, U, (Z, \xi)$ be as in
-    \Cref{lemma:bounding_ramification_of_contracted_product}. Let $\cP_1$ be a
-    $G_1$-torsor and $\cP_2$ a $G_2$-torsor on $U_{\text{ét}}$, and consider the fiber
-    product $\cP_1 \times_U \cP_2$, which is a $(G_1 \times G_2)$-torsor on
-    $U_{\text{ét}}$. If $\cP_i$ has ramification bounded by $r_i$ at $(Z, \xi)$ for
-    $i = 1, 2$, then $\cP_1 \times_U \cP_2$ has ramification bounded by
-    $\max(r_1, r_2)$ at $(Z, \xi)$. Moreover, $\cP_1 \times_U \cP_2$ is tamely
-    ramified (resp.\ unramified) at $(Z, \xi)$ if and only if both $\cP_1$ and
-    $\cP_2$ are.
+    Let $G_1,G_2$ be finite abelian groups. Let $X$ be a locally Noetherian
+    scheme over a field $k$, let $U\subset X$ be a dense open subscheme, and
+    let $(Z,\xi)$ be a prime divisor in $X\setminus U$. For $i=1,2$, let
+    $\cP_i$ be a $G_i$-torsor on $U_{\mathrm{\acute et}}$. If both $\cP_1$ and
+    $\cP_2$ are tamely ramified at $(Z,\xi)$, then the
+    $(G_1\times G_2)$-torsor $\cP_1\times_U\cP_2$ is tamely ramified at
+    $(Z,\xi)$.
 \end{lemma}
 \begin{proof}
-    Let $A=\widehat{\Oo_{X, \xi}}$, $K=\Frac(A)$, and let
-    $\rho_i: G_K \to G_i$ be the characters of $\cP_i|_{\Spec(K)}$. The
-    character of $(\cP_1 \times_U \cP_2)|_{\Spec(K)}$ is
-    $\rho = (\rho_1, \rho_2) : G_K \to G_1 \times G_2$, since torsors under a
-    product group correspond to pairs of characters,
-    $H^1(K, G_1 \times G_2) = H^1(K, G_1) \times H^1(K, G_2)$, compatibly with
-    the projections. Now for any closed subgroup $N \subset G_K$ (we take the
-    upper-numbering group $G_K^r$, resp.\ the wild inertia subgroup, resp.\ the
-    inertia subgroup) we have $\rho(N) = \{1\}$ if and only if
-    $\rho_1(N) = \{1\}$ and $\rho_2(N) = \{1\}$.
+    Let $A=\Oo_{X,\xi}$ and $K=\Frac(A)$. Tameness may be checked after
+    completing $A$, so we may assume that $K$ is complete. As in the proof of
+    \Cref{lemma:bounding_ramification_of_contracted_product}, there exists a
+    finite tame Galois extension $M/K$ that splits both $\cP_1$ and $\cP_2$.
+    Their fiber product is therefore split over $M$. Consequently, every field
+    factor of
+    \[
+        (\cP_1\times_U\cP_2)\times_U\Spec(K)
+    \]
+    embeds into $M$. Since subextensions of a finite tame extension are tame,
+    every such field factor is tame. The result follows from
+    \Cref{definition:tamely_ramified_in_codim_1}.
 \end{proof}
 
 \begin{lemma}\label{lemma:ramification_of_induced_torsor}
-    Let $\iota : H \hookrightarrow G$ be an injective homomorphism of finite abelian
-    groups, let $X, U, (Z, \xi)$ be as above, let $\cQ$ be an $H$-torsor on
-    $U_{\text{ét}}$, and let $\iota_* \cQ := (\cQ \times G)/H$ be the induced
-    $G$-torsor (where $H$ acts by $h \cdot (q, g) = (qh,\ \iota(h)^{-1}g)$).
-    Then $\iota_* \cQ$ has ramification bounded by $r$ at $(Z, \xi)$ if and only if
-    $\cQ$ does; likewise for tame ramification and for unramifiedness.
+    Let $A$ be a discrete valuation ring with fraction field $K$, let
+    $\iota:H\hookrightarrow G$ be an injective homomorphism of finite abelian
+    groups, and let $\cQ$ be an $H$-torsor over $\Spec(K)$. Let
+    \[
+        \iota_*\cQ:=(\cQ\times G)/H
+    \]
+    be the induced $G$-torsor, where
+    $h\cdot(q,g)=(qh,\iota(h)^{-1}g)$. Then, as a $K$-scheme,
+    $\iota_*\cQ$ is noncanonically isomorphic to a disjoint union of $[G:H]$
+    copies of $\cQ$. Consequently:
+    \begin{enumerate}
+        \item $\iota_*\cQ$ is tamely ramified with respect to $A$ if and only
+        if $\cQ$ is;
+        \item $\iota_*\cQ$ is unramified with respect to $A$ if and only if
+        $\cQ$ is;
+        \item if $A$ is complete and its residue field is perfect, then, for
+        every $r$, $\iota_*\cQ$ has ramification bounded by $r$ if and only if
+        $\cQ$ does.
+    \end{enumerate}
 \end{lemma}
 \begin{proof}
-    Let $A=\widehat{\Oo_{X, \xi}}$, $K=\Frac(A)$, and let $\chi: G_K \to H$ be the
-    character of $\cQ|_{\Spec(K)}$; the character of $(\iota_*\cQ)|_{\Spec(K)}$ is
-    $\iota \circ \chi$. Since $\iota$ is injective, $\iota \circ \chi$ and $\chi$
-    have the same kernel, so for any closed subgroup $N \subset G_K$ we have
-    $(\iota \circ \chi)(N) = \{1\}$ if and only if $\chi(N) = \{1\}$.
-    (Concretely: the connected components of the two torsors over $\Spec(K)$ are
-    spectra of the \emph{same} field extension $F/K$, the fixed field of
-    $\ker \chi$; the induced torsor merely has $[G : H]$ times as many components.)
+    As a $K$-scheme, $\iota_*\cQ$ is noncanonically isomorphic to a disjoint
+    union of $[G:H]$ copies of $\cQ$. Thus it has the same field factors as
+    $\cQ$, each repeated $[G:H]$ times, and the assertions follow immediately
+    from the definitions.
 \end{proof}

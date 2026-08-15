@@ -39,7 +39,9 @@ symmetric power are trivial, so the conclusion follows from
 Assume $H\neq0$. The surjective character with image $H$ defines a connected
 $H$-torsor $\cQ$ over $\Spec k((x))$, and
 $\cP_x\cong\iota_*\cQ$ for the inclusion $\iota:H\hookrightarrow G$.
-Whenever a ramification bound is assumed, it passes from $\cP_x$ to $\cQ$.
+Since $k[[x]]$ is complete with perfect residue field, whenever a
+ramification bound is assumed, it passes from $\cP_x$ to $\cQ$ by
+\Cref{lemma:ramification_of_induced_torsor}(3).
 By
 \Cref{lemma:realization_over_Gm}, the torsor $\cQ$ is realized by an explicit
 connected $H$-torsor $\cQ'$ on $\bG_m$. Moreover,
@@ -47,8 +49,10 @@ connected $H$-torsor $\cQ'$ on $\bG_m$. Moreover,
     (\iota_*\cQ')^{[d]}
        \cong\iota_*(\cQ'^{[d]})
 \]
-by \Cref{lemma:symmetric_power_induced_torsor}, and induction preserves the
-ramification bound by \Cref{lemma:ramification_of_induced_torsor}. Therefore
+by \Cref{lemma:symmetric_power_induced_torsor}, and parts~(1) and~(2) of
+\Cref{lemma:ramification_of_induced_torsor} show that the corresponding tame
+or unramified conclusion passes from $\cQ'^{[d]}$ to
+$\iota_*(\cQ'^{[d]})$. Therefore
 \Cref{cor:reduction_to_P1} reduces every case to the connected explicit model
 \[
     C=\bP^1_k,\qquad U=\bG_m,\qquad \ndls=d\cdot0.

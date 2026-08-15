@@ -342,16 +342,16 @@ $\pi_X: \Bl_x(X) \to X$ and $\pi_Y: \Bl_y(Y) \to Y$. Furthermore, let $\pi_{X \t
 be the blowup of the product scheme at the point $(x,y)$.
 We denote by $E_X, E_Y$, and $E_{X \times Y}$ the respective exceptional divisors, and let $\eta_X, \eta_Y$, and $\eta_{X \times Y}$ be their generic points.
 
-In this section, we establish the following result concerning the stability of ramification bounds under the external product of torsors.
+In this section, we establish the following result concerning the stability of tame ramification under the external product of torsors.
 
 \begin{prop}\label{prop:ramification-external-product}
 Let $G$ be a finite abelian group. Suppose $\cG_X$ and $\cG_Y$ are $G$-torsors defined on open subsets $U_X \subset \Bl_x(X)$ and $U_Y \subset \Bl_y(Y)$ that are disjoint
 from the exceptional divisors.
-If the ramification of $\cG_X$ at $\eta_X$ and $\cG_Y$ at $\eta_Y$ is bounded by $r$, then the external product torsors
+If $\cG_X$ is tamely ramified at $\eta_X$ and $\cG_Y$ is tamely ramified at $\eta_Y$, then the external product torsor
 \[
 \cG_{X \times Y} := \text{pr}_1^{-1} \cG_X \otimes \text{pr}_2^{-1} \cG_Y
 \]
-have ramification bounded by $r$ at the generic point $\eta_{X\times Y}$ of the exceptional divisor in the product blowup.
+is tamely ramified at the generic point $\eta_{X\times Y}$ of the exceptional divisor in the product blowup.
 \end{prop}
 
 \begin{proof}
@@ -493,12 +493,13 @@ separable.
 
 \subsubsection*{Ramification of $G$-Torsors}
 The extensions $R_X\to S$ and $R_Y\to S$ are weakly unramified and have
-separable residue-field extensions. Hence the pullbacks of $\cG_X$ and
-$\cG_Y$ to $\operatorname{Frac}(S)$ both have ramification bounded by $r$.
+separable residue-field extensions. Hence
+\Cref{lemma:weakly_unramified_base_change} shows that the pullbacks of
+$\cG_X$ and $\cG_Y$ to $\operatorname{Frac}(S)$ are tamely ramified.
 Their contracted product is the restriction of $\cG_{X\times Y}$ to
-$\operatorname{Frac}(S)$, so
-\Cref{lemma:bounding_ramification_of_contracted_product} gives the same bound
-for $\cG_{X\times Y}$ at $\eta_{X\times Y}$.
+$\operatorname{Frac}(S)$. Therefore
+\Cref{lemma:bounding_ramification_of_contracted_product} shows that
+$\cG_{X\times Y}$ is tamely ramified at $\eta_{X\times Y}$.
 \end{proof}
 
 \begin{lemma}\label{lemma:moduli_reduction}
