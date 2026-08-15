@@ -147,9 +147,12 @@ The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\si
         \item There is a canonical isomorphism of $G$-torsors over $V$
         $$ \cP^{[d]} \times_{U^{(d)}} V \;\cong\; \Xi \backslash \left( q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x \right).$$
     \end{enumerate}
-    Consequently, the $G$-torsor $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_\ndls})}$ --- and hence whether the ramification of
-    $\cP^{[d]}$ at $\eta_\ndls$ is bounded by $r$ (resp.\ tame, resp.\ unramified) --- depends only on $d$ and on the
-    isomorphism class of the $G$-torsor $\cP_x$ over $k((x))$, and not otherwise on the pair $(C, \cP)$.
+    Consequently, the isomorphism class of the $G$-torsor
+    $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_\ndls})}$ depends only on $d$ and on
+    the isomorphism class of the $G$-torsor $\cP_x$ over $k((x))$, and not
+    otherwise on the pair $(C,\cP)$. In particular, whether $\cP^{[d]}$ is
+    tamely ramified or unramified at $\eta_\ndls$ depends only on
+    $(\cP_x,d)$.
 \end{lemma}
 
 \begin{proof}
@@ -223,10 +226,11 @@ The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\si
     For the final statement: the schemes $V$ and $W$, the maps $q_i$ and $\hat{r}$, the $\Xi$-action, and the point
     $\Spec(\kappa((e_d))) \to V$ of (2) are all constructed from $d$ alone; by (3), the torsor
     $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_\ndls})}$ is the pullback along $\Spec(\kappa((e_d))) \to V$ of a torsor constructed
-    from $\cP_x$ and these data. Since the ramification at $\eta_\ndls$ is by definition read off from
-    $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_\ndls})}$ together with the discrete valuation ring $\kappa[[e_d]]$
-    (\Cref{definition:tamely_ramified_in_codim_1}, \Cref{definition:local_ramification_boundness}), it depends only on
-    $(\cP_x, d)$.
+    from $\cP_x$ and these data. Since tame ramification and unramifiedness at
+    $\eta_\ndls$ are, by definition, determined by this restricted torsor
+    together with the discrete valuation ring $\kappa[[e_d]]$
+    (\Cref{definition:tamely_ramified_in_codim_1}), both properties depend only
+    on $(\cP_x,d)$.
 \end{proof}
 
 \begin{cor}[Reduction to $\bP^1$]\label{cor:reduction_to_P1}
@@ -235,9 +239,9 @@ The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\si
     $P \in \mathrm{Supp}(\mdls)(k)$ and $P' \in \mathrm{Supp}(\mdls')(k)$, and let $x, x'$ be uniformizers at $P, P'$
     respectively. Assume that $\cP_x \cong \cP'_{x'}$ as $G$-torsors, compatibly with the isomorphism
     $k((x)) \cong k((x'))$, $x \mapsto x'$.
-    Then for every $d \geq 1$ and every $r$, the ramification of $\cP^{[d]}$ at $\eta_{dP}$ is bounded by $r$ if and only if
-    the ramification of $\cP'^{[d]}$ at $\eta_{dP'}$ is; in particular, the one is unramified (resp.\ tamely ramified) at
-    $\eta_{dP}$ if and only if the other is at $\eta_{dP'}$.
+    Then, for every $d\geq1$, $\cP^{[d]}$ is unramified
+    (resp.\ tamely ramified) at $\eta_{dP}$ if and only if
+    $\cP'^{[d]}$ is unramified (resp.\ tamely ramified) at $\eta_{dP'}$.
 \end{cor}
 \begin{proof}
     Immediate from \Cref{lemma:formal_local_invariance}: both $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_{dP}})}$ and
