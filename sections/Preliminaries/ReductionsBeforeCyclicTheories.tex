@@ -113,10 +113,17 @@ Throughout this section we assume that $k$ is algebraically closed; in particula
         \item \textbf{(Rationality of $P$ --- a caveat.)} If $P$ is a closed point with $\kappa(P) \neq k$, then after base
         change to $\bar{k}$ the point $Z_{\ndls}$ corresponds to the divisor $\sum_{\bar{P} \mapsto P} n \bar{P}$ on
         $C_{\bar{k}}$, whose support consists of $[\kappa(P):k]$ distinct points, whereas the computation below treats a
-        modulus supported at a single rational point. We therefore prove \Cref{theorem:torsors_after_blowup_is_tame} under
-        the standing assumption that $k$ is algebraically closed; this suffices for our purposes, since in the proof of
-        \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified} the field is assumed algebraically closed before the present
-        theorem is invoked.
+        modulus supported at a single rational point.
+        {\color{red}
+        We therefore prove \Cref{theorem:torsors_after_blowup_is_tame} only
+        under the standing assumption that $k$ is algebraically closed. This
+        is the version used later: at the beginning of the proof of
+        \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}, all data are
+        first base changed to $\bar{k}$. The modulus then decomposes into its
+        rational-point-supported summands; the present theorem is applied to
+        each summand, and \Cref{lemma:moduli_reduction} combines them before
+        tameness is descended back to $k$.
+        }
     \end{enumerate}
 \end{rem*}
 
@@ -132,6 +139,17 @@ The inclusion $k[[e_1, \dots, e_d]] \subset k[[x_1, \dots, x_d]]$ induces a fini
 (note that inverting $e_d = x_1 \cdots x_d$ inverts each $x_i$), and for each $i$ we let
 $$ q_i : W \to \Spec(k((x))), \qquad x \mapsto x_i.$$
 The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\sigma(i)} = q_i \circ \sigma$.
+Recall from \Cref{prop:symmetric_power_semidirect_quotient} that
+\[
+K_G:=\ker\bigl(G^d\xrightarrow{\,m\,}G\bigr),
+\qquad
+\Xi_G:=K_G\rtimes S_d,
+\]
+where $m(g_1,\dots,g_d)=g_1\cdots g_d$ and $S_d$ acts on $K_G$ by
+permuting coordinates. Thus quotienting by $\Xi_G$ means first contracting
+the $G^d$-torsor along multiplication, by quotienting by $K_G$, and then
+descending from the ordered product to the symmetric product by quotienting
+by $S_d$.
 
 \begin{lemma}[Formal--local invariance]\label{lemma:formal_local_invariance}
     In the above notation:
@@ -145,7 +163,7 @@ The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\si
         morphism $\Spec(\widehat{K}_{\eta_\ndls}) \to U^{(d)}$ factors as
         $\Spec(\kappa((e_d))) \to V \xrightarrow{c_V} U^{(d)}$, where the first map does not depend on $(C, \cP)$.
         \item There is a canonical isomorphism of $G$-torsors over $V$
-        $$ \cP^{[d]} \times_{U^{(d)}} V \;\cong\; \Xi \backslash \left( q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x \right).$$
+        $$ \cP^{[d]} \times_{U^{(d)}} V \;\cong\; \Xi_G \backslash \left( q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x \right).$$
     \end{enumerate}
     Consequently, the isomorphism class of the $G$-torsor
     $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_\ndls})}$ depends only on $d$ and on
@@ -156,9 +174,13 @@ The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\si
 \end{lemma}
 
 \begin{proof}
-    \textbf{(1)} Since $P$ is a $k$-rational point of the smooth curve $C$, the uniformizer $x$ induces
-    $\widehat{\Oo_{C,P}} \cong k[[x]]$. As completion at rational points takes products of $k$-varieties to completed tensor
-    products, we get $\widehat{\Oo_{C^d, (P, \dots, P)}} \cong k[[x]] \widehat{\otimes}_k \cdots \widehat{\otimes}_k k[[x]] = k[[x_1, \dots, x_d]]$.
+    \textbf{(1)} Since $C$ is smooth at the $k$-rational point $P$, the local
+    ring $\Oo_{C,P}$ is regular of dimension one, with residue field $k$, and
+    the chosen uniformizer $x$ is a regular parameter. Hence the local ring of
+    $C^d$ at $(P,\dots,P)$ is regular of dimension $d$, with residue field $k$,
+    and $x_i=p_i^*x$ form a regular system of parameters. Its completion is
+    therefore
+    $\widehat{\Oo_{C^d,(P,\dots,P)}}\cong k[[x_1,\dots,x_d]]$.
     Write $A = \Oo_{C^{(d)}, Z_\ndls}$ and $B = \Oo_{C^d, (P, \dots, P)}$.
     Since $k$ is algebraically closed, a closed point $(Q_1, \dots, Q_d) \in C^d$ maps to $Z_\ndls = dP$ under the finite
     projection $r: C^d \to C^{(d)}$ if and only if $Q_1 = \dots = Q_d = P$; hence $(P, \dots, P)$ is the unique point of
@@ -170,28 +192,117 @@ The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\si
     Now $A = B^{S_d}$ is the kernel of $B \to \prod_{\sigma \in S_d} B$, $b \mapsto (\sigma(b) - b)_\sigma$; as $\hat{A}$ is
     flat over $A$, tensoring with $\hat{A}$ preserves this kernel, so
     $$\hat{A} \cong (B \otimes_A \hat{A})^{S_d} \cong k[[x_1, \dots, x_d]]^{S_d}.$$
-    Finally, $k[[x_1, \dots, x_d]]^{S_d} = k[[e_1, \dots, e_d]]$: the ring $k[x_1, \dots, x_d]$ is a finite free module over
-    $k[e_1, \dots, e_d]$, the same topological argument identifies $k[[x_1, \dots, x_d]]$ with
-    $k[x_1, \dots, x_d] \otimes_{k[e_1, \dots, e_d]} k[[e_1, \dots, e_d]]$, and taking $S_d$-invariants --- again a kernel,
-    preserved by the flat base change $k[e_1, \dots, e_d] \to k[[e_1, \dots, e_d]]$ --- yields $k[[e_1, \dots, e_d]]$.
+    Finally, we justify explicitly that
+    $k[[x_1, \dots, x_d]]^{S_d}=k[[e_1, \dots, e_d]]$. Put
+    $R=k[e_1,\dots,e_d]$, $S=k[x_1,\dots,x_d]$,
+    $\mathfrak m=(e_1,\dots,e_d)\subset R$, and
+    $\mathfrak n=(x_1,\dots,x_d)\subset S$. The ring $S$ is a finite free
+    $R$-module. Moreover, $\mathfrak mS\subset\mathfrak n$, while the identity
+    \[
+        \prod_{j=1}^d(T-x_j)
+        =T^d-e_1T^{d-1}+\cdots+(-1)^de_d
+    \]
+    evaluated at $T=x_i$ shows that $x_i^d\in\mathfrak mS$ for every $i$.
+    Hence every monomial of total degree at least $d(d-1)+1$ is divisible by
+    some $x_i^d$, and therefore
+    \[
+        \mathfrak n^{d(d-1)+1}\subset\mathfrak mS\subset\mathfrak n.
+    \]
+    Taking powers shows that the $\mathfrak mS$-adic and
+    $\mathfrak n$-adic topologies on $S$ agree. Since $S$ is finite free over
+    $R$, its $\mathfrak mS$-adic completion is
+    \[
+        S\otimes_R\widehat R
+        \cong k[x_1,\dots,x_d]
+          \otimes_{k[e_1,\dots,e_d]}k[[e_1,\dots,e_d]].
+    \]
+    (Indeed, \(\displaystyle
+        \widehat S^{\,\mathfrak mS}=\varprojlim_r S/(\mathfrak mS)^r
+        \underset{(\mathfrak mS)^r=\mathfrak m^rS}{\cong}
+        \varprojlim_r\bigl(S\otimes_R R/\mathfrak m^r\bigr)
+        \underset{S\cong R^N}{\cong}
+        S\otimes_R\varprojlim_r R/\mathfrak m^r=S\otimes_R\widehat R\).)
+    Its $\mathfrak n$-adic completion is $k[[x_1,\dots,x_d]]$.
+    Thus these two displayed rings are canonically isomorphic. Taking
+    $S_d$-invariants --- again a kernel, preserved by the flat base change
+    $R\to\widehat R$ --- now gives
+    $k[[x_1,\dots,x_d]]^{S_d}=\widehat R=k[[e_1,\dots,e_d]]$.
     Under these identifications the maximal ideal of $\hat{A}$ is $(e_1, \dots, e_d)$, and $c$ is flat as the composition of
     the flat morphisms $\Spec(\hat{A}) \to \Spec(A) \to C^{(d)}$.
 
     It remains to check that $c^{-1}(C^{(d)} \setminus U^{(d)}) = V(e_d)$ as sets. We have
     $C^{(d)} \setminus U^{(d)} = \bigcup_{Q \in \mathrm{Supp}(\mdls)} Z_Q$ with $Z_Q = \{D : Q \in \mathrm{Supp}(D)\}$. For
     $Q \neq P$ the divisor $Z_Q$ does not contain the point
-    $Z_\ndls = dP$, so its ideal is not contained in $\mathfrak{m}_A$, and $c^{-1}(Z_Q) = \emptyset$. For $Q = P$, pull back
-    along the finite surjective morphism $\Spec(\hat{B}) \to \Spec(\hat{A})$: the preimage of $Z_P$ in $C^d$ is
-    $\bigcup_i p_i^{-1}(P)$, whose trace on $\Spec(\hat{B}) = \Spec(k[[x_1, \dots, x_d]])$ is
-    $V(x_1) \cup \dots \cup V(x_d) = V(x_1 \cdots x_d) = V(e_d)$; by surjectivity, $c^{-1}(Z_P) = V(e_d)$ as claimed. Hence
+    $Z_\ndls = dP$, so its ideal is not contained in $\mathfrak{m}_A$, and $c^{-1}(Z_Q) = \emptyset$. For $Q = P$, consider
+    the Cartesian diagram
+    \[
+    \begin{tikzcd}
+        \Spec(\hat B) \arrow[r,"\tilde c"] \arrow[d,"\hat r"']
+            & C^d \arrow[d,"r"] \\
+        \Spec(\hat A) \arrow[r,"c"']
+            & C^{(d)},
+    \end{tikzcd}
+    \]
+    where $\hat r$ extends the previously defined map $W\to V$ and is
+    induced by $\hat A\to B\otimes_A\hat A\cong\hat B$. It is finite, since
+    $B$ is finite over $A$, and it is surjective: under the identifications
+    above it is induced by the finite free extension
+    $k[[e_1,\dots,e_d]]\to k[[x_1,\dots,x_d]]$, hence is faithfully flat.
+    We now pull back along $\hat r$ the two closed subsets
+    $c^{-1}(Z_P)$ and $V(e_d)$ of $\Spec(\hat A)$. By the diagram and the
+    identity $r^{-1}(Z_P)=\bigcup_i p_i^{-1}(P)$, the first has inverse image
+    \[
+        \hat r^{-1}\bigl(c^{-1}(Z_P)\bigr)
+        =\tilde c^{-1}\bigl(r^{-1}(Z_P)\bigr)
+        =\bigcup_i V(x_i)
+    \]
+    in $\Spec(\hat B)$, and hence
+    \[
+        V(x_1)\cup\dots\cup V(x_d)=V(x_1\cdots x_d)=V(e_d).
+    \]
+    This is also $\hat r^{-1}(V(e_d))$; hence surjectivity of $\hat r$ gives
+    $c^{-1}(Z_P)=V(e_d)$ as claimed. Hence
     $c^{-1}(U^{(d)}) = V$, and likewise $\Spec(\hat{B}) \times_{C^d} U^d = W$.
 
     \textbf{(2)} Blowing up commutes with flat base change, and the center $Z_\ndls$ pulls back under $c$ to the closed
     point $V(e_1, \dots, e_d)$; hence
-    $$\hat{Y} := \Bl_{(e_1, \dots, e_d)}\left(\Spec k[[e_1, \dots, e_d]]\right) \cong X_\ndls \times_{C^{(d)}} \Spec(\hat{A}),$$
-    and the exceptional divisor $\hat{E} \subset \hat{Y}$ is the base change of $E_\ndls$ along
-    $\Spec(\hat{A}/\hat{\mathfrak{m}}) = \Spec(\kappa(Z_\ndls))$, i.e.\ the projection $\mathrm{pr}: \hat{Y} \to X_\ndls$
-    restricts to an isomorphism $\hat{E} \cong E_\ndls \cong \bP_k^{d-1}$.
+    $$\hat{Y} := \Bl_{(e_1, \dots, e_d)}\left(\Spec k[[e_1, \dots, e_d]]\right) \cong X_\ndls \times_{C^{(d)}} \Spec(\hat{A}).$$
+    The base-change situation, including the exceptional divisors, is
+    summarized by the Cartesian diagram
+    \[
+    \begin{tikzcd}[column sep=4.2em,row sep=3em]
+        \hat E \arrow[r,hook] \arrow[d,"\sim"']
+              \arrow[dr,phantom,"\lrcorner",very near start]
+            & \hat Y \arrow[r,"\hat\pi"] \arrow[d,"\mathrm{pr}"']
+              \arrow[dr,phantom,"\lrcorner",very near start]
+            & \Spec(\hat A) \arrow[d,"c"] \\
+        E_\ndls \arrow[r,hook]
+            & X_\ndls \arrow[r,"\pi_\ndls"']
+            & C^{(d)}.
+    \end{tikzcd}
+    \]
+    Here $\hat\pi$ is the blowup of $\Spec(\hat A)$ at its closed point,
+    $\mathrm{pr}$ is the base-change projection, and the left square is also
+    Cartesian. To see this explicitly, let
+    $\hat Z:=Z_\ndls\times_{C^{(d)}}\Spec(\hat A)$ be the pulled-back center.
+    Since $Z_\ndls=\Spec(A/\mathfrak m_A)$ in $\Spec(A)$ and
+    $\hat{\mathfrak m}=\mathfrak m_A\hat A$, affine base change gives
+    \[
+        \hat Z
+        =\Spec\bigl((A/\mathfrak m_A)\otimes_A\hat A\bigr)
+        =\Spec(\hat A/\hat{\mathfrak m})
+        =\Spec(\kappa(Z_\ndls)).
+    \]
+    The exceptional divisor is the scheme-theoretic inverse image of the
+    center. Hence, using associativity of fiber products,
+    \[
+        \hat E
+        =\hat Y\times_{\Spec(\hat A)}\hat Z
+        \cong E_\ndls\times_{Z_\ndls}\hat Z.
+    \]
+    Completion does not change the residue field, so $\hat Z\to Z_\ndls$ is
+    an isomorphism. Thus the left vertical map in the diagram is an
+    isomorphism $\hat E\cong E_\ndls\cong\bP_k^{d-1}$.
     Let $\hat{\eta}$ be the generic point of $\hat{E}$. Then $\mathrm{pr}(\hat\eta) = \eta_\ndls$, and the induced local
     homomorphism of discrete valuation rings $\Oo_{X_\ndls, \eta_\ndls} \to \Oo_{\hat{Y}, \hat{\eta}}$ carries a uniformizer
     to a uniformizer (the ideal of $E_\ndls$ pulls back to the ideal of $\hat{E}$) and induces an isomorphism of residue
@@ -208,10 +319,10 @@ The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\si
     \textbf{(3)} Let $h : \cP^{\times_k d} \to U^{(d)}$ denote the canonical morphism; it is finite, being the composition
     of the finite étale morphism $\cP^{\times_k d} \to U^d$ with the finite morphism $U^d \to U^{(d)}$. By
     \Cref{prop:symmetric_power_semidirect_quotient},
-    $\cP^{[d]} = \Xi \backslash \cP^{\times_k d} = \underline{\Spec}_{U^{(d)}}\left((h_* \Oo_{\cP^{\times_k d}})^{\Xi}\right)$.
+    $\cP^{[d]} = \Xi_G \backslash \cP^{\times_k d} = \underline{\Spec}_{U^{(d)}}\left((h_* \Oo_{\cP^{\times_k d}})^{\Xi_G}\right)$.
     Pushforward along the affine morphism $h$ commutes with the flat base change $c_V : V \to U^{(d)}$, and the formation of
-    $\Xi$-invariants is a kernel, hence also commutes with flat base change; therefore
-    $$ \cP^{[d]} \times_{U^{(d)}} V \cong \Xi \backslash \left(\cP^{\times_k d} \times_{U^{(d)}} V\right).$$
+    $\Xi_G$-invariants is a kernel, hence also commutes with flat base change; therefore
+    $$ \cP^{[d]} \times_{U^{(d)}} V \cong \Xi_G \backslash \left(\cP^{\times_k d} \times_{U^{(d)}} V\right).$$
     By step (1), $U^d \times_{U^{(d)}} V \cong W$, so
     $\cP^{\times_k d} \times_{U^{(d)}} V \cong \cP^{\times_k d} \times_{U^d} W$.
     For each $i$, the composition $W \to \Spec(k[[x_1, \dots, x_d]]) \to \Spec(k[[x]]) \to C$ --- the middle map being the
@@ -220,10 +331,10 @@ The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\si
     $\cP^{\times_k d} = p_1^{-1}\cP \times_{U^d} \cdots \times_{U^d} p_d^{-1}\cP$, base changing to $W$ gives an isomorphism
     $$ \cP^{\times_k d} \times_{U^d} W \cong q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x, $$
     which is equivariant for the actions of $G^d$ (in particular of $\KG$) and of $S_d$ --- the latter acting on $W$ by
-    permuting the $x_i$, compatibly with $q_{\sigma(i)} = q_i \circ \sigma$. Passing to $\Xi$-quotients yields the displayed
+    permuting the $x_i$, compatibly with $q_{\sigma(i)} = q_i \circ \sigma$. Passing to $\Xi_G$-quotients yields the displayed
     isomorphism.
 
-    For the final statement: the schemes $V$ and $W$, the maps $q_i$ and $\hat{r}$, the $\Xi$-action, and the point
+    For the final statement: the schemes $V$ and $W$, the maps $q_i$ and $\hat{r}$, the $\Xi_G$-action, and the point
     $\Spec(\kappa((e_d))) \to V$ of (2) are all constructed from $d$ alone; by (3), the torsor
     $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_\ndls})}$ is the pullback along $\Spec(\kappa((e_d))) \to V$ of a torsor constructed
     from $\cP_x$ and these data. Since tame ramification and unramifiedness at
@@ -247,7 +358,7 @@ The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\si
     Immediate from \Cref{lemma:formal_local_invariance}: both $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_{dP}})}$ and
     $\cP'^{[d]}|_{\Spec(\widehat{K}_{\eta_{dP'}})}$ are identified, compatibly with the discrete valuation ring
     $\kappa[[e_d]]$, with the pullback along $\Spec(\kappa((e_d))) \to V$ of
-    $\Xi \backslash (q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x)$.
+    $\Xi_G \backslash (q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x)$.
 \end{proof}
 
 The corollary reduces the geometry to $\bP^1$ once the local cyclic torsor is
