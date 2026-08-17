@@ -686,6 +686,26 @@ the tame ramification of the box product at $\theta$ descends to the tame ramifi
 \subsection{Conclusion of the Tameness Argument}
 
 \begin{proof}[Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}]
+{\color{red}
+We first reduce to the case where $k$ is algebraically closed. The formations
+of symmetric powers, Takeuchi's blowup and its boundary, and the frame torsor
+commute with the flat base change $\Spec(\bar{k})\to\Spec(k)$. At the generic
+points of the boundary, this base change induces a weakly unramified extension
+of discrete valuation rings with separable residue-field extension. Hence
+\Cref{lemma:weakly_unramified_base_change} shows that tameness over $k$ is
+equivalent to tameness after base change to $\bar{k}$. We may therefore replace
+$k$ by $\bar{k}$.
+
+Because the original field is perfect, each closed point $P_i$ splits into
+distinct $\bar{k}$-points, and the base-changed modulus is
+\[
+   \mdls_{\bar{k}}
+      =\sum_i\ \sum_{\bar P\mapsto P_i} n_i\bar P.
+\]
+In the remainder of the proof we write $k$, $C$, $\mdls$, and $\cF$ for these
+base-changed objects.
+}
+
 Let $\cP=\operatorname{Fr}(\cF)$ be the $\Lambda^\times$-torsor of frames.
 For each single-point submodulus $\ndls=k_P P$ of $\mdls$,
 \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction} shows that
