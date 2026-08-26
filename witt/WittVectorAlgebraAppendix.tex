@@ -15,23 +15,211 @@ we do not reproduce its proof.
 \providecommand{\bW}{\mathbb{W}}
 
 \section{The common group-scheme construction}
+\label{appendix:common_group_scheme_construction}
 
-The three cyclic theories used in Chapter~2 share the same formal
-construction. Let $H$ be a commutative group scheme over a scheme $S$, and let
-$\varphi:H\to H$ be a finite \'etale surjective homomorphism with kernel
-$G$. If $X$ is an $S$-scheme and $a:X\to H$ is a section, then
+The three cyclic theories used in Chapter~2 are instances of the following
+construction.
+
+\subsection{The kernel torsor construction}
+
+Let $H$ be a commutative group scheme over a scheme $S$, written additively,
+and let $\varphi:H\to H$ be a homomorphism. Its scheme-theoretic kernel
+$K:=\ker(\varphi)$ is defined by the Cartesian square
 \[
-T_a:=X\times_{a,H,\varphi}H
+\begin{tikzcd}
+K \arrow[r] \arrow[d] & H \arrow[d,"\varphi"] \\
+S \arrow[r,"0_H"'] & H.
+\end{tikzcd}
 \]
-is a $G$-torsor over $X$. In coordinates it is the torsor
-$\varphi(Y)=a$. If $a'=a+\varphi(b)$ for a section $b:X\to H$, translation
-by $b$ identifies $T_a$ with $T_{a'}$.
+Thus, for every $S$-scheme $U$,
+\begin{equation}\label{eq:kernel_on_U_valued_points}
+K(U)=\ker(\varphi_U)
+    =\{k\in H(U):\varphi_U(k)=0_{H(U)}\},
+\end{equation}
+where $H(U)=\Hom_S(U,H)$ and $\varphi_U$ is induced by $\varphi$.
 
-For Kummer theory one takes $H=\bG_m$ and $\varphi(z)=z^e$; for
-Artin--Schreier theory, $H=\bG_a$ and $\varphi(z)=z^p-z$; and for
-Artin--Schreier--Witt theory, $H=\bW_r$ and
-$\varphi=F-\mathrm{id}$. This is why the three equations in Chapter~2 behave
-in parallel.
+For an $S$-scheme $X$ and a section $a\in H(X)$, define the fiber
+\begin{equation}\label{eq:fiber_torsor_definition}
+T_a:=X\times_{a,H,\varphi}H,
+\end{equation}
+equivalently by the Cartesian square
+\[
+\begin{tikzcd}
+T_a \arrow[r] \arrow[d] & H \arrow[d,"\varphi"] \\
+X \arrow[r,"a"'] & H.
+\end{tikzcd}
+\]
+For every $X$-scheme $U\to X$, with $a_U$ the pullback of $a$,
+\[
+T_a(U)=\{y\in H(U):\varphi_U(y)=a_U\}.
+\]
+Thus ``the torsor $\varphi(Y)=a$'' means the scheme of solutions after every
+base change to $X$; it has no preferred identity element in general.
+
+Write $H_X:=H\times_S X$, $K_X:=K\times_S X$, let
+$\varphi_X:H_X\to H_X$ be the base change of $\varphi$, and let
+$\iota_K:K_X\to H_X$ and $\iota_a:T_a\to H_X$ be the canonical maps.
+Addition on $H_X$ restricts to the action
+\begin{equation}\label{eq:kernel_action_on_fiber}
+K_X\times_X T_a\longrightarrow T_a,
+\qquad (k,y)\longmapsto y+k.
+\end{equation}
+It is the top arrow in the commutative diagram
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+K_X\times_X T_a
+    \arrow[r,"{(k,y)\mapsto y+k}"]
+    \arrow[d,"{\iota_K\times_X\iota_a}"']
+  & T_a \arrow[d,"\iota_a"] \\
+H_X\times_X H_X
+    \arrow[r,"+_X"']
+  & H_X.
+\end{tikzcd}
+\]
+Indeed,
+\[
+\varphi_U(y+k)
+=\varphi_U(y)+\varphi_U(k)
+=a_U+0_{H(U)}
+=a_U,
+\]
+so translation by $K$ preserves the fiber $T_a$. The action is simply
+transitive: the morphism
+\begin{equation}\label{eq:torsor_difference_isomorphism}
+K_X\times_X T_a\longrightarrow T_a\times_X T_a,
+\qquad (k,y)\longmapsto (y,y+k),
+\end{equation}
+is an isomorphism with inverse
+\[
+(y_1,y_2)\longmapsto (y_2-y_1,y_1).
+\]
+This inverse is well-defined because
+\[
+\varphi_U(y_2-y_1)
+=\varphi_U(y_2)-\varphi_U(y_1)
+=a_U-a_U
+=0_{H(U)}.
+\]
+If $\varphi$ is finite \'etale and surjective, then its base change
+$T_a\to X$ is finite \'etale and surjective. Hence $T_a$ is a $K_X$-torsor,
+namely
+\[
+T_a=a^*(H\xrightarrow{\varphi}H)
+\]
+as a pullback of the $K$-torsor $\varphi:H\to H$.
+
+Suppose that $a'=a+\varphi_X(b)$ for some $b\in H(X)$. Translation by $b$
+defines
+\[
+\tau_b:T_a\longrightarrow T_{a'},
+\qquad y\longmapsto y+b,
+\]
+because
+\[
+\varphi_U(y+b_U)
+=a_U+\varphi_U(b_U)
+=a'_U,
+\]
+and it is $K_X$-equivariant since
+$\tau_b(y+k)=y+k+b=\tau_b(y)+k$. Its inverse is $\tau_{-b}$, so $T_a$ depends
+only on the class of $a$ modulo $\varphi_X(H(X))$.
+
+When $\varphi$ is finite \'etale and surjective, the exact sequence on
+$X_{\mathrm{\acute et}}$
+\[
+0\longrightarrow K_X\longrightarrow H_X
+\xrightarrow{\varphi_X}H_X\longrightarrow0
+\]
+has connecting map $a\mapsto[T_a]$ and induces the injection
+\begin{equation}\label{eq:common_torsor_connecting_map}
+H(X)/\varphi_X(H(X))\lhook\joinrel\longrightarrow
+H^1_{\mathrm{\acute et}}(X,K_X),
+\qquad [a]\longmapsto[T_a].
+\end{equation}
+The class $[T_a]$ is trivial exactly when $a\in\varphi_X(H(X))$, equivalently
+when $\varphi(Y)=a$ has a global solution.
+
+For a multiplicative group scheme the same construction is written
+multiplicatively: $K(U)=\{k\in H(U):\varphi_U(k)=1_{H(U)}\}$, the action is
+$(k,y)\mapsto ky$, and replacing $a$ by $a\varphi_X(b)$ gives the isomorphic
+torsor $y\mapsto by$.
+
+\subsection{The three cyclic theories}
+
+For an arbitrary $S$-scheme $X$, the fiber over a section $a\in H(X)$ is
+\[
+T_a=\varphi_X^{-1}(a)
+   =X\times_{a,H,\varphi}H.
+\]
+For nonaffine $X$, explicit equations are interpreted using the structure
+sheaf $\Oo_X$. In all three applications in Chapter~2, however, the base is
+affine: first $\Spec k((x))$ and then
+$\bG_m=\Spec k[x,x^{-1}]$. We therefore work affinely from now on and write
+\[
+X=\Spec A,
+\]
+where the capital letter $A$ is the coordinate ring of $X$, while the
+lowercase letter $a$ is the section specifying the fiber. More generally, if
+$S=\Spec R$ and $H=\Spec C$, then
+\[
+T_a=\Spec\bigl(A\otimes_C C\bigr),
+\]
+where $C$ acts on $A$ through $a^\#:C\to A$ and on the second copy of $C$
+through $\varphi^\#:C\to C$.
+
+\paragraph{Kummer.}
+Take $H=\bG_m$ and $\varphi(z)=z^e$. A section is an element
+$a\in\bG_m(X)=A^\times$, and its fiber is
+\[
+T_a=\Spec\bigl(A[Y]/(Y^e-a)\bigr),
+\]
+where $Y$ is automatically a unit because $a$ is a unit. The kernel is
+\[
+\mu_{e,X}=\Spec\bigl(A[t,t^{-1}]/(t^e-1)\bigr),
+\]
+acting by
+$(\zeta,Y)\mapsto\zeta Y$. If $e$ is invertible on $S$ and a primitive root
+$\zeta_e\in\mu_e(S)$ is chosen, then
+$\overline j\mapsto\zeta_e^j$ identifies $(\Z/e\Z)_S$ with $\mu_e$; only
+this identification, not the $\mu_e$-torsor, depends on the choice.
+
+\paragraph{Artin--Schreier.}
+Let $A$ be an $\F_p$-algebra, take $H=\bG_a$, and put
+$\varphi(Y)=Y^p-Y$. A section is an element $a\in\bG_a(X)=A$, and its
+fiber is
+\[
+T_a=\Spec\bigl(A[Y]/(Y^p-Y-a)\bigr).
+\]
+The kernel is the constant group scheme $(\F_p)_X$, acting by
+$(c,Y)\mapsto Y+c$.
+
+\paragraph{Artin--Schreier--Witt.}
+Let $A$ be an $\F_p$-algebra. The third theory takes $H=\bW_r$ and
+\[
+\varphi=\wp:=F-\mathrm{id},
+\qquad
+\wp\vec Y=F\vec Y\ominus\vec Y.
+\]
+For a section $\vec a\in W_r(A)$, the fiber is explicitly
+\[
+T_{\vec a}
+=\Spec\!\left(
+  A[Y_0,\dots,Y_{r-1}]
+  \big/\bigl(\wp\vec Y\ominus\vec a\bigr)
+\right),
+\qquad \wp\vec Y=\vec a.
+\]
+Here the parenthesized Witt vector denotes the ideal generated by its $r$
+coordinate polynomials. Its kernel is
+$W_r(\F_p)_X\cong(\Z/p^r\Z)_X$, acting by Witt translation
+$(\vec c,\vec Y)\mapsto\vec Y\oplus\vec c$.
+
+This paragraph states the affine model in advance for comparison with the
+two preceding theories. The operations $F$, $\oplus$, and $\ominus$, and the
+coordinate polynomials occurring in the displayed quotient, are defined in
+\Cref{appendix:witt_vector_algebra_basics}. The fact that this fiber is
+finite \'etale and that the displayed kernel action makes it a torsor is
+proved in \Cref{lemma:asw_etale_torsor}.
 
 \section{Kummer and Artin--Schreier theory}
 \label{appendix:kummer_and_as_proofs}
@@ -155,6 +343,7 @@ kernels $\mu_n$ and $\F_p\cong\Z/p\Z$ gives the asserted torsor structures.
 \end{proof}
 
 \section{Witt-vector algebra}
+\label{appendix:witt_vector_algebra_basics}
 
 \subsection{Ring structure and ghost coordinates}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  17 AUG 2026 20:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  25 AUG 2026 21:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1241,36 +1241,36 @@ l.30 ...to the Full Modulus}{47}{subsection.3.3.1}
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
- [2] (./sections/Introduction.tex [3
+ [2] [3] (./sections/Introduction.tex [4
 
 ]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 68.
- [4] [5]) [6]
+ [5] [6]) [7]
 Chapter 1.
 (./sections/Preliminaries/GeneralPreliminaries.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 24.
- [7
+ [8
 
 ]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input line 44.
- [8]
-Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input line 186.
  [9]
+Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input line 186.
+ [10]
 Package hyperref Info: bookmark level for unknown cor defaults to 0 on input line 203.
- [10] [11] [12] [13] [14] [15]
+ [11] [12] [13] [14] [15] [16]
 Overfull \hbox (7.08899pt too wide) in paragraph at lines 627--634
 \T1/cmr/m/n/10.95 The uni-ver-sal prop-er-ties of the two quo-tients iden-tify this it-er-ated quo-tient canon-i-cally with $\U/wasy/m/n/10.95 ^^D[]\OMS/cmsy/m/n/10.95 nP[]$\T1/cmr/m/n/10.95 .
  []
 
-[16] [17] <xymatrix 2x2 154>) [18]
+[17] [18] <xymatrix 2x2 154>) [19]
 Chapter 2.
-(./sections/RamificationAfterBlowupIntroduction.tex [19
+(./sections/RamificationAfterBlowupIntroduction.tex [20
 
-]) (./sections/Preliminaries/LocalRamificationPreliminaries.tex [20] [21]) (./sections/Preliminaries/GTorsorRamification.tex <xymatrix 2x2 154> [22] [23] [24]
+]) (./sections/Preliminaries/LocalRamificationPreliminaries.tex [21] [22]) (./sections/Preliminaries/GTorsorRamification.tex <xymatrix 2x2 154> [23] [24] [25]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 177.
- [25]
+ [26]
 Package hyperref Info: bookmark level for unknown cor* defaults to 0 on input line 245.
- [26]) (./sections/Preliminaries/ReductionsBeforeCyclicTheories.tex [27] [28] [29] [30] [31]) (./sections/Preliminaries/CyclicRamificationTheories.tex [32] [33] [34] [35]) (./sections/RamificationAfterBlowupIsTame.tex [36] [37] [38] (./sections/RamificationAfterBlowupPPower.tex [39] [40])) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex [41]
+ [27]) (./sections/Preliminaries/ReductionsBeforeCyclicTheories.tex [28] [29] [30] [31]) (./sections/Preliminaries/CyclicRamificationTheories.tex [32] [33] [34] [35]) (./sections/RamificationAfterBlowupIsTame.tex [36] [37] [38] (./sections/RamificationAfterBlowupPPower.tex [39] [40])) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex [41]
 Chapter 3.
 [42
 
@@ -1278,15 +1278,15 @@ Chapter 3.
 Appendix A.
 [57
 
-] [58] [59] [60]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 340.
- (./witt/WittVectorPrerequisites.tex [61] [62] [63])) [64]
+] [58] [59] [60] [61] [62] [63]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 538.
+ (./witt/WittVectorPrerequisites.tex [64] [65] [66])) [67]
 Appendix B.
-(./a_wrong_path/a_wrong_path.tex [65
+(./a_wrong_path/a_wrong_path.tex [68
 
 ]
 Package hyperref Info: bookmark level for unknown construction defaults to 0 on input line 67.
- [66] [67] [68] [69] [70]) [71] [72
+ [69] [70] [71] [72] [73]) [74] [75
 
 ] (./main.aux)
  ***********
@@ -1298,24 +1298,24 @@ L3 programming layer <2026-01-19>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 33D60F49BFEEC8B82BB7BBDC2BA02566;13750.
+(rerunfilecheck)             Checksum: B16AE922FB720931B84635CDE334ACBC;14175.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45787 strings out of 469006
- 872290 string characters out of 5454814
- 1712737 words of memory out of 5000000
- 73259 multiletter control sequences out of 15000+600000
+ 45840 strings out of 469006
+ 873567 string characters out of 5454814
+ 1712455 words of memory out of 5000000
+ 73299 multiletter control sequences out of 15000+600000
  663262 words of font info for 150 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  107i,19n,110p,3283b,2327s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on main.pdf (74 pages, 741202 bytes).
+Output written on main.pdf (77 pages, 742665 bytes).
 PDF statistics:
- 2110 PDF objects out of 2487 (max. 8388607)
- 1385 compressed objects within 14 object streams
- 448 named destinations out of 1000 (max. 500000)
- 461 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2145 PDF objects out of 2487 (max. 8388607)
+ 1417 compressed objects within 15 object streams
+ 461 named destinations out of 1000 (max. 500000)
+ 477 words of extra memory for PDF output out of 10000 (max. 10000000)
 

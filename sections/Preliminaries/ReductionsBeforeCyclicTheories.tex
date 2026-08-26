@@ -174,147 +174,53 @@ by $S_d$.
 \end{lemma}
 
 \begin{proof}
-    \textbf{(1)} Since $C$ is smooth at the $k$-rational point $P$, the local
-    ring $\Oo_{C,P}$ is regular of dimension one, with residue field $k$, and
-    the chosen uniformizer $x$ is a regular parameter. Hence the local ring of
-    $C^d$ at $(P,\dots,P)$ is regular of dimension $d$, with residue field $k$,
-    and $x_i=p_i^*x$ form a regular system of parameters. Its completion is
-    therefore
+    \textbf{(1)} The chosen parameter gives
     $\widehat{\Oo_{C^d,(P,\dots,P)}}\cong k[[x_1,\dots,x_d]]$.
-    Write $A = \Oo_{C^{(d)}, Z_\ndls}$ and $B = \Oo_{C^d, (P, \dots, P)}$.
-    Since $k$ is algebraically closed, a closed point $(Q_1, \dots, Q_d) \in C^d$ maps to $Z_\ndls = dP$ under the finite
-    projection $r: C^d \to C^{(d)}$ if and only if $Q_1 = \dots = Q_d = P$; hence $(P, \dots, P)$ is the unique point of
-    $C^d$ over $Z_\ndls$, $B = (r_* \Oo_{C^d})_{Z_\ndls}$ is a finite $A$-module, and $A = B^{S_d}$ (formation of invariants
-    commutes with localization at invariant primes).
-    Since $\mathfrak{m}_B$ is the unique maximal ideal of $B$ over $\mathfrak{m}_A$, we have
-    $\mathfrak{m}_B^N \subset \mathfrak{m}_A B \subset \mathfrak{m}_B$ for some $N$, so the $\mathfrak{m}_A$-adic and
-    $\mathfrak{m}_B$-adic topologies on $B$ agree, and therefore $B \otimes_A \hat{A} \cong \hat{B} \cong k[[x_1, \dots, x_d]]$.
-    Now $A = B^{S_d}$ is the kernel of $B \to \prod_{\sigma \in S_d} B$, $b \mapsto (\sigma(b) - b)_\sigma$; as $\hat{A}$ is
-    flat over $A$, tensoring with $\hat{A}$ preserves this kernel, so
-    $$\hat{A} \cong (B \otimes_A \hat{A})^{S_d} \cong k[[x_1, \dots, x_d]]^{S_d}.$$
-    Finally, we justify explicitly that
-    $k[[x_1, \dots, x_d]]^{S_d}=k[[e_1, \dots, e_d]]$. Put
-    $R=k[e_1,\dots,e_d]$, $S=k[x_1,\dots,x_d]$,
-    $\mathfrak m=(e_1,\dots,e_d)\subset R$, and
-    $\mathfrak n=(x_1,\dots,x_d)\subset S$. The ring $S$ is a finite free
-    $R$-module. Moreover, $\mathfrak mS\subset\mathfrak n$, while the identity
+    We use the standard facts that completion is compatible with finite
+    morphisms and that the completed local ring of a finite quotient is the
+    invariant ring of the completed local ring.  Since $(P,\dots,P)$ is the
+    unique point of $C^d$ above $dP$, this gives
     \[
-        \prod_{j=1}^d(T-x_j)
-        =T^d-e_1T^{d-1}+\cdots+(-1)^de_d
+        \widehat{\Oo_{C^{(d)},dP}}
+        \cong k[[x_1,\dots,x_d]]^{S_d}
+        =k[[e_1,\dots,e_d]],
     \]
-    evaluated at $T=x_i$ shows that $x_i^d\in\mathfrak mS$ for every $i$.
-    Hence every monomial of total degree at least $d(d-1)+1$ is divisible by
-    some $x_i^d$, and therefore
-    \[
-        \mathfrak n^{d(d-1)+1}\subset\mathfrak mS\subset\mathfrak n.
-    \]
-    Taking powers shows that the $\mathfrak mS$-adic and
-    $\mathfrak n$-adic topologies on $S$ agree. Since $S$ is finite free over
-    $R$, its $\mathfrak mS$-adic completion is
-    \[
-        S\otimes_R\widehat R
-        \cong k[x_1,\dots,x_d]
-          \otimes_{k[e_1,\dots,e_d]}k[[e_1,\dots,e_d]].
-    \]
-    (Indeed, \(\displaystyle
-        \widehat S^{\,\mathfrak mS}=\varprojlim_r S/(\mathfrak mS)^r
-        \underset{(\mathfrak mS)^r=\mathfrak m^rS}{\cong}
-        \varprojlim_r\bigl(S\otimes_R R/\mathfrak m^r\bigr)
-        \underset{S\cong R^N}{\cong}
-        S\otimes_R\varprojlim_r R/\mathfrak m^r=S\otimes_R\widehat R\).)
-    Its $\mathfrak n$-adic completion is $k[[x_1,\dots,x_d]]$.
-    Thus these two displayed rings are canonically isomorphic. Taking
-    $S_d$-invariants --- again a kernel, preserved by the flat base change
-    $R\to\widehat R$ --- now gives
-    $k[[x_1,\dots,x_d]]^{S_d}=\widehat R=k[[e_1,\dots,e_d]]$.
-    Under these identifications the maximal ideal of $\hat{A}$ is $(e_1, \dots, e_d)$, and $c$ is flat as the composition of
-    the flat morphisms $\Spec(\hat{A}) \to \Spec(A) \to C^{(d)}$.
+    where the last equality is the formal-power-series version of the
+    fundamental theorem of symmetric functions.  The maximal ideal is thus
+    $(e_1,\dots,e_d)$, and the resulting map $c$ is flat by flatness of
+    completion.
 
-    It remains to check that $c^{-1}(C^{(d)} \setminus U^{(d)}) = V(e_d)$ as sets. We have
-    $C^{(d)} \setminus U^{(d)} = \bigcup_{Q \in \mathrm{Supp}(\mdls)} Z_Q$ with $Z_Q = \{D : Q \in \mathrm{Supp}(D)\}$. For
-    $Q \neq P$ the divisor $Z_Q$ does not contain the point
-    $Z_\ndls = dP$, so its ideal is not contained in $\mathfrak{m}_A$, and $c^{-1}(Z_Q) = \emptyset$. For $Q = P$, consider
-    the Cartesian diagram
+    It remains only to identify the boundary.  Near $dP$, the only component
+    of $C^{(d)}\setminus U^{(d)}$ that occurs is the locus of divisors
+    containing $P$.  Its inverse image in the ordered formal neighbourhood is
     \[
-    \begin{tikzcd}
-        \Spec(\hat B) \arrow[r,"\tilde c"] \arrow[d,"\hat r"']
-            & C^d \arrow[d,"r"] \\
-        \Spec(\hat A) \arrow[r,"c"']
-            & C^{(d)},
-    \end{tikzcd}
+        \bigcup_i V(x_i)=V(x_1\cdots x_d)=V(e_d).
     \]
-    where $\hat r$ extends the previously defined map $W\to V$ and is
-    induced by $\hat A\to B\otimes_A\hat A\cong\hat B$. It is finite, since
-    $B$ is finite over $A$, and it is surjective: under the identifications
-    above it is induced by the finite free extension
-    $k[[e_1,\dots,e_d]]\to k[[x_1,\dots,x_d]]$, hence is faithfully flat.
-    We now pull back along $\hat r$ the two closed subsets
-    $c^{-1}(Z_P)$ and $V(e_d)$ of $\Spec(\hat A)$. By the diagram and the
-    identity $r^{-1}(Z_P)=\bigcup_i p_i^{-1}(P)$, the first has inverse image
-    \[
-        \hat r^{-1}\bigl(c^{-1}(Z_P)\bigr)
-        =\tilde c^{-1}\bigl(r^{-1}(Z_P)\bigr)
-        =\bigcup_i V(x_i)
-    \]
-    in $\Spec(\hat B)$, and hence
-    \[
-        V(x_1)\cup\dots\cup V(x_d)=V(x_1\cdots x_d)=V(e_d).
-    \]
-    This is also $\hat r^{-1}(V(e_d))$; hence surjectivity of $\hat r$ gives
-    $c^{-1}(Z_P)=V(e_d)$ as claimed. Hence
-    $c^{-1}(U^{(d)}) = V$, and likewise $\Spec(\hat{B}) \times_{C^d} U^d = W$.
+    Since the ordered-to-symmetric map is finite and surjective, the boundary
+    in $\Spec k[[e_1,\dots,e_d]]$ is also $V(e_d)$.  Hence
+    $c^{-1}(U^{(d)})=V$ (and similarly the corresponding ordered inverse image
+    is $W$).
 
-    \textbf{(2)} Blowing up commutes with flat base change, and the center $Z_\ndls$ pulls back under $c$ to the closed
-    point $V(e_1, \dots, e_d)$; hence
-    $$\hat{Y} := \Bl_{(e_1, \dots, e_d)}\left(\Spec k[[e_1, \dots, e_d]]\right) \cong X_\ndls \times_{C^{(d)}} \Spec(\hat{A}).$$
-    The base-change situation, including the exceptional divisors, is
-    summarized by the Cartesian diagram
+    \textbf{(2)} We use that blowups commute with flat base change.  Thus the
+    pullback of $X_\ndls$ along $c$ is the blowup of
+    $\Spec k[[e_1,\dots,e_d]]$ at its closed point.  Completion preserves the
+    exceptional divisor and its residue field, so it is enough to compute the
+    completed local ring at the generic point of the exceptional divisor in
+    this standard blowup.
+
+    On the chart where $e_d$ is the exceptional parameter, put
+    $t_i=e_i/e_d$ for $i<d$.  The exceptional divisor is given by $e_d=0$,
+    and its generic point has residue field
     \[
-    \begin{tikzcd}[column sep=4.2em,row sep=3em]
-        \hat E \arrow[r,hook] \arrow[d,"\sim"']
-              \arrow[dr,phantom,"\lrcorner",very near start]
-            & \hat Y \arrow[r,"\hat\pi"] \arrow[d,"\mathrm{pr}"']
-              \arrow[dr,phantom,"\lrcorner",very near start]
-            & \Spec(\hat A) \arrow[d,"c"] \\
-        E_\ndls \arrow[r,hook]
-            & X_\ndls \arrow[r,"\pi_\ndls"']
-            & C^{(d)}.
-    \end{tikzcd}
+        \kappa=k(t_1,\dots,t_{d-1})
+        =k\left(\frac{e_1}{e_d},\dots,\frac{e_{d-1}}{e_d}\right).
     \]
-    Here $\hat\pi$ is the blowup of $\Spec(\hat A)$ at its closed point,
-    $\mathrm{pr}$ is the base-change projection, and the left square is also
-    Cartesian. To see this explicitly, let
-    $\hat Z:=Z_\ndls\times_{C^{(d)}}\Spec(\hat A)$ be the pulled-back center.
-    Since $Z_\ndls=\Spec(A/\mathfrak m_A)$ in $\Spec(A)$ and
-    $\hat{\mathfrak m}=\mathfrak m_A\hat A$, affine base change gives
-    \[
-        \hat Z
-        =\Spec\bigl((A/\mathfrak m_A)\otimes_A\hat A\bigr)
-        =\Spec(\hat A/\hat{\mathfrak m})
-        =\Spec(\kappa(Z_\ndls)).
-    \]
-    The exceptional divisor is the scheme-theoretic inverse image of the
-    center. Hence, using associativity of fiber products,
-    \[
-        \hat E
-        =\hat Y\times_{\Spec(\hat A)}\hat Z
-        \cong E_\ndls\times_{Z_\ndls}\hat Z.
-    \]
-    Completion does not change the residue field, so $\hat Z\to Z_\ndls$ is
-    an isomorphism. Thus the left vertical map in the diagram is an
-    isomorphism $\hat E\cong E_\ndls\cong\bP_k^{d-1}$.
-    Let $\hat{\eta}$ be the generic point of $\hat{E}$. Then $\mathrm{pr}(\hat\eta) = \eta_\ndls$, and the induced local
-    homomorphism of discrete valuation rings $\Oo_{X_\ndls, \eta_\ndls} \to \Oo_{\hat{Y}, \hat{\eta}}$ carries a uniformizer
-    to a uniformizer (the ideal of $E_\ndls$ pulls back to the ideal of $\hat{E}$) and induces an isomorphism of residue
-    fields (both are the function field of $\bP_k^{d-1}$); hence it induces an isomorphism on completions.
-    The completion of $\Oo_{\hat{Y}, \hat{\eta}}$ is computed exactly as for the blowup of affine space at the origin, which
-    we carry out in detail below: on the chart $u_d \neq 0$ we have $e_i = \frac{u_i}{u_d} e_d$, the local ring at
-    $\hat\eta$ is $\left(\hat{A}[\frac{u_1}{u_d}, \dots, \frac{u_{d-1}}{u_d}]\right)_{(e_d)}$, its residue field is
-    $\kappa = k(\frac{u_1}{u_d}, \dots, \frac{u_{d-1}}{u_d}) = k(\frac{e_1}{e_d}, \dots, \frac{e_{d-1}}{e_d})$, and its
-    completion is $\kappa[[e_d]]$.
-    Finally, $e_d$ is invertible in $\widehat{K}_{\eta_\ndls} = \kappa((e_d))$, so the composite
-    $\Spec(\widehat{K}_{\eta_\ndls}) \to \Spec(\Oo_{\hat{Y}, \hat\eta}) \to \hat{Y} \to \Spec(\hat{A})$ factors through $V$,
-    giving the asserted factorization of $\Spec(\widehat{K}_{\eta_\ndls}) \to U^{(d)}$ through $c_V$.
+    The usual local calculation for the blowup of a regular local scheme at
+    its closed point therefore gives
+    $\widehat{\Oo_{X_\ndls,\eta_\ndls}}\cong\kappa[[e_d]]$ and
+    $\widehat K_{\eta_\ndls}\cong\kappa((e_d))$.  Since $e_d$ is invertible
+    in the latter field, its map to the completed symmetric power factors
+    through $V$, giving the asserted factorization through $c_V$.
 
     \textbf{(3)} Let $h : \cP^{\times_k d} \to U^{(d)}$ denote the canonical morphism; it is finite, being the composition
     of the finite étale morphism $\cP^{\times_k d} \to U^d$ with the finite morphism $U^d \to U^{(d)}$. By
@@ -323,12 +229,20 @@ by $S_d$.
     Pushforward along the affine morphism $h$ commutes with the flat base change $c_V : V \to U^{(d)}$, and the formation of
     $\Xi_G$-invariants is a kernel, hence also commutes with flat base change; therefore
     $$ \cP^{[d]} \times_{U^{(d)}} V \cong \Xi_G \backslash \left(\cP^{\times_k d} \times_{U^{(d)}} V\right).$$
-    By step (1), $U^d \times_{U^{(d)}} V \cong W$, so
-    $\cP^{\times_k d} \times_{U^{(d)}} V \cong \cP^{\times_k d} \times_{U^d} W$.
-    For each $i$, the composition $W \to \Spec(k[[x_1, \dots, x_d]]) \to \Spec(k[[x]]) \to C$ --- the middle map being the
-    completion of the projection $p_i : C^d \to C$, i.e.\ $x \mapsto x_i$ --- factors through $\Spec(k((x))) \to U$, since
-    $x_i$ is invertible on $W$; this composite is precisely $q_i$, and it commutes with $p_i : U^d \to U$. Since
-    $\cP^{\times_k d} = p_1^{-1}\cP \times_{U^d} \cdots \times_{U^d} p_d^{-1}\cP$, base changing to $W$ gives an isomorphism
+    Completing the finite map $C^d\to C^{(d)}$ at the unique point
+    $(P,\dots,P)$ above $dP$ gives the Cartesian square defined by
+    $k[[e_1,\dots,e_d]]\subset k[[x_1,\dots,x_d]]$.  Restricting this square
+    to $e_d=x_1\cdots x_d\ne0$ gives directly
+    $U^d\times_{U^{(d)}}V\cong W$, and hence
+    $\cP^{\times_k d}\times_{U^{(d)}}V
+      \cong\cP^{\times_k d}\times_{U^d}W$.
+
+    The $i$-th component of the resulting map $W\to U^d$ is
+    $W\xrightarrow{q_i}\Spec(k((x)))\to U$: indeed, it is induced in
+    coordinates by $x\mapsto x_i$, and $x_i$ is invertible on $W$.
+    Since
+    $\cP^{\times_k d}=p_1^{-1}\cP\times_{U^d}\cdots\times_{U^d}p_d^{-1}\cP$,
+    compatibility of fiber products with base change now gives
     $$ \cP^{\times_k d} \times_{U^d} W \cong q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x, $$
     which is equivariant for the actions of $G^d$ (in particular of $\KG$) and of $S_d$ --- the latter acting on $W$ by
     permuting the $x_i$, compatibly with $q_{\sigma(i)} = q_i \circ \sigma$. Passing to $\Xi_G$-quotients yields the displayed
