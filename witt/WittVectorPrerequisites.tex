@@ -113,6 +113,14 @@ If the class has order $p^s$, the corresponding cyclic extension has degree
 $p^s$; in particular the torsor is connected precisely when its class has
 order $p^r$. Every cyclic extension of degree dividing $p^r$ arises in this
 way.
+
+{\color{blue}
+More explicitly, let $H\cong\Z/p^s\Z$ be the image of the associated
+character, equivalently the unique subgroup of order $p^s$ in
+$\Z/p^r\Z$. If $L/M$ is the cyclic field extension cut out by this character,
+then the $\Z/p^r\Z$-torsor is the disjoint union of $p^{r-s}$ connected
+components, each isomorphic to $\Spec L$ and an $H$-subtorsor. Equivalently,
+the original torsor is induced from any one of these $H$-subtorsors.}
 \end{theorem}
 
 \begin{proof}
@@ -136,6 +144,15 @@ Thus $W_r(M)/\wp W_r(M)\cong H^1(M,\Z/p^r\Z)$. The order and
 connectedness assertions follow from the correspondence between finite
 constant-group torsors and continuous characters: the degree of the connected
 field extension is the order of the image of the associated character.
+
+{\color{blue}
+For the refined component statement, write $H=\operatorname{im}(\chi)$.
+The Galois orbits on the geometric fiber $\Z/p^r\Z$ are the cosets of $H$,
+so there are $[\Z/p^r\Z:H]=p^{r-s}$ connected components. The stabilizer
+$H$ acts simply transitively on each component, whose residue field is the
+degree-$p^s$ extension cut out by $\ker(\chi)$. Hence each component is an
+$H$-subtorsor, and the full $\Z/p^r\Z$-torsor is induced from any one of
+them.}
 \end{proof}
 
 \begin{cor}\label{cor:asw_class_order_and_first_component}

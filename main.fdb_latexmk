@@ -1,13 +1,12 @@
 # Fdb version 4
-["biber main"] 1787160727.28565 "main.bcf" "main.bbl" "main" 1787681177.36601 2
+["biber main"] 1787769820.82184 "main.bcf" "main.bbl" "main" 1787769824.66076 0
   "Bib.bib" 1785084213.46054 6638 b64112559fc93c821da2bfcdf8aaec52 ""
-  "main.bcf" 1787681177.26216 114270 8cbc5c42aa7b7b9bfe2e701259a2bf7c "pdflatex"
+  "main.bcf" 1787769824.4601 114197 535a6bbf077a354a433dc08a4528c157 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1787681175.25487 "/Users/amarzan/Desktop/thesis/main.tex" "main.pdf" "main" 1787681177.36635 0
-  "/Users/amarzan/Desktop/thesis/main.tex" 1785347527.62627 2919 3148a4f0f23772ed4c213f281361e4c7 ""
+["pdflatex"] 1787769822.27871 "main.tex" "main.pdf" "main" 1787769824.661 0
   "/Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1095.600pk" 1785088604.66667 38312 811e3ca8fdc8b1f32ea95d2a7828165f ""
   "/Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1785088610.4633 28952 9a940fa0c4c936114b6d29e0bcf2b9d3 ""
   "/Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1785088605.1065 31928 39d604741cd2a00057a09dca40b5d7dd ""
@@ -353,14 +352,14 @@
   "a_wrong_path/a_wrong_path.tex" 1786295551.31517 16976 68928ca7e068d016620fe89c515f5787 ""
   "chapter3_reorganized_codex/chapter3_reorganized_codex.tex" 1786987388.11889 46395 72f1fd445a0bee0243f185e72095a571 ""
   "includes.tex" 1785084213.497 1342 e5c3b0d0c7778d7de9a24d055cbd4cd6 ""
-  "main.aux" 1787681177.25472 61332 809f45bb21aae1f5afdab0aef8db50cf "pdflatex"
-  "main.bbl" 1787160776.32104 20715 9278861474a4392d30acc250729b4f46 "biber main"
-  "main.out" 1787681177.26024 14175 b16ae922fb720931b84635cde334acbc "pdflatex"
-  "main.run.xml" 1787681177.26272 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
-  "main.tex" 1785347527.62627 2919 3148a4f0f23772ed4c213f281361e4c7 ""
-  "main.toc" 1787681177.26278 6385 6119b13f64d3657abf59e871e6436aed "pdflatex"
+  "main.aux" 1787769824.45246 61295 4553e5e80dfdbd853eb48c2e3f5f5e77 "pdflatex"
+  "main.bbl" 1787769822.26871 20715 9278861474a4392d30acc250729b4f46 "biber main"
+  "main.out" 1787769824.45804 14175 b16ae922fb720931b84635cde334acbc "pdflatex"
+  "main.run.xml" 1787769824.46061 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.tex" 1787766823.0143 3106 0b99a348926f017aa2261626a11e8a59 ""
+  "main.toc" 1787769824.46067 6385 1e261fa36f82998bdf737164c06e20c4 "pdflatex"
   "sections/Introduction.tex" 1786988591.37199 15147 7594b21076fe728d9251584e675afe53 ""
-  "sections/Preliminaries/CyclicRamificationTheories.tex" 1787680028.33692 15011 7b3d91e1fc681b66bd8d1367a35aa605 ""
+  "sections/Preliminaries/CyclicRamificationTheories.tex" 1787769658.89574 17815 0d98a3bdc70d8f5c3b458c7ffa3ac6eb ""
   "sections/Preliminaries/GTorsorRamification.tex" 1786898288.94945 16584 2e1520d4b34b9fb0ced9177a76c876a5 ""
   "sections/Preliminaries/GeneralPreliminaries.tex" 1786556589.86698 41612 892ef65c6f1e60ca10bf0c9319b869d0 ""
   "sections/Preliminaries/LocalRamificationPreliminaries.tex" 1786898288.95007 7831 b81b6197ccb8f50ad73e64780295997b ""
@@ -368,8 +367,8 @@
   "sections/RamificationAfterBlowupIntroduction.tex" 1787679596.05392 2555 838c16ce657924de82b019a7a49bf40d ""
   "sections/RamificationAfterBlowupIsTame.tex" 1786900774.5649 8915 2de65d85a13b39fe8de21e3e485ef3c6 ""
   "sections/RamificationAfterBlowupPPower.tex" 1785950548.87622 5503 f84060f1d415fcdb3558b79d52652c73 ""
-  "witt/WittVectorAlgebraAppendix.tex" 1787681142.77246 22529 403b425f031c9c989d6d8e367ab8c81e ""
-  "witt/WittVectorPrerequisites.tex" 1787679963.17991 8042 a6494a9345f437f848658f33f11a9e32 ""
+  "witt/WittVectorAlgebraAppendix.tex" 1787769658.99826 20934 90660c0fe015c8967a60779576d5e221 ""
+  "witt/WittVectorPrerequisites.tex" 1787768074.14226 8950 117069ddcf98fc21798c4bbc9b395e58 ""
   (generated)
   "main.aux"
   "main.bcf"

@@ -1,0 +1,57 @@
+2.4.4     The common realization conclusion
+The three theories give the following single conclusion, which is the form needed after the formal
+                     1
+local reduction to Pk .
+
+Lemma 54 (Parallel realization over Gm ). Let k be algebraically closed of characteristic p > 0,
+and let Q be a G-torsor over Spec k((x)).
+
+  1. If Q is tamely ramied, then there are an integer e prime to p, an injection ι : Z/eZ ,→ G,
+     and an integer a prime to e, such that Q is the restriction of the induced G-torsor on Gm
+     obtained from
+                                              T e = xa .
+      This torsor is tamely ramied at 0 and ∞.
+  2. If G = Z/pZ and the ramication of Q is bounded by d, then Q is represented by
+
+                                   X p − X = f (x),      f ∈ x−1 k[x−1 ],
+
+      where either f = 0, or m := degx−1 f < d and p ∤ m. The same equation denes a torsor on
+      Gm extending étale across ∞.
+
+  3. If G = Z/pr Z, the torsor Q is connected, and its ramication is bounded by d, then Q is
+     represented by
+                                                     ℘X⃗ = f⃗,
+
+     where f⃗ = (f0 , . . . , fr−1 ) is reduced and fj ∈ x−1 k[x−1 ]. Put mj := degx−1 fj when fj ̸= 0,
+     and mj := 0 when fj = 0. Then it has the following properties:
+        (a)
+                                        pr−1−j mj < d       (0 ≤ j < r).                          (2.3)
+
+        (b) The same equation denes a Z/pr Z-torsor on Gm whose restriction to Spec k((x)) is Q.
+        (c) This torsor extends étale across ∞.
+
+Proof. For (1), let ρ : Gal(k((x))sep /k((x))) → G classify Q. Since k is algebraically closed, k((x))
+has no nontrivial unramied extension and its tame quotient is procyclic. If Q is tame, the image
+of ρ is therefore a cyclic group of order e prime to p. Let ι : Z/eZ ,→ G identify this image with its
+subgroup of G. Kummer theory identies the corresponding surjective character with the class of
+xa for some a prime to e. Hence Q is induced from T e = xa . The same equation over k[x, x−1 ] is
+étale and denes the required torsor on Gm ; its ramication at both boundary points is tame.
+
+  For (2), ArtinSchreier theory identiesQ with a class in k((x))/℘(k((x))). The length-one
+construction in the proof of Proposition 90 produces a representative f ∈ x
+                                                                               −1 k[x−1 ] which is
+
+zero or has pole order m prime to p. By Theorem 51, the ramication bound is equivalent to
+m < d. The equation X p − X = f is étale over k[x, x−1 ]; since f ∈ k[x−1 ], it also extends over
+Spec k[x−1 ] = P1k \ {0}.
+                ⃗0 ] ∈ Wr (k((x)))/℘ be the class of Q and choose a reduced polynomial representative
+  For (3), let [f
+f⃗ using Proposition 90. Connectedness and Corollary 87 imply f0 ̸= 0. We use the convention for
+mj in the statement. By Theorem 53, the SchmidWitt formula gives
+
+                                         max pr−1−j mj < d,
+                                            j
+
+
+                                                  35
+
