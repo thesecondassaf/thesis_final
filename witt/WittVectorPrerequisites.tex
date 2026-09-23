@@ -34,15 +34,38 @@ Let $A$ be an $\F_p$-algebra.
 
 \begin{proof}
 The first two assertions follow from
-\Cref{prop:witt_multiplication_by_p}. For (iii), apply the ghost principle
-over $\Z[a_0,\dots,a_{r-1},c]$. If
-$\vec b=(0,\dots,0,c)$ and $\vec s=\vec a\oplus\vec b$, then
-$w_n(\vec b)=0$ for $n<r-1$, so induction gives $s_n=a_n$ for
-$n\leq r-2$. At level $r-1$, the identity
-$w_{r-1}(\vec b)=p^{r-1}c$ gives
-$p^{r-1}s_{r-1}=p^{r-1}(a_{r-1}+c)$, hence
-$s_{r-1}=a_{r-1}+c$. The resulting identity of universal integral
-polynomials holds over every $A$.
+\Cref{prop:witt_multiplication_by_p}. For (iii), consider the two operations
+\[
+\begin{aligned}
+ \Phi(\vec X,C)
+ &:=\vec X\oplus V^{r-1}(C)
+   =\bigl(S_n(\vec X;0,\dots,0,C)\bigr)_{0\leq n\leq r-1},\\
+ \Psi(\vec X,C)
+ &:=(X_0,\dots,X_{r-2},X_{r-1}+C).
+\end{aligned}
+\]
+Both are given by universal polynomials with integer coefficients, as required
+in \Cref{lemma:ghost_principle}. Over
+$\Z[X_0,\dots,X_{r-1},C]$, for $n<r-1$ we have
+\[
+ w_n\bigl(\Phi(\vec X,C)\bigr)
+ =w_n(\vec X)+w_n\bigl(V^{r-1}(C)\bigr)
+ =w_n(\vec X)
+ =w_n\bigl(\Psi(\vec X,C)\bigr).
+\]
+For the final ghost component,
+\[
+\begin{aligned}
+ w_{r-1}\bigl(\Phi(\vec X,C)\bigr)
+ &=w_{r-1}(\vec X)+p^{r-1}C\\
+ &=\sum_{i=0}^{r-2}p^iX_i^{p^{r-1-i}}
+   +p^{r-1}(X_{r-1}+C)\\
+ &=w_{r-1}\bigl(\Psi(\vec X,C)\bigr).
+\end{aligned}
+\]
+Thus $w\circ\Phi=w\circ\Psi$, so
+\Cref{lemma:ghost_principle} gives $\Phi=\Psi$ over every commutative ring,
+and in particular over $A$.
 \end{proof}
 
 The last assertion is special to the top Verschiebung slice. Witt addition is

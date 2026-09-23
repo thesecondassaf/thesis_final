@@ -124,13 +124,33 @@ and it is $K_X$-equivariant since
 $\tau_b(y+k)=y+k+b=\tau_b(y)+k$. Its inverse is $\tau_{-b}$, so $T_a$ depends
 only on the class of $a$ modulo $\varphi_X(H(X))$.
 
-When $\varphi$ is finite \'etale and surjective, the exact sequence on
-$X_{\mathrm{\acute et}}$
+When $\varphi$ is finite \'etale and surjective, regard the group schemes
+$K_X$ and $H_X$ as the sheaves that they represent on the \'etale site of
+$X$. Then
 \[
 0\longrightarrow K_X\longrightarrow H_X
 \xrightarrow{\varphi_X}H_X\longrightarrow0
 \]
-has connecting map $a\mapsto[T_a]$ and induces the injection
+is a short exact sequence of sheaves. Applying \'etale cohomology gives the
+beginning of the associated long exact sequence
+\[
+0\longrightarrow H^0_{\mathrm{\acute et}}(X,K_X)
+\longrightarrow H^0_{\mathrm{\acute et}}(X,H_X)
+\xrightarrow{\varphi_X}H^0_{\mathrm{\acute et}}(X,H_X)
+\xrightarrow{\delta}H^1_{\mathrm{\acute et}}(X,K_X).
+\]
+Because $H_X$ is representable, its global sections are
+\[
+H^0_{\mathrm{\acute et}}(X,H_X)
+=\Hom_X(X,H_X)
+=\Hom_S(X,H)
+=H(X).
+\]
+For $a\in H(X)$, the connecting class $\delta(a)$ is represented by the
+sheaf of local lifts of $a$ through $\varphi_X$. This sheaf is precisely the
+pullback $T_a=X\times_{a,H,\varphi}H$, with its $K_X$-action, and hence
+$\delta(a)=[T_a]$. Exactness gives
+$\ker(\delta)=\varphi_X(H(X))$, so $\delta$ descends to the injection
 \begin{equation}\label{eq:common_torsor_connecting_map}
 H(X)/\varphi_X(H(X))\lhook\joinrel\longrightarrow
 H^1_{\mathrm{\acute et}}(X,K_X),
@@ -177,11 +197,39 @@ where $Y$ is automatically a unit because $a$ is a unit. The kernel is
 \[
 \mu_{e,X}=\Spec\bigl(A[t,t^{-1}]/(t^e-1)\bigr),
 \]
-acting by
-$(\zeta,Y)\mapsto\zeta Y$. If $e$ is invertible on $S$ and a primitive root
-$\zeta_e\in\mu_e(S)$ is chosen, then
-$\overline j\mapsto\zeta_e^j$ identifies $(\Z/e\Z)_S$ with $\mu_e$; only
-this identification, not the $\mu_e$-torsor, depends on the choice.
+and it acts on $T_a$ through a morphism
+\[
+\alpha:\mu_{e,X}\times_X T_a\longrightarrow T_a.
+\]
+Writing
+\[
+B=A[Y]/(Y^e-a)
+\quad\text{and}\quad
+D=A[t,t^{-1}]/(t^e-1),
+\]
+the corresponding homomorphism of coordinate rings is
+\[
+\alpha^\#:B\longrightarrow D\otimes_A B,
+\qquad
+\overline Y\longmapsto t\otimes\overline Y,
+\]
+where $\overline Y$ denotes the class of $Y$ in $B$. This is well-defined
+because
+\[
+(t\otimes\overline Y)^e=t^e\otimes\overline Y^e=1\otimes a.
+\]
+Equivalently, for every $X$-scheme $U$,
+\[
+T_a(U)=\{y\in\Gamma(U,\Oo_U)^\times:y^e=a_U\},
+\qquad
+\mu_e(U)=\{\xi\in\Gamma(U,\Oo_U)^\times:\xi^e=1\},
+\]
+and the action sends $(\xi,y)$ to $\xi y$; indeed,
+$(\xi y)^e=\xi^e y^e=a_U$. If $e$ is invertible on $S$ and a primitive
+root $\zeta_e\in\mu_e(S)$ is chosen, then
+$\overline j\mapsto\zeta_e^j$ identifies $(\Z/e\Z)_S$ with $\mu_e$.
+Only this identification, not the $\mu_e$-torsor or its action, depends on
+the choice of $\zeta_e$.
 
 \paragraph{Artin--Schreier.}
 Let $A$ be an $\F_p$-algebra, take $H=\bG_a$, and put
@@ -290,15 +338,17 @@ Let $A$ be a ring.
     A[T]/(T^n-a)
     \]
     is finite free over $A$, with basis $1,T,\dots,T^{n-1}$, and is
-    \'etale over $A$. Multiplication of $T$ makes its spectrum a
-    $\mu_n$-torsor over $\Spec A$.
+    \'etale over $A$. Multiplication on the $T$-coordinate makes its
+    spectrum a representable $\mu_{n,\Spec A}$-torsor over $\Spec A$ for
+    the \'etale topology.
     \item If $A$ is an $\F_p$-algebra and $a\in A$, then
     \[
     A[X]/(X^p-X-a)
     \]
     is finite free over $A$, with basis $1,X,\dots,X^{p-1}$, and is
-    \'etale over $A$. Translation of $X$ makes its spectrum a
-    $\Z/p\Z$-torsor over $\Spec A$.
+    \'etale over $A$. Translation on the $X$-coordinate makes its spectrum
+    a representable $(\Z/p\Z)_{\Spec A}$-torsor over $\Spec A$ for the
+    \'etale topology.
 \end{enumerate}
 \end{lemma}
 
@@ -503,12 +553,39 @@ $r-1$ components of the arguments (\Cref{prop:witt_addition_shape}). Naturality 
 the commutation with the (componentwise) $F$ are clear, and the kernel is computed
 componentwise. (2) Additivity of $V$ follows from \Cref{lemma:ghost_principle} and
 the ghost identity $w_n(V\vec a) = p\, w_{n-1}(\vec a)$ (with $w_{-1} := 0$); the
-commutation $FV = VF$ is immediate since $F$ is componentwise. (3) The identity
-$F V = p$ holds over arbitrary rings for the general Frobenius, by
-\Cref{lemma:ghost_principle} applied to
-$w_n(FV\vec a) = w_{n+1}(V \vec a) = p\, w_n(\vec a) = w_n(p \vec a)$; in
-characteristic $p$ the general Frobenius is componentwise, giving the displayed
-formula. See \cite[II, \S6, Proposition~8 ff.]{serreLF} for details.
+commutation $FV = VF$ is immediate since $F$ is componentwise. (3) Let
+$M_n\in\Z[X_0,\dots,X_n]$ be the $n$-th universal coordinate polynomial for
+multiplication by $p$. Since the ghost map is a ring homomorphism, these
+polynomials satisfy
+\begin{equation}\label{eq:witt_multiplication_p_recursion}
+ p^nM_n
+ =p\,w_n(\vec X)-\sum_{i=0}^{n-1}p^iM_i^{p^{n-i}}.
+\end{equation}
+We claim that
+\[
+ M_0=pX_0,
+ \qquad
+ M_n\equiv X_{n-1}^p\pmod p\quad(n\geq1).
+\]
+The first identity is clear. For the induction step, use
+$(u+pv)^{p^m}\equiv u^{p^m}\pmod{p^{m+1}}$. If the claim holds below index $n$,
+then, modulo $p^{n+1}$, the sum in
+\eqref{witt_multiplication_p_recursion} is
+\[
+ \sum_{i=1}^{n-1}p^iX_{i-1}^{p^{n-i+1}};
+\]
+the $i=0$ term is also $0$ modulo $p^{n+1}$. Cancelling this sum against the
+corresponding terms of $p\,w_n(\vec X)$ gives
+\[
+ p^nM_n\equiv p^nX_{n-1}^p\pmod{p^{n+1}},
+\]
+which proves the claim. After evaluating in the $\F_p$-algebra $A$, we therefore
+obtain
+\[
+ p\cdot(a_0,\dots,a_{r-1})=(0,a_0^p,\dots,a_{r-2}^p)=VF(\vec a),
+\]
+with the appropriate truncation. Since $FV=VF$ by (2), this also gives $FV=p$.
+See \cite[II, \S6, Proposition~8 ff.]{serreLF} for details.
 \end{proof}
 
 \begin{example}\label{example:witt_of_Fp}
