@@ -25,12 +25,12 @@ construction.
 Let $H$ be a commutative group scheme over a scheme $S$, written additively,
 and let $\varphi:H\to H$ be a homomorphism. Its scheme-theoretic kernel
 $K:=\ker(\varphi)$ is defined by the Cartesian square
-\[
+\begin{equation}\label{eq:kernel_square}
 \begin{tikzcd}
 K \arrow[r] \arrow[d] & H \arrow[d,"\varphi"] \\
 S \arrow[r,"0_H"'] & H.
 \end{tikzcd}
-\]
+\end{equation}
 Thus, for every $S$-scheme $U$,
 \begin{equation}\label{eq:kernel_on_U_valued_points}
 K(U)=\ker(\varphi_U)
@@ -405,11 +405,10 @@ is a ring homomorphism to the product ring $A^r$; it is injective when $p$ is a
 non-zero-divisor in $A$, and bijective when $p \in A^\times$.
 \end{theorem}
 
-{\color{blue}
-Equivalently, the universal Witt addition and inverse polynomials make
+(Equivalently, the universal Witt addition and inverse polynomials make
 $\A^r_{\Z}$ an affine commutative group scheme. After base change to
 $\F_p$, this is the additive Witt-vector group scheme $\bW_r$ used in
-\Cref{appendix:asw_development}.}
+\Cref{appendix:asw_development}.)
 
 We index the components of a Witt vector $\vec a = (a_0, \dots, a_{r-1})$ by
 $0, \dots, r-1$. For $r = 1$ the polynomials reduce to $S_0 = X_0 + Y_0$ and

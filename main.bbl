@@ -141,6 +141,39 @@
       \field{title}{Local Fields}
       \field{year}{1979}
     \endentry
+    \entry{milneEC}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=638058cd23e53094700e44c2a4f389f5}{%
+           family={Milne},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Princeton, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{638058cd23e53094700e44c2a4f389f5}
+      \strng{fullhash}{638058cd23e53094700e44c2a4f389f5}
+      \strng{fullhashraw}{638058cd23e53094700e44c2a4f389f5}
+      \strng{bibnamehash}{638058cd23e53094700e44c2a4f389f5}
+      \strng{authorbibnamehash}{638058cd23e53094700e44c2a4f389f5}
+      \strng{authornamehash}{638058cd23e53094700e44c2a4f389f5}
+      \strng{authorfullhash}{638058cd23e53094700e44c2a4f389f5}
+      \strng{authorfullhashraw}{638058cd23e53094700e44c2a4f389f5}
+      \field{extraname}{1}
+      \field{labelalpha}{Mil80}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Princeton Mathematical Series}
+      \field{title}{Étale Cohomology}
+      \field{volume}{33}
+      \field{year}{1980}
+    \endentry
     \entry{koch1997algebraic}{book}{}{}
       \name{author}{1}{}{%
         {{hash=7dc9d693c2843e9c4b5102c0496436c2}{%
@@ -231,6 +264,7 @@
       \strng{authornamehash}{638058cd23e53094700e44c2a4f389f5}
       \strng{authorfullhash}{638058cd23e53094700e44c2a4f389f5}
       \strng{authorfullhashraw}{638058cd23e53094700e44c2a4f389f5}
+      \field{extraname}{2}
       \field{labelalpha}{Mil08}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}

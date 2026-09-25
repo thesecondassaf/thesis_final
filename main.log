@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  26 AUG 2026 21:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  25 SEP 2026 17:43
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -1594,7 +1595,7 @@ Package hyperref Info: bookmark level for unknown cor defaults to 0 on input li
 ne 203.
  [11] [12]
 [13] [14] [15] [16]
-Overfull \hbox (7.08899pt too wide) in paragraph at lines 627--634
+Overfull \hbox (7.08899pt too wide) in paragraph at lines 646--653
 \T1/cmr/m/n/10.95 The uni-ver-sal prop-er-ties of the two quo-tients iden-tify 
 this it-er-ated quo-tient canon-i-cally with $\U/wasy/m/n/10.95 ^^D[]\OMS/cmsy/
 m/n/10.95 nP[]$\T1/cmr/m/n/10.95 .
@@ -1627,18 +1628,21 @@ Chapter 3.
 Appendix A.
 [58
 
-] [59] [60] [61] [62] [63] [64]
+] [59] [60] [61] [62] [63] [64] [65]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 514.
- (./witt/WittVectorPrerequisites.tex [65]
-[66] [67])) [68]
+t line 590.
+ (./witt/WittVectorPrerequisites.tex
+[66] [67] [68]
+Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on inp
+ut line 255.
+ [69] [70])) [71]
 Appendix B.
-(./a_wrong_path/a_wrong_path.tex [69
+(./a_wrong_path/a_wrong_path.tex [72
 
 ]
 Package hyperref Info: bookmark level for unknown construction defaults to 0 on
  input line 67.
- [70] [71] [72] [73] [74]) [75] [76
+ [73] [74] [75] [76] [77]) [78] [79
 
 ]
 (./main.aux)
@@ -1657,65 +1661,61 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45840 strings out of 469006
- 873503 string characters out of 5454814
- 1713474 words of memory out of 5000000
- 73299 multiletter control sequences out of 15000+600000
+ 45920 strings out of 469006
+ 875492 string characters out of 5454814
+ 1713843 words of memory out of 5000000
+ 73367 multiletter control sequences out of 15000+600000
  663262 words of font info for 150 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  107i,19n,110p,3253b,2327s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ectt1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/p
-k/ljfour/jknappen/ec/eccc1095.600pk> </Users/amarzan/Library/texlive/2026basic/
-texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1095.600pk> </Users/amarzan/Library/t
-exlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/
-amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx144
-0.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jk
-nappen/ec/ecbx2074.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecti0800.600pk> </Users/amarzan/Library/texlive/2026
-basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </Users/amarzan/Lib
-rary/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </
-Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-crm0800.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecti1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf
--var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </Users/amarzan/Library/texliv
-e/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/amarz
-an/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600
-pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappe
-n/ec/ecbx1095.600pk> </Users/amarzan/Library/texlive/2026basic/texmf-var/fonts/
-pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/amarzan/Library/texlive/2026basic
-/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/local/texlive/2026b
-asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2
-026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
-ve/2026basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/loc
-al/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
-b></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi9.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr6.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr9.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/ty
-pe1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2026basic/texmf-dist/f
-onts/type1/public/amsfonts/euler/eufm5.pfb></usr/local/texlive/2026basic/texmf-
-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2026basic/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
-026basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
-texlive/2026basic/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/tex
-live/2026basic/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/
-texlive/2026basic/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb></usr/loca
-l/texlive/2026basic/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/loca
-l/texlive/2026basic/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on main.pdf (78 pages, 744170 bytes).
+ </private/tmp/texmf-var-codex/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </
+private/tmp/texmf-var-codex/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </priva
+te/tmp/texmf-var-codex/fonts/pk/ljfour/jknappen/ec/ecbi1095.600pk> </private/tm
+p/texmf-var-codex/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </private/tmp/tex
+mf-var-codex/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </private/tmp/texmf-va
+r-codex/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </private/tmp/texmf-var-cod
+ex/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </private/tmp/texmf-var-codex/fo
+nts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </private/tmp/texmf-var-codex/fonts/p
+k/ljfour/jknappen/ec/ecrm0600.600pk> </private/tmp/texmf-var-codex/fonts/pk/ljf
+our/jknappen/ec/ecrm0800.600pk> </private/tmp/texmf-var-codex/fonts/pk/ljfour/j
+knappen/ec/ecti1095.600pk> </private/tmp/texmf-var-codex/fonts/pk/ljfour/jknapp
+en/ec/ecbx2488.600pk> </private/tmp/texmf-var-codex/fonts/pk/ljfour/jknappen/ec
+/ecrm1095.600pk> </private/tmp/texmf-var-codex/fonts/pk/ljfour/jknappen/ec/tcrm
+1095.600pk> </private/tmp/texmf-var-codex/fonts/pk/ljfour/jknappen/ec/ecbx1095.
+600pk> </private/tmp/texmf-var-codex/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
+> </private/tmp/texmf-var-codex/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></us
+r/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
+pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cmextr
+a/cmex8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026basic/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026basic/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026basic/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026basic/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026basic/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026basic/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026basi
+c/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2
+026basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb></usr/local/tex
+live/2026basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/loc
+al/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+</usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/rsfs/rsfs1
+0.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/stmaryrd/stma
+ry10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/stmaryrd/s
+tmary8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/xypic/xy
+atip10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/xypic/xy
+btip10.pfb>
+Output written on main.pdf (81 pages, 763617 bytes).
 PDF statistics:
- 2146 PDF objects out of 2487 (max. 8388607)
- 1419 compressed objects within 15 object streams
- 462 named destinations out of 1000 (max. 500000)
+ 2202 PDF objects out of 2487 (max. 8388607)
+ 1464 compressed objects within 15 object streams
+ 474 named destinations out of 1000 (max. 500000)
  477 words of extra memory for PDF output out of 10000 (max. 10000000)
 
