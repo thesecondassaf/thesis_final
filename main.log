@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  25 SEP 2026 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  25 SEP 2026 17:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1634,7 +1634,7 @@ t line 590.
  (./witt/WittVectorPrerequisites.tex
 [66] [67] [68]
 Package hyperref Info: bookmark level for unknown theorem* defaults to 0 on inp
-ut line 255.
+ut line 231.
  [69] [70])) [71]
 Appendix B.
 (./a_wrong_path/a_wrong_path.tex [72
@@ -1712,10 +1712,10 @@ ry10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/stmaryrd/s
 tmary8.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/xypic/xy
 atip10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/xypic/xy
 btip10.pfb>
-Output written on main.pdf (81 pages, 763617 bytes).
+Output written on main.pdf (81 pages, 761311 bytes).
 PDF statistics:
- 2202 PDF objects out of 2487 (max. 8388607)
- 1464 compressed objects within 15 object streams
+ 2200 PDF objects out of 2487 (max. 8388607)
+ 1462 compressed objects within 15 object streams
  474 named destinations out of 1000 (max. 500000)
  477 words of extra memory for PDF output out of 10000 (max. 10000000)
 

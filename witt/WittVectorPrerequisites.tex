@@ -177,77 +177,53 @@ dividing $p^r$ occurs in this way.
 \end{theorem}
 
 \begin{proof}
-Let $M^s$ be a separable closure of $M$, and put $\Gamma=\Gal(M^s/M)$.
-The triangular equations in the proof of
-\Cref{lemma:asw_etale_torsor} show that $\wp$ is surjective on $W_r(M^s)$
-and has kernel $W_r(\F_p)\cong\Z/p^r\Z$. Choose $\vec u\in W_r(M^s)$
-with $\wp\vec u=\vec g$. Under the torsor--character correspondence
-of \Cref{cor:abelian_equivilance_fundamental_torsors}, $T_{\vec g}$
-corresponds to
+Put $X=\Spec M$, and write $\bW_{j,M}$ for the base change of $\bW_j$
+to $X$. By \Cref{eq:common_torsor_connecting_map}, the assignment
+$[\vec g]\mapsto[T_{\vec g}]$ is a well-defined injective homomorphism.
+The long exact sequence associated with \Cref{eq:asw_lang_sequence}
+continues with
 \[
-\chi_{\vec g}\colon\Gamma\longrightarrow W_r(\F_p),
-\qquad
-\chi_{\vec g}(\sigma)=\sigma(\vec u)\ominus\vec u.
+W_r(M)\xrightarrow{\delta}
+H^1_{\mathrm{\acute et}}\bigl(X,(\Z/p^r\Z)_X\bigr)
+\longrightarrow H^1_{\mathrm{\acute et}}(X,\bW_{r,M}),
+\qquad \delta(\vec g)=[T_{\vec g}].
 \]
-This is the character of the connecting class $[T_{\vec g}]$ in
-\Cref{eq:common_torsor_connecting_map}.
-
-We first check that this map is well defined. Any other solution of
-$\wp\vec u=\vec g$ is $\vec u\oplus\vec c$ for some
-$\vec c\in W_r(\F_p)$. Since $\Gamma$ fixes $\vec c$, this change does not
-alter $\chi_{\vec g}$. Similarly, replacing $\vec g$ by
-$\vec g\oplus\wp\vec v$, with $\vec v\in W_r(M)$, replaces $\vec u$ by
-$\vec u\oplus\vec v$ and again leaves the character unchanged. If
-$\chi_{\vec g}=0$, then $\vec u$ is fixed by $\Gamma$, so
-$\vec u\in W_r(M)$ by \Cref{eq:witt_invariants_componentwise}. Hence
-$[\vec g]=0$, and the map is injective.
-
-It remains to prove surjectivity. We claim that
+Thus it remains to show that $H^1_{\mathrm{\acute et}}(X,\bW_{r,M})=0$.
+For $r=1$, we have $\bW_{1,M}=\bG_{a,M}$, and this is additive
+Hilbert~90. For $r>1$, \Cref{lemma:witt_bookkeeping}(i)--(ii) gives the
+short exact sequence of abelian sheaves on $X_{\mathrm{\acute et}}$
 \[
-H^1_{\mathrm{cont}}\bigl(\Gamma,W_r(M^s)\bigr)=0.
-\]
-For $r=1$, this is additive Hilbert~90. For $r>1$,
-\Cref{lemma:witt_bookkeeping}(i) gives a short exact sequence of
-$\Gamma$-modules
-\[
-0\longrightarrow M^s\xrightarrow{V^{r-1}}W_r(M^s)
-\xrightarrow{t}W_{r-1}(M^s)\longrightarrow0.
+0\longrightarrow\bG_{a,M}\xrightarrow{V^{r-1}}\bW_{r,M}
+\xrightarrow{t}\bW_{r-1,M}\longrightarrow0.
 \]
 The associated long exact sequence contains
 \[
-H^1_{\mathrm{cont}}(\Gamma,M^s)
+H^1_{\mathrm{\acute et}}(X,\bG_{a,M})
 \longrightarrow
-H^1_{\mathrm{cont}}\bigl(\Gamma,W_r(M^s)\bigr)
+H^1_{\mathrm{\acute et}}(X,\bW_{r,M})
 \longrightarrow
-H^1_{\mathrm{cont}}\bigl(\Gamma,W_{r-1}(M^s)\bigr).
+H^1_{\mathrm{\acute et}}(X,\bW_{r-1,M}).
 \]
 The outer groups vanish by additive Hilbert~90 and induction, so the middle
-group vanishes. The long exact sequence associated with
-\Cref{eq:asw_lang_sequence} now shows that the connecting map is surjective.
-This proves the claimed isomorphism.
+group vanishes. Hence $\delta$ is surjective, proving the claimed
+isomorphism.
 
-Now suppose $[\vec g]$ has order $p^s$, and put
-$H=\operatorname{im}(\chi_{\vec g})$. The isomorphism preserves orders,
-so $\chi_{\vec g}$ has order $p^s$. Since $H$ is cyclic, the order of the
-character equals $|H|$. By \Cref{theorem:equivalence_fundamental_covers},
-the connected components of $T_{\vec g}$ correspond to the $\Gamma$-orbits
-on its geometric fiber. Choosing $\vec u$ identifies that fiber with
-$W_r(\F_p)$, with $\Gamma$ acting by translation through $\chi_{\vec g}$.
-The orbits are the cosets of $H$, so there are $p^{r-s}$ components.
-Each geometric point has stabilizer $\ker(\chi_{\vec g})$ in $\Gamma$.
-Thus each component is isomorphic to $\Spec L$, where
-$L=(M^s)^{\ker(\chi_{\vec g})}$ is cyclic of degree $|H|=p^s$ over $M$.
-The subgroup $H$ preserves each component and acts simply transitively on
-its geometric fiber. Each component is therefore an $H$-torsor, and
-inducing along $H\hookrightarrow W_r(\F_p)$ recovers $T_{\vec g}$.
+Now suppose $[\vec g]$ has order $p^s$. By
+\Cref{cor:abelian_equivilance_fundamental_torsors}, the character associated
+with $T_{\vec g}$ has the same order. Let $H$ be its image. Since $H$ is
+cyclic, the order of the character equals $|H|$, so $|H|=p^s$.
+By \Cref{theorem:equivalence_fundamental_covers}, $T_{\vec g}$ is induced
+from a connected $H$-torsor $\Spec L$, where $L/M$ is cyclic of degree
+$|H|$. This induced torsor is a disjoint union of
+$[\Z/p^r\Z:H]=p^{r-s}$ copies of $\Spec L$, each an $H$-torsor.
+Translation by $\Z/p^r\Z$ permutes these components, so $T_{\vec g}$ is
+induced from any one of them. It is connected precisely when $s=r$.
 
-Conversely, let $L/M$ be cyclic of degree $p^s$ dividing $p^r$, and embed
-$L$ in $M^s$. Choose an injection $\Gal(L/M)\hookrightarrow W_r(\F_p)$
-and compose it with the
-restriction map $\Gamma\to\Gal(L/M)$. By the surjectivity proved above, the
-resulting character is $\chi_{\vec g}$ for some $\vec g\in W_r(M)$. The
-fixed field of its kernel is $L$, so the connected components of $T_{\vec g}$ are
-isomorphic to $\Spec L$.
+Conversely, let $L/M$ be cyclic of degree dividing $p^r$. Choose an
+injection $\Gal(L/M)\hookrightarrow\Z/p^r\Z$ and induce the torsor
+$\Spec L$ along it. The resulting $\Z/p^r\Z$-torsor is isomorphic to some
+$T_{\vec g}$ by the classification just proved, and its connected
+components are copies of $\Spec L$.
 \end{proof}
 
 % [PROPOSED REWRITE, for comparison with the theorem and proof above]
