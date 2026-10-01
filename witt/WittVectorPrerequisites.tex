@@ -309,6 +309,7 @@ $\wp(\widetilde u\oplus V^{r-1}w)=\vec h$.
 
 \begin{prop}[Reduced polynomial representatives]
 \label{prop:reduced_polynomial_representatives}
+Let $k$ be an algebraically closed field of characteristic $p$, and let $r\geq1$.
 Every class in $W_r(k((x)))/\wp W_r(k((x)))$ has a reduced polynomial
 representative.
 \end{prop}
@@ -324,13 +325,36 @@ has leading term $cx^{-m}$ with $p\mid m$, subtract
 This strictly decreases the pole order; iteration produces zero or a pole
 order prime to $p$.
 
-For the inductive step, first reduce the truncation of the given vector and
-lift the change of representative to length $r$. The first $r-1$ components
-are then reduced polynomials. By
-\Cref{lemma:witt_bookkeeping}(iii), subtracting an element of the form
-$\wp(V^{r-1}z)=V^{r-1}(\wp z)$ changes only the last component. Apply the
-length-one procedure to that component: remove its integral part and then
-successively remove leading terms whose pole orders are divisible by $p$.
-This leaves all earlier components unchanged and produces a reduced polynomial
-vector representing the original class.
+For the inductive step, let $\vec g\in W_r(k((x)))$. By induction, there is
+$\vec v\in W_{r-1}(k((x)))$ such that
+\[
+\vec f':=t(\vec g)\ominus\wp\vec v
+\]
+is a reduced polynomial vector. Lift $\vec v$ to
+$\widetilde{\vec v}:=(v_0,\dots,v_{r-2},0)$ and put
+\[
+\vec h:=\vec g\ominus\wp\widetilde{\vec v}.
+\]
+Since truncation commutes with $\wp$, we have $t(\vec h)=\vec f'$.
+Thus $\vec h=(f'_0,\dots,f'_{r-2},h_{r-1})$, and only its last
+component remains to be reduced.
+
+By the length-one case, choose $z\in k((x))$ such that
+$f_{r-1}:=h_{r-1}-\wp z$ is a reduced polynomial. Now set
+\[
+\begin{aligned}
+\vec f
+&:=\vec h\ominus\wp(V^{r-1}z)\\
+&=\vec h\ominus V^{r-1}(\wp z)
+ =(f'_0,\dots,f'_{r-2},f_{r-1}),
+\end{aligned}
+\]
+where the last two equalities follow from
+\Cref{lemma:witt_bookkeeping}(ii)--(iii). Every component of $\vec f$
+is now a reduced polynomial, and
+\[
+\vec f=\vec g\ominus
+\wp\bigl(\widetilde{\vec v}\oplus V^{r-1}z\bigr).
+\]
+Hence $\vec f$ represents the same class as $\vec g$, as required.
 \end{proof}
