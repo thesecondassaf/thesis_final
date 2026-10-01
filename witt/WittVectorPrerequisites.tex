@@ -263,7 +263,8 @@ $p^{r-1}\vec g=(0,\dots,0,g_0^{p^{r-1}})=0$ already in $W_r(M)$.
 
 \begin{definition}\label{definition:reduced_polynomial_vector}
 A vector $\vec g=(g_0,\dots,g_{r-1})\in W_r(k((x)))$ is a
-\textbf{reduced polynomial vector} if it is reduced and every
+\textbf{reduced polynomial vector} if it is reduced in the sense of
+\Cref{definition:reduced_witt_vector} and every
 $g_j\in x^{-1}k[x^{-1}]$.
 \end{definition}
 
@@ -279,9 +280,23 @@ is surjective.
 \begin{proof}
 Proceed by induction on $r$. For $r=1$, given
 $h=\sum_{i\geq0}b_ix^i$, choose $u_0$ with
-$u_0^p-u_0=b_0$ and define the remaining coefficients recursively by
-$u_i=u_{i/p}^p-b_i$, with $u_{i/p}=0$ when $p\nmid i$. Then
-$u^p-u=h$.
+$u_0^p-u_0=b_0$. For $i\geq1$, define
+\[
+u_i=
+\begin{cases}
+u_{i/p}^p-b_i,& p\mid i,\\
+-b_i,& p\nmid i.
+\end{cases}
+\]
+This is recursive because $i/p<i$. Put
+$u=\sum_{i\geq0}u_ix^i\in k[[x]]$. In characteristic $p$,
+\[
+u^p=\sum_{i\geq0}u_i^p x^{pi}.
+\]
+Thus the constant coefficient of $u^p-u$ is $u_0^p-u_0=b_0$.
+For $i\geq1$, its coefficient of $x^i$ is $u_{i/p}^p-u_i=b_i$
+if $p\mid i$, and $-u_i=b_i$ otherwise. Hence every coefficient
+of $u^p-u$ equals the corresponding coefficient of $h$, so $u^p-u=h$.
 
 For $r>1$, choose by induction $\vec u'\in W_{r-1}(k[[x]])$ with
 $\wp\vec u'=t(\vec h)$ and lift it to
