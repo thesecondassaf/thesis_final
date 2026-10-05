@@ -616,15 +616,37 @@ $a_{i,j}$ of weight $p^j$.
 \end{lemma}
 
 \begin{proof}
-The $n$-th ghost polynomial $w_n = \sum_{j \le n} p^j X_j^{p^{n-j}}$ is isobaric of
-weight $p^n$ for this weighting. The recursion
+We first prove the assertion for two summands by induction on $n$.
+For $n=0$, we have $S_0=X_0+Y_0$, which is isobaric of weight $1$.
+Suppose now that $S_j$ is isobaric of weight $p^j$ for every $j<n$.
+The ghost identities give
 \[
 p^n S_n = \sum_{j \le n} p^j \bigl(X_j^{p^{n-j}} + Y_j^{p^{n-j}}\bigr)
 - \sum_{j < n} p^j S_j^{p^{n-j}}
 \]
-preserves isobaricity of weight $p^n$ by induction on $n$: each $S_j$ is isobaric of
-weight $p^j$, so $S_j^{p^{n-j}}$ is isobaric of weight $p^n$. Isobaricity persists
-under iterated substitution of Witt sums into Witt sums (substituting an isobaric
-polynomial of weight $p^j$ for a variable of weight $p^j$ preserves weights), giving
-the statement for $d$-fold sums.
+Each $X_j^{p^{n-j}}$ and $Y_j^{p^{n-j}}$ has weight
+$p^j p^{n-j}=p^n$. Also, every monomial in the expansion of
+$S_j^{p^{n-j}}$ is a product of $p^{n-j}$ monomials of weight $p^j$,
+so it has weight $p^n$. Thus the right-hand side is isobaric of weight
+$p^n$. This identity holds in the universal polynomial ring over $\Z$,
+where multiplication by the nonzero integer $p^n$ does not change which
+monomials occur. Hence $S_n$ is isobaric of weight $p^n$ as well.
+
+We next induct on the number $d$ of summands. Write
+\[
+\vec A^{(d)}:=\bigoplus_{i=1}^{d}\vec a_i
+=\vec a_1\oplus\cdots\oplus\vec a_d,
+\]
+where each variable $a_{i,j}$ has weight $p^j$. For $d=1$, the component
+$A_n^{(1)}=a_{1,n}$ has weight $p^n$. Suppose the assertion holds for
+$d-1$ summands. Then
+\[
+A_n^{(d)}=
+S_n\bigl(A_0^{(d-1)},\dots,A_n^{(d-1)};
+a_{d,0},\dots,a_{d,n}\bigr).
+\]
+By induction, $A_j^{(d-1)}$ is isobaric of weight $p^j$.
+Thus each substituted polynomial has the same weight as the variable it
+replaces, so substitution preserves weights. Since $S_n$ is isobaric of
+weight $p^n$, so is $A_n^{(d)}$, completing the induction.
 \end{proof}
