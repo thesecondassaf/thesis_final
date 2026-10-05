@@ -19,6 +19,18 @@ used:
     &W_r(\F_p)\cong\Z/p^r\Z.
 \end{array}
 \]
+For $e$ invertible, and in characteristic $p$ for the latter two rows,
+the corresponding exact sequences of \'etale sheaves are
+\[
+\begin{gathered}
+1\longrightarrow\mu_e\longrightarrow\bG_m
+\xrightarrow{(-)^e}\bG_m\longrightarrow1,\\
+0\longrightarrow\F_p\longrightarrow\bG_a
+\xrightarrow{z\mapsto z^p-z}\bG_a\longrightarrow0,\\
+0\longrightarrow W_r(\F_p)\longrightarrow\bW_r
+\xrightarrow{F-\mathrm{id}}\bW_r\longrightarrow0.
+\end{gathered}
+\]
 Here the identification in the Kummer row is made after choosing a primitive
 $e$-th root of unity. In every row, pulling back $\varphi$ along a section $a$
 produces the torsor given by the equation $\varphi(X)=a$, and changing $a$ by
@@ -106,12 +118,14 @@ isomorphism class of the torsor. If $[a]\neq0$, adjoining a solution of
 $X^p-X=a$ gives a cyclic field extension of degree $p$; conversely, every
 cyclic extension of degree $p$ arises in this way. When $K=k((x))$ with
 $k$ algebraically closed, every class has a representative in
-$x^{-1}k[x^{-1}]$ whose nonzero pole order is prime to $p$.
+$x^{-1}k[x^{-1}]$ whose nonzero pole order is prime to $p$
+(\Cref{prop:reduced_polynomial_representatives}, case $r=1$).
 
 \begin{theorem}[Ramification in Artin--Schreier Extensions,
 {\cite[Proposition~2.1]{Thomas2005}}]
 \label{theorem:artin_schreier_ramification}
-Let $L/K$ be given by $X^p-X=a$. Then:
+Let $K$ be a complete discretely valued field of characteristic $p$ with
+perfect residue field $\kappa$, and let $L/K$ be given by $X^p-X=a$. Then:
 \begin{enumerate}
     \item If $v_K(a)>0$, or if $v_K(a)=0$ and $a\in\wp(K)$, the extension
     is trivial.
@@ -137,7 +151,7 @@ H^1(K,\Z/p^r\Z):=
 H^1_{\mathrm{\acute et}}(\Spec K,\Z/p^r\Z).
 \]
 Its elements classify $\Z/p^r\Z$-torsors over $K$.
-Artin--Schreier--Witt theory gives a natural isomorphism
+The Artin--Schreier--Witt sequence gives a natural isomorphism
 \[
 H^1(K,\Z/p^r\Z)\cong W_r(K)/\wp W_r(K).
 \]
