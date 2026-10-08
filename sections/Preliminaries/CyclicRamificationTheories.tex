@@ -76,6 +76,14 @@ the torsor. If the class of $a$ has order $n$, adjoining a solution of
 $T^n=a$ gives a cyclic field extension of degree $n$; conversely, every
 cyclic extension of degree $n$ arises in this way.
 
+When $K=k((x))$ with $k$ algebraically closed, every unit in $k[[x]]$ is an
+$n$th power by Hensel's lemma. Thus valuation gives
+\begin{equation}\label{eq:kummer_local_normal_form}
+K^\times/(K^\times)^n\cong\Z/n\Z,\qquad [x]\longmapsto 1.
+\end{equation}
+In particular, a class has order $n$ exactly when it is represented by
+$x^a$ with $\gcd(a,n)=1$.
+
 \begin{theorem}[Ramification in Kummer Extensions,
 {\cite[Proposition~1.83]{koch1997algebraic}}]
 \label{theorem:kummer_ramification}
@@ -198,8 +206,11 @@ Let $K=k((x))$. For $g\in K$, put
 $m(g):=\max(0,-v_x(g))$. A vector
 $\vec g=(g_0,\dots,g_{r-1})\in W_r(K)$ is \textbf{reduced} if, for every
 $j$, either $m(g_j)=0$ or $p\nmid m(g_j)$.
-(Every class in $W_r(K)/\wp W_r(K)$ admits a reduced representative.)
 \end{definition}
+
+Every class in $W_r(K)/\wp W_r(K)$ admits a reduced representative.
+The stronger reduced polynomial normal form for algebraically closed $k$ is
+proved in the appendix (\Cref{prop:reduced_polynomial_representatives}).
 
 \begin{theorem}[Ramification in Artin--Schreier--Witt Extensions
 (Schmid--Witt)]
@@ -214,20 +225,26 @@ u=\max_{0\leq j\leq r-1}p^{r-1-j}m_j.
 \]
 \end{theorem}
 
-The Schmid--Witt formula is an external ramification theorem: we use it as
-stated and do not reproduce its proof. For finite residue fields, the formula
-is due to Kanesaka--Sekiguchi \cite{KanesakaSekiguchi1979} and Thomas
-\cite{Thomas2005}, building on Schmid \cite{Schmid1937} for $r=1$; for
-arbitrary perfect residue fields, it is due to Elder--Keating
-\cite{ElderKeating2025}. We use it in one direction only: evaluating the
-formula on one reduced representative computes the largest upper break, so
-no minimization over representatives is needed.
+The largest upper break is the last index at which an upper-numbering
+ramification group is nontrivial. The formula reads this break from the pole
+orders of the coordinates of a reduced Witt vector. The $j$th coordinate has
+pole order $m_j$, and the formula assigns it the value $p^{r-1-j}m_j$.
+For example, when $r=2$ it says $u=\max\{pm_0,m_1\}$. For any bound
+$d$, the inequality $u<d$ is therefore equivalent to
+$p^{r-1-j}m_j<d$ for every $j$, as required in
+\Cref{eq:parallel_witt_pole_bound} below.
 
-Reducedness prevents cancellation between Witt levels. Indeed, if two
-nonzero pole orders $m_j$ and $m_{j'}$, with $j<j'$, contributed the same
-weighted value, then
-$m_{j'}=p^{j'-j}m_j$ would be divisible by $p$, contradicting reducedness.
-For $r=1$, the formula is exactly the Artin--Schreier break computation.
+The word ``reduced'' matters here. Already for $r=1$, the elements
+$x^{-p}$ and $x^{-1}$ represent the same Artin--Schreier class, since
+$x^{-p}-x^{-1}=\wp(x^{-1})$. The first has pole order $p$, but the reduced
+representative $x^{-1}$ shows that the break is $1$. In this case the formula
+agrees with \Cref{theorem:artin_schreier_ramification}.
+
+We use the Schmid--Witt formula as a known theorem. For finite residue
+fields, it is due to Kanesaka--Sekiguchi \cite{KanesakaSekiguchi1979} and
+Thomas \cite{Thomas2005}, building on Schmid \cite{Schmid1937} for $r=1$;
+for arbitrary perfect residue fields, it is due to Elder--Keating
+\cite{ElderKeating2025}.
 
 \subsection{The common realization conclusion}
 
@@ -240,14 +257,13 @@ needed after the formal--local reduction to $\bP^1_k$.
 Let $k$ be algebraically closed of characteristic $p>0$, and let $\cQ$ be a
 $G$-torsor over $\Spec k((x))$.
 \begin{enumerate}
-    \item If $\cQ$ is tamely ramified, then there are an integer $e$ prime
-    to $p$, an injection $\iota:\Z/e\Z\hookrightarrow G$, and an integer
-    $a$ prime to $e$, such that $\cQ$ is the restriction of the induced
-    $G$-torsor on $\bG_m$ obtained from
+    \item If $G=\Z/e\Z$ with $(e,p)=1$ and $\cQ$ is connected, then
+    $\cQ$ is represented by
     \[
-    T^e=x^a.
+    T^e=x^a
     \]
-    This torsor is tamely ramified at $0$ and $\infty$.
+    for some $a$ prime to $e$. The same equation defines a $G$-torsor
+    on $\bG_m$ that is tamely ramified at $0$ and $\infty$.
 
     \item If $G=\Z/p\Z$ and the ramification of $\cQ$ is bounded by $d$,
     then $\cQ$ is represented by
@@ -282,16 +298,14 @@ $G$-torsor over $\Spec k((x))$.
 \end{lemma}
 
 \begin{proof}
-For (1), let
-$\rho:\Gal(k((x))^{\mathrm{sep}}/k((x)))\to G$ classify $\cQ$. Since
-$k$ is algebraically closed, $k((x))$ has no nontrivial unramified extension
-and its tame quotient is procyclic. If $\cQ$ is tame, the image of $\rho$ is
-therefore a cyclic group of order $e$ prime to $p$. Let
-$\iota:\Z/e\Z\hookrightarrow G$ identify this image with its subgroup of
-$G$. Kummer theory identifies the corresponding surjective character with
-the class of $x^a$ for some $a$ prime to $e$. Hence $\cQ$ is induced from
-$T^e=x^a$. The same equation over $k[x,x^{-1}]$ is \'etale and defines the
-required torsor on $\bG_m$; its ramification at both boundary points is tame.
+For (1), choose $\mu_e\cong G$. Kummer theory and
+\Cref{eq:kummer_local_normal_form} represent $\cQ$ by $x^a$ for some
+integer $a$. Since $\cQ$ is connected and $k$ is algebraically closed,
+its extension is totally ramified of degree $e$; hence
+\Cref{theorem:kummer_ramification} gives $\gcd(a,e)=1$.
+The equation $T^e=x^a$ is \'etale over $k[x,x^{-1}]$
+and defines the required torsor on $\bG_m$; its ramification at both
+boundary points is tame.
 
 For (2), Artin--Schreier theory identifies $\cQ$ with a class in
 $k((x))/\wp(k((x)))$. The length-one construction in the proof of
