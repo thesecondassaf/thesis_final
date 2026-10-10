@@ -366,9 +366,16 @@ kernel $G$. For a section $a:X\to H$, write
 \[
     \mathcal T_a:=X\times_{a,H,\varphi}H.
 \]
-Thus $\mathcal T_a$ is a $G$-torsor on $X$. We write $\star$ for the group
-law of $H$: multiplication on $\bG_m$, ordinary addition on $\bG_a$, and
-Witt addition on $\bW_r$.
+Thus $\mathcal T_a$ is a $G$-torsor on $X$. Equivalently, for every
+$X$-scheme $U$,
+\[
+    \mathcal T_a(U)=
+    \{h\in H(U):\varphi(h)=a|_U\}.
+\]
+In other words, a point of $\mathcal T_a$ is an element of $H$ lying over
+$a$ under $\varphi$. We write $\star$ for the group law of $H$:
+multiplication on $\bG_m$, ordinary addition on $\bG_a$, and Witt addition
+on $\bW_r$.
 
 \begin{prop}[Common cyclic product calculation]
 \label{prop:parallel_cyclic_product_torsor}
@@ -378,25 +385,40 @@ isomorphism of $G$-torsors
     \mathcal T_{a_1}\otimes^G\cdots\otimes^G\mathcal T_{a_d}
        \cong \mathcal T_{a_1\star\cdots\star a_d}.
 \]
-On equation coordinates it is induced by
+On local sections it is induced by
 \[
-    (X_1,\dots,X_d)\longmapsto
-    Y:=X_1\star\cdots\star X_d,
-    \qquad
-    \varphi(Y)=a_1\star\cdots\star a_d.
+    [(h_1,\dots,h_d)]\longmapsto
+    h_1\star\cdots\star h_d,
+    \qquad h_i\in\mathcal T_{a_i}.
 \]
 If a group $\Gamma$ permutes the indices, this isomorphism is
 $\Gamma$-equivariant and therefore compatible with descent to the quotient.
 \end{prop}
 
 \begin{proof}
-The product $\prod_i\mathcal T_{a_i}$ is a $G^d$-torsor. Contracting along
-the multiplication homomorphism $G^d\to G$ gives its quotient by $\KG$.
-The displayed map is $\KG$-invariant because the kernel translations cancel
-under $\star$, and it is equivariant for the residual $G$-action. Its target
-is a $G$-torsor because it is the pullback of $\varphi$. Hence it is an
-isomorphism by \Cref{prop:torsor_morphism_iso}. Commutativity and
-associativity of $\star$ give the permutation-equivariance.
+The product $\prod_i\mathcal T_{a_i}$ is a $G^d$-torsor. The contracted
+product on the left is obtained by pushing this torsor forward along the
+multiplication homomorphism $G^d\to G$; equivalently, it is the quotient by
+$\KG$. Concretely, an element $(g_1,\dots,g_d)\in\KG$ sends
+$(h_1,\dots,h_d)$ to
+$(g_1\star h_1,\dots,g_d\star h_d)$. Since
+$g_1\star\cdots\star g_d$ is the identity, the product
+$h_1\star\cdots\star h_d$ is unchanged. Hence the displayed map is
+$\KG$-invariant and descends to the contracted product. Moreover, since
+$\varphi$ is a homomorphism,
+\[
+    \varphi(h_1\star\cdots\star h_d)
+       =\varphi(h_1)\star\cdots\star\varphi(h_d)
+       =a_1\star\cdots\star a_d,
+\]
+so the descended map takes values in
+$\mathcal T_{a_1\star\cdots\star a_d}$. Translating the contracted product
+by $g\in G$ translates $h_1\star\cdots\star h_d$ by the same element, so
+this map is $G$-equivariant. Its target is a $G$-torsor because it is the
+pullback of $\varphi$; hence the map is an isomorphism by
+\Cref{prop:torsor_morphism_iso}. Finally, commutativity and associativity of
+$\star$ show that permuting the pairs $(a_i,h_i)$ does not change their
+product, which gives the asserted $\Gamma$-equivariance.
 \end{proof}
 
 We shall also pass from the connected inertia torsor to the original torsor.
