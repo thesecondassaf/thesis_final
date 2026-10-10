@@ -559,9 +559,18 @@ For each $i \in  \llbracket 1, d \rrbracket$ let $p_i : X^{\times_S d} \to X$ be
 p_1^{-1}\cP \otimes^G \cdots \otimes^G p_d^{-1}\cP = \KG \backslash \cP^{\times_S d}
 \]
 over $X^{\times_S d}$, where $\KG \subseteq G^d$ is the kernel of the multiplication morphism $G^d \to G$ (the dependence on $d$ is suppressed in the notation).
-\footnote{
-    Equivantly, the sum is obtained as the contracted product of the $G^d$-torsor $p_1^{-1}\cP_1 \times \dots \times p_d^{-1}\cP_d$ along the multiplication map
-$m: G^d \to G$. }
+Equivalently, this is the contraction of the $G^d$-torsor
+$p_1^{-1}\cP\times\cdots\times p_d^{-1}\cP$ along the multiplication map
+$m:G^d\to G$.
+Under the identification $G^d/\KG\simeq G$ induced by $m$, the residual
+$G$-action is given by
+\[
+g\cdot[(u_1,\dots,u_d)]
+    =[(g_1u_1,\dots,g_du_d)],
+\]
+where $(g_1,\dots,g_d)$ is any lift of $g$, so that
+$g_1\cdots g_d=g$. This is independent of the chosen lift because any two
+lifts differ by an element of $\KG$.
 The object $\KG \backslash \cP^{\times_S d}$ of $S_{\text{Ét}}$ is too representable by an $S$-scheme which is finite étale over $X^{\times_S d}$.
 The group ${S}_d$ acts on the right on $\KG \backslash \cP^{\times_S d}$ by the formula
 \[

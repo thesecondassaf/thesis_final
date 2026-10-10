@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  10 OCT 2026 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  10 OCT 2026 23:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1546,7 +1546,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...to the Full Modulus}{48}{subsection.3.3.1}
+l.30 ...to the Full Modulus}{50}{subsection.3.3.1}
                                                   % [1
 
 ])
@@ -1605,7 +1605,7 @@ ne 203.
 [15]
 
 [16]
-Overfull \hbox (7.08899pt too wide) in paragraph at lines 646--653
+Overfull \hbox (7.08899pt too wide) in paragraph at lines 655--662
 \T1/cmr/m/n/10.95 The uni-ver-sal prop-er-ties of the two quo-tients iden-tify 
 this it-er-ated quo-tient canon-i-cally with $\OT1/cmr/m/n/10.95 ^^D[]\OMS/cmsy
 /m/n/10.95 nP[]$\T1/cmr/m/n/10.95 .
@@ -1615,45 +1615,45 @@ this it-er-ated quo-tient canon-i-cally with $\OT1/cmr/m/n/10.95 ^^D[]\OMS/cmsy
 
 [17]
 
-[18] <xymatrix 2x2 154>)
+[18] <xymatrix 2x2 154>
 
-[19]
+[19])
+
+[20]
 Chapter 2.
 (./sections/RamificationAfterBlowupIntroduction.tex
 
-[20
+[21
 
 ]) (./sections/Preliminaries/LocalRamificationPreliminaries.tex
 
-[21]
+[22]
 
-[22]) (./sections/Preliminaries/GTorsorRamification.tex <xymatrix 2x2 154>
-
-[23]
+[23]) (./sections/Preliminaries/GTorsorRamification.tex <xymatrix 2x2 154>
 
 [24]
 
 [25]
+
+[26]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 177.
 
 
-[26]
+[27]
 Package hyperref Info: bookmark level for unknown cor* defaults to 0 on input l
 ine 245.
 
 
-[27]) (./sections/Preliminaries/ReductionsBeforeCyclicTheories.tex
-
-[28]
+[28]) (./sections/Preliminaries/ReductionsBeforeCyclicTheories.tex
 
 [29]
 
 [30]
 
-[31]) (./sections/Preliminaries/CyclicRamificationTheories.tex
+[31]
 
-[32]
+[32]) (./sections/Preliminaries/CyclicRamificationTheories.tex
 
 [33]
 
@@ -1663,27 +1663,27 @@ ine 245.
 
 [36]
 
-[37]) (./sections/RamificationAfterBlowupIsTame.tex
+[37]
 
-[38]
+[38]) (./sections/RamificationAfterBlowupIsTame.tex
 
-[39] (./sections/RamificationAfterBlowupPPower.tex
+[39]
 
 [40]
 
-[41])) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
+[41] (./sections/RamificationAfterBlowupPPower.tex
 
-[42]
+[42])
+
+[43]) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
+
+[44]
 Chapter 3.
 
 
-[43
+[45
 
 ]
-
-[44]
-
-[45]
 
 [46]
 
@@ -1705,19 +1705,19 @@ Chapter 3.
 
 [55]
 
-[56]) (./witt/WittVectorAlgebraAppendix.tex
+[56]
 
 [57]
+
+[58]) (./witt/WittVectorAlgebraAppendix.tex
+
+[59]
 Appendix A.
 
 
-[58
+[60
 
 ]
-
-[59]
-
-[60]
 
 [61]
 
@@ -1728,44 +1728,48 @@ Appendix A.
 [64]
 
 [65]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 590.
- (./witt/WittVectorPrerequisites.tex
 
 [66]
 
 [67]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
+t line 590.
+ (./witt/WittVectorPrerequisites.tex
 
 [68]
 
 [69]
 
-[70]))
+[70]
 
 [71]
+
+[72]))
+
+[73]
 Appendix B.
 (./a_wrong_path/a_wrong_path.tex
 
-[72
+[74
 
 ]
 Package hyperref Info: bookmark level for unknown construction defaults to 0 on
  input line 67.
 
 
-[73]
-
-[74]
-
 [75]
 
 [76]
 
-[77])
+[77]
 
 [78]
 
-[79
+[79])
+
+[80]
+
+[81
 
 ] (./main.aux)
  ***********
@@ -1779,9 +1783,9 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45911 strings out of 473190
- 873457 string characters out of 5715800
- 1702065 words of memory out of 5000000
+ 45912 strings out of 473190
+ 873465 string characters out of 5715800
+ 1702070 words of memory out of 5000000
  67899 multiletter control sequences out of 15000+600000
  596350 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1828,10 +1832,10 @@ lic/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
 c/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/x
 ypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/
 xybtip10.pfb>
-Output written on main.pdf (81 pages, 934704 bytes).
+Output written on main.pdf (83 pages, 932927 bytes).
 PDF statistics:
- 1625 PDF objects out of 1728 (max. 8388607)
- 1442 compressed objects within 15 object streams
- 473 named destinations out of 1000 (max. 500000)
+ 1631 PDF objects out of 1728 (max. 8388607)
+ 1446 compressed objects within 15 object streams
+ 474 named destinations out of 1000 (max. 500000)
  477 words of extra memory for PDF output out of 10000 (max. 10000000)
 
