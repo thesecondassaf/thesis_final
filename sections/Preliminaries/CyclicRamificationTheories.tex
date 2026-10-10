@@ -279,65 +279,79 @@ $G$-torsor over $\Spec k((x))$.
     \[
     \wp\vec X=\vec f,
     \]
-    where $\vec f=(f_0,\dots,f_{r-1})$ is reduced and
-    $f_j\in x^{-1}k[x^{-1}]$. Put
-    $m_j:=\deg_{x^{-1}}f_j$ when $f_j\neq0$, and $m_j:=0$ when $f_j=0$.
-    Then it has the following properties:
-    \begin{enumerate}
-        \item \label{item:realization_Wr_polebound}
-        \begin{equation}\label{eq:parallel_witt_pole_bound}
-        p^{r-1-j}m_j<d\qquad(0\leq j<r).
-        \end{equation}
-        \item \label{item:realization_Wr_torsor}
-        The same equation defines a $\Z/p^r\Z$-torsor on $\bG_m$ whose
-        restriction to $\Spec k((x))$ is $\cQ$.
-        \item \label{item:realization_Wr_infty}
-        This torsor extends \'etale across $\infty$.
-    \end{enumerate}
+    where $\vec f=(f_0,\dots,f_{r-1})$ is reduced, each
+    $f_j\in x^{-1}k[x^{-1}]$, and, writing
+    $m_j:=\deg_{x^{-1}}f_j$ (with $m_j=0$ if $f_j=0$),
+    \begin{equation}\label{eq:parallel_witt_pole_bound}
+    p^{r-1-j}m_j<d\qquad(0\leq j<r).
+    \end{equation}
+    The same equation defines a torsor on $\bG_m$ extending \'etale across
+    $\infty$.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-For (1), choose $\mu_e\cong G$. Kummer theory and
-\Cref{eq:kummer_local_normal_form} represent $\cQ$ by $x^a$ for some
-integer $a$. Since $\cQ$ is connected and $k$ is algebraically closed,
-its extension is totally ramified of degree $e$; hence
-\Cref{theorem:kummer_ramification} gives $\gcd(a,e)=1$.
+For (1), choose $\mu_e\cong G$. By Kummer theory, $\cQ$ is represented by
+an equation $T^e=b$ for some $b\in k((x))^\times$. By
+\Cref{eq:kummer_local_normal_form}, $[b]=[x^a]$ in
+$k((x))^\times/(k((x))^\times)^e$ for some integer $a$. Thus
+$b=x^ac^e$ for some $c\in k((x))^\times$, and replacing $T$ by $T/c$
+gives the equation $T^e=x^a$. Connectedness means that the class $[x^a]$
+has order $e$; under \Cref{eq:kummer_local_normal_form}, this is equivalent
+to $\gcd(a,e)=1$.
 The equation $T^e=x^a$ is \'etale over $k[x,x^{-1}]$
-and defines the required torsor on $\bG_m$; its ramification at both
+and defines the required torsor on $\bG_m$. At $0$ and $\infty$ the
+valuations of $x^a$ are $a$ and $-a$, respectively, so
+\Cref{theorem:kummer_ramification} shows that its ramification at both
 boundary points is tame.
 
-For (2), Artin--Schreier theory identifies $\cQ$ with a class in
-$k((x))/\wp(k((x)))$. The length-one construction in the proof of
-\Cref{prop:reduced_polynomial_representatives} produces a representative
-$f\in x^{-1}k[x^{-1}]$ which is zero or has pole order $m$ prime to $p$.
-By \Cref{theorem:artin_schreier_ramification}, the ramification bound is
-equivalent to $m<d$. The equation $X^p-X=f$ is \'etale over
-$k[x,x^{-1}]$; since $f\in k[x^{-1}]$, it also extends over
+For (2), Artin--Schreier theory represents $\cQ$ as
+$\Spec\bigl(k((x))[X]/(X^p-X-b)\bigr)$ for some $b\in k((x))$, with
+$\F_p\cong G$ acting by $X\mapsto X+\lambda$. The length-one construction
+in the proof of \Cref{prop:reduced_polynomial_representatives} gives an
+$f\in x^{-1}k[x^{-1}]$ with $[f]=[b]$ in $k((x))/\wp(k((x)))$, where
+either $f=0$, or $m:=\deg_{x^{-1}}f$ is prime to $p$. Thus
+$b-f=c^p-c$ for some $c\in k((x))$, and replacing $X$ by $X-c$ gives the
+equation $X^p-X=f$ for $\cQ$. If $f=0$, then $\cQ$ is trivial; otherwise,
+\Cref{theorem:artin_schreier_ramification} identifies $m$ with its unique
+upper ramification break, so the assumed ramification bound is equivalent
+to $m<d$. The same equation defines a torsor over $\bG_m$: it is finite
+\'etale over $k[x,x^{-1}]$ because its derivative with respect to $X$ is
+$-1$, and since $f\in k[x^{-1}]$, it extends \'etale over
 $\Spec k[x^{-1}]=\bP^1_k\setminus\{0\}$.
 
-For (3), let $[\vec f_0]\in W_r(k((x)))/\wp$ be the class of $\cQ$ and
-choose a reduced polynomial representative $\vec f$ using
-\Cref{prop:reduced_polynomial_representatives}. Connectedness and
-\Cref{cor:asw_class_order_and_first_component} imply $f_0\neq0$. We use
-the convention for $m_j$ in the statement. By
-\Cref{theorem:schmid_witt_break_formula}, the Schmid--Witt formula gives
+For (3), Artin--Schreier--Witt theory represents $\cQ$ by an equation
+$\wp\vec X=\vec g$ for some $\vec g\in W_r(k((x)))$, with
+$W_r(\F_p)\cong G$ acting by Witt translation
+$\vec X\mapsto\vec X\oplus\vec c$. By
+\Cref{prop:reduced_polynomial_representatives}, the class $[\vec g]$ has a
+reduced representative $\vec f=(f_0,\dots,f_{r-1})$ with each
+$f_j\in x^{-1}k[x^{-1}]$. Thus
+$\vec g=\vec f\oplus\wp\vec h$ for some $\vec h\in W_r(k((x)))$, and the
+change of variables $\vec Y=\vec X\ominus\vec h$ gives
+$\wp\vec Y=\vec f$; renaming $\vec Y$ as $\vec X$ gives the equation in the
+statement. Connectedness means that $[\vec f]$ has order $p^r$, so
+\Cref{cor:asw_class_order_and_first_component} gives $f_0\neq0$. Since $k$
+is algebraically closed, the corresponding degree-$p^r$ extension is totally
+ramified. With the convention for $m_j$ in the statement,
+\Cref{theorem:schmid_witt_break_formula} therefore gives
 \[
 \max_j p^{r-1-j}m_j<d,
 \]
-which is \Cref{eq:parallel_witt_pole_bound}. By
-\Cref{lemma:asw_etale_torsor}, the equation
-$\wp\vec X=\vec f$ defines a $\Z/p^r\Z$-torsor over $\bG_m$ with the
-prescribed local class. Since every $f_j$ lies in $k[x^{-1}]$, the same lemma
-applied over $k[x^{-1}]$ extends the torsor \'etale across $\infty$.
+which is equivalent to \Cref{eq:parallel_witt_pole_bound}. Finally,
+\Cref{lemma:asw_etale_torsor} applied over $k[x,x^{-1}]$ shows that the same
+equation defines a $\Z/p^r\Z$-torsor over $\bG_m$ whose restriction is
+$\cQ$. Since every $f_j$ lies in $k[x^{-1}]$, applying the same lemma over
+$k[x^{-1}]$ extends this torsor \'etale across $\infty$.
 \end{proof}
 
 \begin{rem*}\label{rem:realization_Wr_sanity}
-In part~(3), the weighted pole bound forces $f_j=0$ whenever
-$p^{r-1-j}\geq d$: if $f_j\neq0$, then $m_j$ is a positive integer and
-$p^{r-1-j}m_j\geq d$, contradicting
-\Cref{eq:parallel_witt_pole_bound}. Thus a break smaller than $d$ imposes a
-visible restriction on every Witt component, not only on the last one.
+The weighted pole bound in part~(3) has the following immediate consequence.
+If $p^{r-1-j}\geq d$, then $m_j$ cannot be positive, so $f_j=0$. Thus
+sufficiently early Witt coordinates must vanish. In particular, since
+connectedness requires $f_0\neq0$, a connected $\Z/p^r\Z$-torsor necessarily
+has $d>p^{r-1}$. This observation is only a sanity check explaining the
+meaning of the weights and will not be used below.
 \end{rem*}
 
 \subsection{Three common inputs for the cyclic calculations}

@@ -1,7 +1,7 @@
 {
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.view.pdf.ref.viewer": "tabOrBrowser",
-  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.formatting.latex": "latexindent",
   "latex-workshop.latex.recipe.default": "lastUsed",
@@ -16,9 +16,9 @@
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
-      "command": "/usr/local/texlive/2026basic/bin/universal-darwin/latexmk",
+      "command": "/Library/TeX/texbin/latexmk",
       "env": {
-        "PATH": "/usr/local/texlive/2026basic/bin/universal-darwin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+        "PATH": "/Library/TeX/texbin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
       },
       "args": [
         "-pdf",
