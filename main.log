@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  11 OCT 2026 23:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  13 OCT 2026 10:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1585,13 +1585,12 @@ ine 44.
 
 
 [9]
-Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input l
-ine 186.
-
 
 [10]
+Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input l
+ine 194.
 Package hyperref Info: bookmark level for unknown cor defaults to 0 on input li
-ne 203.
+ne 211.
 
 
 [11]
@@ -1605,7 +1604,7 @@ ne 203.
 [15]
 
 [16]
-Overfull \hbox (7.08899pt too wide) in paragraph at lines 655--662
+Overfull \hbox (7.08899pt too wide) in paragraph at lines 663--670
 \T1/cmr/m/n/10.95 The uni-ver-sal prop-er-ties of the two quo-tients iden-tify 
 this it-er-ated quo-tient canon-i-cally with $\OT1/cmr/m/n/10.95 ^^D[]\OMS/cmsy
 /m/n/10.95 nP[]$\T1/cmr/m/n/10.95 .
@@ -1673,9 +1672,9 @@ ine 245.
 
 [41] (./sections/RamificationAfterBlowupPPower.tex
 
-[42])
+[42]
 
-[43]) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
+[43])) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
 
 [44]
 Chapter 3.
@@ -1832,7 +1831,7 @@ lic/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
 c/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/x
 ypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/
 xybtip10.pfb>
-Output written on main.pdf (83 pages, 932968 bytes).
+Output written on main.pdf (83 pages, 934148 bytes).
 PDF statistics:
  1631 PDF objects out of 1728 (max. 8388607)
  1446 compressed objects within 15 object streams

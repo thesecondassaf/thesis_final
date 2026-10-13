@@ -20,7 +20,7 @@
 \contentsline {paragraph}{Classes and equations.}{35}{section*.15}%
 \contentsline {subsection}{\numberline {2.4.4}The common realization conclusion}{36}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}Three common inputs for the cyclic calculations}{37}{subsection.2.4.5}%
-\contentsline {section}{\numberline {2.5}The Cyclic Exceptional--Divisor Calculation and Final Assembly}{39}{section.2.5}%
+\contentsline {section}{\numberline {2.5}The Cyclic Exceptional--Divisor Calculation and Final Assembly}{40}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Geometric Class Field Theory}{45}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Generalized Picard Schemes and the Abel--Jacobi Map}{46}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}The generalized Picard scheme}{46}{subsection.3.1.1}%
