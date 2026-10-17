@@ -26,39 +26,49 @@ $\ndls=dP\subset\mdls$ be a single-point submodulus.
 \end{theorem}
 
 \begin{proof}
-By \Cref{section:reductions_before_cyclic_theories}, we may work over an
-algebraically closed field and regard $P$ as rational. Choose a uniformizer
-$x$ at $P$, let
+Since $k$ is algebraically closed, $P$ is $k$-rational. Choose a uniformizer
+$x$ at $P$. It identifies the completed local ring at $P$ with $k[[x]]$
+and its fraction field with $k((x))$. Let $\cP_x$ be the restriction of
+$\cP$ to the punctured formal disc $\Spec k((x))$. By
+\Cref{cor:abelian_equivilance_fundamental_torsors}, the isomorphism class of
+$\cP_x$ corresponds to a unique continuous homomorphism
 \[
-    \rho:\Gal(k((x))^{\mathrm{sep}}/k((x)))\longrightarrow G
+    \rho:\Gal(k((x))^{\mathrm{sep}}/k((x)))\longrightarrow G.
 \]
-classify the punctured-formal-disc restriction $\cP_x$, and put
-$H:=\operatorname{im}(\rho)$. If $H$ is trivial, then $\cP_x$ and its
-symmetric power are trivial, so the conclusion follows from
-\Cref{lemma:formal_local_invariance}.
+Put $H:=\operatorname{im}(\rho)$. Under the construction of
+\Cref{theorem:equivalence_fundamental_covers}, the surjection onto $H$
+determines a connected $H$-torsor $\cQ$ over $\Spec k((x))$, and, for the
+inclusion $\iota:H\hookrightarrow G$, one has
+$\cP_x\cong\iota_*\cQ$.
+If $H$ is trivial, then $\cP_x$ is trivial. Formal--local invariance
+(\Cref{lemma:formal_local_invariance}) then shows that $\cP^{[d]}$ is
+unramified at $\eta_\ndls$, which proves all three conclusions in this case.
 
-Assume $H\neq0$. The surjective character with image $H$ defines a connected
-$H$-torsor $\cQ$ over $\Spec k((x))$, and
-$\cP_x\cong\iota_*\cQ$ for the inclusion $\iota:H\hookrightarrow G$.
-Since $k[[x]]$ is complete with perfect residue field, whenever a
-ramification bound is assumed, it passes from $\cP_x$ to $\cQ$ by
-\Cref{lemma:ramification_of_induced_torsor}(3).
-By
-\Cref{lemma:realization_over_Gm}, the torsor $\cQ$ is realized by an explicit
-connected $H$-torsor $\cQ'$ on $\bG_m$. Moreover,
+Assume $H\neq0$. In parts~(2) and~(3), the assumed ramification bound passes
+from $\cP_x$ to $\cQ$ by
+\Cref{lemma:ramification_of_induced_torsor}(3), because $k[[x]]$ is complete
+and its residue field $k$ is perfect.
+
+The realization lemma (\Cref{lemma:realization_over_Gm}) gives an explicit
+connected $H$-torsor $\cQ'$ on $\bG_m$ whose restriction to
+$\Spec k((x))$ is $\cQ$. Hence the induced $G$-torsor $\iota_*\cQ'$ has the
+same punctured-formal-disc restriction as $\cP$. The reduction to $\bP^1$
+(\Cref{cor:reduction_to_P1}) therefore identifies the relevant ramification
+of $\cP^{[d]}$ with that of $(\iota_*\cQ')^{[d]}$. The compatibility of
+symmetric powers with induced torsors gives
 \[
     (\iota_*\cQ')^{[d]}
        \cong\iota_*(\cQ'^{[d]})
 \]
-by \Cref{lemma:symmetric_power_induced_torsor}, and parts~(1) and~(2) of
-\Cref{lemma:ramification_of_induced_torsor} show that the corresponding tame
-or unramified conclusion passes from $\cQ'^{[d]}$ to
-$\iota_*(\cQ'^{[d]})$. Therefore
-\Cref{cor:reduction_to_P1} reduces every case to the connected explicit model
+by \Cref{lemma:symmetric_power_induced_torsor}. Parts~(1) and~(2) of
+\Cref{lemma:ramification_of_induced_torsor} then show that tameness or
+unramifiedness of $\cQ'^{[d]}$ is equivalent to the same property for the
+induced torsor. Thus it is enough to treat the connected explicit model
 \[
     C=\bP^1_k,\qquad U=\bG_m,\qquad \ndls=d\cdot0.
 \]
-We rename $H$ as $G$ for the calculation.
+For the rest of the calculation, we rename the subgroup $H$ as $G$ and the
+realized torsor $\cQ'$ as $\cP$.
 
 Write $x_1,\dots,x_d$ for the coordinates on $\bG_m^d$ and
 $e_1,\dots,e_d$ for their elementary symmetric polynomials. By
@@ -69,14 +79,17 @@ the generic point $\eta=\eta_{d\cdot0}$ of the exceptional divisor are
     \widehat K_\eta=\kappa((e_d)),\qquad
     \kappa=k(e_1/e_d,\dots,e_{d-1}/e_d).
 \end{equation}
-The three calculations have the common shape
+Each of the three calculations follows the same plan. We write the local
+torsor in a standard form, combine the $d$ equations using the relevant group
+law, and check the resulting coefficient at the exceptional valuation. The
+calculation has the following shape:
 \[
 \begin{array}{c|c|c|c}
  &\Z/e\Z&\Z/p\Z&\Z/p^r\Z\\ \hline
-\text{normal form}&T^e=x^a&X^p-X=f&\wp\vec X=\vec f\\
-\text{product coordinate}&\prod_iT_i&\sum_iX_i&\bigoplus_i\vec X_i\\
-\text{new datum}&e_d^a&\sum_i f(x_i)&\bigoplus_i\vec f(x_i)\\
-\text{exceptional behavior}&v(e_d^a)=a&\text{regular}&
+\text{local equation}&T^e=x^a&X^p-X=f&\wp\vec X=\vec f\\
+\text{$d$-fold coordinate}&\prod_iT_i&\sum_iX_i&\bigoplus_i\vec X_i\\
+\text{coefficient after descent}&e_d^a&\sum_i f(x_i)&\bigoplus_i\vec f(x_i)\\
+\text{at the exceptional valuation}&v(e_d^a)=a&\text{regular}&
     \text{componentwise regular}\\
 \text{conclusion}&\text{tame}&\text{unramified}&\text{unramified}.
 \end{array}
@@ -84,7 +97,9 @@ The three calculations have the common shape
 
 \medskip
 \noindent\textbf{Case (1): Kummer.}
-The relevant group scheme is $\bG_m$. More precisely, the connected torsor is
+Because $k$ is algebraically closed and $(e,p)=1$, the group scheme $\mu_e$
+is constant, and we choose an identification $\mu_e\cong G$. The connected
+torsor is
 the pullback of the finite \'etale homomorphism
 \[
     [e]:\bG_m\longrightarrow\bG_m,\qquad T\longmapsto T^e,
@@ -130,9 +145,10 @@ only on its coefficients. Since
 \]
 Its generic fiber over $\widehat K_\eta$ is therefore the restriction of
 $\cP^{[d]}$ and is given by the same Kummer equation. The defining element
-$e_d^a$ has valuation $a$; thus
-\Cref{theorem:kummer_ramification}, together with $(e,p)=1$, shows that every
-field factor is tamely ramified. This proves part~(1).
+$e_d^a$ has valuation $a$. Since $(a,e)=1$,
+\Cref{theorem:kummer_ramification} gives ramification index
+$e/\gcd(e,a)=e$. This index is prime to $p$, so the extension is tamely
+ramified. This proves part~(1).
 
 \medskip
 \noindent\textbf{Case (2): Artin--Schreier.}
@@ -183,6 +199,8 @@ then $\alpha=0$. Hence \Cref{lemma:symmetric_regularity} gives
 \[
     \alpha\in\kappa\subset\widehat\Oo_\eta.
 \]
+This is the key point: although the individual functions $f(x_i)$ have poles
+at $x_i=0$, their symmetric sum has no pole at the exceptional valuation.
 Set $A:=\widehat\Oo_\eta$ and
 \[
     B:=A[Y]/(Y^p-Y-\alpha).
@@ -209,11 +227,18 @@ in the sense of \Cref{definition:tamely_ramified_dvrs}. This proves part~(2).
 \end{proof}
 
 \begin{proof}[Proof of \Cref{theorem:torsors_after_blowup_is_tame}]
-Fix a single-point submodulus $\ndls=dP$. By
-\Cref{prop:reduction_to_cyclic_groups}, it is enough to consider cyclic
-groups of order prime to $p$ and cyclic $p$-groups. The prime-to-$p$ case is
-\Cref{theorem:cyclic_cases_after_blowup}(1). For $G=\Z/p^r\Z$, the
-ramification bound on $\cP$ gives the unramified conclusion by part~(2) when
-$r=1$ and by part~(3) when $r\geq2$. The reduction proposition reassembles
-the cyclic factors and proves the theorem for every finite abelian group.
+Fix a single-point submodulus $\ndls=dP$. Decompose the finite abelian group
+$G$ as a product of cyclic groups of prime-power order. Projecting $\cP$ to
+each cyclic factor gives a factor torsor, and every factor torsor inherits the
+ramification bound on $\cP$. If the order of a factor is prime to $p$, part~(1)
+of \Cref{theorem:cyclic_cases_after_blowup} shows that its symmetric-power
+torsor is tamely ramified at $\eta_\ndls$. For a factor of order $p$, part~(2)
+shows that its symmetric-power torsor is unramified; for a factor of order
+$p^r$ with $r\geq2$, part~(3) gives the same conclusion.
+
+The original torsor is the fiber product of these factor torsors, and the
+symmetric-power construction commutes with this product. A fiber product of
+tamely ramified torsors is again tamely ramified. These facts are recorded in
+\Cref{prop:reduction_to_cyclic_groups}, and they reassemble the cyclic cases
+to prove the theorem for $G$.
 \end{proof}

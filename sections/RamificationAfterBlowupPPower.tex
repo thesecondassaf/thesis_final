@@ -1,25 +1,32 @@
 \medskip
 \noindent\textbf{Case (3): Artin--Schreier--Witt.}
-A natural alternative to the direct calculation below would be to filter a
-cyclic $p$-power torsor by its degree-$p$ layers and try to apply the
-Artin--Schreier calculation inductively. In
-Appendix~\ref{appendix:artin_schreier_induction_failure} we examine this approach and
-explain why the two expected induction inputs do not by themselves control
-ramification before the intervening wild base change.
+We use a direct Artin--Schreier--Witt calculation.
+Appendix~\ref{appendix:artin_schreier_induction_failure} explains why an
+induction through the degree-$p$ layers does not by itself control
+ramification after the intervening wild base change.
 
-If the connected inertia group $H$ produced by the common reduction has order
-$p$, the Artin--Schreier calculation in Case~(2) already gives the required
-unramified conclusion. We may therefore assume that $H$ has order $p^r$ with
-$r\geq2$, and continue to denote it by $G$.
+Before the common reduction, the group in part~(3) was $\Z/p^r\Z$. The
+subgroup $H=\operatorname{im}(\rho)$ introduced above is cyclic of order
+$p^s$ for some $1\leq s\leq r$. The common reduction renamed this subgroup
+as $G$. If $s=1$, the
+Artin--Schreier calculation in Case~(2) already gives the required unramified
+conclusion. We may therefore assume that $G=\Z/p^s\Z$ with $s\geq2$.
+
+The proof now has three steps. First we identify an equation for the
+symmetric-power torsor. Next we prove that every component of its Witt-vector
+coefficient is regular at the exceptional valuation. Finally we extend that
+equation over the valuation ring, which proves that the generic fiber is
+unramified.
+
 By \Cref{lemma:realization_over_Gm}(3), the connected torsor has an equation
 \[
-    \wp\vec X=\vec f=(f_0,\dots,f_{r-1}),
+    \wp\vec X=\vec f=(f_0,\dots,f_{s-1}),
     \qquad f_j\in x^{-1}k[x^{-1}],
 \]
 where, putting $m_j=\deg_{x^{-1}}f_j$ for $f_j\neq0$ and $m_j=0$ for
 $f_j=0$, the pole bounds are
 \begin{equation}\label{eq:witt_pole_bound_in_calculation}
-    p^{r-1-j}m_j<d\qquad(0\leq j<r).
+    p^{s-1-j}m_j<d\qquad(0\leq j<s).
 \end{equation}
 Put $R=k[x,x^{-1}]$ and
 \[
@@ -33,6 +40,7 @@ After pulling back to $\bG_m^d$, define the single Witt vectors
 \]
 Here and below $\bigoplus$ denotes iterated Witt addition, not a direct sum.
 
+\par\medskip
 \begin{prop}[Identification of the Witt product torsor]
 \label{prop:witt_cover_identification}
 Every component of $\vec Y$ is $\KG$-invariant, every component of
@@ -71,10 +79,11 @@ coordinates by
     \vec X_d&\longmapsto\vec X_d\ominus\underline g_{d-1},
 \end{aligned}
 \]
-where $\underline g$ is the image of $g$ in $W_r(\F_p)$. Functoriality of
-$W_r$ means that this action is componentwise and commutes with $\oplus$ and
-$\ominus$. The translations telescope in $\vec Y$, so each component of
-$\vec Y$ is invariant. Additivity of $\wp$ gives
+where $\underline g$ is the image of $g$ in $W_s(\F_p)$. These formulas are
+translations in the additive group $W_s$. When the $d$ transformed Witt
+vectors are added, the added constants cancel in adjacent pairs. Thus
+$\vec Y$ is unchanged as a Witt vector, so each of its components is
+$\KG$-invariant. Additivity of $\wp$ gives
 \[
     \wp\vec Y
        =\bigoplus_{i=1}^d\wp\vec X_i
@@ -106,7 +115,7 @@ gives the last assertion.
 It remains to show that every component of $\vec\alpha$ is regular at the
 exceptional valuation. The Witt components are not ordinary componentwise
 sums, so this is the weighted analogue of the Artin--Schreier degree count.
-We claim that every component $\alpha_n$, $0\leq n<r$, belongs to $\kappa$.
+We claim that every component $\alpha_n$, $0\leq n<s$, belongs to $\kappa$.
 
 Give $f_j(x_i)$ weight $p^j$. By
 \Cref{lemma:witt_addition_isobaric}, every nonzero monomial
@@ -119,22 +128,25 @@ appearing in $\alpha_n$ satisfies
 \]
 Put $A_j:=\sum_i a_{ij}$. Since $f_j(x_i)$ is a polynomial in
 $y_i=x_i^{-1}$ of degree $m_j$, every monomial obtained after expansion in
-the $y_i$ has total degree at most
+the $y_i$ has total degree at most $\sum_jA_jm_j$. The pole bound gives
+$m_j<d\,p^{j-(s-1)}$ whenever $f_j\neq0$. Therefore
 \[
     \sum_jA_jm_j
-       <d\sum_jA_jp^{j-(r-1)}
-       =d\,p^{n-(r-1)}
+       <d\sum_jA_jp^{j-(s-1)}
+       =d\,p^{n-(s-1)}
        \leq d.
 \]
-The inequality is strict: a nonzero monomial has a positive exponent on at
-least one nonzero $f_j$, and every pole bound in
-\Cref{eq:witt_pole_bound_in_calculation} is strict. By
+The equality uses $\sum_jA_jp^j=p^n$, which is the weight identity above. The
+last inequality holds because $n\leq s-1$. The first inequality is strict: a
+nonzero monomial contains at least one nonzero $f_j$, and every pole bound in
+\Cref{eq:witt_pole_bound_in_calculation} is strict. Hence every monomial in
+$\alpha_n$ has total degree strictly less than $d$. By
 \Cref{prop:witt_cover_identification}, the whole component $\alpha_n$ is
 symmetric. Therefore \Cref{lemma:symmetric_regularity} gives
 $\alpha_n\in\kappa$.
 Thus
 \[
-    \vec\alpha\in W_r(\kappa)\subset W_r(\widehat\Oo_\eta).
+    \vec\alpha\in W_s(\kappa)\subset W_s(\widehat\Oo_\eta).
 \]
 
 It follows that the equation
@@ -145,5 +157,7 @@ is defined over $\widehat\Oo_\eta$. By
 \Cref{lemma:asw_etale_torsor}, it defines a finite \'etale
 $\widehat\Oo_\eta$-algebra. Its generic fiber is the restriction of
 $\cP^{[d]}$ to $\widehat K_\eta$ by
-\Cref{prop:witt_cover_identification}. Hence every field factor is
-unramified. This proves part~(3).
+\Cref{prop:witt_cover_identification}. A finite \'etale algebra over a
+complete discrete valuation ring is a product of unramified extensions of
+that ring. Hence every field factor of the generic fiber is unramified. This
+proves part~(3).

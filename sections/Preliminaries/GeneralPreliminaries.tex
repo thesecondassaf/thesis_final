@@ -544,6 +544,36 @@ reduced, and hence geometrically integral. The assertion about finite products
 now follows inductively from \Cref{theorem:int_geoint_implies_productint}.
 \end{proof}
 
+\subsection*{A Symmetric-Polynomial Calculation}
+
+Let $e_1,\dots,e_d$ be the elementary symmetric polynomials in
+$x_1,\dots,x_d$, put $y_i=x_i^{-1}$, and write
+\[
+    \kappa:=k(e_1/e_d,\dots,e_{d-1}/e_d).
+\]
+
+\begin{lemma}[Symmetric regularity]
+\label{lemma:symmetric_regularity}
+If $\Phi\in k[y_1,\dots,y_d]^{S_d}$ and every monomial of $\Phi$ has total
+degree strictly less than $d$, then
+\[
+    \Phi\in k(e_1/e_d,\dots,e_{d-1}/e_d)=\kappa.
+\]
+\end{lemma}
+
+\begin{proof}
+The identity
+\[
+    e_j(y_1,\dots,y_d)
+       =\frac{e_{d-j}(x_1,\dots,x_d)}{e_d(x_1,\dots,x_d)}
+\]
+puts $e_1(y),\dots,e_{d-1}(y)$ in $\kappa$. By the fundamental theorem of
+symmetric polynomials, each homogeneous part of $\Phi$ is a polynomial in
+$e_1(y),\dots,e_d(y)$ with their natural degrees. Since every homogeneous
+part has degree $<d$, the generator $e_d(y)$ cannot occur. Hence
+$\Phi\in\kappa\subset\kappa[[e_d]]$.
+\end{proof}
+
 
 \subsection*{Symmetric Powers of Torsors}
 Let $G$ be a finite abelian group, let $\cP$ be a $G$-torsor over an $S$-scheme $X$ in $S_{\text{Ét}}$. 
@@ -667,6 +697,64 @@ the torsor quotient $\KG\backslash\cP^{\times_S d}$ commutes with base
 change, and the final admissible $S_d$-quotient commutes with flat base
 change by \cite[V.1.9]{sga1}. If $X$ is flat over $S$, compatibility with
 arbitrary base change is \cite[Proposition~2.33]{Guignard2018}.
+\end{proof}
+
+We record one further compatibility of symmetric powers. It will allow us
+later to replace a torsor by the connected torsor under its monodromy
+subgroup.
+
+\begin{lemma}[Symmetric powers and induced torsors]
+\label{lemma:symmetric_power_induced_torsor}
+Let $\iota:H\hookrightarrow G$ be an injection of finite abelian groups, and
+let $\cQ$ be an $H$-torsor on $U$. There is a canonical isomorphism of
+$G$-torsors over $U^{(d)}$
+\[
+    (\iota_*\cQ)^{[d]}\cong\iota_*(\cQ^{[d]}).
+\]
+\end{lemma}
+
+\begin{proof}
+Let
+\[
+    j:\cQ\longrightarrow\iota_*\cQ=G\times^H\cQ
+\]
+be the canonical morphism $(q\mapsto[1,q])$. It is $H$-equivariant, where
+$H$ acts on the target through $\iota$. Applying $j$ to each factor gives
+\[
+    j^{\times d}:\cQ^{\times d}\longrightarrow(\iota_*\cQ)^{\times d},
+    \qquad
+    (q_1,\dots,q_d)\longmapsto(j(q_1),\dots,j(q_d)).
+\]
+This map is compatible with permutations of the factors. Moreover, for
+$(h_1,\dots,h_d)\in H^d$,
+\[
+    j^{\times d}(h_1q_1,\dots,h_dq_d)
+      =(\iota(h_1)j(q_1),\dots,\iota(h_d)j(q_d)).
+\]
+Put $K_H:=\ker(H^d\to H)$. If $(h_1,\dots,h_d)\in K_H$, then
+\[
+    \iota(h_1)\cdots\iota(h_d)
+      =\iota(h_1\cdots h_d)=1,
+\]
+so $(\iota(h_1),\dots,\iota(h_d))\in\KG$. Hence $j^{\times d}$ descends to
+a morphism
+\[
+    \cQ^{[d]}=(K_H\rtimes S_d)\backslash\cQ^{\times d}
+       \longrightarrow
+    (\KG\rtimes S_d)\backslash(\iota_*\cQ)^{\times d}
+       =(\iota_*\cQ)^{[d]}.
+\]
+The induced map between the residual groups
+$H^d/K_H\simeq H$ and $G^d/\KG\simeq G$ is $\iota$. Therefore this morphism
+is $H$-equivariant, where $H$ acts on the target by
+$h\cdot x:=\iota(h)\cdot x$.
+By the universal property of induction, this extends uniquely to a
+$G$-equivariant morphism
+\[
+    \iota_*(\cQ^{[d]})\longrightarrow(\iota_*\cQ)^{[d]}.
+\]
+Both sides are $G$-torsors over $U^{(d)}$, so
+\Cref{prop:torsor_morphism_iso} shows that it is an isomorphism.
 \end{proof}
 
 
