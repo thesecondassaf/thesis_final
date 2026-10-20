@@ -98,9 +98,8 @@ calculation has the following shape:
 \medskip
 \noindent\textbf{Case (1): Kummer.}
 Because $k$ is algebraically closed and $(e,p)=1$, the group scheme $\mu_e$
-is constant, and we choose an identification $\mu_e\cong G$. The connected
-torsor is
-the pullback of the finite \'etale homomorphism
+is constant, and we choose an identification $\mu_e\cong G$. The torsor
+$\cP\to U=\bG_m$ is the pullback of the finite \'etale homomorphism
 \[
     [e]:\bG_m\longrightarrow\bG_m,\qquad T\longmapsto T^e,
 \]
@@ -113,10 +112,10 @@ by \Cref{lemma:realization_over_Gm}(1). Put
 \[
     R:=k[x,x^{-1}],\qquad S:=R[T]/(T^e-x^a).
 \]
-Then $\Spec S\to\Spec R=\bG_m$ is this $G$-torsor. After pulling it back
-along the $d$ projections from $\bG_m^d$, the product torsor has coordinate
-algebra $S^{\otimes_k d}$ over $R^{\otimes_k d}$. Contracting the product
-action $G^d$ along $G^d\to G$ means taking invariants under
+Thus $\cP\cong\Spec S$ as a $G$-torsor over $U=\Spec R$. After pulling it
+back along the $d$ projections from $\bG_m^d$, the product torsor has
+coordinate algebra $S^{\otimes_k d}$ over $R^{\otimes_k d}$. Contracting the
+product action $G^d$ along $G^d\to G$ means taking invariants under
 $\KG=\ker(G^d\to G)$. By
 \Cref{prop:parallel_cyclic_product_torsor}, multiplication in $\bG_m$ gives
 \[
@@ -152,8 +151,8 @@ ramified. This proves part~(1).
 
 \medskip
 \noindent\textbf{Case (2): Artin--Schreier.}
-Here the relevant group scheme is $\bG_a$. The torsor is the pullback of the
-finite \'etale homomorphism
+Here the relevant group scheme is $\bG_a$. The torsor $\cP\to U=\bG_m$ is
+the pullback of the finite \'etale homomorphism
 \[
     \wp:\bG_a\longrightarrow\bG_a,\qquad X\longmapsto X^p-X,
 \]
@@ -167,11 +166,11 @@ where either $f=0$, or $m:=\deg_{x^{-1}}f<d$ and $p\nmid m$. Put
     R:=k[x,x^{-1}],\qquad
     S:=R[X]/(X^p-X-f(x)).
 \]
-Thus $\Spec S\to\Spec R=\bG_m$ is the realized $G$-torsor. After pullback
-along the $d$ projections, $S^{\otimes_k d}$ is the coordinate algebra of
-the product torsor over $R^{\otimes_k d}$. Contracting along $G^d\to G$
-again amounts to taking $\KG$-invariants. This time the group law on
-$\bG_a$ is addition, so \Cref{prop:parallel_cyclic_product_torsor} gives
+Thus $\cP\cong\Spec S$ as a $G$-torsor over $U=\Spec R$. After pullback along
+the $d$ projections, $S^{\otimes_k d}$ is the coordinate algebra of the
+product torsor over $R^{\otimes_k d}$. Contracting along $G^d\to G$ again
+amounts to taking $\KG$-invariants. This time the group law on $\bG_a$ is
+addition, so \Cref{prop:parallel_cyclic_product_torsor} gives
 \[
     Y=\sum_{i=1}^dX_i,\qquad
     Y^p-Y=\alpha,\qquad

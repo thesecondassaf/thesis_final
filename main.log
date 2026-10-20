@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  17 OCT 2026 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  20 OCT 2026 20:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1546,7 +1546,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...to the Full Modulus}{50}{subsection.3.3.1}
+l.30 ...to the Full Modulus}{51}{subsection.3.3.1}
                                                   % [1
 
 ])
@@ -1674,17 +1674,17 @@ ine 245.
 
 [42]
 
-[43])) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
+[43])
 
-[44]
+[44]) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
+
+[45]
 Chapter 3.
 
 
-[45
+[46
 
 ]
-
-[46]
 
 [47]
 
@@ -1708,17 +1708,17 @@ Chapter 3.
 
 [57]
 
-[58]) (./witt/WittVectorAlgebraAppendix.tex
+[58]
 
-[59]
+[59]) (./witt/WittVectorAlgebraAppendix.tex
+
+[60]
 Appendix A.
 
 
-[60
+[61
 
 ]
-
-[61]
 
 [62]
 
@@ -1731,11 +1731,11 @@ Appendix A.
 [66]
 
 [67]
+
+[68]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 590.
  (./witt/WittVectorPrerequisites.tex
-
-[68]
 
 [69]
 
@@ -1743,20 +1743,20 @@ t line 590.
 
 [71]
 
-[72]))
+[72]
 
-[73]
+[73]))
+
+[74]
 Appendix B.
 (./a_wrong_path/a_wrong_path.tex
 
-[74
+[75
 
 ]
 Package hyperref Info: bookmark level for unknown construction defaults to 0 on
  input line 67.
 
-
-[75]
 
 [76]
 
@@ -1764,11 +1764,13 @@ Package hyperref Info: bookmark level for unknown construction defaults to 0 on
 
 [78]
 
-[79])
+[79]
 
-[80]
+[80])
 
-[81
+[81]
+
+[82
 
 ] (./main.aux)
  ***********
@@ -1782,8 +1784,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45913 strings out of 473190
- 873476 string characters out of 5715800
+ 45914 strings out of 473190
+ 873483 string characters out of 5715800
  1702070 words of memory out of 5000000
  67899 multiletter control sequences out of 15000+600000
  596350 words of font info for 155 fonts, out of 8000000 for 9000
@@ -1831,10 +1833,10 @@ lic/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
 c/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/x
 ypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/
 xybtip10.pfb>
-Output written on main.pdf (83 pages, 936254 bytes).
+Output written on main.pdf (84 pages, 936713 bytes).
 PDF statistics:
- 1634 PDF objects out of 1728 (max. 8388607)
- 1449 compressed objects within 15 object streams
- 475 named destinations out of 1000 (max. 500000)
+ 1638 PDF objects out of 1728 (max. 8388607)
+ 1452 compressed objects within 15 object streams
+ 476 named destinations out of 1000 (max. 500000)
  477 words of extra memory for PDF output out of 10000 (max. 10000000)
 
