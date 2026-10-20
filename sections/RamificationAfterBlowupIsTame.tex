@@ -69,6 +69,9 @@ induced torsor. Thus it is enough to treat the connected explicit model
 \]
 For the rest of the calculation, we rename the subgroup $H$ as $G$ and the
 realized torsor $\cQ'$ as $\cP$.
+In Case~(1), write $n:=|G|$ for the order of this renamed subgroup. Since it
+is a subgroup of the original group $\Z/e\Z$, one has $n\mid e$, and hence
+$(n,p)=1$.
 
 Write $x_1,\dots,x_d$ for the coordinates on $\bG_m^d$ and
 $e_1,\dots,e_d$ for their elementary symmetric polynomials. By
@@ -85,8 +88,8 @@ law, and check the resulting coefficient at the exceptional valuation. The
 calculation has the following shape:
 \[
 \begin{array}{c|c|c|c}
- &\Z/e\Z&\Z/p\Z&\Z/p^r\Z\\ \hline
-\text{local equation}&T^e=x^a&X^p-X=f&\wp\vec X=\vec f\\
+ &\Z/n\Z&\Z/p\Z&\Z/p^r\Z\\ \hline
+\text{local equation}&T^n=x^a&X^p-X=f&\wp\vec X=\vec f\\
 \text{$d$-fold coordinate}&\prod_iT_i&\sum_iX_i&\bigoplus_i\vec X_i\\
 \text{coefficient after descent}&e_d^a&\sum_i f(x_i)&\bigoplus_i\vec f(x_i)\\
 \text{at the exceptional valuation}&v(e_d^a)=a&\text{regular}&
@@ -97,40 +100,72 @@ calculation has the following shape:
 
 \medskip
 \noindent\textbf{Case (1): Kummer.}
-Because $k$ is algebraically closed and $(e,p)=1$, the group scheme $\mu_e$
-is constant, and we choose an identification $\mu_e\cong G$. The torsor
-$\cP\to U=\bG_m$ is the pullback of the finite \'etale homomorphism
+Put
 \[
-    [e]:\bG_m\longrightarrow\bG_m,\qquad T\longmapsto T^e,
+    R:=k[x,x^{-1}],\qquad U=\bG_m=\Spec R.
 \]
-whose kernel is $\mu_e\cong G$, along the section $x\mapsto x^a$. Thus it has
-equation
+By \Cref{lemma:realization_over_Gm}(1), the connected local torsor $\cQ$ is
+represented by
 \[
-    T^e=x^a,\qquad (a,e)=1,
+    T^n=x^a
 \]
-by \Cref{lemma:realization_over_Gm}(1). Put
+for some integer $a$ with $(a,n)=1$, and the realized torsor
+$\cP=\cQ'\to U$ is defined by the same equation. Equivalently, because
+$k$ is algebraically closed, we may choose an identification $\mu_n\cong G$,
+and then $\cP$ fits into the Cartesian square
 \[
-    R:=k[x,x^{-1}],\qquad S:=R[T]/(T^e-x^a).
+\begin{tikzcd}
+    \cP \arrow[r] \arrow[d]
+        & \bG_m \arrow[d,"{[n]}"] \\
+    U \arrow[r,"{x^a}"']
+        & \bG_m,
+\end{tikzcd}
 \]
-Thus $\cP\cong\Spec S$ as a $G$-torsor over $U=\Spec R$. After pulling it
-back along the $d$ projections from $\bG_m^d$, the product torsor has
+where $[n](T)=T^n$ and the lower horizontal arrow is the morphism
+corresponding to the section $x^a\in\bG_m(U)=R^\times$. Thus $\cP$ is the
+pullback of $[n]$ along the section $x^a$. Put
+\[
+    S:=R[T]/(T^n-x^a).
+\]
+Thus $\cP\cong\Spec S$ as a $G$-torsor over $U$. After pulling it
+back along the $d$ projections $U^d\to U$, the product torsor has
 coordinate algebra $S^{\otimes_k d}$ over $R^{\otimes_k d}$. Contracting the
 product action $G^d$ along $G^d\to G$ means taking invariants under
-$\KG=\ker(G^d\to G)$. By
-\Cref{prop:parallel_cyclic_product_torsor}, multiplication in $\bG_m$ gives
+$\KG=\ker(G^d\to G)$. Write $T_i$ for the copy of $T$ in the $i$-th tensor
+factor. Apply \Cref{prop:parallel_cyclic_product_torsor} with
 \[
-    Y=\prod_{i=1}^dT_i,\qquad
-    Y^e=\prod_{i=1}^dx_i^a=(x_1\cdots x_d)^a=e_d^a,
+    X=U^d,\qquad H=\bG_m,\qquad \varphi=[n],
+    \qquad a_i=x_i^a.
 \]
-and hence an isomorphism of $G$-torsor algebras
+Since
+\[
+    \prod_{i=1}^d x_i^a=(x_1\cdots x_d)^a=e_d^a,
+\]
+the proposition identifies the contracted-product torsor with
+\[
+    \mathcal T_{e_d^a}
+      =U^d\times_{e_d^a,\bG_m,[n]}\bG_m.
+\]
+Let $Y$ denote the coordinate on the last copy of $\bG_m$. By the definition
+of this pullback, it satisfies
+\[
+    Y^n=e_d^a.
+\]
+Moreover, the formula on local sections in
+\Cref{prop:parallel_cyclic_product_torsor} says that the pullback of $Y$ to
+the product torsor is
+\[
+    \prod_{i=1}^d T_i.
+\]
+Consequently, on coordinate rings the proposition gives
 \[
     (S^{\otimes_k d})^{\KG}
        \cong
-    R^{\otimes_k d}[Y]/(Y^e-e_d^a).
+    R^{\otimes_k d}[Y]/(Y^n-e_d^a).
 \]
 The group $S_d$ permutes the tensor factors and fixes both $Y$ and $e_d^a$.
 The algebra on the right is free over $R^{\otimes_k d}$ with the
-$S_d$-invariant basis $1,Y,\dots,Y^{e-1}$, so taking $S_d$-invariants acts
+$S_d$-invariant basis $1,Y,\dots,Y^{n-1}$, so taking $S_d$-invariants acts
 only on its coefficients. Since
 \[
     (R^{\otimes_k d})^{S_d}
@@ -140,13 +175,13 @@ only on its coefficients. Since
 \Cref{prop:symmetric_power_semidirect_quotient} identifies the descended torsor with
 \[
     \cP^{[d]}\cong
-    \Spec\frac{k[e_1,\dots,e_d,e_d^{-1}][Y]}{(Y^e-e_d^a)}.
+    \Spec\frac{k[e_1,\dots,e_d,e_d^{-1}][Y]}{(Y^n-e_d^a)}.
 \]
 Its generic fiber over $\widehat K_\eta$ is therefore the restriction of
 $\cP^{[d]}$ and is given by the same Kummer equation. The defining element
-$e_d^a$ has valuation $a$. Since $(a,e)=1$,
+$e_d^a$ has valuation $a$. Since $(a,n)=1$,
 \Cref{theorem:kummer_ramification} gives ramification index
-$e/\gcd(e,a)=e$. This index is prime to $p$, so the extension is tamely
+$n/\gcd(n,a)=n$. This index is prime to $p$, so the extension is tamely
 ramified. This proves part~(1).
 
 \medskip
