@@ -131,33 +131,23 @@ Thus $\cP\cong\Spec S$ as a $G$-torsor over $U$. After pulling it
 back along the $d$ projections $U^d\to U$, the product torsor has
 coordinate algebra $S^{\otimes_k d}$ over $R^{\otimes_k d}$. Contracting the
 product action $G^d$ along $G^d\to G$ means taking invariants under
-$\KG=\ker(G^d\to G)$. Write $T_i$ for the copy of $T$ in the $i$-th tensor
-factor. Apply \Cref{prop:parallel_cyclic_product_torsor} with
+$\KG=\ker(G^d\to G)$. Write $T_i$ for the pullback of the coordinate $T$
+along the $i$-th projection from the product torsor. By
+\Cref{prop:parallel_cyclic_product_torsor}, the contracted product of the
+$d$ torsors
 \[
-    X=U^d,\qquad H=\bG_m,\qquad \varphi=[n],
-    \qquad a_i=x_i^a.
+    T_i^n=x_i^a
 \]
-Since
+is obtained by multiplying their defining sections. It therefore has the
+equation
 \[
-    \prod_{i=1}^d x_i^a=(x_1\cdots x_d)^a=e_d^a,
+    Y^n=\prod_{i=1}^d x_i^a
+       =(x_1\cdots x_d)^a
+       =e_d^a.
 \]
-the proposition identifies the contracted-product torsor with
-\[
-    \mathcal T_{e_d^a}
-      =U^d\times_{e_d^a,\bG_m,[n]}\bG_m.
-\]
-Let $Y$ denote the coordinate on the last copy of $\bG_m$. By the definition
-of this pullback, it satisfies
-\[
-    Y^n=e_d^a.
-\]
-Moreover, the formula on local sections in
-\Cref{prop:parallel_cyclic_product_torsor} says that the pullback of $Y$ to
-the product torsor is
-\[
-    \prod_{i=1}^d T_i.
-\]
-Consequently, on coordinate rings the proposition gives
+Here $Y$ is the coordinate on the resulting torsor. Under the isomorphism
+of \Cref{prop:parallel_cyclic_product_torsor}, its pullback to the product
+torsor is $\prod_{i=1}^d T_i$. Consequently,
 \[
     (S^{\otimes_k d})^{\KG}
        \cong
@@ -177,85 +167,88 @@ only on its coefficients. Since
     \cP^{[d]}\cong
     \Spec\frac{k[e_1,\dots,e_d,e_d^{-1}][Y]}{(Y^n-e_d^a)}.
 \]
-Its generic fiber over $\widehat K_\eta$ is therefore the restriction of
-$\cP^{[d]}$ and is given by the same Kummer equation. The defining element
-$e_d^a$ has valuation $a$. Since $(a,n)=1$,
-\Cref{theorem:kummer_ramification} gives ramification index
-$n/\gcd(n,a)=n$. This index is prime to $p$, so the extension is tamely
-ramified. This proves part~(1).
+After base change to $\widehat K_\eta=\kappa((e_d))$, we obtain
+\[
+    \cP^{[d]}\big|_{\Spec\widehat K_\eta}
+       \cong
+    \Spec\frac{\widehat K_\eta[Y]}{(Y^n-e_d^a)}.
+\]
+Since $e_d$ is a uniformizer of $\widehat\Oo_\eta=\kappa[[e_d]]$, we have
+\[
+    v_\eta(e_d^a)=a.
+\]
+Together with $\gcd(a,n)=1$, \Cref{theorem:kummer_ramification} shows that
+the Kummer extension defined by $Y^n=e_d^a$ is totally and tamely ramified.
+Hence $\cP^{[d]}$ is tamely ramified at $\eta$, proving part~(1).
 
 \medskip
 \noindent\textbf{Case (2): Artin--Schreier.}
-Here the relevant group scheme is $\bG_a$. The torsor $\cP\to U=\bG_m$ is
-the pullback of the finite \'etale homomorphism
+With $R=k[x,x^{-1}]$ and $U=\bG_m=\Spec R$ as in Case~(1),
+\Cref{lemma:realization_over_Gm}(2) presents the realized torsor
+$\cP\to U$ as
+\[
+    X^p-X=f(x),\qquad
+    0\ne f\in x^{-1}k[x^{-1}],\qquad
+    m:=\deg_{x^{-1}}f<d,\quad p\nmid m.
+\]
+Equivalently, $\cP$ is the pullback of the finite \'etale homomorphism
 \[
     \wp:\bG_a\longrightarrow\bG_a,\qquad X\longmapsto X^p-X,
 \]
-whose kernel is $\F_p\cong G$, along the section $x\mapsto f(x)$ on
-$\bG_m$. By \Cref{lemma:realization_over_Gm}(2), its equation is
+whose kernel is $\F_p\cong G$, along the section
+$f\in\bG_a(U)=R$. Put
 \[
-    X^p-X=f(x),\qquad f\in x^{-1}k[x^{-1}],
-\]
-where either $f=0$, or $m:=\deg_{x^{-1}}f<d$ and $p\nmid m$. Put
-\[
-    R:=k[x,x^{-1}],\qquad
     S:=R[X]/(X^p-X-f(x)).
 \]
-Thus $\cP\cong\Spec S$ as a $G$-torsor over $U=\Spec R$. After pullback along
-the $d$ projections, $S^{\otimes_k d}$ is the coordinate algebra of the
-product torsor over $R^{\otimes_k d}$. Contracting along $G^d\to G$ again
-amounts to taking $\KG$-invariants. This time the group law on $\bG_a$ is
-addition, so \Cref{prop:parallel_cyclic_product_torsor} gives
+Then $\cP\cong\Spec S$. As in Case~(1), the contracted product has coordinate
+algebra $(S^{\otimes_k d})^{\KG}$, where
+$\KG:=\ker(G^d\to G)$. Write $X_i$ for the pullback of $X$ from the $i$-th
+factor. Since the group law on $\bG_a$ is addition,
+\Cref{prop:parallel_cyclic_product_torsor} shows that the defining sections
+$f(x_i)$ add, giving the equation
 \[
-    Y=\sum_{i=1}^dX_i,\qquad
-    Y^p-Y=\alpha,\qquad
-    \alpha:=\sum_{i=1}^df(x_i),
+    Y^p-Y=\alpha,
+    \qquad
+    \alpha:=\sum_{i=1}^d f(x_i).
 \]
-and hence
+Here $Y$ is the coordinate on the contracted product, and its pullback to
+the product torsor is $\sum_{i=1}^d X_i$. Consequently,
 \[
     (S^{\otimes_k d})^{\KG}
        \cong
     R^{\otimes_k d}[Y]/(Y^p-Y-\alpha).
 \]
-The group $S_d$ fixes $Y$ and $\alpha$. The displayed algebra is free over
-$R^{\otimes_k d}$ with the $S_d$-invariant basis
-$1,Y,\dots,Y^{p-1}$, so taking $S_d$-invariants acts only on the
-coefficients. Using $(R^{\otimes_k d})^{S_d}
-=k[e_1,\dots,e_d,e_d^{-1}]$ and
-\Cref{prop:symmetric_power_semidirect_quotient}, we obtain
+As in Case~(1), $S_d$ fixes $Y$ and $\alpha$, and taking invariants acts
+only on the coefficients. Thus
+\Cref{prop:symmetric_power_semidirect_quotient} gives
 \[
     \cP^{[d]}\cong
     \Spec\frac{k[e_1,\dots,e_d,e_d^{-1}][Y]}{(Y^p-Y-\alpha)}.
 \]
-Put $y_i=x_i^{-1}$. If $f\neq0$, then $\alpha$ is a symmetric polynomial in
-$y_1,\dots,y_d$ whose monomials have total degree at most $m<d$; if $f=0$,
-then $\alpha=0$. Hence \Cref{lemma:symmetric_regularity} gives
+Put $y_i=x_i^{-1}$. The polynomial $\alpha$ is symmetric in
+$y_1,\dots,y_d$, and all its monomials have total degree at most $m<d$.
+Hence
+\Cref{lemma:symmetric_regularity} gives
 \[
     \alpha\in\kappa\subset\widehat\Oo_\eta.
 \]
-This is the key point: although the individual functions $f(x_i)$ have poles
-at $x_i=0$, their symmetric sum has no pole at the exceptional valuation.
+Thus, although the individual $f(x_i)$ have poles at $x_i=0$, their
+symmetric sum has no pole at the exceptional valuation.
 Set $A:=\widehat\Oo_\eta$ and
 \[
     B:=A[Y]/(Y^p-Y-\alpha).
 \]
-Because the defining polynomial is monic of degree $p$, the algebra $B$ is
-finite free of rank $p$ over $A$. Its derivative with respect to $Y$ is
-$-1$, a unit in $B$; hence $B/A$ is finite \'etale. The preceding descended
-presentation identifies its generic fiber
+The defining polynomial is monic and has derivative $-1$, so $B/A$ is
+finite \'etale. After base change to
+$\widehat K_\eta=\kappa((e_d))$, we obtain
 \[
-    B\otimes_A\widehat K_\eta
-       =\widehat K_\eta[Y]/(Y^p-Y-\alpha)
+    \cP^{[d]}\big|_{\Spec\widehat K_\eta}
+       \cong
+    \Spec\bigl(B\otimes_A\widehat K_\eta\bigr)
+       =\Spec\frac{\widehat K_\eta[Y]}{(Y^p-Y-\alpha)}.
 \]
-with the restriction of $\cP^{[d]}$ to $\widehat K_\eta$.
-
-Since $A$ is a complete discrete valuation ring, the finite \'etale
-$A$-algebra $B$ is a product of finite \'etale local $A$-algebras. Each
-factor is a discrete valuation ring whose maximal ideal is generated by the
-uniformizer of $A$, and whose residue field is finite separable over
-$\kappa$. Consequently, every field factor of the generic fiber has
-ramification index $1$ and separable residue extension, so it is unramified
-in the sense of \Cref{definition:tamely_ramified_dvrs}. This proves part~(2).
+Every field factor is therefore unramified over $\widehat K_\eta$. Hence
+$\cP^{[d]}$ is unramified at $\eta$, proving part~(2).
 
 \input{sections/RamificationAfterBlowupPPower.tex}
 \end{proof}

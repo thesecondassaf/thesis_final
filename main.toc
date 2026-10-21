@@ -21,46 +21,46 @@
 \contentsline {subsection}{\numberline {2.4.4}The common realization conclusion}{37}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}The common contracted-product calculation}{38}{subsection.2.4.5}%
 \contentsline {section}{\numberline {2.5}The Cyclic Exceptional--Divisor Calculation and Final Assembly}{39}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Geometric Class Field Theory}{46}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Generalized Picard Schemes and the Abel--Jacobi Map}{47}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}The generalized Picard scheme}{47}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}The Abel--Jacobi Morphism and Its Fibers}{48}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Takeuchi's Compactification of the Abel--Jacobi Morphism}{49}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Tame Ramification Along the Full Boundary}{51}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}From Point-Supported Moduli to the Full Modulus}{51}{subsection.3.3.1}%
-\contentsline {subsubsection}{Compatibility under products}{52}{section*.21}%
-\contentsline {subsection}{\numberline {3.3.2}From the Minimal Degree to Large Degrees}{54}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Conclusion of the Tameness Argument}{57}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Extension Across the Boundary}{57}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Descent and Reduced Geometric Class Field Theory}{59}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}The Fundamental-Group Input}{59}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}The Descent Argument}{59}{subsection.3.5.2}%
-\contentsline {chapter}{Appendix \numberline {A}Cyclic Torsor Theories and Witt Vectors}{61}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}The common group-scheme construction}{61}{section.1.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}The kernel torsor construction}{61}{subsection.1.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}The three cyclic theories}{63}{subsection.1.A.1.2}%
-\contentsline {paragraph}{Kummer.}{63}{section*.27}%
-\contentsline {paragraph}{Artin--Schreier.}{64}{section*.28}%
-\contentsline {paragraph}{Artin--Schreier--Witt.}{64}{section*.29}%
-\contentsline {section}{\numberline {A.2}Kummer and Artin--Schreier theory}{65}{section.1.A.2}%
-\contentsline {subsection}{\numberline {A.2.1}Kummer theory}{65}{subsection.1.A.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Artin--Schreier theory}{65}{subsection.1.A.2.2}%
-\contentsline {section}{\numberline {A.3}Witt-vector algebra}{66}{section.1.A.3}%
-\contentsline {subsection}{\numberline {A.3.1}Ring structure and ghost coordinates}{66}{subsection.1.A.3.1}%
-\contentsline {subsection}{\numberline {A.3.2}Frobenius, Verschiebung, and truncation}{68}{subsection.1.A.3.2}%
-\contentsline {section}{\numberline {A.4}Artin--Schreier--Witt theory}{69}{section.1.A.4}%
-\contentsline {subsection}{\numberline {A.4.1}The ASW operator and bookkeeping}{69}{subsection.1.A.4.1}%
-\contentsline {subsection}{\numberline {A.4.2}Torsors and classification}{70}{subsection.1.A.4.2}%
-\contentsline {subsection}{\numberline {A.4.3}Reduced polynomial representatives}{73}{subsection.1.A.4.3}%
-\contentsline {section}{\numberline {A.5}Weighted Witt addition in the cyclic calculation}{74}{section.1.A.5}%
-\contentsline {chapter}{Appendix \numberline {B}A Failure of an Artin--Schreier Induction Strategy}{75}{appendix.1.B}%
-\contentsline {section}{\numberline {B.1}Motivation: can the Artin--Schreier calculation be iterated?}{75}{section.1.B.1}%
-\contentsline {section}{\numberline {B.2}Preliminaries for the attempted induction}{76}{section.1.B.2}%
-\contentsline {subsection}{\numberline {B.2.1}The symmetric quotient tower}{76}{subsection.1.B.2.1}%
-\contentsline {subsection}{\numberline {B.2.2}The geometric boundary and its valuations}{77}{subsection.1.B.2.2}%
-\contentsline {subsection}{\numberline {B.2.3}The master diagram}{78}{subsection.1.B.2.3}%
-\contentsline {subsection}{\numberline {B.2.4}The proposed induction step}{78}{subsection.1.B.2.4}%
-\contentsline {subsection}{\numberline {B.2.5}A base-change lemma}{78}{subsection.1.B.2.5}%
-\contentsline {section}{\numberline {B.3}Following the hypotheses through the valuation tower}{79}{section.1.B.3}%
-\contentsline {section}{\numberline {B.4}Failure under wild base change}{80}{section.1.B.4}%
-\contentsline {section}{\numberline {B.5}What the example proves}{81}{section.1.B.5}%
+\contentsline {chapter}{\numberline {3}Geometric Class Field Theory}{45}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Generalized Picard Schemes and the Abel--Jacobi Map}{46}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The generalized Picard scheme}{46}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}The Abel--Jacobi Morphism and Its Fibers}{47}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Takeuchi's Compactification of the Abel--Jacobi Morphism}{48}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Tame Ramification Along the Full Boundary}{50}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}From Point-Supported Moduli to the Full Modulus}{50}{subsection.3.3.1}%
+\contentsline {subsubsection}{Compatibility under products}{51}{section*.21}%
+\contentsline {subsection}{\numberline {3.3.2}From the Minimal Degree to Large Degrees}{53}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Conclusion of the Tameness Argument}{56}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Extension Across the Boundary}{56}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Descent and Reduced Geometric Class Field Theory}{58}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}The Fundamental-Group Input}{58}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}The Descent Argument}{58}{subsection.3.5.2}%
+\contentsline {chapter}{Appendix \numberline {A}Cyclic Torsor Theories and Witt Vectors}{60}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}The common group-scheme construction}{60}{section.1.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}The kernel torsor construction}{60}{subsection.1.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}The three cyclic theories}{62}{subsection.1.A.1.2}%
+\contentsline {paragraph}{Kummer.}{62}{section*.27}%
+\contentsline {paragraph}{Artin--Schreier.}{63}{section*.28}%
+\contentsline {paragraph}{Artin--Schreier--Witt.}{63}{section*.29}%
+\contentsline {section}{\numberline {A.2}Kummer and Artin--Schreier theory}{64}{section.1.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Kummer theory}{64}{subsection.1.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Artin--Schreier theory}{64}{subsection.1.A.2.2}%
+\contentsline {section}{\numberline {A.3}Witt-vector algebra}{65}{section.1.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Ring structure and ghost coordinates}{65}{subsection.1.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Frobenius, Verschiebung, and truncation}{67}{subsection.1.A.3.2}%
+\contentsline {section}{\numberline {A.4}Artin--Schreier--Witt theory}{68}{section.1.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}The ASW operator and bookkeeping}{68}{subsection.1.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}Torsors and classification}{69}{subsection.1.A.4.2}%
+\contentsline {subsection}{\numberline {A.4.3}Reduced polynomial representatives}{72}{subsection.1.A.4.3}%
+\contentsline {section}{\numberline {A.5}Weighted Witt addition in the cyclic calculation}{73}{section.1.A.5}%
+\contentsline {chapter}{Appendix \numberline {B}A Failure of an Artin--Schreier Induction Strategy}{74}{appendix.1.B}%
+\contentsline {section}{\numberline {B.1}Motivation: can the Artin--Schreier calculation be iterated?}{74}{section.1.B.1}%
+\contentsline {section}{\numberline {B.2}Preliminaries for the attempted induction}{75}{section.1.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}The symmetric quotient tower}{75}{subsection.1.B.2.1}%
+\contentsline {subsection}{\numberline {B.2.2}The geometric boundary and its valuations}{76}{subsection.1.B.2.2}%
+\contentsline {subsection}{\numberline {B.2.3}The master diagram}{77}{subsection.1.B.2.3}%
+\contentsline {subsection}{\numberline {B.2.4}The proposed induction step}{77}{subsection.1.B.2.4}%
+\contentsline {subsection}{\numberline {B.2.5}A base-change lemma}{77}{subsection.1.B.2.5}%
+\contentsline {section}{\numberline {B.3}Following the hypotheses through the valuation tower}{78}{section.1.B.3}%
+\contentsline {section}{\numberline {B.4}Failure under wild base change}{79}{section.1.B.4}%
+\contentsline {section}{\numberline {B.5}What the example proves}{80}{section.1.B.5}%
