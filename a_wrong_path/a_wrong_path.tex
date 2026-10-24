@@ -106,7 +106,7 @@ The four quotient schemes fit into a canonical commutative diagram
 \[
 \begin{tikzcd}[row sep=large, column sep=large]
   \cP^{[d]_H}\arrow[r,"H"]\arrow[d]
-    &(\cP/H)^{(d)}\arrow[d,"q"]\\
+    &(\cP/H)^{(d)}\arrow[d,"{q_{\cP/H}}"]\\
   \cP^{[d]_G}\arrow[r,"H"']\arrow[dr,"G"',bend right=20]
     &(\cP/H)^{[d]}\arrow[d,"G/H"]\\
     &X^{(d)},
@@ -118,7 +118,7 @@ group. The upper square is Cartesian:
 \cP^{[d]_H}\cong
 \cP^{[d]_G}\times_{(\cP/H)^{[d]}}(\cP/H)^{(d)}.
 \]
-The vertical map $q=q_{\cP/H}$ is the comparison morphism of
+The vertical map $q_{\cP/H}$ is the comparison morphism of
 \Cref{construction:symmetric_power_comparison}, applied to the
 $G/H$-torsor $\cP/H\to X$.
 \end{prop}
@@ -126,7 +126,7 @@ $G/H$-torsor $\cP/H\to X$.
 \begin{proof}
 Apply \Cref{prop:symmetric_power_torsor} to the $G$-torsor $\cP\to X$, the
 $H$-torsor $\cP\to\cP/H$, and the $G/H$-torsor $\cP/H\to X$. This gives the
-three labelled torsors; the comparison map $q$ is supplied by
+three labelled torsors; the comparison map $q_{\cP/H}$ is supplied by
 \Cref{construction:symmetric_power_comparison}, applied to
 $\cP/H\to X$. The factorization
 \[
@@ -189,15 +189,11 @@ V_{C'}:=\Oo_{X_{C'},\eta_{C'}}\subset K(C'^{(d)})
 \]
 for the corresponding DVRs.
 
-
-\subsection{The master diagram}
-\label{sec:master}
-
 The quotient tower, compactifications, and blowups fit into the diagram
 \[
 \begin{tikzcd}[row sep=2.4em, column sep=2.2em]
 \cP^{[d]_H}\ar[r,"H"]\ar[d]
-  &(\cP/H)^{(d)}\ar[d,"q"]\ar[r,hookrightarrow,"\iota'"]
+  &(\cP/H)^{(d)}\ar[d,"{q_{\cP/H}}"]\ar[r,hookrightarrow,"\iota'"]
   &C'^{(d)}\ar[dd,"f^{(d)}"]
   &X_{C'}\ar[l,"\pi_{C'}"']\ar[dd,dashed,"f_X"]\\
 \cP^{[d]_G}\ar[r,"H"']\ar[dr,"G"',bend right=10]
@@ -238,11 +234,35 @@ curve $C'$. The proposed induction step asks whether these imply that
 is unramified at $\eta_C$. We will see that the two assertions do not, by
 themselves, control the ramification needed for this conclusion.
 
+\section{Following the hypotheses through the valuation tower}
+\label{sec:as_induction_valuation_tower}
 
-\subsection{A base-change lemma}
+We first make two harmless reductions. We may assume that $\cP\to U$ is
+connected: replace $G$ by the image $G_0$ of its monodromy and $H$ by
+$H\cap G_0$. The four quotient schemes then decompose componentwise, and the
+two unramifiedness inputs pass to the connected component. We may also assume
+$H\ne0$, since for $H=0$ the statement (IH$_{r-1}$) is already the desired
+conclusion.
 
-We use the following standard comparison between a Galois extension and its
-base change.
+Under these reductions the four schemes in the Cartesian square of
+\Cref{prop:torsor_tower_diagram} are integral, so we may pass to function
+fields. Put
+\[
+K_C:=\Frac V_C=K(C^{(d)}),\qquad
+K_{C'}:=\Frac V_{C'}=K(C'^{(d)}),
+\]
+and
+\[
+F:=K((\cP/H)^{[d]}),\qquad
+E:=K(\cP^{[d]_G}).
+\]
+Then $F/K_C$ is Galois with group $G/H$, $E/F$ is Galois with group $H$,
+and $E/K_C$ is Galois with group $G$. The Cartesian square identifies the
+function field of $\cP^{[d]_H}$ with $E\cdot K_{C'}$. Its generic fibre over
+$(\cP/H)^{(d)}$ is the finite domain $E\otimes_FK_{C'}$, hence a field.
+
+We use here the following standard comparison between a Galois extension and
+its base change.
 
 \begin{lemma}\label{lem:galois-base-change}
 Let $E/F$ be a finite Galois extension with group $H$, let $K/F$ be a field
@@ -275,34 +295,7 @@ E\otimes_FK\cong K[x]/(g)
 The product is a field exactly when $M=F$.
 \end{proof}
 
-
-\section{Following the hypotheses through the valuation tower}
-\label{sec:as_induction_valuation_tower}
-
-We first make two harmless reductions. We may assume that $\cP\to U$ is
-connected: replace $G$ by the image $G_0$ of its monodromy and $H$ by
-$H\cap G_0$. The four quotient schemes then decompose componentwise, and the
-two unramifiedness inputs pass to the connected component. We may also assume
-$H\ne0$, since for $H=0$ the statement (IH$_{r-1}$) is already the desired
-conclusion.
-
-Under these reductions the four schemes in the Cartesian square of
-\Cref{prop:torsor_tower_diagram} are integral, so we may pass to function
-fields. Put
-\[
-K_C:=\Frac V_C=K(C^{(d)}),\qquad
-K_{C'}:=\Frac V_{C'}=K(C'^{(d)}),
-\]
-and
-\[
-F:=K((\cP/H)^{[d]}),\qquad
-E:=K(\cP^{[d]_G}).
-\]
-Then $F/K_C$ is Galois with group $G/H$, $E/F$ is Galois with group $H$,
-and $E/K_C$ is Galois with group $G$. The Cartesian square identifies the
-function field of $\cP^{[d]_H}$ with $E\cdot K_{C'}$. Its generic fibre over
-$(\cP/H)^{(d)}$ is the finite domain $E\otimes_FK_{C'}$, hence a field.
-By \Cref{lem:galois-base-change},
+Applying the lemma with $K=K_{C'}$ gives
 \[
 E\cap K_{C'}=F,
 \qquad

@@ -62,13 +62,14 @@ $R^{\otimes_k d}$, so taking invariants acts only on the coefficients. Thus
                    {(\wp\vec Y\ominus\vec\alpha)}.
 \]
 
-Because Witt addition is given by universal polynomials, each component
-$\alpha_n$ is a Laurent polynomial, and commutativity makes it invariant
-under permutations of the indices.
-It remains to examine the components of $\vec\alpha$ at the exceptional
-valuation. The Witt components are not ordinary componentwise sums, so the
-degree count must respect the Witt weights. Give $f_j(x_i)$ weight $p^j$.
-By \Cref{lemma:witt_addition_isobaric}, every nonzero monomial
+Put $y_i=x_i^{-1}$. Since each $f_j(x_i)$ is a polynomial in $y_i$, and
+Witt addition is given by universal polynomials, every component $\alpha_n$
+is a polynomial in $y_1,\dots,y_d$. Moreover, commutativity of Witt addition
+makes $\alpha_n$ symmetric in these variables. We now show that every monomial
+of $\alpha_n$ has total degree strictly less than $d$. Since Witt addition is
+not componentwise, we control these degrees using the Witt weights: assign
+$f_j(x_i)$ weight $p^j$. By
+\Cref{lemma:witt_addition_isobaric}, every nonzero monomial
 \[
     \prod_{i,j}f_j(x_i)^{a_{ij}}
 \]
@@ -76,9 +77,9 @@ appearing in $\alpha_n$ satisfies
 \[
     \sum_{i,j}a_{ij}p^j=p^n.
 \]
-Put $A_j:=\sum_i a_{ij}$ and $y_i:=x_i^{-1}$. Since $f_j(x_i)$ is a
-polynomial in $y_i$ of degree $m_j$, every monomial obtained after expansion
-has total degree at most $\sum_jA_jm_j$. The pole bounds therefore give
+Put $A_j:=\sum_i a_{ij}$. Since $f_j(x_i)$ has degree $m_j$ in $y_i$,
+every monomial obtained after expansion has total degree at most
+$\sum_jA_jm_j$. The pole bounds therefore give
 \[
     \sum_jA_jm_j
        <d\sum_jA_jp^{j-(s-1)}

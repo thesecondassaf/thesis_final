@@ -610,9 +610,11 @@ weighting in which the $j$-th component has weight $p^j$.
 \begin{lemma}[isobaricity of Witt addition]\label{lemma:witt_addition_isobaric}
 Assign to the variables $X_j$ and $Y_j$ the weight $p^j$. Then the $n$-th addition
 polynomial $S_n$ is isobaric of weight $p^n$: every monomial of $S_n$ has total weight
-exactly $p^n$. The same holds for each component of a $d$-fold iterated Witt sum
-$\bigoplus_{i=1}^{d} \vec a_i$, viewed as a universal polynomial in the components
-$a_{i,j}$ of weight $p^j$.
+exactly $p^n$. More generally, write
+$\vec a_i=(a_{i,0},\dots,a_{i,r-1})$ and assign $a_{i,j}$ weight $p^j$.
+Then, for every $0\leq n<r$, the $n$-th component of the iterated Witt sum
+$\bigoplus_{i=1}^{d}\vec a_i$ is an isobaric polynomial of weight $p^n$ in the
+variables $a_{i,j}$.
 \end{lemma}
 
 \begin{proof}
