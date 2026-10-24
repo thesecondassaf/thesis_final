@@ -37,11 +37,8 @@ tower, and explain why they do not by themselves imply the required
 conclusion.
 
 
-\section{Preliminaries for the attempted induction}
+\section{The attempted induction}
 \label{sec:as_induction_preliminaries}
-
-\subsection{The symmetric quotient tower}
-\label{subsection:quotient_torsors_towers}
 
 Let $G$ be a finite abelian group, let $H\subseteq G$ be a subgroup, and let
 $\cP\to X$ be a $G$-torsor over an $S$-scheme $X$ that is Zariski-locally
@@ -152,14 +149,13 @@ $H$-torsors is an isomorphism, proving the Cartesian assertion.
 The two vertical comparison maps in the diagram need not be torsors under a
 constant group. For example, $K_H\rtimes S_d$ need not be normal in
 $\KG\rtimes S_d$, because coordinate permutations act nontrivially on
-$\KG/K_H$. Thus the map $q$ is not another torsor layer to which the cyclic
+$\KG/K_H$. Thus the map $q_{\cP/H}$ is not another torsor layer to which the cyclic
 induction hypotheses automatically apply. Its ramification at the boundary
 is precisely the extra datum that will matter below.
 \end{rem*}
 
-
-\subsection{The geometric boundary and its valuations}
-
+We now place this quotient tower in the geometric setting relevant to the
+attempted induction.
 Let $C$ be a smooth projective curve, let $U=C\setminus\mdls$, and let
 $\cP\to U$ be a $G$-torsor. Fix $p_\infty\in\mdls$ and an integer $d\geq1$,
 and assume that the ramification of $\cP$ at $p_\infty$ is bounded by $d$ in
@@ -213,9 +209,7 @@ divisor and sends $\eta_{C'}$ to $\eta_C$, producing the extension of DVRs
 V_C\hookrightarrow V_{C'}.
 \]
 
-
-\subsection{The proposed induction step}
-
+We can now formulate the proposed induction step.
 In the cyclic $p$-power setting of \Cref{sec:as_induction_motivation}, the
 two intended inputs are:
 \begin{description}
@@ -234,15 +228,17 @@ curve $C'$. The proposed induction step asks whether these imply that
 is unramified at $\eta_C$. We will see that the two assertions do not, by
 themselves, control the ramification needed for this conclusion.
 
-\section{Following the hypotheses through the valuation tower}
+\section{The obstruction in the valuation tower}
 \label{sec:as_induction_valuation_tower}
 
-We first make two harmless reductions. We may assume that $\cP\to U$ is
-connected: replace $G$ by the image $G_0$ of its monodromy and $H$ by
-$H\cap G_0$. The four quotient schemes then decompose componentwise, and the
-two unramifiedness inputs pass to the connected component. We may also assume
-$H\ne0$, since for $H=0$ the statement (IH$_{r-1}$) is already the desired
-conclusion.
+We may reduce to the case in which $\cP\to U$ is connected. Choose a
+connected component $\cP_0\subseteq\cP$, and let $G_0\subseteq G$ be the
+subgroup preserving it. Then $\cP_0\to U$ is a connected $G_0$-torsor.
+Replacing $(\cP,G,H)$ by $(\cP_0,G_0,H\cap G_0)$ restricts the four quotient
+schemes to the corresponding connected components, and both unramifiedness
+hypotheses remain valid. We may therefore assume that $\cP$ is connected.
+We may also assume that $H\ne0$: if $H=0$, then $\cP/H=\cP$ and $G/H=G$,
+so (IH$_{r-1}$) is already the desired conclusion.
 
 Under these reductions the four schemes in the Cartesian square of
 \Cref{prop:torsor_tower_diagram} are integral, so we may pass to function
@@ -368,18 +364,13 @@ I(v_\star\mid V_{C'})\hookrightarrow I(v_E\mid V_F).
 \]
 Statement (AS) makes the group on the left trivial, whereas the missing step
 requires the group on the right to be trivial. An injection with trivial
-source gives no such conclusion. Surjectivity would repair the argument, but
-it can fail when $K_{C'}/F$ is wildly ramified: after completion, the base
-change may contain the ramified degree-$p$ layer and thereby make that layer
-invisible.
-
-
-\section{Failure under wild base change}
-\label{sec:as_induction_wild_base_change}
-
-The smallest possible local model already exhibits the problem. It models
-the top $H\cong\Z/p\Z$ layer in the first nontrivial induction step
-$G=\Z/p^2\Z$.
+source gives no such conclusion. In other words, the implication
+\[
+EK_{C'}/K_{C'}\text{ unramified at }V_{C'}
+\quad\Longrightarrow\quad
+E/F\text{ unramified at }V_F
+\]
+is not formal, as the following example shows.
 
 \begin{example}[Absorption of an Artin--Schreier layer]
 \label{ex:p2-counterexample}
@@ -407,8 +398,21 @@ I(E/F)=\Z/p\Z.
 \]
 
 Over $K$, however, $\pi^{-1}$ is already a solution of the same equation.
-After identifying $y$ with $\pi^{-1}$ in a common overfield, one has $E=K$.
-Consequently
+The polynomial $X^p-X-t^{-1}$ is irreducible over $F$, because $t^{-1}$
+has reduced pole order one, and hence $F(\pi^{-1})/F$ has degree $p$.
+On the other hand, the displayed relation between $t$ and $\pi$ shows that
+$K/F$ has degree at most $p$. It follows that $F(\pi^{-1})=K$. Therefore
+the fields fit into the diagram
+\[
+\begin{tikzcd}[row sep=2.2em, column sep=4.5em]
+E=F(y)\ar[rr,"\sim","{y\mapsto\pi^{-1}}"']
+  &&K=F(\pi^{-1})\\
+  &F\ar[ul,hookrightarrow,"p"]\ar[ur,hookrightarrow,"p"']&
+\end{tikzcd}
+\]
+After using the horizontal $F$-isomorphism to identify the two upper fields
+inside a common algebraic closure of $F$, we may regard $E$ and $K$ as the
+same subfield. Consequently
 \[
 EK/K=K/K
 \]
@@ -418,47 +422,14 @@ is trivial and therefore unramified. The inertia comparison is exactly
 \hookrightarrow
 \underbrace{I(E/F)}_{\Z/p\Z}.
 \]
-
-In the notation of the valuation tower, this models the possible equality of
-completed fields $\widehat E=\widehat{K_{C'}}$ over $\widehat F$. The global
-fields $E$ and $K_{C'}$ may still be linearly disjoint even when their chosen
-completions coincide. Thus the example disproves the general local inference
-``unramified after base change implies unramified before base change.'' It
-does not assert that this particular extension $K/F$ is produced by the map
-$q$ for a specified global symmetric-power torsor.
 \end{example}
 
-The mechanism is visible in the valuations. Over $F$, the pole order of
-$t^{-1}$ is one and cannot be reduced by an element of $F$. Under the wildly
-ramified extension $K/F$, that pole order becomes $p$, and $K$ supplies the
-element $\pi^{-1}$ of intermediate valuation needed for the
-Artin--Schreier change of variable. The base change does not show that the
-original ramification was absent; it absorbs it.
-
-
-\section{What the example proves}
-\label{sec:as_induction_takeaway}
-
-The example does not contradict part~(3) of
-\Cref{theorem:cyclic_cases_after_blowup}. That theorem is proved in Chapter~2
-by a direct Artin--Schreier--Witt calculation. Rather, the example isolates
-the missing implication in the proposed alternative proof:
-\begin{enumerate}
-  \item the induction hypothesis for $G/H$ controls the lower extension
-        $F/K_C$;
-  \item the degree-$p$ Artin--Schreier calculation controls the top layer
-        only after base change to $K_{C'}$;
-  \item a wild base change can absorb the ramification of $E/F$, so
-        unramifiedness of $EK_{C'}/K_{C'}$ does not recover unramifiedness of
-        $E/F$;
-  \item repairing the induction would require additional geometric control
-        of the comparison extension $K_{C'}/F$, strong enough to prevent
-        this absorption;
-  \item the direct Witt-vector calculation avoids this descent problem by
-        computing the full $\Z/p^r\Z$-torsor at the exceptional valuation in
-        one step.
-\end{enumerate}
-
-Thus the obstruction is not the decomposition of the torsor itself. The
-obstruction is that the two induction inputs measure the top layer on opposite
-sides of an uncontrolled wild base change.
+The example shows directly why the missing implication is not a formal
+property of base change: $E/F$ is wildly ramified, whereas after the wild
+base change $K/F$, the extension $EK/K$ is trivial. We do not claim that
+this particular extension $K/F$ arises from the comparison map
+$q_{\cP/H}$, so this is not a counterexample to part~(3) of
+\Cref{theorem:cyclic_cases_after_blowup}. It shows only that the desired
+conclusion requires more than a general base-change argument. The direct
+Witt-vector calculation supplies that additional input by treating the full
+$\Z/p^r\Z$-torsor at once.
