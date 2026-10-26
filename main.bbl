@@ -174,6 +174,51 @@
       \field{volume}{33}
       \field{year}{1980}
     \endentry
+    \entry{BLR1990}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=7f4994cc5c40a2fe7519939400ef13db}{%
+           family={Bosch},
+           familyi={B\bibinitperiod},
+           given={Siegfried},
+           giveni={S\bibinitperiod}}}%
+        {{hash=956cce9b72043ec95c3a00edde5e0312}{%
+           family={Lütkebohmert},
+           familyi={L\bibinitperiod},
+           given={Werner},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f23d91cf889c20dc5c31fd9532a2427e}{%
+           family={Raynaud},
+           familyi={R\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{b02e0d08d17bbfe6f242913edd12ec29}
+      \strng{fullhash}{b02e0d08d17bbfe6f242913edd12ec29}
+      \strng{fullhashraw}{b02e0d08d17bbfe6f242913edd12ec29}
+      \strng{bibnamehash}{b02e0d08d17bbfe6f242913edd12ec29}
+      \strng{authorbibnamehash}{b02e0d08d17bbfe6f242913edd12ec29}
+      \strng{authornamehash}{b02e0d08d17bbfe6f242913edd12ec29}
+      \strng{authorfullhash}{b02e0d08d17bbfe6f242913edd12ec29}
+      \strng{authorfullhashraw}{b02e0d08d17bbfe6f242913edd12ec29}
+      \field{labelalpha}{BLR90}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge}
+      \field{title}{Néron Models}
+      \field{volume}{21}
+      \field{year}{1990}
+      \verb{doi}
+      \verb 10.1007/978-3-642-51438-8
+      \endverb
+    \endentry
     \entry{koch1997algebraic}{book}{}{}
       \name{author}{1}{}{%
         {{hash=7dc9d693c2843e9c4b5102c0496436c2}{%

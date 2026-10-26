@@ -2431,31 +2431,38 @@
     <bcf:citekey order="56" intorder="1">Guignard2018</bcf:citekey>
     <bcf:citekey order="57" intorder="1">takeuchi2019blow</bcf:citekey>
     <bcf:citekey order="58" intorder="1">milneAV</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">Guignard2018</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">milneAV</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">BLR1990</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">takeuchi2019blow</bcf:citekey>
     <bcf:citekey order="61" intorder="1">Guignard2018</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">milneAV</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">BLR1990</bcf:citekey>
     <bcf:citekey order="63" intorder="1">Guignard2018</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">tendler2015geometricclassfieldtheory</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">Toth2011</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">takeuchi2019blow</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">takeuchi2019blow</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">takeuchi2019blow</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">takeuchi2019blow</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">milneAV</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">Guignard2018</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">milneAV</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">Guignard2018</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">tendler2015geometricclassfieldtheory</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">Toth2011</bcf:citekey>
     <bcf:citekey order="70" intorder="1">takeuchi2019blow</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">stacks-project</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">tendler2015geometricclassfieldtheory</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">tendler2015geometricclassfieldtheory</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">stacks-project</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">takeuchi2019blow</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">takeuchi2019blow</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">takeuchi2019blow</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">takeuchi2019blow</bcf:citekey>
     <bcf:citekey order="75" intorder="1">stacks-project</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">serreLF</bcf:citekey>
-    <bcf:citekey order="77" intorder="1">Rabinoff2014Witt</bcf:citekey>
-    <bcf:citekey order="78" intorder="1">serreLF</bcf:citekey>
-    <bcf:citekey order="79" intorder="1">Rabinoff2014Witt</bcf:citekey>
-    <bcf:citekey order="80" intorder="1">serreLF</bcf:citekey>
-    <bcf:citekey order="81" intorder="1">Rabinoff2014Witt</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">serreLF</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">Thomas2005</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">tendler2015geometricclassfieldtheory</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">tendler2015geometricclassfieldtheory</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">stacks-project</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">stacks-project</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">stacks-project</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">takeuchi2019blow</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">stacks-project</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">serreLF</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">Rabinoff2014Witt</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">serreLF</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">Rabinoff2014Witt</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">serreLF</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">Rabinoff2014Witt</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">serreLF</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">Thomas2005</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">

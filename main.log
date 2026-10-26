@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  25 OCT 2026 01:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  27 OCT 2026 00:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1706,17 +1706,17 @@ Chapter 3.
 
 [56]
 
-[57]) (./witt/WittVectorAlgebraAppendix.tex
+[57]
 
-[58]
+[58]) (./witt/WittVectorAlgebraAppendix.tex
+
+[59]
 Appendix A.
 
 
-[59
+[60
 
 ]
-
-[60]
 
 [61]
 
@@ -1729,11 +1729,11 @@ Appendix A.
 [65]
 
 [66]
+
+[67]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 590.
  (./witt/WittVectorPrerequisites.tex
-
-[67]
 
 [68]
 
@@ -1741,49 +1741,53 @@ t line 590.
 
 [70]
 
-[71]))
+[71]
 
-[72]
+[72]))
+
+[73]
 Appendix B.
 (./a_wrong_path/a_wrong_path.tex
 
-[73
+[74
 
 ]
 Package hyperref Info: bookmark level for unknown construction defaults to 0 on
  input line 64.
 
 
-[74]
-
 [75]
 
 [76]
 
-[77])
+[77]
 
-[78]
+[78])
 
 [79]
 
-[80
+[80]
 
-] (./main.aux)
+[81
+
+]
+
+[82] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 526D4E53210C6E7947729CBBACCB9B9D;12521.
+(rerunfilecheck)             Checksum: F0E078539B5236D7A1C3E8AD5E8296EC;12529.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45956 strings out of 473190
- 874696 string characters out of 5715800
- 1701381 words of memory out of 5000000
- 67958 multiletter control sequences out of 15000+600000
+ 45958 strings out of 473190
+ 874806 string characters out of 5715800
+ 1700430 words of memory out of 5000000
+ 67961 multiletter control sequences out of 15000+600000
  596350 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,19n,110p,3253b,2312s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1829,10 +1833,10 @@ lic/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
 c/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/x
 ypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/
 xybtip10.pfb>
-Output written on main.pdf (82 pages, 932968 bytes).
+Output written on main.pdf (84 pages, 937720 bytes).
 PDF statistics:
- 1576 PDF objects out of 1728 (max. 8388607)
- 1393 compressed objects within 14 object streams
- 459 named destinations out of 1000 (max. 500000)
+ 1593 PDF objects out of 1728 (max. 8388607)
+ 1407 compressed objects within 15 object streams
+ 458 named destinations out of 1000 (max. 500000)
  421 words of extra memory for PDF output out of 10000 (max. 10000000)
 
