@@ -449,6 +449,41 @@
       \field{title}{Stacks Project}
       \field{year}{2018}
     \endentry
+    \entry{takeuchi2018blow}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=ca1ca5408035ebcb32c22da88c0cc886}{%
+           family={Takeuchi},
+           familyi={T\bibinitperiod},
+           given={Daichi},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{fullhash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{fullhashraw}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{bibnamehash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{authorbibnamehash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{authornamehash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{authorfullhash}{ca1ca5408035ebcb32c22da88c0cc886}
+      \strng{authorfullhashraw}{ca1ca5408035ebcb32c22da88c0cc886}
+      \field{labelalpha}{Tak18}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Blow-ups and the class field theory for curves}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1804.02136
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1804.02136
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1804.02136
+      \endverb
+    \endentry
     \entry{Guignard2018}{article}{}{}
       \name{author}{1}{}{%
         {{hash=2ed142c654b9598d2f8eadf399cbbbc7}{%
@@ -485,47 +520,6 @@
       \endverb
       \verb{eprint}
       \verb 1804.02243
-      \endverb
-    \endentry
-    \entry{takeuchi2019blow}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=ca1ca5408035ebcb32c22da88c0cc886}{%
-           family={Takeuchi},
-           familyi={T\bibinitperiod},
-           given={Daichi},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Mathematical Sciences Publishers}%
-      }
-      \strng{namehash}{ca1ca5408035ebcb32c22da88c0cc886}
-      \strng{fullhash}{ca1ca5408035ebcb32c22da88c0cc886}
-      \strng{fullhashraw}{ca1ca5408035ebcb32c22da88c0cc886}
-      \strng{bibnamehash}{ca1ca5408035ebcb32c22da88c0cc886}
-      \strng{authorbibnamehash}{ca1ca5408035ebcb32c22da88c0cc886}
-      \strng{authornamehash}{ca1ca5408035ebcb32c22da88c0cc886}
-      \strng{authorfullhash}{ca1ca5408035ebcb32c22da88c0cc886}
-      \strng{authorfullhashraw}{ca1ca5408035ebcb32c22da88c0cc886}
-      \field{labelalpha}{Tak19}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Algebraic Number Theory}
-      \field{number}{6}
-      \field{title}{Blow-ups and the class field theory for curves}
-      \field{volume}{13}
-      \field{year}{2019}
-      \field{pages}{1327\bibrangedash 1351}
-      \range{pages}{25}
-      \verb{doi}
-      \verb 10.2140/ant.2019.13.1327
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.2140/ant.2019.13.1327
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.2140/ant.2019.13.1327
       \endverb
     \endentry
     \entry{YoucisTorsors}{unpublished}{}{}
