@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  28 OCT 2026 22:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  28 OCT 2026 23:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1784,8 +1784,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45960 strings out of 473190
- 874834 string characters out of 5715800
+ 45961 strings out of 473190
+ 874845 string characters out of 5715800
  1698444 words of memory out of 5000000
  67962 multiletter control sequences out of 15000+600000
  596350 words of font info for 155 fonts, out of 8000000 for 9000
@@ -1833,10 +1833,10 @@ lic/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
 c/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/x
 ypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/
 xybtip10.pfb>
-Output written on main.pdf (84 pages, 940904 bytes).
+Output written on main.pdf (84 pages, 942849 bytes).
 PDF statistics:
- 1602 PDF objects out of 1728 (max. 8388607)
- 1416 compressed objects within 15 object streams
- 459 named destinations out of 1000 (max. 500000)
+ 1604 PDF objects out of 1728 (max. 8388607)
+ 1418 compressed objects within 15 object streams
+ 460 named destinations out of 1000 (max. 500000)
  421 words of extra memory for PDF output out of 10000 (max. 10000000)
 

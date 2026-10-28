@@ -171,16 +171,21 @@ and $C\to S$ admits a section, the Abel--Jacobi morphism
 is a projective space bundle. In particular, it is proper and smooth with
 geometrically connected fibers.
 
-When $\mdls>0$, Guignard \cite[Proposition~4.14]{Guignard2018} proves that
+When $\mdls>0$, Guignard \cite[Proposition~4.14]{Guignard2018} proves the
+stronger statement that
 \[
     \Phi_d\colon U^{(d)}\longrightarrow\PicCm[d]
 \]
-is smooth and surjective of relative dimension $d-\deg\mdls-g+1$, with
+is, for the fppf topology, a torsor under the additive group scheme of a
+vector bundle of rank $d-\deg\mdls-g+1$ over $\PicCm[d]$. In particular,
+$\Phi_d$ is fppf-locally isomorphic over $\PicCm[d]$ to an affine space of
+relative dimension $d-\deg\mdls-g+1$; it is smooth and surjective, with
 geometrically connected fibers.
 
 We now return to the standing situation $S=\Spec(k)$, which remains in
-force for the rest of the chapter. The geometric fibers of $\Phi_d$ are
-well understood:
+force for the rest of the chapter. From Guignard's result, we retain only
+the following fiberwise consequence, stated together with the classical
+unramified case.
 \begin{theorem}\label{theorem:abel-jacobi-fibers}
 Assume that $S=\Spec(k)$ and that $d$ satisfies
 \Cref{equation:degree-condition}. Let
@@ -197,8 +202,7 @@ at $\bar s$ is isomorphic to
 \end{cases}
 \]
 Thus every geometric fiber is an affine space when $\mdls>0$ and a
-projective space when $\mdls=0$. This statement does not, by itself,
-assert that $\Phi_d$ is Zariski-locally trivial.
+projective space when $\mdls=0$.
 \end{theorem}
 \begin{proof}
 See \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, or \cite{Toth2011} Proposition 2.1.4.
@@ -206,28 +210,27 @@ See \cite{tendler2015geometricclassfieldtheory} Propositions 3.13-3.14, or \cite
 \end{proof}
 
 \section{Takeuchi's Compactification of the Abel--Jacobi Morphism}\label{section:BlowupOfSymmetricPowerOfCurves}
-{\color{green}
 We recall that our objective is to descend the $G$-torsor $\cP^{[d]}$ from
-$U^{(d)}$ to $\PicCm[d]$ along the Abel--Jacobi map $\Phi_d$:}
+$U^{(d)}$ to $\PicCm[d]$ along the Abel--Jacobi map $\Phi_d$:
 
 \[
 \begin{tikzcd}
- {\color{green}\cP^{[d]}} \arrow[d, purple]\\
+ \cP^{[d]} \arrow[d, purple]\\
  U^{(d)} \arrow[r, "\Phi_d"] & \PicCm[d]
 \end{tikzcd}
 \]
 
 
-{\color{green}
 (Here, the purple arrow emphasizes that $\cP^{[d]}$ is a torsor on the
-\'etale site of $U^{(d)}$.)}
+\'etale site of $U^{(d)}$.)
 
-However, we encounter an obstruction: in the case we are considering ($\mdls > 0$),
-the fibers of $\Phi_d$ are affine spaces of the same dimension rather than the better-behaved projective spaces.
-This suggests that a solution to this problem is to compactify the morphism to yield projective fibers.
-
-This section describes the result of the compactification constructed by \cite[\S3]{takeuchi2018blow}
-by blowing up the symmetric power.
+In the ramified case $\mdls>0$, \Cref{theorem:abel-jacobi-fibers}
+identifies the geometric fibers of $\Phi_d$ with affine spaces. Since
+$\Phi_d$ is not proper, the proper-smooth fundamental-group argument
+available in the unramified case cannot be applied directly. Takeuchi
+\cite[\S3]{takeuchi2018blow} overcomes this difficulty by extending $\Phi_d$
+to a projective-space bundle. We now recall the ambient blowup and the
+properties of the resulting compactification that will be used below.
 
 Let $\mdls = \sum_{i=1}^s n_iP_i$, where the $P_i$ are distinct closed
 points of $C$, be a modulus on $C$, and let $d$ satisfy
@@ -247,26 +250,31 @@ Diagrammatically:
 Z_0 \arrow[r, hook]           & C^{(d)}
 \end{tikzcd}\]
 
-{\color{green}
 Incorporating $U^{(d)}$, the torsor $\cP^{[d]}$, and the Abel--Jacobi map,
-we have:}
+we have:
 \[
 \begin{tikzcd}
-    & & {\color{green}\cP^{[d]}} \arrow[d, purple]\\
+    & & \cP^{[d]} \arrow[d, purple]\\
 \overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] &
 X_{\mdls, d} \arrow[d, "\pi"]  & \arrow[l, hook'] \arrow[dl, hook'] U^{(d)} \arrow[r, "\Phi_d"] & \PicCm[d] \\
 Z_0 \arrow[r, hook]           & C^{(d)}
 \end{tikzcd}
 \]
 
-Takeuchi \cite[\S3, Proposition~3.7 and Corollary~3.8]{takeuchi2018blow}
-constructs, for $d$ satisfying \Cref{equation:degree-condition}, a compactification
-denoted by $\Cmod{d}$ and proves the following:
+We will not need Takeuchi's explicit fiber-product definition of the
+compactification. The properties required below are summarized in the
+following existence and structure statement, which follows from
+\cite[\S3, (3.9), Proposition~3.7, and Corollary~3.8]{takeuchi2018blow}.
 
 \begin{theorem}[Takeuchi]\label{theorem:takeuchi-compactification-theorem}
-    The scheme $\Cmod{d}$ is an open subscheme of $X_{\mdls,d}$ containing $U^{(d)}$.
-    The morphism $\Phi_d\colon U^{(d)} \to \PicCm[d]$ extends to a morphism $\widetilde\Phi_d\colon \Cmod{d} \to \PicCm[d]$ which makes
-    $\Cmod{d}$ a projective space bundle over $\PicCm[d]$.
+    Let $d$ satisfy \Cref{equation:degree-condition}. There exists an open
+    subscheme $\Cmod{d}\subset X_{\mdls,d}$ containing $U^{(d)}$ and a
+    morphism
+    \[
+        \widetilde\Phi_d\colon \Cmod{d}\longrightarrow\PicCm[d]
+    \]
+    extending $\Phi_d\colon U^{(d)}\to\PicCm[d]$, such that $\Cmod{d}$ is a
+    projective space bundle over $\PicCm[d]$.
     Furthermore, the complement of $U^{(d)}$ in $\Cmod{d}$ is the scheme-theoretic intersection
     \[
         E_0 \times_{X_{\mdls,d}} \Cmod{d}
@@ -279,7 +287,7 @@ denoted by $\Cmod{d}$ and proves the following:
 Diagrammatically we have:
 \[
 \begin{tikzcd}
-    &  & {\color{green}\cP^{[d]}} \arrow[d, purple]\\
+    &  & \cP^{[d]} \arrow[d, purple]\\
     E_0 \times_{X_{\mdls,d}} \Cmod{d} \arrow[d] \arrow[r]  & \Cmod{d} \arrow[d, hook] \arrow[rd, "\widetilde\Phi_d"]  & U^{(d)} \arrow[l, hook'] \arrow[d, "\Phi_d"] \\
 \overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] &
 X_{\mdls, d} \arrow[d, "\pi"]  &  \PicCm[d] &  \\
@@ -291,9 +299,11 @@ Here the boundary may equivalently be written as
 $Z_0 \times_{C^{(d)}} \Cmod{d}$, since
 $E_0=Z_0\times_{C^{(d)}}X_{\mdls,d}$.
 
-The construction gives more than the description of the open complement in
-\Cref{theorem:takeuchi-compactification-theorem}: it identifies the boundary
-as a relative hyperplane.
+Takeuchi's description of the compactification identifies its boundary as a
+relative hyperplane; see
+\cite[Lemmas~3.2 and~3.3(1), Theorem~3.4, (3.9), and
+Corollary~3.8]{takeuchi2018blow}. This gives the following fiberwise
+description.
 
 \begin{cor}[The boundary is a relative hyperplane]
 \label{lemma:geometric-generic-fiber-takeuchi}
@@ -304,7 +314,11 @@ The boundary
 is a smooth relative hyperplane divisor in the projective-space bundle
 $\widetilde\Phi_d:\Cmod{d}\to\PicCm[d]$. Consequently, if
 $\bar s=\Spec\Omega\to\PicCm[d]$ is any geometric point and
-$r=d-\deg\mdls-g+1$, then there is an isomorphism of pairs
+$r=d-\deg\mdls-g+1$, then there is an isomorphism of pairs\footnote{For pairs
+$(X,D)$ and $(Y,E)$, an isomorphism of pairs is an isomorphism
+$f\colon X\xrightarrow{\sim}Y$ such that
+$D=X\times_Y E$ as closed subschemes of $X$. No canonical choice of $f$ is
+asserted here.}
 \[
     \left((\Cmod{d})_{\bar s},H_{\bar s}\right)
     \cong
@@ -314,21 +328,11 @@ and hence $U^{(d)}_{\bar s}\cong\mathbb A^r_{\Omega}$.
 \end{cor}
 
 \begin{proof}
-In Takeuchi's construction, the projective-space bundle is obtained from a
-locally free sheaf $E_{\mdls}$ fitting into an exact sequence whose kernel
-is $\operatorname{pr}_*\cL(-\mdls)$ and whose quotient is invertible.
-The resulting closed immersion
-\[
-    \mathbb P\bigl(\operatorname{pr}_*\cL(-\mdls)\bigr)
-    \lhook\joinrel\longrightarrow \mathbb P(E_{\mdls})
-\]
-is therefore a relative hyperplane. Takeuchi identifies this hyperplane
-scheme-theoretically with the inverse image of $Z_0$, and identifies
-$\mathbb P(E_{\mdls})$ with the blowup
-\cite[Lemmas~3.2 and~3.3(1), Theorem~3.4]{takeuchi2018blow}. Pulling these
-identifications back along the open immersion defining $\Cmod{d}$ gives
-the asserted description of $H$. The statement on geometric fibers follows
-by base change.
+The formation of a projective bundle and of its relative hyperplane commutes
+with arbitrary base change. Hence, after base change to $\bar s$, the
+projective-space bundle $\Cmod{d}$ becomes $\mathbb P^r_{\Omega}$ and $H$
+becomes a hyperplane $\mathbb P^{r-1}_{\Omega}$. Its complement is therefore
+$\mathbb A^r_{\Omega}$.
 \end{proof}
 
 \section{Tame Ramification Along the Full Boundary}\label{section:tame-ramification-full-boundary}
