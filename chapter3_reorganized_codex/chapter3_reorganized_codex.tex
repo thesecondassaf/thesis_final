@@ -57,8 +57,8 @@ descent and returns from torsors to rank-one local systems.
 
 \section{The Rigidified Picard Scheme and the Abel--Jacobi Map}\label{section:generalized-picard-and-abel-jacobi}
 
-The presentation of the rigidified Picard scheme and the Abel--Jacobi
-morphism in this section follows Guignard \cite[\S4]{Guignard2018} and
+Our presentation of the rigidified Picard scheme and the Abel--Jacobi
+morphism follows Guignard \cite[\S4]{Guignard2018} and
 Takeuchi \cite[\S3]{takeuchi2018blow}. For background on the classical
 theory of Jacobians and relative Picard schemes, we refer respectively to
 Milne \cite{milneAV} and Bosch--L\"utkebohmert--Raynaud
@@ -133,7 +133,7 @@ Let $U = C \setminus \mdls$ be the complement of the modulus in $C$.
 The effective Cartier divisors of degree $d$ which are prime to $\mdls$ are parameterized by the symmetric power $\Sym_S^d (U) = U^{(d)}$ over $S$ (See \cite{Guignard2018} Proposition 4.12, \cite{milneAV} Theorem 3.13).
 For any such divisor $D \in U^{(d)}$, the associated line bundle $\Oo_C(D)$ admits a canonical trivialization along $\mdls$.
 Specifically, the canonical section $1_D$ is regular and non-vanishing on $\mdls$ because $\operatorname{supp}(D) \cap \operatorname{supp}(\mdls) = \emptyset$.
-This section restricts to a nowhere-vanishing section on $\mdls$, thereby
+Its restriction is a nowhere-vanishing section on $\mdls$, thereby
 determining a trivialization
 $\psi_D:\Oo_{\mdls}\xrightarrow{\sim}\Oo_C(D)|_{\mdls}$.
 This is functorial in families and yields a morphism from the symmetric power
@@ -337,15 +337,27 @@ $\mathbb A^r_{\Omega}$.
 
 \section{Tame Ramification Along the Full Boundary}\label{section:tame-ramification-full-boundary}
 
-The ramification calculation of Chapter~2 concerns a modulus supported at a
-single point and a symmetric power of the corresponding degree. We now
-combine those local calculations over the different points of $\mdls$ and
-then pass from degree $\deg\mdls$ to every sufficiently large degree $d$.
+The ramification calculation of Chapter~2 treats a modulus supported at a
+single point in the corresponding degree. Compatibility with products
+combines these calculations over the support of $\mdls$, and addition of
+effective divisors carries the resulting statement in degree $\deg\mdls$ to
+degree $d$. Together, these steps give the following tameness result.
 
-We retain the blowup notation of Chapter~2. For every nonzero effective
-submodulus $\ndls\leq\mdls$, let $z_{\ndls}\in C^{(\deg\ndls)}$ be the
-point representing the divisor $\ndls$, let $Z_{\ndls}$ be the
-corresponding closed point, and put
+\begin{theorem}\label{theorem:SymmetricPowerOfSheafIsTamelyRamified}
+Let $G$ be a finite abelian group, and let $\cP$ be a $G$-torsor on $U$
+whose ramification is bounded by $\mdls$. For every sufficiently large
+integer $d$, the torsor $\cP^{[d]}$ is tamely ramified along
+\[
+H=\Cmod{d}\setminus U^{(d)}
+  =E_0\times_{X_{\mdls,d}}\Cmod{d}
+  \cong Z_0\times_{C^{(d)}}\Cmod{d}.
+\]
+\end{theorem}
+
+To prove the theorem, we retain the blowup notation of Chapter~2. For every
+nonzero effective submodulus $\ndls\leq\mdls$, let
+$Z_{\ndls}\subset C^{(\deg\ndls)}$ be the closed point corresponding to the
+divisor $\ndls$, and put
 \[
     X_{\ndls}=\operatorname{Bl}_{Z_{\ndls}}
         C^{(\deg\ndls)},
@@ -358,24 +370,11 @@ divisor, and generic point are denoted by $Z_0=Z_0(\mdls,d)$,
 $X_{\mdls,d}$, $E_0=E_{\mdls,d}$, and $\eta_0=\eta_{\mdls,d}$, as in
 \Cref{section:BlowupOfSymmetricPowerOfCurves}.
 
-\begin{theorem}\label{theorem:SymmetricPowerOfSheafIsTamelyRamified}
-{\color{green}
-Let $G$ be a finite abelian group, and let $\cP$ be a $G$-torsor on $U$
-whose ramification is bounded by $\mdls$. For every sufficiently large
-integer $d$, the torsor $\cP^{[d]}$ is tamely ramified along
-\[
-H=\Cmod{d}\setminus U^{(d)}
-  =E_0\times_{X_{\mdls,d}}\Cmod{d}
-  \cong Z_0\times_{C^{(d)}}\Cmod{d}.
-\]
-}
-\end{theorem}
-
 \subsection{From Point-Supported Moduli to the Full Modulus}
 
-The first step is to combine the single-point calculations. The following
-product-compatibility result is placed here because it is used only in the
-coprime-modulus reduction that immediately follows it.
+Combining the single-point calculations requires compatibility of tame
+ramification with products. The relevant statement feeds directly into the
+coprime-modulus reduction below.
 
 \subsubsection{Compatibility under products}\label{subsection:ram_prod_analysis}
 
@@ -387,35 +386,34 @@ $\pi_X: \Bl_x(X) \to X$ and $\pi_Y: \Bl_y(Y) \to Y$. Furthermore, let $\pi_{X \t
 be the blowup of the product scheme at the point $(x,y)$.
 We denote by $E_X, E_Y$, and $E_{X \times Y}$ the respective exceptional divisors, and let $\eta_X, \eta_Y$, and $\eta_{X \times Y}$ be their generic points.
 
-In this section, we establish the following result concerning the stability
-of tame ramification under the contracted product of torsors after pullback
-to a product.
+Tame ramification is preserved under the contracted product of torsors after
+pullback to a product, as follows.
 
 \begin{prop}\label{prop:ramification-external-product}
-Let $G$ be a finite abelian group. Suppose $\cP_X$ and $\cP_Y$ are $G$-torsors defined on open subsets $U_X \subset \Bl_x(X)$ and $U_Y \subset \Bl_y(Y)$ that are disjoint
-from the exceptional divisors.
-If $\cP_X$ is tamely ramified at $\eta_X$ and $\cP_Y$ is tamely ramified at $\eta_Y$, then the contracted product of their pullbacks,
+Let $G$ be a finite abelian group. Suppose $\cP_X$ and $\cP_Y$ are
+$G$-torsors defined on dense open subsets
+$U_X\subset\Bl_x(X)$ and $U_Y\subset\Bl_y(Y)$ disjoint from the respective
+exceptional divisors. On a suitable dense open subset of
+$\Bl_{(x,y)}(X\times_kY)$, specified in the proof below, their pullbacks are
+defined, and we set
 \[
-\cP_{X\times Y}
-  :=\operatorname{pr}_1^{-1}\cP_X
-      \otimes^G \operatorname{pr}_2^{-1}\cP_Y,
+    \cP_{X\times Y}
+      :=\operatorname{pr}_X^{-1}\cP_X
+        \otimes^G
+        \operatorname{pr}_Y^{-1}\cP_Y.
 \]
-is tamely ramified at the generic point $\eta_{X\times Y}$ of the exceptional divisor in the product blowup.
+If $\cP_X$ is tamely ramified at $\eta_X$ and $\cP_Y$ is tamely ramified
+at $\eta_Y$, then $\cP_{X\times Y}$ is tamely ramified at
+$\eta_{X\times Y}$.
 \end{prop}
 
-\noindent\textcolor{red}{\textbf{Review note.}
-The contracted product displayed above is initially defined on an open
-subscheme of $\Bl_x(X)\times_k\Bl_y(Y)$, not on
-$\Bl_{(x,y)}(X\times_kY)$. Explicitly pull it back along the morphism $f$
-constructed below (or pass explicitly to the common function field) before
-speaking of its ramification at $\eta_{X\times Y}$.}
-
 \begin{proof}
-The proposition is purely local in nature, so it suffices to consider the case where $X$ and $Y$ are affine.
-More precisely, by the smoothness of $X$ and $Y$, we may restrict our attention to open neighborhoods of $x$ and $y$ that are etale over affine spaces.
-The rest of this section treats that case.
+The proposition is local near $x$ and $y$. By smoothness, we may pass to
+neighborhoods that are \`etale over affine spaces, reducing the proof to the
+following affine calculation.
 
-\subsubsection*{The Affine Case}
+{\color{red}
+\paragraph*{Local model.}
 Let $X = \mathbb{A}_k^n$ be the affine $n$-space over a field $k$, and let $0 \in X$ be the origin.
 Let $\widetilde{X} = \operatorname{Bl}_0(X)$ be the blowup of $X$ at the origin.
 Recall that $\widetilde{X} \subset X \times_k \mathbb{P}^{n-1}_k$ is defined by the equations $x_i u_j = x_j u_i$, where $[u_1 : \dots : u_n]$ are the homogeneous coordinates of
@@ -447,9 +445,10 @@ Since the term in parentheses is a unit in $R$, the valuation $\nu_E$ associated
 \nu_E(M) = \sum a_i = \deg M.
 \]
 Consequently, for any polynomial $f = f_d + f_{d+1} + \dots + f_l$, where $f_i$ is the homogeneous part of degree $i$, we have $\nu_E(f) = d$ (the order of vanishing at the origin).
+}
 
-\subsubsection*{The Product Case}
-Now, let $X = \mathbb{A}^n$ and $Y = \mathbb{A}^m$ with origins $x=0$ and $y=0$.
+\paragraph*{Step 1: Comparing the blowups.}
+Let $X = \mathbb{A}^n$ and $Y = \mathbb{A}^m$ with origins $x=0$ and $y=0$.
 As before, $\operatorname{Bl}_0(X) \subset X \times \mathbb{P}^{n-1}$ and $\operatorname{Bl}_0(Y) \subset Y \times \mathbb{P}^{m-1}$ have exceptional divisors $E_X$ and $E_Y$ respectively.
 Consider the product $X \times_k Y \cong \mathbb{A}_k^{n+m}$.
 The blowup of the product at the origin $(0,0)$, denoted $\operatorname{Bl}_{(0,0)}(X \times_k Y)$, is a subscheme of $(X \times Y) \times \mathbb{P}^{n+m-1}$ defined by
@@ -460,8 +459,6 @@ y_k w_{n+l} = y_l w_{n+k} & 1 \le k, l \le m \\
 x_i w_{n+j} = y_j w_i & 1 \le i \le n, \,\, 1 \le j \le m
 \end{cases}\]
 where $[w_1 : \dots : w_{n+m}]$ are the homogeneous coordinates of $\mathbb{P}^{n+m-1}$. The exceptional divisor $E_{X \times Y}$ is isomorphic to $\mathbb{P}^{n+m-1}$.
-
-\subsubsection*{Comparison of Blowups}
 
 Both $\operatorname{Bl}_0(X) \times_k \operatorname{Bl}_0(Y)$ and
 $\operatorname{Bl}_{(0,0)}(X \times_k Y)$ are birational to $X \times_k Y$; their
@@ -510,7 +507,15 @@ $V_+(w_1,\ldots,w_n)$ nor $V_+(w_{n+1},\ldots,w_{n+m})$ contains the generic
 point of $\mathbb P_k^{n+m-1}$, we have
 $\eta_{X\times Y}\in\widetilde U$.
 
-\subsubsection*{Extensions of DVRs}
+Let
+\[
+    W=f^{-1}(U_X\times_kU_Y)\subset\widetilde U.
+\]
+This is a dense open subset of $B$. The pullbacks in the definition of
+$\cP_{X\times Y}$ are taken on $W$ along the restrictions of
+$\operatorname{pr}_X\circ f$ and $\operatorname{pr}_Y\circ f$.
+
+\paragraph*{Step 2: Comparing the exceptional valuations.}
 Let
 \[
 S=\mathcal O_{B,\eta_{X\times Y}},\qquad
@@ -557,13 +562,13 @@ k\left(\frac{x_1}{y_1},\ldots,\frac{x_n}{y_1},
 respectively. In particular, both are purely transcendental and hence
 separable.
 
-\subsubsection*{Ramification of $G$-Torsors}
+\paragraph*{Step 3: Applying the ramification lemmas.}
 The extensions $R_X\to S$ and $R_Y\to S$ are weakly unramified and have
 separable residue-field extensions. Hence
 \Cref{lemma:weakly_unramified_base_change} shows that the pullbacks of
 $\cP_X$ and $\cP_Y$ to $\operatorname{Frac}(S)$ are tamely ramified.
-Their contracted product is the restriction of $\cP_{X\times Y}$ to
-$\operatorname{Frac}(S)$. Therefore
+By the definition above, their contracted product is the generic fiber of
+$\cP_{X\times Y}$. Therefore
 \Cref{lemma:bounding_ramification_of_contracted_product} shows that
 $\cP_{X\times Y}$ is tamely ramified at $\eta_{X\times Y}$.
 \end{proof}
@@ -592,8 +597,8 @@ use the compatibility of symmetric powers with addition of divisors from
 
 \subsection{From the Minimal Degree to Large Degrees}
 
-We now propagate the result in degree $\deg\mdls$ to degree $d$ by adding
-an arbitrary effective divisor of degree $d-\deg\mdls$.
+Adding an arbitrary effective divisor of degree $d-\deg\mdls$ propagates the
+result in degree $\deg\mdls$ to degree $d$.
 
 The following addition lemma is adapted from \cite[Lemma~4.1]{takeuchi2018blow}.
 
@@ -794,9 +799,11 @@ of $\cP^{[d]}$ at $\eta_0$ by
 \end{proof}
 
 
-\subsection{Conclusion of the Tameness Argument}
+\subsection{\texorpdfstring{Proof of
+\Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}}{Proof of the tameness
+theorem}}
 
-\begin{proof}[Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}]
+\begin{proof}
 {\color{green}
 We first reduce to the case where $k$ is algebraically closed. The formations
 of symmetric powers, Takeuchi's blowup, and its boundary
@@ -835,8 +842,8 @@ $\eta_0$. Thus {\color{green}$\cP^{[d]}$} is tamely ramified along $H$.
 
 \section{Extension Across the Boundary}\label{section:extension-across-boundary}
 
-We now use the geometry of the Abel--Jacobi fibers to upgrade the tameness
-proved above to extension across the boundary. In positive characteristic,
+The geometry of the Abel--Jacobi fibers upgrades the tameness proved above
+to extension across the boundary. In positive characteristic,
 a prime-to-$p$ power argument on the geometric generic fiber forces the
 boundary inertia representation to be trivial; in characteristic zero, the
 same conclusion follows from the simple connectedness of affine space.
@@ -982,8 +989,8 @@ fundamental group of affine space is pro-$p$.
 
 \section{Descent and Reduced Geometric Class Field Theory}\label{section:gcft-descent}
 
-We finish by recording the fundamental-group input and applying it to the
-usual and rigidified Abel--Jacobi morphisms.
+The final descent rests on the fundamental groups of the usual and rigidified
+Abel--Jacobi morphisms.
 
 \subsection{The Fundamental-Group Input}
 
