@@ -1,0 +1,37 @@
+% Material removed from the proof of Proposition 63 on 2026-10-30.
+% This file is not included by main.tex. It is retained for later review.
+
+{\color{red}
+\paragraph*{Local model.}
+Let $X = \mathbb{A}_k^n$ be the affine $n$-space over a field $k$, and let $0 \in X$ be the origin.
+Let $\widetilde{X} = \operatorname{Bl}_0(X)$ be the blowup of $X$ at the origin.
+Recall that $\widetilde{X} \subset X \times_k \mathbb{P}^{n-1}_k$ is defined by the equations $x_i u_j = x_j u_i$, where $[u_1 : \dots : u_n]$ are the homogeneous coordinates of
+$\mathbb{P}^{n-1}_k$.
+The exceptional divisor $E \subset \widetilde{X}$ is the fiber over the origin, $E = \{ (0, [u_1 : \dots : u_n]) \}$, which is of codimension 1 in $\widetilde{X}$.
+Let $\eta \in E$ be the generic point of $E$, and let $R = \mathcal{O}_{\widetilde{X}, \eta}$ be the associated local ring.
+This ring $R$ is a discrete valuation ring (DVR) with fraction field $K = K(X) = k(x_1, \dots, x_n)$.
+
+On the affine chart $U_1$ where $u_1 \neq 0$, we have $x_i = \frac{u_i}{u_1} x_1$.
+The coordinate ring is
+\[
+\mathcal{O}_{\widetilde{X}}(U_1)
+  =k\left[x_1, \frac{u_2}{u_1}, \dots, \frac{u_n}{u_1}\right].
+\]
+In this chart, the generic point $\eta$ corresponds to the prime ideal $\mathfrak{p}_1 = (x_1)$. Thus, the local ring is $R = k[x_1, \frac{u_2}{u_1}, \dots, \frac{u_n}{u_1}]_{(x_1)}$.
+The residue field is $\kappa(\eta) = k(\frac{u_2}{u_1}, \dots, \frac{u_n}{u_1})$, and the completion of $R$ with respect to its maximal ideal is
+\[
+\widehat{R}=\kappa(\eta)[[x_1]].
+\]
+In this local ring, $x_1$ is a uniformizer. Note that any $x_i$ (for $i > 1$) can also serve as a uniformizer,
+as $x_i = (\frac{u_i}{u_1}) x_1$ and $\frac{u_i}{u_1}$ is a unit in $R$.
+
+For any monomial $M = x_1^{a_1} \dots x_n^{a_n} \in K$, we can write
+\[
+M = x_1^{\sum a_i} \left( \frac{u_2}{u_1} \right)^{a_2} \dots \left( \frac{u_n}{u_1} \right)^{a_n}.
+\]
+Since the term in parentheses is a unit in $R$, the valuation $\nu_E$ associated with $E$ satisfies
+\[
+\nu_E(M) = \sum a_i = \deg M.
+\]
+Consequently, for any polynomial $f = f_d + f_{d+1} + \dots + f_l$, where $f_i$ is the homogeneous part of degree $i$, we have $\nu_E(f) = d$ (the order of vanishing at the origin).
+}

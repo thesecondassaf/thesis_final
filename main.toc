@@ -28,20 +28,19 @@
 \contentsline {section}{\numberline {3.2}Takeuchi's Compactification of the Abel--Jacobi Morphism}{47}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Tame Ramification Along the Full Boundary}{49}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}From Point-Supported Moduli to the Full Modulus}{49}{subsection.3.3.1}%
-\contentsline {subsubsection}{Compatibility under products}{49}{section*.17}%
-\contentsline {subsection}{\numberline {3.3.2}From the Minimal Degree to Large Degrees}{52}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Proof of \Cref {theorem:SymmetricPowerOfSheafIsTamelyRamified}}{55}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Extension Across the Boundary}{55}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Descent and Reduced Geometric Class Field Theory}{57}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}The Fundamental-Group Input}{57}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.3.2}From the Point Center to the Degree-$d$ Center}{53}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Proof of \Cref {theorem:SymmetricPowerOfSheafIsTamelyRamified}}{56}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Extension Across the Boundary}{56}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Descent and Reduced Geometric Class Field Theory}{58}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}The Fundamental-Group Input}{58}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}The Descent Argument}{58}{subsection.3.5.2}%
 \contentsline {chapter}{Appendix \numberline {A}Cyclic Torsor Theories and Witt Vectors}{60}{appendix.1.A}%
 \contentsline {section}{\numberline {A.1}The common group-scheme construction}{60}{section.1.A.1}%
 \contentsline {subsection}{\numberline {A.1.1}The kernel torsor construction}{60}{subsection.1.A.1.1}%
 \contentsline {subsection}{\numberline {A.1.2}The three cyclic theories}{62}{subsection.1.A.1.2}%
-\contentsline {paragraph}{Kummer.}{62}{section*.22}%
-\contentsline {paragraph}{Artin--Schreier.}{63}{section*.23}%
-\contentsline {paragraph}{Artin--Schreier--Witt.}{63}{section*.24}%
+\contentsline {paragraph}{Kummer.}{62}{section*.17}%
+\contentsline {paragraph}{Artin--Schreier.}{63}{section*.18}%
+\contentsline {paragraph}{Artin--Schreier--Witt.}{63}{section*.19}%
 \contentsline {section}{\numberline {A.2}Kummer and Artin--Schreier theory}{64}{section.1.A.2}%
 \contentsline {subsection}{\numberline {A.2.1}Kummer theory}{64}{subsection.1.A.2.1}%
 \contentsline {subsection}{\numberline {A.2.2}Artin--Schreier theory}{64}{subsection.1.A.2.2}%
