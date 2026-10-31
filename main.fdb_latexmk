@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1793378304.04763 "main.bcf" "main.bbl" "main" 1793460440.94743 0
+["biber main"] 1793378304.04763 "main.bcf" "main.bbl" "main" 1793462151.22319 0
   "Bib.bib" 1793123793.7624 6874 bd1650b2c67fbafe551e3252de308fff ""
-  "main.bcf" 1793460440.55108 114966 3d22d94ebe0bd6abc8d6c254a6395bdf "pdflatex"
+  "main.bcf" 1793462150.75309 114966 3d22d94ebe0bd6abc8d6c254a6395bdf "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1793460435.05802 "main.tex" "main.pdf" "main" 1793460440.94792 0
+["pdflatex"] 1793462145.20873 "main.tex" "main.pdf" "main" 1793462151.2237 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -363,21 +363,21 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "MacrosAndFigures.tex" 1793049040.1782 11515 e6a1fbd92c8b733d4bf646106cf3445c ""
   "a_wrong_path/a_wrong_path.tex" 1792879606.8451 15777 d32530e998b36d1586a8a6130a5203d5 ""
-  "chapter3_reorganized_codex/chapter3_reorganized_codex.tex" 1793460426.28291 47817 e25ddd8e685939bc6a820dd29db68d6e ""
+  "chapter3_reorganized_codex/chapter3_reorganized_codex.tex" 1793462137.92264 47934 523b5bd0da0b6c74bcb6361d2c810287 ""
   "includes.tex" 1784235509.93079 1342 e5c3b0d0c7778d7de9a24d055cbd4cd6 ""
-  "main.aux" 1793460440.53315 59808 cea93a546afce5be1910f357b718ba7f "pdflatex"
+  "main.aux" 1793462150.73533 59491 64f45c992b9d5713563bb59190012db7 "pdflatex"
   "main.bbl" 1793378306.56326 23504 d82c21c9a4014ab1c19ea2a75d237ca3 "biber main"
-  "main.out" 1793460440.54622 12522 ebfa09253e6639a3aaa7b08f545ddd04 "pdflatex"
-  "main.run.xml" 1793460440.55222 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.out" 1793462150.74838 11904 3da9680bc67c78808b4c120fce8c512a "pdflatex"
+  "main.run.xml" 1793462150.75439 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
   "main.tex" 1791554448.78244 3106 0b99a348926f017aa2261626a11e8a59 ""
-  "main.toc" 1793460440.55235 5625 38a473dea54f59dbef2dfddb4e166636 "pdflatex"
+  "main.toc" 1793462150.75449 5390 f106086302b4897b5ba89e4fcb6ea891 "pdflatex"
   "sections/Introduction.tex" 1793218041.76017 15144 f9b4b49dd90c2d24dcfe1b4dc0de92fa ""
   "sections/Preliminaries/CyclicRamificationTheories.tex" 1792252650.73865 18553 8d2bae1a75ba3bee327ccc8699736bee ""
   "sections/Preliminaries/GTorsorRamification.tex" 1791874889.42125 16615 aa22dd7f436aa45f22b01b27d4296994 ""
   "sections/Preliminaries/GeneralPreliminaries.tex" 1793377774.01715 45830 750338292d4fe09c8d87f0594119f790 ""
   "sections/Preliminaries/LocalRamificationPreliminaries.tex" 1786819712.5272 7831 b81b6197ccb8f50ad73e64780295997b ""
-  "sections/Preliminaries/ReductionsBeforeCyclicTheories.tex" 1793458592.01652 17153 152fbb934fb0ae8f000ed86aa46137bf ""
-  "sections/RamificationAfterBlowupIntroduction.tex" 1791554448.78651 2555 838c16ce657924de82b019a7a49bf40d ""
+  "sections/Preliminaries/ReductionsBeforeCyclicTheories.tex" 1793461427.78113 17142 8037dd4fe14ca094a12815382d45f165 ""
+  "sections/RamificationAfterBlowupIntroduction.tex" 1793461427.73811 2540 f634f57eb28d0b85f06fcbf85538e288 ""
   "sections/RamificationAfterBlowupIsTame.tex" 1792864797.29706 10327 60bea44e1844ec54465a23663c214d44 ""
   "sections/RamificationAfterBlowupPPower.tex" 1792864123.00017 4175 13778ae3720a31b290f91c0aa03c1868 ""
   "witt/WittVectorAlgebraAppendix.tex" 1792863277.22933 24293 4779a265c140365769fea6d8ca492a0e ""

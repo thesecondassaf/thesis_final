@@ -8,26 +8,22 @@ curve over $k$. Fix a modulus
 on $C$, and set $U = C \setminus \mdls$.
 
 For each single-point submodulus $\ndls = n_i P_i$ of $\mdls$, set
-$d_\ndls = \deg(\ndls)$. The effective divisor $\ndls$ determines a
-$k$-rational closed point
-
-\[
-    Z_\ndls \hookrightarrow C^{(d_\ndls)}
-        = \operatorname{Sym}^{d_\ndls}_k(C).
-\]
+$d_\ndls = \deg(\ndls)$. We identify the effective divisor $\ndls$ with
+the corresponding $k$-rational closed point of
+$C^{(d_\ndls)}=\operatorname{Sym}^{d_\ndls}_k(C)$.
 
 Let
 
 \[
     \pi_\ndls \colon
-    X_\ndls := \operatorname{Bl}_{Z_\ndls}\bigl(C^{(d_\ndls)}\bigr)
+    X_\ndls := \operatorname{Bl}_{\ndls}\bigl(C^{(d_\ndls)}\bigr)
     \longrightarrow C^{(d_\ndls)}
 \]
 
 be the blowup at this point. We denote its exceptional divisor by
 
 \[
-    E_\ndls := Z_\ndls \times_{C^{(d_\ndls)}} X_\ndls
+    E_\ndls := X_\ndls \times_{C^{(d_\ndls)}} \{\ndls\}.
 \]
 
 By
@@ -42,7 +38,7 @@ Cartesian diagram
 E_\ndls = \overline{\{\eta_\ndls\}}
     \arrow[r, hook] \arrow[d]
   & X_\ndls \arrow[d, "\pi_\ndls"] \\
-Z_\ndls \arrow[r, hook]
+\{\ndls\} \arrow[r, hook]
   & C^{(d_\ndls)}.
 \end{tikzcd}
 \end{equation}

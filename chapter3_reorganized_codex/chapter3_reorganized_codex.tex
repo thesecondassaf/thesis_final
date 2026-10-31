@@ -376,7 +376,7 @@ by $X_{\mdls,d}$, $E_0=E_{\mdls,d}$, and
 $\eta_0=\eta_{\mdls,d}$, as in
 \Cref{section:BlowupOfSymmetricPowerOfCurves}.
 
-\subsection{From Point-Supported Moduli to the Full Modulus}
+\noindent\textbf{From point-supported moduli to the full modulus.}
 
 We first show that if the relevant torsors are tame for two coprime
 submoduli, then the corresponding torsor is tame for their sum. Iterating
@@ -703,16 +703,24 @@ Its tameness therefore descends by
 \Cref{lemma:descend_ramification_along_etale}.
 \end{proof}
 
-\subsection{\texorpdfstring{From the Point Center to the Degree-$d$ Center}{From the Point Center to the Degree-d Center}}
+\noindent\textbf{From the point center to the degree-$d$ center.}
 
-By the preceding subsection, tameness for the point-supported components of
-$\mdls$ implies that $\cP^{[\deg\mdls]}$ is tamely ramified at
-$\eta_{\mdls}$, above the point $\mdls\in C^{(\deg\mdls)}$. For
-$d\geq\deg\mdls$, the relevant center in
-$C^{(d)}$ is instead the locus $Z_0(\mdls,d)$ of divisors containing
-$\mdls$. We compare the blowup along this center with
-$X_{\mdls}\times_k C^{(d-\deg\mdls)}$ by means of the addition morphism.
-The required \`etaleness is provided by the following lemma, adapted from
+The preceding reduction gives tameness in degree $\deg\mdls$, at the
+exceptional divisor over the point $\mdls\in C^{(\deg\mdls)}$. To pass to
+degree $d\geq\deg\mdls$, we use the addition morphism to relate this point
+center to
+\[
+Z_0(\mdls,d)=\mdls+C^{(d-\deg\mdls)}\subset C^{(d)},
+\]
+the center of the degree-$d$ blowup. After restricting the second factor to
+$U^{(d-\deg\mdls)}$ and blowing up, the addition morphism induces a
+comparison morphism
+\[
+X_{\mdls}\times_k U^{(d-\deg\mdls)}\longrightarrow X_{\mdls,d}.
+\]
+To descend tameness along this morphism, we must show that it is \`etale at
+the generic point of the exceptional divisor in its source. This follows
+from the case $l=1$ of the next lemma, adapted from
 \cite[Lemma~4.1]{takeuchi2018blow}.
 
 \begin{lemma}\label{lemma:takeuchi_lemma}
@@ -744,10 +752,10 @@ summands have pairwise disjoint support.}
      We may assume that $k$ is algebraically closed (hence $\deg P_i = 1$ for all $i$).
      The morphism $\pi$ is finite: it is induced by the finite quotient morphism
      \[
-     C^d/\bigl(\mathfrak S_{\deg\ndls_1}\times\cdots\times
-       \mathfrak S_{\deg\ndls_l}\times
-       \mathfrak S_{d-\deg\mdls}\bigr)
-       \longrightarrow C^d/\mathfrak S_d.
+     C^d/\bigl(S_{\deg\ndls_1}\times\cdots\times
+       S_{\deg\ndls_l}\times
+       S_{d-\deg\mdls}\bigr)
+       \longrightarrow C^d/S_d.
      \]
      Its source and target are smooth $k$-schemes of pure dimension $d$.
      Hence $\pi$ is flat by miracle flatness, and therefore finite flat.
