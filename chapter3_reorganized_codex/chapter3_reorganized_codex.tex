@@ -900,41 +900,19 @@ along $\widetilde{+}$ to $\eta_0$ by
 theorem}}
 
 \begin{proof}
-{\color{green}
-We first reduce to the case where $k$ is algebraically closed. The formations
-of symmetric powers, Takeuchi's blowup, and its boundary
-commute with the flat base change $\Spec(\bar{k})\to\Spec(k)$. At the generic
-points of the boundary, this base change induces a weakly unramified extension
-of discrete valuation rings with separable residue-field extension. Hence
-\Cref{lemma:weakly_unramified_base_change} shows that tameness over $k$ is
-equivalent to tameness after base change to $\bar{k}$. We may therefore replace
-$k$ by $\bar{k}$.
+By flat base change, \Cref{lemma:weakly_unramified_base_change}, and
+\Cref{prop:equivalence_ramification_bounded_by_modulus}, we may assume
+that $k$ is algebraically closed.
 
-By \Cref{prop:equivalence_ramification_bounded_by_modulus}, the pullback
-$\cP_{\bar k}$ has ramification bounded by the base-changed modulus.
-
-Because the original field is perfect, each closed point $P_i$ splits into
-distinct $\bar{k}$-points, and the base-changed modulus is
-\[
-   \mdls_{\bar{k}}
-      =\sum_i\ \sum_{\bar P\mapsto P_i} n_i\bar P.
-\]
-In the remainder of the proof we write $k$, $C$, $\mdls$, and $\cP$ for these
-base-changed objects.
-}
-
-For each single-point submodulus $\ndls=n_P P$ of $\mdls$,
-{\color{green}\Cref{theorem:torsors_after_blowup_is_tame}} shows that
-$\cP^{[\deg\ndls]}$ is tamely ramified at $\eta_\ndls$. Repeated application
-of \Cref{cor:moduli-reduction} shows that
-$\cP^{[\deg\mdls]}$ is tamely ramified at $\eta_\mdls$. Therefore
-\Cref{cor:tame-ramification-symmetric-product} transports this tameness to
-the degree-$d$ blowup and shows that $\cP^{[d]}$ is tamely ramified at the
-generic point $\eta_0$ of the exceptional divisor over $Z_0(\mdls,d)$ for
-every sufficiently large $d$. Since $H$ is the nonempty open part of $E_0$
-described in
-\Cref{lemma:geometric-generic-fiber-takeuchi}, its generic point is
-$\eta_0$. Thus {\color{green}$\cP^{[d]}$} is tamely ramified along $H$.
+For each single-point summand $\ndls=n_P P$ of $\mdls$,
+\Cref{theorem:torsors_after_blowup_is_tame} gives tameness of
+$\cP^{[\deg\ndls]}$ at $\eta_\ndls$. Applying
+\Cref{cor:moduli-reduction} repeatedly gives tameness of
+$\cP^{[\deg\mdls]}$ at $\eta_\mdls$.
+\Cref{cor:tame-ramification-symmetric-product} then gives tameness of
+$\cP^{[d]}$ at $\eta_0$ for every sufficiently large $d$. Since $H$ is a
+nonempty open subset of $E_0$, it has generic point $\eta_0$, proving
+the theorem.
 \end{proof}
 
 \section{Extension Across the Boundary}\label{section:extension-across-boundary}

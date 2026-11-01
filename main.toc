@@ -29,7 +29,7 @@
 \contentsline {section}{\numberline {3.3}Tame Ramification Along the Full Boundary}{49}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Proof of \Cref {theorem:SymmetricPowerOfSheafIsTamelyRamified}}{56}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}Extension Across the Boundary}{56}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Descent and Reduced Geometric Class Field Theory}{58}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Descent and Reduced Geometric Class Field Theory}{57}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}The Fundamental-Group Input}{58}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}The Descent Argument}{58}{subsection.3.5.2}%
 \contentsline {chapter}{Appendix \numberline {A}Cyclic Torsor Theories and Witt Vectors}{60}{appendix.1.A}%
