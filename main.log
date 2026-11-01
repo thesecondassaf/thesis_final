@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  31 OCT 2026 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  1 NOV 2026 22:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1526,7 +1526,7 @@ Package biblatex Info: Reference segment=0 on input line 27.
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local
 /texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 48.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 50.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
@@ -1538,7 +1538,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53 \end{abstract}
+l.55 \end{abstract}
                     [1] (./main.toc
 
 
@@ -1708,17 +1708,17 @@ Chapter 3.
 
 [57]
 
-[58]) (./witt/WittVectorAlgebraAppendix.tex
+[58]
 
-[59]
+[59]) (./witt/WittVectorAlgebraAppendix.tex
+
+[60]
 Appendix A.
 
 
-[60
+[61
 
 ]
-
-[61]
 
 [62]
 
@@ -1731,11 +1731,11 @@ Appendix A.
 [66]
 
 [67]
+
+[68]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 590.
  (./witt/WittVectorPrerequisites.tex
-
-[68]
 
 [69]
 
@@ -1743,36 +1743,38 @@ t line 590.
 
 [71]
 
-[72]))
+[72]
 
-[73]
+[73]))
+
+[74]
 Appendix B.
 (./a_wrong_path/a_wrong_path.tex
 
-[74
+[75
 
 ]
 Package hyperref Info: bookmark level for unknown construction defaults to 0 on
  input line 64.
 
 
-[75]
-
 [76]
 
 [77]
 
-[78])
+[78]
 
-[79]
+[79])
 
 [80]
 
-[81
+[81]
+
+[82
 
 ]
 
-[82] (./main.aux)
+[83] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1784,9 +1786,9 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45802 strings out of 473190
- 870806 string characters out of 5715800
- 1698334 words of memory out of 5000000
+ 45803 strings out of 473190
+ 870813 string characters out of 5715800
+ 1697334 words of memory out of 5000000
  67811 multiletter control sequences out of 15000+600000
  596350 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1833,10 +1835,10 @@ lic/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
 c/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/x
 ypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xypic/
 xybtip10.pfb>
-Output written on main.pdf (84 pages, 938683 bytes).
+Output written on main.pdf (85 pages, 943412 bytes).
 PDF statistics:
- 1591 PDF objects out of 1728 (max. 8388607)
- 1405 compressed objects within 15 object streams
- 452 named destinations out of 1000 (max. 500000)
+ 1603 PDF objects out of 1728 (max. 8388607)
+ 1416 compressed objects within 15 object streams
+ 453 named destinations out of 1000 (max. 500000)
  405 words of extra memory for PDF output out of 10000 (max. 10000000)
 

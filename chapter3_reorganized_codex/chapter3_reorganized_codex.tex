@@ -705,16 +705,12 @@ Its tameness therefore descends by
 
 \noindent\textbf{From the point center to the degree-$d$ center.}
 
-The preceding reduction gives tameness in degree $\deg\mdls$, at the
-exceptional divisor over the point $\mdls\in C^{(\deg\mdls)}$. To pass to
-degree $d\geq\deg\mdls$, we use the addition morphism to relate this point
-center to
+The comparison is governed by the addition morphism
 \[
-Z_0(\mdls,d)=\mdls+C^{(d-\deg\mdls)}\subset C^{(d)},
++\colon C^{(\deg\mdls)}\times_k C^{(d-\deg\mdls)}\longrightarrow C^{(d)}.
 \]
-the center of the degree-$d$ blowup. After restricting the second factor to
-$U^{(d-\deg\mdls)}$ and blowing up, the addition morphism induces a
-comparison morphism
+After restricting the second factor to $U^{(d-\deg\mdls)}$ and blowing up,
+it induces a comparison morphism
 \[
 X_{\mdls}\times_k U^{(d-\deg\mdls)}\longrightarrow X_{\mdls,d}.
 \]
@@ -729,41 +725,92 @@ from the case $l=1$ of the next lemma, adapted from
      Let $U = C \setminus \mdls$ and let $d \geq \deg \mdls$.
 
      Suppose $\ndls_1, \dots, \ndls_l$ are pairwise coprime submoduli of $\mdls$ such that $\mdls = \sum_{j=1}^l \ndls_j$.
+     Put $d_j=\deg\ndls_j$ for $1\leq j\leq l$ and $d_0=d-\deg\mdls$.
      Consider the summation morphism:
      \[
-     \pi : C^{(\deg \ndls_1)} \times_k \dots \times_k C^{(\deg \ndls_l)} \times_k C^{(d - \deg \mdls)} \longrightarrow C^{(d)}
+     \pi : Y:=C^{(d_1)} \times_k \dots \times_k C^{(d_l)} \times_k C^{(d_0)} \longrightarrow C^{(d)}
      \]
-     defined by $(D_1, \dots, D_l, D_{extra}) \mapsto \sum_{j=1}^l D_j + D_{extra}$.
+     defined by $(D_1, \dots, D_l, D_0) \mapsto \sum_{j=1}^l D_j + D_0$.
 
-     Then $\pi$ is étale at the generic point of the closed subvariety
+     Then $\pi$ is finite flat, and it is étale at the generic point of the closed subvariety
      \[
-     V = \{\ndls_1\} \times_k \dots \times_k \{\ndls_l\} \times_k C^{(d - \deg \mdls)}
+     V = \{\ndls_1\} \times_k \dots \times_k \{\ndls_l\} \times_k C^{(d_0)}\subset Y.
      \]
-     inside the domain $C^{(\deg \ndls_1)} \times_k \dots \times_k C^{(\deg \ndls_l)} \times_k C^{(d - \deg \mdls)}$.
 \end{lemma}
 
-\noindent\textcolor{blue}{\textbf{Review note 1.}
-The proof below should be revised: the fiber-cardinality argument does not
-handle multiplicities in the divisors $\ndls_j$. A cleaner proof should use
-the local fact that addition of effective divisors is étale when the
-summands have pairwise disjoint support.}
-
 \begin{proof}
-     We may assume that $k$ is algebraically closed (hence $\deg P_i = 1$ for all $i$).
-     The morphism $\pi$ is finite: it is induced by the finite quotient morphism
-     \[
-     C^d/\bigl(S_{\deg\ndls_1}\times\cdots\times
-       S_{\deg\ndls_l}\times
-       S_{d-\deg\mdls}\bigr)
-       \longrightarrow C^d/S_d.
-     \]
-     Its source and target are smooth $k$-schemes of pure dimension $d$.
-     Hence $\pi$ is flat by miracle flatness, and therefore finite flat.
-     It is enough to show that there exists a closed point $Q$ of $\ndls_1 + \dots \ndls_l + C^{(d - \deg \mdls)} \subset C^{(d)}$
-     over which there are $\deg \pi$ points on $C^{(\deg\ndls_1)} \times_k \dots \times_k C^{(\deg\ndls_l)} \times_k C^{(d - \deg \mdls)}$. (Because it will be unramified
-     at this point and thus also at the generic point of $V$.)
-     Choose $Q$ as a point corresponding to a divisor
-     $\ndls_1 + \dots + \ndls_l + P_{s+1} + \dots + P_{s+d - \deg \mdls}$, where $P_1, \dots, P_{s+d - \deg \mdls}$ are distinct points of $U(k)$.
+We may assume that $k$ is algebraically closed. The morphism $\pi$ is
+finite: it is induced by the finite quotient morphism
+\[
+C^d/\bigl(S_{d_1}\times\cdots\times S_{d_l}\times S_{d_0}\bigr)
+  \longrightarrow C^d/S_d.
+\]
+Its source and target are smooth $k$-schemes of pure dimension $d$.
+Hence $\pi$ is flat by miracle flatness, and therefore finite flat.
+
+Since the étale locus of $\pi$ is open and $V$ is integral, it is enough to
+find one point of $V$ at which $\pi$ is étale. Choose an effective
+divisor $D_0\in U^{(d_0)}$, and set
+\[
+v=\bigl(\ndls_1,\ldots,\ndls_l,D_0\bigr)\in V,
+\qquad Q=\pi(v)=\mdls+D_0.
+\]
+The summands $\ndls_1,\ldots,\ndls_l,D_0$ have pairwise disjoint
+supports, since the $\ndls_j$ are pairwise coprime and
+$D_0$ is supported in $U$. Consider the quotient maps
+\[
+C^d\xrightarrow{\ p\ }
+Y
+\xrightarrow{\ \pi\ }C^{(d)},
+\]
+where $p$ groups the ordered points into blocks, and put $q=\pi\circ p$.
+The same smoothness and miracle-flatness argument shows that $p$ and $q$
+are finite flat, of degrees $h:=\prod_{j=0}^{l}d_j!$ and $d!$, respectively.
+Write
+\[
+Q=\sum_{P\in\operatorname{Supp}(Q)}m_P P,
+\qquad \mu:=\prod_{P\in\operatorname{Supp}(Q)}m_P!.
+\]
+
+The fiber $q^{-1}(Q)$ has $d!/\mu$ distinct points, corresponding to the
+ordered lists representing $Q$. Its coordinate algebra $R$ has
+$k$-dimension $d!$, since $q$ is finite flat of degree $d!$. Being
+finite-dimensional over $k$, $R$ is Artinian. By \stackstag{00JB}, it
+decomposes into its localizations at maximal ideals, which correspond to
+the points of the fiber:
+\[
+R=\prod_{x\in q^{-1}(Q)}R_x,
+\qquad R_x=\mathcal O_{q^{-1}(Q),x}.
+\]
+The action of $S_d$ is transitive on these points and induces isomorphisms
+between the factors $R_x$. Therefore each has dimension
+\[
+\dim_k R_x=\frac{d!}{d!/\mu}=\mu.
+\]
+
+Let $A=\mathcal O_{\pi^{-1}(Q),v}$, so that $\Spec(A)$ is the local
+part of the fiber at $v$, and let $B$ be the coordinate algebra of
+$C^d\times_Y\Spec(A)$. As $p$ is finite flat of degree $h$, $B$ is a free
+$A$-module of rank $h$. Hence
+\[
+\dim_k B=h\dim_k A.
+\]
+On the other hand, since the summands have disjoint supports, each point
+$P$ of $Q$ occurs in exactly one block, with multiplicity $m_P$. The block
+corresponding to $\ndls_j$ therefore has
+$d_j!/\prod_{P\in\operatorname{Supp}(\ndls_j)}m_P!$ distinct orderings,
+and the analogous formula holds for the block corresponding to $D_0$.
+Multiplying these counts over all blocks gives exactly $h/\mu$ ordered
+lists above $v$. Thus
+\[
+B\cong\prod_{\substack{x\in q^{-1}(Q)\\p(x)=v}}R_x,
+\qquad
+\dim_k B=\frac{h}{\mu}\,\mu=h.
+\]
+It follows that $\dim_k A=1$, and therefore $A=k$. The fiber of $\pi$ is
+thus étale at $v$. Since $\pi$ is flat and of finite presentation, the
+fiber criterion for étaleness (\stackstag{0476}) implies that $\pi$ is
+étale at $v$, as required.
 \end{proof}
 
 \begin{cor}\label{cor:etale_at_generic_point}

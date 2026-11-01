@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1793378304.04763 "main.bcf" "main.bbl" "main" 1793462151.22319 0
+["biber main"] 1793565544.094 "main.bcf" "main.bbl" "main" 1793566669.07492 0
   "Bib.bib" 1793123793.7624 6874 bd1650b2c67fbafe551e3252de308fff ""
-  "main.bcf" 1793462150.75309 114966 3d22d94ebe0bd6abc8d6c254a6395bdf "pdflatex"
+  "main.bcf" 1793566668.66542 115166 dc566280f00fc141e7a87aa0f0c8c680 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1793462145.20873 "main.tex" "main.pdf" "main" 1793462151.2237 0
+["pdflatex"] 1793566663.35579 "main.tex" "main.pdf" "main" 1793566669.07541 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -363,14 +363,14 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "MacrosAndFigures.tex" 1793049040.1782 11515 e6a1fbd92c8b733d4bf646106cf3445c ""
   "a_wrong_path/a_wrong_path.tex" 1792879606.8451 15777 d32530e998b36d1586a8a6130a5203d5 ""
-  "chapter3_reorganized_codex/chapter3_reorganized_codex.tex" 1793462137.92264 47934 523b5bd0da0b6c74bcb6361d2c810287 ""
+  "chapter3_reorganized_codex/chapter3_reorganized_codex.tex" 1793566663.09638 49138 94fbcbd96bd165068b28c2ec46a1de16 ""
   "includes.tex" 1784235509.93079 1342 e5c3b0d0c7778d7de9a24d055cbd4cd6 ""
-  "main.aux" 1793462150.73533 59491 64f45c992b9d5713563bb59190012db7 "pdflatex"
-  "main.bbl" 1793378306.56326 23504 d82c21c9a4014ab1c19ea2a75d237ca3 "biber main"
-  "main.out" 1793462150.74838 11904 3da9680bc67c78808b4c120fce8c512a "pdflatex"
-  "main.run.xml" 1793462150.75439 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
-  "main.tex" 1791554448.78244 3106 0b99a348926f017aa2261626a11e8a59 ""
-  "main.toc" 1793462150.75449 5390 f106086302b4897b5ba89e4fcb6ea891 "pdflatex"
+  "main.aux" 1793566668.64799 59678 e7d72c88c850b16915e89ba43740ebd4 "pdflatex"
+  "main.bbl" 1793565547.19066 23504 d82c21c9a4014ab1c19ea2a75d237ca3 "biber main"
+  "main.out" 1793566668.66084 11904 3da9680bc67c78808b4c120fce8c512a "pdflatex"
+  "main.run.xml" 1793566668.66709 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.tex" 1793468581.66687 3818 9f903d0fa59227052cc84a45d68b8522 ""
+  "main.toc" 1793566668.66723 5390 67e1bf79ed9735bb32e2452d550f7576 "pdflatex"
   "sections/Introduction.tex" 1793218041.76017 15144 f9b4b49dd90c2d24dcfe1b4dc0de92fa ""
   "sections/Preliminaries/CyclicRamificationTheories.tex" 1792252650.73865 18553 8d2bae1a75ba3bee327ccc8699736bee ""
   "sections/Preliminaries/GTorsorRamification.tex" 1791874889.42125 16615 aa22dd7f436aa45f22b01b27d4296994 ""
