@@ -828,124 +828,69 @@ is finite flat, and it is \`etale at the generic point of
 This is the case $l=1$ and $\ndls_1=\mdls$ of \Cref{lemma:takeuchi_lemma}.
 \end{proof}
 
-We first spread out the point-center blowup over
-$C^{(d-\deg\mdls)}$. Flat base change along
-$C^{(d-\deg\mdls)}\to\Spec(k)$ gives the Cartesian diagram
-
-\[\begin{tikzcd}
-E_{\mdls}\times_k C^{(d-\deg\mdls)} \arrow[r] \arrow[d]
-  & X_{\mdls}\times_k C^{(d-\deg\mdls)} \arrow[d] \\
-\{\mdls\}\times_k C^{(d-\deg\mdls)} \arrow[r,hook]
-  & C^{(\deg\mdls)}\times_k C^{(d-\deg\mdls)}.
-\end{tikzcd}\]
-
-Let
-\[
-p_1\colon X_{\mdls}\times_k C^{(d-\deg\mdls)}\longrightarrow X_{\mdls}
-\]
-be the first projection, and let $\theta$ be the generic point of the prime divisor
-$E_{\mdls}\times_k C^{(d-\deg\mdls)}$. The pullback
-$p_1^{-1}\cP^{[\deg\mdls]}$ is defined on the dense open
-$U^{(\deg\mdls)}\times_k C^{(d-\deg\mdls)}$, so its ramification at
-$\theta$ is defined in the sense of
-\Cref{definition:tamely_ramified_in_codim_1}.
-
-\begin{lemma}\label{lemma:tame_ramification_persists}
-{\color{green}
-     If $\cP^{[\deg \mdls]}$ is tamely ramified at $\eta_\mdls$, then
-     $p_1^{-1}\cP^{[\deg\mdls]}$ is tamely ramified at $\theta$.
-}
-\end{lemma}
-\begin{proof}
-This is the stability of tame ramification in codimension one under base
-change (\stackstag{0EYD}), applied to the projection
-\[
-X_{\mdls}\times_k C^{(d-\deg\mdls)}\longrightarrow X_{\mdls}.
-\]
-\end{proof}
-
-\begin{lemma}\label{lemma:tame-times-unramified}
-Let $G$ be a finite abelian group, let $X$ be a scheme over a field $k$, and
-let $U\subset X$ be a dense open subscheme. Let $\cP_1$ and $\cP_2$ be
-$G$-torsors on $U$, and let $\xi$ be the generic point of a prime divisor
-of $X$. If $\cP_1$ is tamely ramified at $\xi$ and $\cP_2$ is unramified at
-$\xi$, then $\cP_1\otimes^G\cP_2$ is tamely ramified at $\xi$.
-\end{lemma}
-\begin{proof}
-This follows from
-\Cref{lemma:bounding_ramification_of_contracted_product}.
-\end{proof}
-
-Restrict the second factor to the dense open
-$U^{(d-\deg\mdls)}\subset C^{(d-\deg\mdls)}$. The point $\theta$ remains
-the generic point of
-$E_{\mdls}\times_k U^{(d-\deg\mdls)}$, and
-\Cref{lemma:tame_ramification_persists} shows that
-$p_1^{-1}\cP^{[\deg\mdls]}$ is tamely ramified there. If
-\[
-p_2\colon X_{\mdls}\times_k U^{(d-\deg\mdls)}
-   \longrightarrow U^{(d-\deg\mdls)}
-\]
-is the second projection, then $p_2^{-1}\cP^{[d-\deg\mdls]}$ is \`etale,
-and hence unramified at $\theta$. Therefore
-\Cref{lemma:tame-times-unramified} shows that
-\[
-p_1^{-1}\cP^{[\deg \mdls]}
-  \otimes^G p_2^{-1}\cP^{[d-\deg \mdls]}
-\]
-is tamely ramified at $\theta$.
-
-The addition morphism now transports this conclusion from the product of the
-point-center blowup with $C^{(d-\deg\mdls)}$ to the blowup along the
-degree-$d$ center $Z_0(\mdls,d)$.
+We now pass from tameness on $X_{\mdls}$ to tameness on $X_{\mdls,d}$.
 
 \begin{cor}\label{cor:tame-ramification-symmetric-product}
 Let $\mdls$ be a modulus, let $d\geq\deg\mdls$, and let $\cP$ be a
 $G$-torsor on $U$ whose ramification is bounded by $\mdls$. Assume that
 $\cP^{[\deg\mdls]}$ is tamely ramified at the generic point
-$\eta_{\mdls}$ of $E_{\mdls}$. If $p_1$ and $p_2$ denote the projections
-from $U^{(\deg\mdls)}\times_k U^{(d-\deg\mdls)}$, then
+$\eta_{\mdls}$ of $E_{\mdls}$. Then $\cP^{[d]}$ is tamely ramified at
+the generic point $\eta_0=\eta_{\mdls,d}$ of the exceptional divisor
+$E_0=E_{\mdls,d}$ over $Z_0(\mdls,d)$.
+\end{cor}
+\begin{proof}
+Work on $X_{\mdls}\times_k U^{(d-\deg\mdls)}$, with projections $p_1,p_2$,
+and let $\theta$ be the generic point of
+$E_{\mdls}\times_k U^{(d-\deg\mdls)}$. Stability of tame ramification
+under base change (\stackstag{0EYD}) shows that
+$p_1^{-1}\cP^{[\deg\mdls]}$ is tamely ramified at $\theta$. The torsor
+$p_2^{-1}\cP^{[d-\deg\mdls]}$ is defined over the whole product, so it is
+unramified, and hence tamely ramified, at $\theta$. By
+\Cref{lemma:bounding_ramification_of_contracted_product},
 \[
 p_1^{-1}\cP^{[\deg\mdls]}
   \otimes^G p_2^{-1}\cP^{[d-\deg\mdls]}
 \]
-is tamely ramified at the generic point $\theta$ of
-$E_{\mdls}\times_k C^{(d-\deg\mdls)}$. Moreover, $\cP^{[d]}$ is tamely
-ramified at the generic point $\eta_0=\eta_{\mdls,d}$ of the exceptional
-divisor $E_0=E_{\mdls,d}$ over $Z_0(\mdls,d)$.
-\end{cor}
-\begin{proof}
-The first assertion is the conclusion of the preceding discussion. To
-transport it to $X_{\mdls,d}$, consider the addition morphism
+is therefore tamely ramified at $\theta$.
+
+Consider the addition morphism
 \[
 +\colon C^{(\deg\mdls)}\times_k U^{(d-\deg\mdls)}\longrightarrow C^{(d)}.
 \]
 Its scheme-theoretic inverse image of $Z_0(\mdls,d)$ is
-$\{\mdls\}\times_k U^{(d-\deg\mdls)}$. Since $+$ is flat,
-\Cref{theorem:blowup_flat_base_change} gives a canonical isomorphism
+$\{\mdls\}\times_k U^{(d-\deg\mdls)}$. Flat base change for blowups
+(\Cref{theorem:blowup_flat_base_change}) therefore gives the Cartesian
+square
 \[
+\begin{tikzcd}[column sep=large,row sep=large]
 X_{\mdls}\times_k U^{(d-\deg\mdls)}
-\cong
-\bigl(C^{(\deg\mdls)}\times_k U^{(d-\deg\mdls)}\bigr)
-   \times_{C^{(d)}}X_{\mdls,d}.
+  \arrow[r,"\widetilde{+}"] \arrow[d]
+  & X_{\mdls,d} \arrow[d] \\
+C^{(\deg\mdls)}\times_k U^{(d-\deg\mdls)}
+  \arrow[r,"+"]
+  & C^{(d)}.
+\end{tikzcd}
 \]
-The second projection therefore defines a morphism
-\[
-\widetilde{+}\colon
-X_{\mdls}\times_k U^{(d-\deg\mdls)}\longrightarrow X_{\mdls,d}
-\]
-that maps $\theta$ to $\eta_0$. By
-\Cref{cor:etale_at_generic_point}, the addition morphism is \`etale at the
-generic point of $\{\mdls\}\times_k U^{(d-\deg\mdls)}$; hence
-$\widetilde{+}$ is \`etale at $\theta$. Finally,
+The vertical arrows are the blowup maps.
+The induced morphism
+$E_{\mdls}\times_k U^{(d-\deg\mdls)}\to E_0$ is flat, being a base
+change of $+$. By going down for flat morphisms (\stackstag{00HS}), it
+maps the generic point $\theta$ to the generic point $\eta_0$.
+The left vertical map sends $\theta$ to the generic point of
+$\{\mdls\}\times_k U^{(d-\deg\mdls)}$, where addition is étale by
+\Cref{cor:etale_at_generic_point}. Since $\widetilde{+}$ is its base
+change, it is étale at $\theta$.
+
+On the dense open $U^{(\deg\mdls)}\times_k U^{(d-\deg\mdls)}$,
+$\widetilde{+}$ agrees with addition. Hence
 \Cref{prop:symmetric_powers_on_curves} gives
 \[
-+^{-1}\cP^{[d]}\cong
+(\widetilde{+})^{-1}\cP^{[d]}\cong
 p_1^{-1}\cP^{[\deg\mdls]}
   \otimes^G p_2^{-1}\cP^{[d-\deg\mdls]}.
 \]
-The tame ramification of the right-hand side at $\theta$ therefore descends
-to the tame ramification of $\cP^{[d]}$ at $\eta_0$ by
+This torsor is tamely ramified at $\theta$. Tameness therefore descends
+along $\widetilde{+}$ to $\eta_0$ by
 \Cref{lemma:descend_ramification_along_etale}.
 \end{proof}
 
