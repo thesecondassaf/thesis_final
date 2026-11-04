@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1793568920.45993 "main.bcf" "main.bbl" "main" 1793570031.57975 0
+["biber main"] 1793775727.82988 "main.bcf" "main.bbl" "main" 1793775737.29544 0
   "Bib.bib" 1793123793.7624 6874 bd1650b2c67fbafe551e3252de308fff ""
-  "main.bcf" 1793570031.1576 115236 30435ef20e2a6bf379985f1105cf17c6 "pdflatex"
+  "main.bcf" 1793775736.88115 115448 585a04a2663d07986129394b7915d519 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1793570025.88465 "main.tex" "main.pdf" "main" 1793570031.58038 0
+["pdflatex"] 1793775731.68706 "main.tex" "main.pdf" "main" 1793775737.29597 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -105,6 +105,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1248133631 32442 c975af247b6702f7ca0c299af3616b80 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb" 1248133631 30212 b6aafa449db0097a6b9b890f66741063 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1336858727 21098 d4aee7c0aac232caac5688b586b9363c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb" 1336858727 21550 c590a95c9fd1ed49857642cece9cb269 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb" 1336858727 21251 56705123063d7b34002d6b6e7142345e ""
@@ -363,14 +364,14 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "MacrosAndFigures.tex" 1793049040.1782 11515 e6a1fbd92c8b733d4bf646106cf3445c ""
   "a_wrong_path/a_wrong_path.tex" 1792879606.8451 15777 d32530e998b36d1586a8a6130a5203d5 ""
-  "chapter3_reorganized_codex/chapter3_reorganized_codex.tex" 1793570025.57784 46079 72ddc79e16322437994d70b86931874c ""
+  "chapter3_reorganized_codex/chapter3_reorganized_codex.tex" 1793743889.22554 49256 d22cc26be91aa8e998d3bed13ee34d31 ""
   "includes.tex" 1784235509.93079 1342 e5c3b0d0c7778d7de9a24d055cbd4cd6 ""
-  "main.aux" 1793570031.1393 59174 352826c30910b8342d22d04115cd63f3 "pdflatex"
-  "main.bbl" 1793568923.46072 23504 d82c21c9a4014ab1c19ea2a75d237ca3 "biber main"
-  "main.out" 1793570031.1523 11904 3da9680bc67c78808b4c120fce8c512a "pdflatex"
-  "main.run.xml" 1793570031.15894 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
-  "main.tex" 1793468581.66687 3818 9f903d0fa59227052cc84a45d68b8522 ""
-  "main.toc" 1793570031.15907 5390 0c862d45ccc78d685737ec10b1d35097 "pdflatex"
+  "main.aux" 1793775736.86402 59445 850b8ad647f4bbfdc8fb253f15ff27d6 "pdflatex"
+  "main.bbl" 1793775731.66742 23504 d82c21c9a4014ab1c19ea2a75d237ca3 "biber main"
+  "main.out" 1793775736.87669 12079 2181dea71d4ccd77a6ebc71c395ca85a "pdflatex"
+  "main.run.xml" 1793775736.88227 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.tex" 1793739223.59549 3956 5b506847c04814749117689bdc8ec395 ""
+  "main.toc" 1793775736.88236 5422 336d3fd80eb5f0dcace2e4d605ab57ef "pdflatex"
   "sections/Introduction.tex" 1793218041.76017 15144 f9b4b49dd90c2d24dcfe1b4dc0de92fa ""
   "sections/Preliminaries/CyclicRamificationTheories.tex" 1792252650.73865 18553 8d2bae1a75ba3bee327ccc8699736bee ""
   "sections/Preliminaries/GTorsorRamification.tex" 1791874889.42125 16615 aa22dd7f436aa45f22b01b27d4296994 ""
