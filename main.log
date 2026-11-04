@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  4 NOV 2026 09:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  4 NOV 2026 23:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1708,17 +1708,17 @@ Chapter 3.
 
 [57]
 
-[58]
+[58]) (./witt/WittVectorAlgebraAppendix.tex
 
-[59]) (./witt/WittVectorAlgebraAppendix.tex
-
-[60]
+[59]
 Appendix A.
 
 
-[61
+[60
 
 ]
+
+[61]
 
 [62]
 
@@ -1731,11 +1731,11 @@ Appendix A.
 [66]
 
 [67]
-
-[68]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 590.
  (./witt/WittVectorPrerequisites.tex
+
+[68]
 
 [69]
 
@@ -1743,38 +1743,36 @@ t line 590.
 
 [71]
 
-[72]
+[72]))
 
-[73]))
-
-[74]
+[73]
 Appendix B.
 (./a_wrong_path/a_wrong_path.tex
 
-[75
+[74
 
 ]
 Package hyperref Info: bookmark level for unknown construction defaults to 0 on
  input line 64.
 
 
+[75]
+
 [76]
 
 [77]
 
-[78]
+[78])
 
-[79])
+[79]
 
 [80]
 
-[81]
-
-[82
+[81
 
 ]
 
-[83] (./main.aux)
+[82] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1786,10 +1784,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45796 strings out of 473190
- 870626 string characters out of 5715800
+ 45875 strings out of 473190
+ 872709 string characters out of 5715800
  1698242 words of memory out of 5000000
- 67807 multiletter control sequences out of 15000+600000
+ 67888 multiletter control sequences out of 15000+600000
  596350 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,19n,110p,3253b,2312s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1836,10 +1834,10 @@ public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
 blic/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
 c/xypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xyp
 ic/xybtip10.pfb>
-Output written on main.pdf (85 pages, 956971 bytes).
+Output written on main.pdf (84 pages, 954851 bytes).
 PDF statistics:
- 1611 PDF objects out of 1728 (max. 8388607)
- 1422 compressed objects within 15 object streams
- 450 named destinations out of 1000 (max. 500000)
+ 1600 PDF objects out of 1728 (max. 8388607)
+ 1412 compressed objects within 15 object streams
+ 448 named destinations out of 1000 (max. 500000)
  405 words of extra memory for PDF output out of 10000 (max. 10000000)
 

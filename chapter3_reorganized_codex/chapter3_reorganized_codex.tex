@@ -915,214 +915,119 @@ nonempty open subset of $E_0$, it has generic point $\eta_0$, proving
 the theorem.
 \end{proof}
 
-\section[Extension of Tame Torsors to the Compactified Symmetric Power]{\texorpdfstring{\textcolor{blue}{Extension of Tame Torsors\\to the Compactified Symmetric Power}}{Extension of Tame Torsors to the Compactified Symmetric Power}}\label{section:extension-across-boundary}
+\section[Extension of Tame Torsors to the Compactified Symmetric Power]{\texorpdfstring{Extension of Tame Torsors\\to the Compactified Symmetric Power}{Extension of Tame Torsors to the Compactified Symmetric Power}}\label{section:extension-across-boundary}
 
-% Proposed replacement; the current version is retained below for comparison.
-\begingroup
-\color{blue}
-\hypersetup{allcolors=blue}
-We now show that the tameness established above implies extension across
-$H$. Assume $\mdls\ne0$.
+We now show that the tameness established in
+\Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified} implies extension
+across $H$. Assume $\mdls\ne0$.
 
-\medskip
-\noindent\textbf{Lemma (proposed replacement).}
-\textit{Let $G$ be a finite abelian group, and let $\cP^{[d]}$ be a
+\begin{lemma}\label{lemma:ExtensionOfTamelyRamifiedSheaf}
+Let $G$ be a finite abelian group, and let $\cP^{[d]}$ be a
 $G$-torsor on $U^{(d)}$. If $\cP^{[d]}$ is tamely ramified at the generic
 point $\eta_0$ of $H=\Cmod{d}\setminus U^{(d)}$, then it extends uniquely
-to a $G$-torsor $\widetilde{\cP}^{[d]}$ on $\Cmod{d}$.}
+to a $G$-torsor $\widetilde{\cP}^{[d]}$ on $\Cmod{d}$.
+\end{lemma}
 
 \begin{proof}
-Since $\Cmod{d}$ is regular and $H$ is its only boundary divisor, it
-suffices to prove that $\cP^{[d]}$ is unramified at
-$\eta_0$.\footnote{\color{blue}Normalize $\Cmod{d}$ in the finite
-\'etale cover $\cP^{[d]}$. The normalization is finite since
-$\Cmod{d}$ is of finite type over $k$ (\stackstag{0335}), and it
-restricts to the given cover over $U^{(d)}$. If the cover is unramified
-at $\eta_0$, this finite morphism from a normal scheme to the regular
-scheme $\Cmod{d}$ is unramified above every codimension-one point.
-Purity of the branch locus (\stackstag{0BMB}) therefore makes it
-\'etale everywhere. The $G$-action extends uniquely to the normalization,
-which is therefore the required $G$-torsor; uniqueness follows from
-uniqueness of normalization.}
+\emph{Reduction to unramifiedness.} The scheme $\Cmod{d}$ is regular, being
+a projective-space bundle over $\PicCm[d]$, which is smooth as a torsor under
+$\PicCm[0]$. Its boundary $H$ is irreducible with generic point $\eta_0$ (see
+the proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}). By purity
+of the branch locus, it therefore suffices to prove that $\cP^{[d]}$ is
+unramified at $\eta_0$.\footnote{The normalization of
+$\Cmod{d}$ in $\cP^{[d]}$ is finite, since $\Cmod{d}$ is normal and
+Noetherian and the generic cover is finite separable (\stackstag{032L}).
+Unramifiedness at $\eta_0$ makes it \'etale in
+codimension one, hence \'etale by purity (\stackstag{0BMB}). Full faithfulness
+of restriction to $U^{(d)}$ (\stackstag{0BQI}) extends the $G$-action and
+the torsor isomorphism uniquely, giving the unique $G$-torsor extension.}
 
-\emph{Geometric generic fiber.} Let $\xi$ be the generic point of
-$\PicCm[d]$, put $\Omega=\kappa(\xi)^{\mathrm{sep}}$ and
-$\bar\xi=\Spec\Omega$, and let $\bar\eta$ be the generic point of
-$H_{\bar\xi}$. By \Cref{lemma:geometric-generic-fiber-takeuchi},
+\emph{Passage to the geometric generic fiber.}
+Let $\xi$ be the generic point of $\PicCm[d]$, put $F=\kappa(\xi)$ and
+$\Omega=F^{\mathrm{sep}}$, and write $\bar\xi=\Spec\Omega$.
+The relative hyperplane $H$ dominates $\PicCm[d]$, so
+$\widetilde\Phi_d(\eta_0)=\xi$.
+Thus $\eta_0$ is also the generic point of $H_\xi$. Since $\PicCm[d]$ is integral,
+$\Oo_{\PicCm[d],\xi}=\kappa(\xi)$, so passing to the generic fiber does not
+change its local ring:
+\[
+    \Oo_{\Cmod{d},\eta_0}=\Oo_{(\Cmod{d})_\xi,\eta_0}.
+\]
+Since $H_\xi$ is geometrically integral, $H_{\bar\xi}$ has a unique
+generic point $\bar\eta$, which maps to
+$\eta_0$ under the projection
+$q:(\Cmod{d})_{\bar\xi}\to\Cmod{d}$.
+Define the pulled-back $G$-torsor
+\[
+    \cP_\Omega:=\cP^{[d]}\times_{U^{(d)}}U^{(d)}_{\bar\xi}.
+\]
+\begin{samepage}
+Every square in the following diagram is Cartesian:
+\[
+\begin{tikzcd}[column sep=huge, row sep=2em]
+    \cP_\Omega \arrow[r] \arrow[d]
+      & \cP^{[d]} \arrow[d] \\
+    U^{(d)}_{\bar\xi} \arrow[r] \arrow[d, hook]
+      & U^{(d)} \arrow[d, hook] \\
+    (\Cmod{d})_{\bar\xi}
+      \arrow[r, "q\colon\bar\eta\mapsto\eta_0"]
+      \arrow[d, "(\widetilde\Phi_d)_{\bar\xi}"']
+      & \Cmod{d} \arrow[d, "\widetilde\Phi_d"] \\
+    \bar\xi=\Spec\Omega \arrow[r, "\bar\xi\mapsto\xi"']
+      & \PicCm[d]
+\end{tikzcd}
+\]
+\end{samepage}
+By \Cref{lemma:geometric-generic-fiber-takeuchi},
 \[
     \bigl((\Cmod{d})_{\bar\xi},H_{\bar\xi}\bigr)
     \cong(\mathbb P^r_\Omega,\mathbb P^{r-1}_\Omega),
     \qquad U^{(d)}_{\bar\xi}\cong\mathbb A^r_\Omega,
 \]
-where $r=d-\deg\mdls-g+1$. A local equation of $H$ at $\eta_0$ cuts out
-the reduced divisor $H_{\bar\xi}$ at $\bar\eta$, so the local extension of
-discrete valuation rings at $\eta_0$ and $\bar\eta$ is weakly unramified;
-its residue-field extension comes from the separable algebraic extension
-$\Omega/\kappa(\xi)$ and is therefore separable. By
-\Cref{lemma:weakly_unramified_base_change}, the restriction of
-$\cP^{[d]}$ to $\mathbb A^r_\Omega$ is tame at $\bar\eta$, and it suffices
-to show that it is unramified there.
+where $r=d-\deg\mdls-g+1$.
 
-\emph{Triviality of inertia.} Let $p$ be the characteristic exponent of
-$k$, and let $\chi\colon\pi_1(\mathbb A^r_\Omega)\to G$ correspond to the
-restricted torsor. For every prime $\ell\ne p$, the Kummer
-sequence (\stackstag{03PK}) gives
-$H^1_{\mathrm{\acute et}}(\mathbb A^r_\Omega,\mathbb Z/\ell)=0$, since
-$\operatorname{Pic}(\mathbb A^r_\Omega)=0$ and the units $\Omega^\times$
-are $\ell$-divisible. Since $G$ is abelian, $\operatorname{im}(\chi)$
-is therefore a $p$-group (and is trivial in characteristic zero).
-By tameness, the inertia image $\chi(I_{\bar\eta})$ has order prime to
-$p$. Being a subgroup of a $p$-group, it is trivial.
+Set
+\[
+    A=\Oo_{\Cmod{d},\eta_0},\qquad
+    B=\Oo_{(\Cmod{d})_{\bar\xi},\bar\eta},\qquad
+    K=\Frac(A),\quad L=\Frac(B).
+\]
+The projection $q$ induces $A\to B$, and the Cartesian diagram gives
+\[
+    \cP_\Omega|_{\Spec L}
+    \cong\bigl(\cP^{[d]}|_{\Spec K}\bigr)
+    \times_{\Spec K}\Spec L.
+\]
+We claim that $A\to B$ is a weakly unramified extension of discrete
+valuation rings with separable residue-field extension.
+Hence \Cref{lemma:weakly_unramified_base_change} shows that
+$\cP_\Omega$ is tamely ramified at $\bar\eta$ and gives
+\[
+    \cP^{[d]}\text{ is unramified at }\eta_0
+    \quad\Longleftrightarrow\quad
+    \cP_\Omega\text{ is unramified at }\bar\eta.
+\]
+Indeed, regularity and dominance of $q$ give a local extension of discrete
+valuation rings $A\hookrightarrow B$. Let $t$ locally define $H$.
+Since $q^{-1}H=H_{\bar\xi}$ is reduced,
+\[
+    \mathfrak m_A B=(t)B=\mathfrak m_B
+    \qquad\Longrightarrow\qquad e(B/A)=1.
+\]
+Moreover, $\kappa(\bar\eta)=\kappa(\eta_0)\Omega$, so
+$\kappa(\bar\eta)/\kappa(\eta_0)$ is separable algebraic because
+$\Omega/F$ is.
+
+\emph{Unramifiedness on the fiber.} Let $p$ be the characteristic exponent
+of $k$. Since $G$ is abelian and
+$\pi_1(\mathbb A^r_\Omega)^{\mathrm{ab}}$ is pro-$p$
+\cite[Examples~4.14 and~4.15]{tendler2015geometricclassfieldtheory}, the
+monodromy group of $\cP_\Omega$ is a finite $p$-group (and is trivial if
+$p=1$). Thus every ramification index at $\bar\eta$ is a power of $p$.
+Tameness makes it prime to $p$, so it equals $1$; tameness also gives
+separable residue-field extensions. Hence $\cP_\Omega$ is unramified at
+$\bar\eta$, as required.
 \end{proof}
-\endgroup
-
-\medskip
-\noindent\textit{Current version.}
-
-The geometry of the Abel--Jacobi fibers upgrades the tameness proved above
-to extension across the boundary. In positive characteristic,
-a prime-to-$p$ power argument on the geometric generic fiber forces the
-boundary inertia representation to be trivial; in characteristic zero, the
-same conclusion follows from the simple connectedness of affine space.
-
-\begin{lemma}\label{lemma:ExtensionOfTamelyRamifiedSheaf}
-{\color{green}
-    Let $G$ be a finite abelian group, and let $\cP^{[d]}$ be a $G$-torsor
-    on $U^{(d)}$. If $\cP^{[d]}$ is tamely
-    ramified at the generic point of
-    \[
-        H=\Cmod{d}\setminus U^{(d)},
-    \]
-    then it extends uniquely to a $G$-torsor
-    $\widetilde{\cP}^{[d]}$ on $\Cmod{d}$.
-}
-\end{lemma}
-
-\begin{proof}
-Put $r=d-\deg\mdls-g+1$, let $\xi$ be the generic point of $\PicCm[d]$,
-let $\Omega=\kappa(\xi)^{\mathrm{sep}}$, and write
-$\bar\xi=\Spec\Omega$. By
-\Cref{lemma:geometric-generic-fiber-takeuchi}, the compactified geometric
-generic Abel--Jacobi fiber and its boundary are
-\[
-    \left(
-    (\Cmod{d})_{\bar\xi},
-    H_{\bar\xi}
-    \right)
-    \cong
-    \left(
-    \mathbb P^r_{\Omega},
-    \mathbb P^{r-1}_{\Omega}
-    \right),
-\]
-and hence the geometric generic open fiber is
-\[
-    U^{(d)}_{\bar\xi}\cong\mathbb A^r_{\Omega}.
-\]
-
-Let
-\[
-    \chi\colon
-    \pi_1\bigl(\mathbb A^r_{\Omega}\bigr)
-       \longrightarrow {\color{green}G}
-\]
-be the character corresponding to the restriction of
-{\color{green}$\cP^{[d]}$} to this
-fiber.
-
-{\color{green}
-Let $\eta$ be the generic point of $H$, and let $\bar\eta$ be the generic
-point of $H_{\bar\xi}$. Because $H$ is a relative hyperplane divisor, the
-passage from $\eta$ to $\bar\eta$ induces a weakly unramified extension of
-discrete valuation rings with separable residue-field extension. Hence
-\Cref{lemma:weakly_unramified_base_change} allows tameness and triviality of
-the finite inertia representation at $\eta$ to be checked after base change
-at the inertia group
-\[
-    I_\infty:=I_{\bar\eta}
-\]
-of the hyperplane at infinity.}
-
-If $\operatorname{char}(k)=0$, then
-\[
-    \pi_1\bigl(\mathbb A^r_{\Omega}\bigr)=1,
-\]
-so $\chi$ is trivial
-\cite[Example~4.14]{tendler2015geometricclassfieldtheory}.
-
-Suppose now that $\operatorname{char}(k)=p>0$. Since
-{\color{green}$\cP^{[d]}$} is tame
-along $H$,
-the finite group $\chi(I_\infty)$ has order prime to $p$. Let $N$ be its
-exponent. Then $(N,p)=1$, and the character $\chi^N$ is trivial on
-$I_\infty$.
-
-{\color{green}
-Consequently, the $G$-torsor obtained by pushing out along
-$g\mapsto g^N$, and corresponding to $\chi^N$, is unramified at the generic
-point of $\mathbb P^{r-1}_{\Omega}$. By Zariski--Nagata purity of the branch
-locus, it extends to a finite \'etale $G$-torsor on
-$\mathbb P^r_{\Omega}$.} Since
-\[
-    \pi_1\bigl(\mathbb P^r_{\Omega}\bigr)=1,
-\]
-this extension is constant, and therefore
-\[
-    \chi^N=1.
-\]
-
-On the other hand, $\chi$ factors through
-\[
-    \pi_1\bigl(\mathbb A^r_{\Omega}\bigr)^{\mathrm{ab}},
-\]
-which is a pro-$p$ group
-\cite[Example~4.15]{tendler2015geometricclassfieldtheory}. Hence the finite
-group $\operatorname{im}(\chi)$ is a $p$-group. Since its exponent divides
-$N$, and $N$ is prime to $p$, it follows that
-\[
-    \operatorname{im}(\chi)=1.
-\]
-Thus $\chi$ is trivial.
-
-In either characteristic, the restriction of $\chi$ to $I_\infty$ is
-trivial. By the inertia comparison above, the inertia group at $\eta$ acts
-trivially on {\color{green}$\cP^{[d]}$}.
-
-{\color{green}
-Therefore $\cP^{[d]}$ is unramified at the generic point of $H$. The scheme
-$\PicCm[d]$ is smooth and geometrically connected because it is a torsor
-under the smooth geometrically connected group $\PicCm[0]$. Since
-$\Cmod{d}$ is a projective space bundle over $\PicCm[d]$, it is regular and
-geometrically connected; similarly, the relative hyperplane $H$ is smooth
-and geometrically connected, hence integral with a unique generic point.
-
-Let $\overline{\cP}^{[d]}\to\Cmod{d}$ be the normalization of $\Cmod{d}$
-in the finite \'etale cover $\cP^{[d]}\to U^{(d)}$. This normalization is
-finite because $\Cmod{d}$ is of finite type over a field. It is \'etale over
-$U^{(d)}$ and unramified over the generic point of the only codimension-one
-boundary component $H$. Purity of the branch locus (\stackstag{0BMB})
-therefore shows that $\overline{\cP}^{[d]}\to\Cmod{d}$ is finite \'etale.
-The $G$-action extends uniquely to the normalization, and the torsor identity,
-which is an isomorphism over the dense open $U^{(d)}$, remains an
-isomorphism over $\Cmod{d}$. Thus $\overline{\cP}^{[d]}$ is the required
-$G$-torsor $\widetilde{\cP}^{[d]}$.
-
-The extension is unique because
-\[
-    \pi_1\bigl(U^{(d)}\bigr)
-       \longrightarrow
-    \pi_1\bigl(\Cmod{d}\bigr)
-\]
-is surjective by \stackstag{0BQI}, since $\Cmod{d}$ is integral and normal.}
-\end{proof}
-
-\begin{rem*}
-The argument does not assert that tame ramification is generally
-unramified. Tameness is used only to choose $N$ prime to $p$. The conclusion
-that the inertia character is trivial then follows from the global geometry
-of the geometric generic fiber and from the fact that the abelian
-fundamental group of affine space is pro-$p$.
-\end{rem*}
 
 \section{Descent and Reduced Geometric Class Field Theory}\label{section:gcft-descent}
 
