@@ -912,7 +912,8 @@ $\cP^{[\deg\mdls]}$ at $\eta_\mdls$.
 \Cref{cor:tame-ramification-symmetric-product} then gives tameness of
 $\cP^{[d]}$ at $\eta_0$ for every sufficiently large $d$. Since $H$ is a
 nonempty open subset of $E_0$, it has generic point $\eta_0$, proving
-the theorem.
+the theorem over $\bar{k}$. The initial base-change reduction descends this
+tameness to the original field $k$.
 \end{proof}
 
 \section[Extension of Tame Torsors to the Compactified Symmetric Power]{\texorpdfstring{Extension of Tame Torsors\\to the Compactified Symmetric Power}{Extension of Tame Torsors to the Compactified Symmetric Power}}\label{section:extension-across-boundary}
@@ -929,7 +930,7 @@ to a $G$-torsor $\widetilde{\cP}^{[d]}$ on $\Cmod{d}$.
 \end{lemma}
 
 \begin{proof}
-\emph{Reduction to unramifiedness.} The scheme $\Cmod{d}$ is regular, being
+The scheme $\Cmod{d}$ is regular, being
 a projective-space bundle over $\PicCm[d]$, which is smooth as a torsor under
 $\PicCm[0]$. Its boundary $H$ is irreducible with generic point $\eta_0$ (see
 the proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}). By purity
@@ -942,9 +943,8 @@ codimension one, hence \'etale by purity (\stackstag{0BMB}). Full faithfulness
 of restriction to $U^{(d)}$ (\stackstag{0BQI}) extends the $G$-action and
 the torsor isomorphism uniquely, giving the unique $G$-torsor extension.}
 
-\emph{Passage to the geometric generic fiber.}
-Let $\xi$ be the generic point of $\PicCm[d]$, put $F=\kappa(\xi)$ and
-$\Omega=F^{\mathrm{sep}}$, and write $\bar\xi=\Spec\Omega$.
+Let $\xi$ be the generic point of $\PicCm[d]$, put
+$\Omega=\kappa(\xi)^{\mathrm{sep}}$, and write $\bar\xi=\Spec\Omega$.
 The relative hyperplane $H$ dominates $\PicCm[d]$, so
 $\widetilde\Phi_d(\eta_0)=\xi$.
 Thus $\eta_0$ is also the generic point of $H_\xi$. Since $\PicCm[d]$ is integral,
@@ -965,8 +965,8 @@ Define the pulled-back $G$-torsor
 Every square in the following diagram is Cartesian:
 \[
 \begin{tikzcd}[column sep=huge, row sep=2em]
-    \cP_\Omega \arrow[r] \arrow[d]
-      & \cP^{[d]} \arrow[d] \\
+    \cP_\Omega \arrow[r] \arrow[d, purple]
+      & \cP^{[d]} \arrow[d, purple] \\
     U^{(d)}_{\bar\xi} \arrow[r] \arrow[d, hook]
       & U^{(d)} \arrow[d, hook] \\
     (\Cmod{d})_{\bar\xi}
@@ -998,8 +998,9 @@ The projection $q$ induces $A\to B$, and the Cartesian diagram gives
     \cong\bigl(\cP^{[d]}|_{\Spec K}\bigr)
     \times_{\Spec K}\Spec L.
 \]
-We claim that $A\to B$ is a weakly unramified extension of discrete
-valuation rings with separable residue-field extension.
+The map $A\to B$ is obtained by extending scalars along the separable
+algebraic extension $\kappa(\xi)\subset\Omega$; hence it is weakly
+unramified with separable algebraic residue-field extension.
 Hence \Cref{lemma:weakly_unramified_base_change} shows that
 $\cP_\Omega$ is tamely ramified at $\bar\eta$ and gives
 \[
@@ -1007,26 +1008,41 @@ $\cP_\Omega$ is tamely ramified at $\bar\eta$ and gives
     \quad\Longleftrightarrow\quad
     \cP_\Omega\text{ is unramified at }\bar\eta.
 \]
-Indeed, regularity and dominance of $q$ give a local extension of discrete
-valuation rings $A\hookrightarrow B$. Let $t$ locally define $H$.
-Since $q^{-1}H=H_{\bar\xi}$ is reduced,
+Let
 \[
-    \mathfrak m_A B=(t)B=\mathfrak m_B
-    \qquad\Longrightarrow\qquad e(B/A)=1.
+    \chi:\pi_1(\mathbb A^r_\Omega)\longrightarrow G
 \]
-Moreover, $\kappa(\bar\eta)=\kappa(\eta_0)\Omega$, so
-$\kappa(\bar\eta)/\kappa(\eta_0)$ is separable algebraic because
-$\Omega/F$ is.
+be the character corresponding to $\cP_\Omega$.
+Since $G$ is abelian, $\chi$ factors as
+\[
+    \pi_1(\mathbb A^r_\Omega)
+    \twoheadrightarrow\pi_1(\mathbb A^r_\Omega)^{\mathrm{ab}}
+    \xrightarrow{\,\bar\chi\,}G.
+\]
+In characteristic zero, this abelianized fundamental group is trivial
+\cite[Example~4.14]{tendler2015geometricclassfieldtheory}. Thus $\chi=1$,
+so $\cP_\Omega$ is trivial and hence unramified.
 
-\emph{Unramifiedness on the fiber.} Let $p$ be the characteristic exponent
-of $k$. Since $G$ is abelian and
+Suppose that $\operatorname{char}(k)=p>0$. Then
 $\pi_1(\mathbb A^r_\Omega)^{\mathrm{ab}}$ is pro-$p$
-\cite[Examples~4.14 and~4.15]{tendler2015geometricclassfieldtheory}, the
-monodromy group of $\cP_\Omega$ is a finite $p$-group (and is trivial if
-$p=1$). Thus every ramification index at $\bar\eta$ is a power of $p$.
-Tameness makes it prime to $p$, so it equals $1$; tameness also gives
-separable residue-field extensions. Hence $\cP_\Omega$ is unramified at
-$\bar\eta$, as required.
+\cite[Example~4.15]{tendler2015geometricclassfieldtheory}, so
+$\Gamma:=\operatorname{im}(\chi)$ is a finite $p$-group.
+By \Cref{theorem:equivalence_fundamental_covers} and the discussion
+preceding it, the connected cover corresponding to $\ker\chi$ is Galois
+with group $\Gamma$, and $\cP_\Omega$ is a disjoint union of
+$[G:\Gamma]$ copies of this cover.
+Hence every field factor of $\cP_\Omega|_{\Spec L}$ is a Galois extension
+of $L$ of degree $|\Gamma|$.
+
+For each field factor, every ramification index $e$ with respect to the
+valuation defined by $B$ satisfies
+\[
+    e\mid |\Gamma|,\qquad (e,p)=1
+    \qquad\Longrightarrow\qquad e=1,
+\]
+where the prime-to-$p$ condition follows from tameness. Tameness also gives
+separable residue-field extensions, so $\cP_\Omega$ is unramified at
+$\bar\eta$.
 \end{proof}
 
 \section{Descent and Geometric Class Field Theory}\label{section:gcft-descent}

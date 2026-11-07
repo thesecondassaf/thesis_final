@@ -13,11 +13,11 @@
 \contentsline {subsection}{\numberline {2.3.2}Formal--Local Reduction from $C$ to $\mathbb {P}^1$}{30}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}Three Parallel Theories of Cyclic Torsors}{33}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Kummer theory: order prime to $p$}{34}{subsection.2.4.1}%
-\contentsline {paragraph}{Classes and equations.}{34}{section*.13}%
+\contentsline {paragraph}{Classes and equations.}{34}{section*.11}%
 \contentsline {subsection}{\numberline {2.4.2}Artin--Schreier theory: order $p$}{34}{subsection.2.4.2}%
-\contentsline {paragraph}{Classes and equations.}{34}{section*.14}%
+\contentsline {paragraph}{Classes and equations.}{34}{section*.12}%
 \contentsline {subsection}{\numberline {2.4.3}Artin--Schreier--Witt theory: order $p^r$}{35}{subsection.2.4.3}%
-\contentsline {paragraph}{Classes and equations.}{35}{section*.16}%
+\contentsline {paragraph}{Classes and equations.}{35}{section*.14}%
 \contentsline {subsection}{\numberline {2.4.4}The common realization conclusion}{36}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}The common contracted-product calculation}{37}{subsection.2.4.5}%
 \contentsline {section}{\numberline {2.5}The Cyclic Exceptional--Divisor Calculation and Final Assembly}{38}{section.2.5}%
@@ -29,16 +29,14 @@
 \contentsline {section}{\numberline {3.3}Tame Ramification Along the Full Boundary}{49}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Proof of \Cref {theorem:SymmetricPowerOfSheafIsTamelyRamified}}{56}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}Extension of Tame Torsors to the Compactified Symmetric Power}{56}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Descent and Reduced Geometric Class Field Theory}{57}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}The Fundamental-Group Input}{58}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}The Descent Argument}{58}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.5}Descent and Geometric Class Field Theory}{58}{section.3.5}%
 \contentsline {chapter}{Appendix \numberline {A}Cyclic Torsor Theories and Witt Vectors}{60}{appendix.1.A}%
 \contentsline {section}{\numberline {A.1}The common group-scheme construction}{60}{section.1.A.1}%
 \contentsline {subsection}{\numberline {A.1.1}The kernel torsor construction}{60}{subsection.1.A.1.1}%
 \contentsline {subsection}{\numberline {A.1.2}The three cyclic theories}{62}{subsection.1.A.1.2}%
-\contentsline {paragraph}{Kummer.}{62}{section*.17}%
-\contentsline {paragraph}{Artin--Schreier.}{63}{section*.18}%
-\contentsline {paragraph}{Artin--Schreier--Witt.}{63}{section*.19}%
+\contentsline {paragraph}{Kummer.}{62}{section*.15}%
+\contentsline {paragraph}{Artin--Schreier.}{63}{section*.16}%
+\contentsline {paragraph}{Artin--Schreier--Witt.}{63}{section*.17}%
 \contentsline {section}{\numberline {A.2}Kummer and Artin--Schreier theory}{64}{section.1.A.2}%
 \contentsline {subsection}{\numberline {A.2.1}Kummer theory}{64}{subsection.1.A.2.1}%
 \contentsline {subsection}{\numberline {A.2.2}Artin--Schreier theory}{64}{subsection.1.A.2.2}%
