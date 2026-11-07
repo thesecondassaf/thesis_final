@@ -1031,50 +1031,43 @@ $\bar\eta$, as required.
 
 \section{Descent and Reduced Geometric Class Field Theory}\label{section:gcft-descent}
 
-The final descent rests on the fundamental groups of the usual and rigidified
-Abel--Jacobi morphisms.
+The preceding section shows that $\cP^{[d]}$ extends uniquely from
+$U^{(d)}$ to Takeuchi's compactification $\Cmod{d}$. We now descend this
+extension to $\PicCm[d]$. The essential point is that the compactified
+Abel--Jacobi morphism has projective-space fibers: their trivial \'etale
+fundamental groups imply that every finite \'etale torsor on the
+compactification comes uniquely from the base.
 
-\subsection{The Fundamental-Group Input}
+When $\mdls=0$, the usual Abel--Jacobi morphism already has
+projective-space fibers, so the same argument applies directly. We conclude
+the proof of reduced geometric class field theory by translating the
+resulting torsor back into a rank-one local system.
 
-\begin{prop}[\stackstag{0C0J}]\label{prop:fundamental-group-exact-sequence}
-Let $f\colon X\to S$ be a flat proper morphism of finite presentation whose
-geometric fibers are connected and reduced. Assume that $S$ is connected,
-and let $\bar s$ be a geometric point of $S$. Then there is an exact
-sequence
-\[
-\pi_1(X_{\bar s})\longrightarrow\pi_1(X)\longrightarrow\pi_1(S)
-\longrightarrow 1.
-\]
-\end{prop}
-
-\begin{cor}\label{cor:etale_fundamental_group_smooth_proper}
+\begin{lemma}[Descent along projective-space fibers]
+\label{lemma:projective-space-fiber-descent}
 Let $f\colon X\to S$ be a proper smooth morphism of finite presentation
-whose geometric fibers are connected. Then the sequence of
-\Cref{prop:fundamental-group-exact-sequence} is exact.
-\end{cor}
+over a connected scheme $S$, with geometric fibers isomorphic to projective
+spaces. Then pullback induces an equivalence between finite \'etale covers
+of $S$ and $X$, and hence between $G$-torsors on these schemes for every
+finite group $G$.
+\end{lemma}
 \begin{proof}
-A smooth geometric fiber is reduced, so this is an immediate application of
-\Cref{prop:fundamental-group-exact-sequence}.
-\end{proof}
-
-\begin{cor}\label{cor:projective-bundle-fundamental-group}
-Let $f\colon X\to S$ be a projective space bundle over a connected scheme.
-Then pullback induces an isomorphism
+For a geometric point $\bar s$ of $S$ and compatible geometric base points,
+the homotopy exact sequence (\stackstag{0C0J}) gives
+\[
+\pi_1^{\mathrm{et}}(X_{\bar s})\longrightarrow
+\pi_1^{\mathrm{et}}(X)\longrightarrow
+\pi_1^{\mathrm{et}}(S)\longrightarrow 1.
+\]
+Since projective spaces over separably closed fields have trivial \'etale
+fundamental group, $f$ induces an isomorphism
 \[
 \pi_1^{\mathrm{et}}(X)\xrightarrow{\sim}\pi_1^{\mathrm{et}}(S).
 \]
-\end{cor}
-\begin{proof}
-The geometric fibers are projective spaces and therefore have trivial
-\'etale fundamental group. The assertion follows from
-\Cref{cor:etale_fundamental_group_smooth_proper}.
+The equivalence follows from the classification of finite \'etale covers by
+finite sets with continuous fundamental-group action, and it respects
+$G$-actions and the torsor condition.
 \end{proof}
-
-\subsection{The Descent Argument}
-
-{\color{green}
-We work over $S=\Spec k$, where $k$ is perfect, and continue in the torsor
-language fixed at the beginning of the chapter.}
 
 \begin{theorem}[Torsor formulation]\label{thm:GCFT_torsors}
 {\color{green}
@@ -1090,30 +1083,20 @@ isomorphism, such that
 \end{theorem}
 
 \begin{proof}
-We divide the proof into two cases.
-
-\textbf{Case 1: $\mdls=0$.}\par
-\smallskip
 {\color{green}
-For $d$ sufficiently large, the usual Abel--Jacobi morphism
+The scheme $\PicCm[d]$ is geometrically connected, being a torsor under
+the geometrically connected group $\PicCm[0]$.
+When $\mdls=0$ and $d$ is sufficiently large, the usual Abel--Jacobi morphism
 \[
 \Phi_d\colon C^{(d)}\longrightarrow\PicC[d]
 \]
-is proper and smooth with geometrically connected projective-space fibers;
-this description holds after an \'etale base change even when $C$ has no
-$k$-rational point. Hence the homotopy exact sequence, as in
-\cite[Corollary~3.9]{takeuchi2018blow}, gives
-\[
-\pi_1^{\mathrm{et}}\bigl(C^{(d)}\bigr)
- \xrightarrow{\sim}
-\pi_1^{\mathrm{et}}\bigl(\PicC[d]\bigr).
-\]
-The $G$-torsor $\cP^{[d]}$ therefore descends uniquely to a $G$-torsor on
-$\PicC[d]$.}
+is proper and smooth with projective-space geometric fibers, even when $C$
+has no $k$-rational point
+\cite[Corollary~3.9]{takeuchi2018blow}. Thus
+\Cref{lemma:projective-space-fiber-descent} gives the required descent of
+$\cP^{[d]}$, including uniqueness.
 
-\textbf{Case 2: $\mdls>0$.}
-{\color{green}
-For $d$ sufficiently large,
+Suppose now that $\mdls>0$. For $d$ sufficiently large,
 \Cref{theorem:takeuchi-compactification-theorem} extends $\Phi_d$ to a
 projective space bundle
 \[
@@ -1126,42 +1109,28 @@ $H=\Cmod{d}\setminus U^{(d)}$. Hence
 \Cref{lemma:ExtensionOfTamelyRamifiedSheaf} gives a unique extension
 $\widetilde{\cP}^{[d]}$ to $\Cmod{d}$.
 
-The scheme $\PicCm[d]$ is connected because it is a torsor under the
-geometrically connected group $\PicCm[0]$. Therefore
-\Cref{cor:projective-bundle-fundamental-group} gives
-
+Applying \Cref{lemma:projective-space-fiber-descent} to
+$\widetilde\Phi_d$, we obtain a $G$-torsor $\cQ_d$ on $\PicCm[d]$ with
 \[
-\pi_1^{\mathrm{et}}\bigl(\Cmod{d}\bigr)
- \xrightarrow{\sim}
-\pi_1^{\mathrm{et}}\bigl(\PicCm[d]\bigr).
+\widetilde\Phi_d^*\cQ_d\cong\widetilde{\cP}^{[d]}.
 \]
-This isomorphism induces an equivalence on finite \'etale covers and hence
-on finite constant $G$-torsors. Thus $\widetilde{\cP}^{[d]}$ descends
-uniquely to a $G$-torsor $\cQ_d$ on $\PicCm[d]$, and restriction to
-$U^{(d)}$ gives
-$\Phi_d^*\cQ_d\cong\cP^{[d]}$. Uniqueness with this property also uses the
-surjection
-\[
-\pi_1^{\mathrm{et}}(U^{(d)})\twoheadrightarrow
-\pi_1^{\mathrm{et}}(\Cmod{d})
-\]
-induced by the dense open immersion into the normal scheme
-$\Cmod{d}$ (\stackstag{0BQI}).}
+Restriction to $U^{(d)}$ gives $\Phi_d^*\cQ_d\cong\cP^{[d]}$.
+Full faithfulness of restriction from the normal scheme $\Cmod{d}$ to its
+dense open $U^{(d)}$ (\stackstag{0BQI}), together with the descent
+equivalence, shows that $\cQ_d$ is unique up to isomorphism with this
+property.}
 \end{proof}
 
 \begin{proof}[Proof of \Cref{thm:GCFT_reduced}]
 {\color{green}
-Let $\cF$ be as in \Cref{thm:GCFT_reduced}, set $G=\Lambda^\times$, and let
-$\cP=\operatorname{Fr}(\cF)$. Apply \Cref{thm:GCFT_torsors} to obtain
-$\cQ_d$ on $\PicCm[d]$, and let
+Apply \Cref{thm:GCFT_torsors} to the frame torsor
+$\cP=\operatorname{Fr}(\cF)$ under $G=\Lambda^\times$, and set
 \[
 \cG_d=\cQ_d\times^G\Lambda.
 \]
-The associated-module construction commutes with pullback and carries
-$\cP^{[d]}$ to $\cF^{[d]}$, so
-$\Phi_d^*\cG_d\cong\cF^{[d]}$. If $\cG'_d$ is another such local system,
-then $\operatorname{Fr}(\cG'_d)$ has the defining property of $\cQ_d$.
-The uniqueness of $\cQ_d$, followed by the associated-module construction,
-gives $\cG'_d\cong\cG_d$.
+The frame-torsor equivalence of \Cref{prop:torsor_module_equivalence} is
+compatible with pullback and symmetric powers, so
+$\Phi_d^*\cG_d\cong\cF^{[d]}$. The same equivalence transfers uniqueness
+of $\cQ_d$ to uniqueness of $\cG_d$.
 }
 \end{proof}
