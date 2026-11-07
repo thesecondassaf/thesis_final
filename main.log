@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  7 NOV 2026 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  7 NOV 2026 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1546,7 +1546,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...afIsTamelyRamified}}{56}{subsection.3.3.1}
+l.30 ...afIsTamelyRamified}}{55}{subsection.3.3.1}
                                                   % [1
 
 ])
@@ -1561,35 +1561,35 @@ l.30 ...afIsTamelyRamified}}{56}{subsection.3.3.1}
 
 ]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 68.
+t line 59.
 
 
-[4]
+[4])
 
-[5])
-
-[6]
+[5]
 Chapter 1.
 (./sections/Preliminaries/GeneralPreliminaries.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
 nput line 24.
 
 
-[7
+[6
 
 ]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
 ine 44.
 
 
-[8]
+[7]
 
-[9]
+[8]
 Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input l
 ine 194.
 Package hyperref Info: bookmark level for unknown cor defaults to 0 on input li
 ne 211.
 
+
+[9]
 
 [10]
 
@@ -1598,15 +1598,13 @@ ne 211.
 [12]
 
 [13]
-
-[14]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 548.
 
 
-[15]
+[14]
 
-[16]
+[15]
 Overfull \hbox (7.08899pt too wide) in paragraph at lines 683--690
 \T1/cmr/m/n/10.95 The uni-ver-sal prop-er-ties of the two quo-tients iden-tify 
 this it-er-ated quo-tient canon-i-cally with $\OT1/cmr/m/n/10.95 ^^D[]\OMS/cmsy
@@ -1615,44 +1613,46 @@ this it-er-ated quo-tient canon-i-cally with $\OT1/cmr/m/n/10.95 ^^D[]\OMS/cmsy
 
 
 
-[17]
+[16]
 
-[18] <xymatrix 2x2 154>
+[17] <xymatrix 2x2 154>
 
-[19])
+[18])
 
-[20]
+[19]
 Chapter 2.
 (./sections/RamificationAfterBlowupIntroduction.tex
 
-[21
+[20
 
 ]) (./sections/Preliminaries/LocalRamificationPreliminaries.tex
 
-[22]
+[21]
 
-[23]) (./sections/Preliminaries/GTorsorRamification.tex <xymatrix 2x2 154>
+[22]) (./sections/Preliminaries/GTorsorRamification.tex <xymatrix 2x2 154>
+
+[23]
 
 [24]
 
 [25]
-
-[26]
 Package hyperref Info: bookmark level for unknown cor* defaults to 0 on input l
 ine 245.
 
 
-[27]) (./sections/Preliminaries/ReductionsBeforeCyclicTheories.tex
+[26]) (./sections/Preliminaries/ReductionsBeforeCyclicTheories.tex
+
+[27]
 
 [28]
 
 [29]
 
-[30]
+[30]) (./sections/Preliminaries/CyclicRamificationTheories.tex
 
 [31]
 
-[32]) (./sections/Preliminaries/CyclicRamificationTheories.tex
+[32]
 
 [33]
 
@@ -1660,27 +1660,27 @@ ine 245.
 
 [35]
 
-[36]
+[36]) (./sections/RamificationAfterBlowupIsTame.tex
 
-[37]) (./sections/RamificationAfterBlowupIsTame.tex
+[37]
 
 [38]
 
-[39]
+[39] (./sections/RamificationAfterBlowupPPower.tex
 
-[40] (./sections/RamificationAfterBlowupPPower.tex
+[40]
 
-[41]
+[41])) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
 
-[42])) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
-
-[43]
+[42]
 Chapter 3.
 
 
-[44
+[43
 
 ]
+
+[44]
 
 [45]
 
@@ -1706,17 +1706,17 @@ Chapter 3.
 
 [56]
 
-[57]
+[57]) (./witt/WittVectorAlgebraAppendix.tex
 
-[58]) (./witt/WittVectorAlgebraAppendix.tex
-
-[59]
+[58]
 Appendix A.
 
 
-[60
+[59
 
 ]
+
+[60]
 
 [61]
 
@@ -1729,11 +1729,11 @@ Appendix A.
 [65]
 
 [66]
-
-[67]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 590.
  (./witt/WittVectorPrerequisites.tex
+
+[67]
 
 [68]
 
@@ -1741,38 +1741,36 @@ t line 590.
 
 [70]
 
-[71]
+[71]))
 
-[72]))
-
-[73]
+[72]
 Appendix B.
 (./a_wrong_path/a_wrong_path.tex
 
-[74
+[73
 
 ]
 Package hyperref Info: bookmark level for unknown construction defaults to 0 on
  input line 64.
 
 
+[74]
+
 [75]
 
 [76]
 
-[77]
+[77])
 
-[78])
+[78]
 
 [79]
 
-[80]
-
-[81
+[80
 
 ]
 
-[82] (./main.aux)
+[81] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1784,9 +1782,9 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45857 strings out of 473190
- 872232 string characters out of 5715800
- 1697002 words of memory out of 5000000
+ 45856 strings out of 473190
+ 872225 string characters out of 5715800
+ 1697999 words of memory out of 5000000
  67878 multiletter control sequences out of 15000+600000
  596350 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1834,10 +1832,10 @@ public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
 blic/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
 c/xypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xyp
 ic/xybtip10.pfb>
-Output written on main.pdf (84 pages, 954888 bytes).
+Output written on main.pdf (83 pages, 951891 bytes).
 PDF statistics:
- 1589 PDF objects out of 1728 (max. 8388607)
- 1401 compressed objects within 15 object streams
- 440 named destinations out of 1000 (max. 500000)
+ 1584 PDF objects out of 1728 (max. 8388607)
+ 1398 compressed objects within 14 object streams
+ 439 named destinations out of 1000 (max. 500000)
  389 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,15 +1,20 @@
-In this thesis, we give a direct proof of a key geometric result in Deligne's approach to geometric class field theory.
-We work primarily over a perfect field $k$. Let $C$ be a smooth, projective, geometrically connected curve over $k$, of genus $g$.
-Let $\mdls=\sum_i n_iP_i$ be an effective divisor on $C$, called a modulus, and set $U=C\setminus \mdls$. Geometric class field theory asserts that every rank-one local system $\cF$ on $U$ whose ramification is bounded by $\mdls$ arises uniquely as the pullback of a multiplicative rank-one local system on
-$\PicCm$ along the Abel--Jacobi morphism:
+In this thesis, we give a direct proof of a key ramification result in Deligne's approach to geometric class field theory for curves.
+
+Let $k$ be a perfect field, let $C$ be a smooth, projective, geometrically connected curve over $k$, of genus $g$, and let $\mdls=\sum_i n_iP_i$ be an effective divisor on $C$, called a modulus. Set $U=C\setminus\mdls$.
+Write $\PicCm$ for the rigidified Picard scheme, which parametrizes pairs $(\cL,\alpha)$ consisting of a line bundle $\cL$ on $C$ and a trivialization $\alpha:\cO_\mdls\xrightarrow{\sim}\cL|_\mdls$. We write $\PicCm[d]$ for its degree-$d$ component.
+
+Geometric class field theory asserts that every rank-one local system $\cF$ on $U$ whose ramification is bounded by $\mdls$ arises uniquely as the pullback of a multiplicative rank-one local system along the Abel--Jacobi morphism
 \[
-\Phi:U\longrightarrow\PicCm.
+\Phi:U\longrightarrow\PicCm,
+\qquad x\longmapsto(\cO_C(x),1).
 \]
-One of the main geometric ingredients in Deligne's approach to this assertion is the analysis of the symmetric powers $\cF^{[d]}$ on $U^{(d)}$, and in particular the proof that, for all sufficiently large $d$, they descend along
-the degree $d$ Abel-Jacobi morphism:
+For $d\geq1$, write $U^{(d)}$ for the $d$-th symmetric power of $U$ and $\cF^{[d]}$ for the corresponding symmetric power of $\cF$.
+A central step in Deligne's approach is to show that, for all sufficiently large $d$, $\cF^{[d]}$ descends along the degree-$d$ Abel--Jacobi morphism
 \[
-\Phi_d:U^{(d)}\longrightarrow\PicCm[d].
+\Phi_d:U^{(d)}\longrightarrow\PicCm[d],
+\qquad D\longmapsto(\cO_C(D),1).
 \]
+
 The geometric-fibers of $\Phi_d$ (for $d \geq \deg \mdls +  2g - 1$) over any point are isomorphic to 
 $$
 \begin{cases}
@@ -17,7 +22,7 @@ $$
 \mathbb{P}_{k^{sep}}^{d - g} & \text{if } \mdls = 0
 \end{cases}
 $$
-Where $g$ is the genus of the curve $C$.
+
 The unramified case ($\mdls = 0$) is relatively simple, as the Abel-Jacobi map is proper, surjective with geometrically connected fibers, which follows from the fact that it is a fibration in projective spaces.
 Thus, by using the homotopy exact sequence for the \'etale fundamental group,
 one gets an isomorphism between the \'etale fundamental group of $U^{(d)} (=C^{(d)})$ and that of $\PicCm[d] (=\PicC[d])$.
@@ -50,39 +55,13 @@ To prove geometric class field theory for curves,
 we utilize Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ 
 of $U^{(d)}$ via the blowing up of $C^{(d)}$.
 
-We now introduce the notation needed to state geometric class field theory, its standard degree-$d$ reduction, and the ramification theorem proved in this thesis.
-
-Let $k$ be a perfect field, and let $C$ be a projective smooth geometrically connected curve over $k$, with genus $g$. 
-
-Fix a modulus $\mdls$, i.e.\ an effective Cartier divisor of $C$ and let $U$ be its complement in $C$. 
-The pairs $(\cL, \alpha)$, where $\cL$ is an invertible $\cO_C$-module and $\alpha:\cO_\mdls\xrightarrow{\sim}\cL|_\mdls$ is a rigidification of $\cL$ along $\mdls$, are parametrized by a $k$-group scheme $\PicCm$, called the rigidified Picard scheme.
-We write $\PicCm[d]$ for its degree-$d$ component.
-The Abel-Jacobi morphism $$ \Phi : U \to \PicCm $$
-is the morphism which sends a section $x$ of $U$ to the pair $(\cO_C(x), 1)$. 
-
-Geometric class field theory asserts that rank-one local systems on $U$, with ramification bounded by $\mdls$, arise uniquely as pullbacks of multiplicative rank-one local systems on $\PicCm$.
-For a finite commutative coefficient ring $\Lambda$, the $\Lambda^\times$-torsor associated with such a multiplicative local system is an isogeny onto $\PicCm$ with finite constant kernel $\Lambda^\times$.
-The isogeny formulation will not play a direct role in our setting, which instead focuses on the degree-$d$ descent statement introduced below.
-
-The fundamental result of GCFT can be formulated as:
+We now state the results precisely, beginning with geometric class field theory.
 \begin{theorem}[Geometric Class Field Theory]\label{thm:GCFT}
     Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
     Then, there exists a unique (up to isomorphism) 
     multiplicative\footnote{Here multiplicative means that the local system is equipped with an isomorphism compatible with the group law on $\PicCm$, satisfying the usual associativity and unit conditions; see \cite{Guignard2018}.} 
 \'etale sheaf of $\Lambda$-modules $\cG$ on $\PicCm$, locally free of rank 1, such that the pullback of $\cG$ by $\Phi$ is isomorphic to $\cF$.
 \end{theorem}
-
-Let $d$ be a positive integer. 
-We denote by $U^{(d)}$ the $d$-th symmetric power of $U$ over $k$. 
-For an \'etale sheaf $\cF$ on $U_{\text{\'et}}$, we denote by $\cF^{[d]}$ the $d$-th symmetric power of $\cF$ on $U^{(d)}$. 
-The degree-$d$ Abel--Jacobi morphism is
-\[
-\Phi_d:U^{(d)}\longrightarrow\PicCm[d],
-\]
-sending an effective divisor $D=x_1+\cdots+x_d$ on $U$ to the pair
-\[
-\bigl(\cO_C(D),1\bigr).
-\]
 
 A standard symmetric-power argument\footnote{See \cite[\S5.10]{Guignard2018}, \cite[\S8.3]{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2018blow} for details on this reduction.} reduces \Cref{thm:GCFT} to the following problem: for every sufficiently large $d$, construct a rank-one local system $\cG_d$ on $\PicCm[d]$ whose pullback along $\Phi_d$ is isomorphic to $\cF^{[d]}$.
 In our setting, pullback along $\Phi_d$ is fully faithful, so any such local system is automatically unique up to isomorphism.
@@ -94,7 +73,6 @@ Consequently, it suffices to prove the following reduced statement:
     Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls$. 
     Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) \'etale sheaf of $\Lambda$-modules $\cG_d$ on $\PicCm[d]$, locally free of rank 1, such that the pullback of $\cG_d$ by $\Phi_d$ is isomorphic to $\cF^{[d]}$.
 \end{restatable}
-
 
 % Using the equivilance between $G$-torsors and locally free $\Lambda$-modules of rank 1 ($G=\Lambda^\times$, 
 % see \Cref{prop:torsor_module_equivalence}), \Cref{thm:GCFT_reduced} can be reformulated in terms of $G$-torsors as follows:
@@ -121,7 +99,6 @@ The main technical input in the proof of \Cref{thm:GCFT_reduced} is the followin
 As a final methodological note, for convenience we carry out the ramification calculations in the language of $G$-torsors, with $G=\Lambda^\times$, rather than rank-one local systems.
 By \Cref{prop:torsor_module_equivalence}, the two formulations are equivalent, and the results translate directly between them.
 
-
 The thesis is organized as follows:
 
 \begin{description}
@@ -138,10 +115,7 @@ Finally, I would like to express my gratitude to all the individuals without who
 
 \noindent \textbf{Use of Artificial Intelligence}. In preparing this thesis, I used AI-assisted tools including Codex with GPT-5.6 Sol, Claude Code with Claude Opus 4.8 and Claude Fable, and Google Gemini with Gemini 3.1 Pro. These tools assisted with phrasing, editing, restructuring, drafting portions of the exposition, and formulating mathematical statements and arguments. They also assisted in developing and checking parts of proofs, particularly the Artin--Schreier--Witt calculation for cyclic groups of order $p^r$, as well as several particular cases in Kummer and Artin--Schreier theory that were independently verified by hand. More broadly, these tools supported the organization and completion of the thesis as a whole. Every AI-generated suggestion or draft incorporated into the thesis was fully reviewed and mathematically checked by the author, revised where necessary, and adapted to the notation, presentation, and style of the thesis. No AI-generated material was accepted without human verification, and the author assumes full responsibility for all mathematical and expository content.
 
-
-
 % \textbf{Notation and conventions}. 
-
 
 % \begin{itemize}
 %     \item $S$ is a base scheme.    
