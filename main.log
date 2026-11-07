@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  7 NOV 2026 19:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.30)  7 NOV 2026 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1524,9 +1524,8 @@ Package biblatex Info: Reference segment=0 on input line 27.
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local
-/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 49.
+al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 34.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
@@ -1538,7 +1537,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.54 \end{abstract}
+l.39 \end{abstract}
                     [1] (./main.toc
 
 
@@ -1546,8 +1545,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...afIsTamelyRamified}}{55}{subsection.3.3.1}
-                                                  % [1
+l.25 \newpage
+              [1
 
 ])
 \tf@toc=\write8
@@ -1584,28 +1583,27 @@ ine 44.
 
 [8]
 Package hyperref Info: bookmark level for unknown rem* defaults to 0 on input l
-ine 194.
+ine 191.
 Package hyperref Info: bookmark level for unknown cor defaults to 0 on input li
-ne 211.
+ne 208.
 
 
 [9]
 
 [10]
 
-[11]
+[11{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
+c}]
 
 [12]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
+line 540.
+
 
 [13]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 548.
-
 
 [14]
-
-[15]
-Overfull \hbox (7.08899pt too wide) in paragraph at lines 683--690
+Overfull \hbox (7.08899pt too wide) in paragraph at lines 675--682
 \T1/cmr/m/n/10.95 The uni-ver-sal prop-er-ties of the two quo-tients iden-tify 
 this it-er-ated quo-tient canon-i-cally with $\OT1/cmr/m/n/10.95 ^^D[]\OMS/cmsy
 /m/n/10.95 nP[]$\T1/cmr/m/n/10.95 .
@@ -1613,42 +1611,44 @@ this it-er-ated quo-tient canon-i-cally with $\OT1/cmr/m/n/10.95 ^^D[]\OMS/cmsy
 
 
 
-[16]
+[15]
 
-[17] <xymatrix 2x2 154>
+[16] <xymatrix 2x2 154>
 
-[18])
+[17])
 
-[19]
+[18]
 Chapter 2.
 (./sections/RamificationAfterBlowupIntroduction.tex
 
-[20
+[19
 
 ]) (./sections/Preliminaries/LocalRamificationPreliminaries.tex
 
-[21]
+[20]
 
-[22]) (./sections/Preliminaries/GTorsorRamification.tex <xymatrix 2x2 154>
+[21]) (./sections/Preliminaries/GTorsorRamification.tex <xymatrix 2x2 154>
+
+[22]
 
 [23]
 
 [24]
-
-[25]
 Package hyperref Info: bookmark level for unknown cor* defaults to 0 on input l
 ine 245.
 
 
-[26]) (./sections/Preliminaries/ReductionsBeforeCyclicTheories.tex
+[25]) (./sections/Preliminaries/ReductionsBeforeCyclicTheories.tex
+
+[26]
 
 [27]
 
 [28]
 
-[29]
+[29]) (./sections/Preliminaries/CyclicRamificationTheories.tex
 
-[30]) (./sections/Preliminaries/CyclicRamificationTheories.tex
+[30]
 
 [31]
 
@@ -1658,27 +1658,27 @@ ine 245.
 
 [34]
 
-[35]
+[35]) (./sections/RamificationAfterBlowupIsTame.tex
 
-[36]) (./sections/RamificationAfterBlowupIsTame.tex
+[36]
 
 [37]
 
-[38]
+[38] (./sections/RamificationAfterBlowupPPower.tex
 
-[39] (./sections/RamificationAfterBlowupPPower.tex
+[39]
 
-[40]
+[40])) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
 
-[41])) (./chapter3_reorganized_codex/chapter3_reorganized_codex.tex
-
-[42]
+[41]
 Chapter 3.
 
 
-[43
+[42
 
 ]
+
+[43]
 
 [44]
 
@@ -1704,17 +1704,17 @@ Chapter 3.
 
 [55]
 
-[56]
+[56]) (./witt/WittVectorAlgebraAppendix.tex
 
-[57]) (./witt/WittVectorAlgebraAppendix.tex
-
-[58]
+[57]
 Appendix A.
 
 
-[59
+[58
 
 ]
+
+[59]
 
 [60]
 
@@ -1725,70 +1725,68 @@ Appendix A.
 [63]
 
 [64]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
+t line 571.
+ (./witt/WittVectorPrerequisites.tex
 
 [65]
 
 [66]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 590.
- (./witt/WittVectorPrerequisites.tex
 
 [67]
 
 [68]
 
-[69]
+[69])
 
-[70]
+[70])
 
-[71]))
-
-[72]
+[71]
 Appendix B.
 (./a_wrong_path/a_wrong_path.tex
 
-[73
+[72
 
 ]
 Package hyperref Info: bookmark level for unknown construction defaults to 0 on
- input line 64.
+ input line 61.
 
+
+[73]
 
 [74]
 
 [75]
 
-[76]
+[76])
 
-[77])
+[77]
 
 [78]
 
-[79]
-
-[80
+[79
 
 ]
 
-[81] (./main.aux)
+[80] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F2378E1C4E6729C265BAFF6AB20004D1;11665.
+(rerunfilecheck)             Checksum: DAE98B7148DD47024E2C6C6E2CEB9F8D;9336.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45856 strings out of 473190
- 872225 string characters out of 5715800
- 1697999 words of memory out of 5000000
- 67878 multiletter control sequences out of 15000+600000
+ 45831 strings out of 473190
+ 871720 string characters out of 5715800
+ 1698894 words of memory out of 5000000
+ 67862 multiletter control sequences out of 15000+600000
  596350 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,19n,110p,3253b,2312s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,19n,110p,3253b,2294s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.p
@@ -1832,10 +1830,10 @@ public/stmaryrd/stmary10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
 blic/stmaryrd/stmary8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
 c/xypic/xyatip10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/xyp
 ic/xybtip10.pfb>
-Output written on main.pdf (83 pages, 951891 bytes).
+Output written on main.pdf (82 pages, 941760 bytes).
 PDF statistics:
- 1584 PDF objects out of 1728 (max. 8388607)
- 1398 compressed objects within 14 object streams
- 439 named destinations out of 1000 (max. 500000)
- 389 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1527 PDF objects out of 1728 (max. 8388607)
+ 1342 compressed objects within 14 object streams
+ 430 named destinations out of 1000 (max. 500000)
+ 309 words of extra memory for PDF output out of 10000 (max. 10000000)
 

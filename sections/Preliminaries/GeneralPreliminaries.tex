@@ -161,10 +161,7 @@ with its $G=\Lambda^\times$-torsor of frames and pass between the two
 descriptions without further comment.\footnote{The equivalence is compatible
 with pullback and with tensor products, hence with the symmetric-power
 constructions used below. These compatibilities may be checked after a local
-trivialization. It also preserves ramification bounds: a rank-one local
-system and its frame torsor determine, on each connected component, the same character
-$\pi_1^{\mathrm{et}}(X,\bar{x})\to\Lambda^\times$, and therefore have the
-same restrictions to inertia and to the upper ramification groups.}
+trivialization.}
 
 Lastly, for any object $\cX \in \mathcal{E}$, there is a canonical identification between the slice category
 $(\mathcal{G}\mathcal{E})/\cX$ and the category of group objects $\mathcal{G}(\mathcal{E}/\cX)$, where $\cX$ is viewed as having the 
@@ -498,27 +495,22 @@ $X_S^{(d)}=\operatorname{Sym}_S^d(X)$ is smooth over $S$ of relative dimension
 $d$.
 \end{prop}
 
-\begin{proof}Since $f: X \to S$ is smooth, the $d$-fold product $X_S^d$ is smooth over $S$. By \Cref{prop:symmetric_power_flat_base_change}, the quotient $X_S^{(d)}$ is flat over $S$. Smoothness is a fiberwise property for flat morphisms of finite presentation (cf. \stackstag{01V8}); thus, it suffices to verify the smoothness of the fibers.
-    For every $s \in S$, the fiber of the symmetric power is given by:$$(\text{Sym}^d_S(X))_s \cong \text{Sym}^d_{\kappa(s)}(X_s)$$Consequently, we may reduce to the case where $S = \text{Spec}(k)$ for a field $k$.
-    Since smoothness is preserved under base change to the algebraic closure, we may further assume $k = \bar{k}$.
-    Let $z = \sum_{i=1}^{r} d_i \cdot x_i \in X^{(d)}$ be a point represented by an effective cycle of degree $d$, where the points $x_i \in X(k)$ are distinct and $\sum d_i = d$. Choose pairwise disjoint Zariski-open subsets $U_i \subset X$ such that $x_i \in U_i$. Let $W \subset X^{(d)}$ be the open subset consisting of cycles whose support is contained in $\bigcup U_i$ and which meet each $U_i$ with degree exactly $d_i$. There is a canonical isomorphism:
-$$W \cong \prod_{i=1}^r U_i^{(d_i)}$$
-Thus, it suffices to show that each $U_i^{(d_i)}$ is smooth of dimension $d_i$ at the point $d_i \cdot x_i$.
+\begin{proof}
+The case $d=0$ is immediate. By
+\Cref{prop:symmetric_power_flat_base_change}, $X_S^{(d)}$ is flat over $S$,
+and its formation commutes with arbitrary base change. It is locally of
+finite presentation by noetherian approximation and this base-change
+compatibility.
 
-We may therefore restrict our attention to the "worst" case: the diagonal point $z = d \cdot x$. Let $R = \mathcal{O}_{X,x}$ be the local ring of the curve at $x$. Since $X$ is a smooth curve over $k$, $R$ is a regular local ring of dimension 1, i.e., a discrete valuation ring. Its completion is $\hat{R} \cong k[[t]]$. The completed local ring of the product $X^d$ at the point $(x, \dots, x)$ is:
-$$\hat{\mathcal{O}}_{X^d, (x, \dots, x)} \cong \hat{R} \hat{\otimes}_k \dots \hat{\otimes}_k \hat{R} \cong k[[t_1, \dots, t_d]]$$
-where $t_i$ is the uniformizer for the $i$-th copy of $X$. The symmetric group $S_d$ acts on this power series ring by permuting the variables
-$t_i$. By the \textit{Fundamental Theorem of Symmetric Polynomials}, the ring of invariants is:
-$$\left( k[[t_1, \dots, t_d]] \right)^{S^d} = k[[e_1, \dots, e_d]]$$
-where $e_j$ is the $j$-th elementary symmetric power series in the variables $t_i$.
-
-The ring $k[[e_1,\ldots,e_d]]$ is a regular local ring of dimension $d$.
-Regularity of a Noetherian local ring is equivalent to regularity of its
-completion by \stackstag{07NY}. Hence
-$\mathcal{O}_{X^{(d)},z}$ is a regular local ring of dimension $d$.
-Since $k$ is algebraically closed and $X^{(d)}$ is locally of finite type
-over $k$, regularity at $z$ is equivalent to smoothness at $z$.
-This completes the proof.
+For every geometric point $\bar s\to S$, we have
+\[
+(X_S^{(d)})_{\bar s}\cong(X_{\bar s})^{(d)}.
+\]
+Since $X_{\bar s}$ is a smooth curve over an algebraically closed field,
+its symmetric power is smooth of dimension $d$ by
+\cite[Chapter~III, Proposition~3.2]{milneAV}.
+The fiberwise criterion for smoothness (\stackstag{01V8}) therefore proves
+the assertion.
 \end{proof}
 
 \begin{cor}\label{cor:symmetric_power_curve_geometry}
@@ -537,7 +529,7 @@ reduced, and hence geometrically integral. The assertion about finite products
 now follows inductively from \Cref{theorem:int_geoint_implies_productint}.
 \end{proof}
 
-\subsection*{A Symmetric-Polynomial Calculation}
+We shall also need the following symmetric-polynomial calculation.
 
 Let $e_1,\dots,e_d$ be the elementary symmetric polynomials in
 $x_1,\dots,x_d$, put $y_i=x_i^{-1}$, and write
@@ -828,7 +820,7 @@ $f(\eta_Z)$.
     concluding that $f(Z)$ is a prime divisor as well.
 \end{proof}
 
-\subsection*{Blowups}
+We next recall the blowup properties used below.
 
 \begin{theorem}[\stackstag{0805}]\label{theorem:blowup_flat_base_change}
 Let $X_1\to X_2$ be a flat morphism of schemes, let $Z_2\subset X_2$ be a

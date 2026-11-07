@@ -20,8 +20,6 @@ we do not reproduce its proof.
 The three cyclic theories used in Chapter~2 are instances of the following
 construction.
 
-\subsection{The kernel torsor construction}
-
 Let $H$ be a commutative group scheme over a scheme $S$, written additively,
 and let $\varphi:H\to H$ be a homomorphism. Its scheme-theoretic kernel
 $K:=\ker(\varphi)$ is defined by the Cartesian square
@@ -164,7 +162,7 @@ multiplicatively: $K(U)=\{k\in H(U):\varphi_U(k)=1_{H(U)}\}$, the action is
 $(k,y)\mapsto ky$, and replacing $a$ by $a\varphi_X(b)$ gives the isomorphic
 torsor $y\mapsto by$.
 
-\subsection{The three cyclic theories}
+\subsection*{The three cyclic theories}
 
 For an arbitrary $S$-scheme $X$, the fiber over a section $a\in H(X)$ is
 \[
@@ -275,59 +273,42 @@ proved in \Cref{lemma:asw_etale_torsor}.
 Let $K$ be a complete discretely valued field with residue characteristic
 $p>0$.
 
-\subsection{Kummer theory}
+\paragraph{Kummer.}
 
-If $(e,p)=1$ and $K$ contains $\mu_e$, the Kummer sequence
+Assume that $(e,p)=1$ and that $K$ contains $\mu_e$. Hilbert~90 gives
 \[
-1\longrightarrow\mu_e\longrightarrow\bG_m
-\xrightarrow{(-)^e}\bG_m\longrightarrow1
+H^1_{\mathrm{\acute et}}(\Spec K,\bG_m)=0.
 \]
-and Hilbert~90 give
+The long exact sequence associated with the Kummer sequence therefore
+identifies
 \[
-H^1_{\mathrm{\acute et}}(\Spec K,\mu_e)
-\cong K^\times/(K^\times)^e.
+K^\times/(K^\times)^e
+\xrightarrow{\sim}
+H^1_{\mathrm{\acute et}}(\Spec K,\mu_e).
 \]
-Equivalently, since the base is a field, this \'etale cohomology group is the
-continuous Galois cohomology group
-\[
-H^1_{\mathrm{\acute et}}(\Spec K,\mu_e)
-\cong
-H^1_{\mathrm{cont}}\!\left(\Gal(K^{\mathrm{sep}}/K),
-\mu_e(K^{\mathrm{sep}})\right).
-\]
-Under this identification, the coset
-$[a]\in K^\times/(K^\times)^e$ corresponds to the $\mu_e$-torsor
-\[
-\Spec K[T]/(T^e-a),
-\]
-on which $\zeta\in\mu_e$ acts by $T\mapsto\zeta T$. Thus replacing $a$
-by $ab^e$, for $b\in K^\times$, gives an isomorphic torsor. If $[a]$ has
-order $e$, adjoining a solution of $T^e=a$ gives a cyclic field extension
-of degree $e$.
+By the connecting-map construction in
+\Cref{appendix:common_group_scheme_construction}, the class of $a$ maps to
+the torsor $T^e=a$. This proves the classification recalled in
+\Cref{section:cyclic_extension_theories}.
 
-\subsection{Artin--Schreier theory}
+\paragraph{Artin--Schreier.}
 
-In characteristic $p$, the Artin--Schreier sequence
+Assume that $K$ has characteristic $p$, and put $\wp(z)=z^p-z$.
+Additive Hilbert~90 gives
 \[
-0\longrightarrow\F_p\longrightarrow\bG_a
-\xrightarrow{\wp}\bG_a\longrightarrow0,
-\qquad \wp(z)=z^p-z,
+H^1_{\mathrm{\acute et}}(\Spec K,\bG_a)=0.
 \]
-and additive Hilbert~90 give
+The long exact sequence associated with the Artin--Schreier sequence therefore
+identifies
 \[
-H^1(K,\Z/p\Z):=H^1_{\mathrm{\acute et}}(\Spec K,\Z/p\Z)
-\cong K/\wp(K).
+K/\wp(K)
+\xrightarrow{\sim}
+H^1_{\mathrm{\acute et}}(\Spec K,\Z/p\Z).
 \]
-Under this identification, the coset $[a]\in K/\wp(K)$ corresponds to the
-$\Z/p\Z$-torsor
-\[
-\Spec K[X]/(X^p-X-a),
-\]
-on which $c\in\F_p\cong\Z/p\Z$ acts by $X\mapsto X+c$. Thus replacing
-$a$ by $a+(b^p-b)$, for $b\in K$, gives an isomorphic torsor. If
-$[a]\neq0$, adjoining a solution of $X^p-X=a$ gives a cyclic field
-extension of degree $p$; conversely, every cyclic extension of degree $p$
-arises in this way.
+By the connecting-map construction in
+\Cref{appendix:common_group_scheme_construction}, the class of $a$ maps to
+the torsor $X^p-X=a$. This proves the classification recalled in
+\Cref{section:cyclic_extension_theories}.
 
 \begin{lemma}[Classical cyclic equations are \'etale torsors]
 \label{lemma:classical_cyclic_equations_etale_torsors}

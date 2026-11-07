@@ -26,24 +26,9 @@ sorting=ynt
 
 \begin{document}
 
-\newcommand{\ThesisTodoList}{%
-  \par\vspace{2em}
-  \begin{minipage}{0.8\textwidth}
-    \color{red}
-    \textbf{TODO}
-    \begin{itemize}[leftmargin=*]
-      \item Check the references at Bib.
-      \item Review the thesis for unnecessary repetition, especially where subsection openings restate material already given in section introductions, and minimize such duplication.
-      \item Fix the proof of \Cref{prop:relative_symmetric_power_smooth}: it chooses pairwise disjoint Zariski-open neighbourhoods $U_i$ of distinct points of a curve, which is impossible since the curve is irreducible. Reduce to the diagonal case instead via the stabilizer fact: $X/\operatorname{Stab}_\Gamma(x)\to X/\Gamma$ is \'etale at the image of $x$ \cite[Exp.~V, Prop.~2.2]{sga1}, applied to $X^d/(S_{d_1}\times\cdots\times S_{d_r})\to X^{(d)}$ (the same fact gives an alternative proof of \Cref{lemma:takeuchi_lemma}).
-      \item Try to lower the number of subsections where possible, for example by merging short subsections into the surrounding section.
-    \end{itemize}
-  \end{minipage}%
-}
-
 \title{Geometric Class Field Theory for Curves}
 \author{Assaf Marzan}
 \date{\today}
-\postdate{\par\end{center}\ThesisTodoList}
 \maketitle
 \begin{abstract}
 We calculate the ramification of the symmetric product $\cF^{[\deg \mdls]}$ of a local system $\cF$ on a curve $C \setminus \mdls$. 
@@ -81,6 +66,7 @@ following the subsequent extensions to the ramified case developed by Takeuchi a
 
 \input{chapter3_reorganized_codex/chapter3_reorganized_codex.tex}
 
+\addtocontents{toc}{\protect\newpage}
 \begin{appendices}
 \input{witt/WittVectorAlgebraAppendix.tex}
 
