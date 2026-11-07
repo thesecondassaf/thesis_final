@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1794061051.51316 "main.bcf" "main.bbl" "main" 1794067337.47809 0
-  "Bib.bib" 1793123793.7624 6874 bd1650b2c67fbafe551e3252de308fff ""
-  "main.bcf" 1794067336.52026 115306 7c73d59e8afbfc455839a28a816b71a2 "pdflatex"
+["biber main"] 1794069778.52787 "main.bcf" "main.bbl" "main" 1794070141.82973 0
+  "Bib.bib" 1794068634.66125 6479 ad5773287e1ced5a003040b8789dfe33 ""
+  "main.bcf" 1794070141.41926 115457 d0abbfb3325fcd8e4c558c6360e4cc3e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1794067326.90326 "main.tex" "main.pdf" "main" 1794067337.48521 0
+["pdflatex"] 1794070135.84063 "main.tex" "main.pdf" "main" 1794070141.83023 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -364,25 +364,25 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "MacrosAndFigures.tex" 1793049040.1782 11515 e6a1fbd92c8b733d4bf646106cf3445c ""
   "a_wrong_path/a_wrong_path.tex" 1792879606.8451 15777 d32530e998b36d1586a8a6130a5203d5 ""
-  "chapter3_reorganized_codex/chapter3_reorganized_codex.tex" 1794067238.68122 45607 a6fe93e958f61e4ba0b34d077a916778 ""
+  "chapter3_reorganized_codex/chapter3_reorganized_codex.tex" 1794069091.06862 45741 c22ea6022a56c908f8d40e752f1ab6e8 ""
   "includes.tex" 1784235509.93079 1342 e5c3b0d0c7778d7de9a24d055cbd4cd6 ""
-  "main.aux" 1794067336.49899 57989 b064ec36a3e7856883d3f74ba443156b "pdflatex"
-  "main.bbl" 1794061067.94703 23504 d82c21c9a4014ab1c19ea2a75d237ca3 "biber main"
-  "main.out" 1794067336.5148 11665 f2378e1c4e6729c265baff6ab20004d1 "pdflatex"
-  "main.run.xml" 1794067336.52162 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
+  "main.aux" 1794070141.40093 58009 162911a0e43ee14c82d2a52372b1584c "pdflatex"
+  "main.bbl" 1794069782.65167 23768 a9818b61d12d92eca43cbb199059bf18 "biber main"
+  "main.out" 1794070141.41467 11665 f2378e1c4e6729c265baff6ab20004d1 "pdflatex"
+  "main.run.xml" 1794070141.42053 2304 acce9008716093b6b3dd5b3ca74ce283 "pdflatex"
   "main.tex" 1794067326.49533 3652 4a70b546d88a4fc979c0a15de7ef9199 ""
-  "main.toc" 1794067336.52178 5225 6005e525c68fd4e9041cdde800169416 "pdflatex"
-  "sections/Introduction.tex" 1794066695.23859 15127 14c534fc6c8639e1abe0622b71703385 ""
+  "main.toc" 1794070141.4207 5225 6005e525c68fd4e9041cdde800169416 "pdflatex"
+  "sections/Introduction.tex" 1794068371.31324 15110 2bc9c9c2c95083803f510536be31b3c7 ""
   "sections/Preliminaries/CyclicRamificationTheories.tex" 1792252650.73865 18553 8d2bae1a75ba3bee327ccc8699736bee ""
   "sections/Preliminaries/GTorsorRamification.tex" 1791874889.42125 16615 aa22dd7f436aa45f22b01b27d4296994 ""
-  "sections/Preliminaries/GeneralPreliminaries.tex" 1794066370.04077 45481 8cc421c41401b7b8685c938bad25ede7 ""
-  "sections/Preliminaries/LocalRamificationPreliminaries.tex" 1786819712.5272 7831 b81b6197ccb8f50ad73e64780295997b ""
+  "sections/Preliminaries/GeneralPreliminaries.tex" 1794069751.87735 45507 e7c81898f6ed22392c872edd2ff99f7b ""
+  "sections/Preliminaries/LocalRamificationPreliminaries.tex" 1794069751.82975 7863 a5278529de331be87802b928b67c1568 ""
   "sections/Preliminaries/ReductionsBeforeCyclicTheories.tex" 1794066933.21281 16974 2beb6e73769f41139a55a331f74ed369 ""
   "sections/RamificationAfterBlowupIntroduction.tex" 1794066786.69478 2523 60ffc18f852162979ec61538e7449b04 ""
   "sections/RamificationAfterBlowupIsTame.tex" 1794067049.29599 10310 35a8102ee34b3b66fe01d9ac43e043cd ""
   "sections/RamificationAfterBlowupPPower.tex" 1792864123.00017 4175 13778ae3720a31b290f91c0aa03c1868 ""
-  "witt/WittVectorAlgebraAppendix.tex" 1792863277.22933 24293 4779a265c140365769fea6d8ca492a0e ""
-  "witt/WittVectorPrerequisites.tex" 1791554449.17268 13463 4108d1aadb35b2063046dcd4110e6c6b ""
+  "witt/WittVectorAlgebraAppendix.tex" 1794070124.69847 24263 8cf44e6bb60387d7cb50128aaed06638 ""
+  "witt/WittVectorPrerequisites.tex" 1794068371.43361 13434 204401650d89356a48b823ac941c69f1 ""
   (generated)
   "main.aux"
   "main.bcf"

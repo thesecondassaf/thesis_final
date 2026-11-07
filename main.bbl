@@ -260,9 +260,6 @@
            given={Lara},
            giveni={L\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Université Bordeaux 1}%
-      }
       \strng{namehash}{fd665ccb2b3cfe25f7b054a99e9827ff}
       \strng{fullhash}{fd665ccb2b3cfe25f7b054a99e9827ff}
       \strng{fullhashraw}{fd665ccb2b3cfe25f7b054a99e9827ff}
@@ -315,19 +312,29 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Available at www.jmilne.org/math/}
       \field{title}{Abelian Varieties (v2.00)}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
       \field{year}{2008}
-      \field{pages}{166+vi}
-      \range{pages}{-1}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.jmilne.org/math/CourseNotes/AVc.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.jmilne.org/math/CourseNotes/AVc.pdf
+      \endverb
     \endentry
-    \entry{Toth2011}{article}{}{}
+    \entry{Toth2011}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=f86fe1ca1919ddf36a115b7343a6e40a}{%
            family={Tóth},
            familyi={T\bibinitperiod},
            given={Péter},
            giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Utrecht University}%
       }
       \strng{namehash}{f86fe1ca1919ddf36a115b7343a6e40a}
       \strng{fullhash}{f86fe1ca1919ddf36a115b7343a6e40a}
@@ -343,8 +350,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
-      \field{note}{Master of Science thesis}
       \field{title}{Geometric Abelian Class Field Theory}
+      \field{type}{Master of Science thesis}
       \field{year}{2011}
       \verb{urlraw}
       \verb https://math.bu.edu/people/rmagner/Seminar/GCFTthesis.pdf
@@ -374,7 +381,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{math.RA}
+      \field{eprintclass}{math.NT}
       \field{eprinttype}{arXiv}
       \field{title}{The Theory of {Witt} Vectors}
       \field{year}{2014}
@@ -508,8 +515,7 @@
       \field{eprintclass}{math.AG}
       \field{eprinttype}{arXiv}
       \field{journaltitle}{Algebra \& Number Theory}
-      \field{month}{5}
-      \field{note}{Revised version submitted on 29 May 2019}
+      \field{number}{6}
       \field{title}{On the ramified class field theory of relative curves}
       \field{volume}{13}
       \field{year}{2019}
@@ -520,37 +526,6 @@
       \endverb
       \verb{eprint}
       \verb 1804.02243
-      \endverb
-    \endentry
-    \entry{YoucisTorsors}{unpublished}{}{}
-      \name{author}{1}{}{%
-        {{hash=9081e78fbef748a06eaabc3fa3d39755}{%
-           family={Youcis},
-           familyi={Y\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{9081e78fbef748a06eaabc3fa3d39755}
-      \strng{fullhash}{9081e78fbef748a06eaabc3fa3d39755}
-      \strng{fullhashraw}{9081e78fbef748a06eaabc3fa3d39755}
-      \strng{bibnamehash}{9081e78fbef748a06eaabc3fa3d39755}
-      \strng{authorbibnamehash}{9081e78fbef748a06eaabc3fa3d39755}
-      \strng{authornamehash}{9081e78fbef748a06eaabc3fa3d39755}
-      \strng{authorfullhash}{9081e78fbef748a06eaabc3fa3d39755}
-      \strng{authorfullhashraw}{9081e78fbef748a06eaabc3fa3d39755}
-      \field{labelalpha}{You20}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Available at \url{https://alex-youcis.github.io/torsors.pdf}}
-      \field{title}{Notes on Torsors}
-      \field{year}{2020}
-      \verb{urlraw}
-      \verb https://alex-youcis.github.io/torsors.pdf
-      \endverb
-      \verb{url}
-      \verb https://alex-youcis.github.io/torsors.pdf
       \endverb
     \endentry
     \entry{ElderKeating2025}{misc}{}{}
@@ -590,6 +565,41 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2503.16830
+      \endverb
+    \endentry
+    \entry{YoucisTorsors}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9081e78fbef748a06eaabc3fa3d39755}{%
+           family={Youcis},
+           familyi={Y\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{fullhash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{fullhashraw}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{bibnamehash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{authorbibnamehash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{authornamehash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{authorfullhash}{9081e78fbef748a06eaabc3fa3d39755}
+      \strng{authorfullhashraw}{9081e78fbef748a06eaabc3fa3d39755}
+      \field{labelalpha}{You}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Undated expository notes; supplementary material for an independent study at UC Berkeley}
+      \field{title}{A `brief' discussion of torsors}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://alex-youcis.github.io/torsors.pdf
+      \endverb
+      \verb{url}
+      \verb https://alex-youcis.github.io/torsors.pdf
       \endverb
     \endentry
   \enddatalist
