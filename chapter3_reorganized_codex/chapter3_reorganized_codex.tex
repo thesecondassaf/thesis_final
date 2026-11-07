@@ -1029,7 +1029,7 @@ separable residue-field extensions. Hence $\cP_\Omega$ is unramified at
 $\bar\eta$, as required.
 \end{proof}
 
-\section{Descent and Reduced Geometric Class Field Theory}\label{section:gcft-descent}
+\section{Descent and Geometric Class Field Theory}\label{section:gcft-descent}
 
 The preceding section shows that $\cP^{[d]}$ extends uniquely from
 $U^{(d)}$ to Takeuchi's compactification $\Cmod{d}$. We now descend this
@@ -1040,7 +1040,7 @@ compactification comes uniquely from the base.
 
 When $\mdls=0$, the usual Abel--Jacobi morphism already has
 projective-space fibers, so the same argument applies directly. We conclude
-the proof of reduced geometric class field theory by translating the
+the proof of \Cref{thm:GCFT_reduced} by translating the
 resulting torsor back into a rank-one local system.
 
 \begin{lemma}[Descent along projective-space fibers]
@@ -1070,7 +1070,6 @@ $G$-actions and the torsor condition.
 \end{proof}
 
 \begin{theorem}[Torsor formulation]\label{thm:GCFT_torsors}
-{\color{green}
 Let $\Lambda$ be a finite commutative ring whose cardinality is invertible
 in $k$, set $G=\Lambda^\times$, and let $\cP$ be a $G$-torsor on $U$ whose
 ramification is bounded by $\mdls$. For every sufficiently large integer
@@ -1079,11 +1078,9 @@ isomorphism, such that
 \[
 \Phi_d^*\cQ_d\cong\cP^{[d]}.
 \]
-}
 \end{theorem}
 
 \begin{proof}
-{\color{green}
 The scheme $\PicCm[d]$ is geometrically connected, being a torsor under
 the geometrically connected group $\PicCm[0]$.
 When $\mdls=0$ and $d$ is sufficiently large, the usual Abel--Jacobi morphism
@@ -1118,11 +1115,10 @@ Restriction to $U^{(d)}$ gives $\Phi_d^*\cQ_d\cong\cP^{[d]}$.
 Full faithfulness of restriction from the normal scheme $\Cmod{d}$ to its
 dense open $U^{(d)}$ (\stackstag{0BQI}), together with the descent
 equivalence, shows that $\cQ_d$ is unique up to isomorphism with this
-property.}
+property.
 \end{proof}
 
 \begin{proof}[Proof of \Cref{thm:GCFT_reduced}]
-{\color{green}
 Apply \Cref{thm:GCFT_torsors} to the frame torsor
 $\cP=\operatorname{Fr}(\cF)$ under $G=\Lambda^\times$, and set
 \[
@@ -1132,5 +1128,4 @@ The frame-torsor equivalence of \Cref{prop:torsor_module_equivalence} is
 compatible with pullback and symmetric powers, so
 $\Phi_d^*\cG_d\cong\cF^{[d]}$. The same equivalence transfers uniqueness
 of $\cQ_d$ to uniqueness of $\cG_d$.
-}
 \end{proof}
