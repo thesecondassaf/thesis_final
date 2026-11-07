@@ -1,0 +1,161 @@
+% !TeX root = ../../../main.tex
+\section{Torsors and Rank-One Local Systems}
+% $X$ with etale site, but say things here work for toposes in general and flat sites in general.
+
+In what follows, we largely adhere to the treatment of torsors and group objects found in the expository notes of Alex Youcis \cite{YoucisTorsors}.
+Let $\sC=(\cC, J)$ be a site and let $\cE=Sh(\sC)$ be the associated topos. 
+Let $\mathcal{G}$ be a group object in $\mathcal{E}$. 
+We denote by $\mathcal{G}\mathcal{E}$ the category of objects in $\mathcal{E}$ endowed with a left $\mathcal{G}$-action. 
+
+\begin{definition}
+    A \textbf{$\mathcal{G}$-torsor} in $\mathcal{E}$ is an object $\mathcal{P}$ of $\mathcal{G}\mathcal{E}$ satisfying the following conditions:
+    \begin{enumerate}
+        \item The structural morphism $\mathcal{P} \to 1$ is an epimorphism in $\mathcal{E}$ (i.e., $\mathcal{P}$ is locally non-empty).
+        \item The map $\mathcal{G} \times \mathcal{P} \to \mathcal{P} \times \mathcal{P}$ defined by $(g, p) \mapsto (g \cdot p, p)$ is an isomorphism in $\mathcal{E}$ (i.e., $\mathcal{G}$ acts simply transitively on $\mathcal{P}$).
+    \end{enumerate}
+\end{definition}
+
+Since $\mathcal{E}$ is the topos of sheaves on a site $\sC$, the definition can be reformulated in terms of covers. A $\mathcal{G}$-sheaf $\mathcal{P}$ is a $\mathcal{G}$-torsor if:
+\begin{enumerate}
+    \item For every object $X \in \mathcal{C}$, there exists a covering $\{ U_i \to X \} \in J$ such that $\mathcal{P}(U_i) \neq \emptyset$ for all $i$.
+    \item For any $X \in \mathcal{C}$ where $\mathcal{P}(X)$ is non-empty, the action of $\mathcal{G}(X)$ on $\mathcal{P}(X)$ is simply transitively.
+\end{enumerate}
+
+A fundamental property of torsors is their local triviality: 
+a $\mathcal{G}$-sheaf $\mathcal{P}$ is a $\mathcal{G}$-torsor if and only if it is locally isomorphic to the trivial torsor. 
+Specifically, for every $X \in \mathcal{C}$, there must exist a cover $\{ U_i \to X \}$ such that the restriction $\mathcal{P}|_{U_i}$ is 
+isomorphic, as a $\mathcal{G}|_{U_i}$-sheaf, to $\mathcal{G}|_{U_i}$ acting on itself by left multiplication.
+
+A \textbf{morphism of $\mathcal{G}$-torsors} $f: \mathcal{P}_1 \to \mathcal{P}_2$ is a morphism of sheaves that is equivariant with respect to the $\mathcal{G}$-action.
+
+\begin{prop}\label{prop:torsor_morphism_iso}
+    Every morphism of $\mathcal{G}$-torsors is an isomorphism.
+    Consequently, the category of $\mathcal{G}$-torsors in $\mathcal{E}$ forms a groupoid.
+\end{prop}
+\begin{proof}
+    Locally on a cover trivializing both torsors, such a morphism is a $\mathcal{G}$-equivariant endomorphism
+    of the trivial torsor $\mathcal{G}$, i.e.\ right translation by a section of $\mathcal{G}$, hence an
+    isomorphism; and being an isomorphism may be checked on a cover.
+\end{proof}
+
+\begin{definition}
+    We denote the groupoid of $\mathcal{G}$-torsors in $\mathcal{E}$ by $\mathbf{Tors}(\mathcal{E}, \mathcal{G})$ .  The set of isomorphism classes of $\mathcal{G}$-torsors is denoted by $\mathrm{Tors}(\mathcal{E}, \mathcal{G})$.
+\end{definition}
+
+Torsors exhibit functoriality with respect to the group object:
+
+\begin{definition}
+Let $\varphi: \mathcal{G}_1 \to \mathcal{G}_2$ be a morphism of group 
+sheaves on $\sC$, and let $\mathcal{P}$ be a $\mathcal{G}_1$-torsor. We define the \textbf{contracted product} $\mathcal{G}_2 \times^{\mathcal{G}_1} \mathcal{P}$ as the quotient sheaf $\mathcal{G}_1 \backslash (\mathcal{G}_2 \times \mathcal{P})$, where $\mathcal{G}_1$ acts on the product by:
+\[ g_1 \cdot (g_2, p) = (g_2 \varphi(g_1)^{-1}, g_1 \cdot p) \]
+
+The contracted product inherits a natural left $\mathcal{G}_2$-action given on local sections by $h \cdot [g_2, p] = [h g_2, p]$, which endows it with the structure of a $\mathcal{G}_2$-torsor. 
+\end{definition}
+
+This construction yields a functor:
+\[ \varphi_*: \mathbf{Tors}(\cE, \mathcal{G}_1) \to \mathbf{Tors}(\cE, \mathcal{G}_2), \quad \mathcal{P} \mapsto \mathcal{G}_2 \times^{\mathcal{G}_1} \mathcal{P} \]
+There is a canonical $\varphi$-equivariant morphism
+\[
+j_\varphi:\mathcal P\longrightarrow\varphi_*\mathcal P,
+\qquad p\longmapsto[1,p],
+\]
+meaning that
+$j_\varphi(g\cdot p)=\varphi(g)\cdot j_\varphi(p)$ for every local section
+$g$ of $\mathcal G_1$.
+On the level of isomorphism classes, $\varphi_*$ induces a map of pointed sets $\mathrm{Tors}(\cE, \mathcal{G}_1) \to \mathrm{Tors}(\cE, \mathcal{G}_2)$, sending the class of the trivial $\mathcal{G}_1$-torsor to the class of the trivial $\mathcal{G}_2$-torsor.
+
+When $\mathcal{G}$ is a \textbf{sheaf of abelian groups} (an \textit{abelian sheaf}), the pointed set $\mathrm{Tors}(\cE, \mathcal{G})$ 
+inherits the structure of an abelian group:
+\begin{definition}
+    Assume $\mathcal{G}$ is abelian sheaf. Let $\mathcal{P}_1$ and $\mathcal{P}_2$ be objects of $\mathbf{Tors}(\cE, \mathcal{G})$. 
+    We define the \textbf{product} $\mathcal{P}_1 \otimes^{\cG} \mathcal{P}_2$ to be the quotient sheaf 
+    $(\mathcal{P}_1 \times \mathcal{P}_2)/\mathcal{G}$, where $\mathcal{G}$ acts on $T$-points by having:
+    \[ g \cdot (f_1, f_2) := (g f_1, g^{-1} f_2) \]
+    The group object $\mathcal{G}$ then acts on the resulting quotient via its action on the presheaf quotient, which is given on classes by:
+    \[ g \cdot [(f_1, f_2)] = [(g f_1, f_2)] = [(f_1, g f_2)] \]
+    where the square brackets denote the class in the quotient set.\footnote{
+    Equivantly, the sum is obtained as the contracted product of the $\cG \times \cG$-torsor $\cP_1 \times \cP_2$ along the multiplication map
+$m: \cG \times \cG \to \cG$. }
+\end{definition}
+
+Let $[\mathcal{P}_1]$ and $[\mathcal{P}_2]$ be the isomorphism classes of $\mathcal{P}_1$ and $\mathcal{P}_2$ in $\mathrm{Tors}(\cE, \mathcal{G})$.
+We define the sum $[\mathcal{P}_1] + [\mathcal{P}_2]$ to be the class $[\cP_1 \otimes^{\cG} \cP_2]$.
+This structure turns $\mathrm{Tors}(\cE, \mathcal{G})$ into an abelian group, 
+where the identity is the class of the trivial torsor and the inverse is obtained by the opposite action.
+
+We now record the equivalence used in the thesis.
+Let $\Lambda$ be a commutative ring object of $\mathcal{E}$ and let
+$G=\Lambda^\times$ be its group of units. We write
+$\mathbf{Pic}(\mathcal{E},\Lambda)$ for the groupoid of locally free
+$\Lambda$-modules of rank one. For $\mathcal{L}$ in this groupoid, its
+\textbf{frame torsor} is
+\[
+\operatorname{Fr}(\mathcal{L})
+  :=\underline{\operatorname{Isom}}_\Lambda(\Lambda,\mathcal{L}).
+\]
+The group $G$ acts on frames by precomposition with multiplication on $\Lambda$.
+Conversely, if $\mathcal{P}$ is a $G$-torsor, its \textbf{associated
+$\Lambda$-module} is the contracted product
+\[
+\mathcal{P}\times^G\Lambda
+  :=(\mathcal{P}\times\Lambda)/G,
+\qquad
+g\cdot(p,\lambda)=(gp,g^{-1}\lambda),
+\]
+where $G$ acts on $\Lambda$ by multiplication.
+
+\begin{prop}
+\label{prop:torsor_module_equivalence}
+The functors
+\[
+\mathcal{P}\longmapsto\mathcal{P}\times^G\Lambda,
+\qquad
+\mathcal{L}\longmapsto\operatorname{Fr}(\mathcal{L})
+\]
+are mutually quasi-inverse equivalences
+\[
+\mathbf{Tors}(\mathcal{E},G)
+\xrightarrow{\ \sim\ }
+\mathbf{Pic}(\mathcal{E},\Lambda).
+\]
+\end{prop}
+
+\begin{proof}
+There are natural morphisms
+\[
+\mathcal{P}\longrightarrow
+\operatorname{Fr}(\mathcal{P}\times^G\Lambda),
+\qquad
+p\longmapsto\bigl(\lambda\longmapsto[p,\lambda]\bigr),
+\]
+and
+\[
+\operatorname{Fr}(\mathcal{L})\times^G\Lambda
+\longrightarrow\mathcal{L},
+\qquad
+[\varphi,\lambda]\longmapsto\varphi(\lambda).
+\]
+After passing to a cover on which $\mathcal{P}$ is the trivial torsor and
+$\mathcal{L}$ is free of rank one, both morphisms become the identity.
+Hence they are isomorphisms.
+\end{proof}
+
+When $\mathcal{E}=\operatorname{Sh}(X_{\text{\'et}})$ and $\Lambda$
+is a finite constant ring, the objects of
+$\mathbf{Pic}(\mathcal{E},\Lambda)$ are precisely the rank-one
+$\Lambda$-local systems on $X$. Henceforth, we identify such a local system
+with its $G=\Lambda^\times$-torsor of frames and pass between the two
+descriptions without further comment.\footnote{The equivalence is compatible
+with pullback and with tensor products, hence with the symmetric-power
+constructions used below. These compatibilities may be checked after a local
+trivialization.}
+
+Lastly, for any object $\cX \in \mathcal{E}$, there is a canonical identification between the slice category
+$(\mathcal{G}\mathcal{E})/\cX$ and the category of group objects $\mathcal{G}(\mathcal{E}/\cX)$, where $\cX$ is viewed as having the 
+trivial $\mathcal{G}$-action.
+
+We denote by $\mathbf{Tors}(\cX, \cG)$ the category of $G$-torsors over $\cX$ in $\cG \cE_{/\cX}$.
+
+%%% %%% %%% %%% %%% %%% %%% %%%
+%       Torsors as Spaces
+%%% %%% %%% %%% %%% %%% %%% %%%

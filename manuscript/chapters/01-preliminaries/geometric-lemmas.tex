@@ -1,0 +1,93 @@
+% !TeX root = ../../../main.tex
+\section{Basic Geometric Lemmas}
+
+We conclude with two elementary facts about codimension-one points and
+blowups. They are placed here because they enter the geometric arguments in
+both later chapters.
+
+\begin{prop}\label{prop:finite_flat_prime_divisor}
+Let $f:X\to Y$ be a finite flat morphism between integral schemes of finite
+type over a field $k$. If $Z\subset X$ is a prime divisor with generic point
+$\eta_Z$, then $f(Z)\subset Y$ is a prime divisor, and its generic point is
+$f(\eta_Z)$.
+\end{prop}
+
+\begin{proof}
+    $f$ is finite hence proper hence closed so $f(Z)$ is closed subset of $Y$, it is irreducible as the image of an irreducible.
+    Since $Z = \overline{\{ \eta_Z \}}$ we get:
+    $$\{f(\eta_Z)\} \subset f(Z) = f(\overline{\{\eta_Z\}}) \subseteq \overline{f(\{\eta_Z\})} = \overline{\{f(\eta_Z)\}}$$
+    And since $f(Z)$ is closed we get $f(Z) = \overline{\{f(\eta_Z)\}}$.
+
+    For flat map of integral schemes we have for every $x \in X$, $y=f(x)$ the dimension formula:
+    $$\text{dim}(\mathcal{O}_{X,x}) = \text{dim}(\mathcal{O}_{Y,y}) + \text{dim}(\mathcal{O}_{X_y, x})$$
+    And since $\text{dim}(\mathcal{O}_{X_y, x}) = 0$ we get $\text{dim}(\mathcal{O}_{X,x}) = \text{dim}(\mathcal{O}_{Y,y})$
+    concluding that $f(Z)$ is a prime divisor as well.
+\end{proof}
+
+We next recall the blowup properties used below.
+
+\begin{theorem}[\stackstag{0805}]\label{theorem:blowup_flat_base_change}
+Let $X_1\to X_2$ be a flat morphism of schemes, let $Z_2\subset X_2$ be a
+closed subscheme, and let $Z_1$ be its inverse image in $X_1$. If $X'_i$ is
+the blowup of $X_i$ along $Z_i$, then the diagram
+\[
+\xymatrix{
+X'_1 \ar[r] \ar[d] & X'_2 \ar[d] \\
+X_1 \ar[r] & X_2
+}
+\]
+is cartesian.
+\end{theorem}
+
+\begin{prop}\label{prop:exceptional_divisor_smooth_point}
+Let $X$ be a smooth $k$-scheme of pure dimension $d\geq 1$, let $z\in X(k)$, and
+let
+\[
+\pi:\widetilde X=\operatorname{Bl}_z(X)\longrightarrow X
+\]
+be the blowup at $z$. Then the exceptional divisor
+$E=\pi^{-1}(z)$ is isomorphic to $\mathbb P_k^{d-1}$. In particular, $E$ is
+irreducible and has codimension $1$ in $\widetilde X$. Consequently, it has
+a unique generic point $\eta_E$, and $\overline{\{\eta_E\}}=E$.
+\end{prop}
+
+\begin{proof}
+Because $X$ is smooth of dimension $d$ at the $k$-rational point $z$, the
+étale local description of smooth morphisms \stackstag{054L} shows that,
+after replacing $X$ by a sufficiently small open neighborhood of $z$, there
+is an étale morphism
+\[
+f:X\longrightarrow \mathbb A_k^d
+\]
+that sends $z$ to the origin $0$. We may shrink this neighborhood further so
+that $z$ is the scheme-theoretic inverse image of $0$. Since an étale
+morphism is flat, \Cref{theorem:blowup_flat_base_change} reduces the assertion
+to the blowup of $\mathbb A_k^d$ at the origin.
+
+Write $x_1,\ldots,x_d$ for the affine coordinates on $\mathbb A_k^d$ and
+$[u_1:\cdots:u_d]$ for the homogeneous coordinates on
+$\mathbb P_k^{d-1}$. The blowup of the origin is the closed subscheme
+\[
+\operatorname{Bl}_0(\mathbb A_k^d)
+=
+\left\{
+((x_1,\ldots,x_d),[u_1:\cdots:u_d])
+\ \middle|\
+x_i u_j=x_j u_i\text{ for all }i,j
+\right\}
+\subset \mathbb A_k^d\times_k\mathbb P_k^{d-1}.
+\]
+Over the origin all the $x_i$ vanish, so the displayed equations impose no
+condition on $[u_1:\cdots:u_d]$. Hence the exceptional fiber is
+\[
+\{0\}\times_k\mathbb P_k^{d-1}\cong\mathbb P_k^{d-1}.
+\]
+It is therefore irreducible of dimension $d-1$. The blowup has dimension
+$d$ (for example, each standard chart $u_i\neq0$ has $d$ affine
+coordinates), so the exceptional divisor has codimension $1$.
+\end{proof}
+
+\begin{theorem}[\stackstag{02ND}]\label{theorem:blowup_integral}
+If $X$ is integral and $Z\subsetneq X$ is a proper closed subscheme, then the
+blowup $\operatorname{Bl}_Z(X)$ is integral.
+\end{theorem}

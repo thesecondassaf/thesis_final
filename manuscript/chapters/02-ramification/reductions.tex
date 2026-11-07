@@ -1,0 +1,265 @@
+% !TeX root = ../../../main.tex
+\section{Reduction to Cyclic Torsors on \texorpdfstring{$\bP^1$}{P1}}
+\label{section:reductions_before_cyclic_theories}
+
+Before introducing explicit equations, we explain the strategy of the proof
+and isolate two reductions that simplify the situation. The theorem concerns
+a torsor under an arbitrary finite abelian group on an arbitrary smooth curve,
+whereas the calculation we ultimately wish to perform is local and cyclic. We
+show that both the structure group and the geometry may be simplified without
+changing the ramification problem relevant to the exceptional divisor.
+
+The first reduction is algebraic: using the decomposition of a finite abelian
+group into cyclic factors, together with the compatibility of the
+symmetric-power construction and ramification bounds with products and
+quotients, we reduce the theorem to cyclic groups of order prime to $p$ and
+cyclic groups of order $p^r$. This explains why the three cyclic theories
+recalled in the next section suffice. The second reduction is geometric and
+formal--local: the ramification of the induced torsor at the generic point of
+the exceptional divisor depends only on the restriction of the original
+torsor to the punctured formal neighbourhood of the point supporting the
+modulus. It therefore tells us exactly what the cyclic theories must
+accomplish: realize the resulting local cyclic torsor by an explicit equation
+on $\bG_m \subset \bP^1_k$.
+
+\subsection{Reduction from Finite Abelian Groups to Cyclic Groups}
+
+Fix a single-point submodulus $\ndls$ and write $d=\deg(\ndls)$. The first
+reduction concerns the structure group and is independent of the geometry of
+the curve.
+
+\begin{prop}[Reduction to cyclic groups]
+\label{prop:reduction_to_cyclic_groups}
+Suppose that the conclusion of
+\Cref{theorem:torsors_after_blowup_is_tame} is known whenever the structure
+group is cyclic of order prime to $p$, and whenever the structure group is a
+cyclic $p$-group. Then it holds for every finite abelian group $G$.
+\end{prop}
+
+\begin{proof}
+By the structure theorem for finite abelian groups, choose a decomposition
+\[
+G \cong
+\prod_{i=1}^s \Z/e_i\Z \times \prod_{j=1}^t \Z/p^{r_j}\Z,
+\qquad (e_i,p)=1.
+\]
+Let $\rho:\pi_1^{\text{\'et}}(U,\bar{x})\to G$ be the character
+corresponding to $\cP$. Composing $\rho$ with the projections to the displayed
+cyclic factors gives torsors $\cP_i$ under $\Z/e_i\Z$ and torsors $\cQ_j$
+under $\Z/p^{r_j}\Z$. Since the character of each factor is a quotient of
+$\rho$, the ramification bound on $\cP$ passes to every $\cP_i$ and $\cQ_j$.
+
+The original torsor is recovered as their fiber product over $U$:
+\[
+\cP \cong
+\cP_1 \times_U \cdots \times_U \cP_s
+\times_U \cQ_1 \times_U \cdots \times_U \cQ_t.
+\]
+The construction of the symmetric-power torsor commutes with this product.
+Indeed, after pullback to $U^d$, both sides are obtained by taking the
+contracted product of the $d$ pullbacks along multiplication in the structure
+group. Hence
+\[
+\cP^{[d]} \cong
+\cP_1^{[d]} \times_{U^{(d)}} \cdots \times_{U^{(d)}} \cP_s^{[d]}
+\times_{U^{(d)}} \cQ_1^{[d]} \times_{U^{(d)}} \cdots
+\times_{U^{(d)}} \cQ_t^{[d]}.
+\]
+By the assumed cyclic cases, every factor on the right is tamely ramified at
+$\eta_\ndls$. The fiber product is therefore tamely ramified there by
+\Cref{lemma:ramification_of_fiber_product}. This proves the assertion for
+$G$.
+\end{proof}
+
+\subsection{Formal--Local Reduction from \texorpdfstring{$C$}{C} to \texorpdfstring{$\bP^1$}{P1}}
+
+We argue that it is enough to prove \Cref{theorem:torsors_after_blowup_is_tame} for $C=\bP^1_k$, $\ndls = d \cdot 0$, and $\cP \to \bG_m = \bP^1_k \setminus \{0, \infty\}$ a $G$-torsor given by an explicit global equation.
+Informally, this is because \emph{the ramification of $\cP^{[d]}$ at $\eta_\ndls$ is a formal--local invariant of $\cP$ at $P$}:
+it depends only on the completed local ring $\widehat{\Oo_{C,P}} \cong k[[x]]$ together with the restriction of $\cP$
+to the punctured formal disc $\Spec(k((x)))$, since all of the constructions involved --- self products, quotients by finite
+groups, and blowups --- commute with the flat base change to the completion; for blowups, this is
+\Cref{theorem:blowup_flat_base_change}.
+We emphasize that this is not a general principle that can simply be quoted: it is a statement about the particular
+constructions at hand, and it is proved by checking each construction separately. This is the content of
+\Cref{lemma:formal_local_invariance} and \Cref{cor:reduction_to_P1} below.
+The second ingredient of the reduction is \Cref{lemma:realization_over_Gm}: every local torsor class appearing in
+\Cref{theorem:torsors_after_blowup_is_tame} is realized by an explicit torsor over $\bG_m \subset \bP^1_k$.
+
+Throughout this section we assume that $k$ is algebraically closed; in particular every closed point of $C$ is $k$-rational, and $\ndls = dP$ with $P \in C(k)$ and $d = \deg \ndls$.
+
+\begin{rem*}
+    The assumption that $k$ is algebraically closed is harmless in our situation, for the following reasons.
+    \begin{enumerate}
+        \item \textbf{(Base change to $\bar{k}$.)} Assume $k$ is perfect, so that $\bar{k}=k^{sep}$.
+        The formation of $C^{(d)}$ (a quotient by a finite group), of the blowup $X_\ndls$ at $\ndls$, and of
+        $\cP^{[d]}$ (\Cref{prop:symmetric_power_semidirect_quotient}) commutes with the flat base change $\Spec(\bar{k}) \to \Spec(k)$.
+        Since $E_\ndls \cong \bP^{\deg \ndls - 1}_k$ is geometrically irreducible, $(E_\ndls)_{\bar{k}}$ is irreducible
+        and its generic point $\bar{\eta}$ lies over $\eta_\ndls$; moreover
+        $\Oo_{X_\ndls, \eta_\ndls} \to \Oo_{(X_\ndls)_{\bar{k}}, \bar{\eta}}$ is a weakly unramified extension of discrete
+        valuation rings with separable residue field extension. Therefore, by
+        \Cref{lemma:weakly_unramified_base_change},
+        $(\cP_{\bar{k}})^{[d]}=(\cP^{[d]})_{\bar{k}}$ is unramified
+        (resp.\ tamely ramified) at $\bar{\eta}$ if and only if
+        $\cP^{[d]}$ is unramified (resp.\ tamely ramified) at $\eta_\ndls$.
+        Thus both properties may be checked after base change to $\bar{k}$.
+        \item \textbf{(Rationality of $P$ --- a caveat.)} If $P$ is a closed point with $\kappa(P) \neq k$, then after base
+        change to $\bar{k}$ the point $\ndls$ corresponds to the divisor $\sum_{\bar{P} \mapsto P} n \bar{P}$ on
+        $C_{\bar{k}}$, whose support consists of $[\kappa(P):k]$ distinct points, whereas the computation below treats a
+        modulus supported at a single rational point.
+        We apply \Cref{theorem:torsors_after_blowup_is_tame} after base
+        change to $\bar{k}$. In the proof of
+        \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}, the modulus
+        then decomposes into summands supported at rational points. We apply
+        the single-point theorem to each summand and combine the results
+        using \Cref{cor:moduli-reduction}, before descending tameness back
+        to $k$.
+    \end{enumerate}
+\end{rem*}
+
+We now formulate the formal--local invariance precisely. Fix $P \in C(k)$ lying in the support of $\mdls$, set $\ndls = dP$,
+and fix a uniformizer $x$ of $\Oo_{C,P}$; it induces an isomorphism $\widehat{\Oo_{C,P}} \cong k[[x]]$.
+The scheme $\Spec(k[[x]])$ has two points --- the closed point, mapping to $P$, and the generic point, mapping to the generic
+point of $C$ --- so the punctured formal disc $\Spec(k((x)))$ maps to $U$, and we denote by
+$$\cP_x := \cP \times_U \Spec(k((x)))$$
+the corresponding restriction of $\cP$; it is a $G$-torsor over $\Spec(k((x)))$.
+Let $e_1, \dots, e_d \in k[[x_1, \dots, x_d]]$ be the elementary symmetric polynomials in $x_1, \dots, x_d$, and set
+$$ V = \Spec\left(k[[e_1, \dots, e_d]][e_d^{-1}]\right), \qquad W = \Spec\left(k[[x_1, \dots, x_d]][(x_1 \cdots x_d)^{-1}]\right).$$
+The inclusion $k[[e_1, \dots, e_d]] \subset k[[x_1, \dots, x_d]]$ induces a finite flat morphism $\hat{r}: W \to V$
+(note that inverting $e_d = x_1 \cdots x_d$ inverts each $x_i$), and for each $i$ we let
+$$ q_i : W \to \Spec(k((x))), \qquad x \mapsto x_i.$$
+The group $S_d$ acts on $W$ over $V$ by permuting $x_1, \dots, x_d$, and $q_{\sigma(i)} = q_i \circ \sigma$.
+Recall from \Cref{prop:symmetric_power_semidirect_quotient} that
+\[
+K_G:=\ker\bigl(G^d\xrightarrow{\,m\,}G\bigr),
+\qquad
+\Xi_G:=K_G\rtimes S_d,
+\]
+where $m(g_1,\dots,g_d)=g_1\cdots g_d$ and $S_d$ acts on $K_G$ by
+permuting coordinates. Thus quotienting by $\Xi_G$ means first contracting
+the $G^d$-torsor along multiplication, by quotienting by $K_G$, and then
+descending from the ordered product to the symmetric product by quotienting
+by $S_d$.
+
+\begin{lemma}[Formal--local invariance]\label{lemma:formal_local_invariance}
+    In the above notation:
+    \begin{enumerate}
+        \item The choice of $x$ induces an isomorphism $\widehat{\Oo_{C^{(d)}, \ndls}} \cong k[[e_1, \dots, e_d]]$ carrying
+        the maximal ideal to $(e_1, \dots, e_d)$, such that the induced morphism $c: \Spec(k[[e_1, \dots, e_d]]) \to C^{(d)}$
+        is flat and satisfies $c^{-1}(U^{(d)}) = V$; we write $c_V : V \to U^{(d)}$ for the restriction.
+        \item There is an induced isomorphism $\widehat{\Oo_{X_\ndls, \eta_\ndls}} \cong \kappa[[e_d]]$, where
+        $\kappa = k(\frac{e_1}{e_d}, \dots, \frac{e_{d-1}}{e_d})$. In particular
+        $\widehat{K}_{\eta_\ndls} := \Frac(\widehat{\Oo_{X_\ndls, \eta_\ndls}}) \cong \kappa((e_d))$, and the canonical
+        morphism $\Spec(\widehat{K}_{\eta_\ndls}) \to U^{(d)}$ factors as
+        $\Spec(\kappa((e_d))) \to V \xrightarrow{c_V} U^{(d)}$, where the first map does not depend on $(C, \cP)$.
+        \item There is a canonical isomorphism of $G$-torsors over $V$
+        $$ \cP^{[d]} \times_{U^{(d)}} V \;\cong\; \Xi_G \backslash \left( q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x \right).$$
+    \end{enumerate}
+    Consequently, the isomorphism class of the $G$-torsor
+    $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_\ndls})}$ depends only on $d$ and on
+    the isomorphism class of the $G$-torsor $\cP_x$ over $k((x))$, and not
+    otherwise on the pair $(C,\cP)$. In particular, whether $\cP^{[d]}$ is
+    tamely ramified or unramified at $\eta_\ndls$ depends only on
+    $(\cP_x,d)$.
+\end{lemma}
+
+\begin{proof}
+    \textbf{(1)} The chosen parameter gives
+    $\widehat{\Oo_{C^d,(P,\dots,P)}}\cong k[[x_1,\dots,x_d]]$.
+    We use the standard facts that completion is compatible with finite
+    morphisms and that the completed local ring of a finite quotient is the
+    invariant ring of the completed local ring.  Since $(P,\dots,P)$ is the
+    unique point of $C^d$ above $dP$, this gives
+    \[
+        \widehat{\Oo_{C^{(d)},dP}}
+        \cong k[[x_1,\dots,x_d]]^{S_d}
+        =k[[e_1,\dots,e_d]],
+    \]
+    where the last equality is the formal-power-series version of the
+    fundamental theorem of symmetric functions.  The maximal ideal is thus
+    $(e_1,\dots,e_d)$, and the resulting map $c$ is flat by flatness of
+    completion.
+
+    It remains only to identify the boundary.  Near $dP$, the only component
+    of $C^{(d)}\setminus U^{(d)}$ that occurs is the locus of divisors
+    containing $P$.  Its inverse image in the ordered formal neighbourhood is
+    \[
+        \bigcup_i V(x_i)=V(x_1\cdots x_d)=V(e_d).
+    \]
+    Since the ordered-to-symmetric map is finite and surjective, the boundary
+    in $\Spec k[[e_1,\dots,e_d]]$ is also $V(e_d)$.  Hence
+    $c^{-1}(U^{(d)})=V$ (and similarly the corresponding ordered inverse image
+    is $W$).
+
+    \textbf{(2)} We use that blowups commute with flat base change.  Thus the
+    pullback of $X_\ndls$ along $c$ is the blowup of
+    $\Spec k[[e_1,\dots,e_d]]$ at its closed point.  Completion preserves the
+    exceptional divisor and its residue field, so it is enough to compute the
+    completed local ring at the generic point of the exceptional divisor in
+    this standard blowup.
+
+    On the chart where $e_d$ is the exceptional parameter, put
+    $t_i=e_i/e_d$ for $i<d$.  The exceptional divisor is given by $e_d=0$,
+    and its generic point has residue field
+    \[
+        \kappa=k(t_1,\dots,t_{d-1})
+        =k\left(\frac{e_1}{e_d},\dots,\frac{e_{d-1}}{e_d}\right).
+    \]
+    The usual local calculation for the blowup of a regular local scheme at
+    its closed point therefore gives
+    $\widehat{\Oo_{X_\ndls,\eta_\ndls}}\cong\kappa[[e_d]]$ and
+    $\widehat K_{\eta_\ndls}\cong\kappa((e_d))$.  Since $e_d$ is invertible
+    in the latter field, its map to the completed symmetric power factors
+    through $V$, giving the asserted factorization through $c_V$.
+
+    \textbf{(3)} Let $h : \cP^{\times_k d} \to U^{(d)}$ denote the canonical morphism; it is finite, being the composition
+    of the finite étale morphism $\cP^{\times_k d} \to U^d$ with the finite morphism $U^d \to U^{(d)}$. By
+    \Cref{prop:symmetric_power_semidirect_quotient},
+    $\cP^{[d]} = \Xi_G \backslash \cP^{\times_k d} = \underline{\Spec}_{U^{(d)}}\left((h_* \Oo_{\cP^{\times_k d}})^{\Xi_G}\right)$.
+    Pushforward along the affine morphism $h$ commutes with the flat base change $c_V : V \to U^{(d)}$, and the formation of
+    $\Xi_G$-invariants is a kernel, hence also commutes with flat base change; therefore
+    $$ \cP^{[d]} \times_{U^{(d)}} V \cong \Xi_G \backslash \left(\cP^{\times_k d} \times_{U^{(d)}} V\right).$$
+    Completing the finite map $C^d\to C^{(d)}$ at the unique point
+    $(P,\dots,P)$ above $dP$ gives the Cartesian square defined by
+    $k[[e_1,\dots,e_d]]\subset k[[x_1,\dots,x_d]]$.  Restricting this square
+    to $e_d=x_1\cdots x_d\ne0$ gives directly
+    $U^d\times_{U^{(d)}}V\cong W$, and hence
+    $\cP^{\times_k d}\times_{U^{(d)}}V
+      \cong\cP^{\times_k d}\times_{U^d}W$.
+
+    The $i$-th component of the resulting map $W\to U^d$ is
+    $W\xrightarrow{q_i}\Spec(k((x)))\to U$: indeed, it is induced in
+    coordinates by $x\mapsto x_i$, and $x_i$ is invertible on $W$.
+    Since
+    $\cP^{\times_k d}=p_1^{-1}\cP\times_{U^d}\cdots\times_{U^d}p_d^{-1}\cP$,
+    compatibility of fiber products with base change now gives
+    $$ \cP^{\times_k d} \times_{U^d} W \cong q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x, $$
+    which is equivariant for the actions of $G^d$ (in particular of $\KG$) and of $S_d$ --- the latter acting on $W$ by
+    permuting the $x_i$, compatibly with $q_{\sigma(i)} = q_i \circ \sigma$. Passing to $\Xi_G$-quotients yields the displayed
+    isomorphism.
+
+    For the final statement: the schemes $V$ and $W$, the maps $q_i$ and $\hat{r}$, the $\Xi_G$-action, and the point
+    $\Spec(\kappa((e_d))) \to V$ of (2) are all constructed from $d$ alone; by (3), the torsor
+    $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_\ndls})}$ is the pullback along $\Spec(\kappa((e_d))) \to V$ of a torsor constructed
+    from $\cP_x$ and these data. Since tame ramification and unramifiedness at
+    $\eta_\ndls$ are, by definition, determined by this restricted torsor
+    together with the discrete valuation ring $\kappa[[e_d]]$
+    (\Cref{definition:tamely_ramified_in_codim_1}), both properties depend only
+    on $(\cP_x,d)$.
+\end{proof}
+
+\begin{cor}[Reduction to $\bP^1$]\label{cor:reduction_to_P1}
+    Let $C, C'$ be smooth projective geometrically connected curves over the algebraically closed field $k$, let
+    $\cP \to U = C \setminus \mdls$ and $\cP' \to U' = C' \setminus \mdls'$ be $G$-torsors, let
+    $P \in \mathrm{Supp}(\mdls)(k)$ and $P' \in \mathrm{Supp}(\mdls')(k)$, and let $x, x'$ be uniformizers at $P, P'$
+    respectively. Assume that $\cP_x \cong \cP'_{x'}$ as $G$-torsors, compatibly with the isomorphism
+    $k((x)) \cong k((x'))$, $x \mapsto x'$.
+    Then, for every $d\geq1$, $\cP^{[d]}$ is unramified
+    (resp.\ tamely ramified) at $\eta_{dP}$ if and only if
+    $\cP'^{[d]}$ is unramified (resp.\ tamely ramified) at $\eta_{dP'}$.
+\end{cor}
+\begin{proof}
+    Immediate from \Cref{lemma:formal_local_invariance}: both $\cP^{[d]}|_{\Spec(\widehat{K}_{\eta_{dP}})}$ and
+    $\cP'^{[d]}|_{\Spec(\widehat{K}_{\eta_{dP'}})}$ are identified, compatibly with the discrete valuation ring
+    $\kappa[[e_d]]$, with the pullback along $\Spec(\kappa((e_d))) \to V$ of
+    $\Xi_G \backslash (q_1^{-1}\cP_x \times_W \cdots \times_W q_d^{-1}\cP_x)$.
+\end{proof}

@@ -1,0 +1,77 @@
+% !TeX root = ../../../main.tex
+\section{Kummer and Artin--Schreier theory}
+\label{appendix:kummer_and_as_proofs}
+
+Let $K$ be a complete discretely valued field with residue characteristic
+$p>0$.
+
+\paragraph{Kummer.}
+
+Assume that $(e,p)=1$ and that $K$ contains $\mu_e$. Hilbert~90 gives
+\[
+H^1_{\mathrm{\acute et}}(\Spec K,\bG_m)=0.
+\]
+The long exact sequence associated with the Kummer sequence therefore
+identifies
+\[
+K^\times/(K^\times)^e
+\xrightarrow{\sim}
+H^1_{\mathrm{\acute et}}(\Spec K,\mu_e).
+\]
+By the connecting-map construction in
+\Cref{appendix:common_group_scheme_construction}, the class of $a$ maps to
+the torsor $T^e=a$. This proves the classification recalled in
+\Cref{section:cyclic_extension_theories}.
+
+\paragraph{Artin--Schreier.}
+
+Assume that $K$ has characteristic $p$, and put $\wp(z)=z^p-z$.
+Additive Hilbert~90 gives
+\[
+H^1_{\mathrm{\acute et}}(\Spec K,\bG_a)=0.
+\]
+The long exact sequence associated with the Artin--Schreier sequence therefore
+identifies
+\[
+K/\wp(K)
+\xrightarrow{\sim}
+H^1_{\mathrm{\acute et}}(\Spec K,\Z/p\Z).
+\]
+By the connecting-map construction in
+\Cref{appendix:common_group_scheme_construction}, the class of $a$ maps to
+the torsor $X^p-X=a$. This proves the classification recalled in
+\Cref{section:cyclic_extension_theories}.
+
+\begin{lemma}[Classical cyclic equations are \'etale torsors]
+\label{lemma:classical_cyclic_equations_etale_torsors}
+Let $A$ be a ring.
+\begin{enumerate}[label=(\roman*)]
+    \item If $n$ is invertible in $A$ and $a\in A^\times$, then
+    \[
+    A[T]/(T^n-a)
+    \]
+    is finite free over $A$, with basis $1,T,\dots,T^{n-1}$, and is
+    \'etale over $A$. Multiplication on the $T$-coordinate makes its
+    spectrum a representable $\mu_{n,\Spec A}$-torsor over $\Spec A$ for
+    the \'etale topology.
+    \item If $A$ is an $\F_p$-algebra and $a\in A$, then
+    \[
+    A[X]/(X^p-X-a)
+    \]
+    is finite free over $A$, with basis $1,X,\dots,X^{p-1}$, and is
+    \'etale over $A$. Translation on the $X$-coordinate makes its spectrum
+    a representable $(\Z/p\Z)_{\Spec A}$-torsor over $\Spec A$ for the
+    \'etale topology.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Both defining polynomials are monic, giving the stated bases and finite
+freeness. In the Kummer algebra, $T$ is a unit because $T^n=a\in A^\times$;
+therefore the derivative $nT^{n-1}$ is a unit. The derivative of
+$X^p-X-a$ is $-1$. Thus both algebras are \'etale over $A$. They are the
+pullbacks from Appendix~A.1 of $(-)^n:\bG_m\to\bG_m$ and
+$\wp:\bG_a\to\bG_a$, respectively, so translation by the corresponding
+kernels $\mu_n$ and $\F_p\cong\Z/p\Z$ gives the asserted torsor structures.
+\end{proof}
+

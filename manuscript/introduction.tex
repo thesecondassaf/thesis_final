@@ -1,0 +1,127 @@
+% !TeX root = ../main.tex
+In this thesis, we give a direct proof of a key ramification result in Deligne's approach to geometric class field theory for curves.
+
+Let $k$ be a perfect field, let $C$ be a smooth, projective, geometrically connected curve over $k$, of genus $g$, and let $\mdls=\sum_i n_iP_i$ be an effective divisor on $C$, called a modulus. Set $U=C\setminus\mdls$.
+Write $\PicCm$ for the rigidified Picard scheme, which parametrizes pairs $(\cL,\alpha)$ consisting of a line bundle $\cL$ on $C$ and a trivialization $\alpha:\cO_\mdls\xrightarrow{\sim}\cL|_\mdls$. We write $\PicCm[d]$ for its degree-$d$ component.
+
+Geometric class field theory asserts that every rank-one local system $\cF$ on $U$ whose ramification is bounded by $\mdls$ arises uniquely as the pullback of a multiplicative rank-one local system along the Abel--Jacobi morphism
+\[
+\Phi:U\longrightarrow\PicCm,
+\qquad x\longmapsto(\cO_C(x),1).
+\]
+For $d\geq1$, write $U^{(d)}$ for the $d$-th symmetric power of $U$ and $\cF^{[d]}$ for the corresponding symmetric power of $\cF$.
+A central step in Deligne's approach is to show that, for all sufficiently large $d$, $\cF^{[d]}$ descends along the degree-$d$ Abel--Jacobi morphism
+\[
+\Phi_d:U^{(d)}\longrightarrow\PicCm[d],
+\qquad D\longmapsto(\cO_C(D),1).
+\]
+
+The geometric-fibers of $\Phi_d$ (for $d \geq \deg \mdls +  2g - 1$) over any point are isomorphic to 
+$$
+\begin{cases}
+\mathbb{A}_{k^{sep}}^{d - \deg \mdls - g + 1} & \text{if } \mdls > 0 \\
+\mathbb{P}_{k^{sep}}^{d - g} & \text{if } \mdls = 0
+\end{cases}
+$$
+
+The unramified case ($\mdls = 0$) is relatively simple, as the Abel-Jacobi map is proper, surjective with geometrically connected fibers, which follows from the fact that it is a fibration in projective spaces.
+Thus, by using the homotopy exact sequence for the \'etale fundamental group,
+one gets an isomorphism between the \'etale fundamental group of $U^{(d)} (=C^{(d)})$ and that of $\PicCm[d] (=\PicC[d])$.
+
+The ramified case ($\mdls > 0$) is more subtle, as the Abel-Jacobi map is not proper anymore, and one needs to analyze the ramification of $\cF^{[d]}$ "along the boundary" of $U^{(d)}$ in $C^{(d)}$.
+
+Previous work has generalized Deligne's approach to the ramified case, 
+most notably by Guignard \cite{Guignard2018} and Takeuchi \cite{takeuchi2018blow}.
+Their approaches differ. 
+To descend, Guignard proves that the restriction of $\cF^{[d]}$ to any line in the fiber of the degree $d$ Abel-Jacobi map is a constant 
+étale sheaf. He achieves this by demonstrating that the restriction is at most tamely ramified and invoking the triviality of the tame fundamental group 
+of $\mathbb{A}^1_k$. His analysis relies on local geometric class field theory. 
+It is also worth noting that Guignard's method generalizes to relative curves over arbitrary base schemes.
+Takeuchi, on the other hand, constructs a compactification of $U^{(d)}$ by blowing up $C^{(d)}$ along certain well-chosen centers.
+This compactification, denoted by $\tilde{C}^{(d)}_\mdls$, has $U^{(d)}$ as an open subscheme with a codimension 1 closed subscheme $H$ as complement. 
+He then shows that the Abel-Jacobi map extends to a proper morphism from $\tilde{C}^{(d)}_\mdls$ to $\PicCm[d]$,
+which is a fibration in projective spaces. Thus, by the homotopy exact sequence for the \'etale fundamental group, one gets an isomorphism between the \'etale fundamental group of
+$\tilde{C}^{(d)}_\mdls$ and that of $\PicCm[d]$. To conclude the descent, Takeuchi analyzes the ramification of $\cF^{[d]}$ along the boundary
+$H=\tilde{C}^{(d)}_\mdls \setminus U^{(d)}$ of $U^{(d)}$ in $\tilde{C}^{(d)}_\mdls$,
+showing that it is tamely ramified there, which suffices. His method relies on the theory of refined Swan conductors.
+% \textcolor{red}{[incorporate \cite{Rabinoff2014Witt} here]}.
+
+For an account of these approaches, see \cite{Guignard2018} and \cite{takeuchi2018blow}.
+For a full approach following Deligne's method in the unramified case, and the tamely ramified case see \cite{tendler2015geometricclassfieldtheory}, and \cite{Toth2011}.
+
+\textit{In this thesis}, we take a more elementary approach and calculate the ramification of $\cF^{[d]}$ at the generic point of $H$ directly, using explicit ramification theory rather than refined Swan conductors.
+We first reduce the problem to cyclic torsors. We then treat cyclic groups of order prime to the characteristic using Kummer theory and, in characteristic $p>0$, cyclic groups of order $p$ and $p^r$, with $r\geq2$, using Artin--Schreier and Artin--Schreier--Witt theory, respectively.
+These descriptions provide explicit local equations, which allow us to analyze the relevant valuations after blowing up and prove that the ramification is at most tame.
+To prove geometric class field theory for curves, 
+we utilize Takeuchi's construction of the compactification $\tilde{C}^{(d)}_\mdls$ 
+of $U^{(d)}$ via the blowing up of $C^{(d)}$.
+
+We now state the results precisely, beginning with geometric class field theory.
+\begin{theorem}[Geometric Class Field Theory]\label{thm:GCFT}
+    Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U$, with ramification bounded by $\mdls$. 
+    Then, there exists a unique (up to isomorphism) 
+    multiplicative\footnote{Here multiplicative means that the local system is equipped with an isomorphism compatible with the group law on $\PicCm$, satisfying the usual associativity and unit conditions; see \cite{Guignard2018}.} 
+\'etale sheaf of $\Lambda$-modules $\cG$ on $\PicCm$, locally free of rank 1, such that the pullback of $\cG$ by $\Phi$ is isomorphic to $\cF$.
+\end{theorem}
+
+A standard symmetric-power argument\footnote{See \cite[\S5.10]{Guignard2018}, \cite[\S8.3]{tendler2015geometricclassfieldtheory}, or the proof of Theorem 1.2 in \cite{takeuchi2018blow} for details on this reduction.} reduces \Cref{thm:GCFT} to the following problem: for every sufficiently large $d$, construct a rank-one local system $\cG_d$ on $\PicCm[d]$ whose pullback along $\Phi_d$ is isomorphic to $\cF^{[d]}$.
+In our setting, pullback along $\Phi_d$ is fully faithful, so any such local system is automatically unique up to isomorphism.
+Moreover, the canonical compatibility of the symmetric powers $\cF^{[d]}$ under the addition of effective divisors descends uniquely to the family $\{\cG_d\}$.
+The resulting multiplicative family determines the multiplicative local system on $\PicCm$ appearing in \Cref{thm:GCFT}.
+Consequently, it suffices to prove the following reduced statement:
+
+\begin{restatable}{theorem}{GCFT_reduced}\label{thm:GCFT_reduced}
+    Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls$. 
+    Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) \'etale sheaf of $\Lambda$-modules $\cG_d$ on $\PicCm[d]$, locally free of rank 1, such that the pullback of $\cG_d$ by $\Phi_d$ is isomorphic to $\cF^{[d]}$.
+\end{restatable}
+
+% Using the equivilance between $G$-torsors and locally free $\Lambda$-modules of rank 1 ($G=\Lambda^\times$, 
+% see \Cref{prop:torsor_module_equivalence}), \Cref{thm:GCFT_reduced} can be reformulated in terms of $G$-torsors as follows:
+
+% \begin{restatable}{theorem}{GCFTtorsors} \label{thm:GCFT_torsors}
+%     Let $G=\Lambda^\times$ be a finite abelian group ($\Lambda$ as before), and let $\cP$ be a $G$-torsor on $U$, with ramification bounded by $\mdls$. 
+%     Then, for sufficiently large integer $d$, there exists a unique (up to isomorphism) $G$-torsor $\cQ_d$ on $\PicCm[d]$, such that the pullback of $\cQ_d$ by $\Phi_d$ is isomorphic to $\cP^{[d]}$.
+% \end{restatable}
+
+% To prove \Cref{thm:GCFT_torsors} we follow the work of \cite{takeuchi2018blow}, there he analyzed
+% the ramification of $\cP^{[d]}$ after blowing up $C^{(d)}$, we analyze this ramification using elementary methods, drawing techniques and ideas
+% from the works of \cite{Guignard2018} and \cite{takeuchi2018blow}, and \cite{tendler2015geometricclassfieldtheory}.
+
+The main technical input in the proof of \Cref{thm:GCFT_reduced} is the following local ramification theorem:
+
+\begin{restatable}{theorem}{SymmetricPowerOfSheavesIsTamelyRamifiedReduction}\label{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}
+     Assume that $k$ is algebraically closed.
+     Let $\Lambda$ be a finite commutative ring of cardinality invertible in $k$, and let $\cF$ be an \'etale sheaf of $\Lambda$-modules, locally free of rank 1 on $U_{\text{\'et}}$, with ramification bounded by $\mdls = \sum n_i P_i$. 
+     Let $\ndls = n_i P_i \subset \mdls$ be a single-point submodulus of $\mdls$.
+     Then $\cF^{[\deg \ndls]}$ is tamely ramified at the generic point $\eta_\ndls$ of the exceptional divisor $E_\ndls$ 
+     of the blowup $X_{\ndls}$ of $C^{(\deg \ndls)}$ at the closed point $\ndls$.
+\end{restatable}
+
+As a final methodological note, for convenience we carry out the ramification calculations in the language of $G$-torsors, with $G=\Lambda^\times$, rather than rank-one local systems.
+By \Cref{prop:torsor_module_equivalence}, the two formulations are equivalent, and the results translate directly between them.
+
+The thesis is organized as follows:
+
+\begin{description}
+    \item[Chapter 1 - General Preliminaries] establishes the equivalence between rank-one local systems and $G=\Lambda^\times$-torsors and develops the torsor operations, finite \'etale covers, and symmetric-power constructions used throughout the thesis. It also collects the basic geometric facts about symmetric powers and blowups needed in the subsequent ramification calculations.
+    \item[Chapter 2 - Ramification After Blowup Is Tame] proves \Cref{theorem:SymmetricPowerOfSheavesIsTamelyRamifiedReduction}. After recalling the necessary ramification theory for discrete valuations and finite abelian torsors, it reduces the problem to cyclic torsors on $\mathbb P^1$ and treats the Kummer, Artin--Schreier, and Artin--Schreier--Witt cases through explicit calculations at the exceptional divisor.
+    \item[Chapter 3 - Geometric Class Field Theory] deduces \Cref{thm:GCFT_reduced} from the ramification theorem proved in Chapter~2. It recalls the rigidified Picard scheme and the Abel--Jacobi morphism, introduces Takeuchi's compactification, and combines the single-point calculations to establish tameness along the full boundary $H$. It then extends $\cF^{[d]}$ across the boundary and descends the resulting local system to $\PicCm[d]$.
+    \item[Appendix A] \emph{Cyclic Torsor Theories and Witt Vectors} collects the group-scheme constructions, classification results, normal forms, and proofs supporting the three cyclic ramification theories used in Chapter~2.
+    \item[Appendix B] \emph{A Failure of an Artin--Schreier Induction Strategy} examines a tempting attempt to deduce the cyclic $p$-power calculation inductively from the degree-$p$ Artin--Schreier case, and explains how wild base change obstructs that argument.
+\end{description}
+
+\noindent \textbf{Acknowledgements}. First and foremost, I would like to express my sincere gratitude to Professor Yakov Varshavsky for introducing me to this subject, and for his mentoring, invaluable guidance, insightful meetings, and patience throughout this process.
+Secondly, I am also deeply grateful to my family for their support throughout my studies, and to my friends who motivated me to complete this work.
+Finally, I would like to express my gratitude to all the individuals without whom this work would not have been possible. This includes colleagues, researchers, as well as the broader global community of individuals whose passion and dedication drive us all forward.
+
+\noindent \textbf{Use of Artificial Intelligence}. In preparing this thesis, I used AI-assisted tools including Codex with GPT-5.6 Sol and GPT-6.1 Sol, Claude Code with Claude Opus 4.8, Claude Opus 5.5, and Claude Fable, and Google Gemini with Gemini 3.1 Pro. These tools assisted with phrasing, editing, restructuring, drafting portions of the exposition, and formulating mathematical statements and arguments. They also assisted in developing and checking parts of proofs, particularly the Artin--Schreier--Witt calculation for cyclic groups of order $p^r$, as well as several particular cases in Kummer and Artin--Schreier theory that were independently verified by hand. More broadly, these tools supported the organization and completion of the thesis as a whole. Every AI-generated suggestion or draft incorporated into the thesis was fully reviewed and mathematically checked by the author, revised where necessary, and adapted to the notation, presentation, and style of the thesis. No AI-generated material was accepted without human verification, and the author assumes full responsibility for all mathematical and expository content.
+
+% \textbf{Notation and conventions}. 
+
+% \begin{itemize}
+%     \item $S$ is a base scheme.    
+%     \item $C \to S$ is a relative curve. i.e. smooth morphism of schemes of relative dimension 1, with connected geometric fibers of genus $g$, which is Zariski-locally projective over $S$. 
+%     Note that the genus $g$ is a locally cosntant function on $S$. 
+%     \item Most of the time we will assume that $S=\Spec k$, where $k$ is a perfect field.
+%     \item A modulus $\mdls$ on $C \to S$, is defined as an effective Cartier divisor of $C$ over $S$ (i.e., a closed subscheme of $C$ which is finite flat of finite presentation (hence locally free) over $S$).
+% \end{itemize}

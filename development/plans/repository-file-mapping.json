@@ -1,0 +1,1046 @@
+{
+  "includes.tex": [
+    "manuscript/preamble/packages.tex"
+  ],
+  "MacrosAndFigures.tex": [
+    "manuscript/preamble/macros-and-figures.tex"
+  ],
+  "Bib.bib": [
+    "manuscript/bibliography/references.bib"
+  ],
+  "sections/Introduction.tex": [
+    "manuscript/introduction.tex"
+  ],
+  "sections/Preliminaries/LocalRamificationPreliminaries.tex": [
+    "manuscript/chapters/02-ramification/discrete-valuations.tex"
+  ],
+  "sections/Preliminaries/GTorsorRamification.tex": [
+    "manuscript/chapters/02-ramification/torsor-ramification.tex"
+  ],
+  "sections/Preliminaries/ReductionsBeforeCyclicTheories.tex": [
+    "manuscript/chapters/02-ramification/reductions.tex"
+  ],
+  "sections/Preliminaries/CyclicRamificationTheories.tex": [
+    "manuscript/chapters/02-ramification/cyclic-theories.tex"
+  ],
+  "sections/RamificationAfterBlowupIsTame.tex": [
+    "manuscript/chapters/02-ramification/exceptional-divisor-calculation.tex"
+  ],
+  "sections/RamificationAfterBlowupPPower.tex": [
+    "manuscript/chapters/02-ramification/p-power-case.tex"
+  ],
+  "witt/WittVectorPrerequisites.tex": [
+    "manuscript/appendices/A-cyclic-theories/artin-schreier-witt.tex"
+  ],
+  "sections/Preliminaries/GeneralPreliminaries.tex": [
+    "manuscript/chapters/01-preliminaries/chapter.tex",
+    "manuscript/chapters/01-preliminaries/torsors-and-local-systems.tex",
+    "manuscript/chapters/01-preliminaries/etale-covers-and-quotients.tex",
+    "manuscript/chapters/01-preliminaries/symmetric-powers.tex",
+    "manuscript/chapters/01-preliminaries/geometric-lemmas.tex"
+  ],
+  "sections/RamificationAfterBlowupIntroduction.tex": [
+    "manuscript/chapters/02-ramification/chapter.tex"
+  ],
+  "chapter3_reorganized_codex/chapter3_reorganized_codex.tex": [
+    "manuscript/chapters/03-geometric-class-field-theory/chapter.tex",
+    "manuscript/chapters/03-geometric-class-field-theory/picard-and-abel-jacobi.tex",
+    "manuscript/chapters/03-geometric-class-field-theory/compactification.tex",
+    "manuscript/chapters/03-geometric-class-field-theory/boundary-tameness.tex",
+    "manuscript/chapters/03-geometric-class-field-theory/extension.tex",
+    "manuscript/chapters/03-geometric-class-field-theory/descent.tex"
+  ],
+  "witt/WittVectorAlgebraAppendix.tex": [
+    "manuscript/appendices/A-cyclic-theories/appendix.tex",
+    "manuscript/appendices/A-cyclic-theories/group-scheme-construction.tex",
+    "manuscript/appendices/A-cyclic-theories/classical-theories.tex",
+    "manuscript/appendices/A-cyclic-theories/witt-algebra.tex",
+    "manuscript/appendices/A-cyclic-theories/weighted-witt-addition.tex"
+  ],
+  "a_wrong_path/a_wrong_path.tex": [
+    "manuscript/appendices/B-failed-induction/appendix.tex",
+    "manuscript/appendices/B-failed-induction/attempted-induction.tex",
+    "manuscript/appendices/B-failed-induction/valuation-obstruction.tex"
+  ],
+  "main.tex": [
+    "main.tex"
+  ],
+  "main.synctex.gz": [
+    "development/build/previous-main/main.synctex.gz"
+  ],
+  "main.bbl": [
+    "development/build/previous-main/main.bbl"
+  ],
+  "main.pdf": [
+    "main.pdf"
+  ],
+  "main.bbl-SAVE-ERROR": [
+    "development/build/saved-errors/main.bbl-SAVE-ERROR"
+  ],
+  "main.toc": [
+    "development/build/previous-main/main.toc"
+  ],
+  "main.bcf": [
+    "development/build/previous-main/main.bcf"
+  ],
+  "main.out": [
+    "development/build/previous-main/main.out"
+  ],
+  "includes.fls": [
+    "development/build/previous-main/includes.fls"
+  ],
+  "draft 1.pdf": [
+    "development/renders/draft 1.pdf"
+  ],
+  "REVIEW_SUGGESTIONS.md": [
+    "development/reviews/REVIEW_SUGGESTIONS.md"
+  ],
+  "main.fdb_latexmk": [
+    "development/build/previous-main/main.fdb_latexmk"
+  ],
+  "includes.fdb_latexmk": [
+    "development/build/previous-main/includes.fdb_latexmk"
+  ],
+  "AGENTS.md": [
+    "AGENTS.md"
+  ],
+  "main.bcf-SAVE-ERROR": [
+    "development/build/saved-errors/main.bcf-SAVE-ERROR"
+  ],
+  "REVIEW_PROGRESS.md": [
+    "development/reviews/REVIEW_PROGRESS.md"
+  ],
+  "main.aux": [
+    "development/build/previous-main/main.aux"
+  ],
+  "main.log": [
+    "development/build/previous-main/main.log"
+  ],
+  "main.fls": [
+    "development/build/previous-main/main.fls"
+  ],
+  "main.run.xml": [
+    "development/build/previous-main/main.run.xml"
+  ],
+  "main.blg": [
+    "development/build/previous-main/main.blg"
+  ],
+  "proof_completes/proof_complete.tex": [
+    "development/experiments/proof_completes/proof_complete.tex"
+  ],
+  "proof_completes/proof_complete copy.tex": [
+    "development/experiments/proof_completes/proof_complete copy.tex"
+  ],
+  "proof_completes/qwn_atm_1.tex": [
+    "development/experiments/proof_completes/qwn_atm_1.tex"
+  ],
+  "proof_completes/proof_complete_try.pdf": [
+    "development/experiments/proof_completes/proof_complete_try.pdf"
+  ],
+  "inertia_symmetry_obstruction/inertia_symmetry_obstruction.tex": [
+    "development/experiments/inertia_symmetry_obstruction/inertia_symmetry_obstruction.tex"
+  ],
+  "inertia_symmetry_obstruction/inertia_symmetry_obstruction.pdf": [
+    "development/experiments/inertia_symmetry_obstruction/inertia_symmetry_obstruction.pdf"
+  ],
+  "inertia_symmetry_obstruction/inertia_symmetry_obstruction.bbl": [
+    "development/experiments/inertia_symmetry_obstruction/inertia_symmetry_obstruction.bbl"
+  ],
+  "tendler_extension_standalone_codex/tendler_extension_standalone.out": [
+    "development/experiments/tendler_extension_standalone_codex/tendler_extension_standalone.out"
+  ],
+  "tendler_extension_standalone_codex/tendler_extension_standalone.tex": [
+    "development/experiments/tendler_extension_standalone_codex/tendler_extension_standalone.tex"
+  ],
+  "tendler_extension_standalone_codex/tendler_extension_standalone.pdf": [
+    "development/experiments/tendler_extension_standalone_codex/tendler_extension_standalone.pdf"
+  ],
+  "tendler_extension_standalone_codex/tendler_extension_standalone.fls": [
+    "development/experiments/tendler_extension_standalone_codex/tendler_extension_standalone.fls"
+  ],
+  "tendler_extension_standalone_codex/tendler_extension_standalone.aux": [
+    "development/experiments/tendler_extension_standalone_codex/tendler_extension_standalone.aux"
+  ],
+  "tendler_extension_standalone_codex/tendler_extension_standalone.log": [
+    "development/experiments/tendler_extension_standalone_codex/tendler_extension_standalone.log"
+  ],
+  "tendler_extension_standalone_codex/tendler_extension_standalone.fdb_latexmk": [
+    "development/experiments/tendler_extension_standalone_codex/tendler_extension_standalone.fdb_latexmk"
+  ],
+  "sections/RamificationAfterBlowup.tex": [
+    "development/legacy/sections/RamificationAfterBlowup.tex"
+  ],
+  "sections/RamificationAfterBlowupUnified.tex": [
+    "development/legacy/sections/RamificationAfterBlowupUnified.tex"
+  ],
+  "sections/RamificationOnProductsOfBlowups.tex": [
+    "development/legacy/sections/RamificationOnProductsOfBlowups.tex"
+  ],
+  "sections/GeometricClassFieldTheory.tex": [
+    "development/legacy/sections/GeometricClassFieldTheory.tex"
+  ],
+  "sections/GeometricCFT/ProofOfReducedTheorem.tex": [
+    "development/legacy/sections/GeometricCFT/ProofOfReducedTheorem.tex"
+  ],
+  "sections/GeometricCFT/ExtensionOfTamelyRamifiedSheaf.tex": [
+    "development/legacy/sections/GeometricCFT/ExtensionOfTamelyRamifiedSheaf.tex"
+  ],
+  "sections/EquivliancesOfCFTInDifferentLanguanges/CFTInTheLanguageOfIdeals.tex": [
+    "development/legacy/sections/EquivliancesOfCFTInDifferentLanguanges/CFTInTheLanguageOfIdeals.tex"
+  ],
+  "sections/EquivliancesOfCFTInDifferentLanguanges/CFTInTheLanguageOfAdeles.tex": [
+    "development/legacy/sections/EquivliancesOfCFTInDifferentLanguanges/CFTInTheLanguageOfAdeles.tex"
+  ],
+  "sections/EquivliancesOfCFTInDifferentLanguanges/CFTInTheLanguageOfCharacters.tex": [
+    "development/legacy/sections/EquivliancesOfCFTInDifferentLanguanges/CFTInTheLanguageOfCharacters.tex"
+  ],
+  "sections/Preliminaries/KummerTheory.tex": [
+    "development/legacy/sections/Preliminaries/KummerTheory.tex"
+  ],
+  "sections/Preliminaries/Gtorsors.tex": [
+    "development/legacy/sections/Preliminaries/Gtorsors.tex"
+  ],
+  "chapter2_reorg/chapter2_reorg.bbl": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.bbl"
+  ],
+  "chapter2_reorg/chapter2_reorg.pdf": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.pdf"
+  ],
+  "chapter2_reorg/chapter2_reorg.tex": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.tex"
+  ],
+  "chapter2_reorg/chapter2_reorg_body.tex": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg_body.tex"
+  ],
+  "chapter2_reorg/chapter2_reorg.bcf": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.bcf"
+  ],
+  "chapter2_reorg/chapter2_reorg.out": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.out"
+  ],
+  "chapter2_reorg/chapter2_reorg.fdb_latexmk": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.fdb_latexmk"
+  ],
+  "chapter2_reorg/.build.log": [
+    "development/legacy/chapters/chapter2_reorg/.build.log"
+  ],
+  "chapter2_reorg/chapter2_reorg.bcf-SAVE-ERROR": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.bcf-SAVE-ERROR"
+  ],
+  "chapter2_reorg/chapter2_reorg.run.xml": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.run.xml"
+  ],
+  "chapter2_reorg/chapter2_reorg.log": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.log"
+  ],
+  "chapter2_reorg/chapter2_reorg.aux": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.aux"
+  ],
+  "chapter2_reorg/chapter2_reorg.blg": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.blg"
+  ],
+  "chapter2_reorg/chapter2_reorg.fls": [
+    "development/legacy/chapters/chapter2_reorg/chapter2_reorg.fls"
+  ],
+  "chapter2_reorganized/chapter2_reorganized.pdf": [
+    "development/legacy/chapters/chapter2_reorganized/chapter2_reorganized.pdf"
+  ],
+  "chapter2_reorganized/chapter2_body.tex": [
+    "development/legacy/chapters/chapter2_reorganized/chapter2_body.tex"
+  ],
+  "chapter2_reorganized/chapter2_reorganized.bbl": [
+    "development/legacy/chapters/chapter2_reorganized/chapter2_reorganized.bbl"
+  ],
+  "chapter2_reorganized/chapter2_reorganized.tex": [
+    "development/legacy/chapters/chapter2_reorganized/chapter2_reorganized.tex"
+  ],
+  "chapter2_reorganized/chapter2_reorganized.fdb_latexmk": [
+    "development/legacy/chapters/chapter2_reorganized/chapter2_reorganized.fdb_latexmk"
+  ],
+  "chapter2_reorganized/chapter2_reorganized.log": [
+    "development/legacy/chapters/chapter2_reorganized/chapter2_reorganized.log"
+  ],
+  "chapter2_reorganized/chapter2_reorganized.fls": [
+    "development/legacy/chapters/chapter2_reorganized/chapter2_reorganized.fls"
+  ],
+  "induction_completion/induction_completion.pdf": [
+    "development/experiments/induction_completion/induction_completion.pdf"
+  ],
+  "induction_completion/induction_completion.toc": [
+    "development/experiments/induction_completion/induction_completion.toc"
+  ],
+  "induction_completion/induction_completion.tex": [
+    "development/experiments/induction_completion/induction_completion.tex"
+  ],
+  "induction_completion/induction_completion.synctex.gz": [
+    "development/experiments/induction_completion/induction_completion.synctex.gz"
+  ],
+  "induction_completion/induction_completion.fdb_latexmk": [
+    "development/experiments/induction_completion/induction_completion.fdb_latexmk"
+  ],
+  "induction_completion/induction_completion.out": [
+    "development/experiments/induction_completion/induction_completion.out"
+  ],
+  "induction_completion/induction_completion.aux": [
+    "development/experiments/induction_completion/induction_completion.aux"
+  ],
+  "induction_completion/induction_completion.log": [
+    "development/experiments/induction_completion/induction_completion.log"
+  ],
+  "induction_completion/induction_completion.fls": [
+    "development/experiments/induction_completion/induction_completion.fls"
+  ],
+  "induction_completion/induction_completion_review/REPORT.md": [
+    "development/experiments/induction_completion/induction_completion_review/REPORT.md"
+  ],
+  "induction_completion/gap_closure/gap_closure.synctex.gz": [
+    "development/experiments/induction_completion/gap_closure/gap_closure.synctex.gz"
+  ],
+  "induction_completion/gap_closure/gap_closure.log": [
+    "development/experiments/induction_completion/gap_closure/gap_closure.log"
+  ],
+  "induction_completion/gap_closure/gap_closure.aux": [
+    "development/experiments/induction_completion/gap_closure/gap_closure.aux"
+  ],
+  "induction_completion/gap_closure/gap_closure.fls": [
+    "development/experiments/induction_completion/gap_closure/gap_closure.fls"
+  ],
+  "induction_completion/gap_closure/gap_closure.fdb_latexmk": [
+    "development/experiments/induction_completion/gap_closure/gap_closure.fdb_latexmk"
+  ],
+  "induction_completion/gap_closure/gap_closure.tex": [
+    "development/experiments/induction_completion/gap_closure/gap_closure.tex"
+  ],
+  "induction_completion/gap_closure/README.md": [
+    "development/experiments/induction_completion/gap_closure/README.md"
+  ],
+  "induction_completion/gap_closure/gap_closure.toc": [
+    "development/experiments/induction_completion/gap_closure/gap_closure.toc"
+  ],
+  "induction_completion/gap_closure/gap_closure.out": [
+    "development/experiments/induction_completion/gap_closure/gap_closure.out"
+  ],
+  "induction_completion/gap_closure/gap_closure.pdf": [
+    "development/experiments/induction_completion/gap_closure/gap_closure.pdf"
+  ],
+  "witt/Intro.tex": [
+    "development/legacy/witt/Intro.tex"
+  ],
+  "chapter3_reorganized_codex/2026-07-16-chapter-3-reorganization-plan.md": [
+    "development/plans/2026-07-16-chapter-3-reorganization-plan.md"
+  ],
+  "chapter3_reorganized_codex/chapter3_reorganized_codex.pdf": [
+    "development/renders/chapter3_reorganized_codex/chapter3_reorganized_codex.pdf"
+  ],
+  "chapter3_reorganized_codex/proposition63_review_material.tex": [
+    "development/reviews/proposition63_review_material.tex"
+  ],
+  "chapter2_unified_render/chapter2_unified_render.pdf": [
+    "development/renders/chapter2_unified_render/chapter2_unified_render.pdf"
+  ],
+  "lemma_88_short/lemma_88_short.bcf": [
+    "development/experiments/lemma_88_short/lemma_88_short.bcf"
+  ],
+  "lemma_88_short/lemma_88_short.out": [
+    "development/experiments/lemma_88_short/lemma_88_short.out"
+  ],
+  "lemma_88_short/lemma_88_short.run.xml": [
+    "development/experiments/lemma_88_short/lemma_88_short.run.xml"
+  ],
+  "lemma_88_short/lemma_88_short.tex": [
+    "development/experiments/lemma_88_short/lemma_88_short.tex"
+  ],
+  "lemma_88_short/lemma_88_short.pdf": [
+    "development/experiments/lemma_88_short/lemma_88_short.pdf"
+  ],
+  "lemma_88_short/lemma_88_short.fdb_latexmk": [
+    "development/experiments/lemma_88_short/lemma_88_short.fdb_latexmk"
+  ],
+  "lemma_88_short/lemma_88_short.bbl": [
+    "development/experiments/lemma_88_short/lemma_88_short.bbl"
+  ],
+  "lemma_88_short/lemma_88_short.fls": [
+    "development/experiments/lemma_88_short/lemma_88_short.fls"
+  ],
+  "lemma_88_short/lemma_88_short.blg": [
+    "development/experiments/lemma_88_short/lemma_88_short.blg"
+  ],
+  "lemma_88_short/lemma_88_short.aux": [
+    "development/experiments/lemma_88_short/lemma_88_short.aux"
+  ],
+  "lemma_88_short/lemma_88_short.log": [
+    "development/experiments/lemma_88_short/lemma_88_short.log"
+  ],
+  "lemma_88_short/lemma_88_short_body.tex": [
+    "development/experiments/lemma_88_short/lemma_88_short_body.tex"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.bbl": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.bbl"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.run.xml": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.run.xml"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.pdf": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.pdf"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.tex": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.tex"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.out": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.out"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.bcf": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.bcf"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.fls": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.fls"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.blg": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.blg"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.aux": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.aux"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.log": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.log"
+  ],
+  "extension_lemma_completion/extension_lemma_completion.fdb_latexmk": [
+    "development/experiments/extension_lemma_completion/extension_lemma_completion.fdb_latexmk"
+  ],
+  "output/pdf/contents_page.pdf": [
+    "development/renders/output/pdf/contents_page.pdf"
+  ],
+  ".claude/settings.json": [
+    ".claude/settings.json"
+  ],
+  ".claude/settings.local.json": [
+    ".claude/settings.local.json"
+  ],
+  "claude_atm_2/claude_atm_2.synctex.gz": [
+    "development/experiments/claude_atm_2/claude_atm_2.synctex.gz"
+  ],
+  "claude_atm_2/claude_atm_2.aux": [
+    "development/experiments/claude_atm_2/claude_atm_2.aux"
+  ],
+  "claude_atm_2/claude_atm_2.log": [
+    "development/experiments/claude_atm_2/claude_atm_2.log"
+  ],
+  "claude_atm_2/claude_atm_2.fls": [
+    "development/experiments/claude_atm_2/claude_atm_2.fls"
+  ],
+  "claude_atm_2/claude_atm_2.bcf": [
+    "development/experiments/claude_atm_2/claude_atm_2.bcf"
+  ],
+  "claude_atm_2/claude_atm_2.out": [
+    "development/experiments/claude_atm_2/claude_atm_2.out"
+  ],
+  "claude_atm_2/claude_atm_2.fdb_latexmk": [
+    "development/experiments/claude_atm_2/claude_atm_2.fdb_latexmk"
+  ],
+  "claude_atm_2/claude_atm_2.tex": [
+    "development/experiments/claude_atm_2/claude_atm_2.tex"
+  ],
+  "claude_atm_2/claude_atm_2.pdf": [
+    "development/experiments/claude_atm_2/claude_atm_2.pdf"
+  ],
+  "claude_atm_2/claude_atm_2.run.xml": [
+    "development/experiments/claude_atm_2/claude_atm_2.run.xml"
+  ],
+  "lemma_69_inertia_explanation/lemma_69_inertia_explanation_lamport.pdf": [
+    "development/experiments/lemma_69_inertia_explanation/lemma_69_inertia_explanation_lamport.pdf"
+  ],
+  "lemma_69_inertia_explanation/lemma_69_inertia_explanation_lamport.tex": [
+    "development/experiments/lemma_69_inertia_explanation/lemma_69_inertia_explanation_lamport.tex"
+  ],
+  "docs/superpowers/plans/2026-08-14-weaken-lemmas-43-46.md": [
+    "development/plans/superpowers/plans/2026-08-14-weaken-lemmas-43-46.md"
+  ],
+  "docs/superpowers/plans/2026-07-14-shared-preliminaries-and-torsor-dictionary.md": [
+    "development/plans/superpowers/plans/2026-07-14-shared-preliminaries-and-torsor-dictionary.md"
+  ],
+  "docs/superpowers/plans/2026-08-14-weaken-divisorial-ramification-lemmas.md": [
+    "development/plans/superpowers/plans/2026-08-14-weaken-divisorial-ramification-lemmas.md"
+  ],
+  "docs/superpowers/plans/2026-07-16-appendix-b-reorganization.md": [
+    "development/plans/superpowers/plans/2026-07-16-appendix-b-reorganization.md"
+  ],
+  "docs/superpowers/plans/2026-07-16-appendix-a-torsor-and-schmid-witt-placement.md": [
+    "development/plans/superpowers/plans/2026-07-16-appendix-a-torsor-and-schmid-witt-placement.md"
+  ],
+  "docs/superpowers/plans/2026-07-14-chapter-2-opening.md": [
+    "development/plans/superpowers/plans/2026-07-14-chapter-2-opening.md"
+  ],
+  "docs/superpowers/plans/2026-07-16-appendix-a-reorganization.md": [
+    "development/plans/superpowers/plans/2026-07-16-appendix-a-reorganization.md"
+  ],
+  "docs/superpowers/specs/2026-07-16-appendix-a-torsor-and-schmid-witt-placement-design.md": [
+    "development/plans/superpowers/specs/2026-07-16-appendix-a-torsor-and-schmid-witt-placement-design.md"
+  ],
+  "docs/superpowers/specs/2026-07-16-appendix-b-reorganization-design.md": [
+    "development/plans/superpowers/specs/2026-07-16-appendix-b-reorganization-design.md"
+  ],
+  "docs/superpowers/specs/2026-07-14-chapter-2-opening-design.md": [
+    "development/plans/superpowers/specs/2026-07-14-chapter-2-opening-design.md"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.bcf": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.bcf"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.out": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.out"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.tex": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.tex"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.pdf": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.pdf"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.bbl": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.bbl"
+  ],
+  "q_ramification_along_VF/README.md": [
+    "development/experiments/q_ramification_along_VF/README.md"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.fls": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.fls"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.blg": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.blg"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.aux": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.aux"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.log": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.log"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.run.xml": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.run.xml"
+  ],
+  "q_ramification_along_VF/q_ramification_along_VF.fdb_latexmk": [
+    "development/experiments/q_ramification_along_VF/q_ramification_along_VF.fdb_latexmk"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.bcf": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.bcf"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.out": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.out"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/wittcheck.py": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/wittcheck.py"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.run.xml": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.run.xml"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.tex": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.tex"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.pdf": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.pdf"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.bbl": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.bbl"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.fdb_latexmk": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.fdb_latexmk"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.blg": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.blg"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.fls": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.fls"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.log": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.log"
+  ],
+  "q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.aux": [
+    "development/experiments/q_ramification_along_VF/first_case_r2_d3/first_case_r2_d3.aux"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.aux": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.aux"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.log": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.log"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.fls": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.fls"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.blg": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.blg"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.bbl": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.bbl"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.pdf": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.pdf"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.run.xml": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.run.xml"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.tex": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.tex"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.fdb_latexmk": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.fdb_latexmk"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.bcf": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.bcf"
+  ],
+  "q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.out": [
+    "development/experiments/q_ramification_along_VF/strategy_D_dead_end/strategy_D_dead_end.out"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.fdb_latexmk": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.fdb_latexmk"
+  ],
+  "q_ramification_along_VF/general_witt_proof/witt_general.py": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/witt_general.py"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.log": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.log"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.aux": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.aux"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.blg": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.blg"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.fls": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.fls"
+  ],
+  "q_ramification_along_VF/general_witt_proof/witt_r3.py": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/witt_r3.py"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.pdf": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.pdf"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.bbl": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.bbl"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.bcf": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.bcf"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.run.xml": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.run.xml"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.out": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.out"
+  ],
+  "q_ramification_along_VF/general_witt_proof/general_witt_proof.tex": [
+    "development/experiments/q_ramification_along_VF/general_witt_proof/general_witt_proof.tex"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.toc": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.toc"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.tex": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.tex"
+  ],
+  "chapter3_reorganized/chapter3_body.tex": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_body.tex"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.out": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.out"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.bcf": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.bcf"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.bbl": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.bbl"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.pdf": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.pdf"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.run.xml": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.run.xml"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.aux": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.aux"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.log": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.log"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.fls": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.fls"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.blg": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.blg"
+  ],
+  "chapter3_reorganized/chapter3_reorganized.fdb_latexmk": [
+    "development/legacy/chapters/chapter3_reorganized/chapter3_reorganized.fdb_latexmk"
+  ],
+  "theorem_49_completion/theorem_49_completion.fdb_latexmk": [
+    "development/experiments/theorem_49_completion/theorem_49_completion.fdb_latexmk"
+  ],
+  "theorem_49_completion/theorem_49_completion.tex": [
+    "development/experiments/theorem_49_completion/theorem_49_completion.tex"
+  ],
+  "theorem_49_completion/theorem_49_completion.pdf": [
+    "development/experiments/theorem_49_completion/theorem_49_completion.pdf"
+  ],
+  "theorem_49_completion/theorem_49_completion.bbl": [
+    "development/experiments/theorem_49_completion/theorem_49_completion.bbl"
+  ],
+  "theorem_49_completion/theorem_49_completion.fls": [
+    "development/experiments/theorem_49_completion/theorem_49_completion.fls"
+  ],
+  "theorem_49_completion/theorem_49_completion.log": [
+    "development/experiments/theorem_49_completion/theorem_49_completion.log"
+  ],
+  "theorem_49_completion/theorem_49_completion.aux": [
+    "development/experiments/theorem_49_completion/theorem_49_completion.aux"
+  ],
+  "theorem_49_completion/theorem_52_completion_review/REPORT.md": [
+    "development/experiments/theorem_49_completion/theorem_52_completion_review/REPORT.md"
+  ],
+  ".vscode/ltex.hiddenFalsePositives.en-US.txt": [
+    ".vscode/ltex.hiddenFalsePositives.en-US.txt"
+  ],
+  ".vscode/settings.json": [
+    ".vscode/settings.json"
+  ],
+  ".vscode/ltex.dictionary.en-US.txt": [
+    ".vscode/ltex.dictionary.en-US.txt"
+  ],
+  ".vscode/ltex.disabledRules.en-US.txt": [
+    ".vscode/ltex.disabledRules.en-US.txt"
+  ],
+  ".vscode/extensions.json": [
+    ".vscode/extensions.json"
+  ],
+  "tendler_replacement_preview_codex/tendler_replacement_preview.pdf": [
+    "development/experiments/tendler_replacement_preview_codex/tendler_replacement_preview.pdf"
+  ],
+  "tendler_replacement_preview_codex/tendler_replacement_preview.tex": [
+    "development/experiments/tendler_replacement_preview_codex/tendler_replacement_preview.tex"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.fls": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.fls"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.blg": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.blg"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.aux": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.aux"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.log": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.log"
+  ],
+  "lemma_88_route_2/lemma_88_route_2_body.tex": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2_body.tex"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.run.xml": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.run.xml"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.out": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.out"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.bcf": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.bcf"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.tex": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.tex"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.pdf": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.pdf"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.bbl": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.bbl"
+  ],
+  "lemma_88_route_2/lemma_88_route_2.fdb_latexmk": [
+    "development/experiments/lemma_88_route_2/lemma_88_route_2.fdb_latexmk"
+  ],
+  "tmp/pdfs/witt-notation-65.png": [
+    "development/renders/tmp/pdfs/witt-notation-65.png"
+  ],
+  "tmp/pdfs/theorem86-71.png": [
+    "development/renders/tmp/pdfs/theorem86-71.png"
+  ],
+  "tmp/pdfs/theorem86-70.png": [
+    "development/renders/tmp/pdfs/theorem86-70.png"
+  ],
+  "tmp/pdfs/theorem86-bold-71.png": [
+    "development/renders/tmp/pdfs/theorem86-bold-71.png"
+  ],
+  "tmp/pdfs/theorem86-bold-70.png": [
+    "development/renders/tmp/pdfs/theorem86-bold-70.png"
+  ],
+  "tmp/pdfs/lemma76-64.png": [
+    "development/renders/tmp/pdfs/lemma76-64.png"
+  ],
+  "tmp/pdfs/ch3-hyperplane-06.png": [
+    "development/renders/tmp/pdfs/ch3-hyperplane-06.png"
+  ],
+  "tmp/pdfs/contents_page.png": [
+    "development/renders/tmp/pdfs/contents_page.png"
+  ],
+  "tmp/pdfs/lemma76-65.png": [
+    "development/renders/tmp/pdfs/lemma76-65.png"
+  ],
+  "tmp/pdfs/ch3-extension-13.png": [
+    "development/renders/tmp/pdfs/ch3-extension-13.png"
+  ],
+  "tmp/pdfs/ch3-hyperplane-05.png": [
+    "development/renders/tmp/pdfs/ch3-hyperplane-05.png"
+  ],
+  "tmp/pdfs/ch3-extension-12.png": [
+    "development/renders/tmp/pdfs/ch3-extension-12.png"
+  ],
+  "tmp/pdfs/ch3-extension-14.png": [
+    "development/renders/tmp/pdfs/ch3-extension-14.png"
+  ],
+  "tmp/pdfs/lease_review/page-1.jpg": [
+    "development/renders/tmp/pdfs/lease_review/page-1.jpg"
+  ],
+  "tmp/pdfs/lease_review/page-3.jpg": [
+    "development/renders/tmp/pdfs/lease_review/page-3.jpg"
+  ],
+  "tmp/pdfs/lease_review/page-2.jpg": [
+    "development/renders/tmp/pdfs/lease_review/page-2.jpg"
+  ],
+  "tmp/pdfs/lease_review/page-6.jpg": [
+    "development/renders/tmp/pdfs/lease_review/page-6.jpg"
+  ],
+  "tmp/pdfs/lease_review/page-7.jpg": [
+    "development/renders/tmp/pdfs/lease_review/page-7.jpg"
+  ],
+  "tmp/pdfs/lease_review/page-5.jpg": [
+    "development/renders/tmp/pdfs/lease_review/page-5.jpg"
+  ],
+  "tmp/pdfs/lease_review/page-4.jpg": [
+    "development/renders/tmp/pdfs/lease_review/page-4.jpg"
+  ],
+  "tmp/pdfs/lease_review/hires/page-2-rent-detail-up.png": [
+    "development/renders/tmp/pdfs/lease_review/hires/page-2-rent-detail-up.png"
+  ],
+  "tmp/pdfs/lease_review/hires/page-2-rent.png": [
+    "development/renders/tmp/pdfs/lease_review/hires/page-2-rent.png"
+  ],
+  "tmp/pdfs/lease_review/hires/page-2-rent-detail.png": [
+    "development/renders/tmp/pdfs/lease_review/hires/page-2-rent-detail.png"
+  ],
+  "tmp/pdfs/lease_review/hires/page-1.png": [
+    "development/renders/tmp/pdfs/lease_review/hires/page-1.png"
+  ],
+  "tmp/pdfs/lease_review/hires/page-3.png": [
+    "development/renders/tmp/pdfs/lease_review/hires/page-3.png"
+  ],
+  "tmp/pdfs/lease_review/hires/page-2.png": [
+    "development/renders/tmp/pdfs/lease_review/hires/page-2.png"
+  ],
+  "tmp/pdfs/lease_review/hires/page-4.png": [
+    "development/renders/tmp/pdfs/lease_review/hires/page-4.png"
+  ],
+  "tmp/pdfs/lease_review/hires/page7-7.png": [
+    "development/renders/tmp/pdfs/lease_review/hires/page7-7.png"
+  ],
+  "tmp/pdfs/theorem-53-citation-review/internal-reference.png": [
+    "development/renders/tmp/pdfs/theorem-53-citation-review/internal-reference.png"
+  ],
+  "tmp/pdfs/theorem-53-citation-review/main.txt": [
+    "development/renders/tmp/pdfs/theorem-53-citation-review/main.txt"
+  ],
+  "tmp/pdfs/theorem-53-citation-review/page-37.txt": [
+    "development/renders/tmp/pdfs/theorem-53-citation-review/page-37.txt"
+  ],
+  "tmp/pdfs/theorem-53-citation-review/page-37.png": [
+    "development/renders/tmp/pdfs/theorem-53-citation-review/page-37.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-62.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-62.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-63.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-63.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-61.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-61.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-60.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-60.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-64.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-64.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-70.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-70.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-65.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-65.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-67.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-67.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-66.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-66.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-68.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-68.png"
+  ],
+  "tmp/pdfs/appendix_b_review/page-69.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/page-69.png"
+  ],
+  "tmp/pdfs/appendix_b_review/chapter2/final-37.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/chapter2/final-37.png"
+  ],
+  "tmp/pdfs/appendix_b_review/chapter2/page-38.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/chapter2/page-38.png"
+  ],
+  "tmp/pdfs/appendix_b_review/chapter2/page-39.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/chapter2/page-39.png"
+  ],
+  "tmp/pdfs/appendix_b_review/chapter2/page-37.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/chapter2/page-37.png"
+  ],
+  "tmp/pdfs/appendix_b_review/chapter2/page-36.png": [
+    "development/renders/tmp/pdfs/appendix_b_review/chapter2/page-36.png"
+  ],
+  "tmp/pdfs/chapter3_check/page-13.png": [
+    "development/renders/tmp/pdfs/chapter3_check/page-13.png"
+  ],
+  "tmp/pdfs/chapter3_check/page-12.png": [
+    "development/renders/tmp/pdfs/chapter3_check/page-12.png"
+  ],
+  "tmp/pdfs/chapter3_check/page-11.png": [
+    "development/renders/tmp/pdfs/chapter3_check/page-11.png"
+  ],
+  "tmp/pdfs/tendler_extension_check/page-1.png": [
+    "development/renders/tmp/pdfs/tendler_extension_check/page-1.png"
+  ],
+  "tmp/pdfs/tendler_extension_check/page-3.png": [
+    "development/renders/tmp/pdfs/tendler_extension_check/page-3.png"
+  ],
+  "tmp/pdfs/tendler_extension_check/page-2.png": [
+    "development/renders/tmp/pdfs/tendler_extension_check/page-2.png"
+  ],
+  "tmp/pdfs/theorem86-final/page-70.png": [
+    "development/renders/tmp/pdfs/theorem86-final/page-70.png"
+  ],
+  "tmp/pdfs/theorem86-final/page-71.png": [
+    "development/renders/tmp/pdfs/theorem86-final/page-71.png"
+  ],
+  "tmp/pdfs/theorem86-final/page-72.png": [
+    "development/renders/tmp/pdfs/theorem86-final/page-72.png"
+  ],
+  "tmp/pdfs/blue-second-version-review/section-2-4-3.pdf.png": [
+    "development/renders/tmp/pdfs/blue-second-version-review/section-2-4-3.pdf.png"
+  ],
+  "tmp/pdfs/blue-second-version-review/appendix-a-3.pdf.png": [
+    "development/renders/tmp/pdfs/blue-second-version-review/appendix-a-3.pdf.png"
+  ],
+  "tmp/pdfs/blue-second-version-review/appendix-a-4.pdf": [
+    "development/renders/tmp/pdfs/blue-second-version-review/appendix-a-4.pdf"
+  ],
+  "tmp/pdfs/blue-second-version-review/section-2-4-3.pdf": [
+    "development/renders/tmp/pdfs/blue-second-version-review/section-2-4-3.pdf"
+  ],
+  "tmp/pdfs/blue-second-version-review/appendix-a-3.pdf": [
+    "development/renders/tmp/pdfs/blue-second-version-review/appendix-a-3.pdf"
+  ],
+  "tmp/pdfs/blue-second-version-review/appendix-a-4.pdf.png": [
+    "development/renders/tmp/pdfs/blue-second-version-review/appendix-a-4.pdf.png"
+  ],
+  "tmp/pdfs/blue-crossref-review/page34-blue.pdf.png": [
+    "development/renders/tmp/pdfs/blue-crossref-review/page34-blue.pdf.png"
+  ],
+  "tmp/pdfs/blue-crossref-review/page34-blue.pdf": [
+    "development/renders/tmp/pdfs/blue-crossref-review/page34-blue.pdf"
+  ],
+  "tmp/pdfs/title_changes_check/contents-03.png": [
+    "development/renders/tmp/pdfs/title_changes_check/contents-03.png"
+  ],
+  "tmp/pdfs/title_changes_check/reductions-27.png": [
+    "development/renders/tmp/pdfs/title_changes_check/reductions-27.png"
+  ],
+  "tmp/pdfs/title_changes_check/reductions-26.png": [
+    "development/renders/tmp/pdfs/title_changes_check/reductions-26.png"
+  ],
+  "tmp/pdfs/title_changes_check/contents-04.png": [
+    "development/renders/tmp/pdfs/title_changes_check/contents-04.png"
+  ],
+  "tmp/pdfs/title_changes_check/assembly-35.png": [
+    "development/renders/tmp/pdfs/title_changes_check/assembly-35.png"
+  ],
+  "tmp/pdfs/title_changes_check/assembly-final.png": [
+    "development/renders/tmp/pdfs/title_changes_check/assembly-final.png"
+  ],
+  "tmp/pdfs/title_changes_check/additivity-17.png": [
+    "development/renders/tmp/pdfs/title_changes_check/additivity-17.png"
+  ],
+  "tmp/pdfs/connectivity-review/chapter2.pdf": [
+    "development/renders/tmp/pdfs/connectivity-review/chapter2.pdf"
+  ],
+  "tmp/pdfs/connectivity-review/chapter2.png": [
+    "development/renders/tmp/pdfs/connectivity-review/chapter2.png"
+  ],
+  "tmp/pdfs/connectivity-review/appendix.pdf": [
+    "development/renders/tmp/pdfs/connectivity-review/appendix.pdf"
+  ],
+  "tmp/pdfs/connectivity-review/appendix.png": [
+    "development/renders/tmp/pdfs/connectivity-review/appendix.png"
+  ],
+  "tmp/pdfs/connectivity-review/final/appendix-final.pdf.png": [
+    "development/renders/tmp/pdfs/connectivity-review/final/appendix-final.pdf.png"
+  ],
+  "tmp/pdfs/connectivity-review/final/appendix-final.pdf": [
+    "development/renders/tmp/pdfs/connectivity-review/final/appendix-final.pdf"
+  ],
+  "tmp/pdfs/connectivity-review/final/chapter2-final.pdf.png": [
+    "development/renders/tmp/pdfs/connectivity-review/final/chapter2-final.pdf.png"
+  ],
+  "tmp/pdfs/connectivity-review/final/chapter2-final.pdf": [
+    "development/renders/tmp/pdfs/connectivity-review/final/chapter2-final.pdf"
+  ],
+  "tmp/pdfs/connectivity-review/ql/chapter2.pdf.png": [
+    "development/renders/tmp/pdfs/connectivity-review/ql/chapter2.pdf.png"
+  ],
+  "tmp/pdfs/connectivity-review/ql/appendix.pdf.png": [
+    "development/renders/tmp/pdfs/connectivity-review/ql/appendix.pdf.png"
+  ],
+  "tmp/pdfs/theorem86-torsors/page-70.png": [
+    "development/renders/tmp/pdfs/theorem86-torsors/page-70.png"
+  ],
+  "tmp/pdfs/theorem86-torsors/page-71.png": [
+    "development/renders/tmp/pdfs/theorem86-torsors/page-71.png"
+  ],
+  "tmp/pdfs/theorem86-review/page-70.png": [
+    "development/renders/tmp/pdfs/theorem86-review/page-70.png"
+  ],
+  "tmp/pdfs/theorem86-review/page-71.png": [
+    "development/renders/tmp/pdfs/theorem86-review/page-71.png"
+  ],
+  "tmp/pdfs/theorem86-review/page-67.png": [
+    "development/renders/tmp/pdfs/theorem86-review/page-67.png"
+  ],
+  "tmp/pdfs/theorem86-review/page-66.png": [
+    "development/renders/tmp/pdfs/theorem86-review/page-66.png"
+  ],
+  "tmp/pdfs/theorem86-review/page-68.png": [
+    "development/renders/tmp/pdfs/theorem86-review/page-68.png"
+  ],
+  "tmp/pdfs/theorem86-review/page-69.png": [
+    "development/renders/tmp/pdfs/theorem86-review/page-69.png"
+  ],
+  "tmp/pdfs/definition-52-review/definition-52.pdf": [
+    "development/renders/tmp/pdfs/definition-52-review/definition-52.pdf"
+  ],
+  "tmp/pdfs/definition-52-review/definition-52.pdf.png": [
+    "development/renders/tmp/pdfs/definition-52-review/definition-52.pdf.png"
+  ],
+  "tmp/pdfs/theorem86-final-clean/page-70.png": [
+    "development/renders/tmp/pdfs/theorem86-final-clean/page-70.png"
+  ],
+  "tmp/pdfs/theorem86-final-clean/page-71.png": [
+    "development/renders/tmp/pdfs/theorem86-final-clean/page-71.png"
+  ],
+  "tmp/pdfs/theorem86-final-clean/page-72.png": [
+    "development/renders/tmp/pdfs/theorem86-final-clean/page-72.png"
+  ],
+  "claude_atm_1/claude_atm_1.tex": [
+    "development/experiments/claude_atm_1/claude_atm_1.tex"
+  ],
+  "claude_atm_1/claude_atm_1_1.tex": [
+    "development/experiments/claude_atm_1/claude_atm_1_1.tex"
+  ],
+  "claude_atm_1/claude_atm_1.pdf": [
+    "development/experiments/claude_atm_1/claude_atm_1.pdf"
+  ],
+  "claude_atm_1/claude_atm_1.bbl": [
+    "development/experiments/claude_atm_1/claude_atm_1.bbl"
+  ]
+}

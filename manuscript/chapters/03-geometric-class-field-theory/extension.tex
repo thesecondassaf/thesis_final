@@ -1,0 +1,130 @@
+% !TeX root = ../../../main.tex
+\section[Extension of Tame Torsors to the Compactified Symmetric Power]{\texorpdfstring{Extension of Tame Torsors\\to the Compactified Symmetric Power}{Extension of Tame Torsors to the Compactified Symmetric Power}}\label{section:extension-across-boundary}
+
+We now show that the tameness established in
+\Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified} implies extension
+across $H$. Assume $\mdls\ne0$.
+
+\begin{lemma}\label{lemma:ExtensionOfTamelyRamifiedSheaf}
+Let $G$ be a finite abelian group, and let $\cP^{[d]}$ be a
+$G$-torsor on $U^{(d)}$. If $\cP^{[d]}$ is tamely ramified at the generic
+point $\eta_0$ of $H=\Cmod{d}\setminus U^{(d)}$, then it extends uniquely
+to a $G$-torsor $\widetilde{\cP}^{[d]}$ on $\Cmod{d}$.
+\end{lemma}
+
+\begin{proof}
+The scheme $\Cmod{d}$ is regular, being
+a projective-space bundle over $\PicCm[d]$, which is smooth as a torsor under
+$\PicCm[0]$. Its boundary $H$ is irreducible with generic point $\eta_0$ (see
+the proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}). By purity
+of the branch locus, it therefore suffices to prove that $\cP^{[d]}$ is
+unramified at $\eta_0$.\footnote{The normalization of
+$\Cmod{d}$ in $\cP^{[d]}$ is finite, since $\Cmod{d}$ is normal and
+Noetherian and the generic cover is finite separable (\stackstag{032L}).
+Unramifiedness at $\eta_0$ makes it \'etale in
+codimension one, hence \'etale by purity (\stackstag{0BMB}). Full faithfulness
+of restriction to $U^{(d)}$ (\stackstag{0BQI}) extends the $G$-action and
+the torsor isomorphism uniquely, giving the unique $G$-torsor extension.}
+
+Let $\xi$ be the generic point of $\PicCm[d]$, put
+$\Omega=\kappa(\xi)^{\mathrm{sep}}$, and write $\bar\xi=\Spec\Omega$.
+The relative hyperplane $H$ dominates $\PicCm[d]$, so
+$\widetilde\Phi_d(\eta_0)=\xi$.
+Thus $\eta_0$ is also the generic point of $H_\xi$. Since $\PicCm[d]$ is integral,
+$\Oo_{\PicCm[d],\xi}=\kappa(\xi)$, so passing to the generic fiber does not
+change its local ring:
+\[
+    \Oo_{\Cmod{d},\eta_0}=\Oo_{(\Cmod{d})_\xi,\eta_0}.
+\]
+Since $H_\xi$ is geometrically integral, $H_{\bar\xi}$ has a unique
+generic point $\bar\eta$, which maps to
+$\eta_0$ under the projection
+$q:(\Cmod{d})_{\bar\xi}\to\Cmod{d}$.
+Define the pulled-back $G$-torsor
+\[
+    \cP_\Omega:=\cP^{[d]}\times_{U^{(d)}}U^{(d)}_{\bar\xi}.
+\]
+\begin{samepage}
+Every square in the following diagram is Cartesian:
+\[
+\begin{tikzcd}[column sep=huge, row sep=2em]
+    \cP_\Omega \arrow[r] \arrow[d, purple]
+      & \cP^{[d]} \arrow[d, purple] \\
+    U^{(d)}_{\bar\xi} \arrow[r] \arrow[d, hook]
+      & U^{(d)} \arrow[d, hook] \\
+    (\Cmod{d})_{\bar\xi}
+      \arrow[r, "q\colon\bar\eta\mapsto\eta_0"]
+      \arrow[d, "(\widetilde\Phi_d)_{\bar\xi}"']
+      & \Cmod{d} \arrow[d, "\widetilde\Phi_d"] \\
+    \bar\xi=\Spec\Omega \arrow[r, "\bar\xi\mapsto\xi"']
+      & \PicCm[d]
+\end{tikzcd}
+\]
+\end{samepage}
+By \Cref{lemma:geometric-generic-fiber-takeuchi},
+\[
+    \bigl((\Cmod{d})_{\bar\xi},H_{\bar\xi}\bigr)
+    \cong(\mathbb P^r_\Omega,\mathbb P^{r-1}_\Omega),
+    \qquad U^{(d)}_{\bar\xi}\cong\mathbb A^r_\Omega,
+\]
+where $r=d-\deg\mdls-g+1$.
+
+Set
+\[
+    A=\Oo_{\Cmod{d},\eta_0},\qquad
+    B=\Oo_{(\Cmod{d})_{\bar\xi},\bar\eta},\qquad
+    K=\Frac(A),\quad L=\Frac(B).
+\]
+The projection $q$ induces $A\to B$, and the Cartesian diagram gives
+\[
+    \cP_\Omega|_{\Spec L}
+    \cong\bigl(\cP^{[d]}|_{\Spec K}\bigr)
+    \times_{\Spec K}\Spec L.
+\]
+The map $A\to B$ is obtained by extending scalars along the separable
+algebraic extension $\kappa(\xi)\subset\Omega$; hence it is weakly
+unramified with separable algebraic residue-field extension.
+Hence \Cref{lemma:weakly_unramified_base_change} shows that
+$\cP_\Omega$ is tamely ramified at $\bar\eta$ and gives
+\[
+    \cP^{[d]}\text{ is unramified at }\eta_0
+    \quad\Longleftrightarrow\quad
+    \cP_\Omega\text{ is unramified at }\bar\eta.
+\]
+Let
+\[
+    \chi:\pi_1(\mathbb A^r_\Omega)\longrightarrow G
+\]
+be the character corresponding to $\cP_\Omega$.
+Since $G$ is abelian, $\chi$ factors as
+\[
+    \pi_1(\mathbb A^r_\Omega)
+    \twoheadrightarrow\pi_1(\mathbb A^r_\Omega)^{\mathrm{ab}}
+    \xrightarrow{\,\bar\chi\,}G.
+\]
+In characteristic zero, this abelianized fundamental group is trivial
+\cite[Example~4.14]{tendler2015geometricclassfieldtheory}. Thus $\chi=1$,
+so $\cP_\Omega$ is trivial and hence unramified.
+
+Suppose that $\operatorname{char}(k)=p>0$. Then
+$\pi_1(\mathbb A^r_\Omega)^{\mathrm{ab}}$ is pro-$p$
+\cite[Example~4.15]{tendler2015geometricclassfieldtheory}, so
+$\Gamma:=\operatorname{im}(\chi)$ is a finite $p$-group.
+By \Cref{theorem:equivalence_fundamental_covers} and the discussion
+preceding it, the connected cover corresponding to $\ker\chi$ is Galois
+with group $\Gamma$, and $\cP_\Omega$ is a disjoint union of
+$[G:\Gamma]$ copies of this cover.
+Hence every field factor of $\cP_\Omega|_{\Spec L}$ is a Galois extension
+of $L$ of degree $|\Gamma|$.
+
+For each field factor, every ramification index $e$ with respect to the
+valuation defined by $B$ satisfies
+\[
+    e\mid |\Gamma|,\qquad (e,p)=1
+    \qquad\Longrightarrow\qquad e=1,
+\]
+where the prime-to-$p$ condition follows from tameness. Tameness also gives
+separable residue-field extensions, so $\cP_\Omega$ is unramified at
+$\bar\eta$.
+\end{proof}
+

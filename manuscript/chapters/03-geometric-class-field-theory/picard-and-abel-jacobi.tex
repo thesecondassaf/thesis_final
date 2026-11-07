@@ -1,0 +1,158 @@
+% !TeX root = ../../../main.tex
+\section{The Rigidified Picard Scheme and the Abel--Jacobi Map}\label{section:generalized-picard-and-abel-jacobi}
+
+Our presentation of the rigidified Picard scheme and the Abel--Jacobi
+morphism follows Guignard \cite[\S4]{Guignard2018} and
+Takeuchi \cite[\S3]{takeuchi2018blow}. For background on the classical
+theory of Jacobians and relative Picard schemes, we refer respectively to
+Milne \cite{milneAV} and Bosch--L\"utkebohmert--Raynaud
+\cite[Chapter~9]{BLR1990}. Precise references for the individual results
+are given where they are used.
+
+\subsection*{The rigidified Picard scheme}
+Although the main theorem is over the fixed perfect field $k$, the
+rigidified Picard construction is most naturally stated over an arbitrary
+base scheme $S$.
+Let $S$ be a scheme and let $f:C\to S$ be a projective smooth morphism whose geometric fibers are connected and of dimension 1. Let $\mdls$ be a modulus on $C$, defined as an effective Cartier divisor of $C/S$
+(i.e., a closed subscheme of $C$ which is finite flat of finite presentation over $S$).
+We denote the projection $C \times_S T \to T$ by $\operatorname{pr}$ for any $S$-scheme $T$.
+
+Let $d$ be an integer. For an $S$-scheme $T$, we consider the set of data $(\cL, \psi)$ where:
+\begin{itemize}
+    \item $\cL$ is an invertible sheaf of degree $d$ on $C_T$.
+    \item $\psi: \Oo_{\mdls_T} \xrightarrow{\sim} \cL|_{\mdls_T}$ is a trivialization of $\cL$ along the modulus.
+\end{itemize}
+Two such pairs $(\cL, \psi)$ and $(\cL', \psi')$ are said to be isomorphic if there exists an isomorphism of invertible sheaves $\alpha\colon \cL \to \cL'$ such that the following diagram commutes:
+\[
+\begin{tikzcd}
+& \Oo_{\mdls_T} \arrow[dl, "\psi"'] \arrow[dr, "\psi'"] & \\
+\cL|_{\mdls_T} \arrow[rr, "\alpha|_{\mdls_T}"'] & & \cL'|_{\mdls_T}
+\end{tikzcd}
+\]
+We define the presheaf $\operatorname{Pic}_{C,\mdls}^{d,\mathrm{pre}}$ on
+$\operatorname{Sch}/S$ by assigning to $T$ the set of isomorphism classes
+of such pairs. Let $\PicCm[d]$ denote the \'etale sheafification of this
+presheaf.
+
+We use the following structural facts, recorded in
+\cite[\S3, fundamental properties (1)--(4)]{takeuchi2018blow}. When $\mdls$ is everywhere
+positive, representability and smoothness of the full rigidified Picard
+presheaf are proved in \cite[Proposition~4.8]{Guignard2018}; when
+$\mdls=0$, the corresponding results for the ordinary relative Picard
+scheme are given in \cite[\S9.3, Theorem~1]{BLR1990}.
+\begin{enumerate}
+    \item $\PicCm[d]$ is represented by an $S$-scheme. If $\mdls$ is
+    faithfully flat over $S$, the presheaf
+    $\operatorname{Pic}_{C,\mdls}^{d,\mathrm{pre}}$ is already an \'etale
+    sheaf.
+    \item $\PicCm[0]$ is a smooth commutative group $S$-scheme with
+    geometrically connected fibers.
+    \item For any $d$, $\PicCm[d]$ is a $\PicCm[0]$-torsor.
+\end{enumerate}
+We call $\PicCm[0]$ the \emph{generalized Jacobian} of $C$ with modulus
+$\mdls$. When $\mdls=0$, it is the ordinary Jacobian, and
+$\PicCm[d]=\PicC[d]$.
+
+The rigidified Picard schemes are naturally related as the modulus varies.
+Indeed, let $\mdls_1\subset\mdls_2$. Restriction of rigidifications defines
+a natural morphism of \'etale sheaves
+\[
+\rho_{\mdls_2,\mdls_1}\colon
+\operatorname{Pic}_{C,\mdls_2}^d
+\longrightarrow
+\operatorname{Pic}_{C,\mdls_1}^d.
+\]
+When $\mdls_2$ is finite over $S$, this morphism is an epimorphism
+\cite[\S3]{takeuchi2018blow}.
+Taking $\mdls_1=0$ gives, for every
+modulus $\mdls$, a natural epimorphism of \'etale sheaves
+\[
+\rho_{\mdls,0}\colon \PicCm[d]\longrightarrow\PicC[d].
+\]
+
+\subsection*{The Abel--Jacobi Morphism and Its Fibers}\label{section:AbelJacobi}
+
+
+Let $U = C \setminus \mdls$ be the complement of the modulus in $C$.
+The effective Cartier divisors of degree $d$ which are prime to $\mdls$ are parameterized by the symmetric power $\Sym_S^d (U) = U^{(d)}$ over $S$ (see \cite[Proposition~4.12]{Guignard2018} and \cite[Chapter~III, Theorem~3.13]{milneAV}).
+For any such divisor $D \in U^{(d)}$, the associated line bundle $\Oo_C(D)$ admits a canonical trivialization along $\mdls$.
+Specifically, the canonical section $1_D$ is regular and non-vanishing on $\mdls$ because $\operatorname{supp}(D) \cap \operatorname{supp}(\mdls) = \emptyset$.
+Its restriction is a nowhere-vanishing section on $\mdls$, thereby
+determining a trivialization
+$\psi_D:\Oo_{\mdls}\xrightarrow{\sim}\Oo_C(D)|_{\mdls}$.
+This is functorial in families and yields a morphism from the symmetric power
+to the rigidified Picard scheme over $S$:
+\begin{equation}
+    \Phi_d\colon U^{(d)} \to \PicCm[d], \quad D \mapsto [(\Oo_C(D), \psi_D)],
+\end{equation}
+
+The results of Guignard and Takeuchi used below require the degree to be
+sufficiently large.\footnote{The cohomological reason for this bound is that,
+for a degree-$d$ line bundle $\cL$, it ensures that both $\cL$ and
+$\cL(-\mdls)$ have fiberwise degree at least $2g-1$. Their first cohomology
+then vanishes by Serre duality and a degree argument; Riemann--Roch together
+with cohomology and base change implies that the corresponding pushforwards
+are locally free of the expected ranks and commute with base change. See
+\cite[Proposition~4.3]{Guignard2018}. The additional inequality
+$d\geq\deg\mdls$ ensures that $d-\deg\mdls$ is nonnegative, which is relevant
+when $g=0$.} Let $g$ denote the genus of $C$, viewed as a locally
+constant function on $S$. From this point on, we impose the standing
+condition
+\begin{equation} \label{equation:degree-condition}
+    d \geq \max\{2g - 1 + \deg \mdls, \deg \mdls\}.
+\end{equation}
+This is Takeuchi's condition \cite[\S3, (3.1)]{takeuchi2018blow} and is, in
+particular, strong enough for the application of
+\cite[Proposition~4.14]{Guignard2018} below. If $S$ is quasi-compact, the
+locally constant functions $g$ and $\deg\mdls$ take only finitely many
+values; hence a single integer $d$ satisfying this condition exists.
+
+Suppose that $d$ satisfies \Cref{equation:degree-condition}. When $\mdls=0$
+and $C\to S$ admits a section, the Abel--Jacobi morphism
+\[
+    C^{(d)}\longrightarrow\PicC[d]
+\]
+is a projective space bundle. In particular, it is proper and smooth with
+geometrically connected fibers.
+
+When $\mdls>0$, Guignard \cite[Proposition~4.14]{Guignard2018} proves the
+stronger statement that
+\[
+    \Phi_d\colon U^{(d)}\longrightarrow\PicCm[d]
+\]
+is, for the fppf topology, a torsor under the additive group scheme of a
+vector bundle of rank $d-\deg\mdls-g+1$ over $\PicCm[d]$. In particular,
+$\Phi_d$ is fppf-locally isomorphic over $\PicCm[d]$ to an affine space of
+relative dimension $d-\deg\mdls-g+1$; it is smooth and surjective, with
+geometrically connected fibers.
+
+We now return to the standing situation $S=\Spec(k)$, which remains in
+force for the rest of the chapter. From Guignard's result, we retain only
+the following fiberwise consequence, stated together with the classical
+unramified case.
+\begin{theorem}\label{theorem:abel-jacobi-fibers}
+Assume that $S=\Spec(k)$ and that $d$ satisfies
+\Cref{equation:degree-condition}. Let
+$\bar s=\Spec\Omega\to\PicCm[d]$ be a geometric point, where $\Omega$ is
+separably closed. Then the geometric fiber of the Abel--Jacobi morphism
+\[
+    \Phi_d\colon U^{(d)}\longrightarrow\PicCm[d]
+\]
+at $\bar s$ is isomorphic to
+\[
+\begin{cases}
+\mathbb{A}_{\Omega}^{d - \deg \mdls - g + 1} & \text{if } \mdls > 0, \\
+\mathbb{P}_{\Omega}^{d - g} & \text{if } \mdls = 0.
+\end{cases}
+\]
+Thus every geometric fiber is an affine space when $\mdls>0$ and a
+projective space when $\mdls=0$.
+\end{theorem}
+\begin{proof}
+For $\mdls>0$, this follows from
+\cite[Proposition~4.14]{Guignard2018}. For $\mdls=0$, see
+\cite[Proposition~2.1.4]{Toth2011}.
+Both cases are also stated in
+\cite[Propositions~3.13--3.14]{tendler2015geometricclassfieldtheory}.
+\end{proof}
+

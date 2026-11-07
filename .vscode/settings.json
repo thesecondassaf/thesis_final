@@ -41,5 +41,6 @@
     "*.run.xml",
     "*.synctex.gz",
     "*.toc"
-  ]
+  ],
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/development/build/main"
 }

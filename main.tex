@@ -9,8 +9,8 @@
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0.5em}
 
-\input{includes}
-\input{MacrosAndFigures}
+\input{manuscript/preamble/packages.tex}
+\input{manuscript/preamble/macros-and-figures.tex}
 
 \usepackage{csquotes}
 \usepackage[
@@ -18,8 +18,8 @@ backend=biber,
 style=alphabetic,
 sorting=ynt
 ]{biblatex}
-\bibliography{Bib} 
-\addbibresource{Bib.bib}
+\bibliography{manuscript/bibliography/references.bib}
+\addbibresource{manuscript/bibliography/references.bib}
 
 \newboolean{ThesisIntro}
 \setboolean{ThesisIntro}{false}
@@ -44,36 +44,19 @@ following the subsequent extensions to the ramified case developed by Takeuchi a
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-\input{sections/Introduction.tex}
+\input{manuscript/introduction.tex}
 
-\chapter{General Preliminaries}\label{chapter:general_preliminaries}
+\input{manuscript/chapters/01-preliminaries/chapter.tex}
 
-\input{sections/Preliminaries/GeneralPreliminaries.tex}
+\input{manuscript/chapters/02-ramification/chapter.tex}
 
-\chapter{Ramification After Blowup Is Tame}\label{section:ramification_after_blowup_is_tame}
-
-\input{sections/RamificationAfterBlowupIntroduction.tex}
-
-\input{sections/Preliminaries/LocalRamificationPreliminaries.tex}
-
-\input{sections/Preliminaries/GTorsorRamification.tex}
-
-\input{sections/Preliminaries/ReductionsBeforeCyclicTheories.tex}
-
-\input{sections/Preliminaries/CyclicRamificationTheories.tex}
-
-\input{sections/RamificationAfterBlowupIsTame.tex}
-
-\input{chapter3_reorganized_codex/chapter3_reorganized_codex.tex}
+\input{manuscript/chapters/03-geometric-class-field-theory/chapter.tex}
 
 \addtocontents{toc}{\protect\newpage}
 \begin{appendices}
-\input{witt/WittVectorAlgebraAppendix.tex}
+\input{manuscript/appendices/A-cyclic-theories/appendix.tex}
 
-\chapter{A Failure of an Artin--Schreier Induction Strategy}
-\label{appendix:artin_schreier_induction_failure}
-\label{section:a_wrong_path}
-\input{a_wrong_path/a_wrong_path.tex}
+\input{manuscript/appendices/B-failed-induction/appendix.tex}
 \end{appendices}
 \printbibliography
 

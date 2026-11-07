@@ -1,0 +1,215 @@
+% !TeX root = ../../../main.tex
+\section{\'Etale Torsors, Covers, and Quotients}
+Fix a scheme $X$, and let $G$ be a smooth affine $X$-group scheme. 
+Denote by $X_{\text{Ét}}$ and $X_{\text{ét}}$ the big and small étale sites on $X$, respectively. 
+The functor of points of $G$, which we denote by $G(\cdot) = \mathrm{Hom}_X(-, G)$, defines a group sheaf on 
+$X_{\text{ét}}$.
+
+\begin{definition} A \textit{principal $G$-bundle} (or \textit{principal homogeneous space}) for $G$ is a 
+scheme $f : Y \to X$ equipped with a left $G$-action $\rho: G \times_X Y \to Y$ satisfying:
+\begin{enumerate}
+    \item The morphism $G \times_X Y \to Y \times_X Y$ sending $(g, y) \mapsto (gy, y)$ is an isomorphism of $X$-schemes.
+    \item There exists an étale covering $\{U_i \to X\}$ such that $Y_{U_i} \cong G_{U_i}$ as $G$-schemes, 
+    where $G$ acts on itself by left translation.
+\end{enumerate}
+\end{definition}
+
+\begin{rem*}
+    Since $G \to X$ is smooth and $Y$ is étale-locally isomorphic to $G$, 
+    the morphism $f: Y \to X$ is smooth and affine. Note that $Y$ is generally not étale over $X$ unless $G$ is an 
+    étale group scheme (e.g., a finite constant group).
+    Similarly, if $G$ is finite then $Y \to X$ is finite.
+\end{rem*}
+
+Similarly to the case of $G$-torsors of a topos, we define a morphism of principal $G$-bundles to be a morphism of $X$-schemes commuting with the
+$G$-action. We now have:
+
+\begin{theorem}\label{theorem:torsors_are_realized_as_spaces}
+    The morphism sending $Y \mapsto \mathrm{Hom}_X(-, Y)$ is an equivalence of categories from the category of principal $G$-bundles 
+    to the category of $G$-torsors on $X_{\text{\'Et}}$
+    Similarly, the morphism sending $Y$ to $\mathrm{Hom}_X(-, Y)$ to the category of $G$-torsors on $X_{\text{ét}}$ is an equivalence.
+\end{theorem}
+
+%% [REVIEW: unlabeled & never cited -- the big/small-site comparison is used implicitly whenever torsors are realized as schemes; consider labeling it and citing it (e.g. line ~381), or merging into the theorem above]
+\begin{cor}
+    There is a natural equivalence $\mathbf{Tors}(X_{\mathrm{\text{\'et}}}, G) \cong \mathbf{Tors}(X_{\text{\'Et}}, G)$ 
+    inducing a bijection of pointed sets $\mathrm{Tors}(X_{\text{\'et}}, G) \xrightarrow{\cong} \mathrm{Tors}(X_{\text{\'Et}}, G)$ 
+    which is an isomorphism of abelian groups if $G$ is abelian.
+    And every $G$-torsor, in each of the above sites can be realized as a scheme, which is a prinicipal $G$-bundle.
+\end{cor}
+
+%%% %%% %%% %%% %%% %%% %%% %%%
+%       Torsors and Cohomology
+%%% %%% %%% %%% %%% %%% %%% %%%
+
+% \subsection*{Torsors and Cohomology}
+% We qoute without proof:
+% \begin{theorem}
+% There is a natural bijection of pointed sets     
+% $\text{Tors}(\mathcal{G|_T}) \to \check{H}^1(T, \mathcal{G})$. Moreover, if $\mathcal{G}$ is an abelian group sheaf, it's an isomorphism of abelian groups.
+% \end{theorem}
+
+% The idea is that for every $[\mathcal{P}] \in \text{Tors}(T, \mathcal{G})$ 
+% We 
+% \begin{enumerate}
+%     \item Choose a covering $\{U_i \to T\}$ such that $\mathcal{P}(U_i) \neq \emptyset$ for all $i$
+%     \item choose sections $\alpha_i \in \mathcal{F}(U_i)$
+% \end{enumerate}
+
+% Then we note that for all $(i,j)$ the elements $\alpha_i |_{U_i \times_X U_j}$ and $\alpha_j |_{U_i \times_X U_j}$ differ by a unique element of $\mathcal{G}(U_{ij})$
+% there exists a unique $s_{ij} \in \mathcal{G}(U_{ij})$ such that $\alpha_i |_{U_i \times_X U_j} = s_{ij}(\alpha_j |_{U_i \times_X U_j})$. 
+% One can then easily see that $(s_{ij})$ defines an element of  $\check{H}^1(T, \mathcal{G})$
+% which is independent of the choice of repreantiative $\cP$, choice of covering $\{U_i \to T\}$ and choice of sections.
+
+We will also use the standard identification between torsors and first
+\'etale cohomology. For an abelian sheaf of groups $G$ on
+$X_{\mathrm{\acute et}}$, there is a natural group isomorphism
+\[
+\Tors(X_{\mathrm{\acute et}},G)\xrightarrow{\ \cong\ }
+H^1_{\mathrm{\acute et}}(X,G),
+\]
+where the group operation on torsor classes is induced by contracted
+product \cite[III, \S4, Proposition~4.6 and Remark~4.8(b)]{milneEC}. This identification allows us to describe
+cyclic torsors by their cohomology classes in Kummer, Artin--Schreier, and
+Artin--Schreier--Witt theory.
+
+
+
+%%% %%% %%% %%% %%% %%% %%% %%%
+%       Constant Finite Group Torsors
+%%% %%% %%% %%% %%% %%% %%% %%%
+
+\subsection*{Constant Finite Group Torsors}
+
+Let $G$ be a finite group, within this section, we denote the associated constant group scheme over $X$ by $\underline{G}$ to maintain a clear distinction between the group as a set and the group as a scheme. In subsequent sections, we shall follow the standard practice of identifying $G$ with its constant group scheme and omit the underline for brevity.
+
+$\underline{G}$ is given by $\coprod_{g \in G} X$ with the action shuffeling the $X$'s according to multiplication.
+
+By following the definitions, one sees that if $X$ be a connected scheme and $f : Y \to X$ is a finite Galois cover with Galois group $G$. 
+Then, $f : Y \to X$ is a principal $\underline{G}$-bundle.
+(Recall that a \textit{finite Galois cover} is a finite étale surjection $Y \to X$ with $Y$ connected and such that 
+$G = \text{Aut}(Y/X)$ acts transitively on the geometric points of $Y$ lying over any geometric point of $X$).
+
+On the otherhand if $f: Y \to X$ is a principal $\underline{G}$-bundle with $Y$ connected, then $Y$ is a finite Galois cover with
+automorphism group $G$.
+
+However, not all $\underline{G}$-torsors are connected. If $H\subset G$ is a proper subgroup then any connected finite \'etale cover $f: Y \to X$ with 
+Galois group $H$ gives rise to a non-connected $\underline{G}$-torsor by looking at the induced $\underline{G}$-torsor $\varphi_*(Y)$ under the inclusion $\varphi: \underline{H} \to \underline{G}$.
+On the otherhand, if we fix a geometric point $\overline{x} \to X$, then to give an homomorphism
+$\rho \in \mathrm{Hom}_{\mathrm{cont}}(\pi_1^{\mathrm{et}}(X, x), G)$ is equivilant to give a connected pointed Galois cover
+$(Y, \overline{y}) \to (X, \overline{x})$ with Galois group $H=\rho(\pi_1^{\mathrm{et}}(X, x)) \subset G$. 
+Thus, pushing forward to $\underline{G}$ we get a prinicipal $\underline{G}$-bundle. The choice of a different geometric point $\overline{x'} \to X$
+differ the homomorphism by an inner automorphism, thus we have:
+
+\begin{theorem}\label{theorem:equivalence_fundamental_covers}
+    Let $X$ be a connected scheme and $\overline{x}$ a geometric point of $X$. Suppose in addition that $G$ is a finite abstract group. 
+    Define a map
+    \begin{equation}
+        \mathrm{Hom}_{\mathrm{cont}}(\pi_1^{\mathrm{et}}(X, \overline{x}), G) / \mathrm{Inn}(G) \to \mathrm{Tors}(X_{\text{\'Et}}, \underline{G}) 
+    \end{equation}
+by sending a homomorphism $\rho : \pi_1^{\mathrm{et}}(X, \overline{x}) \to G$ 
+to the principal $\underline{G}$-bundle $\varphi_*(Y)$ where $Y$ is the principal $\underline{\rho(\pi_1^{\mathrm{et}}(X, \overline{x}))}$-bundle 
+obtained above and $\varphi$ is the inclusion $\rho(\pi_1^{\mathrm{et}}(X, \overline{x})) \hookrightarrow G$. Then, the map 
+ is a bijection of pointed sets where the trivial homomorphisms
+  (which is the only element of its $\mathrm{Inn}(G)$-orbit) is the distinguished element of the left hand side.
+\end{theorem}
+
+If $G$ is abelian then $\mathrm{Inn}(G)$ is trivial, and we obtain:
+\begin{cor}\label{cor:abelian_equivilance_fundamental_torsors}
+    Let $G$ be a finite abelian group, $X$ a connected scheme, and $\overline{x}$ a geometric point of $X$. Then, the map from \Cref{theorem:equivalence_fundamental_covers}
+     induces an isomorphism of abelian groups
+    \begin{equation}
+        \mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{ét}}(X, \overline{x}), G) \xrightarrow{\cong} \Tors(X_{\text{\'Et}}, \underline{G})
+    \end{equation}
+\end{cor}
+
+For $G=\Lambda^\times$, the character in
+\Cref{cor:abelian_equivilance_fundamental_torsors} is also the monodromy
+character of the associated rank-one $\Lambda$-local system. In particular,
+the torsor and the local system have the same restrictions to inertia and to
+the upper ramification groups. Thus, one has ramification bounded by a given
+modulus, or is tamely ramified along a given divisor, if and only if the other
+does.
+
+\subsection*{Quotients and Decomposition of Torsors}
+
+Let $\mathcal{H}$ be a sheaf of groups acting on a sheaf $\mathcal{P}$ on a
+site $\sC$. The \textbf{quotient sheaf} $\mathcal{P}/\mathcal{H}$ is the
+coequalizer in $\operatorname{Sh}(\sC)$
+\[
+\mathcal{H}\times\mathcal{P}
+\rightrightarrows
+\mathcal{P}\longrightarrow\mathcal{P}/\mathcal{H},
+\]
+where the parallel arrows are the action and the projection.
+Equivalently, it is the sheaf associated with the presheaf of orbits
+$U\mapsto\mathcal{H}(U)\backslash\mathcal{P}(U)$. We use the notation
+$\mathcal{P}/\mathcal{H}$ even though our torsor actions are written on the
+left. In particular, the quotient always exists as a sheaf. It is
+characterized by the following universal property:
+for every sheaf $\mathcal{F}$, regarded as an $\mathcal{H}$-sheaf with the
+trivial action, composition with
+$\mathcal{P}\to\mathcal{P}/\mathcal{H}$ identifies morphisms
+$\mathcal{P}/\mathcal{H}\to\mathcal{F}$ with the
+$\mathcal{H}$-equivariant morphisms $\mathcal{P}\to\mathcal{F}$, equivalently
+with morphisms $f$ satisfying $f(hp)=f(p)$ on local sections. A quotient
+sheaf need not in general be representable by a scheme; representability in
+the finite-torsor situation used here is part of the next proposition.
+
+Let $G$ be a finite abelian group, let $H\subseteq G$ be a subgroup, and let
+$\pi:G\to G/H$ be the quotient homomorphism.
+
+\begin{prop}\label{prop:quotient_torsors_finite}\label{prop:quotient_torsors}
+Let $\mathcal{P}\to X$ be a $G$-torsor in $X_{\text{ét}}$. The quotient sheaf
+$\mathcal{P}/H$ is represented by a finite étale $X$-scheme, and there is a
+canonical isomorphism of $G/H$-torsors
+\[
+\mathcal{P}/H \xrightarrow{\sim}
+\pi_*\mathcal{P}=(G/H)\times^G\mathcal{P}.
+\]
+Consequently, $\mathcal{P}\to X$ admits a canonical factorization
+\[
+\mathcal{P}\xrightarrow{\phi}\mathcal{P}/H\xrightarrow{\psi}X,
+\]
+where $\phi$ is an $H$-torsor and $\psi$ is a $G/H$-torsor. This
+factorization is unique up to a unique isomorphism commuting with the
+projections.
+\end{prop}
+
+\begin{proof}
+The canonical morphism
+\[
+\mathcal{P}\longrightarrow\pi_*\mathcal{P},
+\qquad p\longmapsto[1,p],
+\]
+is $H$-invariant because $\pi(H)=1$. The universal property of the quotient
+sheaf therefore gives a canonical morphism
+\[
+\mathcal{P}/H\longrightarrow\pi_*\mathcal{P}.
+\]
+Choose an étale cover $U\to X$ that trivializes $\mathcal{P}$. Over $U$ this
+morphism identifies with the identity of $(G/H)\times U$, since
+\[
+(G\times U)/H\cong(G/H)\times U
+\qquad\text{and}\qquad
+\pi_*\mathcal{P}|_U\cong(G/H)\times U.
+\]
+It is therefore an isomorphism of sheaves. The contracted product
+$\pi_*\mathcal{P}$ is a $G/H$-torsor and, by
+\Cref{theorem:torsors_are_realized_as_spaces}, is represented by a finite
+étale $X$-scheme. Hence the same is true of $\mathcal{P}/H$.
+
+Under the same local trivialization, the morphism
+$\mathcal{P}\to\mathcal{P}/H$ is the product of the quotient map with the
+identity,
+\[
+G\times U\longrightarrow(G/H)\times U,
+\]
+and is thus an $H$-torsor. Finally, suppose
+$\mathcal{P}\to\mathcal{Q}\to X$ is another such factorization. Since an
+$H$-torsor is locally split, every $H$-invariant morphism out of
+$\mathcal{P}$ descends uniquely through $\mathcal{Q}$. Thus $\mathcal{Q}$
+satisfies the same universal property as $\mathcal{P}/H$, which gives the
+unique isomorphism compatible with the projections.
+\end{proof}
+

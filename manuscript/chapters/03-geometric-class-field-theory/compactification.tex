@@ -1,0 +1,123 @@
+% !TeX root = ../../../main.tex
+\section{Takeuchi's Compactification of the Abel--Jacobi Morphism}\label{section:BlowupOfSymmetricPowerOfCurves}
+We recall that our objective is to descend the $G$-torsor $\cP^{[d]}$ from
+$U^{(d)}$ to $\PicCm[d]$ along the Abel--Jacobi map $\Phi_d$:
+
+\[
+\begin{tikzcd}
+ \cP^{[d]} \arrow[d, purple]\\
+ U^{(d)} \arrow[r, "\Phi_d"] & \PicCm[d]
+\end{tikzcd}
+\]
+
+
+(Here, the purple arrow emphasizes that $\cP^{[d]}$ is a torsor on the
+\'etale site of $U^{(d)}$.)
+
+In the ramified case $\mdls>0$, \Cref{theorem:abel-jacobi-fibers}
+identifies the geometric fibers of $\Phi_d$ with affine spaces. Since
+$\Phi_d$ is not proper, the proper-smooth fundamental-group argument
+available in the unramified case cannot be applied directly. Takeuchi
+\cite[\S3]{takeuchi2018blow} overcomes this difficulty by extending $\Phi_d$
+to a projective-space bundle. We now recall the ambient blowup and the
+properties of the resulting compactification that will be used below.
+
+Let $\mdls = \sum_{i=1}^s n_iP_i$, where the $P_i$ are distinct closed
+points of $C$, be a modulus on $C$, and let $d$ satisfy
+\Cref{equation:degree-condition}.
+Takeuchi \cite[\S3, before (3.6)]{takeuchi2018blow} defines $Z_0=Z_0(\mdls,d)$ as the closed subscheme of
+$C^{(d)}$ given by the image of the closed immersion
+$C^{(d-\deg\mdls)}\to C^{(d)}$ that adds $\mdls$.
+He also defines $X_{\mdls,d}$ as the blowup of $C^{(d)}$ along $Z_0$.
+Let $E_0=E_{\mdls,d}=Z_0(\mdls,d)\times_{C^{(d)}}X_{\mdls,d}$ be the
+exceptional divisor. It is irreducible of codimension~$1$, and we let
+$\eta_0=\eta_{\mdls,d}$ be its generic point.
+
+
+Diagrammatically:
+\[\begin{tikzcd}
+\overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] & X_{\mdls, d} \arrow[d, "\pi"] \\
+Z_0 \arrow[r, hook]           & C^{(d)}
+\end{tikzcd}\]
+
+Incorporating $U^{(d)}$, the torsor $\cP^{[d]}$, and the Abel--Jacobi map,
+we have:
+\[
+\begin{tikzcd}
+    & & \cP^{[d]} \arrow[d, purple]\\
+\overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] &
+X_{\mdls, d} \arrow[d, "\pi"]  & \arrow[l, hook'] \arrow[dl, hook'] U^{(d)} \arrow[r, "\Phi_d"] & \PicCm[d] \\
+Z_0 \arrow[r, hook]           & C^{(d)}
+\end{tikzcd}
+\]
+
+We will not need Takeuchi's explicit fiber-product definition of the
+compactification. The properties required below are summarized in the
+following existence and structure statement, which follows from
+\cite[\S3, (3.9), Proposition~3.7, and Corollary~3.8]{takeuchi2018blow}.
+
+\begin{theorem}[Takeuchi]\label{theorem:takeuchi-compactification-theorem}
+    Let $d$ satisfy \Cref{equation:degree-condition}. There exists an open
+    subscheme $\Cmod{d}\subset X_{\mdls,d}$ containing $U^{(d)}$ and a
+    morphism
+    \[
+        \widetilde\Phi_d\colon \Cmod{d}\longrightarrow\PicCm[d]
+    \]
+    extending $\Phi_d\colon U^{(d)}\to\PicCm[d]$, such that $\Cmod{d}$ is a
+    projective space bundle over $\PicCm[d]$.
+    Furthermore, the complement of $U^{(d)}$ in $\Cmod{d}$ is the scheme-theoretic intersection
+    \[
+        E_0 \times_{X_{\mdls,d}} \Cmod{d}
+        \cong Z_0 \times_{C^{(d)}} \Cmod{d}.
+    \]
+\end{theorem}
+
+
+
+Diagrammatically we have:
+\[
+\begin{tikzcd}
+    &  & \cP^{[d]} \arrow[d, purple]\\
+    E_0 \times_{X_{\mdls,d}} \Cmod{d} \arrow[d] \arrow[r]  & \Cmod{d} \arrow[d, hook] \arrow[rd, "\widetilde\Phi_d"]  & U^{(d)} \arrow[l, hook'] \arrow[d, "\Phi_d"] \\
+\overline{\{\eta_0 \}} =  E_0 \arrow[r] \arrow[d] &
+X_{\mdls, d} \arrow[d, "\pi"]  &  \PicCm[d] &  \\
+Z_0 \arrow[r, hook]           & C^{(d)}
+\end{tikzcd}
+\]
+
+Takeuchi's description of the compactification identifies its boundary as a
+relative hyperplane; see
+\cite[Lemmas~3.2 and~3.3(1), Theorem~3.4, (3.9), and
+Corollary~3.8]{takeuchi2018blow}. This gives the following fiberwise
+description.
+
+\begin{cor}[The boundary is a relative hyperplane]
+\label{lemma:geometric-generic-fiber-takeuchi}
+The boundary
+\[
+    H=\Cmod{d}\setminus U^{(d)}
+\]
+is a smooth relative hyperplane divisor in the projective-space bundle
+$\widetilde\Phi_d:\Cmod{d}\to\PicCm[d]$. Consequently, if
+$\bar s=\Spec\Omega\to\PicCm[d]$ is any geometric point and
+$r=d-\deg\mdls-g+1$, then there is an isomorphism of pairs\footnote{For pairs
+$(X,D)$ and $(Y,E)$, an isomorphism of pairs is an isomorphism
+$f\colon X\xrightarrow{\sim}Y$ such that
+$D=X\times_Y E$ as closed subschemes of $X$. No canonical choice of $f$ is
+asserted here.}
+\[
+    \left((\Cmod{d})_{\bar s},H_{\bar s}\right)
+    \cong
+    \left(\mathbb P^r_{\Omega},\mathbb P^{r-1}_{\Omega}\right),
+\]
+and hence $U^{(d)}_{\bar s}\cong\mathbb A^r_{\Omega}$.
+\end{cor}
+
+\begin{proof}
+The formation of a projective bundle and of its relative hyperplane commutes
+with arbitrary base change. Hence, after base change to $\bar s$, the
+projective-space bundle $\Cmod{d}$ becomes $\mathbb P^r_{\Omega}$ and $H$
+becomes a hyperplane $\mathbb P^{r-1}_{\Omega}$. Its complement is therefore
+$\mathbb A^r_{\Omega}$.
+\end{proof}
+

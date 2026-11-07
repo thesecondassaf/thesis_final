@@ -1,0 +1,43 @@
+% !TeX root = ../../../main.tex
+\chapter{A Failure of an Artin--Schreier Induction Strategy}
+\label{appendix:artin_schreier_induction_failure}
+\label{section:a_wrong_path}
+Part~(2) of \Cref{theorem:cyclic_cases_after_blowup} proves the order-$p$
+case by an explicit Artin--Schreier calculation. Part~(3) treats
+$G=\Z/p^r\Z$ by working directly with an Artin--Schreier--Witt equation.
+It is natural to ask whether the second calculation can instead be obtained
+by iterating the first.
+
+Indeed, let
+\[
+G=\Z/p^r\Z,\qquad
+H=p^{r-1}G\cong\Z/p\Z,\qquad
+G/H\cong\Z/p^{r-1}\Z,
+\]
+and factor a $G$-torsor $\cP\to U$ as
+\[
+\cP\longrightarrow\cP/H\longrightarrow U.
+\]
+The tempting induction has three steps:
+\begin{enumerate}
+  \item apply the induction hypothesis to the $G/H$-torsor
+        $\cP/H\to U$;
+  \item regard $\cP\to\cP/H$ as an $H\cong\Z/p\Z$-torsor and apply the
+        Artin--Schreier calculation after compactifying its base;
+  \item combine the two unramifiedness statements to recover the result for
+        the original $G$-torsor.
+\end{enumerate}
+
+The first two steps do produce natural statements, but they live over
+different exceptional valuations. Passing from one to the other involves a
+base change induced by the comparison between the symmetric power of a
+torsor as a scheme and its symmetric power as a torsor. That base change can
+be wildly ramified. The purpose of this appendix is to formulate the proposed
+induction precisely, follow both inputs through the resulting valuation
+tower, and explain why they do not by themselves imply the required
+conclusion.
+
+
+\input{manuscript/appendices/B-failed-induction/attempted-induction.tex}
+
+\input{manuscript/appendices/B-failed-induction/valuation-obstruction.tex}

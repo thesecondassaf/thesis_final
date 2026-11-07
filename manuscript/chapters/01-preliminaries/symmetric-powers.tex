@@ -1,0 +1,410 @@
+% !TeX root = ../../../main.tex
+\section{Symmetric Powers of Schemes and Torsors}
+This section reviews the construction of quotients for schemes and torsors under finite group actions, specifically focusing on symmetric powers. 
+To ensure these quotients exist as schemes, we utilize the framework of admissible actions from \cite{sga1}. 
+Our treatment here closely follows the exposition in \cite{Guignard2018}
+The definitions and results presented below are adapted from their work, the difference being that we ask $\Gamma$ to act on the left, to make the later construction of symmetric powers more natural. 
+This foundation provides the necessary criteria for admissibility and base change required to define the symmetric powers of a scheme $X$
+ and a $G$-torsor $\mathcal{P}$ over $X$.
+
+
+Let $S$ be a scheme.
+
+\begin{definition}[(\cite{sga1}, V.1.7).]
+    \noindent
+    \begin{itemize}
+        \item Let $T$ be an object of a category $\mathcal{C}$ endowed with a right action of a group $\Gamma$. We say that \textbf{the quotient $T/\Gamma$ exists} in $\mathcal{C}$ if the covariant functor
+    \[
+    \begin{aligned}
+    \mathcal{C} &\to \text{Sets} \\
+    U &\mapsto \text{Hom}_{\mathcal{C}}(T, U)^{\Gamma}
+    \end{aligned}
+    \]
+    is representable by an object of $\mathcal{C}$.
+    \item Let $T$ be an $S$-scheme. An action of a finite group $\Gamma$ on $T$ is \textbf{admissible} if there exists an affine $\Gamma$-invariant morphism $f : T \to T'$ such that the canonical morphism $\mathcal{O}_{T'} \to f_* \mathcal{O}_T$ induces an isomorphism from $\mathcal{O}_{T'}$ to $(f_* \mathcal{O}_T)^{\Gamma}$.
+\end{itemize}
+\end{definition}
+
+%% [REVIEW: never cited -- admissibility facts are used only implicitly; consider labeling + citing, or compressing into prose with the SGA1 citation]
+\begin{prop}
+    The following holds:
+    \begin{enumerate}
+        \item \textbf{(\cite{sga1} V.1.3)}. Let $T$ be an $S$-scheme endowed with an admissible right action of a finite group $\Gamma$. If $f : T \to T'$ is an affine $\Gamma$-invariant morphism such that the canonical morphism $\mathcal{O}_{T'} \to f_* \mathcal{O}_T$ induces an isomorphism from $\mathcal{O}_{T'}$ to $(f_* \mathcal{O}_T)^{\Gamma}$, then the quotient $T/\Gamma$ exists and is isomorphic to $T'$.
+        \item \textbf{(\cite{sga1}, V.1.8)}. Let $T$ be an $S$-scheme endowed with a right action of a finite group $\Gamma$. Then, the action of $\Gamma$ on $T$ is admissible if and only if $T$ is covered by $\Gamma$-invariant affine open subsets.
+        \item \textbf{(\cite{sga1}, V.1.9)}. Let $T$ be an $S$-scheme endowed with an admissible right action of a finite group $\Gamma$, and let $S'$ be a flat $S$-scheme. Then, the action of $\Gamma$ on the $S'$-scheme $T \times_S S'$ is admissible, and the canonical morphism
+            \[
+            (T \times_S S')/\Gamma \to (T/\Gamma) \times_S S'
+            \]
+            is an isomorphism.
+    \end{enumerate}
+\end{prop}
+
+
+
+Now let $X$ be an $S$-scheme and let $d \geq 0$ be an integer. The group ${S}_d$ of permutations of $\llbracket 1, d \rrbracket$ acts on the right on the $S$-scheme $X^{\times_S d} = X \times_S \dots \times_S X$ by the formula
+\[
+(x_i)_{i \in \llbracket 1, d \rrbracket} \cdot \sigma = (x_{\sigma(i)})_{i \in \llbracket 1, d \rrbracket}.
+\]
+
+\begin{prop}[\cite{Guignard2018} Proposition 2.27]
+    If $X$ is a scheme, Zariski locally quasi-projective over $S$, then the right action of the symmetric group $S_d$ on the $d$-fold fiber product 
+    $X^{\times_S d}$ is admissible. 
+    Consequently, the quotient $\mathrm{Sym}_S^d(X) = X^{\times_S d}/S_d$ exists as a scheme over $S$.
+\end{prop}
+
+\begin{definition}
+    Under the hypotheses of the proposition above, we define the \textbf{relative symmetric product} of $X$ over $S$ 
+    of degree $d$ as the quotient
+    $$\mathrm{Sym}_S^d(X) \coloneqq X^{\times_S d}/S_d.$$
+    When the base scheme $S$ is clear from the context, we shall denote this quotient by 
+    $X^{(d)}$.
+\end{definition}
+
+Guignard shows that when $X=\Spec(B)$ and $S=\Spec(A)$ then $\Sym_{S}^d(X)$ is representable by an affine $S$-scheme (See \cite[Remark~2.28]{Guignard2018}).
+
+\begin{prop}[{\cite[Proposition~2.29]{Guignard2018}}]\label{prop:symmetric_power_flat_base_change}
+If $X$ is flat and Zariski-locally quasi-projective over $S$, then $\text{Sym}_S^d(X)$ is flat over $S$. Moreover, for any $S$-scheme $S'$, the canonical morphism
+\[
+\text{Sym}_{S'}^d(X \times_S S') \to \text{Sym}_S^d(X) \times_S S'
+\]
+is an isomorphism.
+\end{prop}
+
+\subsection*{Geometric Properties of Symmetric Powers}
+
+We record the geometric properties of symmetric powers that will be used in
+both main parts of the thesis.
+
+\begin{theorem}\label{theorem:int_geoint_implies_productint}
+Let $X$ and $Y$ be integral schemes over a field $k$. If $X$ is geometrically
+integral, then $X \times_k Y$ is integral. If both $X$ and $Y$ are
+geometrically integral, then $X \times_k Y$ is geometrically integral.
+\end{theorem}
+\begin{proof}
+By \stackstag{038K}, a geometrically integral scheme is both geometrically
+irreducible and geometrically reduced. Since $X$ is geometrically irreducible,
+the projection
+\[
+X\times_k Y\longrightarrow Y
+\]
+induces a bijection on irreducible components by \stackstag{038F}.
+Because $Y$ is integral, it follows that $X\times_k Y$ is irreducible.
+Moreover, $X$ is geometrically reduced and $Y$ is reduced, so
+$X\times_k Y$ is reduced by \stackstag{035Z}. Hence it is integral.
+
+If both $X$ and $Y$ are geometrically integral, the same argument applies
+after every field extension $k'/k$. Thus
+\[
+(X\times_kY)_{k'}\cong X_{k'}\times_{k'}Y_{k'}
+\]
+is integral for every $k'/k$, and therefore $X\times_kY$ is geometrically
+integral.
+\end{proof}
+
+\begin{prop}\label{prop:relative_symmetric_power_smooth}
+Let $f:X\to S$ be a smooth, Zariski-locally quasi-projective morphism of
+relative dimension one. Then the relative symmetric power
+$X_S^{(d)}=\operatorname{Sym}_S^d(X)$ is smooth over $S$ of relative dimension
+$d$.
+\end{prop}
+
+\begin{proof}
+The case $d=0$ is immediate. By
+\Cref{prop:symmetric_power_flat_base_change}, $X_S^{(d)}$ is flat over $S$,
+and its formation commutes with arbitrary base change. It is locally of
+finite presentation by noetherian approximation and this base-change
+compatibility.
+
+For every geometric point $\bar s\to S$, we have
+\[
+(X_S^{(d)})_{\bar s}\cong(X_{\bar s})^{(d)}.
+\]
+Since $X_{\bar s}$ is a smooth curve over an algebraically closed field,
+its symmetric power is smooth of dimension $d$ by
+\cite[Chapter~III, Proposition~3.2]{milneAV}.
+The fiberwise criterion for smoothness (\stackstag{01V8}) therefore proves
+the assertion.
+\end{proof}
+
+\begin{cor}\label{cor:symmetric_power_curve_geometry}
+Let $C$ be a smooth, projective, geometrically connected curve over a field
+$k$. For every $d\geq 0$, the scheme $C^{(d)}$ is smooth and geometrically
+integral. Moreover, every finite product of symmetric powers of $C$ is
+geometrically integral.
+\end{cor}
+
+\begin{proof}
+The smoothness follows from \Cref{prop:relative_symmetric_power_smooth}.
+The curve $C$ is geometrically integral by \stackstag{0366}. After any field
+extension, $C^d$ is integral and its image under the quotient map
+$C^d\to C^{(d)}$ is irreducible. Since $C^{(d)}$ is smooth, it is geometrically
+reduced, and hence geometrically integral. The assertion about finite products
+now follows inductively from \Cref{theorem:int_geoint_implies_productint}.
+\end{proof}
+
+We shall also need the following symmetric-polynomial calculation.
+
+Let $e_1,\dots,e_d$ be the elementary symmetric polynomials in
+$x_1,\dots,x_d$, put $y_i=x_i^{-1}$, and write
+\[
+    \kappa:=k(e_1/e_d,\dots,e_{d-1}/e_d).
+\]
+
+\begin{lemma}[Symmetric regularity]
+\label{lemma:symmetric_regularity}
+If $\Phi\in k[y_1,\dots,y_d]^{S_d}$ and every monomial of $\Phi$ has total
+degree strictly less than $d$, then
+\[
+    \Phi\in k(e_1/e_d,\dots,e_{d-1}/e_d)=\kappa.
+\]
+\end{lemma}
+
+\begin{proof}
+The identity
+\[
+    e_j(y_1,\dots,y_d)
+       =\frac{e_{d-j}(x_1,\dots,x_d)}{e_d(x_1,\dots,x_d)}
+\]
+puts $e_1(y),\dots,e_{d-1}(y)$ in $\kappa$. By the fundamental theorem of
+symmetric polynomials, each homogeneous part of $\Phi$ is a polynomial in
+$e_1(y),\dots,e_d(y)$ with their natural degrees. Since every homogeneous
+part has degree $<d$, the generator $e_d(y)$ cannot occur. Hence
+$\Phi\in\kappa\subset\kappa[[e_d]]$.
+\end{proof}
+
+
+\subsection*{Symmetric Powers of Torsors}
+Let $G$ be a finite abelian group, let $\cP$ be a $G$-torsor over an $S$-scheme $X$ in $S_{\text{Ét}}$. 
+
+
+%% [REVIEW: never cited -- presumably the input for prop:symmetric_power_torsor (Guignard 2.32), but no proof ever invokes it; cite it there or remove]
+\begin{prop}[{[\cite{sga1}]}, IX.5.8]
+Assume that $\cP$ and $X$ are endowed with right actions from a finite group $\Gamma$ 
+such that the morphism $\cP \to X$ is $\Gamma$-equivariant, and that the following properties hold:
+\begin{enumerate}
+    \item[(a)] The right $\Gamma$-action on $\cP$ commutes with the left $G$-action.
+    \item[(b)] The right $\Gamma$-action on $X$ is admissible, and the quotient morphism $X \to X/\Gamma$ is finite.
+    \item[(c)] For any geometric point $\bar{x}$ of $X$, the action of the stabilizer $\Gamma_{\bar{x}}$ of $\bar{x}$ in $\Gamma$ on the fiber $\cP_{\bar{x}}$ of $\cP$ at $\bar{x}$ is trivial.
+\end{enumerate}
+Then the action of $\Gamma$ on $\cP$ is admissible, and $\cP/\Gamma$ is a $G$-torsor over $X/\Gamma$ in $S_{\text{Ét}}$.
+\end{prop}
+
+By \Cref{theorem:torsors_are_realized_as_spaces}, $\cP$ is representable by a finite étale $X$-scheme.
+For each $i \in  \llbracket 1, d \rrbracket$ let $p_i : X^{\times_S d} \to X$ be the projection on $i$-th factor, and let us consider the $G$-torsor
+\[
+p_1^{-1}\cP \otimes^G \cdots \otimes^G p_d^{-1}\cP = \KG \backslash \cP^{\times_S d}
+\]
+over $X^{\times_S d}$, where $\KG \subseteq G^d$ is the kernel of the multiplication morphism $G^d \to G$ (the dependence on $d$ is suppressed in the notation).
+Equivalently, this is the contraction of the $G^d$-torsor
+$p_1^{-1}\cP\times\cdots\times p_d^{-1}\cP$ along the multiplication map
+$m:G^d\to G$.
+Under the identification $G^d/\KG\simeq G$ induced by $m$, the residual
+$G$-action is given by
+\[
+g\cdot[(u_1,\dots,u_d)]
+    =[(g_1u_1,\dots,g_du_d)],
+\]
+where $(g_1,\dots,g_d)$ is any lift of $g$, so that
+$g_1\cdots g_d=g$. This is independent of the chosen lift because any two
+lifts differ by an element of $\KG$.
+The object $\KG \backslash \cP^{\times_S d}$ of $S_{\text{Ét}}$ is too representable by an $S$-scheme which is finite étale over $X^{\times_S d}$.
+The group ${S}_d$ acts on the right on $\KG \backslash \cP^{\times_S d}$ by the formula
+\[
+(p_i)_{i \in \llbracket 1, d \rrbracket} \cdot \sigma = (p_{\sigma(i)})_{i \in \llbracket 1, d \rrbracket}.
+\]
+This action of ${S}_d$ commutes with the left action of $G$ on $\KG \backslash \cP^{\times_S d}$.
+
+\medskip
+
+\begin{prop}[\cite{Guignard2018} Proposition 2.32.]\label{prop:symmetric_power_torsor}
+If $X$ is Zariski-locally quasi-projective on $S$, then the right action of ${S}_d$ on $\KG \backslash \cP^{\times_S d}$ is admissible,
+so that the quotient $\cP^{[d]}$ of $\KG \backslash \cP^{\times_S d}$ by ${S}_d$ exists as a scheme over $S$.
+Moreover, the canonical morphism $\cP^{[d]} \to \mathrm{Sym}_S^d(X)$ is a $G$-torsor, 
+and the morphism
+\[
+p_1^{-1}\cP \otimes^G \cdots \otimes^G p_d^{-1}\cP \to r^{-1}\cP^{[d]}
+\]
+where $r : X^{\times_S d} \to \mathrm{Sym}_S^d(X)$ is the canonical projection, is an isomorphism of $G$-torsors over $X^{\times_S d}$.
+\end{prop}
+
+\begin{definition}[Symmetric powers of rank-one local systems]
+\label{definition:symmetric_power_local_system}
+In the setting of the preceding proposition, let $\Lambda$ be a finite
+commutative ring, let $G=\Lambda^\times$, and let
+$\mathcal{F}$ be a rank-one $\Lambda$-local system on $X$. If
+$\mathcal{P}=\operatorname{Fr}(\mathcal{F})$, we define
+\[
+\mathcal{F}^{[d]}:=\mathcal{P}^{[d]}\times^G\Lambda
+\]
+on $X^{(d)}$. Thus there is a canonical identification
+\[
+\operatorname{Fr}\bigl(\mathcal{F}^{[d]}\bigr)
+\cong \mathcal{P}^{[d]}.
+\]
+By \Cref{prop:symmetric_power_torsor}, its pullback along
+$r:X^{\times_S d}\to X^{(d)}$ satisfies
+\[
+r^{-1}\mathcal{F}^{[d]}
+\cong p_1^{-1}\mathcal{F}\otimes_\Lambda\cdots\otimes_\Lambda
+p_d^{-1}\mathcal{F}.
+\]
+\end{definition}
+%the $S_d$-action on $\KG \backslash \cP^{\times_S d}$ is compatible with the $S_d$-action on $X^{\times_S d}$, so that we get a canonical morphism $\cP^{[d]} \to \mathrm{Sym}_S^d(X)$.
+
+% %Note that there is a canonical map $\cP^{\times_S d}/S_d \to \cP^$, and the $S_d$-action on $\KG \backslash \cP^{\times_S d}$ is compatible with the $S_d$-action on $X^{\times_S d}$, so that we get a canonical morphism $\cP^{[d]} \to \mathrm{Sym}_S^d(X)$.
+% \textcolor{red}{This entire corollary is not exact, replace with: 
+% https://gemini.google.com/app/8d257f0b8e6f5927
+% or
+% https://gemini.google.com/app/f36ed1280d780bea
+% }
+
+\begin{prop}[Semidirect-product description]
+\label{prop:symmetric_power_semidirect_quotient}
+Let $\Xi_G:=\KG\rtimes S_d$, where $S_d$ acts on $\KG$ by permuting
+coordinates. Then $\Xi_G$ acts on $\cP^{\times_S d}$ by
+\[
+((g_1,\ldots,g_d),\sigma)\cdot(p_1,\ldots,p_d)
+=
+(g_1p_{\sigma^{-1}(1)},\ldots,g_dp_{\sigma^{-1}(d)}),
+\]
+and there is a canonical isomorphism
+\[
+\cP^{[d]}
+\cong
+\Xi_G\backslash\cP^{\times_S d}.
+\]
+Moreover, the formation of $\cP^{[d]}$ commutes with flat base change on
+$S$. If, in addition, $X$ is flat over $S$, then it commutes with arbitrary
+base change; see \cite[Proposition~2.33]{Guignard2018}.
+\end{prop}
+
+\begin{proof}
+Because $G$ is abelian, the condition $\prod_{i=1}^d g_i=1$ defining
+$\KG$ is invariant under permutation of the coordinates. Thus the
+$S_d$-action normalizes $\KG$ and defines the semidirect product $\Xi_G$.
+By \Cref{prop:symmetric_power_torsor},
+\[
+\cP^{[d]}=(\KG\backslash\cP^{\times_S d})/S_d.
+\]
+The universal properties of the two quotients identify this iterated
+quotient canonically with $\Xi_G\backslash\cP^{\times_S d}$. Formation of
+the torsor quotient $\KG\backslash\cP^{\times_S d}$ commutes with base
+change, and the final admissible $S_d$-quotient commutes with flat base
+change by \cite[V.1.9]{sga1}. If $X$ is flat over $S$, compatibility with
+arbitrary base change is \cite[Proposition~2.33]{Guignard2018}.
+\end{proof}
+
+We record one further compatibility of symmetric powers. It will allow us
+later to replace a torsor by the connected torsor under its monodromy
+subgroup.
+
+\begin{lemma}[Symmetric powers and induced torsors]
+\label{lemma:symmetric_power_induced_torsor}
+Let $\iota:H\hookrightarrow G$ be an injection of finite abelian groups, and
+let $\cQ$ be an $H$-torsor on $U$. There is a canonical isomorphism of
+$G$-torsors over $U^{(d)}$
+\[
+    (\iota_*\cQ)^{[d]}\cong\iota_*(\cQ^{[d]}).
+\]
+\end{lemma}
+
+\begin{proof}
+Let
+\[
+    j:\cQ\longrightarrow\iota_*\cQ=G\times^H\cQ
+\]
+be the canonical morphism $(q\mapsto[1,q])$. It is $H$-equivariant, where
+$H$ acts on the target through $\iota$. Applying $j$ to each factor gives
+\[
+    j^{\times d}:\cQ^{\times d}\longrightarrow(\iota_*\cQ)^{\times d},
+    \qquad
+    (q_1,\dots,q_d)\longmapsto(j(q_1),\dots,j(q_d)).
+\]
+This map is compatible with permutations of the factors. Moreover, for
+$(h_1,\dots,h_d)\in H^d$,
+\[
+    j^{\times d}(h_1q_1,\dots,h_dq_d)
+      =(\iota(h_1)j(q_1),\dots,\iota(h_d)j(q_d)).
+\]
+Put $K_H:=\ker(H^d\to H)$. If $(h_1,\dots,h_d)\in K_H$, then
+\[
+    \iota(h_1)\cdots\iota(h_d)
+      =\iota(h_1\cdots h_d)=1,
+\]
+so $(\iota(h_1),\dots,\iota(h_d))\in\KG$. Hence $j^{\times d}$ descends to
+a morphism
+\[
+    \cQ^{[d]}=(K_H\rtimes S_d)\backslash\cQ^{\times d}
+       \longrightarrow
+    (\KG\rtimes S_d)\backslash(\iota_*\cQ)^{\times d}
+       =(\iota_*\cQ)^{[d]}.
+\]
+The induced map between the residual groups
+$H^d/K_H\simeq H$ and $G^d/\KG\simeq G$ is $\iota$. Therefore this morphism
+is $H$-equivariant, where $H$ acts on the target by
+$h\cdot x:=\iota(h)\cdot x$.
+By the universal property of induction, this extends uniquely to a
+$G$-equivariant morphism
+\[
+    \iota_*(\cQ^{[d]})\longrightarrow(\iota_*\cQ)^{[d]}.
+\]
+Both sides are $G$-torsors over $U^{(d)}$, so
+\Cref{prop:torsor_morphism_iso} shows that it is an isomorphism.
+\end{proof}
+
+
+
+
+%
+% COMPATIBILITY WITH ADDITION
+%
+\subsection*{Additivity of Symmetric Powers}
+For $d\geq 0$, write
+\[
+X_S^d:=\underbrace{X\times_S\cdots\times_S X}_{d\text{ factors}},
+\qquad X_S^0:=S.
+\]
+The construction of symmetric powers is compatible with a natural addition
+law. For any integers $d_1,d_2\geq 0$, concatenating the factors gives a
+canonical isomorphism
+\[
+c_{d_1,d_2}:X_S^{d_1}\times_S X_S^{d_2}
+\xrightarrow{\sim}X_S^{d_1+d_2}.
+\]
+It is equivariant for the inclusion
+$S_{d_1}\times S_{d_2}\hookrightarrow S_{d_1+d_2}$ and therefore induces
+the canonical \textbf{addition morphism}
+\[
++_{d_1,d_2}:X^{(d_1)}\times_S X^{(d_2)}
+\longrightarrow X^{(d_1+d_2)}.
+\]
+
+\begin{prop}\label{prop:symmetric_powers_on_curves}
+    Let $\cP$ be a $G$-torsor over $X$. There is a canonical isomorphism of $G$-torsors over $X^{(d_1)} \times_S X^{(d_2)}$:
+    \[
+    +_{d_1, d_2}^{-1} \left( \cP^{[d_1+d_2]} \right) \cong r_1^{-1} \cP^{[d_1]} \otimes^G r_2^{-1} \cP^{[d_2]}.
+    \]
+\end{prop}
+\begin{proof}
+Let $\pi = r_{d_1} \times r_{d_2}$. By the commutativity of the following diagram
+\[
+\begin{tikzcd}
+X_S^{d_1}\times_S X_S^{d_2} \arrow[r, "c_{d_1,d_2}", "\sim"'] \arrow[d, "\pi"'] & X_S^{d_1+d_2} \arrow[d, "r_{d_1+d_2}"] \\
+X^{(d_1)} \times_S X^{(d_2)} \arrow[r, "+_{d_1, d_2}"] & X^{(d_1+d_2)}
+\end{tikzcd}
+\]
+and applying \Cref{prop:symmetric_power_torsor}, we obtain canonical isomorphisms:
+\[
+\pi^{-1} \left( +_{d_1, d_2}^{-1} \cP^{[d_1+d_2]} \right) \cong r_{d_1+d_2}^{-1} \cP^{[d_1+d_2]} \cong \sideset{}{^G}\bigotimes_{i=1}^{d_1+d_2} p_i^{-1} \cP
+\]
+and
+\[
+\pi^{-1} (r_1^{-1} \cP^{[d_1]} \otimes^G r_2^{-1} \cP^{[d_2]}) \cong \left( \sideset{}{^G}\bigotimes_{i=1}^{d_1} p_i^{-1} \cP \right) \otimes^G \left( \sideset{}{^G}\bigotimes_{j=d_1+1}^{d_1+d_2} p_j^{-1} \cP \right).
+\]
+Since both pullbacks identify with
+\[
+\sideset{}{^G}\bigotimes_{k=1}^{d_1+d_2} p_k^{-1} \cP
+\]
+in an $S_{d_1} \times S_{d_2}$-equivariant manner, the isomorphism descends to the quotient $X^{(d_1)} \times_S X^{(d_2)}$ by \Cref{prop:symmetric_power_flat_base_change}.
+\end{proof}
+

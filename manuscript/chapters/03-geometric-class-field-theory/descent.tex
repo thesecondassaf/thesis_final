@@ -1,0 +1,101 @@
+% !TeX root = ../../../main.tex
+\section{Descent and Geometric Class Field Theory}\label{section:gcft-descent}
+
+The preceding section shows that $\cP^{[d]}$ extends uniquely from
+$U^{(d)}$ to Takeuchi's compactification $\Cmod{d}$. We now descend this
+extension to $\PicCm[d]$. The essential point is that the compactified
+Abel--Jacobi morphism has projective-space fibers: their trivial \'etale
+fundamental groups imply that every finite \'etale torsor on the
+compactification comes uniquely from the base.
+
+When $\mdls=0$, the usual Abel--Jacobi morphism already has
+projective-space fibers, so the same argument applies directly. We conclude
+the proof of \Cref{thm:GCFT_reduced} by translating the
+resulting torsor back into a rank-one local system.
+
+\begin{lemma}[Descent along projective-space fibers]
+\label{lemma:projective-space-fiber-descent}
+Let $f\colon X\to S$ be a proper smooth morphism of finite presentation
+over a connected scheme $S$, with geometric fibers isomorphic to projective
+spaces. Then pullback induces an equivalence between finite \'etale covers
+of $S$ and $X$, and hence between $G$-torsors on these schemes for every
+finite group $G$.
+\end{lemma}
+\begin{proof}
+For a geometric point $\bar s$ of $S$ and compatible geometric base points,
+the homotopy exact sequence (\stackstag{0C0J}) gives
+\[
+\pi_1^{\mathrm{et}}(X_{\bar s})\longrightarrow
+\pi_1^{\mathrm{et}}(X)\longrightarrow
+\pi_1^{\mathrm{et}}(S)\longrightarrow 1.
+\]
+Since projective spaces over separably closed fields have trivial \'etale
+fundamental group, $f$ induces an isomorphism
+\[
+\pi_1^{\mathrm{et}}(X)\xrightarrow{\sim}\pi_1^{\mathrm{et}}(S).
+\]
+The equivalence follows from the classification of finite \'etale covers by
+finite sets with continuous fundamental-group action, and it respects
+$G$-actions and the torsor condition.
+\end{proof}
+
+\begin{theorem}[Torsor formulation]\label{thm:GCFT_torsors}
+Let $\Lambda$ be a finite commutative ring whose cardinality is invertible
+in $k$, set $G=\Lambda^\times$, and let $\cP$ be a $G$-torsor on $U$ whose
+ramification is bounded by $\mdls$. For every sufficiently large integer
+$d$, there exists a $G$-torsor $\cQ_d$ on $\PicCm[d]$, unique up to
+isomorphism, such that
+\[
+\Phi_d^*\cQ_d\cong\cP^{[d]}.
+\]
+\end{theorem}
+
+\begin{proof}
+The scheme $\PicCm[d]$ is geometrically connected, being a torsor under
+the geometrically connected group $\PicCm[0]$.
+When $\mdls=0$ and $d$ is sufficiently large, the usual Abel--Jacobi morphism
+\[
+\Phi_d\colon C^{(d)}\longrightarrow\PicC[d]
+\]
+is proper and smooth with projective-space geometric fibers, even when $C$
+has no $k$-rational point
+\cite[Corollary~3.9]{takeuchi2018blow}. Thus
+\Cref{lemma:projective-space-fiber-descent} gives the required descent of
+$\cP^{[d]}$, including uniqueness.
+
+Suppose now that $\mdls>0$. For $d$ sufficiently large,
+\Cref{theorem:takeuchi-compactification-theorem} extends $\Phi_d$ to a
+projective space bundle
+\[
+\widetilde\Phi_d\colon
+\Cmod{d}\longrightarrow\PicCm[d].
+\]
+By \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified},
+$\cP^{[d]}$ is tamely ramified along
+$H=\Cmod{d}\setminus U^{(d)}$. Hence
+\Cref{lemma:ExtensionOfTamelyRamifiedSheaf} gives a unique extension
+$\widetilde{\cP}^{[d]}$ to $\Cmod{d}$.
+
+Applying \Cref{lemma:projective-space-fiber-descent} to
+$\widetilde\Phi_d$, we obtain a $G$-torsor $\cQ_d$ on $\PicCm[d]$ with
+\[
+\widetilde\Phi_d^*\cQ_d\cong\widetilde{\cP}^{[d]}.
+\]
+Restriction to $U^{(d)}$ gives $\Phi_d^*\cQ_d\cong\cP^{[d]}$.
+Full faithfulness of restriction from the normal scheme $\Cmod{d}$ to its
+dense open $U^{(d)}$ (\stackstag{0BQI}), together with the descent
+equivalence, shows that $\cQ_d$ is unique up to isomorphism with this
+property.
+\end{proof}
+
+\begin{proof}[Proof of \Cref{thm:GCFT_reduced}]
+Apply \Cref{thm:GCFT_torsors} to the frame torsor
+$\cP=\operatorname{Fr}(\cF)$ under $G=\Lambda^\times$, and set
+\[
+\cG_d=\cQ_d\times^G\Lambda.
+\]
+The frame-torsor equivalence of \Cref{prop:torsor_module_equivalence} is
+compatible with pullback and symmetric powers, so
+$\Phi_d^*\cG_d\cong\cF^{[d]}$. The same equivalence transfers uniqueness
+of $\cQ_d$ to uniqueness of $\cG_d$.
+\end{proof}

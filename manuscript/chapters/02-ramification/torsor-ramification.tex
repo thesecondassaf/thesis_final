@@ -1,0 +1,317 @@
+% !TeX root = ../../../main.tex
+\section{\texorpdfstring{Ramification of $G$-Torsors}{Ramification of G-Torsors}}\label{section:ramification_of_torsors}
+
+Generally speaking, assume we are given a locally Noetherian scheme $X$,
+a dense open $U \subset X$, a finite \'etale morphism $f: Y \to U$ and a prime divisor $Z \subset X$ such that $Z \cap U = \emptyset$
+and the local ring $\Oo_{X, \xi}$ of $X$ at the generic point $\xi$ of $Z$ is a discrete valuation ring.
+Setting $K_\xi = \Frac(\Oo_{X, \xi})$ we obtain a cartesian square
+\[ \xymatrix{ \mathop{\mathrm{Spec}}(K_\xi ) \ar[r] \ar[d] & U \ar[d] \\ \mathop{\mathrm{Spec}}(\mathcal{O}_{X, \xi }) \ar[r] & X } \]
+of schemes.
+In particular, $Y \times_U \Spec(K_\xi)$ is the spectrum of a finite \'etale
+$K_\xi$-algebra $L_\xi$. Write its canonical decomposition into fields as
+\[
+    L_\xi \cong \prod_{j=1}^r L_{\xi,j},
+\]
+where each $L_{\xi,j}/K_\xi$ is a finite separable field extension.
+\begin{definition}\label{definition:tamely_ramified_in_codim_1}
+We say:
+\begin{enumerate}
+    \item $Y$ is \textit{unramified} over $X$ at $(Z, \xi)$ resp. $Y$ is \textit{tamely ramified} over $X$ at $(Z, \xi)$
+        if every field extension $L_{\xi,j}/K_\xi$ is unramified, resp. tamely ramified, with respect to $\mathcal{O}_{X, \xi}$
+        (\Cref{definition:tamely_ramified_dvrs})
+
+    \item $Y$ is unramified over $X$ in codimension $1$, resp. $Y$ is tamely ramified over $X$ in codimension $1$, if the preceding condition holds for every $(Z, \xi)$ as above.
+\end{enumerate}
+\end{definition}
+
+Now back to our original assumptions, $C$ is a projective smooth geometrically connected curve
+over a field $k$ and $U=C\setminus \mdls$. Every $(Z, \xi)$ is now a closed point $P$ and $\Oo_{C, P}$ is a discrete valuation ring.
+Assume $f: Y \to U$ is actually a $G$-torsor $\cP \to U$ in $U_{\text{\'Et}}$ for $G$ a finite abelian group.
+
+By passing to the completion $\widehat{\Oo}_{C,P}$, we obtain the complete local field $\widehat{K}_P$.
+Restricting the torsor $\cP$ to the punctured formal neighborhood $\Spec(\widehat{K}_P)$
+allows us to study the ramification in a strictly local context.
+This restriction is a finite \'etale scheme over the field $\widehat{K}_P$ and therefore, by
+\stackstag{02GL}, decomposes into a finite disjoint union of spectra of finite separable field extensions:
+\[
+    \cP|_{\Spec(\widehat{K}_P)} \cong \bigsqcup_{i=1}^N \Spec(F_i).
+\]
+These extensions have the following properties:
+\begin{enumerate}
+    \item The extensions $F_i/\widehat{K}_P$ are mutually isomorphic and Galois. Since
+    $\widehat{K}_P$ is complete, every $F_i$ is complete for the unique extension of the discrete valuation on
+    $\widehat{K}_P$ \cite[Chapter~II, \S 2, Proposition~3]{serreLF}.
+    \item If $F$ denotes any one of the fields $F_i$, then the Galois group
+    $H = \Gal(F/\widehat{K}_P)$ identifies with the stabilizer of the corresponding connected component of the pullback $\cP|_{\Spec(\widehat{K}_P)}$,
+     which is a subgroup of $G$.
+    \item The number of components is $N=[G:H]$.
+\end{enumerate}
+
+\begin{definition}\label{definition:local_ramification_boundness}
+    We say that the extension $F/\widehat{K}_P$ \textit{has ramification bounded by $r$} if the ramification group $H^r$ is trivial.
+    Here $H^r$ denotes the upper-numbering ramification group of
+    $H=\Gal(F/\widehat{K}_P)$ associated with the extension $F/\widehat{K}_P$; it is not a filtration inherited from the ambient group $G$.
+    This condition is independent of the chosen connected component of
+    $\cP|_{\Spec(\widehat{K}_P)}$.
+    We say \textit{$\cP$ has ramification bounded by $r$ at $P$} if the corresponding local field extensions $F/\widehat{K}_P$
+    satisfy this condition.
+\end{definition}
+
+
+\begin{definition}\label{definition:ramification_bounded_by_modulus_closed_points}
+    Let $\mdls = \sum n_i P_i$ be a modulus on $C$. We say the $G$-torsor $\cP \to U$ has
+    \textbf{ramification bounded by $\mdls$} if, for each point $P_i$, the local restriction
+    $\cP|_{\Spec(\widehat{K}_{P_i})}$ has ramification bounded by the coefficient $n_i$.
+\end{definition}
+
+Fix an algebraic closure $\bar{k}$ of $k$ and write
+$\bar{s}=\Spec(\bar{k})\to\Spec(k)$ for the corresponding geometric point.
+
+\begin{definition}[{\cite[Definition~5.2]{Guignard2018}}]\label{definition:ramification_bounded_by_modulus_geometric}
+    Let $\mdls = \sum n_i P_i$ be a modulus on $C$.
+    The $G$-torsor $\cP \to U$ has \textbf{ramification bounded by $\mdls$}
+    if, for every geometric point $\bar{x}$ of $\mdls$ with image $\bar{s}$ in $\Spec(k)$, the
+    restriction of $\cP_{\bar{k}}$ to the punctured formal neighborhood
+    \[
+        \Spec\bigl(\widehat{\Oo}_{C_{\bar{k}},\bar{x}}\bigr)
+        \times_{C_{\bar{k}}} U_{\bar{k}}
+    \]
+    has ramification bounded by the multiplicity of $\mdls_{\bar{k}}$ at $\bar{x}$ in the sense of
+    \Cref{definition:local_ramification_boundness}.
+\end{definition}
+
+To compare the two definitions, fix a point $P=P_i$ in the support of $\mdls$, let $\bar{x}$ be a geometric
+point of $C_{\bar{k}}$ lying over $P$, and abbreviate
+$\widehat{K}_{\bar{x}} := \Frac\bigl(\widehat{\Oo}_{C_{\bar{k}},\bar{x}}\bigr)$. Since
+$\widehat{\Oo}_{C_{\bar{k}},\bar{x}}$ is a complete discrete valuation ring whose closed point lies over
+$\bar{x} \notin U_{\bar{k}}$ while its generic point lies over the generic point of $C_{\bar{k}}$, the punctured formal
+neighborhood of \Cref{definition:ramification_bounded_by_modulus_geometric} is
+$\Spec(\widehat{\Oo}_{C_{\bar{k}},\bar{x}}) \times_{C_{\bar{k}}} U_{\bar{k}} \cong \Spec(\widehat{K}_{\bar{x}})$.
+The local restriction of \Cref{definition:ramification_bounded_by_modulus_closed_points} (right-hand column)
+and that of \Cref{definition:ramification_bounded_by_modulus_geometric} (left-hand column) then fit into a
+single commutative diagram
+\[
+\begin{tikzcd}[column sep=2.9em, row sep=3.2em]
+\cP_{\bar{k}}\big|_{\Spec(\widehat{K}_{\bar{x}})}
+    \ar[r] \ar[d]
+    \ar[dr, phantom, "\lrcorner", very near start]
+& \cP_{\bar{k}}
+    \ar[r] \ar[d]
+    \ar[dr, phantom, "\lrcorner", very near start]
+& \cP \ar[d]
+& \cP\big|_{\Spec(\widehat{K}_{P})}
+    \ar[l] \ar[d]
+    \ar[dl, phantom, "\llcorner", very near start]
+\\
+\Spec\bigl(\widehat{K}_{\bar{x}}\bigr)
+    \ar[r]
+    \ar[rrr, bend right=15, "\text{unramified}"{below}]
+& U_{\bar{k}}
+    \ar[r]
+& U
+& \Spec\bigl(\widehat{K}_{P}\bigr)
+    \ar[l]
+\end{tikzcd}
+\]
+in which every square is cartesian. Since cartesian squares compose, the outer rectangle exhibits
+\begin{equation}\label{eq:geometric_restriction_is_base_change}
+    \cP_{\bar{k}}\big|_{\Spec(\widehat{K}_{\bar{x}})}
+    \cong
+    \cP\big|_{\Spec(\widehat{K}_{P})}
+    \times_{\Spec(\widehat{K}_{P})} \Spec\bigl(\widehat{K}_{\bar{x}}\bigr),
+\end{equation}
+i.e.\ the geometric restriction is the base change of the closed-point restriction along the bottom bent
+arrow, which is an unramified extension of complete discretely valued fields. This is the content of the
+following proposition.
+
+\begin{prop}\label{prop:equivalence_ramification_bounded_by_modulus}
+The closed-point formulation in
+\Cref{definition:ramification_bounded_by_modulus_closed_points} and the geometric formulation in
+\Cref{definition:ramification_bounded_by_modulus_geometric} are equivalent.
+\end{prop}
+
+\begin{proof}
+Let $P=P_i$, let $\bar{x}$ lie over $P$, and choose a uniformizer $t$ at $P$.
+Because $k$ is perfect, the base change $C_{\bar{k}}\to C$ is ind-\'etale, so the pullback of $t$
+is again a uniformizer at $\bar{x}$. Since $C_{\bar{k}}$ is a smooth curve over the algebraically
+closed field $\bar{k}$, it follows that
+$\widehat{\Oo}_{C_{\bar{k}},\bar{x}}\cong\bar{k}[[t]]$. Thus
+\[
+    \widehat{K}_P\cong\kappa(P)((t))
+    \longrightarrow
+    \widehat{K}_{\bar{x}}\cong\bar{k}((t))
+\]
+is unramified, as claimed in the diagram.
+
+By \Cref{eq:geometric_restriction_is_base_change}, the geometric restriction is obtained from the
+closed-point restriction by this unramified base change. Ramification bounds are unchanged under
+unramified extensions of complete discretely valued fields, so the two restrictions have the same
+ramification bound.
+
+Finally, as $\kappa(P)/k$ is separable the fiber of $P_i$ in $C_{\bar{k}}$ is reduced, so
+$\mdls_{\bar{k}}$ has multiplicity $n_i$ at every $\bar{x}$ above $P_i$. Thus the geometric
+condition at $\bar{x}$ is precisely the closed-point condition at $P_i$.
+\end{proof}
+
+Furthermore,
+the notions of tame ramification and unramifiedness derived here coincide with the codimension-$1$
+criteria in \Cref{definition:tamely_ramified_in_codim_1}.
+
+There is another equivalent formulation through the language of characters.
+The group $G$, being a finite abelian group over $k$, is \'etale.
+Consequently, the correspondence between $G$-torsors and the fundamental group allows us to describe $G$-torsors
+ via characters. Specifically, there is an isomorphism (\Cref{cor:abelian_equivilance_fundamental_torsors}):
+\[ \mathrm{Hom}_{\mathrm{cont.}}(\pi_1^{\text{\'et}}(U, \overline{x}), G) \xrightarrow{\cong} \mathrm{Tors}(U_{\text{\'et}}, G) \]
+
+In our local setting, where we consider the restriction to the complete local field $\widehat{K}_P$,
+the fundamental group identifies with the absolute Galois group
+$G_{\widehat{K}_P} := \mathrm{Gal}({\widehat{K}_P}^{\mathrm{sep}}/{\widehat{K}_P})$.
+Thus, the restricted $G$-torsor $\mathcal{P}|_{\mathrm{Spec}(\widehat{K}_P)}$ corresponds to a unique continuous homomorphism:
+\[ \rho : G_{\widehat{K}_P} \to G \]
+
+Under this correspondence, the torsor $\mathcal{P}$ has ramification bounded by $r$ at $P$
+if and only if the homomorphism $\rho$ trivializes the $r$-th ramification group in the upper numbering:
+\[ \rho(G_{\widehat{K}_P}^r) = \{ 1 \} \]
+
+\subsection*{Basic Properties of Ramification of \texorpdfstring{$G$-Torsors}{G-Torsors}}
+We now prove some elementary lemmas regarding the ramification of $G$-torsors.
+\begin{lemma}\label{lemma:bounding_ramification_of_contracted_product}
+    Let $G$ be a finite abelian group and $X$ be a locally Noetherian scheme over a field $k$.
+    Let $U \subset X$ be a dense open subset and let $(Z, \xi)$ be a prime divisor in the complement $X \setminus U$.
+    If $\cP_1$ and $\cP_2$ are two $G$-torsors on $U_{\text{ét}}$ that are tamely ramified at $(Z, \xi)$, then their product
+    $\cP_1 \otimes^G \cP_2$ is tamely ramified at $(Z, \xi)$.
+\end{lemma}
+\begin{proof}
+    Let $A=\Oo_{X,\xi}$ and $K=\Frac(A)$. Tameness may be checked after
+    completing $A$, so we may assume that $K$ is complete. For $i=1,2$, let
+    $L_{i,j}/K$ be the field factors of
+    \[
+        \cP_i\times_U\Spec(K).
+    \]
+    These extensions are tame by assumption. Let $M/K$ be a finite Galois
+    extension containing the Galois closures of all the $L_{i,j}/K$. Finite
+    tame extensions of a complete discretely valued field are closed under
+    Galois closure and finite compositum, so $M/K$ is tame.
+
+    Both $\cP_1$ and $\cP_2$ become trivial over $M$. Hence their contracted
+    product also becomes trivial over $M$. Consequently, every field factor of
+    \[
+        (\cP_1\otimes^G\cP_2)\times_U\Spec(K)
+    \]
+    is isomorphic to an intermediate extension of $M/K$: indeed, after tensoring
+    such a factor with $M$, one obtains a product having $M$ as a factor, and
+    hence a $K$-embedding of that field factor into $M$. Since subextensions of
+    a finite tame extension are tame, every field factor is tame. The result
+    follows from \Cref{definition:tamely_ramified_in_codim_1}.
+\end{proof}
+
+\begin{lemma}\label{lemma:weakly_unramified_base_change}%
+\label{lemma:descend_ramification_along_etale}
+Let $A\to B$ be a local extension of discrete valuation rings. Assume that
+$B/A$ is weakly unramified and that the residue-field extension
+$\kappa_B/\kappa_A$ is separable. Write $K=\Frac(A)$ and $L=\Frac(B)$.
+Let $\cP$ be a finite $G$-torsor over $\Spec(K)$, and put
+\[
+    \cP_L:=\cP\times_{\Spec(K)}\Spec(L).
+\]
+Then $\cP$ is unramified with respect to $A$ if and only if $\cP_L$ is
+unramified with respect to $B$. Likewise, $\cP$ is tamely ramified with
+respect to $A$ if and only if $\cP_L$ is tamely ramified with respect to $B$.
+\end{lemma}
+\begin{proof}
+Write the finite étale $K$-algebra underlying $\cP$ as
+\[
+    \prod_i E_i,
+\]
+where every $E_i/K$ is finite separable. For every $i$, write
+\[
+    E_i\otimes_K L\cong\prod_j F_{i,j}
+\]
+as a product of finite separable extensions of $L$. The standard base-change
+properties of extensions of discrete valuation rings give, for every $i$ and
+$j$,
+\[
+    e(F_{i,j}/L)=e(E_i/K),
+\]
+and show that $\kappa_{F_{i,j}}/\kappa_L$ is separable if and only if
+$\kappa_{E_i}/\kappa_K$ is separable.
+
+The two assertions now follow immediately from
+\Cref{definition:tamely_ramified_dvrs}: unramifiedness means residue
+separability and ramification index $1$, while tameness means residue
+separability and ramification index prime to the residue characteristic.
+\end{proof}
+
+\begin{cor*}[Étale form of
+\Cref{lemma:weakly_unramified_base_change}]
+Let $f:X\to Y$ be a morphism of locally Noetherian schemes. Let
+$U_X\subset X$ and $U_Y\subset Y$ be dense open subschemes such that
+$f^{-1}(U_Y)\subset U_X$. Let $(Z_X,\xi_X)$ and $(Z_Y,\xi_Y)$ be prime
+divisors contained in $X\setminus U_X$ and $Y\setminus U_Y$, respectively,
+and suppose that $f(\xi_X)=\xi_Y$. Assume that
+$\Oo_{X,\xi_X}$ and $\Oo_{Y,\xi_Y}$ are discrete valuation rings and that
+$f$ is étale at $\xi_X$. If $\cP$ is a finite $G$-torsor over $U_Y$, then
+$f^{-1}\cP$ is unramified (resp.\ tamely ramified) at $\xi_X$ if and only if
+$\cP$ is unramified (resp.\ tamely ramified) at $\xi_Y$.
+\end{cor*}
+\begin{proof}
+Set $A=\Oo_{Y,\xi_Y}$ and $B=\Oo_{X,\xi_X}$. Since $f$ is étale at
+$\xi_X$, the induced local homomorphism $A\to B$ is étale. In particular,
+$\mathfrak m_A B=\mathfrak m_B$, so $B/A$ is weakly unramified, and the
+residue-field extension $\kappa(\xi_X)/\kappa(\xi_Y)$ is finite separable.
+The restriction of $f^{-1}\cP$ to $\Spec(\Frac(B))$ is the base change of
+the restriction of $\cP$ to $\Spec(\Frac(A))$. The two equivalences now
+follow from \Cref{lemma:weakly_unramified_base_change}.
+\end{proof}
+
+\begin{lemma}\label{lemma:ramification_of_fiber_product}
+    Let $G_1,G_2$ be finite abelian groups. Let $X$ be a locally Noetherian
+    scheme over a field $k$, let $U\subset X$ be a dense open subscheme, and
+    let $(Z,\xi)$ be a prime divisor in $X\setminus U$. For $i=1,2$, let
+    $\cP_i$ be a $G_i$-torsor on $U_{\mathrm{\acute et}}$. If both $\cP_1$ and
+    $\cP_2$ are tamely ramified at $(Z,\xi)$, then the
+    $(G_1\times G_2)$-torsor $\cP_1\times_U\cP_2$ is tamely ramified at
+    $(Z,\xi)$.
+\end{lemma}
+\begin{proof}
+    Let $A=\Oo_{X,\xi}$ and $K=\Frac(A)$. Tameness may be checked after
+    completing $A$, so we may assume that $K$ is complete. As in the proof of
+    \Cref{lemma:bounding_ramification_of_contracted_product}, there exists a
+    finite tame Galois extension $M/K$ that splits both $\cP_1$ and $\cP_2$.
+    Their fiber product is therefore split over $M$. Consequently, every field
+    factor of
+    \[
+        (\cP_1\times_U\cP_2)\times_U\Spec(K)
+    \]
+    embeds into $M$. Since subextensions of a finite tame extension are tame,
+    every such field factor is tame. The result follows from
+    \Cref{definition:tamely_ramified_in_codim_1}.
+\end{proof}
+
+\begin{lemma}\label{lemma:ramification_of_induced_torsor}
+    Let $A$ be a discrete valuation ring with fraction field $K$, let
+    $\iota:H\hookrightarrow G$ be an injective homomorphism of finite abelian
+    groups, and let $\cQ$ be an $H$-torsor over $\Spec(K)$. Let
+    \[
+        \iota_*\cQ:=G\times^H\cQ
+    \]
+    be the induced $G$-torsor, where $H$ acts on $G\times\cQ$ by
+    $h\cdot(g,q)=(g\iota(h)^{-1},h\cdot q)$. Then, as a $K$-scheme,
+    $\iota_*\cQ$ is noncanonically isomorphic to a disjoint union of $[G:H]$
+    copies of $\cQ$. Consequently:
+    \begin{enumerate}
+        \item $\iota_*\cQ$ is tamely ramified with respect to $A$ if and only
+        if $\cQ$ is;
+        \item $\iota_*\cQ$ is unramified with respect to $A$ if and only if
+        $\cQ$ is;
+        \item if $A$ is complete and its residue field is perfect, then, for
+        every $r$, $\iota_*\cQ$ has ramification bounded by $r$ if and only if
+        $\cQ$ does.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    As a $K$-scheme, $\iota_*\cQ$ is noncanonically isomorphic to a disjoint
+    union of $[G:H]$ copies of $\cQ$. Thus it has the same field factors as
+    $\cQ$, each repeated $[G:H]$ times, and the assertions follow immediately
+    from the definitions.
+\end{proof}

@@ -1,0 +1,578 @@
+% !TeX root = ../../../main.tex
+\section{Tame Ramification Along the Full Boundary}\label{section:tame-ramification-full-boundary}
+
+The ramification calculation of Chapter~2 proves the required tameness when
+the modulus is supported at a single point and the degree is the degree of
+that modulus. We now remove these two restrictions. First, we pass from the
+point-supported components of $\mdls$ to the full modulus in degree
+$\deg\mdls$. We then compare the blowup at the point
+$\mdls\in C^{(\deg\mdls)}$ with the blowup in degree $d$ along the locus of
+divisors containing $\mdls$. This proves the following result.
+
+\begin{theorem}\label{theorem:SymmetricPowerOfSheafIsTamelyRamified}
+Let $G$ be a finite abelian group, and let $\cP$ be a $G$-torsor on $U$
+whose ramification is bounded by $\mdls$. For every sufficiently large
+integer $d$, the torsor $\cP^{[d]}$ is tamely ramified along
+\[
+H=\Cmod{d}\setminus U^{(d)}
+  =E_0\times_{X_{\mdls,d}}\Cmod{d}
+  \cong Z_0\times_{C^{(d)}}\Cmod{d}.
+\]
+\end{theorem}
+
+To prove the theorem, we retain the blowup notation of Chapter~2. For every
+nonzero effective submodulus $\ndls\leq\mdls$, we identify $\ndls$ with the
+corresponding $k$-point of $C^{(\deg\ndls)}$, and put
+\[
+    X_{\ndls}=\Bl_{\ndls}\bigl(C^{(\deg\ndls)}\bigr),
+    \qquad
+    E_{\ndls}=X_{\ndls}\times_{C^{(\deg\ndls)}}\{\ndls\}.
+\]
+We write $\eta_{\ndls}$ for the generic point of $E_{\ndls}$. For the full
+modulus in degree $d$, the center is
+\[
+Z_0=Z_0(\mdls,d)=\mdls+C^{(d-\deg\mdls)}\subset C^{(d)},
+\]
+where the right-hand side denotes the image of the closed immersion
+$D\mapsto\mdls+D$.
+The corresponding blowup, exceptional divisor, and generic point are denoted
+by $X_{\mdls,d}$, $E_0=E_{\mdls,d}$, and
+$\eta_0=\eta_{\mdls,d}$, as in
+\Cref{section:BlowupOfSymmetricPowerOfCurves}.
+
+\noindent\textbf{From point-supported moduli to the full modulus.}
+
+We first show that if the relevant torsors are tame for two coprime
+submoduli, then the corresponding torsor is tame for their sum. Iterating
+this step over the point-supported components of $\mdls$ yields the required
+statement for the full modulus in degree $\deg\mdls$.
+
+To establish this implication, we use the following general comparison. Let
+$X$ and $Y$ be smooth integral schemes over a field $k$, and let
+$x\in X(k)$ and $y\in Y(k)$.
+We denote the blowups of these schemes at the given points by
+$\pi_X: \Bl_x(X) \to X$ and $\pi_Y: \Bl_y(Y) \to Y$. Furthermore, let $\pi_{X \times Y}: \Bl_{(x,y)}(X \times_k Y) \to X \times_k Y$
+be the blowup of the product scheme at the point $(x,y)$.
+We denote by $E_X, E_Y$, and $E_{X \times Y}$ the respective exceptional divisors, and let $\eta_X, \eta_Y$, and $\eta_{X \times Y}$ be their generic points.
+
+Tame ramification is preserved under the contracted product of torsors after
+pullback to a product, as follows.
+
+\begin{prop}\label{prop:ramification-external-product}
+Let $G$ be a finite abelian group. Suppose $\cP_X$ and $\cP_Y$ are
+$G$-torsors defined on dense open subsets
+$U_X\subset\Bl_x(X)$ and $U_Y\subset\Bl_y(Y)$ disjoint from the respective
+exceptional divisors. There exist a dense open subset
+\[
+    \widetilde U\subset\Bl_{(x,y)}(X\times_kY)
+\]
+containing $\eta_{X\times Y}$ and morphisms
+\[
+    r_X:\widetilde U\longrightarrow\Bl_x(X),
+    \qquad
+    r_Y:\widetilde U\longrightarrow\Bl_y(Y),
+\]
+which send $\eta_{X\times Y}$ to $\eta_X$ and $\eta_Y$, respectively. On
+the dense open subset
+\[
+    W=r_X^{-1}(U_X)\cap r_Y^{-1}(U_Y)\subset\widetilde U,
+\]
+define
+\[
+    \cP_{X\times Y}
+      :=r_X^{-1}\cP_X
+        \otimes^G
+        r_Y^{-1}\cP_Y.
+\]
+If $\cP_X$ is tamely ramified at $\eta_X$ and $\cP_Y$ is tamely ramified
+at $\eta_Y$, then $\cP_{X\times Y}$ is tamely ramified at
+$\eta_{X\times Y}$.
+\end{prop}
+
+\begin{proof}
+We first construct $r_X$ and $r_Y$; the torsors enter only after these
+morphisms have been defined on the original blowups. Shrinking $X$ and $Y$
+around $x$ and $y$ does not change the exceptional divisors or their local
+rings at the generic points. The \`etale local description of smooth
+morphisms \stackstag{054L} therefore gives \`etale morphisms
+\[
+a:X\longrightarrow\mathbb A_k^n,
+\qquad
+b:Y\longrightarrow\mathbb A_k^m
+\]
+carrying $x$ and $y$ to the origins; after shrinking further, we may assume
+that $x$ and $y$ are the scheme-theoretic inverse images of the respective
+origins. We write $x_1,\ldots,x_n$ and $y_1,\ldots,y_m$ for the corresponding
+standard coordinates and also for their pullbacks to $X$ and $Y$.
+
+Write
+\[
+    B_n=\operatorname{Bl}_0(\mathbb A_k^n),\qquad
+    B_m=\operatorname{Bl}_0(\mathbb A_k^m),\qquad
+    B_{n,m}=\operatorname{Bl}_{(0,0)}
+        (\mathbb A_k^n\times_k\mathbb A_k^m),
+\]
+and denote their exceptional divisors by $E_n$, $E_m$, and $E_{n,m}$.
+The blowup $B_{n,m}$ is the subscheme of
+$(\mathbb A_k^n\times_k\mathbb A_k^m)\times_k\mathbb P_k^{n+m-1}$ defined by
+
+\[\begin{cases}
+x_i w_j = x_j w_i & 1 \le i, j \le n \\
+y_k w_{n+l} = y_l w_{n+k} & 1 \le k, l \le m \\
+x_i w_{n+j} = y_j w_i & 1 \le i \le n, \,\, 1 \le j \le m
+\end{cases}\]
+where $[w_1:\dots:w_{n+m}]$ are the homogeneous coordinates of
+$\mathbb P_k^{n+m-1}$. The exceptional divisor $E_{n,m}$ is
+isomorphic to $\mathbb P_k^{n+m-1}$.
+
+Both $B_n\times_kB_m$ and $B_{n,m}$ are birational to
+$\mathbb A_k^n\times_k\mathbb A_k^m$; their common dense open is
+\[
+    (\mathbb A_k^n\setminus\{0\})
+      \times_k(\mathbb A_k^m\setminus\{0\}).
+\]
+Let
+\[
+    q_{n,m}\colon B_{n,m}
+      \longrightarrow\mathbb P_k^{n+m-1}
+\]
+be the second projection. Define
+\[
+    \Omega_n=\bigcup_{i=1}^{n}D_+(w_i),
+    \qquad
+    \Omega_m=\bigcup_{j=1}^{m}D_+(w_{n+j}),
+\]
+and
+\[
+    \widetilde U_{n,m}
+      :=q_{n,m}^{-1}(\Omega_n\cap\Omega_m)
+      =\bigcup_{\substack{1\leq i\leq n\\1\leq j\leq m}}
+        q_{n,m}^{-1}\!\left(D_+(w_iw_{n+j})\right).
+\]
+There is a morphism
+\[
+\begin{aligned}
+f_{n,m}\colon\widetilde U_{n,m}&\longrightarrow
+   B_n\times_kB_m,\\
+((u,v),[w_1:\cdots:w_{n+m}])&\longmapsto
+\bigl((u,[w_1:\cdots:w_n]),
+      (v,[w_{n+1}:\cdots:w_{n+m}])\bigr).
+\end{aligned}
+\]
+Thus we have a diagram
+\[
+\begin{tikzcd}
+& \widetilde U_{n,m}
+    \arrow[dl,"f_{n,m}"'] \arrow[dr,hook] & \\
+B_n\times_kB_m && B_{n,m}.
+\end{tikzcd}
+\]
+The restriction of $q_{n,m}$ induces an isomorphism
+$E_{n,m}\xrightarrow{\sim}\mathbb P_k^{n+m-1}$. Since neither
+$V_+(w_1,\ldots,w_n)$ nor $V_+(w_{n+1},\ldots,w_{n+m})$ contains the generic
+point of $\mathbb P_k^{n+m-1}$, we have
+$\eta_{n,m}\in\widetilde U_{n,m}$, where $\eta_{n,m}$ is the generic point
+of $E_{n,m}$.
+On the exceptional divisors, the restriction of $f_{n,m}$ is the
+coordinate-block morphism
+\[
+\begin{aligned}
+E_{n,m}\cap\widetilde U_{n,m}&\longrightarrow E_n\times_kE_m,\\
+[w_1:\cdots:w_{n+m}]&\longmapsto
+\bigl([w_1:\cdots:w_n],[w_{n+1}:\cdots:w_{n+m}]\bigr).
+\end{aligned}
+\]
+This morphism is surjective and hence dominant. It therefore sends
+$\eta_{n,m}$ to the generic point $(\eta_n,\eta_m)$ of $E_n\times_kE_m$.
+
+We now return to the original schemes. By
+\Cref{theorem:blowup_flat_base_change}, there are canonical identifications
+\[
+\begin{aligned}
+\operatorname{Bl}_x(X)&\cong X\times_{\mathbb A_k^n} B_n,\\
+\operatorname{Bl}_y(Y)&\cong Y\times_{\mathbb A_k^m} B_m,\\
+B:=\operatorname{Bl}_{(x,y)}(X\times_kY)
+  &\cong (X\times_kY)
+      \times_{\mathbb A_k^n\times_k\mathbb A_k^m}B_{n,m}.
+\end{aligned}
+\]
+Set
+\[
+    \widetilde U
+      :=(X\times_kY)
+        \times_{\mathbb A_k^n\times_k\mathbb A_k^m}\widetilde U_{n,m}.
+\]
+It is a dense open neighborhood of $\eta_{X\times Y}$ in $B$. Base change of
+$f_{n,m}$ gives a morphism
+\[
+    f:\widetilde U\longrightarrow
+      \operatorname{Bl}_x(X)\times_k\operatorname{Bl}_y(Y)
+\]
+that sends $\eta_{X\times Y}$ to $(\eta_X,\eta_Y)$. If $p_X$ and $p_Y$ are
+the two projections from its target, set
+\[
+    r_X=p_X\circ f,
+    \qquad
+    r_Y=p_Y\circ f.
+\]
+These are the morphisms asserted in the statement. They fit into the
+commutative diagram
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& \operatorname{Bl}_{(x,y)}(X\times_kY) & \\
+& \widetilde U
+    \arrow[u,hook] \arrow[dl,"r_X"'] \arrow[d,"f"] \arrow[dr,"r_Y"] & \\
+\operatorname{Bl}_x(X)
+& \operatorname{Bl}_x(X)\times_k\operatorname{Bl}_y(Y)
+    \arrow[l,"p_X"] \arrow[r,"p_Y"']
+& \operatorname{Bl}_y(Y).
+\end{tikzcd}
+\]
+Over the common dense
+open $(X\setminus\{x\})\times_k(Y\setminus\{y\})$, the morphism $f$ is the
+evident identification; in particular, it is dominant. Hence
+\[
+    W=r_X^{-1}(U_X)\cap r_Y^{-1}(U_Y)
+      =f^{-1}(U_X\times_k U_Y)
+\]
+is a nonempty open subset of the integral scheme $\widetilde U$, and is
+therefore dense in $\widetilde U$ and in $B$.
+
+It remains to compare the maps induced by $r_X$ and $r_Y$ on the exceptional
+valuations. Let
+\[
+S=\mathcal O_{B,\eta_{X\times Y}},\qquad
+R_X=\mathcal O_{\operatorname{Bl}_x(X),\eta_X},\qquad
+R_Y=\mathcal O_{\operatorname{Bl}_y(Y),\eta_Y}.
+\]
+The morphisms $r_X$ and $r_Y$ induce local homomorphisms
+\[
+    R_X\longrightarrow S,
+    \qquad
+    R_Y\longrightarrow S.
+\]
+By base change, the exceptional divisors are identified with
+\[
+    E_X\cong\mathbb P_k^{n-1},\qquad
+    E_Y\cong\mathbb P_k^{m-1},\qquad
+    E_{X\times Y}\cong\mathbb P_k^{n+m-1},
+\]
+and the restrictions of $r_X$ and $r_Y$ are the two coordinate projections
+\[
+[w_1:\cdots:w_{n+m}]\longmapsto[w_1:\cdots:w_n],
+\qquad
+[w_1:\cdots:w_{n+m}]\longmapsto[w_{n+1}:\cdots:w_{n+m}].
+\]
+At the generic point of $E_{X\times Y}$ both coordinate blocks are nonzero.
+On the chart $D_+(w_1w_{n+1})$, the functions $x_1$ and $y_1$ are
+uniformizers in $R_X$ and $R_Y$, respectively, and each is also a
+uniformizer in $S$. Hence both extensions have ramification index one. Their
+residue-field extensions are
+\[
+k\left(\frac{x_2}{x_1},\ldots,\frac{x_n}{x_1}\right)
+\subset
+k\left(\frac{x_2}{x_1},\ldots,\frac{x_n}{x_1},
+        \frac{y_1}{x_1},\ldots,\frac{y_m}{x_1}\right)
+\]
+and
+\[
+k\left(\frac{y_2}{y_1},\ldots,\frac{y_m}{y_1}\right)
+\subset
+k\left(\frac{x_1}{y_1},\ldots,\frac{x_n}{y_1},
+        \frac{y_2}{y_1},\ldots,\frac{y_m}{y_1}\right),
+\]
+respectively. In particular, both are purely transcendental and hence
+separable.
+
+We now apply this comparison to the torsors. The extensions
+$R_X\to S$ and $R_Y\to S$ are weakly unramified and have
+separable residue-field extensions. Hence
+\Cref{lemma:weakly_unramified_base_change} shows that the pullbacks of
+$\cP_X$ and $\cP_Y$ to $\operatorname{Frac}(S)$ are tamely ramified.
+By the definition above, their contracted product is the generic fiber of
+$\cP_{X\times Y}$. Therefore
+\Cref{lemma:bounding_ramification_of_contracted_product} shows that
+$\cP_{X\times Y}$ is tamely ramified at $\eta_{X\times Y}$.
+\end{proof}
+
+\begin{cor}\label{cor:moduli-reduction}
+Let $G$ be a finite abelian group, and let $\cP$ be a $G$-torsor on $U$.
+Let $\ndls_1,\ndls_2\subset\mdls$ be two coprime nonzero submoduli.
+Assume that $\cP^{[\deg\ndls_1]}$ and $\cP^{[\deg\ndls_2]}$ are tamely
+ramified at $\eta_{\ndls_1}$ and $\eta_{\ndls_2}$, respectively. Then
+$\cP^{[\deg\ndls_1+\deg\ndls_2]}$ is tamely ramified at
+$\eta_{\ndls_1+\ndls_2}$.
+\end{cor}
+
+\begin{proof}
+Put $d_i=\deg\ndls_i$ for $i=1,2$, and pull $\cP^{[d_i]}$ back to
+$X_{\ndls_i}$ over the inverse image of $U^{(d_i)}$. Applying
+\Cref{prop:ramification-external-product} to the two blowups
+$X_{\ndls_i}\to C^{(d_i)}$, and writing $r_i$ for the morphisms supplied
+by that proposition, shows that
+\[
+r_1^{-1}\cP^{[d_1]}\otimes^G r_2^{-1}\cP^{[d_2]}
+\]
+is tame; i.e., this contracted product has tame ramification at the generic
+point of the exceptional divisor of
+\[
+\Bl_{(\ndls_1,\ndls_2)}
+   \bigl(C^{(d_1)}\times_k C^{(d_2)}\bigr).
+\]
+
+By \Cref{lemma:takeuchi_lemma}, applied with
+$\mdls=\ndls_1+\ndls_2$ and $d=d_1+d_2$, the addition morphism
+\[
++_{d_1,d_2}\colon
+C^{(d_1)}\times_k C^{(d_2)}
+\longrightarrow C^{(d_1+d_2)}
+\]
+is \`etale at $(\ndls_1,\ndls_2)$ and maps this point to
+$\ndls_1+\ndls_2$. Choose open neighborhoods
+\[
+(\ndls_1,\ndls_2)\in V\subset C^{(d_1)}\times_k C^{(d_2)},
+\qquad
+\ndls_1+\ndls_2\in W\subset C^{(d_1+d_2)}
+\]
+such that $+_{d_1,d_2}|_V\colon V\to W$ is \`etale and
+\[
+V\times_W\{\ndls_1+\ndls_2\}=\{(\ndls_1,\ndls_2)\}
+\]
+scheme-theoretically. Flat base change for blowups gives
+\[
+\Bl_{(\ndls_1,\ndls_2)}(V)
+\cong
+V\times_W\Bl_{\ndls_1+\ndls_2}(W).
+\]
+Hence the second projection defines an \`etale morphism
+\[
+\widetilde{+}_{d_1,d_2}\colon
+\Bl_{(\ndls_1,\ndls_2)}(V)
+\longrightarrow
+\Bl_{\ndls_1+\ndls_2}(W)
+\subset X_{\ndls_1+\ndls_2}.
+\]
+If $\eta$ denotes the generic point of the exceptional divisor of the
+source, then
+\[
+\widetilde{+}_{d_1,d_2}(\eta)=\eta_{\ndls_1+\ndls_2}.
+\]
+By \Cref{prop:symmetric_powers_on_curves}, on the common dense open,
+\[
+(\widetilde{+}_{d_1,d_2})^{-1}\cP^{[d_1+d_2]}
+\cong
+r_1^{-1}\cP^{[d_1]}\otimes^G r_2^{-1}\cP^{[d_2]}.
+\]
+Its tameness therefore descends by
+\Cref{lemma:descend_ramification_along_etale}.
+\end{proof}
+
+\noindent\textbf{From the point center to the degree-$d$ center.}
+
+The comparison is governed by the addition morphism
+\[
++\colon C^{(\deg\mdls)}\times_k C^{(d-\deg\mdls)}\longrightarrow C^{(d)}.
+\]
+After restricting the second factor to $U^{(d-\deg\mdls)}$ and blowing up,
+it induces a comparison morphism
+\[
+X_{\mdls}\times_k U^{(d-\deg\mdls)}\longrightarrow X_{\mdls,d}.
+\]
+To descend tameness along this morphism, we must show that it is \`etale at
+the generic point of the exceptional divisor in its source. This follows
+from the case $l=1$ of the next lemma, adapted from
+\cite[Lemma~4.1]{takeuchi2018blow}.
+
+\begin{lemma}\label{lemma:takeuchi_lemma}
+     Let $C$ be a projective, smooth, and geometrically connected curve over a perfect field $k$.
+     Let $\mdls = \sum_{i=1}^{s} n_i P_i$ be an effective divisor where $P_1, \dots, P_s$ are distinct closed points.
+     Let $U = C \setminus \mdls$ and let $d \geq \deg \mdls$.
+
+     Suppose $\ndls_1, \dots, \ndls_l$ are pairwise coprime submoduli of $\mdls$ such that $\mdls = \sum_{j=1}^l \ndls_j$.
+     Put $d_j=\deg\ndls_j$ for $1\leq j\leq l$ and $d_0=d-\deg\mdls$.
+     Consider the summation morphism:
+     \[
+     \pi : Y:=C^{(d_1)} \times_k \dots \times_k C^{(d_l)} \times_k C^{(d_0)} \longrightarrow C^{(d)}
+     \]
+     defined by $(D_1, \dots, D_l, D_0) \mapsto \sum_{j=1}^l D_j + D_0$.
+
+     Then $\pi$ is finite flat, and it is étale at the generic point of the closed subvariety
+     \[
+     V = \{\ndls_1\} \times_k \dots \times_k \{\ndls_l\} \times_k C^{(d_0)}\subset Y.
+     \]
+\end{lemma}
+
+\begin{proof}
+We may assume that $k$ is algebraically closed. The morphism $\pi$ is
+finite: it is induced by the finite quotient morphism
+\[
+C^d/\bigl(S_{d_1}\times\cdots\times S_{d_l}\times S_{d_0}\bigr)
+  \longrightarrow C^d/S_d.
+\]
+Its source and target are smooth $k$-schemes of pure dimension $d$.
+Hence $\pi$ is flat by miracle flatness, and therefore finite flat.
+
+Since the étale locus of $\pi$ is open and $V$ is integral, it is enough to
+find one point of $V$ at which $\pi$ is étale. Choose an effective
+divisor $D_0\in U^{(d_0)}$, and set
+\[
+v=\bigl(\ndls_1,\ldots,\ndls_l,D_0\bigr)\in V,
+\qquad Q=\pi(v)=\mdls+D_0.
+\]
+The summands $\ndls_1,\ldots,\ndls_l,D_0$ have pairwise disjoint
+supports, since the $\ndls_j$ are pairwise coprime and
+$D_0$ is supported in $U$. Consider the quotient maps
+\[
+C^d\xrightarrow{\ p\ }
+Y
+\xrightarrow{\ \pi\ }C^{(d)},
+\]
+where $p$ groups the ordered points into blocks, and put $q=\pi\circ p$.
+The same smoothness and miracle-flatness argument shows that $p$ and $q$
+are finite flat, of degrees $h:=\prod_{j=0}^{l}d_j!$ and $d!$, respectively.
+Write
+\[
+Q=\sum_{P\in\operatorname{Supp}(Q)}m_P P,
+\qquad \mu:=\prod_{P\in\operatorname{Supp}(Q)}m_P!.
+\]
+
+The fiber $q^{-1}(Q)$ has $d!/\mu$ distinct points, corresponding to the
+ordered lists representing $Q$. Its coordinate algebra $R$ has
+$k$-dimension $d!$, since $q$ is finite flat of degree $d!$. Being
+finite-dimensional over $k$, $R$ is Artinian. By \stackstag{00JB}, it
+decomposes into its localizations at maximal ideals, which correspond to
+the points of the fiber:
+\[
+R=\prod_{x\in q^{-1}(Q)}R_x,
+\qquad R_x=\mathcal O_{q^{-1}(Q),x}.
+\]
+The action of $S_d$ is transitive on these points and induces isomorphisms
+between the factors $R_x$. Therefore each has dimension
+\[
+\dim_k R_x=\frac{d!}{d!/\mu}=\mu.
+\]
+
+Let $A=\mathcal O_{\pi^{-1}(Q),v}$, so that $\Spec(A)$ is the local
+part of the fiber at $v$, and let $B$ be the coordinate algebra of
+$C^d\times_Y\Spec(A)$. As $p$ is finite flat of degree $h$, $B$ is a free
+$A$-module of rank $h$. Hence
+\[
+\dim_k B=h\dim_k A.
+\]
+On the other hand, since the summands have disjoint supports, each point
+$P$ of $Q$ occurs in exactly one block, with multiplicity $m_P$. The block
+corresponding to $\ndls_j$ therefore has
+$d_j!/\prod_{P\in\operatorname{Supp}(\ndls_j)}m_P!$ distinct orderings,
+and the analogous formula holds for the block corresponding to $D_0$.
+Multiplying these counts over all blocks gives exactly $h/\mu$ ordered
+lists above $v$. Thus
+\[
+B\cong\prod_{\substack{x\in q^{-1}(Q)\\p(x)=v}}R_x,
+\qquad
+\dim_k B=\frac{h}{\mu}\,\mu=h.
+\]
+It follows that $\dim_k A=1$, and therefore $A=k$. The fiber of $\pi$ is
+thus étale at $v$. Since $\pi$ is flat and of finite presentation, the
+fiber criterion for étaleness (\stackstag{0476}) implies that $\pi$ is
+étale at $v$, as required.
+\end{proof}
+
+\begin{cor}\label{cor:etale_at_generic_point}
+For $d\geq\deg\mdls$, the addition morphism
+\[
++\colon C^{(\deg\mdls)}\times_k C^{(d-\deg\mdls)}\longrightarrow C^{(d)}
+\]
+is finite flat, and it is \`etale at the generic point of
+\[
+\{\mdls\}\times_k C^{(d-\deg\mdls)}
+   \subset C^{(\deg\mdls)}\times_k C^{(d-\deg\mdls)}.
+\]
+\end{cor}
+\begin{proof}
+This is the case $l=1$ and $\ndls_1=\mdls$ of \Cref{lemma:takeuchi_lemma}.
+\end{proof}
+
+We now pass from tameness on $X_{\mdls}$ to tameness on $X_{\mdls,d}$.
+
+\begin{cor}\label{cor:tame-ramification-symmetric-product}
+Let $\mdls$ be a modulus, let $d\geq\deg\mdls$, and let $\cP$ be a
+$G$-torsor on $U$ whose ramification is bounded by $\mdls$. Assume that
+$\cP^{[\deg\mdls]}$ is tamely ramified at the generic point
+$\eta_{\mdls}$ of $E_{\mdls}$. Then $\cP^{[d]}$ is tamely ramified at
+the generic point $\eta_0=\eta_{\mdls,d}$ of the exceptional divisor
+$E_0=E_{\mdls,d}$ over $Z_0(\mdls,d)$.
+\end{cor}
+\begin{proof}
+Work on $X_{\mdls}\times_k U^{(d-\deg\mdls)}$, with projections $p_1,p_2$,
+and let $\theta$ be the generic point of
+$E_{\mdls}\times_k U^{(d-\deg\mdls)}$. Stability of tame ramification
+under base change (\stackstag{0EYD}) shows that
+$p_1^{-1}\cP^{[\deg\mdls]}$ is tamely ramified at $\theta$. The torsor
+$p_2^{-1}\cP^{[d-\deg\mdls]}$ is defined over the whole product, so it is
+unramified, and hence tamely ramified, at $\theta$. By
+\Cref{lemma:bounding_ramification_of_contracted_product},
+\[
+p_1^{-1}\cP^{[\deg\mdls]}
+  \otimes^G p_2^{-1}\cP^{[d-\deg\mdls]}
+\]
+is therefore tamely ramified at $\theta$.
+
+Consider the addition morphism
+\[
++\colon C^{(\deg\mdls)}\times_k U^{(d-\deg\mdls)}\longrightarrow C^{(d)}.
+\]
+Its scheme-theoretic inverse image of $Z_0(\mdls,d)$ is
+$\{\mdls\}\times_k U^{(d-\deg\mdls)}$. Flat base change for blowups
+(\Cref{theorem:blowup_flat_base_change}) therefore gives the Cartesian
+square
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X_{\mdls}\times_k U^{(d-\deg\mdls)}
+  \arrow[r,"\widetilde{+}"] \arrow[d]
+  & X_{\mdls,d} \arrow[d] \\
+C^{(\deg\mdls)}\times_k U^{(d-\deg\mdls)}
+  \arrow[r,"+"]
+  & C^{(d)}.
+\end{tikzcd}
+\]
+The vertical arrows are the blowup maps.
+The induced morphism
+$E_{\mdls}\times_k U^{(d-\deg\mdls)}\to E_0$ is flat, being a base
+change of $+$. By going down for flat morphisms (\stackstag{00HS}), it
+maps the generic point $\theta$ to the generic point $\eta_0$.
+The left vertical map sends $\theta$ to the generic point of
+$\{\mdls\}\times_k U^{(d-\deg\mdls)}$, where addition is étale by
+\Cref{cor:etale_at_generic_point}. Since $\widetilde{+}$ is its base
+change, it is étale at $\theta$.
+
+On the dense open $U^{(\deg\mdls)}\times_k U^{(d-\deg\mdls)}$,
+$\widetilde{+}$ agrees with addition. Hence
+\Cref{prop:symmetric_powers_on_curves} gives
+\[
+(\widetilde{+})^{-1}\cP^{[d]}\cong
+p_1^{-1}\cP^{[\deg\mdls]}
+  \otimes^G p_2^{-1}\cP^{[d-\deg\mdls]}.
+\]
+This torsor is tamely ramified at $\theta$. Tameness therefore descends
+along $\widetilde{+}$ to $\eta_0$ by
+\Cref{lemma:descend_ramification_along_etale}.
+\end{proof}
+
+
+\begin{proof}[Proof of \Cref{theorem:SymmetricPowerOfSheafIsTamelyRamified}]
+By flat base change, \Cref{lemma:weakly_unramified_base_change}, and
+\Cref{prop:equivalence_ramification_bounded_by_modulus}, we may assume
+that $k$ is algebraically closed.
+
+For each single-point summand $\ndls=n_P P$ of $\mdls$,
+\Cref{theorem:torsors_after_blowup_is_tame} gives tameness of
+$\cP^{[\deg\ndls]}$ at $\eta_\ndls$. Applying
+\Cref{cor:moduli-reduction} repeatedly gives tameness of
+$\cP^{[\deg\mdls]}$ at $\eta_\mdls$.
+\Cref{cor:tame-ramification-symmetric-product} then gives tameness of
+$\cP^{[d]}$ at $\eta_0$ for every sufficiently large $d$. Since $H$ is a
+nonempty open subset of $E_0$, it has generic point $\eta_0$, proving
+the theorem over $\bar{k}$. The initial base-change reduction descends this
+tameness to the original field $k$.
+\end{proof}
+

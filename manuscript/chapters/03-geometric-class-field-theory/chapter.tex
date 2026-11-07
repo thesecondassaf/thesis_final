@@ -1,0 +1,67 @@
+% !TeX root = ../../../main.tex
+\chapter{Geometric Class Field Theory}\label{section:gcft}
+
+The ramification theorem of Chapter~2 is the key input for the proof of
+\Cref{thm:GCFT_reduced}. Retain the notation and hypotheses of that theorem:
+$C$ is a smooth, projective, geometrically connected curve over the perfect
+field $k$, $\mdls$ is a modulus, $U=C\setminus\mdls$, $\Lambda$ is a finite
+commutative ring whose cardinality is invertible in $k$, and $\cF$ is a
+rank-one $\Lambda$-local system on $U$ whose ramification is bounded by
+$\mdls$. Our goal is to descend $\cF^{[d]}$ along
+\[
+    \Phi_d\colon U^{(d)}\longrightarrow\PicCm[d]
+\]
+for all sufficiently large $d$.
+
+Set $G=\Lambda^\times$ and let
+$\cP=\operatorname{Fr}(\cF)$ be the frame torsor of $\cF$. By
+\Cref{prop:torsor_module_equivalence}, together with its compatibility with
+pullback, symmetric powers, and ramification, it is enough to construct a
+$G$-torsor $\cQ_d$ on $\PicCm[d]$ such that
+\[
+    \Phi_d^*\cQ_d\cong\cP^{[d]}.
+\]
+We therefore work with $G$-torsors throughout the proof and return to
+rank-one local systems only in the final step.
+
+When $\mdls=0$, the projective-space fibers of $\Phi_d$ give the descent
+directly. When $\mdls>0$, $\Phi_d$ is not proper and its fibers are affine,
+so we instead use Takeuchi's extension to a projective space bundle
+\[
+    \widetilde\Phi_d\colon
+    \Cmod{d}
+    \longrightarrow \PicCm[d],
+\]
+where $\Cmod{d}$ is an open subscheme of the blowup of
+$C^{(d)}$ along the locus obtained by adding the modulus.
+
+The single-point calculation of Chapter~2, combined with compatibility
+under products and addition of divisors, first shows that
+$\cP^{[d]}$ is
+tamely ramified along the boundary
+\[
+    H=\Cmod{d}\setminus U^{(d)}.
+\]
+Passing to the geometric generic fiber, we then show that $\cP^{[d]}$ extends
+uniquely across $H$; the extension then descends along the projective-space
+bundle $\widetilde\Phi_d$ to $\PicCm[d]$.
+
+The remainder of the chapter makes these steps precise.
+\Cref{section:generalized-picard-and-abel-jacobi} recalls the rigidified
+Picard scheme and the Abel--Jacobi morphism.
+\Cref{section:BlowupOfSymmetricPowerOfCurves} introduces Takeuchi's
+compactification.
+\Cref{section:tame-ramification-full-boundary} proves tameness along its
+boundary, and \Cref{section:extension-across-boundary} extends the torsor
+across that boundary. Finally, \Cref{section:gcft-descent} completes the
+descent and returns from torsors to rank-one local systems.
+
+\input{manuscript/chapters/03-geometric-class-field-theory/picard-and-abel-jacobi.tex}
+
+\input{manuscript/chapters/03-geometric-class-field-theory/compactification.tex}
+
+\input{manuscript/chapters/03-geometric-class-field-theory/boundary-tameness.tex}
+
+\input{manuscript/chapters/03-geometric-class-field-theory/extension.tex}
+
+\input{manuscript/chapters/03-geometric-class-field-theory/descent.tex}

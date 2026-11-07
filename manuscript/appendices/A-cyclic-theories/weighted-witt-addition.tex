@@ -1,0 +1,53 @@
+% !TeX root = ../../../main.tex
+\section{Weighted Witt addition in the cyclic calculation}
+
+The following homogeneity property of the universal addition polynomials is what
+makes degree estimates on Witt sums possible: even though the carry polynomials $C_n$
+of \Cref{eq:witt_addition_shape} are complicated, they are \emph{isobaric} for the
+weighting in which the $j$-th component has weight $p^j$.
+
+\begin{lemma}[isobaricity of Witt addition]\label{lemma:witt_addition_isobaric}
+Assign to the variables $X_j$ and $Y_j$ the weight $p^j$. Then the $n$-th addition
+polynomial $S_n$ is isobaric of weight $p^n$: every monomial of $S_n$ has total weight
+exactly $p^n$. More generally, write
+$\vec a_i=(a_{i,0},\dots,a_{i,r-1})$ and assign $a_{i,j}$ weight $p^j$.
+Then, for every $0\leq n<r$, the $n$-th component of the iterated Witt sum
+$\bigoplus_{i=1}^{d}\vec a_i$ is an isobaric polynomial of weight $p^n$ in the
+variables $a_{i,j}$.
+\end{lemma}
+
+\begin{proof}
+We first prove the assertion for two summands by induction on $n$.
+For $n=0$, we have $S_0=X_0+Y_0$, which is isobaric of weight $1$.
+Suppose now that $S_j$ is isobaric of weight $p^j$ for every $j<n$.
+The ghost identities give
+\[
+p^n S_n = \sum_{j \le n} p^j \bigl(X_j^{p^{n-j}} + Y_j^{p^{n-j}}\bigr)
+- \sum_{j < n} p^j S_j^{p^{n-j}}
+\]
+Each $X_j^{p^{n-j}}$ and $Y_j^{p^{n-j}}$ has weight
+$p^j p^{n-j}=p^n$. Also, every monomial in the expansion of
+$S_j^{p^{n-j}}$ is a product of $p^{n-j}$ monomials of weight $p^j$,
+so it has weight $p^n$. Thus the right-hand side is isobaric of weight
+$p^n$. This identity holds in the universal polynomial ring over $\Z$,
+where multiplication by the nonzero integer $p^n$ does not change which
+monomials occur. Hence $S_n$ is isobaric of weight $p^n$ as well.
+
+We next induct on the number $d$ of summands. Write
+\[
+\vec A^{(d)}:=\bigoplus_{i=1}^{d}\vec a_i
+=\vec a_1\oplus\cdots\oplus\vec a_d,
+\]
+where each variable $a_{i,j}$ has weight $p^j$. For $d=1$, the component
+$A_n^{(1)}=a_{1,n}$ has weight $p^n$. Suppose the assertion holds for
+$d-1$ summands. Then
+\[
+A_n^{(d)}=
+S_n\bigl(A_0^{(d-1)},\dots,A_n^{(d-1)};
+a_{d,0},\dots,a_{d,n}\bigr).
+\]
+By induction, $A_j^{(d-1)}$ is isobaric of weight $p^j$.
+Thus each substituted polynomial has the same weight as the variable it
+replaces, so substitution preserves weights. Since $S_n$ is isobaric of
+weight $p^n$, so is $A_n^{(d)}$, completing the induction.
+\end{proof}

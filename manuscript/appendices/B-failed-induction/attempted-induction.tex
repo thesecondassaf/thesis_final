@@ -1,0 +1,192 @@
+% !TeX root = ../../../main.tex
+\section{The attempted induction}
+\label{sec:as_induction_preliminaries}
+
+Let $G$ be a finite abelian group, let $H\subseteq G$ be a subgroup, and let
+$\cP\to X$ be a $G$-torsor over an $S$-scheme $X$ that is Zariski-locally
+quasi-projective over $S$. Recall the canonical factorization
+\[
+\cP\longrightarrow\cP/H\longrightarrow X,
+\]
+where $\cP/H=(G/H)\times^G\cP$ is a $G/H$-torsor over $X$ and
+$\cP\to\cP/H$ is an $H$-torsor.
+
+In addition to the kernel $\KG=\ker(G^d\to G)$ of the summation morphism,
+put
+\[
+K_H:=\ker(H^d\to H),\qquad
+K_{G/H}:=\ker((G/H)^d\to G/H).
+\]
+The snake lemma applied to the two summation maps gives an exact sequence
+\begin{equation}\label{eq:summation_kernels_ses}
+0\longrightarrow K_H\longrightarrow\KG\longrightarrow K_{G/H}
+\longrightarrow0.
+\end{equation}
+
+\begin{construction}[The symmetric-power comparison morphism]
+\label{construction:symmetric_power_comparison}
+For the $G$-torsor $\cP\to X$ fixed above, put
+\[
+\Xi_G:=\KG\rtimes S_d.
+\]
+The inclusion $S_d\hookrightarrow\Xi_G$, given by
+$\sigma\mapsto((1,\ldots,1),\sigma)$, induces a canonical comparison
+morphism
+\[
+q_{\cP}:\cP^{(d)}
+=S_d\backslash\cP^{\times_S d}
+\longrightarrow
+\Xi_G\backslash\cP^{\times_S d}
+=\cP^{[d]}.
+\]
+Indeed, the quotient map from $\cP^{\times_S d}$ to its $\Xi_G$-quotient
+is $S_d$-invariant and therefore factors uniquely through the
+$S_d$-quotient.
+\end{construction}
+
+We use the following four quotient schemes:
+\begin{align*}
+  \cP^{[d]_G}&:=(\KG\rtimes S_d)\backslash\cP^{\times_S d},\\
+  \cP^{[d]_H}&:=(K_H\rtimes S_d)\backslash\cP^{\times_S d},\\
+  (\cP/H)^{(d)}&:=(H^d\rtimes S_d)\backslash\cP^{\times_S d},\\
+  (\cP/H)^{[d]}&:=((H^d+\KG)\rtimes S_d)
+      \backslash\cP^{\times_S d}.
+\end{align*}
+The first is the symmetric $G$-power of $\cP$. The second is the symmetric
+$H$-power relative to $\cP\to\cP/H$, the third is the symmetric power of the
+scheme $\cP/H$, and the fourth is the symmetric $G/H$-power of the
+$G/H$-torsor $\cP/H\to X$. For the last two identifications, use
+$(\cP/H)^{\times_S d}\cong H^d\backslash\cP^{\times_S d}$ and note that the
+preimage of $K_{G/H}$ under $G^d\twoheadrightarrow(G/H)^d$ is
+$H^d+\KG$.
+
+\begin{prop}\label{prop:torsor_tower_diagram}
+The four quotient schemes fit into a canonical commutative diagram
+\[
+\begin{tikzcd}[row sep=large, column sep=large]
+  \cP^{[d]_H}\arrow[r,"H"]\arrow[d]
+    &(\cP/H)^{(d)}\arrow[d,"{q_{\cP/H}}"]\\
+  \cP^{[d]_G}\arrow[r,"H"']\arrow[dr,"G"',bend right=20]
+    &(\cP/H)^{[d]}\arrow[d,"G/H"]\\
+    &X^{(d)},
+\end{tikzcd}
+\]
+in which every labelled arrow is a torsor under the indicated constant
+group. The upper square is Cartesian:
+\[
+\cP^{[d]_H}\cong
+\cP^{[d]_G}\times_{(\cP/H)^{[d]}}(\cP/H)^{(d)}.
+\]
+The vertical map $q_{\cP/H}$ is the comparison morphism of
+\Cref{construction:symmetric_power_comparison}, applied to the
+$G/H$-torsor $\cP/H\to X$.
+\end{prop}
+
+\begin{proof}
+Apply \Cref{prop:symmetric_power_torsor} to the $G$-torsor $\cP\to X$, the
+$H$-torsor $\cP\to\cP/H$, and the $G/H$-torsor $\cP/H\to X$. This gives the
+three labelled torsors; the comparison map $q_{\cP/H}$ is supplied by
+\Cref{construction:symmetric_power_comparison}, applied to
+$\cP/H\to X$. The factorization
+\[
+\cP^{[d]_G}\longrightarrow(\cP/H)^{[d]}\longrightarrow X^{(d)}
+\]
+is the canonical quotient decomposition of the $G$-torsor
+$\cP^{[d]_G}\to X^{(d)}$ by $H$, because both its intermediate quotient and
+$(\cP/H)^{[d]}$ are realized as
+\[
+((H^d+\KG)\rtimes S_d)\backslash\cP^{\times_S d}.
+\]
+
+Let
+\[
+T:=\cP^{[d]_G}\times_{(\cP/H)^{[d]}}(\cP/H)^{(d)}.
+\]
+Base change makes $T$ an $H$-torsor over $(\cP/H)^{(d)}$. The quotient maps
+give an $H$-equivariant morphism $\cP^{[d]_H}\to T$. A morphism of
+$H$-torsors is an isomorphism, proving the Cartesian assertion.
+\end{proof}
+
+\begin{rem*}
+The two vertical comparison maps in the diagram need not be torsors under a
+constant group. For example, $K_H\rtimes S_d$ need not be normal in
+$\KG\rtimes S_d$, because coordinate permutations act nontrivially on
+$\KG/K_H$. Thus the map $q_{\cP/H}$ is not another torsor layer to which the cyclic
+induction hypotheses automatically apply. Its ramification at the boundary
+is precisely the extra datum that will matter below.
+\end{rem*}
+
+We now place this quotient tower in the geometric setting relevant to the
+attempted induction.
+Let $C$ be a smooth projective curve, let $U=C\setminus\mdls$, and let
+$\cP\to U$ be a $G$-torsor. Fix $p_\infty\in\mdls$ and an integer $d\geq1$,
+and assume that the ramification of $\cP$ at $p_\infty$ is bounded by $d$ in
+the sense of \Cref{definition:local_ramification_boundness}.
+
+The $G/H$-torsor $\cP/H\to U$ compactifies to a finite morphism of smooth
+projective curves
+\[
+f:C'\longrightarrow C.
+\]
+Choose $p'_\infty\in f^{-1}(p_\infty)$. The induced morphism on symmetric
+powers sends $d\cdot p'_\infty$ to $d\cdot p_\infty$:
+\[
+f^{(d)}:C'^{(d)}\longrightarrow C^{(d)}.
+\]
+Let
+\[
+\pi_C:X_C\longrightarrow C^{(d)},\qquad
+\pi_{C'}:X_{C'}\longrightarrow C'^{(d)}
+\]
+be the blowups at these two diagonal points. Write $E_C,E_{C'}$ for their
+exceptional divisors, $\eta_C,\eta_{C'}$ for the respective generic points,
+and
+\[
+V_C:=\Oo_{X_C,\eta_C}\subset K(C^{(d)}),\qquad
+V_{C'}:=\Oo_{X_{C'},\eta_{C'}}\subset K(C'^{(d)})
+\]
+for the corresponding DVRs.
+
+The quotient tower, compactifications, and blowups fit into the diagram
+\[
+\begin{tikzcd}[row sep=2.4em, column sep=2.2em]
+\cP^{[d]_H}\ar[r,"H"]\ar[d]
+  &(\cP/H)^{(d)}\ar[d,"{q_{\cP/H}}"]\ar[r,hookrightarrow,"\iota'"]
+  &C'^{(d)}\ar[dd,"f^{(d)}"]
+  &X_{C'}\ar[l,"\pi_{C'}"']\ar[dd,dashed,"f_X"]\\
+\cP^{[d]_G}\ar[r,"H"']\ar[dr,"G"',bend right=10]
+  &(\cP/H)^{[d]}\ar[d,"G/H"]
+  &&\\
+  &U^{(d)}\ar[r,hookrightarrow,"\iota"']
+  &C^{(d)}
+  &X_C\ar[l,"\pi_C"]
+\end{tikzcd}
+\]
+The left block is the torsor tower of
+\Cref{prop:torsor_tower_diagram}. The middle block records the open
+immersions and compactifications. The right block records the blowups. The
+rational lift $f_X$ is defined at the generic point of the exceptional
+divisor and sends $\eta_{C'}$ to $\eta_C$, producing the extension of DVRs
+\[
+V_C\hookrightarrow V_{C'}.
+\]
+
+We can now formulate the proposed induction step.
+In the cyclic $p$-power setting described in the introduction to this
+appendix, the two intended inputs are:
+\begin{description}
+  \item[\textnormal{(IH$_{r-1}$)}]
+    $(\cP/H)^{[d]}\to U^{(d)}$ is unramified at $\eta_C$;
+  \item[\textnormal{(AS)}]
+    $\cP^{[d]_H}\to(\cP/H)^{(d)}$ is unramified at $\eta_{C'}$.
+\end{description}
+The first is the desired contribution of induction applied to the quotient
+$G/H$. The second is the desired contribution of the degree-$p$
+Artin--Schreier calculation applied to the $H$-torsor over the compactified
+curve $C'$. The proposed induction step asks whether these imply that
+\[
+\cP^{[d]_G}\longrightarrow U^{(d)}
+\]
+is unramified at $\eta_C$. We will see that the two assertions do not, by
+themselves, control the ramification needed for this conclusion.
+
