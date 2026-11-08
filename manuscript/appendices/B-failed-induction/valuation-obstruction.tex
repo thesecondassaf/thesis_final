@@ -2,6 +2,14 @@
 \section{The obstruction in the valuation tower}
 \label{sec:as_induction_valuation_tower}
 
+{\color{blue}
+\noindent\textbf{Second obstruction: comparability does not suffice.}
+To isolate the second difficulty, we temporarily grant that the two
+exceptional valuations are compatible and that both proposed inputs
+(IH$_{r-1}$) and (AS) hold. We ask whether these assumptions alone suffice
+to deduce unramifiedness of the original symmetric-power torsor.
+\par}
+
 We may reduce to the case in which $\cP\to U$ is connected. Choose a
 connected component $\cP_0\subseteq\cP$, and let $G_0\subseteq G$ be the
 subgroup preserving it. Then $\cP_0\to U$ is a connected $G_0$-torsor.
@@ -69,6 +77,22 @@ E\cap K_{C'}=F,
 \Gal(EK_{C'}/K_{C'})\cong\Gal(E/F)=H.
 \]
 
+{\color{blue}
+For the following valuation-tower analysis, assume additionally that
+\[
+V_{C'}\cap K_C=V_C.
+\]
+This is an extra hypothesis, not a consequence of the blowup construction,
+as the preceding example shows. Without it, (IH$_{r-1}$) concerns a
+different valuation of $K_C$ from the restriction of $V_{C'}$, and cannot
+be used in the displayed tower.
+{\color{red}Alternatively, one may choose a valuation
+of $K_{C'}$ extending $V_C$, but then (AS), which concerns $V_{C'}$, gives
+no unramifiedness statement at that chosen valuation without a further
+argument.}
+The comparison below is therefore conditional on compatibility.
+\par}
+
 Let $V_F:=V_{C'}|_F$. Choose a place $v_E$ of $E$ above $V_F$ and a place
 $v_\star$ of $EK_{C'}$ above both $v_E$ and $V_{C'}$. The relevant field
 and valuation towers are
@@ -88,7 +112,13 @@ and valuation towers are
 \end{tikzcd}
 \]
 
+{\color{red}
 We can now see exactly what each part of the proposed induction contributes:
+\par}
+{\color{blue}
+Under this additional hypothesis, the two proposed inputs would contribute
+the following statements:
+\par}
 \begin{description}
   \item[\textnormal{(IH$_{r-1}$):}]
     $F/K_C$ is unramified at $V_C$. In particular,
@@ -102,8 +132,14 @@ We can now see exactly what each part of the proposed induction contributes:
     $K_C\subset F\subset E$ shows that $E/K_C$ is unramified at $V_C$.
 \end{description}
 
+{\color{red}
 The gap lies between the second and third items. It is measured by the
 following inertia comparison.
+\par}
+{\color{blue}
+Even under the compatibility hypothesis, a gap remains between the second
+and third items. It is measured by the following inertia comparison.
+\par}
 
 \begin{lemma}\label{lem:inertia-injection}
 Let $E/F$ be finite Galois and linearly disjoint from $K/F$. Let $w$ be a
@@ -201,6 +237,18 @@ base change $K/F$, the extension $EK/K$ is trivial. We do not claim that
 this particular extension $K/F$ arises from the comparison map
 $q_{\cP/H}$, so this is not a counterexample to part~(3) of
 \Cref{theorem:cyclic_cases_after_blowup}. It shows only that the desired
-conclusion requires more than a general base-change argument. The direct
+conclusion requires more than a general base-change argument.
+{\color{red}The direct
 Witt-vector calculation supplies that additional input by treating the full
 $\Z/p^r\Z$-torsor at once.
+\par}
+
+{\color{blue}
+The proposed induction therefore encounters two separate obstacles. In
+general, the generic exceptional point $\eta_{C'}$ does not necessarily
+lie above $\eta_C$, so the two intended inputs concern valuations that
+do not fit into the required tower. Even if this compatibility is assumed
+and both inputs are granted, unramifiedness after the comparison base
+change does not formally imply unramifiedness before it. Thus the two
+inputs do not by themselves establish the proposed induction step.
+\par}

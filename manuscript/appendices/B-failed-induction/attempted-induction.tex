@@ -164,12 +164,48 @@ The quotient tower, compactifications, and blowups fit into the diagram
 \]
 The left block is the torsor tower of
 \Cref{prop:torsor_tower_diagram}. The middle block records the open
-immersions and compactifications. The right block records the blowups. The
+immersions and compactifications. The right block records the blowups.
+{\color{blue}
+\noindent\textbf{First obstruction: incomparable exceptional valuations.}
+\par}
+{\color{red}
+The
 rational lift $f_X$ is defined at the generic point of the exceptional
 divisor and sends $\eta_{C'}$ to $\eta_C$, producing the extension of DVRs
 \[
 V_C\hookrightarrow V_{C'}.
 \]
+\par}
+{\color{blue}
+The rational lift $f_X$ is defined at $\eta_{C'}$ by the properness of
+$X_C\to C^{(d)}$, but its image need not be $\eta_C$. Consequently, the
+inclusion of function fields need not induce an extension of the two DVRs
+$V_C\hookrightarrow V_{C'}$.
+
+For example, let $k$ be algebraically closed of characteristic $2$, let
+$C'=\mathbb P^1_t$, $C=\mathbb P^1_x$, and take
+\[
+x=\frac{t^2}{1-t},\qquad d=3,\qquad p_\infty=p'_\infty=0.
+\]
+This is a separable Artin--Schreier map, since $y=t^{-1}$ satisfies
+$y^2-y=x^{-1}$. Write $a,b,c$ for the elementary symmetric functions
+of $t_1,t_2,t_3$, and $s_1,s_2,s_3$ for those of the corresponding
+$x$-coordinates. With $D=1+a+b+c$, direct expansion gives
+\[
+s_1=\frac{a^2+ab+ac+c}{D},\qquad
+s_2=\frac{b^2+bc}{D},\qquad
+s_3=\frac{c^2}{D}.
+\]
+At $\eta_{C'}$, the ordinary exceptional valuation has
+$v(a)=v(b)=v(c)=1$, so
+\[
+\bigl(v(s_1),v(s_2),v(s_3)\bigr)=(1,2,2).
+\]
+Hence the lifted map sends $\eta_{C'}$ to the special point
+$[1:0:0]$ of the target exceptional $\mathbb P^2$, rather than its generic
+point. In particular, $s_2/s_1$ is a unit at $\eta_C$ but has positive
+valuation at $\eta_{C'}$, ruling out the asserted extension of these DVRs.
+\par}
 
 We can now formulate the proposed induction step.
 In the cyclic $p$-power setting described in the introduction to this
@@ -187,6 +223,15 @@ curve $C'$. The proposed induction step asks whether these imply that
 \[
 \cP^{[d]_G}\longrightarrow U^{(d)}
 \]
-is unramified at $\eta_C$. We will see that the two assertions do not, by
+is unramified at $\eta_C$.
+{\color{red}
+We will see that the two assertions do not, by
 themselves, control the ramification needed for this conclusion.
+\par}
+{\color{blue}
+The valuation mismatch above already prevents a direct comparison. The
+next section explains the further obstruction that remains even if one
+adds the compatibility hypothesis
+$V_{C'}\cap K(C^{(d)})=V_C$.
+\par}
 

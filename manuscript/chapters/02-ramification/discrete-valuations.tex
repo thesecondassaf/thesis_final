@@ -60,22 +60,22 @@ isomorphically onto $\kappa$. Consequently, $A\cong k[[\pi]]\cong k[[t]]$, and i
 $K\cong k((\pi))$.
 Let $L/K$ be a finite Galois extension with Galois group $G$.
 The integral closure $B$ of $A$ in $L$ is itself a complete discrete valuation ring.
-Since the residue field $\kappa$ is perfect, the extension of residue fields is separable, and there exists a uniformizer
-$\Pi \in B$ such that $B = A[\Pi]$.
+Since the residue field $\kappa$ is perfect, the extension of residue fields is separable, and there exists an element
+$x \in B$ such that $B = A[x]$ \cite[Chapter~III, \S6, Proposition~12]{serreLF}.
 
 The \textit{lower numbering ramification filtration} of $G$, denoted by $(G_i)_{i \geq -1}$, is defined as:
 \[
-G_i = \{ \sigma \in G \mid v_B(\sigma (x) - x) \geq i + 1 \text{ for all } x \in B \}
+G_i = \{ \sigma \in G \mid v_B(\sigma (b) - b) \geq i + 1 \text{ for all } b \in B \}
 \]
 where $v_B$ is the valuation on $L$ associated with $B$. In this indexing, $G_{-1} = G$ and $G_0$
 corresponds to the \textit{inertia group} of the extension $L/K$. Note that $L/K$ is unramified if and only if
 $G_0 = \{1\}$, and it is tamely ramified if and only if $G_1 = \{1\}$.
 
-A standard result in the theory of local fields (complete local fields with a discrete valuation and perfect residue field)
-ensures that the condition in the definition of $G_i$ need only be checked for the uniformizer $\Pi$ of $B$.
+The condition in the definition of $G_i$ need only be checked for such a generator $x$ of $B$ over $A$
+\cite[Chapter~IV, \S1, Lemma~1]{serreLF}.
 Specifically, if we define the function
 \[
-i^L_K(\sigma) = v_B(\sigma(\Pi) - \Pi)
+i^L_K(\sigma) = v_B(\sigma(x) - x)
 \]
 for $\sigma \in G$, then $G_i = \{ \sigma \in G \mid i^L_K(\sigma) \geq i + 1 \}$.
 The subgroups $G_i$ are normal in $G$ and become trivial for sufficiently large $i$.
